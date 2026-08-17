@@ -13,7 +13,7 @@ description: >
 ## 절차
 
 ### 1. 성공 지표 확인
-기획(CLAUDE.md·기획 문서)에서 목표 지표를 가져온다. 없으면 game-designer에게 정의를 요청한다.
+기획(AGENTS.md/CLAUDE.md·기획 문서)에서 목표 지표를 가져온다. 없으면 game-designer에게 정의를 요청한다.
 전형적 지표:
 - 목표 승률 구간 (예: 초심자 30~50%)
 - 평균 런/전투 길이
@@ -43,6 +43,10 @@ N판(기본 1000회 이상) 자동 플레이하고 집계한다. 층·난이도�
 
 ## 엔진별 참고
 - Unity 프로젝트: 전투 로직을 `Game.Core`(UnityEngine 무참조)로 분리해 dotnet/EditMode로 시뮬. 상세: `references/unity-headless-sim.md`
+
+## 검증 강도 올리기 (선택)
+휴리스틱 봇으로 부족할 때(전략 깊이가 있는 게임 등) 단계적으로 강화한다:
+규칙 기반 봇 → LLM 플레이어 → RL 에이전트. 상세: `references/playtesting-strategies.md`
 
 ## 산출물
 - `sim/` 하네스 코드(재실행 가능), 집계 리포트(표), 조정 가설 목록.

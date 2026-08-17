@@ -17,16 +17,17 @@
 ## B. 에이전트 정의 품질 (수정 반영)
 | 에이전트 | model | 발견/조치 |
 |---|---|---|
-| pm | sonnet | **Write 추가** — 트래커 MCP 없을 때 `docs/tasks/`에 태스크 문서 기록 |
-| game-designer | opus | **경계 명시** — core 담당, 경제는 meta-economy-designer 소관 |
-| developer | opus | **polish 스킬 추가** — 연출 구현(artist+developer 공동) |
-| qa | sonnet | 정확성 전담 명시 OK. 변경 없음 |
-| artist | sonnet | **description 정본 통일** — 연출(폴리싱) 디렉션 반영(드리프트 수정) |
-| meta-economy-designer | opus | core 통과 후 진입 명시 OK. 변경 없음 |
+| pm | inherit | **Write 추가** — 트래커 MCP 없을 때 `docs/tasks/`에 태스크 문서 기록 |
+| game-designer | inherit | **경계 명시** — core 담당, 경제는 meta-economy-designer 소관 |
+| developer | inherit | **polish 스킬 추가** — 연출 구현(artist+developer 공동) |
+| qa | inherit | 정확성 전담 명시 OK. 변경 없음 |
+| artist | inherit | **description 정본 통일** — 연출(폴리싱) 디렉션 반영(드리프트 수정) |
+| meta-economy-designer | inherit | core 통과 후 진입 명시 OK. 변경 없음 |
 
-모델 배정: 창작·판단 밀도 높은 designer/dev/meta=opus, 실행·검증형 pm/qa/artist=sonnet — 토큰 효율상 적정.
+모델 배정: 역할 파일의 `model:`은 로더 호환성을 위해 전부 `inherit`. 실제 라우팅 기준은 `AGENTS.md`에서 관리 —
+창작·판단 밀도 높은 작업(designer/dev/meta 성격)은 높은 추론 설정, 실행·검증형 작업(pm/qa/artist 성격)은 중간 추론 설정.
 역할 경계: 재미(designer) / 정확성(qa) / 경제(meta) / 연출(polish=artist+dev) 4축이 겹치지 않게 분리 확인.
 
 ## C. 드리프트 방지 (프로세스 교훈)
-GitHub push를 손수 작성한 내용으로 하다 소스와 어깴난 사례가 있었다.
+GitHub push를 손수 작성한 내용으로 하다 소스와 어긋난 사례가 있었다.
 → **항상 소스(플러그인 디렉터리)를 정본으로 두고, 그 내용을 그대로 push**한다. 손으로 다른 내용을 push하지 않는다.

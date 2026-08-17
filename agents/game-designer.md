@@ -5,7 +5,7 @@ description: >
   자동 시뮬레이션 결과를 해석해 수치를 재조정한다.
   기획 검토, 밸런스 설계, 게임성 검증, 미결/추정값 정리가 필요할 때 사용.
   주의: core 게임성 담당. 성장/수익화/리텐션(경제)은 meta-economy-designer 소관.
-model: opus
+model: inherit
 tools: Read, Write, Edit, Grep, Glob
 # MCP(연결 시): Notion
 skills:

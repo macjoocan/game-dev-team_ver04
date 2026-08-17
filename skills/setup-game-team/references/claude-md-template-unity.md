@@ -21,8 +21,8 @@
         [사람 = 최종 권위자]
               │ 승인/지시
         [오케스트레이터 = 메인 세션]
-        ┌────┬────┬────┬────┬────┐
-       pm  designer dev  qa  artist
+        ┌────┬────┬────┬────┬────┬──────┐
+       pm designer dev  qa artist meta-economy
 ```
 - 에이전트는 서로 직접 대화하지 않는다. 오케스트레이터가 결과를 모아 다음 역할로 전달한다.
 
@@ -36,17 +36,29 @@
 | `artist` | 스프라이트/프리팹/UI 시안·톤, 연출(폴리싱) 디렉션 |
 
 ## 파이프라인 & 게이트 (사람 승인 없이 다음 단계 금지)
-0. **컴션 발굴/코어 확보** (`concept-discovery` — 오케스트레이터가 사람과 대화) — 아이디어·코어 규칙을 유사 사례 조사와 함께 다듬어 코어 컴션을 확정한다. **발산 단계**(수치 게이트 없음). 게이트: 사람이 코어 확정 승인.
+0. **컨셉 발굴/코어 확보** (`concept-discovery` — 오케스트레이터가 사람과 대화) — 아이디어·코어 규칙을 유사 사례 조사와 함께 다듬어 코어 컨셉을 확정한다. **발산 단계**(수치 게이트 없음). 게이트: 사람이 코어 확정 승인.
 1. **기획/밸런스 + 게임성 지표 정의** (`game-designer`) — 게이트: 근거 없는 수치 0 · 미결 명시 · 게임성 지표 숫자로 정의.
 2. **태스크 분해** (`pm`).
 3. **프로토타입(스파이크)** (`developer`) — 버려도 되는 최소 구현. 핵심 재미만.
 4. **게임성 검증** (`game-designer` + `balance-sim`) — 헤드리스 시뮬로 지표 대조. 미충족 시 1번으로 되돌림(반복 루프).
 5. **본구현** (`developer`) — worktree 브랜치, 작은 커밋.
 6. **정확성 검증** (`qa`) — Unity Test(EditMode/PlayMode), 콘솔 에러 0.
-7. **아트** (`artist`) — 요청서 → 시안 → 승인.
+7. **아트/시각 QA** (`artist`) — `art-direction`으로 `VISUAL_DESIGN.md` 확정 → 에셋 제작(asset-pipeline manifest 기록) → `visual-qa` 검수.
+   - 게이트: `VISUAL_DESIGN.md` 존재 · asset manifest 기록 · Unity 실제 화면(Game view) visual-qa 증거 확인.
 P1. **1차 폴리싱 — 코어 연출 패스** (`polish` · artist+developer) — 게임성 검증 통과한 코어에 최소 연출(타격감·핵심 전환)로 손맛 확보. **연출은 game feel 레이어**(재미=4, 정확성=6과 별개). 게이트: 핵심 액션 피드백 존재 + 사람 사인오프.
 
 > 3↔4 반복 루프. 재미가 안 나오면 5로 안 넘어간다. QA(6, 버그) ≠ 게임성 검증(4, 재미/밸런스).
+
+- **게이트 모드**: <full/lean/solo> — full=모든 게이트(기본), lean=핵심 게이트만(코어 확정·게임성 검증·머지), solo=게이트 없음(잼/실험).
+- 게이트 통과 이력과 현재 단계는 레포 루트 `PIPELINE_STATE.md`에 기록한다.
+
+## Unity 아트/에셋 규칙
+- 아트 제작 전 `VISUAL_DESIGN.md`로 팔레트, 실루엣, 카메라, UI 톤, 금지 스타일을 고정한다.
+- Sprite는 Pixels Per Unit, pivot, packing tag 또는 atlas, compression 기준을 명시한다.
+- UI는 Canvas Scaler, safe area, smallest target resolution, Korean text length를 확인한다.
+- 3D는 scale, origin, material naming, collider/proxy, LODGroup, GLB/FBX import setting을 확인한다.
+- 에셋은 manifest stable ID로 참조하고 승인 전 임시 파일 경로를 prefab/scene에 고정하지 않는다.
+- visual-qa는 Game view 스크린샷, 모바일/최소 해상도, 바쁜 전투 화면 증거를 남긴다.
 
 ## 코드 컨벤션 (Unity 전용 · 게임성 검증의 전제)
 - **어셈블리 분리(핵심)**: 전투/런 로직은 `Game.Core` 어셈블리(asmdef, **UnityEngine 미참조**)에 순수 C#으로 둔다.

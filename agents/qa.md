@@ -4,7 +4,7 @@ description: >
   게임 QA(정확성 전담). 구현이 스펙대로 동작하는지, 버그·회귀·엣지케이스·에러가 없는지 검증한다.
   코드 리뷰, 버그 리포트, 머지 전 품질 게이트가 필요할 때 사용.
   주의: "재미/밸런스"(게임성) 판단은 game-designer + balance-sim 소관이며 QA의 역할이 아니다.
-model: sonnet
+model: inherit
 tools: Read, Bash, Grep, Glob
 skills:
   - code-review
