@@ -9,9 +9,11 @@ description: >
   "AGENTS.md 게임 팀용으로 만들어줘", "CLAUDE.md 게임 팀용으로 만들어줘" 같은 요청에 사용.
 ---
 
-이 스킬은 현재 게임 프로젝트 레포 루트에 `AGENTS.md`를 우선 생성하여, GPT/Codex 기반 역할
-에이전트들이 일관된 파이프라인(게임성 검증 포함)과 사람 승인 게이트로 동작하도록 만든다.
-사용자가 Claude Code용 세팅을 명시하면 `CLAUDE.md`도 생성하거나 병행 생성한다.
+이 스킬은 게임 프로젝트 레포에 팀 규칙을 세팅한다. **사용 중인 하네스에 맞춘다**:
+- **Claude Code 세션이면 `CLAUDE.md` + `.claude/rules/`를 우선 생성**(4단계 상세).
+- Codex 세션이면 `AGENTS.md`를 우선 생성.
+- 두 하네스를 병행하면 둘 다 생성하고, 각 파일에 상대 파일의 존재와 우선순위를 명시한다.
+역할 에이전트들이 일관된 파이프라인(게임성 검증 포함)과 사람 승인 게이트로 동작하게 만든다.
 
 ## 절차
 
@@ -49,9 +51,17 @@ description: >
 - `references/pipeline-state-template.md`를 뼈대로 레포 루트에 **`PIPELINE_STATE.md`**를 생성한다 — 게이트 통과 이력·현재 단계·미결을 파일로 남겨 세션이 바뀌어도 `pipeline-brief`가 이어받게 한다.
 - 커밋 전 자동 검사(밸런스 수치 하드코딩 검출 등)를 원하면 `references/quality-hooks.md`를 참고해 pre-commit 훅을 제안한다(선택).
 
-### 4. Claude 호환이 필요할 때만 CLAUDE.md 생성
-사용자가 Claude Code 호환도 원하거나 기존 레포가 Claude 중심이면 같은 내용의 `CLAUDE.md`를 병행 생성한다.
-이때 Codex에서는 `AGENTS.md`가 우선임을 명시한다.
+### 4. Claude Code 세팅 (Claude 세션이면 기본 수행)
+- `CLAUDE.md` 생성: `references/claude-md-template.md`(웹·범용) 또는 `claude-md-template-unity.md`(Unity).
+  3단계의 규칙(게이트 모드·PIPELINE_STATE·아트 규칙)을 동일하게 반영한다. Codex 병행 시 Codex에서는 `AGENTS.md`가 우선임을 명시.
+- **`.claude/rules/` 생성**: `references/claude-rules-template.md`를 참고해 core-logic(밸런스 하드코딩 금지·시드 RNG·헤드리스),
+  balance-data(근거 없는 수치 변경 금지), ui-code 규칙을 **실제 경로가 확정된 것만** 만든다(경로 미정이면 미결로).
+- **에이전트 메모리 안내**: 역할 에이전트 6개는 `memory: project`라 Claude Code가
+  `.claude/agent-memory/<agent>/`에 프로젝트별 메모리를 자동 유지한다(designer의 밸런스 이력,
+  qa의 회귀 포인트 등이 세션을 넘어 축적됨). 커밋해서 팀과 공유할지, gitignore할지 사람에게 확인한다.
+- (Unity + Claude) `.mcp.json`에 Unity MCP 서버 설정을 프로젝트 스코프로 제안한다(선택).
+- worktree 격리를 쓰는 레포에 gitignored 설정 파일(.env, 로컬 키 등)이 있으면
+  `.worktreeinclude`(gitignore 문법)로 워크트리에 복사되게 안내한다.
 
 ### 5. 확인 안내
 생성 후: (a) **플러그인 설치본**에 역할 에이전트 6개(meta-economy-designer 포함)와 스킬 14개가 있는지 확인 — Codex는 `codex plugin list`, Claude Code는 플러그인 설정에서 확인한다(에이전트/스킬은 게임 레포가 아니라 플러그인 설치 위치에 있다),
@@ -102,5 +112,6 @@ description: >
 - Codex/GPT Unity 템플릿: `references/agents-md-template-unity.md`
 - Claude 호환 웹·범용 템플릿: `references/claude-md-template.md`
 - Claude 호환 Unity 템플릿: `references/claude-md-template-unity.md`
+- Claude `.claude/rules/` 템플릿: `references/claude-rules-template.md`
 - 파이프라인 상태 파일 템플릿: `references/pipeline-state-template.md`
 - 커밋 전 자동 검사(품질 훅) 가이드: `references/quality-hooks.md`

@@ -35,7 +35,7 @@ done
 `Math.random()`/`Random.Range()` 직접 호출이 Core 로직에 새로 들어오면 경고
 (시드 주입형 RNG 래퍼를 쓰도록).
 
-## 설치
+## 설치 — 방법 A: git pre-commit (커밋 시점 검사)
 
 게임 레포에서:
 ```bash
@@ -43,6 +43,33 @@ done
 # 팀 공유가 필요하면 husky(웹) / core.hooksPath(범용) 사용
 git config core.hooksPath .githooks
 ```
+
+## 설치 — 방법 B: Claude Code 훅 (편집 즉시 검사)
+
+Claude Code로 작업하는 레포면 `PostToolUse` 훅으로 **파일이 수정되는 순간** 검사할 수 있다
+(커밋까지 기다리지 않음). 게임 레포 `.claude/settings.json`:
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"$CLAUDE_PROJECT_DIR\"/.claude/hooks/check-balance-hardcoding.sh"
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+훅 스크립트(`.claude/hooks/check-balance-hardcoding.sh`)는 stdin으로 받은 JSON에서
+`tool_input.file_path`를 읽어 코어 로직 경로일 때만 1번 검사를 수행하고, 위반 시
+비-0 종료로 Claude에게 피드백을 준다. 상세: https://code.claude.com/docs/en/hooks
 
 ## 원칙
 - 훅은 **기계적으로 판별 가능한 것만** 검사한다(재미/밸런스 판단은 balance-sim·사람 게이트 몫).

@@ -1,11 +1,21 @@
-# 사용법 (game-dev-team 플러그인 · GPT/Codex 우선)
+# 사용법 (game-dev-team 플러그인 · Claude Code 중점, Codex 겸용)
 
 게임 개발 역할 에이전트 팀을 어느 프로젝트에서든 재사용하기 위한 플러그인.
 목적: **기획 → 게임성 검증 → 프로토타입**을 데이터 기반으로. 최종 권위자는 항상 사람(당신)이다.
 
 ## 1. 설치
 
-### 방법 A — Codex 로컬 마켓플레이스
+### 방법 A — Claude Code (권장)
+Claude Code에서:
+```
+/plugin marketplace add macjoocan/game-dev-team
+/plugin install game-dev-team
+```
+(또는 클론 후 로컬 경로를 마켓플레이스로 등록해도 된다.)
+설치하면 역할 에이전트 6개와 스킬 14개가 로드되고, 에이전트들은 `memory: project`로
+게임 레포별 메모리를 자동 유지한다.
+
+### 방법 B — Codex 로컬 마켓플레이스
 레포를 클론한 뒤, **클론한 경로**를 마켓플레이스로 등록한다.
 
 ```powershell
@@ -17,20 +27,14 @@ codex plugin add game-dev-team@game-dev-team-local
 Codex 설정의 기본 모델은 GPT 계열을 사용한다. 역할 파일의 `model:` 값은 설치 안정성을 위해
 `inherit`로 두고, 깊은 판단/일반 실행 같은 GPT 라우팅 기준은 `AGENTS.md`에서 관리한다.
 
-### 방법 B — Claude Code 호환
-```bash
-git clone https://github.com/macjoocan/game-dev-team.git
-```
-그런 다음 Claude Code의 플러그인/마켓플레이스 설정에서 이 디렉터리를 등록한다. 단, 이
-작업본의 기본 문서는 Codex용 `AGENTS.md`다.
-
 ## 2. 게임 프로젝트에 팀 세팅
 게임 레포에서:
 ```
 게임 팀 세팅해줘
 ```
-→ `setup-game-team`이 엔진·언어·컨벤션·게임성 지표를 물어보고(또는 감지) 레포 루트에
-파이프라인이 담긴 `AGENTS.md`와 진행 상태 파일 `PIPELINE_STATE.md`를 생성한다.
+→ `setup-game-team`이 엔진·언어·컨벤션·게임성 지표를 물어보고(또는 감지) 하네스에 맞는
+팀 규칙을 생성한다: **Claude Code면 `CLAUDE.md` + `.claude/rules/`(코어 로직·밸런스 데이터
+path-scoped 규칙)**, Codex면 `AGENTS.md`. 공통으로 진행 상태 파일 `PIPELINE_STATE.md` 생성.
 
 **이미 진행 중인 프로젝트면**:
 ```
@@ -40,10 +44,11 @@ git clone https://github.com/macjoocan/game-dev-team.git
 이미 충족된 게이트는 `통과(백필)`로 소급 인정하고, 갭(게임성 지표 없음·밸런스 하드코딩·
 헤드리스 시뮬 불가 등)은 담당 역할의 태스크로 만든다. ⓪부터 다시 시작하지 않는다.
 
-설치 확인(Codex):
-```
-codex plugin list
-```
+설치 확인: Claude Code는 `/plugin`, Codex는 `codex plugin list`.
+
+**에이전트 메모리 (Claude Code)**: 역할 에이전트는 게임 레포의 `.claude/agent-memory/<agent>/`에
+프로젝트별 메모리를 자동 축적한다(designer 밸런스 이력, qa 회귀 포인트 등).
+팀과 공유하려면 커밋하고, 개인용으로 두려면 gitignore한다 — 세팅 시 선택.
 
 ## 3. 파이프라인 (각 화살표 = 사람 승인 게이트)
 ```

@@ -4,8 +4,9 @@
 프로젝트에서든 재사용하도록 묶은 플러그인. 목적은 **기획 → 게임성 검증 → 프로토타입**을
 데이터 기반으로 굴리는 것. 최종 권위자는 항상 사람(당신)이다.
 
-이 작업본은 Claude Code에서 출발한 구성을 **GPT/Codex 우선**으로 튜닝한다. Codex에서는
-`AGENTS.md`, `.codex-plugin/plugin.json`, `.agents/plugins/marketplace.json`, `skills/`를 우선 사용한다.
+**Claude Code와 GPT/Codex 겸용 — 현재 작업은 Claude Code 중점.**
+Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이전트 메모리**(`memory: project`)를
+활용하고, Codex에서는 `AGENTS.md`·`.codex-plugin/`·`.agents/plugins/marketplace.json`을 사용한다.
 
 ## 무엇이 들어있나
 
@@ -21,6 +22,9 @@
 
 에이전트는 **허브-앤-스포크**로 동작. 서로 직접 대화하지 않고 오케스트레이터(메인 세션)가
 결과를 모아 다음 역할로 전달하며 각 단계는 사람 승인을 거친다. (조율 규칙: ORCHESTRATION.md)
+
+전 에이전트가 **`memory: project`**(Claude Code) — 프로젝트별 메모리(`.claude/agent-memory/<agent>/`)를
+자동 유지해 designer의 밸런스 조정 이력, qa의 회귀 포인트 같은 맥락이 세션을 넘어 축적된다.
 
 ### 스킬 14개 (`skills/`)
 - **`concept-discovery`** — 초기 아이디어·코어 규칙을 사람과 대화하며 유사 사례 검색·제안으로 다듬어 **코어 컨셉 확보**(0단계, 오케스트레이터 대화형).
