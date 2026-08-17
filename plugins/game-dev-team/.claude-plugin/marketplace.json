@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "game-dev-team",
+  "description": "게임 개발용 역할 에이전트 팀과 사람 승인 게이트 기반 파이프라인 (로컬 마켓플레이스)",
+  "owner": {
+    "name": "맥주캔"
+  },
+  "plugins": [
+    {
+      "name": "game-dev-team",
+      "description": "게임 개발용 역할 에이전트 팀(PM·기획·개발·QA·아트·메타경제)과 사람 승인 게이트 기반 파이프라인. 어느 게임 프로젝트에서든 재사용.",
+      "author": {
+        "name": "맥주캔"
+      },
+      "category": "development",
+      "source": "./"
+    }
+  ]
+}
