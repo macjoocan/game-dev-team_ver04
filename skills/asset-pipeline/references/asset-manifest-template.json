@@ -1,0 +1,26 @@
+{
+  "assets": [
+    {
+      "id": "category.asset-name.variant",
+      "type": "sprite|ui|icon|vfx|sfx|model|texture",
+      "status": "requested|concept|approved|production|imported|verified",
+      "owner": "artist",
+      "source": "original",
+      "license": "project-owned",
+      "files": {
+        "source": "",
+        "raw": "",
+        "final": "",
+        "preview": ""
+      },
+      "constraints": {
+        "size": "",
+        "pivot": "",
+        "background": "",
+        "format": ""
+      },
+      "notes": ""
+    }
+  ]
+}
+
