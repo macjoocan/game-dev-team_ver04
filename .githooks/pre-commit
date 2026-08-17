@@ -1,0 +1,9 @@
+#!/bin/sh
+# Block commits when root (source of truth) and plugins/game-dev-team (mirror) drift.
+# One-time setup per clone: git config core.hooksPath .githooks
+root="$(git rev-parse --show-toplevel)"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/sync-plugin.ps1" -Check
+if [ $? -ne 0 ]; then
+  echo "[pre-commit] Mirror drift detected. Run scripts/sync-plugin.ps1, stage the mirror, then re-commit."
+  exit 1
+fi

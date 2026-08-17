@@ -7,3 +7,6 @@
 
 # 로컬 스킬/도구 설치본
 .superpowers/
+
+# 개인용 Claude 메모 (공유 안 함)
+CLAUDE.local.md

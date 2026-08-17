@@ -12,7 +12,7 @@ $mirror = Join-Path $root 'plugins\game-dev-team'
 
 # Canonical set - anything not listed here is not part of the mirror
 $dirs = @('agents', 'skills', '.claude-plugin', '.codex-plugin')
-$files = @('README.md', 'USAGE.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md')
+$files = @('README.md', 'USAGE.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md', 'CLAUDE.md')
 
 function Get-TreeHash($base, $rel) {
     $path = Join-Path $base $rel
