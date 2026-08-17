@@ -1,0 +1,9 @@
+# Codex 플러그인 캐시/임시 홈
+.codex-temp-home*/
+
+# 브라우저 테스트 프로필 (쿠키·로그인 데이터 포함 — 절대 커밋 금지)
+.chrome-test*/
+.edge-test*/
+
+# 로컬 스킬/도구 설치본
+.superpowers/
