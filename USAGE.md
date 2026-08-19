@@ -3,17 +3,73 @@
 게임 개발 역할 에이전트 팀을 어느 프로젝트에서든 재사용하기 위한 플러그인.
 목적: **기획 → 게임성 검증 → 프로토타입**을 데이터 기반으로. 최종 권위자는 항상 사람(당신)이다.
 
-## 1. 설치
+## 1. 설치 — 어느 게임 프로젝트에든 붙이기
 
-### 방법 A — .plugin 파일 (Cowork)
-1. `game-dev-team.plugin` 파일을 Cowork 채팅에 열거나 드래그.
-2. 뜨는 설치 버튼을 누른다.
+세 가지 경로가 있다. **팀에 배포할 거면 A, 플러그인을 직접 고치며 쓸 거면 B, 게임 레포에
+못 박아 팀원 전원에게 적용하려면 C.**
 
-### 방법 B — Claude Code (레포에서 직접)
-```bash
-git clone https://github.com/macjoocan/game-dev-team.git
+### A. GitHub 마켓플레이스 (권장)
 ```
-그런 다음 Claude Code의 플러그인/마켓플레이스 설정에서 이 디렉터리를 등록한다.
+/plugin marketplace add macjoocan/game-dev-team-Ver2
+/plugin install game-dev-team@game-dev-team
+```
+- 첫 줄은 **카탈로그 등록**이고 둘째 줄이 **실제 설치**다. 등록만으로는 아무것도 설치되지 않는다.
+- 설치할 때 스코프를 고른다: **User**(내 모든 프로젝트) · **Project**(이 레포 협업자 전원,
+  `.claude/settings.json`에 기록됨) · **Local**(이 레포에서 나만).
+- 설치 요약에 `Run /reload-plugins to activate.` 가 뜨면 그 명령을 실행한다.
+- 셸에서 비대화형으로: `claude plugin install game-dev-team@game-dev-team --scope project`
+
+`game-dev-team@game-dev-team` 에서 앞은 **플러그인 이름**, 뒤는 **마켓플레이스 이름**이다.
+마켓플레이스 이름은 레포 이름(`-Ver2`)이 아니라 `.claude-plugin/marketplace.json` 의 `name` 을 따른다.
+
+### B. 로컬 디렉터리 (플러그인을 직접 고치며 쓸 때)
+```bash
+git clone https://github.com/macjoocan/game-dev-team-Ver2.git
+```
+```
+/plugin marketplace add ./game-dev-team-Ver2
+/plugin install game-dev-team@game-dev-team
+```
+디렉터리 소스는 **작업 중인 파일을 그대로 읽는다.** 스킬·훅을 고치고 `/reload-plugins` 만 하면
+반영된다. 반면 GitHub 소스는 스냅샷이라 `/plugin marketplace update game-dev-team` 으로 갱신해야
+새 버전이 온다.
+
+설치 없이 한 세션만 시험하려면:
+```bash
+claude --plugin-dir ./game-dev-team-Ver2
+```
+
+### C. 게임 레포에 고정해 팀원 전원에게 적용
+게임 레포의 `.claude/settings.json` 에 넣고 커밋한다. 팀원이 그 폴더를 신뢰하면 마켓플레이스가
+자동 등록된다.
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "game-dev-team": {
+      "source": { "source": "github", "repo": "macjoocan/game-dev-team-Ver2" }
+    }
+  },
+  "enabledPlugins": {
+    "game-dev-team@game-dev-team": true
+  }
+}
+```
+
+> **자동 설치까지는 안 된다.** 위 설정은 마켓플레이스 등록만 자동으로 해준다. GitHub 같은 외부
+> 소스에서 오는 플러그인은 `enabledPlugins` 에 적어도 **팀원이 직접 설치하기 전까지 로드되지
+> 않는다**(Claude Code v2.1.195 이후). 그때까지 Claude Code는 "설치 안 됨"으로 표시하고 실행할
+> `claude plugin install` 명령을 보여준다. 팀원이 한 번만 그걸 실행하면 된다.
+
+버전을 고정하려면 source에 `"ref": "v0.9.0"` 을 추가한다(브랜치·태그 모두 가능).
+
+### 설치 확인
+```
+/plugin      # Installed 탭에 game-dev-team이 있고 Errors 탭이 비어 있는지
+/agents      # pm · game-designer · developer · qa · artist · meta-economy-designer
+/game-dev-team:gate
+```
+훅은 **Node가 PATH에 있어야** 돈다. 없으면 훅만 조용히 실패하고 나머지 기능은 정상 동작한다.
 
 ## 2. 새 게임 프로젝트에 팀 세팅
 게임 레포에서:
@@ -23,10 +79,10 @@ git clone https://github.com/macjoocan/game-dev-team.git
 → `setup-game-team`이 엔진·언어·컨벤션·게임성 지표를 물어보고(또는 감지) 레포 루트에
 7단계 파이프라인이 담긴 `CLAUDE.md`를 생성한다.
 
-설치 확인(Claude Code):
-```
-/agents        # pm, game-designer, developer, qa, artist, meta-economy-designer
-```
+이 스킬은 `CLAUDE.md` 만 만들지 않는다. **붙이는 데 필요한 나머지도 같이 만든다**:
+`.claude/settings.json`(위 C 방식 — 팀원에게 자동 적용), `docs/pipeline/state.json`(세션 시작 훅이
+읽는 상태 파일), `.gitignore` 항목(`docs/pipeline/audit.log`). 이미 있는 파일은 덮어쓰지 않고
+병합 여부를 먼저 묻는다.
 
 ## 3. 파이프라인 (각 화살표 = 사람 승인 게이트)
 ```

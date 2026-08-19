@@ -79,7 +79,12 @@ README가 말하는 개수 — 전부 **틀려도 런타임에서는 조용히 �
   증거를 못 만들면 판정은 미달이 아니라 **측정 불가**(→ 하네스 수리). 규칙: ORCHESTRATION.md §5.
 
 ## 사용법
-1. 이 플러그인을 설치한다.
+1. 플러그인을 설치한다:
+   ```
+   /plugin marketplace add macjoocan/game-dev-team-Ver2
+   /plugin install game-dev-team@game-dev-team
+   ```
+   팀 전체에 적용하거나 로컬에서 고쳐 쓰는 방법은 [USAGE.md](./USAGE.md#1-설치--어느-게임-프로젝트에든-붙이기).
 2. 게임 레포에서 `게임 팀 세팅해줘` → `setup-game-team`이 `CLAUDE.md` 생성.
 3. 초기 아이디어를 `concept-discovery`로 다듬어 코어 확보 후, 각 게이트를 plan 모드로 확인.
 
