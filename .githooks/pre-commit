@@ -1,9 +1,20 @@
 #!/bin/sh
-# Block commits when root (source of truth) and plugins/game-dev-team (mirror) drift.
+# Gate commits: mirror must be in sync AND plugin integrity must pass.
 # One-time setup per clone: git config core.hooksPath .githooks
 root="$(git rev-parse --show-toplevel)"
+
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/sync-plugin.ps1" -Check
 if [ $? -ne 0 ]; then
   echo "[pre-commit] Mirror drift detected. Run scripts/sync-plugin.ps1, stage the mirror, then re-commit."
   exit 1
+fi
+
+if command -v node >/dev/null 2>&1; then
+  node "$root/scripts/validate-plugin.mjs"
+  if [ $? -ne 0 ]; then
+    echo "[pre-commit] Plugin integrity check failed. Fix the errors above, then re-commit."
+    exit 1
+  fi
+else
+  echo "[pre-commit] node not found - skipping validate-plugin.mjs (CI will still run it)."
 fi

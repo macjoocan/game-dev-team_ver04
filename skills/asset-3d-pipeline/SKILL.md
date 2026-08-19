@@ -1,6 +1,10 @@
 ---
 name: asset-3d-pipeline
-description: Use when producing or importing 3D game assets, Blender MCP work, glTF/GLB/FBX export, pivots, scale, collision proxies, LODs, texture budgets, materials, or in-engine validation.
+description: >
+  3D 에셋을 엔진에 깨끗하게 안착시킨다. 스케일·피벗·머티리얼 명명·콜리전 프록시·LOD·
+  glTF/GLB/FBX 익스포트를 다룬다. Blender MCP가 붙어 있으면 그것으로 작업한다.
+  "3D 모델 만들어줘", "Blender로 작업", "GLB 내보내줘", "LOD", "콜리전 프록시", "텍스처 예산"
+  같은 요청에 사용. 소유: artist + developer.
 ---
 
 # 3D Asset Pipeline
@@ -36,3 +40,8 @@ If Blender MCP is connected, use it for modeling, material setup, rigging/animat
 | Materials break on import | Use simple named materials and documented texture paths. |
 | Collision is forgotten | Add proxy or explicit collision note before handoff. |
 
+## 이 레포에서의 위치
+- **소유**: artist(방향) + developer(엔진 반영).
+- 산출물은 `asset-pipeline`의 manifest에 ID로 등록한다.
+- Blender MCP가 없으면 **정확한 Blender 조작과 임포트 설정을 담은 핸드오프 문서**를 남긴다.
+  "할 수 없다"로 끝내지 않는다.

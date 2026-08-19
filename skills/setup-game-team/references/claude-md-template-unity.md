@@ -102,7 +102,7 @@ P2. **2차 폴리싱 — 파이널 연출 패스** (`polish` · artist+developer
 
 ## 권장 MCP
 - **Unity MCP**(CoplayDev/unity-mcp 또는 IvanMurzak/Unity-MCP) — 에디터/런타임/테스트 제어.
-- Blender MCP — 3D 에셋. GitHub/Linear/Notion — 코드·트래커·문서.
+- Blender MCP — 3D 에셋. GitHub — 코드. Dooray(사내) 또는 Linear/Notion — 트래커·문서.
 
 ## 사람(당신)의 승인 지점
 - 기획/게임성 지표 확정 · 게임성 검증 통과(본구현 착수) · 어셈블리/폴더 구조 승인 · 머지 · 아트 시안 선택 · 폴리싱(P1/P2) 사인오프

@@ -10,3 +10,22 @@
 
 # 개인용 Claude 메모 (공유 안 함)
 CLAUDE.local.md
+
+# 에이전트 메모리 — 작업한 게임 프로젝트의 기획·수치가 들어간다.
+# 이 레포는 공개이므로 절대 커밋하지 않는다.
+.claude/agent-memory/
+
+# 훅이 남기는 감사 로그·상태 파일. 게임 프로젝트 것이지 이 레포의 소스가 아니다.
+docs/pipeline/audit.log
+docs/pipeline/state.json
+
+# 백업본
+*.bak_*
+*.bak
+
+# OS
+Thumbs.db
+.DS_Store
+
+# 서브에이전트 격리 워크트리. 남의 게임 코드가 들어올 수 있다.
+.claude/worktrees/

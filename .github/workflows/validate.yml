@@ -1,0 +1,41 @@
+# 플러그인 무결성 게이트.
+# 에이전트 frontmatter의 스킬 참조, 훅이 가리키는 스크립트, README가 말하는 개수 —
+# 전부 틀려도 런타임에서는 조용히 무시된다. 그래서 여기서 막는다.
+
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 플러그인 무결성 검사
+        run: node scripts/validate-plugin.mjs
+
+      - name: 훅 스크립트 문법 검사
+        run: |
+          for f in scripts/*.mjs; do
+            node --check "$f"
+          done
+
+      - name: 훅이 세션을 깨지 않는지 (빈 입력 · 깨진 입력에도 exit 0)
+        run: |
+          for f in scripts/check-balance-hardcode.mjs \
+                   scripts/check-commit-gate.mjs \
+                   scripts/inject-pipeline-state.mjs \
+                   scripts/log-agent-gate.mjs; do
+            echo '' | node "$f" >/dev/null || { echo "FAIL(빈 입력): $f"; exit 1; }
+            echo 'not json' | node "$f" >/dev/null || { echo "FAIL(깨진 입력): $f"; exit 1; }
+          done
+          echo "훅 4종 모두 fail-open 확인"

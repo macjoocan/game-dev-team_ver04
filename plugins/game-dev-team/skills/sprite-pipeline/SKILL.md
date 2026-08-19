@@ -1,6 +1,11 @@
 ---
 name: sprite-pipeline
-description: Use when making or importing 2D sprites, character sheets, animation strips, tiles, icons, frame normalization, alpha cleanup, pivots, contact sheets, or engine-ready atlases.
+description: >
+  2D 스프라이트를 프레임 간 일관성이 유지되게 만든다. seed 프레임 승인 → 시트/스트립 생성 →
+  캔버스 크기·피벗·baseline 통일 → 알파 정리 → 아틀라스/엔진 반영.
+  "스프라이트 만들어줘", "캐릭터 시트", "애니메이션 스트립", "아틀라스", "피벗 맞춰줘",
+  "프레임 정규화" 같은 요청에 사용. 소유: artist + developer.
+  주의: 개별 프레임을 따로 뽑지 않는다 — 프레임마다 캐릭터 정체성이 흔들린다.
 ---
 
 # Sprite Pipeline
@@ -42,3 +47,8 @@ Approve one seed frame first. Then produce strips/sheets from that seed so ident
 | Art looks good in preview but bad in game | Verify at real camera zoom. |
 | Atlas import loses meaning | Keep manifest IDs and frame layout notes. |
 
+## 이 레포에서의 위치
+- **소유**: artist(방향) + developer(엔진 반영).
+- `art-direction` 승인 → seed 프레임 승인 → 시트 생성 순서를 건너뛰지 않는다.
+- 산출물은 `asset-pipeline`의 manifest에 ID로 등록한다.
+- 애니메이션 **타이밍·타격감**은 이 스킬이 아니라 `polish` 소관이다. 여기선 프레임 정합만 본다.
