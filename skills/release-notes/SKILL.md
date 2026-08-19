@@ -10,7 +10,7 @@ description: >
 
 ## 절차
 1. 범위 확인: 태그/사이클/날짜 구간 또는 "지난 릴리즈 이후".
-2. 소스 수집: GitHub 머지된 PR·닫힌 이슈(MCP `list_pull_requests`/`list_issues`), 트래커(Linear/Notion) 항목.
+2. 소스 수집: GitHub 머지된 PR·닫힌 이슈(MCP `list_pull_requests`/`list_issues`), 트래커(Dooray 프로젝트/Linear/Notion) 항목.
 3. 분류: ✨신규 / ⚖️밸런스 / 🎨연출·아트 / 🐛버그수정 / 🔧기술·내부.
 4. 두 버전 산출:
    - **사용자용**: 플레이어가 체감하는 변화 위주, 간결한 문장. (문체는 polish-writing 적용 가능)

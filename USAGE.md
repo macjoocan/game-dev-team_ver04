@@ -38,21 +38,43 @@ git clone https://github.com/macjoocan/game-dev-team.git
 
 ## 4. 역할별 호출 예시
 - `game-designer로 이 기획서 검수하고 게임성 목표 지표 정의해줘`
+- `기획 게이트 통과되나 봐줘` (gdd-completeness-checker — 근거 없는 수치·미결·빠진 섹션)
 - `pm으로 이 변경을 태스크로 분해해줘`
 - `developer로 이 메커니즘 프로토(스파이크) 만들어줘` (worktree 격리)
 - `balance-sim으로 1000판 자동 플레이해서 승률·런 길이·픽률 뽑아줘` (게임성 검증)
 - `qa로 이 변경 정확성 리뷰하고 회귀 확인해줘`
 - `artist로 카드 UI 시안 2~3안 만들어줘`
+- `art-direction으로 VISUAL_DESIGN.md 만들어줘` (아트 기준 — 에셋 제작 전에 먼저)
+- `visual-qa로 아트 검수해줘` (가독성·알파·UI 겹침 — 아트 단계 출구 게이트)
 - `meta-economy-designer로 성장 구조·수익화(가챠+광고+F2P) 설계해줘` (core 통과 후)
 - `econ-sim으로 리텐션·재화수지·LTV 뽑아줘` (경제 검증)
 
-## 5. 권장 확장 (선택)
+## 5. 훅 (자동으로 켜짐, 차단은 안 함)
+플러그인을 켜면 훅 4개가 같이 붙는다. 전부 **경고만** 하고 작업을 막지 않는다.
+
+| 언제 | 무엇을 |
+|---|---|
+| 코드 쓸 때 | 밸런스 수치가 로직에 하드코딩되면 경고 (`sim/`·`data/`·`*Config*`·테스트는 면제) |
+| `git commit` 직전 | 열린 게이트 · 기본 브랜치 직접 커밋 · `--no-verify` 알림 |
+| 세션 시작 | 현재 단계·대기 게이트·반복 예산을 자동 주입 |
+| 역할 에이전트 종료 | 감사 로그 기록 |
+
+세션 시작 주입을 쓰려면 게임 레포에 `docs/pipeline/state.json`을 만든다(형식은
+[pipeline-brief 스킬](./skills/pipeline-brief/SKILL.md)). 없으면 훅은 조용히 넘어간다.
+`docs/pipeline/audit.log`는 자동 생성되니 `.gitignore`에 넣을지 정해두면 좋다.
+
+훅이 시끄러우면 `/hooks`에서 개별로 끄거나 플러그인 자체를 비활성화한다.
+Node가 PATH에 있어야 동작한다(없으면 훅만 조용히 실패하고 나머지 기능은 정상).
+
+## 6. 권장 확장 (선택)
 - 엔진: Unity MCP / Unreal MCP / Godot MCP
 - 3D 아트: Blender MCP
-- 트래커: GitHub · Linear · Notion
+- 문서·트래커: **Dooray**(사내 위키/프로젝트) · GitHub · Linear · Notion
+  ※ 사외망이 막힌 사내 환경에서는 기획서를 Dooray 위키에 올리고 Notion 자리를 Dooray로 대체한다.
+- 기획 파이프라인: `gdd-pipeline` 계열 MCP가 있으면 단계 관리·가드레일 채점을 위임
 
-## 6. 게이트 체크(사람용 요약)
-- 기획 게이트: 근거 없는 수치 0 · 미결 명시 · 게임성 지표 정의.
+## 7. 게이트 체크(사람용 요약)
+- 기획 게이트: 근거 없는 수치 0 · 미결 명시 · 게임성 지표 정의 (`gdd-completeness-checker`로 검수).
 - 게임성 검증: balance-sim 실측이 목표 충족(미달 시 기획으로 되돌림).
 - 경제 검증(core 통과 후): econ-sim이 리텐션·재화수지·무과금 공정·컴플라이언스 충족.
 - 정확성/머지: 콘솔·빌드 에러 0, 회귀 없음, QA 판정 통과.
