@@ -5,7 +5,7 @@
   "author": {
     "name": "맥주캔"
   },
-  "repository": "https://github.com/macjoocan/game-dev-team",
+  "repository": "https://github.com/macjoocan/game-dev-team-Ver3",
   "keywords": [
     "game-development",
     "agents",
@@ -32,6 +32,6 @@
       "concept-discovery로 게임 아이디어를 다듬어줘",
       "art-direction으로 VISUAL_DESIGN.md 만들어줘"
     ],
-    "websiteURL": "https://github.com/macjoocan/game-dev-team"
+    "websiteURL": "https://github.com/macjoocan/game-dev-team-Ver3"
   }
 }

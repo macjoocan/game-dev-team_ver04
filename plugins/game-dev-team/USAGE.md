@@ -10,7 +10,7 @@ Claude Code는 세 가지 경로가 있다. **팀에 배포할 거면 A, 플러�
 
 ### A. GitHub 마켓플레이스 (권장)
 ```
-/plugin marketplace add macjoocan/game-dev-team
+/plugin marketplace add macjoocan/game-dev-team-Ver3
 /plugin install game-dev-team@game-dev-team
 ```
 - 첫 줄은 **카탈로그 등록**이고 둘째 줄이 **실제 설치**다. 등록만으로는 아무것도 설치되지 않는다.
@@ -24,10 +24,10 @@ Claude Code는 세 가지 경로가 있다. **팀에 배포할 거면 A, 플러�
 
 ### B. 로컬 디렉터리 (플러그인을 직접 고치며 쓸 때)
 ```bash
-git clone https://github.com/macjoocan/game-dev-team.git
+git clone https://github.com/macjoocan/game-dev-team-Ver3.git
 ```
 ```
-/plugin marketplace add ./game-dev-team
+/plugin marketplace add ./game-dev-team-Ver3
 /plugin install game-dev-team@game-dev-team
 ```
 디렉터리 소스는 **작업 중인 파일을 그대로 읽는다.** 스킬·훅을 고치고 `/reload-plugins` 만 하면
@@ -36,7 +36,7 @@ git clone https://github.com/macjoocan/game-dev-team.git
 
 설치 없이 한 세션만 시험하려면:
 ```bash
-claude --plugin-dir ./game-dev-team
+claude --plugin-dir ./game-dev-team-Ver3
 ```
 
 ### C. 게임 레포에 고정해 팀원 전원에게 적용
@@ -47,7 +47,7 @@ claude --plugin-dir ./game-dev-team
 {
   "extraKnownMarketplaces": {
     "game-dev-team": {
-      "source": { "source": "github", "repo": "macjoocan/game-dev-team" }
+      "source": { "source": "github", "repo": "macjoocan/game-dev-team-Ver3" }
     }
   },
   "enabledPlugins": {
@@ -67,8 +67,8 @@ claude --plugin-dir ./game-dev-team
 레포를 클론한 뒤, **클론한 경로**를 마켓플레이스로 등록한다.
 
 ```powershell
-git clone https://github.com/macjoocan/game-dev-team.git
-codex plugin marketplace add <클론한-경로>   # 예: .\game-dev-team
+git clone https://github.com/macjoocan/game-dev-team-Ver3.git
+codex plugin marketplace add <클론한-경로>   # 예: .\game-dev-team-Ver3
 codex plugin add game-dev-team@game-dev-team-local
 ```
 

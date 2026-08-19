@@ -40,12 +40,6 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 - **`asset-3d-pipeline`** — 3D 에셋 스케일·피벗·콜리전·LOD·glTF/FBX 익스포트 (Blender MCP 연동).
 - **`visual-qa`** — 가독성·알파·UI 겹침·모바일 세이프에어리어 검수. 아트 단계의 **출구 게이트**.
 - **`polish`** — 연출/주스(UI 애니메이션·타격감·전투 연출)를 2패스(1차·2차)로 다듬는 **game feel**(artist+developer).
-- **`art-direction`** — `VISUAL_DESIGN.md`로 팔레트·실루엣·카메라·UI 톤·금지 스타일을 고정.
-- **`asset-pipeline`** — 에셋 요청·출처/라이선스·승인 상태·manifest·엔진 핸드오프 관리.
-- **`sprite-pipeline`** — seed frame, 스프라이트 시트/스트립, 프레임 정규화, 피벗, 알파 정리, 미리보기.
-- **`ui-art-system`** — HUD·버튼·카드·아이콘·상태/피해 숫자·희귀도 프레임 UI 아트 시스템.
-- **`visual-qa`** — 실루엣, 대비, 알파, 피벗, tile seam, UI 겹침, 모바일 가독성 검수.
-- **`asset-3d-pipeline`** — Blender MCP/GLB/FBX, scale, pivot, collision proxy, LOD, material/export 검수.
 - **`pr-review`** — 게임 코드 PR을 정확성 관점으로 리뷰(로직·회귀·밸런스 하드코딩·게임 특화 위험). qa 소유.
 - **`release-notes`** — 머지된 PR·이슈를 모아 릴리즈/패치노트(사용자용+개발자용) 초안. pm 소유.
 - **`pipeline-brief`** — 파이프라인 현황·대기 게이트·블로커 브리핑. 예약 작업으로 상시화.
@@ -95,7 +89,7 @@ README가 말하는 개수 — 전부 **틀려도 런타임에서는 조용히 �
 ## 사용법
 1. 플러그인을 설치한다:
    ```
-   /plugin marketplace add macjoocan/game-dev-team
+   /plugin marketplace add macjoocan/game-dev-team-Ver3
    /plugin install game-dev-team@game-dev-team
    ```
    팀 전체에 적용하거나 로컬에서 고쳐 쓰는 방법은 [USAGE.md](./USAGE.md#1-설치--어느-게임-프로젝트에든-붙이기).
