@@ -29,3 +29,6 @@ Thumbs.db
 
 # 서브에이전트 격리 워크트리. 남의 게임 코드가 들어올 수 있다.
 .claude/worktrees/
+
+# 배포 번들 산출물 (scripts/make-bundle.ps1)
+dist/
