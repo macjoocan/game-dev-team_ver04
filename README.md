@@ -26,19 +26,22 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 전 에이전트가 **`memory: project`**(Claude Code) — 프로젝트별 메모리(`.claude/agent-memory/<agent>/`)에
 **일하는 방식·함정·교정**이 세션을 넘어 축적된다(상태값의 정본은 `docs/pipeline/state.json`).
 
-### 스킬 16개 (`skills/`)
+### 스킬 19개 (`skills/`)
 - **`concept-discovery`** — 초기 아이디어·코어 규칙을 사람과 대화하며 유사 사례 검색·제안으로 다듬어 **코어 컨셉 확보**(0단계, 오케스트레이터 대화형).
 - **`setup-game-team`** — 게임 레포에 팀 규칙(`CLAUDE.md`/`AGENTS.md`)과 상태 파일·설정을 세팅. 진행 중 프로젝트 온보딩(중간 진입) 포함.
 - **`gdd-completeness-checker`** — 기획 문서를 **기획 게이트**로 검수(근거 없는 수치·공란·숨은 미결·정의 안 된 지표). designer/meta 소유.
 - **`polish-writing`** — AI 문체를 사람 말투로. 번역투·명사화·모호 수식어 제거, 팀 문체 모드. **수치는 건드리지 않는다.**
 - **`balance-sim`** — 전투/런 자동 플레이로 승률·런길이·픽률·사망곡선을 목표와 대조하는 **게임성 검증**.
 - **`econ-sim`** — 성장/수익화/리텐션(가챠+광고+F2P)을 코호트 시뮬로 검증하는 **경제 검증**(core 통과 후).
-- **`art-direction`** — 아트 스타일·팔레트·실루엣·UI 톤을 정해 `VISUAL_DESIGN.md`로 고정. 아트 단계의 **입구**.
+- **`art-direction`** — 아트 스타일·팔레트·실루엣·UI 톤을 정해 `VISUAL_DESIGN.md`로 고정. 아트 단계의 **입구**. `references/starter-kit/`에 팔레트+UI/FX 스펙 출발점 동봉.
 - **`asset-pipeline`** — 에셋 요청 접수·폴더 구조·manifest(안정 ID·승인 상태·출처/라이선스)·엔진 핸드오프.
 - **`sprite-pipeline`** — 2D 스프라이트: seed 프레임 승인 → 시트/스트립 → 피벗·baseline 통일 → 아틀라스.
-- **`ui-art-system`** — HUD·버튼·카드·아이콘·희귀도 프레임을 **상태별 변형**까지 설계.
+- **`ui-art-system`** — HUD·버튼·카드·아이콘·희귀도 프레임을 **상태별 변형**까지 설계. `ui-kit-gen`으로 스펙→PNG+9-slice 자동 생성(외부 API 불필요).
+- **`fx-art-system`** — 이펙트(임팩트·소멸·글로우·획득)를 스펙에서 프레임 시퀀스+스트립 시트로 생성. 어두운 배경 프리뷰로 검수.
+- **`char-art-system`** — 캐릭터를 로컬 ComfyUI로 생성하고 **정체성 유지**(시드→IP-Adapter→LoRA). 3축 중 유일하게 백엔드 세팅이 선행.
 - **`asset-3d-pipeline`** — 3D 에셋 스케일·피벗·콜리전·LOD·glTF/FBX 익스포트 (Blender MCP 연동).
 - **`visual-qa`** — 가독성·알파·UI 겹침·모바일 세이프에어리어 검수. 아트 단계의 **출구 게이트**.
+- **`asset-budget`** — 앱 용량·텍스처 메모리·아틀라스 낭비·드로우콜을 실측해 예산과 대조. 엔진 없이 도는 스캐너 동봉. 실서비스 아트의 출구 게이트.
 - **`polish`** — 연출/주스(UI 애니메이션·타격감·전투 연출)를 2패스(1차·2차)로 다듬는 **game feel**(artist+developer).
 - **`pr-review`** — 게임 코드 PR을 정확성 관점으로 리뷰(로직·회귀·밸런스 하드코딩·게임 특화 위험). qa 소유.
 - **`release-notes`** — 머지된 PR·이슈를 모아 릴리즈/패치노트(사용자용+개발자용) 초안. pm 소유.
@@ -82,7 +85,8 @@ README가 말하는 개수 — 전부 **틀려도 런타임에서는 조용히 �
 - **④(게임성) ≠ ⑥(QA, 정확성) ≠ ⑨(경제) ≠ 폴리싱(연출)** — 검증 축이 모두 별개.
 - **게이트 모드**: `full`(기본) / `lean`(핵심 게이트만) / `solo`(잼/실험용) — 프로젝트 규모에 맞게 선택. (ORCHESTRATION.md 참고)
 - **⑦ 아트**는 내부에 자체 흐름이 있다: `art-direction`(기준) → `asset-pipeline`(manifest) →
-  제작(스프라이트·UI·3D) → `visual-qa`(출구). 기준 없이 에셋을 늘리면 뒤에 전부 다시 만든다.
+  제작(스프라이트·UI·3D) → `visual-qa`+`asset-budget`(출구). 기준 없이 에셋을 늘리면 뒤에 전부 다시 만들고,
+  예산 없이 늘리면 저사양 기기에서 죽는다 — **보이는가(visual-qa)와 감당 가능한가(asset-budget)는 다른 축이다.**
 - **검증 주장 무결성**: 안 돌린 검증은 통과가 아니다. 수치 보고는 시드·판수·대상 커밋을 달고,
   증거를 못 만들면 판정은 미달이 아니라 **측정 불가**(→ 하네스 수리). 규칙: ORCHESTRATION.md §5.
 
@@ -92,6 +96,9 @@ README가 말하는 개수 — 전부 **틀려도 런타임에서는 조용히 �
    /plugin marketplace add macjoocan/game-dev-team-Ver3
    /plugin install game-dev-team@game-dev-team
    ```
+   **팀원에게 배포할 땐 압축 번들이 더 간단하다**(사외망 환경 포함). 배포자가
+   `scripts\make-bundle.ps1`로 zip을 만들고, 받은 사람은 압축을 푼 뒤 `install.ps1`(Windows) ·
+   `install.sh`(macOS/Linux)만 실행하면 등록·설치가 끝난다 — 안내문은 [INSTALL.md](./INSTALL.md).
    팀 전체에 적용하거나 로컬에서 고쳐 쓰는 방법은 [USAGE.md](./USAGE.md#1-설치--어느-게임-프로젝트에든-붙이기).
 2. 게임 레포에서 `게임 팀 세팅해줘` → `setup-game-team`이 `CLAUDE.md`/`AGENTS.md`와
    `PIPELINE_STATE.md`·`docs/pipeline/state.json`을 생성. 진행 중 프로젝트는 `기존 프로젝트에 팀 붙여줘`.

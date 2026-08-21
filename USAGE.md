@@ -7,6 +7,23 @@
 
 Claude Code는 세 가지 경로가 있다. **팀에 배포할 거면 A, 플러그인을 직접 고치며 쓸 거면 B,
 게임 레포에 못 박아 팀원 전원에게 적용하려면 C.** Codex는 D.
+**팀원에게 그냥 나눠줄 거면 아래 0번(압축 번들)이 제일 간단하다** — 사외망이 막혀 GitHub에
+못 붙는 환경에서도 된다.
+
+### 0. 압축 번들 — 팀원 배포용 (설치 스크립트 동봉)
+배포자가 번들을 만든다:
+```powershell
+.\scripts\make-bundle.ps1        # -> dist\game-dev-team-v<version>.zip
+```
+받은 사람은 계속 둘 폴더에 압축을 풀고 스크립트 하나만 실행한다:
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1   # Windows
+sh ./install.sh                                                     # macOS/Linux
+```
+스크립트가 준비물 확인 → 같은 이름의 이전 등록 정리 → 마켓플레이스 등록 → 설치까지 한다.
+**재실행이 곧 업데이트**이고(캐시 스냅샷을 다시 뜬다), `-Scope project|local`·`-Uninstall`을 받는다.
+푼 폴더가 플러그인의 실제 소스이므로 지우거나 옮기면 등록이 깨진다(옮겼으면 그 폴더에서 재실행).
+팀원용 안내문은 [INSTALL.md](./INSTALL.md).
 
 ### A. GitHub 마켓플레이스 (권장)
 ```
@@ -128,6 +145,9 @@ path-scoped 규칙)**, Codex면 `AGENTS.md`.
 - `artist로 카드 UI 시안 2~3안 만들고 ui-art-system 기준도 잡아줘`
 - `sprite-pipeline으로 캐릭터 idle/walk/attack 시트 제작 기준 만들어줘`
 - `visual-qa로 모바일 화면에서 HUD 겹침과 알파/피벗 문제 봐줘` (아트 단계 출구 게이트)
+- `asset-budget으로 텍스처 예산 스캔해줘` (엔진 없이 실측 — 무압축·과대해상도·ASTC 불가 검출)
+- `ui-kit-gen으로 버튼 3상태랑 팝업 프레임 뽑아줘` (스펙→PNG+9-slice, 외부 API 불필요)
+- `fx-art-system으로 타격·소멸·콤보·획득 이펙트 만들어줘` (프레임 시퀀스+스트립 시트)
 - `meta-economy-designer로 성장 구조·수익화(가챠+광고+F2P) 설계해줘` (core 통과 후)
 - `econ-sim으로 리텐션·재화수지·LTV 뽑아줘` (경제 검증)
 - `/game-dev-team:gate` — 현재 게이트 판정(증거 확인 포함) + state.json 갱신
