@@ -33,14 +33,31 @@ const MIN_SIZE = Number(opt('--min-size', 48));
 // 게임마다 명명 관례가 다르므로 여기를 늘려가며 쓴다. 규칙을 코드 밖으로 빼지 않은 이유는
 // 이 표 자체가 "우리가 뭘 어떻게 부르기로 했는가"라서, 프로젝트마다 갈라지면 안 되기 때문이다.
 const RULES = [
-  ['text',  /\b(font|text|number|digit|letter|glyph)\b|_num_|numbers?\d/],
-  ['fx',    /\b(fx|particle|glow|light|flare|spark|smoke|explo\w*|trail|beam|aura|ray|shine|burst|blast|magic)\b/],
-  ['ui',    /\b(btn|button|frame|panel|popup|window|slot|tab|badge|banner|ribbon|toggle|slider|progress|bar|dialog|hud|gauge)\b/],
-  ['icon',  /\b(icon|thumb|thumbnail|profile|emblem|logo|teamlogo|medal|rank|avatar)\b/],
-  ['bg',    /\b(bg|background|sky|cloud|mountain|room|roomimage|scene|cutscene|episode|map|mapthemes?d?|theme|island|land|ground|floor|wall|deniz|backdrop)\b/],
-  ['char',  /\b(cookie|pet|char\w*|hero|player|npc|body|head|face|hand|arm|leg|stand|idle|run|jump|attack|win|lose|costume|skin|king|queen|boss|monster|enemy|ayak|omuz|kol)\b/],
-  ['object',/\b(gem|item|box|chest|block|tile|coin|gold|star|heart|key|bomb|booster|obstacle|crate|barrel|card|ball|cube)\b/],
+  // levelscope `categorize.py` 의 DEFAULT_RULES 와 **같은 라벨 체계**를 쓴다.
+  // 분류 폴더 이름이 갈라지면 두 도구의 결과를 대조할 수 없다.
+  // 순서가 곧 우선순위 — 위쪽이 이긴다(tex_fx_glow 가 텍스처가 아니라 이펙트로 가게).
+  ['아틀라스', /(^|[_\-. ])sactx[-_]|\batlas\b|\bspriteatlas\b/],
+  ['이펙트',   /\b(fx|vfx|eff|effect|effects|particle|particles|glow|flare|spark|light)\b/],
+  ['아이콘',   /\b(ico|icon|icons)\b/],
+  ['컷신',     /\b(cutscene|cutscenes|cinematic)\b/],
+  ['프로필',   /\b(profile|portrait|avatar|thumbnail|thumb)\b/],
+  ['배경',     /\b(bg|background|backgrounds|maptheme|mapthemes|sky|skybox)\b/],
+  ['UI',       /\b(ui|img|image|popup|btn|button|title|frame|banner|panel|window|slot|badge|gauge|progress)\b/],
+  ['폰트',     /\b(font|fonts|glyph)\b/],
+  ['텍스처',   /\b(noise|basecolor|base_color|normalmap|roughness|metallic|specular|mask|gradient|ramp|pattern|ptn|dither|bayer|voronoi|lut|ldr|matcap|texture|tex)\b/],
+  ['그림자',   /\b(shadow|shadows)\b/],
+  // 게임별 규칙(configs/*.yaml)에 있는 것 중 장르 공통으로 쓸 만한 것
+  ['캐릭터',   /\b(cookie|pet|npc|char|character|hero|player|monster|enemy)\b/],
+  ['보상',     /\b(reward|rewards|chest|coin|gold|promotions|collection|powerup|iconpowerup)\b/],
+  ['블록',     /\b(blocker|tile|tiles|tiled|block|blocks)\b/],
+  ['방',       /\b(room|roomimage|rooms)\b/],
+  ['팀',       /\b(team|teamlogo)\b/],
+  ['상품',     /\b(package|product|shop|store|bundle)\b/],
 ];
+
+// 라벨이 안 붙으면 levelscope 와 같은 이름으로 남긴다. 틀린 분류를 붙이는 것보다 낫다는
+// 저쪽 원칙(뷰어 아이콘 오매칭 사고 이력)을 그대로 따른다.
+const FALLBACK = '기타';
 
 function labelFromName(rel) {
   const stem = rel.toLowerCase().replace(/\.[a-z0-9]+$/, '').replace(/[_\-./\\]+/g, ' ');
@@ -128,12 +145,12 @@ function measure(file) {
 function labelFromPixels(m) {
   const maxDim = Math.max(m.w, m.h);
   const ar = m.aspect;
-  if (maxDim >= 700 && m.bgPurity < 0.2) return ['bg', 0.7];
-  if (m.darkRatio < 0.02 && m.contrast > 0.18 && m.bgPurity > 0.4 && m.saturation > 0.4) return ['fx', 0.5];
-  if (ar > 1.8 && m.blobs <= 2 && maxDim >= 120) return ['ui', 0.5];          // 가로로 긴 것 = 바·버튼
-  if (Math.abs(ar - 1) < 0.15 && maxDim <= 160 && m.bgPurity > 0.3) return ['icon', 0.5];
-  if (ar < 0.9 && m.blobs === 1 && m.subjectRatio > 0.15) return ['char', 0.45];
-  return ['unsorted', 0.2];
+  if (maxDim >= 700 && m.bgPurity < 0.2) return ['배경', 0.7];
+  if (m.darkRatio < 0.02 && m.contrast > 0.18 && m.bgPurity > 0.4 && m.saturation > 0.4) return ['이펙트', 0.5];
+  if (ar > 1.8 && m.blobs <= 2 && maxDim >= 120) return ['UI', 0.5];          // 가로로 긴 것 = 바·버튼
+  if (Math.abs(ar - 1) < 0.15 && maxDim <= 160 && m.bgPurity > 0.3) return ['아이콘', 0.5];
+  if (ar < 0.9 && m.blobs === 1 && m.subjectRatio > 0.15) return ['캐릭터', 0.45];
+  return [FALLBACK, 0.2];
 }
 
 // ── 캐시 ─────────────────────────────────────────────────────────────────────
@@ -170,9 +187,9 @@ for (const f of files) {
 
   let label, conf, via;
   if (m.error) { label = 'error'; conf = 1; via = m.error; }
-  else if (m.empty) { label = 'junk'; conf = 1; via = '빈 이미지'; }
-  else if (Math.max(m.w, m.h) < MIN_SIZE) { label = 'junk'; conf = 1; via = `작음(${m.w}x${m.h})`; }
-  else if (m.aspect > 8 || m.aspect < 0.125) { label = 'junk'; conf = 1; via = `극단 비율(${m.aspect})`; }
+  else if (m.empty) { label = '조각'; conf = 1; via = '빈 이미지'; }
+  else if (Math.max(m.w, m.h) < MIN_SIZE) { label = '조각'; conf = 1; via = `작음(${m.w}x${m.h})`; }
+  else if (m.aspect > 8 || m.aspect < 0.125) { label = '조각'; conf = 1; via = `극단 비율(${m.aspect})`; }
   else {
     const byName = labelFromName(rel);
     if (byName) { label = byName; conf = 0.9; via = '이름'; }
@@ -226,7 +243,7 @@ for (const [label, list] of byLabel) {
 // ── 라벨별 폴더로 분류(선택) ──────────────────────────────────────────────────
 if (SORT) {
   for (const [label, list] of byLabel) {
-    if (label === 'junk' || label === 'error') continue;
+    if (label === '조각' || label === 'error') continue;
     const dir = path.join(SORT, label, 'refs');
     fs.mkdirSync(dir, { recursive: true });
     for (const r of list) {

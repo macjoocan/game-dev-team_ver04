@@ -32,3 +32,6 @@ Thumbs.db
 
 # 배포 번들 산출물 (scripts/make-bundle.ps1)
 dist/
+
+# ref-classify 기본 출력 폴더
+classify/
