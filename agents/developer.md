@@ -8,6 +8,8 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 # MCP(연결 시): GitHub, 엔진 MCP(Unity/Unreal/Godot 등)
 skills:
   - polish
+  - resource-extract
+  - unity-port
 isolation: worktree
 memory: project
 # 40은 부족했다 — 실사용에서 3회 연속 한도 소진, 그중 1회는 소스가 로드 불가 상태로 남았다.

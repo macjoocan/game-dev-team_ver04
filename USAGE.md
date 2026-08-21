@@ -7,6 +7,23 @@
 
 Claude Code는 세 가지 경로가 있다. **팀에 배포할 거면 A, 플러그인을 직접 고치며 쓸 거면 B,
 게임 레포에 못 박아 팀원 전원에게 적용하려면 C.** Codex는 D.
+**팀원에게 그냥 나눠줄 거면 아래 0번(압축 번들)이 제일 간단하다** — 사외망이 막혀 GitHub에
+못 붙는 환경에서도 된다.
+
+### 0. 압축 번들 — 팀원 배포용 (설치 스크립트 동봉)
+배포자가 번들을 만든다:
+```powershell
+.\scripts\make-bundle.ps1        # -> dist\game-dev-team-v<version>.zip
+```
+받은 사람은 계속 둘 폴더에 압축을 풀고 스크립트 하나만 실행한다:
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File .\install.ps1   # Windows
+sh ./install.sh                                                     # macOS/Linux
+```
+스크립트가 준비물 확인 → 같은 이름의 이전 등록 정리 → 마켓플레이스 등록 → 설치까지 한다.
+**재실행이 곧 업데이트**이고(캐시 스냅샷을 다시 뜬다), `-Scope project|local`·`-Uninstall`을 받는다.
+푼 폴더가 플러그인의 실제 소스이므로 지우거나 옮기면 등록이 깨진다(옮겼으면 그 폴더에서 재실행).
+팀원용 안내문은 [INSTALL.md](./INSTALL.md).
 
 ### A. GitHub 마켓플레이스 (권장)
 ```
@@ -117,6 +134,11 @@ path-scoped 규칙)**, Codex면 `AGENTS.md`.
 - ③↔④ 반복: 지표 미달이면 ①로 되돌려 재조정. 재미 나오기 전엔 ⑤로 안 감.
 - 재미(④) 통과해야 라이브 서비스 트랙(⑧⑨⑩) 시작. ⑨(경제) ≠ ④(재미) ≠ ⑥(정확성).
 
+**레퍼런스 이식 트랙(R)** — 배포 빌드에서 데이터를 뜯어 유니티로 옮겨 보는 별도 트랙:
+`R0 합법성 확인 → R1 추출 → R2 데이터 정합성 → R3~R5 이식·실행 → R6 재현 정합성 → R7 에셋 교체`.
+R0에서 목적·취득 경로·기술적 보호조치를 사람이 확인하고, **암호화/DRM이 걸려 있으면 멈춘다.**
+R7(추출 에셋 → 자체 에셋 교체)은 배포 전 하드 게이트다. 규칙은 ORCHESTRATION.md §9.
+
 ## 4. 역할별 호출 예시
 - `game-designer로 이 기획서 검수하고 게임성 목표 지표 정의해줘`
 - `기획 게이트 통과되나 봐줘` (gdd-completeness-checker — 근거 없는 수치·미결·빠진 섹션)
@@ -130,6 +152,10 @@ path-scoped 규칙)**, Codex면 `AGENTS.md`.
 - `visual-qa로 모바일 화면에서 HUD 겹침과 알파/피벗 문제 봐줘` (아트 단계 출구 게이트)
 - `meta-economy-designer로 성장 구조·수익화(가챠+광고+F2P) 설계해줘` (core 통과 후)
 - `econ-sim으로 리텐션·재화수지·LTV 뽑아줘` (경제 검증)
+- `resource-extract로 이 APK에서 레벨 뽑아줘` (레퍼런스 트랙 R1 — 추출 전 R0 합법성 확인 필수)
+- `port-parity로 추출본 개수·실패 기준치랑 대조해줘` (R2)
+- `unity-port로 유니티 프로젝트 만들고 표본 20개 이식해줘` (R3~R5, PortKit MCP)
+- `port-parity로 이식한 보드가 원본이랑 같은지 셀 단위로 봐줘` (R6)
 - `/game-dev-team:gate` — 현재 게이트 판정(증거 확인 포함) + state.json 갱신
 
 ## 5. 훅 (자동으로 켜짐, 차단은 안 함)

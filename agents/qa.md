@@ -8,6 +8,7 @@ model: inherit
 tools: Read, Bash, Grep, Glob, Write
 skills:
   - pr-review
+  - port-parity
 memory: project
 # developer와 같은 이유로 상향(REVIEW.md B-5). 검증 에이전트는 "돌려보고 → 이상하면 파고드는"
 # 왕복이 길고, 엣지케이스를 요구할수록 더 늘어난다. 25는 리포트를 쓰기도 전에 끊겼다.

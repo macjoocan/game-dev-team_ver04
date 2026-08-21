@@ -26,7 +26,7 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 전 에이전트가 **`memory: project`**(Claude Code) — 프로젝트별 메모리(`.claude/agent-memory/<agent>/`)에
 **일하는 방식·함정·교정**이 세션을 넘어 축적된다(상태값의 정본은 `docs/pipeline/state.json`).
 
-### 스킬 16개 (`skills/`)
+### 스킬 19개 (`skills/`)
 - **`concept-discovery`** — 초기 아이디어·코어 규칙을 사람과 대화하며 유사 사례 검색·제안으로 다듬어 **코어 컨셉 확보**(0단계, 오케스트레이터 대화형).
 - **`setup-game-team`** — 게임 레포에 팀 규칙(`CLAUDE.md`/`AGENTS.md`)과 상태 파일·설정을 세팅. 진행 중 프로젝트 온보딩(중간 진입) 포함.
 - **`gdd-completeness-checker`** — 기획 문서를 **기획 게이트**로 검수(근거 없는 수치·공란·숨은 미결·정의 안 된 지표). designer/meta 소유.
@@ -43,6 +43,9 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 - **`pr-review`** — 게임 코드 PR을 정확성 관점으로 리뷰(로직·회귀·밸런스 하드코딩·게임 특화 위험). qa 소유.
 - **`release-notes`** — 머지된 PR·이슈를 모아 릴리즈/패치노트(사용자용+개발자용) 초안. pm 소유.
 - **`pipeline-brief`** — 파이프라인 현황·대기 게이트·블로커 브리핑. 예약 작업으로 상시화.
+- **`resource-extract`** — 배포 빌드(APK/XAPK)에서 레벨·스프라이트·씬 계층 추출(levelscope). 레퍼런스 트랙 **R1**.
+- **`unity-port`** — 추출본을 실제 유니티 프로젝트로 이식(PortKit MCP). 골격→팔레트→레벨→컴파일→플로우. **R3~R5**.
+- **`port-parity`** — 이식 결과가 원본과 같은지 셀 단위 대조. **R2·R6** 게이트. qa 소유.
 
 ### 커맨드 1개 (`commands/`)
 | 커맨드 | 하는 일 |
@@ -86,12 +89,25 @@ README가 말하는 개수 — 전부 **틀려도 런타임에서는 조용히 �
 - **검증 주장 무결성**: 안 돌린 검증은 통과가 아니다. 수치 보고는 시드·판수·대상 커밋을 달고,
   증거를 못 만들면 판정은 미달이 아니라 **측정 불가**(→ 하네스 수리). 규칙: ORCHESTRATION.md §5.
 
+### 레퍼런스 이식 트랙 (R) — 배포 빌드에서 뜯어 유니티로
+```
+R0 합법성·목적 확인(사람) → R1 추출(resource-extract) → R2 데이터 정합성(port-parity)
+ → R3 골격 → R4 데이터 이식(unity-port) → R5 실행 확인 → R6 재현 정합성(port-parity) → R7 에셋 교체
+```
+경쟁작·레퍼런스의 **데이터 구조를 실제로 돌려 보며** 배우는 별도 트랙. 산출물은 ①(기획)의 근거나
+③(프로토)의 입력으로 들어간다. **R0에서 목적·취득 경로·기술적 보호조치를 사람이 확인하고,
+암호화·DRM이 걸려 있으면 멈춘다.** **R7**은 배포 전 하드 게이트 — 추출 원본 에셋이 프로덕션
+경로에 하나도 없어야 하며 `asset-pipeline` manifest로 증명한다. 자세한 규칙: ORCHESTRATION.md §9.
+
 ## 사용법
 1. 플러그인을 설치한다:
    ```
    /plugin marketplace add macjoocan/game-dev-team-Ver3
    /plugin install game-dev-team@game-dev-team
    ```
+   **팀원에게 배포할 땐 압축 번들이 더 간단하다**(사외망 환경 포함). 배포자가
+   `scripts\make-bundle.ps1`로 zip을 만들고, 받은 사람은 압축을 푼 뒤 `install.ps1`(Windows) ·
+   `install.sh`(macOS/Linux)만 실행하면 등록·설치가 끝난다 — 안내문은 [INSTALL.md](./INSTALL.md).
    팀 전체에 적용하거나 로컬에서 고쳐 쓰는 방법은 [USAGE.md](./USAGE.md#1-설치--어느-게임-프로젝트에든-붙이기).
 2. 게임 레포에서 `게임 팀 세팅해줘` → `setup-game-team`이 `CLAUDE.md`/`AGENTS.md`와
    `PIPELINE_STATE.md`·`docs/pipeline/state.json`을 생성. 진행 중 프로젝트는 `기존 프로젝트에 팀 붙여줘`.
