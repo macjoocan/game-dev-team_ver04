@@ -35,11 +35,18 @@ description: >
 py -m levelscope survey  --input <apk> --configs configs     :: 처음 보는 게임: 뭐가 어디 있는지 + 설정 초안
 py -m levelscope ls      --input <apk>                       :: 내부 경로 훑기
 py -m levelscope detect  --input <apk>                       :: 인코딩 감지
+py -m levelscope sources --input <apk>                       :: Unity 소스 이름만. 첫 줄에 #unity=<버전>
 py -m levelscope inspect --config configs\<game>.yaml --input <apk>
 py -m levelscope run     --config configs\<game>.yaml --input <apk> --out out --limit 20
 py -m levelscope assets    --input <apk> --out out           :: 사운드·머티리얼·폰트·Spine·텍스트
 py -m levelscope hierarchy --input <apk> --out out           :: 씬·프리팹 GameObject 트리
+py -m levelscope recategorize --zip <zip> --config <yaml>    :: APK 없이 이름만 재분류(몇 초, 멱등)
 ```
+
+**옵션 몇 가지는 알고 있어야 한다** (levelscope 세션 통지 2026-08-21):
+- `--split` (`sprites`/`assets`/`hierarchy`) — 소스마다 별 프로세스로 돌리고 산출물을 소스별 zip 으로 가른다. **메모리 폭주를 피하는 수단**이다
+- `--unity-version` (`sprites`/`assets`) — Unity 6000대 번들을 단독으로 열 때 필요
+- `--categorize` (`sprites`) — 분류를 켠다
 
 ## 절차
 
@@ -57,10 +64,26 @@ py -m levelscope hierarchy --input <apk> --out out           :: 씬·프리팹 G
 | `<게임>_summary.xlsx` | Levels 시트 + 엔티티 시트 + Summary(세트·난이도·기믹 집계, 수식) |
 | `<게임>_viewer.html` | 단일 파일 오프라인 뷰어. **이게 R6 정합성 검증의 기준 화면이 된다** |
 | `<게임>_levels_decoded.zip` | 평문 JSON 원문 + `palette.json` |
-| `<게임>_sprites.zip` | 스프라이트·텍스처 PNG |
+| `<게임>_sprites.zip` | 스프라이트·텍스처 PNG (+ 분류를 켜면 `_categories.json`) |
 | `<게임>_assets.zip` | 사운드·머티리얼·폰트·Spine·텍스트 + manifest.json |
 | `<게임>_hierarchy.zip` | 씬·프리팹 트리 JSON + index.json |
 | `<게임>_errors.txt` | 실패가 있을 때만 |
+
+## zip 내부 경로 — 분류를 켜면 바뀐다
+
+`sprites.categorize` 를 켠 게임은 zip 안 구조가 다르다.
+
+```
+꺼짐:  Sprite/<이름>.png
+켜짐:  <분류>/<분류>_<이름>.png      예: 보상/보상_00_ChestBronze.png
+```
+
+분류는 한국어 폴더명(`아이콘`·`이펙트`·`배경`·`UI`·`캐릭터`·`환경`·`기타` 등)이고, 못 붙인 것은
+`기타` 로 남는다 — **틀린 분류를 붙이는 것보다 안 붙이는 게 낫다**는 levelscope 규칙이다.
+
+**`Sprite/<이름>.png` 를 하드코딩하지 마라.** 스크립트가 그 경로를 박아두면 분류를 켜는 순간
+조용히 0장을 읽는다. 이름으로 찾아라. (levelscope 쪽도 같은 이유로
+`tools/build_icons_royalkingdom.py` 의 하드코딩을 걷어냈다.)
 
 ## 기준치 — 재추출은 반드시 대조한다
 
@@ -70,7 +93,48 @@ py -m levelscope hierarchy --input <apk> --out out           :: 씬·프리팹 G
 - 엔티티 행 수 · 팔레트 색 수 · 난이도 분포
 - 대상 빌드의 **버전·파일 해시**, levelscope **버전**
 
+**도구가 고쳐져서 늘어나기도 한다.** 실제 사례(2026-08-21): Unity 버전 헤더가 없는 번들을
+"Unity 파일 아님"으로 버리던 폴백 버그를 고치자 CookieRun: Crumble 이 스프라이트 1,229 → 10,443,
+계층 노드 2,044 → 112,901 로 바뀌었다. **기준치가 크게 늘면 도구 변경 이력부터 확인한다** —
+게임 업데이트로 오진하면 없는 원인을 찾게 된다.
+
 **수치가 크게 다르면 추출이 실패한 게 아니라 게임이 업데이트된 것이다** — `detect`/`inspect`부터 다시 한다. 이걸 구분하지 않으면 바뀐 구조를 "추출 버그"로 오진한다.
+
+## 개수 검증 — zip 엔트리 수만 세면 안 된다
+
+**추출 후 디스크에 실제로 떨어진 파일 수까지 대조한다.** zip 안 엔트리 수와 푼 결과가 다를 수 있다.
+
+실제 사례(2026-08-21, 레퍼런스 5종 33,829장): zip 안에는 **대소문자만 다른 이름**이 정상적으로
+공존하는데, Windows·macOS 파일시스템은 대소문자를 구분하지 않아 **뒤엣것이 앞엣것을 덮어쓴다.**
+
+```
+아이콘/아이콘_IconSnsFacebook.png
+아이콘/아이콘_IconSnsFaceBook.png     <- B 만 대문자. 풀면 1장이 된다
+```
+
+전 게임 집계: ZenMatch 60 · RoyalKingdom 58 · RoyalMatch 31 · CookieRun 1 · PixelFlow 1 = **151건**.
+
+**두 종류를 섞어 세지 마라.** 도구가 이름 충돌로 처리한 총량은 216건이었지만 성격이 다르다:
+
+| 종류 | 수 | 성격 |
+|---|---|---|
+| **대소문자만 다른 충돌** | 151 | 파일시스템이 덮어써서 **조용히 사라진다**. 이번에 고친 본론 |
+| 분류 병합 충돌 | 약 65 | 예전엔 `Sprite/`·`Texture2D/` 로 갈려 공존하던 동명이인이 분류 폴더로 합쳐지며 만난 것. 도구가 `_2` 접미로 이미 처리하던 범주 |
+
+앞은 **손실**이고 뒤는 **정상 처리**다. 합쳐서 216이라고 적으면 나중에 "손실이 216건이었나?" 로
+오독된다. 기록에는 나눠 적는다.
+zip 은 멀쩡하고 엔트리 수도 맞아서 **엔트리 수 대조로는 절대 안 잡힌다.** 처음 발견은 "10,443 대
+10,442, 1장 차이"였고, 사소하다고 넘겼으면 151장이 계속 사라지고 있었을 것이다.
+
+지켜야 할 것:
+- 추출 스크립트에서 **예외를 조용히 삼키지 마라**(`except: pass`). 실패는 세어서 보고한다
+- 추출 직후 **`zip 엔트리 수 == 디스크 파일 수`** 를 단언한다. 다르면 원인을 밝히기 전까지 진행 금지
+- 도구 쪽에서 이름 충돌을 처리한다면 **소문자 기준**으로 판정해야 한다(levelscope 는 그렇게 고쳤다)
+- **산출물 zip 을 glob 으로 긁지 마라. 경로를 명시한다.** 산출물 폴더에는 초기 추출본이 같은
+  이름으로 남아 있기 마련이라(실제 사례: `out_final/ZenMatch_sprites.zip` 79장 vs 현행 6,546장),
+  glob 이 구버전을 섞거나 현행을 덮어쓴다. 장수가 줄어도 눈치채기 어렵다
+- 기준치에는 **스킵 수와 사유**를 함께 적는다: `10,443 추출 / 11건 스킵 — 0x0 런타임 생성 텍스처`.
+  이 수가 나중에 늘면 그게 신호다
 
 ## 보고 (검증 리포트 5섹션)
 
@@ -80,6 +144,7 @@ py -m levelscope hierarchy --input <apk> --out out           :: 씬·프리팹 G
 - 대상 빌드의 **버전·해시**, levelscope **버전**, 설정 파일 경로
 - 기준치 대조표(항목 / 기준 / 이번 / 차이)
 - 실패 목록(`errors.txt`) 또는 "실패 0"
+- **zip 엔트리 수 = 디스크 파일 수** 확인 결과 (위 개수 검증 절)
 
 세지 않은 것을 "이상 없음"으로 넘기지 않는다. 못 뽑은 카테고리는 **공백** 칸에 적는다.
 
