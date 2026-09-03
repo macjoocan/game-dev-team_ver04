@@ -1,0 +1,39 @@
+{
+  "_note": "FX 스펙 — 색은 팔레트의 fx 그룹에서 온다. UI 와 같은 팔레트라 톤이 붙는다.",
+  "previewBg": "@fx.previewBg",
+  "effects": [
+    {
+      "name": "fx_hit_impact",
+      "type": "impact",
+      "size": 128,
+      "frames": 8,
+      "color": "@fx.hit",
+      "fps": 30
+    },
+    {
+      "name": "fx_match_pop",
+      "type": "pop",
+      "size": 128,
+      "frames": 8,
+      "color": "@fx.pop",
+      "fps": 24
+    },
+    {
+      "name": "fx_combo_glow",
+      "type": "pulse",
+      "size": 128,
+      "frames": 8,
+      "color": "@fx.combo",
+      "fps": 12,
+      "loop": true
+    },
+    {
+      "name": "fx_coin_get",
+      "type": "sparkle",
+      "size": 128,
+      "frames": 8,
+      "color": "@fx.coin",
+      "fps": 24
+    }
+  ]
+}

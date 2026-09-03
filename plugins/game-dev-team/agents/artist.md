@@ -8,6 +8,9 @@ tools: Read, Write, Edit
 # MCP(연결 시): Blender MCP(3D), Dooray 위키(아트 트래커·사내) / Notion(사외 대안)
 # 선택 스킬(설치돼 있으면 활용): 이미지 생성 계열(fal-ai-image, retro-diffusion), canvas-design, theme-factory
 skills:
+  - asset-budget
+  - fx-art-system
+  - char-art-system
   - art-direction
   - asset-pipeline
   - sprite-pipeline

@@ -71,7 +71,7 @@ Claude Code 안에서:
 
 ## 6. 최신 버전 받기
 사내망에서는 이 압축 파일을 새로 받아 **같은 폴더에 덮어쓰고 설치 스크립트를 다시 실행**하면 됩니다.
-GitHub에 접근된다면 `git clone https://github.com/macjoocan/game-dev-team-Ver3.git` 후 같은 스크립트를 쓰면 됩니다.
+GitHub에 접근된다면 `git clone https://github.com/macjoocan/game-dev-team_ver04.git` 후 같은 스크립트를 쓰면 됩니다.
 
 ---
 사용법 전체는 [USAGE.md](./USAGE.md), 파이프라인·조율 규칙은 [ORCHESTRATION.md](./ORCHESTRATION.md)를 보세요.

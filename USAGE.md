@@ -27,7 +27,7 @@ sh ./install.sh                                                     # macOS/Linu
 
 ### A. GitHub 마켓플레이스 (권장)
 ```
-/plugin marketplace add macjoocan/game-dev-team-Ver3
+/plugin marketplace add macjoocan/game-dev-team_ver04
 /plugin install game-dev-team@game-dev-team
 ```
 - 첫 줄은 **카탈로그 등록**이고 둘째 줄이 **실제 설치**다. 등록만으로는 아무것도 설치되지 않는다.
@@ -41,10 +41,10 @@ sh ./install.sh                                                     # macOS/Linu
 
 ### B. 로컬 디렉터리 (플러그인을 직접 고치며 쓸 때)
 ```bash
-git clone https://github.com/macjoocan/game-dev-team-Ver3.git
+git clone https://github.com/macjoocan/game-dev-team_ver04.git
 ```
 ```
-/plugin marketplace add ./game-dev-team-Ver3
+/plugin marketplace add ./game-dev-team_ver04
 /plugin install game-dev-team@game-dev-team
 ```
 디렉터리 소스는 **작업 중인 파일을 그대로 읽는다.** 스킬·훅을 고치고 `/reload-plugins` 만 하면
@@ -53,7 +53,7 @@ git clone https://github.com/macjoocan/game-dev-team-Ver3.git
 
 설치 없이 한 세션만 시험하려면:
 ```bash
-claude --plugin-dir ./game-dev-team-Ver3
+claude --plugin-dir ./game-dev-team_ver04
 ```
 
 ### C. 게임 레포에 고정해 팀원 전원에게 적용
@@ -64,7 +64,7 @@ claude --plugin-dir ./game-dev-team-Ver3
 {
   "extraKnownMarketplaces": {
     "game-dev-team": {
-      "source": { "source": "github", "repo": "macjoocan/game-dev-team-Ver3" }
+      "source": { "source": "github", "repo": "macjoocan/game-dev-team_ver04" }
     }
   },
   "enabledPlugins": {
@@ -84,8 +84,8 @@ claude --plugin-dir ./game-dev-team-Ver3
 레포를 클론한 뒤, **클론한 경로**를 마켓플레이스로 등록한다.
 
 ```powershell
-git clone https://github.com/macjoocan/game-dev-team-Ver3.git
-codex plugin marketplace add <클론한-경로>   # 예: .\game-dev-team-Ver3
+git clone https://github.com/macjoocan/game-dev-team_ver04.git
+codex plugin marketplace add <클론한-경로>   # 예: .\game-dev-team_ver04
 codex plugin add game-dev-team@game-dev-team-local
 ```
 
@@ -150,6 +150,9 @@ R7(추출 에셋 → 자체 에셋 교체)은 배포 전 하드 게이트다. �
 - `artist로 카드 UI 시안 2~3안 만들고 ui-art-system 기준도 잡아줘`
 - `sprite-pipeline으로 캐릭터 idle/walk/attack 시트 제작 기준 만들어줘`
 - `visual-qa로 모바일 화면에서 HUD 겹침과 알파/피벗 문제 봐줘` (아트 단계 출구 게이트)
+- `asset-budget으로 텍스처 예산 스캔해줘` (엔진 없이 실측 — 무압축·과대해상도·ASTC 불가 검출)
+- `ui-kit-gen으로 버튼 3상태랑 팝업 프레임 뽑아줘` (스펙→PNG+9-slice, 외부 API 불필요)
+- `fx-art-system으로 타격·소멸·콤보·획득 이펙트 만들어줘` (프레임 시퀀스+스트립 시트)
 - `meta-economy-designer로 성장 구조·수익화(가챠+광고+F2P) 설계해줘` (core 통과 후)
 - `econ-sim으로 리텐션·재화수지·LTV 뽑아줘` (경제 검증)
 - `resource-extract로 이 APK에서 레벨 뽑아줘` (레퍼런스 트랙 R1 — 추출 전 R0 합법성 확인 필수)

@@ -1,0 +1,86 @@
+{
+  "4": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "5": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 832,
+      "height": 1216,
+      "batch_size": 1
+    }
+  },
+  "6": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "full body portrait of one single character, large in frame, filling the frame, centered, front view, standing neutral pose, clearly visible face with large readable eyes, plain white background, no shadow, no ground, clean readable silhouette, mobile casual game style, chibi 3-head proportion, soft rounded shapes, thick clean outline, flat cel shading, high contrast readable at small size",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "7": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "sprite sheet, character sheet, turnaround, multiple views, multiple characters, two characters, group, lineup, grid, tiled, collage, icon set, item set, thumbnails, close-up inset, small figures, tiny character, distant, photo, realistic, text, watermark, signature, cluttered background, scenery, gradient background, cropped, blurry, low contrast, deformed face, malformed eyes, extra limbs, deformed hands, extra arms",
+      "clip": [
+        "4",
+        1
+      ]
+    }
+  },
+  "3": {
+    "class_type": "KSampler",
+    "inputs": {
+      "seed": 0,
+      "steps": 25,
+      "cfg": 7.0,
+      "sampler_name": "dpmpp_2m",
+      "scheduler": "karras",
+      "denoise": 1.0,
+      "model": [
+        "4",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    }
+  },
+  "8": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "3",
+        0
+      ],
+      "vae": [
+        "4",
+        2
+      ]
+    }
+  },
+  "9": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "char",
+      "images": [
+        "8",
+        0
+      ]
+    }
+  }
+}

@@ -1,11 +1,11 @@
 {
   "name": "game-dev-team",
-  "version": "0.13.0",
+  "version": "0.16.0",
   "description": "게임 개발용 역할 에이전트 팀(PM, 기획, 개발, QA, 아트)과 사람 승인 게이트 기반 파이프라인. 아트 디렉션, 에셋 파이프라인, 시각 QA 포함.",
   "author": {
     "name": "맥주캔"
   },
-  "repository": "https://github.com/macjoocan/game-dev-team-Ver3",
+  "repository": "https://github.com/macjoocan/game-dev-team_ver04",
   "keywords": [
     "game-development",
     "agents",
@@ -32,6 +32,6 @@
       "concept-discovery로 게임 아이디어를 다듬어줘",
       "art-direction으로 VISUAL_DESIGN.md 만들어줘"
     ],
-    "websiteURL": "https://github.com/macjoocan/game-dev-team-Ver3"
+    "websiteURL": "https://github.com/macjoocan/game-dev-team_ver04"
   }
 }

@@ -1,0 +1,240 @@
+{
+  "_note": "UI 스펙 — 색은 팔레트 토큰(@group.key)만 쓴다. hex 를 직접 박지 마라(톤이 갈라진다).",
+  "sprites": [
+    {
+      "name": "btn_primary_normal",
+      "w": 320,
+      "h": 112,
+      "pad": 8,
+      "radius": 32,
+      "shadow": {
+        "dy": 7,
+        "blur": 7,
+        "color": "@ink.shadow",
+        "alpha": 0.45
+      },
+      "fill": {
+        "from": "@primary.light",
+        "to": "@primary.base"
+      },
+      "stroke": {
+        "color": "@primary.outline",
+        "width": 5
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.45,
+        "height": 0.42
+      },
+      "nineSlice": {
+        "left": 44,
+        "bottom": 48,
+        "right": 44,
+        "top": 44
+      }
+    },
+    {
+      "name": "btn_primary_pressed",
+      "w": 320,
+      "h": 112,
+      "pad": 8,
+      "radius": 32,
+      "shadow": {
+        "dy": 2,
+        "blur": 5,
+        "color": "@ink.shadow",
+        "alpha": 0.35
+      },
+      "fill": {
+        "from": "@primary.base",
+        "to": "@primary.dark"
+      },
+      "stroke": {
+        "color": "@primary.outline",
+        "width": 5
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.18,
+        "height": 0.42
+      },
+      "nineSlice": {
+        "left": 44,
+        "bottom": 48,
+        "right": 44,
+        "top": 44
+      }
+    },
+    {
+      "name": "btn_primary_disabled",
+      "w": 320,
+      "h": 112,
+      "pad": 8,
+      "radius": 32,
+      "shadow": {
+        "dy": 5,
+        "blur": 7,
+        "color": "@ink.shadowNeutral",
+        "alpha": 0.25
+      },
+      "fill": {
+        "from": "@neutral.light",
+        "to": "@neutral.base"
+      },
+      "stroke": {
+        "color": "@neutral.outline",
+        "width": 5
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.2,
+        "height": 0.42
+      },
+      "nineSlice": {
+        "left": 44,
+        "bottom": 48,
+        "right": 44,
+        "top": 44
+      }
+    },
+    {
+      "name": "btn_accent_normal",
+      "w": 320,
+      "h": 112,
+      "pad": 8,
+      "radius": 32,
+      "shadow": {
+        "dy": 7,
+        "blur": 7,
+        "color": "@ink.shadow",
+        "alpha": 0.4
+      },
+      "fill": {
+        "from": "@accent.light",
+        "to": "@accent.dark"
+      },
+      "stroke": {
+        "color": "@accent.outline",
+        "width": 5
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.5,
+        "height": 0.42
+      },
+      "nineSlice": {
+        "left": 44,
+        "bottom": 48,
+        "right": 44,
+        "top": 44
+      }
+    },
+    {
+      "name": "panel_frame",
+      "w": 384,
+      "h": 384,
+      "pad": 10,
+      "radius": 40,
+      "shadow": {
+        "dy": 8,
+        "blur": 10,
+        "color": "@ink.shadow",
+        "alpha": 0.35
+      },
+      "fill": {
+        "from": "@surface.white",
+        "to": "@surface.tint"
+      },
+      "stroke": {
+        "color": "@primary.base",
+        "width": 6
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.25,
+        "height": 0.2
+      },
+      "nineSlice": {
+        "left": 58,
+        "bottom": 62,
+        "right": 58,
+        "top": 58
+      }
+    },
+    {
+      "name": "popup_bg",
+      "w": 512,
+      "h": 640,
+      "pad": 12,
+      "radius": 48,
+      "shadow": {
+        "dy": 10,
+        "blur": 14,
+        "color": "@ink.deep",
+        "alpha": 0.5
+      },
+      "fill": {
+        "from": "@surface.white",
+        "to": "@surface.tint"
+      },
+      "stroke": {
+        "color": "@primary.dark",
+        "width": 7
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.3,
+        "height": 0.16
+      },
+      "nineSlice": {
+        "left": 70,
+        "bottom": 76,
+        "right": 70,
+        "top": 70
+      }
+    },
+    {
+      "name": "bar_track",
+      "w": 320,
+      "h": 44,
+      "pad": 4,
+      "radius": 20,
+      "fill": {
+        "from": "@surface.sunken",
+        "to": "@primary.dark"
+      },
+      "stroke": {
+        "color": "@surface.sunkenOutline",
+        "width": 3
+      },
+      "nineSlice": {
+        "left": 22,
+        "bottom": 22,
+        "right": 22,
+        "top": 22
+      }
+    },
+    {
+      "name": "bar_fill",
+      "w": 320,
+      "h": 44,
+      "pad": 6,
+      "radius": 18,
+      "fill": {
+        "from": "@state.successLight",
+        "to": "@state.success"
+      },
+      "highlight": {
+        "color": "@surface.white",
+        "alpha": 0.4,
+        "height": 0.45
+      },
+      "nineSlice": {
+        "left": 20,
+        "bottom": 20,
+        "right": 20,
+        "top": 20
+      }
+    }
+  ]
+}

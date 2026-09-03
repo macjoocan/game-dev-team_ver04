@@ -30,8 +30,11 @@
 | 에셋 요청·승인·manifest·엔진 핸드오프 | `asset-pipeline`(artist 소유) |
 | 2D 스프라이트/시트/아틀라스 | `sprite-pipeline`(artist+developer) |
 | HUD·버튼·카드·아이콘 UI 아트 | `ui-art-system`(artist+developer) |
+| 이펙트 텍스처·시퀀스 생성 | `fx-art-system`(artist+developer) |
+| 캐릭터 생성·정체성 유지 | `char-art-system`(artist+developer) |
 | 3D 모델·텍스처·Blender/GLB/FBX | `asset-3d-pipeline`(artist+developer) |
 | 시각 QA·모바일 가독성·알파/피벗 검수 | `visual-qa`(artist+qa) |
+| 용량·텍스처 메모리·드로우콜 예산 | `asset-budget`(artist+developer) |
 | 연출/주스 구현(2패스) | `polish`(artist+developer) |
 | 성장/수익화/리텐션(core 통과 후) | `meta-economy-designer` |
 | 경제를 데이터로 검증 | `econ-sim`(meta 소유) |
@@ -46,7 +49,7 @@
 - 0→1 코어 확정 / 1→2 기획 게이트(근거 없는 수치 0·미결 명시·지표 정의)
 - 3↔4 게임성 검증 루프(미달 시 기획 반환, **반복 예산 정함**)
 - 6 정확성(QA 판정) / 머지 승인
-- 7 아트: `VISUAL_DESIGN.md`, asset manifest, visual-qa 증거 확인
+- 7 아트: `VISUAL_DESIGN.md`, asset manifest, visual-qa 증거 확인, **asset-budget 예산 대조**(실서비스)
 - 8·9 경제(core 통과 후) / P1·P2 폴리싱 사인오프
 
 ### 게이트 모드 (프로젝트 규모에 맞게)

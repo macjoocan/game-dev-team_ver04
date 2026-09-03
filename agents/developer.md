@@ -8,6 +8,7 @@ tools: Read, Write, Edit, Bash, Grep, Glob
 # MCP(연결 시): GitHub, 엔진 MCP(Unity/Unreal/Godot 등)
 skills:
   - polish
+  - fx-art-system
   - resource-extract
   - unity-port
 isolation: worktree

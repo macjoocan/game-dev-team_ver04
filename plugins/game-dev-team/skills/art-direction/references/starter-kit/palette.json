@@ -1,0 +1,47 @@
+{
+  "_note": "톤의 기계용 정본. 사람용 설명은 옆의 VISUAL_DESIGN.md. 여기만 고치면 UI·FX가 같이 바뀐다.",
+  "_preset": "밝은 캐주얼 퍼즐 (하늘색 주조 + 골드 보조)",
+
+  "primary": {
+    "light": "#7DD8FF",
+    "base": "#29A8E8",
+    "dark": "#0D5FA8",
+    "outline": "#08427A"
+  },
+  "accent": {
+    "light": "#FFE082",
+    "base": "#FFC132",
+    "dark": "#F08A00",
+    "outline": "#B85C00"
+  },
+  "neutral": {
+    "light": "#C9D2DA",
+    "base": "#9AA6B1",
+    "dark": "#6C7A87",
+    "outline": "#4A5560"
+  },
+  "surface": {
+    "white": "#FFFDF7",
+    "tint": "#E3F2FD",
+    "sunken": "#12324D",
+    "sunkenOutline": "#0A2437"
+  },
+  "state": {
+    "success": "#35D07F",
+    "successLight": "#B9F6CA",
+    "danger": "#FF5A5F",
+    "warning": "@accent.base"
+  },
+  "ink": {
+    "shadow": "#0B3C6B",
+    "shadowNeutral": "#3A3F44",
+    "deep": "#062744"
+  },
+  "fx": {
+    "hit": "@accent.light",
+    "pop": "@primary.light",
+    "combo": "@primary.base",
+    "coin": "@accent.base",
+    "previewBg": "#101C2E"
+  }
+}

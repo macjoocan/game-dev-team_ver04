@@ -75,7 +75,7 @@ CLAUDE.md만 만들면 **그 레포를 여는 사람마다 플러그인을 따�
 {
   "extraKnownMarketplaces": {
     "game-dev-team": {
-      "source": { "source": "github", "repo": "macjoocan/game-dev-team-Ver3" }
+      "source": { "source": "github", "repo": "macjoocan/game-dev-team_ver04" }
     }
   },
   "enabledPlugins": {
