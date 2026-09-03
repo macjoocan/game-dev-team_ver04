@@ -4,10 +4,13 @@ description: >
   캐릭터 아트를 생성 모델(로컬 ComfyUI)로 만들고 정체성을 유지한 채 변형·시트로 확장한다.
   아트 3축(UI·이펙트·캐릭터) 중 유일하게 절차적 생성이 안 되는 축이라 백엔드 세팅이 선행된다.
   생성 -> 배경 제거(알파) -> 규격 통일 -> 아틀라스까지 커스텀 노드 없이 잇는다.
-  "캐릭터 만들어줘", "캐릭터 시안", "표정/포즈 변형", "캐릭터 LoRA", "ComfyUI로 뽑아줘",
+  채택된 시안 10~20장으로 **캐릭터 LoRA 를 학습**해(kohya sd-scripts, 8GB 프리셋) 정체성을 고정하고,
+  에폭×강도 격자 한 장으로 과적합 시점을 고른다.
+  "캐릭터 만들어줘", "캐릭터 시안", "표정/포즈 변형", "캐릭터 LoRA", "LoRA 학습시켜줘", "ComfyUI로 뽑아줘",
   "정체성 유지", "스프라이트 만들어줘", "배경 투명하게", "아틀라스로 묶어줘" 같은 요청에 사용.
   소유: artist + developer.
-  주의: 백엔드(ComfyUI)가 안 떠 있으면 판정은 실패가 아니라 **측정 불가**다 — references/comfyui-setup.md 부터.
+  주의: 백엔드(ComfyUI·학습기)가 안 떠 있으면 판정은 실패가 아니라 **측정 불가**다 — references/comfyui-setup.md,
+  references/lora-training.md 부터.
 ---
 
 캐릭터는 UI(`ui-art-system`)·이펙트(`fx-art-system`)와 다르다. 저 둘은 결과물이 **규격**이라 코드로 그리는 게 정확하지만, 캐릭터는 **인상**이 결과물이라 생성 모델이 필요하다.
@@ -27,7 +30,7 @@ description: >
 |---|---|---|
 | 시드 고정 | 약 | 같은 구도 변주만 |
 | IP-Adapter / reference-only | 중 | 시안 단계, 세팅 쉬움 |
-| **캐릭터 LoRA 학습** (시안 10~20장) | 강 | **양산 단계. 여기까지 가야 자동화다** |
+| **캐릭터 LoRA 학습** (시안 10~20장) | 강 | **양산 단계. 여기까지 가야 자동화다** — 아래 "정체성 고정" 절 |
 
 ## 실행 (백엔드가 떠 있을 때)
 
@@ -139,13 +142,45 @@ node atlas-pack.mjs norm --out atlas.png --trim --pad 2 --pot
 스켈레탈 애니메이션**을 쓴다 — assets zip 에서 `.skel`/`.atlas` 가 73~134건 나왔다. 생성으로
 프레임을 뽑는 대신 **한 장을 잘 만들어 뼈대에 물리는 쪽**이 현실적이다(`rig-split.mjs` 가 그 앞단).
 
+## 정체성 고정 — 캐릭터 LoRA 학습
+
+시트 생성은 우회다. 캐릭터 1종을 스킨·표정·포즈로 **계속** 양산해야 하면 LoRA 를 학습한다.
+상세(설치·데이터셋 규칙·8GB 프리셋 근거·고르는 법): **[references/lora-training.md](references/lora-training.md)**
+
+```bash
+# 1) 데이터셋 — 채택본(알파 PNG) 10~20장 → 배경 합성·축소·중복 제거·캡션 → dataset.toml
+node lora-dataset.mjs art/char/approved --out art/char/lora-ds --token gdt_hero --captions captions.json
+
+# 2) 학습 — 8GB 프리셋(batch 1 · grad ckpt · TE 캐시 · fp8 · bf16). 에폭마다 저장
+node lora-train.mjs art/char/lora-ds --name hero_v1 --base sdxl        # --dry-run 으로 설정만 먼저
+
+# 3) 고르기 — 에폭 × 강도(0/0.6/0.8/1) × 포즈 프롬프트 4종 격자 한 장. 사람은 이것만 본다
+node lora-eval.mjs --lora art/char/lora-ds/train --token gdt_hero --out art/char/lora-eval
+
+# 4) 생성 — LoraLoader 워크플로. 프롬프트는 토큰으로 시작
+node comfy-run.mjs references/workflows/sdxl-character-lora.api.json --set 10.lora_name=hero_v1-000007.safetensors \
+  --set 10.strength_model=0.7 --set 10.strength_clip=0.7 --set 6.text="gdt_hero, winter coat, front view, ..."
+```
+
+지켜야 하는 것 세 가지:
+- **캡션에는 그 장에서 변하는 것만**(포즈·앵글·표정). 머리색·옷을 쓰면 그 단어에 학습돼 토큰만으론 안 나온다
+- **트리거 토큰은 사전에 없는 단어**(`gdt_hero`). `hero` 는 모델이 아는 개념과 섞인다
+- **결과는 파일이 아니라 (에폭, 강도)다.** 마지막 에폭이 최선인 경우는 드물다. 격자에서 정체성이 붙는 가장
+  이른 에폭·낮은 강도를 고르고, 그걸 manifest 에 적는다
+
+학습기(sd-scripts venv)가 없으면 `lora-train.mjs` 는 **측정 불가**로 끝난다. ComfyUI 와 별도 설치다.
+학습 중엔 ComfyUI 모델을 내려야 한다(SDXL 하나가 커밋 10GB — 둘이 같이 못 산다).
+
+**현재 상태(2026-09-03):** 스크립트·프리셋은 합성 데이터로 dry-run 까지 검증했다. 이 PC 에서 sd-scripts 설치와
+학습 완주는 **아직 실측 전**이다. 첫 완주 후 `lora-training.md` 의 예상 시간·OOM 항목을 실측으로 바꿔야 한다.
+
 ## 절차
 
 1. **기준 확인** — `VISUAL_DESIGN.md` 의 팔레트·프로포션·금지 스타일을 프롬프트에 넣는다. 없으면 `art-direction` 부터.
 2. **시안 배치 생성** — 한 캐릭터당 8~16장. 시드를 전부 기록한다.
 3. **자동 스코어링** — 규격(캔버스·배경 순도·알파 여백) + 팔레트 정합 + 실루엣 판독성. 하위는 자동 탈락.
 4. **사람 채택** — 상위 3장에서 1장. **이 한 단계는 남긴다** (취향·IP·톤은 사람 판단).
-5. **정체성 고정** — 채택본으로 LoRA 학습하거나 IP-Adapter 레퍼런스로 등록.
+5. **정체성 고정** — 채택본으로 LoRA 학습(`lora-dataset` → `lora-train` → `lora-eval`)하거나 IP-Adapter 레퍼런스로 등록.
 6. **변형 양산** — 표정·포즈·의상 변형. 프레임 시트가 필요하면 `sprite-pipeline` 으로 넘긴다.
 7. **등록** — `asset-pipeline` manifest 에 **모델·시드·프롬프트·LoRA 버전**까지 적는다.
 

@@ -31,7 +31,7 @@
 | 2D 스프라이트/시트/아틀라스 | `sprite-pipeline`(artist+developer) |
 | HUD·버튼·카드·아이콘 UI 아트 | `ui-art-system`(artist+developer) |
 | 이펙트 텍스처·시퀀스 생성 | `fx-art-system`(artist+developer) |
-| 캐릭터 생성·정체성 유지 | `char-art-system`(artist+developer) |
+| 캐릭터 생성·정체성 유지·LoRA 학습 | `char-art-system`(artist+developer) |
 | 3D 모델·텍스처·Blender/GLB/FBX | `asset-3d-pipeline`(artist+developer) |
 | 시각 QA·모바일 가독성·알파/피벗 검수 | `visual-qa`(artist+qa) |
 | 용량·텍스처 메모리·드로우콜 예산 | `asset-budget`(artist+developer) |
