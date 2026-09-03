@@ -205,6 +205,27 @@ node comfy-run.mjs references/workflows/sdxl-character-lora.api.json --set 10.lo
 스타일 토큰에 붙었다. **내용 태그(food·cookie·gingerbread)는 남기고 IP 이름(작품명)만 지운다.** 그래야 비스킷 피부는
 `cookie` 단어에, 그리는 법만 토큰에 남는다. 선택 기준: **이른 에폭(5~7) · 강도 0.5~0.7 · 캐릭터 LoRA 와 합 1.5 이하.**
 
+v2(모든 캡션에 "gingerbread cookie character, biscuit-colored skin, food" 명시, 1,400스텝, 30분)로 재학습한 결과:
+강도 0.7 에서는 에폭 5·10 모두 사람 피부 유지, 스티커 테두리·광택만 옮겨옴. 1.0 에서는 여전히 얼굴이 노랗게 기운다.
+캡션이 대부분을 고치고, 나머지는 "0.7 이하" 규칙이 막는다.
+
+### 그림이 구린 진짜 이유는 베이스 모델이었다 (실측 2026-09-03)
+
+같은 시드·같은 LoRA·같은 4포즈로 세 조합을 비교했다(`sdxl-character-lora-style-hires.api.json`).
+
+| 조합 | 결과 |
+|---|---|
+| SDXL Base + hires + 캐릭터 0.9 + 스타일 0.5 | 정체성 OK, 배경 흰색 OK. 얼굴 평면적, 앉기 포즈 뭉개짐 |
+| **Animagine XL 4 + hires + 캐릭터 0.8** (태그 프롬프트) | **선·얼굴·손 전부 정리, 포즈 4/4, 흰 배경.** 다른 급의 그림 |
+| Animagine XL 4 + hires + 캐릭터 0.8 + 스타일 0.5 | 위와 같으면서 외곽선·음영이 조금 더 또렷 |
+
+- **SDXL Base 로 학습한 LoRA 는 Animagine 에 재학습 없이 얹힌다.** 구조가 같아서다. 강도는 0.1 낮췄다(0.9 → 0.8)
+- 체크포인트를 바꾸면 **프롬프트 문법도 바꾼다.** Animagine 은 태그식(`masterpiece, best quality, 1girl, solo, chibi, white hair, red eyes, ...`).
+  자연어를 넣으면 추상 무늬가 나온다(8/21 실측). 정체성 태그(white hair, red eyes)를 프롬프트에 같이 써도 된다 — LoRA 와 싸우지 않는다
+- 학습 데이터(13장)가 SDXL Base 산출물이라는 한계는 남아 있다. 다음 캐릭터 LoRA 는 Animagine 으로 뽑은 시안으로 학습한다
+
+**현재 기준 조합**: `animagine-xl-4.0` · 태그 프롬프트 · hires 1.5× denoise 0.42 · 캐릭터 LoRA 0.8 · 스타일 LoRA(v2 에폭 5) 0.5.
+
 ## 절차
 
 1. **기준 확인** — `VISUAL_DESIGN.md` 의 팔레트·프로포션·금지 스타일을 프롬프트에 넣는다. 없으면 `art-direction` 부터.
