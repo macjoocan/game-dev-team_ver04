@@ -57,9 +57,23 @@ python -c "import torch; print(torch.__version__, torch.version.cuda, torch.cuda
 
 환경변수 `SD_SCRIPTS_DIR=D:\sd-scripts` 를 두면 `lora-train.mjs` 가 자동으로 찾는다(없으면 `--sd-scripts`).
 
-> **아직 실측 안 됨(2026-09-03 기준):** 이 PC 에서 sd-scripts 설치와 학습 완주는 아직 안 했다. 위 순서는 kohya 공식
-> README + Blackwell 에서 ComfyUI 를 띄울 때 확인한 PyTorch 규칙을 합친 것이다. 첫 학습을 완주하면 이 절을
-> 실측값으로 바꿔라(소요 시간·VRAM 피크·막힌 곳).
+> **실측(2026-09-03):** 위 순서 그대로 됐다. Python 3.10.11 venv · `torch 2.11.0+cu128` · capability (12, 0) ·
+> bitsandbytes 0.50.2 정상. 설치 약 15분(torch 다운로드 포함). 막힌 곳 하나: `accelerate config default` 는
+> `python -m accelerate.commands.config` 로 부르면 실패한다 — `venv\Scripts\accelerate.exe config default` 로 부른다.
+> sd-scripts 는 main 브랜치(2026-09 기준 accelerate 1.6 · diffusers 0.32 · transformers 4.54)를 썼다.
+
+### 자동 캡션 (WD14 태거) — 스타일 LoRA 나 장수가 많을 때
+
+캡션을 손으로 못 쓰는 규모면 sd-scripts 에 들어 있는 태거를 쓴다. CPU 로 70장에 35초.
+```powershell
+.\venv\Scripts\python.exe -m pip install onnxruntime onnx
+.\venv\Scripts\python.exe finetune\tag_images_by_wd14_tagger.py --onnx --repo_id SmilingWolf/wd-swinv2-tagger-v3 `
+  --model_dir D:\lora-work\wd14 --batch_size 4 --caption_extension .txt --general_threshold 0.35 `
+  --character_threshold 0.95 --remove_underscore <이미지 폴더>
+```
+결과 `.txt` 를 `captions.json` 으로 모은다(파일명 → 태그 문자열). 알파를 흰색에 합성하므로 `transparent background`,
+`simple background` 태그는 빼고 넣는다. **캐릭터 LoRA 에는 쓰지 마라** — 태거는 머리색·의상을 전부 적어서
+정체성이 토큰 대신 태그에 학습된다. 캐릭터 LoRA 캡션은 사람이 "변하는 것만" 쓴다.
 
 ## 2. 데이터셋 — 여기서 결과의 80% 가 정해진다
 
@@ -121,7 +135,9 @@ node lora-train.mjs art/char/lora-ds --name hero_v1 --base sdxl --dry-run   # �
 | min_snr_gamma | 5 | 적은 장수에서 수렴 안정 |
 | data loader workers | 0 | Windows 에서 >0 이면 spawn 오류 |
 
-예상 시간(미실측): SDXL 1500스텝 · 8GB · fp8 · grad ckpt 기준 **1~2시간**. SD1.5 는 1/3 수준.
+**실측(2026-09-03, RTX 5060 8GB):** SDXL Base · 1024px · 13장×12반복 · 1,560스텝 · 위 프리셋 그대로 →
+**31분, 1.00~1.04초/스텝, OOM 없음.** 잠재·TE 캐시 만드는 데 약 2분이 먼저 든다. 첫 실행은 CLIP 토크나이저
+다운로드가 추가된다. 문서 초안의 "1~2시간" 예상은 3배 비관적이었다.
 
 ### 메모리 부족(OOM) 이 나면 — 순서대로 하나씩
 1. `--dim 8`
@@ -168,6 +184,52 @@ node comfy-run.mjs references/workflows/sdxl-character-lora.api.json --out art/c
   --set 6.text="gdt_hero, winter coat, scarf, front view, standing, ..."
 ```
 프롬프트는 **토큰으로 시작**한다. 이후는 기존 파이프라인(`cutout` → `sprite-normalize` → `atlas-pack`) 그대로.
+
+## 스타일 LoRA — 캐릭터가 아니라 화풍을 배우게 하려면
+
+캐릭터 LoRA 와 반대 방향의 데이터셋을 짠다. 목표는 "누구든 이 화풍으로 그려라"이고, 특정 캐릭터가 토큰에 붙으면 실패다.
+
+| | 캐릭터 LoRA | **스타일 LoRA** |
+|---|---|---|
+| 데이터 | 같은 캐릭터 10~20장 | **캐릭터마다 1장**, 40~100장 |
+| 캡션 | 변하는 것만(포즈·표정) | **내용을 전부** — 태거로 자동(WD14) |
+| 왜 | 정체성이 토큰에 붙어야 함 | 내용은 캡션이 설명하니 남는 차이(그리는 법)만 토큰에 붙음 |
+| 반복 | 10~12 | 2~3 (장수가 많으니) |
+| 스텝 | 1,500 | 2,000 |
+| 생성 강도 | 0.8~1.0 | **0.5~0.8** (1.0 은 캐릭터 LoRA 를 밀어낸다) |
+
+레퍼런스 게임의 추출 에셋을 쓸 때의 선: **화풍 참고는 되고, 캐릭터 재현은 안 된다.** 캐릭터마다 1장만 넣는 규칙이
+기술적으로 그 선을 지킨다 — 어떤 캐릭터도 반복되지 않으니 생성물에 그 캐릭터가 나오지 않는다.
+그래도 산출물은 팀이 검수한다(레퍼런스 캐릭터와 겹쳐 보이면 그 장은 버린다).
+
+```bash
+# 1) 캐릭터별 대표 1장씩 모은다(초상화·스탠딩 일러스트. 인게임 120px 스프라이트는 학습에 못 쓴다)
+# 2) 태거로 캡션 → captions.json (위 "자동 캡션" 절)
+# 3) 데이터셋: class 는 illustration, 장수 상한을 푼다
+node lora-dataset.mjs refs/portraits --out style-ds --token ckstyle --class illustration --captions captions.json --max 100
+# 4) 학습: 스텝 2000
+node lora-train.mjs style-ds --name ckstyle_v1 --base sdxl --steps 2000
+# 5) 캐릭터 LoRA 와 함께 쓴다 — sdxl-character-lora-style.api.json (LoraLoader 두 개 체인)
+```
+
+**실측(2026-09-03):** 초상화 70장(캐릭터 70종 × 1장, 512~1016px) × 2반복 × 15에폭 = 2,100스텝 → **51분, 1.5초/스텝.**
+캐릭터 LoRA(1.0초/스텝)보다 느린 이유는 이미지가 크고 버킷이 여러 개라서다. 생성 결과는 SKILL.md 의 스타일 절.
+
+### 캡션에서 지울 것과 남길 것 — v1 에서 실제로 틀린 것
+
+v1 은 태거 결과에서 `cookie` 로 시작하는 태그를 전부 지웠다. 의도는 IP 이름 제거였는데, 결과는 **내용 제거**였다.
+레퍼런스 캐릭터가 전부 쿠키(비스킷 피부·아이싱)인데 캡션이 그걸 말하지 않으니, 모델은 그 특징을 스타일 토큰에
+넣었다. 에폭 10 이상 · 강도 1.0 에서 우리 소녀 캐릭터의 피부가 비스킷 색으로 바뀌었다.
+
+태거도 믿지 마라 — 쿠키 70장 중 16장에만 `food` 류 태그를 붙였다. 사람처럼 생기면 사람으로 태깅한다.
+
+| 지운다 | 남긴다 · 없으면 **추가한다** |
+|---|---|
+| 작품명·시리즈명·캐릭터 고유명(`cookie run`, `<캐릭터 이름>`) | 내용 태그(`1girl`, `blue eyes`, `holding sword`) |
+| | **레퍼런스 전체가 공유하는 내용 특징** — 이게 핵심이다. 전부 쿠키면 모든 캡션에 `gingerbread cookie character, biscuit-colored skin, food` 를 적는다 |
+
+원리: 캡션이 설명하는 것은 그 단어에 붙고, 설명 안 한 것은 토큰에 붙는다. 스타일 LoRA 는 "토큰에 그리는 법만 남기기"
+게임이므로, **그리는 법 이외의 모든 공통점을 캡션에 써서 토큰에서 밀어내야 한다.** v2 는 이 규칙으로 다시 학습했다.
 
 ## 자주 하는 실수
 
