@@ -13,6 +13,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { readPNG, rgb2hsv, toHex } from '../../../scripts/lib-png-read.mjs';
+import { parseHex, toLab, flattenPalette } from '../../../scripts/lib-color.mjs';
 
 const args = process.argv.slice(2);
 const root = args[0];
@@ -20,12 +21,17 @@ const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] :
 const PROFILE = opt('--profile', null);
 const OUT = opt('--out', null);
 const PASS = Number(opt('--pass', 70));
+const PALETTE = opt('--palette', null);
 
 if (!root || root.startsWith('--') || !PROFILE) {
   console.error('usage: node style-score.mjs <이미지폴더> --profile <profile.json> [--out dir] [--pass 70]');
   process.exit(2);
 }
 const prof = JSON.parse(fs.readFileSync(PROFILE, 'utf8'));
+// 프로젝트 팔레트(선택) — art-direction 의 palette.json. 있으면 톤 준수를 함께 채점한다.
+const projectHexes = PALETTE
+  ? Object.values(flattenPalette(JSON.parse(fs.readFileSync(PALETTE, 'utf8'))))
+  : [];
 const T = prof.target;
 
 const files = fs.readdirSync(root).filter((f) => /\.png$/i.test(f)).map((f) => path.join(root, f));
@@ -128,6 +134,34 @@ function paletteDistance(colors, palette) {
   return Math.min(1, total / colors.length / 200);   // 200 = 눈에 띄게 다른 색으로 보는 거리
 }
 
+/**
+ * 프로젝트 팔레트 준수 — **위의 프로필 거리와 다른 질문이다.**
+ *   프로필 거리     = "이 장르 레퍼런스처럼 보이나"
+ *   팔레트 준수     = "우리 프로젝트 톤 안에 있나"
+ * 후자가 어긋나면 생성물이 예쁘더라도 게임에 넣으면 톤이 갈라진다.
+ *
+ * 거리는 RGB 유클리드가 아니라 **CIE Lab 색차(dE)** 로 잰다 - RGB 거리는 사람 눈과 어긋난다.
+ * dE 10 이 "한눈에 다른 색"의 경계이므로 그걸 기준으로 정규화한다.
+ */
+function projectPaletteDeviation(colors, projectHexes) {
+  if (!colors.length || !projectHexes.length) return null;
+  const refLab = projectHexes.map((h) => toLab(parseHex(h)));
+  let total = 0;
+  let worst = 0;
+  for (const c of colors) {
+    const lab = toLab({ r: c[0] / 255, g: c[1] / 255, b: c[2] / 255 });
+    let best = Infinity;
+    for (const r of refLab) {
+      const d = Math.hypot(lab.L - r.L, lab.a - r.a, lab.b - r.b);
+      if (d < best) best = d;
+    }
+    total += best;
+    if (best > worst) worst = best;
+  }
+  const meanDe = total / colors.length;
+  return { meanDe, worstDe: worst, score: Math.max(0, 1 - meanDe / 20) };  // dE 20 이면 0점
+}
+
 // 밴드 안이면 만점, 벗어난 만큼 감점
 function bandScore(v, b) {
   if (v >= b.min && v <= b.max) return 1;
@@ -156,14 +190,20 @@ for (const f of files) {
       m.smallSizeContrast < T.smallSizeContrast.min ? `축소 대비 ${m.smallSizeContrast.toFixed(3)} < 기준 ${T.smallSizeContrast.min}` : null);
   add('외곽선 성향', 5, m.darkRatio <= T.outlineRatio.maxDark ? 1 : Math.max(0, 1 - (m.darkRatio - T.outlineRatio.maxDark) / 0.1), null);
   const pd = paletteDistance(m.colors, prof.palette);
-  add('팔레트 거리', 5, 1 - pd, pd > 0.5 ? `팔레트에서 멀다 (${pd.toFixed(2)})` : null);
+  add('프로필 거리', 5, 1 - pd, pd > 0.5 ? `레퍼런스 팔레트에서 멀다 (${pd.toFixed(2)})` : null);
+  const dev = projectHexes.length ? projectPaletteDeviation(m.colors, projectHexes) : null;
+  if (dev) add('프로젝트 팔레트 준수', 10, dev.score,
+    dev.meanDe > 15 ? `프로젝트 톤에서 벗어났다 (평균 dE ${dev.meanDe.toFixed(1)}, 최악 ${dev.worstDe.toFixed(1)})` : null);
 
   if (m.saturation < T.saturation.min) reasons.push(`채도 ${m.saturation.toFixed(2)} < ${T.saturation.min}`);
   if (m.saturation > T.saturation.max) reasons.push(`채도 ${m.saturation.toFixed(2)} > ${T.saturation.max}`);
   if (m.value < T.value.min) reasons.push(`명도 ${m.value.toFixed(2)} < ${T.value.min}`);
   if (m.value > T.value.max) reasons.push(`명도 ${m.value.toFixed(2)} > ${T.value.max}`);
 
-  const score = Math.round(parts.reduce((a, p) => a + p.w * p.s, 0));
+  // 가중치 합으로 정규화한다. --palette 를 주면 항목이 하나 늘어나 합이 110 이 되므로,
+  // 정규화하지 않으면 --pass 70 이 다른 기준을 뜻하게 된다.
+  const wSum = parts.reduce((a, p) => a + p.w, 0) || 1;
+  const score = Math.round((parts.reduce((a, p) => a + p.w * p.s, 0) / wSum) * 100);
   // 하드 게이트: 감점만으로는 못 막는 결함이 있다. 실제로 피사체 28개짜리가 다른 항목 점수로
   // 합격선을 넘은 사례가 나왔다(2026-08-21). 이런 건 점수와 무관하게 탈락시킨다.
   const hardFail = [];

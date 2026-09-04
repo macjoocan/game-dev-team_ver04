@@ -58,9 +58,13 @@ node skills/art-direction/scripts/ref-analyze.mjs sorted/<라벨> --out ref-anal
 # 4) 생성: 같은 profile.json 을 생성 쪽에 물린다 (char-art-system 소관)
 node skills/char-art-system/scripts/comfy-run.mjs <워크플로>.api.json --style ref-analysis/profile.json
 
-# 5) 채점: 생성물을 규격으로 자동 탈락시킨다
-node skills/art-direction/scripts/style-score.mjs <생성폴더> --profile ref-analysis/profile.json --pass 70
+# 5) 채점: 생성물을 규격으로 자동 탈락시킨다 (--palette 로 프로젝트 톤 준수도 함께)
+node skills/art-direction/scripts/style-score.mjs <생성폴더> --profile ref-analysis/profile.json \
+  --palette references/starter-kit/palette.json --pass 70
 #    -> score.json · passed/  (사람은 통과분만 본다)
+
+# 6) 접근성: 색 신호가 색각이상에서 살아 있나 (visual-qa 소관)
+node skills/visual-qa/scripts/cvd-check.mjs palette.json
 ```
 
 | 스크립트 | 하는 일 | 판정 범위 |
@@ -68,7 +72,7 @@ node skills/art-direction/scripts/style-score.mjs <생성폴더> --profile ref-a
 | `ref-classify.mjs` | 파일명 토큰 + 픽셀 지표(크기·비율·단일피사체·배경순도·채도·명도·대비)로 자동 분류 | 용도 라벨 |
 | `contact-sheet.mjs` | 여러 장을 격자 한 장으로 합침 | 분류 검수 |
 | `ref-analyze.mjs` | 대표색·규격 실측 → `profile.json`·`palette-draft.json` | 수치 근거 |
-| `style-score.mjs` | 생성물을 `profile.json`의 target과 대조해 점수·탈락 | **규격만** |
+| `style-score.mjs` | 생성물을 `profile.json`의 target과 대조해 점수·탈락. `--palette`를 주면 **프로젝트 톤 준수**(CIE Lab dE)를 함께 채점 | **규격만** |
 
 - **`profile.json`은 생성과 채점이 공유하는 한 파일이다.** 생성에 쓴 프로필과 채점에 쓴 프로필이
   다르면 그 점수는 근거가 아니다.
@@ -92,6 +96,10 @@ node skills/art-direction/scripts/style-score.mjs <생성폴더> --profile ref-a
 
 **팔레트를 확정하면 그 값을 `palette.json`에 넣는다.** 그 한 파일이 UI·이펙트 생성의 색 정본이
 되므로, 여기서 색이 갈리면 아래 트랙 전체가 갈린다.
+
+**팔레트를 확정하거나 고칠 때마다 `visual-qa`의 `cvd-check.mjs`를 돌려라.** 색각이상에서
+의미가 다른 색이 구분되는지는 눈으로 판정할 수 없다. 동봉 starter 팔레트도 이 검사에서
+`danger`와 `primary.base`의 휘도가 겹쳐 전색맹에서 붕괴(dE 4.1)하는 걸 잡아 고쳤다.
 
 ## 흔한 실수
 | 실수 | 교정 |

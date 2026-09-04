@@ -1,5 +1,6 @@
 {
   "_note": "톤의 기계용 정본. 사람용 설명은 옆의 VISUAL_DESIGN.md. 여기만 고치면 UI·FX가 같이 바뀐다.",
+  "_cvd": "색을 바꾸면 visual-qa 의 cvd-check.mjs 를 다시 돌려라. danger 는 primary.base 와 휘도가 겹쳐 전색맹에서 붕괴했었고(dE 4.1), 휘도 간극으로 옮겨 고쳤다. warning 이 accent.base 별칭인 것은 의도이지만, 강조와 경고를 구분해야 하는 화면에서는 따로 떼어라.",
   "_preset": "밝은 캐주얼 퍼즐 (하늘색 주조 + 골드 보조)",
 
   "primary": {
@@ -29,7 +30,7 @@
   "state": {
     "success": "#35D07F",
     "successLight": "#B9F6CA",
-    "danger": "#FF5A5F",
+    "danger": "#E63946",
     "warning": "@accent.base"
   },
   "ink": {

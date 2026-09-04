@@ -140,6 +140,44 @@ jobs:
           done
           echo "훅 4종 모두 fail-open 확인"
 
+      # 아트 판정 도구 3종. 동봉 starter 팔레트가 **자기 검사를 통과해야** 한다 —
+      # 통과하지 않는 기준값을 동봉하면 그 기준을 아무도 안 믿는다.
+      - name: 아트 판정 도구 (CVD · 의사 로케일 · 에셋 회귀)
+        run: |
+          KIT=skills/art-direction/references/starter-kit
+          box="$(mktemp -d)"
+
+          # 1) CVD — starter 팔레트는 통과해야 한다(exit 0)
+          node skills/visual-qa/scripts/cvd-check.mjs "$KIT/palette.json" > "$box/cvd.md"
+          grep -q '판정: \*\*충족\*\*' "$box/cvd.md" || { echo "FAIL: 동봉 팔레트가 CVD 검사를 통과하지 못한다"; cat "$box/cvd.md"; exit 1; }
+
+          # 붕괴하는 팔레트는 반드시 잡아야 한다(exit 1) — 검사기가 실제로 동작하는지 확인
+          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));p.state.danger=p.primary.base;fs.writeFileSync(process.argv[2],JSON.stringify(p));" "$KIT/palette.json" "$box/bad.json"
+          if node skills/visual-qa/scripts/cvd-check.mjs "$box/bad.json" >/dev/null 2>&1; then
+            echo "FAIL: danger==primary 인 팔레트를 통과시켰다 — 검사기가 동작하지 않는다"; exit 1
+          fi
+
+          # 2) 의사 로케일 — 슬롯 없으면 측정 불가(exit 3)
+          printf '%s\n' '{"btn.start":{"ko":"시작","en":"Start"}}' > "$box/s.json"
+          node skills/ui-art-system/scripts/pseudo-loc.mjs "$box/s.json" > "$box/pl.md"; code=$?
+          test $code -eq 3 || { echo "FAIL: 슬롯 없이 exit $code (3 이어야 한다)"; exit 1; }
+          node skills/ui-art-system/scripts/pseudo-loc.mjs "$box/s.json" --spec "$KIT/ui-spec.json" >/dev/null || true
+
+          # 3) 에셋 회귀 — snap 후 무변화면 충족, 크기를 바꾸면 미달
+          node skills/ui-art-system/scripts/ui-kit-gen.mjs "$KIT/ui-spec.json" --out "$box/ui" >/dev/null
+          node skills/asset-pipeline/scripts/asset-baseline.mjs snap "$box/ui" --out "$box/base.json" >/dev/null
+          node skills/asset-pipeline/scripts/asset-baseline.mjs check "$box/ui" --baseline "$box/base.json" >/dev/null \
+            || { echo "FAIL: 변화가 없는데 회귀로 잡았다"; exit 1; }
+          node -e "const fs=require('fs');const s=JSON.parse(fs.readFileSync(process.argv[1],'utf8'));s.sprites[0].w+=16;fs.writeFileSync(process.argv[2],JSON.stringify(s));" "$KIT/ui-spec.json" "$box/spec2.json"
+          cp "$KIT/palette.json" "$box/palette.json"
+          node skills/ui-art-system/scripts/ui-kit-gen.mjs "$box/spec2.json" --out "$box/ui" >/dev/null
+          if node skills/asset-pipeline/scripts/asset-baseline.mjs check "$box/ui" --baseline "$box/base.json" >/dev/null 2>&1; then
+            echo "FAIL: 크기가 바뀌었는데 통과시켰다"; exit 1
+          fi
+
+          rm -rf "$box"
+          echo "아트 판정 도구 3종 통과 (동봉 팔레트 자기검사 · 붕괴 적출 · 오버플로 · 회귀 양방향)"
+
       # heredoc 은 YAML 블록 스칼라 안에서 들여쓰기와 얽히므로 쓰지 않는다.
       - name: FTUE 퍼널 리포트 스모크
         run: |
