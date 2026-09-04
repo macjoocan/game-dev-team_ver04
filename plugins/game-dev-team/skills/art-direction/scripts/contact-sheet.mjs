@@ -13,7 +13,7 @@ import { writePNG, hex } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const root = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!root) { console.error('usage: node contact-sheet.mjs <폴더> --out sheet.png [--cell 128] [--cols 8]'); process.exit(2); }
+if (!root || root.startsWith('--')) { console.error('usage: node contact-sheet.mjs <폴더> --out sheet.png [--cell 128] [--cols 8]'); process.exit(2); }
 const OUT = opt('--out', 'sheet.png');
 const CELL = Number(opt('--cell', 128));
 const COLS = Number(opt('--cols', 8));

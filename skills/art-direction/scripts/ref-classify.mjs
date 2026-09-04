@@ -19,7 +19,7 @@ import { readPNG, rgb2hsv } from '../../../scripts/lib-png-read.mjs';
 const args = process.argv.slice(2);
 const root = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!root) {
+if (!root || root.startsWith('--')) {
   console.error('usage: node ref-classify.mjs <폴더> [--out dir] [--sort dir] [--samples 6] [--min-size 48]');
   console.error('  --sort <dir>  분류 결과를 라벨별 폴더로 복사한다(프로필 만들 때 그 폴더를 쓴다)');
   process.exit(2);

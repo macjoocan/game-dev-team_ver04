@@ -20,7 +20,7 @@ import { readPNG, rgb2hsv, toHex } from '../../../scripts/lib-png-read.mjs';
 
 const args = process.argv.slice(2);
 const root = args[0];
-if (!root) {
+if (!root || root.startsWith('--')) {
   console.error('usage: node ref-analyze.mjs <이미지폴더> [--out dir] [--colors 8] [--top 12]');
   process.exit(2);
 }

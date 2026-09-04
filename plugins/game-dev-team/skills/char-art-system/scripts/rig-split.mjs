@@ -19,7 +19,7 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input) { console.error('usage: node rig-split.mjs <캐릭터.png> --out <dir> [--head 0.42] [--pad 6]'); process.exit(2); }
+if (!input || input.startsWith('--')) { console.error('usage: node rig-split.mjs <캐릭터.png> --out <dir> [--head 0.42] [--pad 6]'); process.exit(2); }
 const OUT = opt('--out', 'rig');
 const HEAD = Number(opt('--head', 0.42));   // 머리가 차지하는 세로 비율. 3등신이면 0.4 안팎
 const PAD = Number(opt('--pad', 6));        // 부위별 여유 픽셀. 관절이 끊겨 보이지 않게

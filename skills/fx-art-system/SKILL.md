@@ -25,17 +25,22 @@ node <플러그인>/skills/fx-art-system/scripts/fx-gen.mjs <spec.json> --out <�
 node ... fx-gen.mjs spec.json --out out --preview-bg "#101C2E"
 ```
 
-스펙 예:
+뼈대 스펙이 `art-direction/references/starter-kit/fx-spec.json`에 있다. 복사해서 값만 바꾼다:
 ```json
 {
+  "previewBg": "@fx.previewBg",
   "effects": [
-    { "name": "fx_hit_impact", "type": "impact",  "size": 128, "frames": 8, "color": "#FFE08A", "fps": 30 },
-    { "name": "fx_match_pop",  "type": "pop",     "size": 128, "frames": 8, "color": "#8CE9FF", "fps": 24 },
-    { "name": "fx_combo_glow", "type": "pulse",   "size": 128, "frames": 8, "color": "#63D2FF", "fps": 12, "loop": true },
-    { "name": "fx_coin_get",   "type": "sparkle", "size": 128, "frames": 8, "color": "#FFD54F", "fps": 24 }
+    { "name": "fx_hit_impact", "type": "impact",  "size": 128, "frames": 8, "color": "@fx.hit",   "fps": 30 },
+    { "name": "fx_match_pop",  "type": "pop",     "size": 128, "frames": 8, "color": "@fx.pop",   "fps": 24 },
+    { "name": "fx_combo_glow", "type": "pulse",   "size": 128, "frames": 8, "color": "@fx.combo", "fps": 12, "loop": true },
+    { "name": "fx_coin_get",   "type": "sparkle", "size": 128, "frames": 8, "color": "@fx.coin",  "fps": 24 }
   ]
 }
 ```
+
+**색은 `@group.key` 토큰으로 쓴다.** 팔레트 탐색 순서는 `--palette` 인자 → 스펙의 `"palette"`
+경로 → 스펙 파일 옆의 `palette.json`. `ui-art-system`과 **같은 팔레트를 쓰기 때문에** UI와 이펙트의
+톤이 붙는다. hex를 직접 박으면 그 연결이 끊어지고, 톤을 바꿀 때 전량 수작업이 된다.
 
 | type | 쓰임 | 구성 |
 |---|---|---|

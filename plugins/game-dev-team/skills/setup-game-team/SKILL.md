@@ -52,6 +52,16 @@ description: >
 - 모델 라우팅은 GPT 계열 기준으로 쓰되 역할 파일의 `model:`은 `inherit`로 유지한다. 깊은 판단/장기 구현은 높은 추론 설정, 일반 실행/브리핑은 중간 추론 설정으로 문서화한다.
 - 선택한 **게이트 모드**(full/lean/solo)를 AGENTS.md에 명시한다. lean이면 핵심 게이트(코어 확정·게임성 검증·머지)만, solo면 게이트 없음(잼/실험)을 기록한다.
 - `references/pipeline-state-template.md`를 뼈대로 레포 루트에 **`PIPELINE_STATE.md`**를 생성한다 — 게이트 통과 **이력**(백필 포함)·미결의 사람용 장부. 세션이 바뀌어도 `pipeline-brief`가 이어받는다.
+- **아트 트랙 씨앗을 같이 심는다(선택, 아트가 필요한 프로젝트면 권장).**
+  `art-direction/references/starter-kit/`의 4개 파일을 프로젝트로 복사해 값만 바꾸게 안내한다:
+  `VISUAL_DESIGN.md`(사람용 톤 정본) · `palette.json`(기계용 색 정본) · `ui-spec.json` · `fx-spec.json`.
+  이렇게 두면 `ui-art-system`의 `ui-kit-gen.mjs`와 `fx-art-system`의 `fx-gen.mjs`가 **첫날부터
+  실제 PNG를 뽑는다** — 백지에서 스펙을 새로 쓰는 단계가 사라진다.
+  색은 `palette.json` 한 곳에만 두고 스펙에는 `@group.key` 토큰만 쓴다고 못박는다.
+- **레퍼런스 이식(R 트랙)이 필요한 프로젝트인지 확인한다.** 경쟁작 빌드에서 레벨·난이도 곡선을
+  뜯어 배우려는 계획이 있으면, R0(합법성·목적 확인)이 **사람 승인 게이트**이고 추출물은
+  `_reference/`에만 둔다는 규칙을 AGENTS.md/CLAUDE.md에 미리 넣는다(ORCHESTRATION.md §9).
+  계획이 없으면 R 트랙 내용은 넣지 않는다 — 안 쓰는 규칙은 소음이다.
 - 커밋 전 자동 검사(밸런스 수치 하드코딩 검출 등)를 원하면 `references/quality-hooks.md`를 참고해 pre-commit 훅을 제안한다(선택 — 플러그인 훅은 5단계에서 자동으로 붙는다).
 
 ### 4. Claude Code 세팅 (Claude 세션이면 기본 수행)
@@ -153,7 +163,8 @@ CLAUDE.md만 만들면 **그 레포를 여는 사람마다 플러그인을 따�
 - 게임성 성공 지표 없음 → `game-designer`가 정의 (①의 잔여분)
 - 밸런스 수치가 코드에 하드코딩 → `developer` 리팩터 태스크(데이터 테이블로)
 - 헤드리스 시뮬 불가(UI-로직 미분리) → `developer` 리팩터 — balance-sim 전제라 우선순위 높음
-- `VISUAL_DESIGN.md`/asset manifest 없음 → `artist` (⑦ 진입 전까지)
+- `VISUAL_DESIGN.md`/`palette.json`/asset manifest 없음 → `artist` (⑦ 진입 전까지).
+  starter-kit 복사로 시작하면 반나절이면 끝난다 — 처음부터 쓰지 말고 그걸 고쳐라.
 - 테스트 없음 → `qa`와 함께 스모크 테스트부터
 
 ### O5. 기존 자산 존중 원칙

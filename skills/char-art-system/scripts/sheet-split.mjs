@@ -18,7 +18,7 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input) { console.error('usage: node sheet-split.mjs <시트.png> --out <dir> [--min 0.01] [--tol 30] [--pad 8]'); process.exit(2); }
+if (!input || input.startsWith('--')) { console.error('usage: node sheet-split.mjs <시트.png> --out <dir> [--min 0.01] [--tol 30] [--pad 8]'); process.exit(2); }
 const OUT = opt('--out', 'cells');
 const MIN = Number(opt('--min', 0.01));   // 전체 면적 대비 최소 크기. 이보다 작으면 파편으로 본다
 const TOL = Number(opt('--tol', 30));

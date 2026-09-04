@@ -19,7 +19,7 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input) {
+if (!input || input.startsWith('--')) {
   console.error('usage: node cutout.mjs <입력.png|폴더> [--out dir] [--tol 26] [--feather 1.5] [--trim]');
   console.error('  --tol      확실한 배경으로 볼 색 거리 (기본 26)');
   console.error('  --soft     부분 배경 상한 (기본 tol*2.6). 접지 그림자를 반투명으로 녹인다');

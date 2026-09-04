@@ -141,7 +141,7 @@ function renderFrame(spec, t) {
 
 // ── 실행 ─────────────────────────────────────────────────────────────────────
 const specPath = process.argv[2];
-if (!specPath) { console.error('usage: node fx-gen.mjs <spec.json> [--out <dir>]'); process.exit(2); }
+if (!specPath || specPath.startsWith('--')) { console.error('usage: node fx-gen.mjs <spec.json> [--out <dir>]'); process.exit(2); }
 let spec = JSON.parse(fs.readFileSync(specPath, 'utf8'));
 // 팔레트 토큰(@primary.base 등)을 실제 색으로 치환 — 톤 정본은 palette.json 한 곳
 spec = applyPalette(spec, specPath, process.argv).spec;

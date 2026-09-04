@@ -7,38 +7,41 @@ description: >
   같은 요청에 사용. 소유: artist + developer.
 ---
 
-# 3D Asset Pipeline
+# 3D 에셋 파이프라인
 
-Use this for 3D game assets that need to land cleanly in an engine.
+엔진에 깨끗하게 안착해야 하는 3D 게임 에셋에 쓴다.
 
-## Required Specs
-- Engine and unit scale.
-- Camera distance and target platform.
-- Poly/triangle budget and texture size.
-- Pivot/origin and forward/up axis.
-- Collision needs and LOD count.
-- Export format: prefer GLB/glTF unless the project requires FBX.
+## 필요한 스펙
+- 엔진과 단위 스케일.
+- 카메라 거리와 타깃 플랫폼.
+- 폴리/삼각형 예산과 텍스처 크기.
+- 피벗/원점과 forward/up 축.
+- 콜리전 요구사항과 LOD 개수.
+- 익스포트 포맷: 프로젝트가 FBX를 요구하지 않으면 **GLB/glTF**를 기본으로.
 
-## Blender MCP Use
-If Blender MCP is connected, use it for modeling, material setup, rigging/animation checks, exports, and validation screenshots. If it is not connected, produce a handoff brief with exact Blender actions and import settings.
+## Blender MCP 사용
+Blender MCP가 붙어 있으면 모델링·머티리얼 세팅·리깅/애니메이션 확인·익스포트·검증 스크린샷을
+그것으로 한다. 안 붙어 있으면 **정확한 Blender 조작과 임포트 설정을 담은 핸드오프 문서**를 낸다.
+"할 수 없다"로 끝내지 않는다.
 
-## Export Checklist
-- Origin/pivot set for gameplay use.
-- Scale matches engine units.
-- Materials named predictably.
-- Textures packed or paths documented.
-- Collision proxy included or specified.
-- LODs named consistently.
-- Animation clips named and trimmed.
-- In-engine screenshot confirms scale and lighting.
+## 익스포트 체크리스트
+- 원점/피벗이 **게임플레이 기준**으로 잡혀 있다.
+- 스케일이 엔진 단위와 맞는다.
+- 머티리얼 이름이 예측 가능하다.
+- 텍스처가 패킹돼 있거나 경로가 문서화돼 있다.
+- 콜리전 프록시가 포함되거나 명시돼 있다.
+- LOD 명명이 일관되다.
+- 애니메이션 클립 이름이 붙고 트림돼 있다.
+- 엔진 안 스크린샷으로 스케일·라이팅을 확인했다.
 
-## Common Mistakes
-| Mistake | Fix |
+## 흔한 실수
+| 실수 | 교정 |
 |---|---|
-| Beautiful model imports at wrong scale | Lock unit scale before export. |
-| Pivot makes placement painful | Set origin from gameplay use, not modeling convenience. |
-| Materials break on import | Use simple named materials and documented texture paths. |
-| Collision is forgotten | Add proxy or explicit collision note before handoff. |
+| 잘 만든 모델이 엉뚱한 스케일로 임포트됨 | 익스포트 전에 단위 스케일을 고정한다 |
+| 피벗 때문에 배치가 괴로움 | 원점을 모델링 편의가 아니라 게임플레이 기준으로 잡는다 |
+| 임포트에서 머티리얼이 깨짐 | 단순한 이름의 머티리얼 + 문서화된 텍스처 경로 |
+| 콜리전을 잊음 | 핸드오프 전에 프록시나 명시적 콜리전 메모를 붙인다 |
+| 텍스처 예산을 눈대중 | `asset-budget`으로 실측해 목표치와 대조한다 |
 
 ## 이 레포에서의 위치
 - **소유**: artist(방향) + developer(엔진 반영).

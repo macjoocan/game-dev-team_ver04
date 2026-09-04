@@ -59,13 +59,19 @@ if (BASE === 'sdxl' && manifest.resolution < 1024) console.log(`주의: SDXL 에
 const isWin = process.platform === 'win32';
 const firstExisting = (cands) => cands.filter(Boolean).find((p) => fs.existsSync(p)) || null;
 
+// 관례적 설치 위치를 추측해 본다. 못 찾으면 --comfy/--sd-scripts 나 환경변수로 받는다.
+// 드라이브 문자 후보는 Windows 에서만 의미가 있다(예전엔 그게 전부여서 다른 OS 에선 탐지가 없었다).
+const HOME = process.env.HOME || process.env.USERPROFILE || '';
 const COMFY = firstExisting([
   opt('--comfy', null), process.env.COMFYUI_DIR,
-  'D:/ComfyUI/ComfyUI_windows_portable/ComfyUI', 'C:/ComfyUI/ComfyUI_windows_portable/ComfyUI',
+  ...(isWin
+    ? ['D:/ComfyUI/ComfyUI_windows_portable/ComfyUI', 'C:/ComfyUI/ComfyUI_windows_portable/ComfyUI']
+    : [path.join(HOME, 'ComfyUI'), '/opt/ComfyUI']),
 ]);
 const SD = firstExisting([
   opt('--sd-scripts', null), process.env.SD_SCRIPTS_DIR,
-  'D:/sd-scripts', 'D:/kohya/sd-scripts', 'C:/sd-scripts', path.join(process.env.HOME || process.env.USERPROFILE || '', 'sd-scripts'),
+  ...(isWin ? ['D:/sd-scripts', 'D:/kohya/sd-scripts', 'C:/sd-scripts'] : ['/opt/sd-scripts']),
+  path.join(HOME, 'sd-scripts'),
 ]);
 const PY = SD ? firstExisting([
   path.join(SD, isWin ? 'venv/Scripts/python.exe' : 'venv/bin/python'),

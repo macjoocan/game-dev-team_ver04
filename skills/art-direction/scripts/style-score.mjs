@@ -21,7 +21,7 @@ const PROFILE = opt('--profile', null);
 const OUT = opt('--out', null);
 const PASS = Number(opt('--pass', 70));
 
-if (!root || !PROFILE) {
+if (!root || root.startsWith('--') || !PROFILE) {
   console.error('usage: node style-score.mjs <이미지폴더> --profile <profile.json> [--out dir] [--pass 70]');
   process.exit(2);
 }

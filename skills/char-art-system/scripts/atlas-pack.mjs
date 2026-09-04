@@ -19,7 +19,7 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input) { console.error('usage: node atlas-pack.mjs <폴더> --out atlas.png [--max 2048] [--pad 2] [--trim] [--pot]'); process.exit(2); }
+if (!input || input.startsWith('--')) { console.error('usage: node atlas-pack.mjs <폴더> --out atlas.png [--max 2048] [--pad 2] [--trim] [--pot]'); process.exit(2); }
 const OUT = opt('--out', 'atlas.png');
 const MAX = Number(opt('--max', 2048));
 const PAD = Number(opt('--pad', 2));

@@ -18,7 +18,7 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input) {
+if (!input || input.startsWith('--')) {
   console.error('usage: node sprite-normalize.mjs <폴더> --out <dir> [--canvas 512x768] [--fit 0.86] [--anchor bottom|center]');
   process.exit(2);
 }

@@ -64,7 +64,14 @@ const posNodeId = (() => {
 if (!posNodeId) { console.error('워크플로에서 positive 프롬프트 노드를 못 찾았다.'); process.exit(2); }
 const basePrompt = String(wf[posNodeId].inputs.text || '').replace(/^gdt_char,\s*/, '');
 
-const COMFY = [process.env.COMFYUI_DIR, 'D:/ComfyUI/ComfyUI_windows_portable/ComfyUI', 'C:/ComfyUI/ComfyUI_windows_portable/ComfyUI'].filter(Boolean).find((p) => fs.existsSync(p));
+// lora-train.mjs 와 같은 탐색 규칙. 드라이브 문자 후보는 Windows 에서만 본다.
+const HOME = process.env.HOME || process.env.USERPROFILE || '';
+const COMFY = [
+  process.env.COMFYUI_DIR,
+  ...(process.platform === 'win32'
+    ? ['D:/ComfyUI/ComfyUI_windows_portable/ComfyUI', 'C:/ComfyUI/ComfyUI_windows_portable/ComfyUI']
+    : [path.join(HOME, 'ComfyUI'), '/opt/ComfyUI']),
+].filter(Boolean).find((p) => fs.existsSync(p));
 const lorasDir = COMFY ? path.join(COMFY, 'models/loras') : null;
 function ensureInComfy(file) {
   const name = path.basename(file);

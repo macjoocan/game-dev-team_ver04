@@ -8,37 +8,41 @@ description: >
   주의: 코드 정확성(qa)·게임 느낌(polish)과는 다른 축이다. 여기선 **보이는 것**만 판정한다.
 ---
 
-# Visual QA
+# 시각 QA
 
-Use this before accepting art into production or before calling a visual pass complete.
+아트를 프로덕션에 받아들이기 전, 또는 시각 패스를 "완료"라고 부르기 전에 쓴다.
 
-## Review Lenses
-| Lens | Check |
+## 검수 렌즈
+| 렌즈 | 볼 것 |
 |---|---|
-| Readability | Silhouette, contrast, target size, important action visible. |
-| Consistency | Palette, material, line weight, camera angle, UI tone. |
-| Technical | Alpha cleanup, crop, pivot, compression, atlas layout, naming. |
-| Animation | Baseline, timing, hit frame, anticipation, recovery, jitter. |
-| UI | Text fit, safe areas, overlap, focus/hover/disabled states. |
-| Accessibility | Color-only cues, contrast, motion intensity, small text. |
+| **가독성** | 실루엣, 대비, 실제 표시 크기, 중요한 액션이 보이는가 |
+| **일관성** | 팔레트, 재질, 선 굵기, 카메라 앵글, UI 톤 |
+| **기술** | 알파 정리, 크롭, 피벗, 압축, 아틀라스 배치, 명명 |
+| **애니메이션** | baseline, 타이밍, 타격 프레임, 예비동작, 회복, 떨림 |
+| **UI** | 텍스트가 들어가는가, 세이프에어리어, 겹침, focus/hover/disabled 상태 |
+| **접근성** | 색만으로 주는 신호, 대비, 모션 강도, 작은 글자 |
 
-## Evidence
-Prefer screenshots or preview sheets at:
-- Gameplay scale.
-- Mobile or smallest target viewport.
-- Busy combat/state with UI visible.
-- Light/dark or map backgrounds if applicable.
+## 증거
+스크린샷이나 프리뷰 시트를 이 조건에서 남긴다:
+- 실제 게임플레이 크기.
+- 모바일 또는 가장 작은 목표 뷰포트.
+- UI가 다 떠 있는 바쁜 전투/상태 화면.
+- 해당되면 라이트/다크 또는 맵 배경 위.
 
-## Pass/Fail
-Pass only when issues are either fixed or explicitly accepted by the human owner. Log unresolved items with asset ID, screenshot, severity, and owner.
+여러 장을 한 번에 볼 땐 `art-direction`의 `contact-sheet.mjs`로 격자 한 장으로 합치면 빠르다.
 
-## Common Mistakes
-| Mistake | Fix |
+## 통과/반려
+문제가 **고쳐졌거나**, 사람 소유자가 **명시적으로 감수**했을 때만 통과다.
+미해결 항목은 에셋 ID · 스크린샷 · 심각도 · 담당을 붙여 기록한다.
+
+## 흔한 실수
+| 실수 | 교정 |
 |---|---|
-| Reviewing only isolated assets | Review in real gameplay context. |
-| Ignoring Korean text length | Test representative localized strings. |
-| Accepting tiny alpha defects | Check on contrasting backgrounds. |
-| Calling visual polish complete without evidence | Attach screenshots/contact sheets. |
+| 에셋을 따로 떼어놓고만 봄 | 실제 게임플레이 맥락에서 본다 |
+| 한국어 텍스트 길이를 안 봄 | 대표적인 실제 번역 문자열로 테스트한다 |
+| 자잘한 알파 결함을 넘김 | 대비되는 배경 위에서 확인한다 |
+| 증거 없이 "시각 폴리싱 완료" | 스크린샷·콘택트 시트를 붙인다 |
+| 용량·메모리를 시각 검수로 대체 | 그건 `asset-budget` 축이다. 여기선 판정하지 않는다 |
 
 ## 이 레포에서의 위치
 - **소유**: artist + qa. 파이프라인 ⑦ 아트 단계의 **출구 게이트**.

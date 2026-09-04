@@ -18,8 +18,23 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash(git status:*), Bash(git rev-p
 | **1→2 기획 게이트** | 근거 없는 수치 0 · 미결 전부 명시 · **게임성 지표가 숫자로** 정의 (`gdd-completeness-checker`) |
 | 3↔4 게임성 | balance-sim 실측이 목표 지표 구간 안 (`balance-sim`) |
 | 6 정확성 | QA 판정 통과/조건부 · 회귀 없음 (`pr-review`) |
+| **7 아트** | `VISUAL_DESIGN.md` 승인 · manifest 상태 `approved` · `visual-qa` 증거 · **실서비스면 `asset-budget` 예산 대조** |
 | 8→9 경제 | econ-sim 실측이 목표 구간 안 · F2P 완주 가능 (`econ-sim`) |
 | P1·P2 폴리싱 | 사람 사인오프(느낌은 주관) |
+
+R 트랙(레퍼런스 이식, ORCHESTRATION.md §9)을 돌고 있으면 이 표를 함께 본다:
+
+| 게이트 | 통과 조건 |
+|---|---|
+| **R0 합법성·목적** | 사람 확인 완료(목적·취득 경로·배포 범위). **암호화/DRM이 걸려 있으면 여기서 멈춤** — 스킵 불가 |
+| R2 데이터 정합성 | 추출본이 원본과 일치 (`port-parity`) — R6 전에 반드시 |
+| R5 실행 확인 | 컴파일 0 · 플로우 완주 (`unity-port`) |
+| R6 재현 정합성 | 이식본이 원본과 같은 결과 (`port-parity`). **R5 통과 ≠ R6 통과** |
+| **R7 에셋 교체** | 추출 원본 에셋이 프로덕션 경로에 **0개** · manifest에 출처·라이선스·승인 상태 (artist + qa) |
+
+- **7 아트와 R7은 "보기 좋은가"가 아니라 각각 다른 것을 본다.** 7은 가독성·일관성·예산,
+  R7은 **배포 가능성**이다. R7이 안 끝났으면 빌드가 나가면 안 된다.
+- 아트 게이트에서 `visual-qa`·`asset-budget`을 안 돌렸으면 판정은 **미달이 아니라 측정 불가**다.
 
 ## 3. 증거를 확인한다 — 여기가 이 커맨드의 핵심
 게이트 판정의 근거가 **실제로 측정된 것인지** 본다 (ORCHESTRATION.md §5).

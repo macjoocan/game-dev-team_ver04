@@ -4,6 +4,11 @@
 돌리기 위한 세팅이다. 설치가 끝나면 에이전트가 HTTP로 직접 워크플로를 던지고 결과를 받아온다 —
 사람이 중간에 끼지 않는다.
 
+> **플랫폼**: 이 문서의 설치 절차는 **Windows + NVIDIA** 기준이고, 경로(`D:\ComfyUI` 등)는 예시다.
+> macOS/Linux는 ComfyUI 공식 문서대로 설치한 뒤 `COMFYUI_DIR` 환경변수만 그 경로로 맞추면 된다 —
+> 스크립트(`comfy-run`·`lora-eval`)는 환경변수·`--comfy` 인자를 먼저 보므로 OS를 가리지 않는다.
+> 학습(`lora-train`)은 CUDA 전제라 **Apple Silicon에서는 측정 불가**다. 미달이 아니라 측정 불가로 보고해라.
+
 ## 왜 로컬인가
 
 | | 로컬 ComfyUI | 클라우드 API(fal.ai 등) |
