@@ -78,6 +78,34 @@ jobs:
           cd "$repo"; rm -rf "$box"
           echo "하네스 왕복 통과 (생성 8파일 · 자리표시자 가드 · 5섹션 · A/B · 곡선)"
 
+      - name: 경제 하네스 스캐폴드 왕복 (페르소나 비교 · 공정성 판정)
+        run: |
+          repo="$PWD"
+          box="$(mktemp -d)"
+          cd "$box"
+          git init -q && git config user.email ci@x && git config user.name ci
+          echo x > a.txt && git add -A && git commit -qm init
+
+          node "$repo/skills/econ-sim/scripts/econ-scaffold.mjs" --out econ-sim
+          for f in econ-run.mjs personas.mjs economy.mjs econ-targets.mjs lib-stats.mjs rng.mjs README.md; do
+            test -f "econ-sim/$f" || { echo "FAIL: econ-sim/$f 가 생성되지 않았다"; exit 1; }
+          done
+
+          node econ-sim/econ-run.mjs --seed 7 --cohort 300 --days 30 > out.md; code=$?
+          test $code -eq 3 || { echo "FAIL: 자리표시자인데 exit $code (3 이어야 한다)"; exit 1; }
+
+          # 실제 로직을 켜면 페르소나 비교와 공정성 판정이 나와야 한다.
+          sed -i 's/export const PLACEHOLDER = true;/export const PLACEHOLDER = false;/' econ-sim/economy.mjs
+          node econ-sim/econ-run.mjs --seed 7 --cohort 800 --days 30 --out e > real.md || true
+          test -f e/econ-results.json || { echo "FAIL: econ-results.json 이 없다"; exit 1; }
+          for s in '무과금 완주율' '페이투윈 격차' '페르소나별 곡선' '재화 수지'; do
+            grep -q "$s" real.md || { echo "FAIL: 리포트에 '$s' 가 없다"; exit 1; }
+          done
+          grep -q '컴플라이언스' real.md || { echo "FAIL: [공백]에 컴플라이언스 한계 고지가 없다"; exit 1; }
+
+          cd "$repo"; rm -rf "$box"
+          echo "경제 하네스 왕복 통과 (자리표시자 가드 · 페르소나 4종 · 공정성 판정 · 한계 고지)"
+
       # 잘못 부르면 안내를 내야 한다. Node 스택트레이스는 안내가 아니다.
       # (인자 없이 기본값으로 도는 생성기도 있으니 "usage 를 냈나"가 아니라 "안 터졌나"를 본다)
       - name: 스크립트를 잘못 불러도 스택트레이스를 안 내는지

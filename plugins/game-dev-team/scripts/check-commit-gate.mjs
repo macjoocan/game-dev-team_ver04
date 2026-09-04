@@ -23,7 +23,13 @@ run(async () => {
   if (input.tool_name !== 'Bash') silent();
 
   const cmd = String(input.tool_input?.command || '');
-  if (!/\bgit\s+(-\S+\s+)*commit\b/.test(cmd)) silent();
+  const commitAt = /\bgit\s+(?:-\S+\s+)*commit\b/.exec(cmd);
+  if (!commitAt) silent();
+
+  // 플래그는 **git commit 이후 구간에서만** 찾는다. 명령 전체를 보면 `sed -n`·`sort -n`·
+  // `head -n` 같은 무관한 플래그가 `-n`(= --no-verify 단축)으로 잡힌다 — 실제로 오탐이 났다.
+  // 파이프·연결 다음은 다른 명령이므로 거기서 끊는다.
+  const commitSegment = cmd.slice(commitAt.index).split(/[|;&]|\n/)[0];
 
   const cwd = projectDir(input);
   const warnings = [];
@@ -40,7 +46,7 @@ run(async () => {
     warnings.push(`기본 브랜치(\`${branch}\`)에 직접 커밋하려 한다. 작업 브랜치를 먼저 파는 게 맞는지 확인.`);
   }
 
-  if (/(^|\s)(--no-verify|-n)(\s|$)/.test(cmd)) {
+  if (/(^|\s)(--no-verify|-n)(\s|$)/.test(commitSegment)) {
     warnings.push('`--no-verify`로 훅을 건너뛰려 한다. 사람이 명시적으로 요청한 게 아니면 하지 마라.');
   }
 
