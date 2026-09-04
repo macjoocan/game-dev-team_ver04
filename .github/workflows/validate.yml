@@ -24,10 +24,11 @@ jobs:
         run: node scripts/validate-plugin.mjs
 
       # 훅 스크립트만 보고 있었다. 스킬 스크립트 17개(2,848줄)가 검사 밖이었다(REVIEW.md B-7).
-      - name: 문법 검사 (훅 + 스킬 스크립트 전부)
+      # templates/ 는 프로젝트로 복사되는 파일이라 여기서 깨지면 생성된 하네스가 안 돈다.
+      - name: 문법 검사 (훅 + 스킬 스크립트 + 템플릿 전부)
         run: |
           n=0
-          for f in scripts/*.mjs skills/*/scripts/*.mjs; do
+          for f in scripts/*.mjs skills/*/scripts/*.mjs skills/*/scripts/templates/*.mjs; do
             node --check "$f"
             n=$((n+1))
           done
@@ -45,6 +46,37 @@ jobs:
           test "$(ls /tmp/smoke-fx/*_sheet.png | wc -l)" -gt 0 || { echo "FAIL: fx-gen 이 스트립 시트를 안 냈다"; exit 1; }
 
           echo "생성 도구 2종 스모크 통과 (UI $(ls /tmp/smoke-ui/*.png | wc -l)장 · FX $(ls /tmp/smoke-fx/*_sheet.png | wc -l)시트)"
+
+      # 하네스는 생성만 되는 게 아니라 **실제로 돌아야** 한다. 여기서 안 돌면 프로젝트에서도 안 돈다.
+      - name: 밸런스 하네스 스캐폴드 왕복 (생성 -> 실행 -> 판정)
+        run: |
+          repo="$PWD"
+          box="$(mktemp -d)"
+          cd "$box"
+          git init -q && git config user.email ci@x && git config user.name ci
+          echo x > a.txt && git add -A && git commit -qm init
+
+          node "$repo/skills/balance-sim/scripts/sim-scaffold.mjs" --out sim
+          for f in run.mjs curve-check.mjs rng.mjs policies.mjs game.mjs targets.mjs lib-stats.mjs README.md; do
+            test -f "sim/$f" || { echo "FAIL: sim/$f 가 생성되지 않았다"; exit 1; }
+          done
+
+          # 자리표시자 상태에서는 어떤 수치가 나와도 판정이 '측정 불가'(exit 3)여야 한다.
+          # 이 가드가 깨지면 하네스가 만든 숫자가 게이트 리포트에 미달로 올라간다.
+          node sim/run.mjs --seed 42 --runs 200 > out.md; code=$?
+          test $code -eq 3 || { echo "FAIL: 자리표시자인데 exit $code (3 이어야 한다)"; exit 1; }
+          grep -q '측정 불가' out.md || { echo "FAIL: 리포트에 측정 불가 판정이 없다"; exit 1; }
+          for s in '\[주장\]' '\[증거\]' '\[기준\]' '\[공백\]' '\[잔여 위험\]'; do
+            grep -q "$s" out.md || { echo "FAIL: 5섹션 중 $s 가 없다"; exit 1; }
+          done
+
+          # A/B · JSON 산출 · 곡선 판정까지 돌아가는지
+          node sim/run.mjs --seed 42 --runs 200 --ab damageMax=25 --out r >/dev/null || true
+          test -f r/results.json || { echo "FAIL: results.json 이 없다"; exit 1; }
+          node sim/curve-check.mjs r/results.json >/dev/null || true
+
+          cd "$repo"; rm -rf "$box"
+          echo "하네스 왕복 통과 (생성 8파일 · 자리표시자 가드 · 5섹션 · A/B · 곡선)"
 
       # 잘못 부르면 안내를 내야 한다. Node 스택트레이스는 안내가 아니다.
       # (인자 없이 기본값으로 도는 생성기도 있으니 "usage 를 냈나"가 아니라 "안 터졌나"를 본다)
