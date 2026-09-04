@@ -95,9 +95,12 @@ for (const d of skillDirs) {
 }
 
 // ── 2. 에이전트 ───────────────────────────────────────────────────────────
+// 공식 서브에이전트 툴 목록(code.claude.com/docs/en/sub-agents#available-tools).
+// `Skill` 이 빠져 있어서 정당한 배선에도 경고가 떴고, 그게 수정을 막고 있었다(REVIEW.md B-7).
 const KNOWN_TOOLS = new Set([
-  'Read', 'Write', 'Edit', 'Bash', 'Grep', 'Glob',
-  'WebSearch', 'WebFetch', 'Task', 'Agent', 'NotebookEdit', 'TodoWrite',
+  'Read', 'Grep', 'Glob', 'Bash', 'PowerShell', 'Edit', 'Write', 'NotebookEdit',
+  'WebFetch', 'WebSearch', 'TodoWrite', 'Skill', 'ToolSearch',
+  'EnterWorktree', 'ExitWorktree', 'Monitor', 'TaskStop', 'SendMessage', 'Artifact',
 ]);
 
 const agentFiles = mdFiles(path.join(ROOT, 'agents')).sort();
@@ -250,6 +253,54 @@ if (exists(codexPath) && exists(pluginPath)) {
   }
 }
 
+// ── 7b. 스킬 스크립트가 문서에 노출돼 있나 ────────────────────────────────
+// v0.14~v0.18에서 스크립트 5개(1,003줄)가 어느 문서에도 안 적혀 도달 불가 상태였다(REVIEW.md B-7).
+// 에이전트는 SKILL.md 만 읽는다 — 거기 없는 스크립트는 존재하지 않는 것과 같다.
+for (const d of skillDirs) {
+  const scriptDir = path.join(ROOT, 'skills', d, 'scripts');
+  if (!exists(scriptDir)) continue;
+  const docs = [path.join(ROOT, 'skills', d, 'SKILL.md')];
+  const refDir = path.join(ROOT, 'skills', d, 'references');
+  if (exists(refDir)) for (const f of mdFiles(refDir)) docs.push(path.join(refDir, f));
+  const corpus = docs.filter(exists).map(read).join('\n');
+  for (const f of fs.readdirSync(scriptDir)) {
+    if (!/\.(mjs|js|ps1)$/.test(f)) continue;
+    if (!corpus.includes(f)) {
+      err(`skills/${d}`, `\`scripts/${f}\` 가 SKILL.md·references 어디에도 없다 — 에이전트가 못 찾는다. 문서에 쓰거나 스크립트를 지워라.`);
+    }
+  }
+}
+
+// ── 7c. 라우팅표 소유권 ↔ 에이전트 실제 도달 가능성 ───────────────────────
+// `skills:` 는 **선주입**일 뿐이고, 목록에 없는 스킬을 런타임에 부르려면 `tools:` 에 `Skill` 이
+// 있어야 한다. 그래서 ORCHESTRATION 라우팅표가 소유자로 지목했는데 선주입도 없고 Skill 도 없으면
+// 그 소유권은 문서상으로만 존재한다. 실제로 7건이 그 상태였다(REVIEW.md B-7).
+const ALIAS = { meta: 'meta-economy-designer', designer: 'game-designer' };
+const orchPath = path.join(ROOT, 'ORCHESTRATION.md');
+if (exists(orchPath)) {
+  const agentInfo = new Map();
+  for (const f of agentFiles) {
+    const fm = frontmatter(read(path.join(ROOT, 'agents', f)));
+    if (!fm) continue;
+    const toolList = String(fm.tools || '').split(',').map((t) => t.trim()).filter(Boolean);
+    agentInfo.set(f.replace(/\.md$/, ''), {
+      preload: Array.isArray(fm.skills) ? fm.skills : [],
+      // tools 를 생략하면 전체 상속이므로 Skill 도 있다
+      canInvoke: toolList.length === 0 || toolList.includes('Skill'),
+    });
+  }
+  for (const m of read(orchPath).matchAll(/`([a-z0-9-]+)`\(([^)]+)\)/g)) {
+    if (!skillNames.has(m[1])) continue;
+    for (const raw of m[2].split('+').map((s) => s.trim())) {
+      const info = agentInfo.get(ALIAS[raw] || raw);
+      if (!info) continue; // 오케스트레이터 등 에이전트가 아닌 소유자
+      if (!info.preload.includes(m[1]) && !info.canInvoke) {
+        err('ORCHESTRATION.md', `\`${m[1]}\` 소유자로 \`${ALIAS[raw] || raw}\` 를 적었는데 그 에이전트는 못 쓴다: \`skills:\` 선주입에도 없고 \`tools:\` 에 \`Skill\` 도 없다.`);
+      }
+    }
+  }
+}
+
 // ── 8. 미러 드리프트 (plugins/game-dev-team 이 있을 때만) ────────────────
 // 루트가 정본, plugins/는 Codex 로컬 마켓플레이스용 미러. sync-plugin.ps1 을 안 돌리고
 // 커밋하면 두 설치본이 조용히 갈라진다. PowerShell 없는 CI에서도 잡히도록 여기서 대조한다.
@@ -257,7 +308,7 @@ import crypto from 'node:crypto';
 const MIRROR = path.join(ROOT, 'plugins', 'game-dev-team');
 if (exists(MIRROR)) {
   const CANON_DIRS = ['agents', 'skills', 'hooks', 'commands', 'scripts', '.claude-plugin', '.codex-plugin'];
-  const CANON_FILES = ['README.md', 'USAGE.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md', 'CLAUDE.md'];
+  const CANON_FILES = ['README.md', 'USAGE.md', 'INSTALL.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md', 'CLAUDE.md'];
   const hashFile = (p) => crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
   const treeMap = (base, relDir) => {
     const out = new Map();

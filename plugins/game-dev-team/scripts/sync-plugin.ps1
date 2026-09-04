@@ -12,7 +12,10 @@ $mirror = Join-Path $root 'plugins\game-dev-team'
 
 # Canonical set - anything not listed here is not part of the mirror
 $dirs = @('agents', 'skills', 'hooks', 'commands', 'scripts', '.claude-plugin', '.codex-plugin')
-$files = @('README.md', 'USAGE.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md', 'CLAUDE.md')
+# INSTALL.md was missing here, so the Codex mirror shipped without the one-click
+# install doc added in v0.13/v0.14 (see REVIEW.md B-7). Keep in sync with
+# CANON_FILES in scripts/validate-plugin.mjs.
+$files = @('README.md', 'USAGE.md', 'INSTALL.md', 'ORCHESTRATION.md', 'REVIEW.md', 'AGENTS.md', 'CLAUDE.md')
 
 function Get-TreeHash($base, $rel) {
     $path = Join-Path $base $rel
