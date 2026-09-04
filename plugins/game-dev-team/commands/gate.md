@@ -16,7 +16,9 @@ allowed-tools: Read, Write, Edit, Grep, Glob, Bash(git status:*), Bash(git rev-p
 |---|---|
 | 0→1 코어 확정 | 코어 루프 한 문장 + 왜 재밌는지 + 선행 사례 대비 차별점 |
 | **1→2 기획 게이트** | 근거 없는 수치 0 · 미결 전부 명시 · **게임성 지표가 숫자로** 정의 (`gdd-completeness-checker`) |
-| 3↔4 게임성 | balance-sim 실측의 **95% 구간 전체**가 목표 안 · 오차 폭이 목표 구간보다 좁음 · 난이도 곡선에 좌절 벽·역전 없음 (`balance-sim`) |
+| 3↔4 게임성 (봇) | balance-sim 실측의 **95% 구간 전체**가 목표 안 · 오차 폭이 목표 구간보다 좁음 · 난이도 곡선에 좌절 벽·역전 없음 (`balance-sim`) |
+| **3↔4 게임성 (사람)** | RITE 회차 완료 · **표본 수와 빌드 커밋 명시** · FTUE 퍼널에 막힘 지점 없음 · 코어 루프가 설명으로 전달됨 (`playtest-capture`). **봇 지표만 충족이면 조건부다** |
+| **4→5 버티컬 슬라이스** | 최종 품질 기준을 증명한 한 조각이 플레이 가능 · 아트·연출·사운드가 출시 수준 · 사람 사인오프. 범위는 사람이 정한다 |
 | 6 정확성 | QA 판정 통과/조건부 · 회귀 없음 (`pr-review`) |
 | **7 아트** | `VISUAL_DESIGN.md` 승인 · manifest 상태 `approved` · `visual-qa` 증거 · **실서비스면 `asset-budget` 예산 대조** |
 | 8→9 경제 | econ-sim 실측이 목표 구간 안 · F2P 완주 가능 (`econ-sim`) |
