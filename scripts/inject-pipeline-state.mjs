@@ -13,13 +13,29 @@ const STAGES = {
   8: '메타·수익화', 9: '경제 검증(econ-sim)', 10: '메타 구현', 11: 'P2 파이널 연출',
 };
 
+// 마지막 n 줄만 필요하므로 파일 전체를 읽지 않는다 — 꼬리 쪽 일부만 읽는다.
+const TAIL_BYTES = 64 * 1024;
+
 function auditTail(dir, n) {
+  let fd = null;
   try {
     const p = path.join(dir, 'audit.log');
     if (!fs.existsSync(p)) return [];
-    return fs.readFileSync(p, 'utf8').split('\n').filter(Boolean).slice(-n);
+    const size = fs.statSync(p).size;
+    const start = Math.max(0, size - TAIL_BYTES);
+    const len = size - start;
+    if (len <= 0) return [];
+    const buf = Buffer.alloc(len);
+    fd = fs.openSync(p, 'r');
+    fs.readSync(fd, buf, 0, len, start);
+    const text = buf.toString('utf8');
+    // 앞이 잘려 깨진 첫 줄은 버린다
+    const lines = (start > 0 ? text.slice(text.indexOf('\n') + 1) : text).split('\n').filter(Boolean);
+    return lines.slice(-n);
   } catch {
     return [];
+  } finally {
+    try { if (fd !== null) fs.closeSync(fd); } catch { /* 무시 */ }
   }
 }
 

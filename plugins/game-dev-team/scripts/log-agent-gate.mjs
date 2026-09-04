@@ -8,6 +8,10 @@ import path from 'node:path';
 import { readInput, silent, run, pipelineDir, isOwnRepo } from './lib.mjs';
 
 const MAX_SUMMARY = 180;
+// 감사 로그는 append-only 라 프로젝트가 길어지면 무한히 자란다. 상한을 두고 오래된 줄을 버린다.
+// (게이트 근거를 되짚는 게 목적이라 최근 이력만 있으면 충분하다)
+const MAX_LINES = 2000;
+const ROTATE_AT_BYTES = 512 * 1024;
 
 run(async () => {
   const input = await readInput();
@@ -33,6 +37,16 @@ run(async () => {
     summary || '(무응답)',
   ].join('\t');
 
-  fs.appendFileSync(path.join(dir, 'audit.log'), line + '\n', 'utf8');
+  const logPath = path.join(dir, 'audit.log');
+  fs.appendFileSync(logPath, line + '\n', 'utf8');
+
+  // 상한을 넘으면 뒤쪽 MAX_LINES 줄만 남긴다. 실패해도 로그일 뿐이니 조용히 넘어간다.
+  try {
+    if (fs.statSync(logPath).size > ROTATE_AT_BYTES) {
+      const kept = fs.readFileSync(logPath, 'utf8').split('\n').filter(Boolean).slice(-MAX_LINES);
+      fs.writeFileSync(logPath, kept.join('\n') + '\n', 'utf8');
+    }
+  } catch { /* 회전 실패는 무시 — 다음 실행에서 다시 시도한다 */ }
+
   silent();
 });

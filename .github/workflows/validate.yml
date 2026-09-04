@@ -23,11 +23,51 @@ jobs:
       - name: 플러그인 무결성 검사
         run: node scripts/validate-plugin.mjs
 
-      - name: 훅 스크립트 문법 검사
+      # 훅 스크립트만 보고 있었다. 스킬 스크립트 17개(2,848줄)가 검사 밖이었다(REVIEW.md B-7).
+      - name: 문법 검사 (훅 + 스킬 스크립트 전부)
         run: |
-          for f in scripts/*.mjs; do
+          n=0
+          for f in scripts/*.mjs skills/*/scripts/*.mjs; do
             node --check "$f"
+            n=$((n+1))
           done
+          echo "문법 검사 $n 파일 통과"
+
+      - name: 생성 도구 스모크 (스펙 -> 실제 산출물)
+        run: |
+          KIT=skills/art-direction/references/starter-kit
+          node skills/ui-art-system/scripts/ui-kit-gen.mjs "$KIT/ui-spec.json" --out /tmp/smoke-ui
+          test -f /tmp/smoke-ui/manifest.json || { echo "FAIL: ui-kit-gen 이 manifest 를 안 냈다"; exit 1; }
+          test "$(ls /tmp/smoke-ui/*.png | wc -l)" -gt 0 || { echo "FAIL: ui-kit-gen 이 PNG 를 안 냈다"; exit 1; }
+
+          node skills/fx-art-system/scripts/fx-gen.mjs "$KIT/fx-spec.json" --out /tmp/smoke-fx
+          test -f /tmp/smoke-fx/manifest.json || { echo "FAIL: fx-gen 이 manifest 를 안 냈다"; exit 1; }
+          test "$(ls /tmp/smoke-fx/*_sheet.png | wc -l)" -gt 0 || { echo "FAIL: fx-gen 이 스트립 시트를 안 냈다"; exit 1; }
+
+          echo "생성 도구 2종 스모크 통과 (UI $(ls /tmp/smoke-ui/*.png | wc -l)장 · FX $(ls /tmp/smoke-fx/*_sheet.png | wc -l)시트)"
+
+      # 잘못 부르면 안내를 내야 한다. Node 스택트레이스는 안내가 아니다.
+      # (인자 없이 기본값으로 도는 생성기도 있으니 "usage 를 냈나"가 아니라 "안 터졌나"를 본다)
+      - name: 스크립트를 잘못 불러도 스택트레이스를 안 내는지
+        run: |
+          # 기본값으로 도는 생성기가 파일을 쓰므로 임시 디렉터리에서 돌린다(레포를 더럽히지 않게).
+          repo="$PWD"
+          sandbox="$(mktemp -d)"
+          fail=0
+          for f in "$repo"/skills/*/scripts/*.mjs; do
+            for a in "" "--help"; do
+              out=$(cd "$sandbox" && node "$f" $a 2>&1 || true)
+              case "$out" in
+                *"node:internal"*|*"    at "*)
+                  echo "FAIL: ${f#$repo/} (인자 '$a') 가 스택트레이스를 낸다"
+                  echo "$out" | head -3
+                  fail=1 ;;
+              esac
+            done
+          done
+          rm -rf "$sandbox"
+          [ $fail -eq 0 ] || exit 1
+          echo "스킬 스크립트 인자 검증 통과"
 
       - name: 훅이 세션을 깨지 않는지 (빈 입력 · 깨진 입력에도 exit 0)
         run: |

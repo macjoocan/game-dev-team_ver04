@@ -1,12 +1,21 @@
 #!/bin/sh
 # Gate commits: mirror must be in sync AND plugin integrity must pass.
 # One-time setup per clone: git config core.hooksPath .githooks
+#
+# Both checks are guarded. powershell.exe used to be called unconditionally, so on a machine
+# without it (macOS/Linux) $? was 127 and every commit was blocked (see REVIEW.md B-7).
+# validate-plugin.mjs already re-checks mirror drift in Node, so PowerShell is a bonus, not a
+# requirement -- but if neither node nor powershell is present, we refuse to pass silently.
 root="$(git rev-parse --show-toplevel)"
+checked=0
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/sync-plugin.ps1" -Check
-if [ $? -ne 0 ]; then
-  echo "[pre-commit] Mirror drift detected. Run scripts/sync-plugin.ps1, stage the mirror, then re-commit."
-  exit 1
+if command -v powershell.exe >/dev/null 2>&1; then
+  powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$root/scripts/sync-plugin.ps1" -Check
+  if [ $? -ne 0 ]; then
+    echo "[pre-commit] Mirror drift detected. Run scripts/sync-plugin.ps1, stage the mirror, then re-commit."
+    exit 1
+  fi
+  checked=1
 fi
 
 if command -v node >/dev/null 2>&1; then
@@ -15,6 +24,14 @@ if command -v node >/dev/null 2>&1; then
     echo "[pre-commit] Plugin integrity check failed. Fix the errors above, then re-commit."
     exit 1
   fi
+  checked=1
 else
   echo "[pre-commit] node not found - skipping validate-plugin.mjs (CI will still run it)."
+fi
+
+if [ "$checked" -eq 0 ]; then
+  echo "[pre-commit] Neither node nor powershell.exe found - nothing could be verified."
+  echo "[pre-commit] Install Node (>=20) so validate-plugin.mjs can run, or commit with --no-verify"
+  echo "[pre-commit] and let CI gate it."
+  exit 1
 fi
