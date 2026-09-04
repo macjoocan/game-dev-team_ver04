@@ -16,6 +16,18 @@
 - **대화형 단계는 위임하지 않는다.** `concept-discovery`(0단계)처럼 사람과 여러 턴 왕복하는 일은
   오케스트레이터가 직접 진행한다(서브에이전트는 1회 실행·반환이라 부적합).
 
+### 에이전트가 스킬에 닿는 방식 — `skills:` 는 권한이 아니다
+역할 파일의 `skills:` 는 **세션 시작 시 스킬 전문을 주입하는 목록**이고, 목록에 없는 스킬을
+런타임에 부르려면 `tools:` 에 **`Skill`** 이 있어야 한다. 이걸 혼동해서 두 사고가 동시에 났다
+(REVIEW.md B-7):
+- `skills:` 를 "소유권 지도"로 써서 artist 가 매 호출마다 **799줄**을 작업과 무관하게 주입받았다.
+- `Skill` 이 아무 역할에도 없어서, 아래 라우팅표가 공동 소유로 적은 **7건이 실제로는 호출 불가**였다.
+  pm 은 `skills:` 자체가 비어 있어 소유 스킬 두 개를 아예 못 썼다.
+
+**규칙**: `skills:` 에는 그 역할이 **항상** 쓰는 것만 넣고(현재 팀 전체 324줄), 나머지는 `Skill` 툴로
+필요할 때 부른다. 아래 라우팅표의 소유권은 `scripts/validate-plugin.mjs` 가 기계로 대조한다 —
+소유자로 적었는데 선주입도 `Skill` 도 없으면 검사가 실패한다.
+
 ## 2. 언제 누구를 부르나 (라우팅)
 | 신호/요청 | 호출 |
 |---|---|
@@ -26,7 +38,8 @@
 | 프로토·구현·리팩터·시뮬 하네스 | `developer` |
 | 재미/밸런스를 데이터로 검증 | `balance-sim`(designer 소유) |
 | 버그·회귀·정확성 리뷰 | `qa` / `pr-review` |
-| 비주얼 방향·톤 기준(`VISUAL_DESIGN.md`) | `artist` / `art-direction` |
+| 비주얼 방향·톤 기준(`VISUAL_DESIGN.md`·`palette.json`) | `artist` / `art-direction` |
+| 레퍼런스 분류·측정 → 스타일 프로필 | `art-direction`(artist) — `ref-classify`→`ref-analyze`→`style-score` |
 | 에셋 요청·승인·manifest·엔진 핸드오프 | `asset-pipeline`(artist 소유) |
 | 2D 스프라이트/시트/아틀라스 | `sprite-pipeline`(artist+developer) |
 | HUD·버튼·카드·아이콘 UI 아트 | `ui-art-system`(artist+developer) |

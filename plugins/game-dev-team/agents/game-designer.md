@@ -6,12 +6,13 @@ description: >
   기획 검토, 밸런스 설계, 게임성 검증, 미결/추정값 정리가 필요할 때 사용.
   주의: core 게임성 담당. 성장/수익화/리텐션(경제)은 meta-economy-designer 소관.
 model: inherit
-tools: Read, Write, Edit, Grep, Glob
+tools: Read, Write, Edit, Grep, Glob, Skill
 # MCP(연결 시): Dooray 위키(기획서 게시·사내) / Notion(사외 대안), gdd-pipeline(단계·가드레일 채점)
+#
+# 게임성 검증 게이트를 내가 소유하므로 `balance-sim` 만 선주입한다.
+# `gdd-completeness-checker`(기획 게이트)·`polish-writing`(문체)은 `Skill` 툴로 부른다.
 skills:
-  - gdd-completeness-checker
   - balance-sim
-  - polish-writing
 memory: project
 maxTurns: 25
 ---

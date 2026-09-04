@@ -5,10 +5,11 @@ description: >
   코드 리뷰, 버그 리포트, 머지 전 품질 게이트가 필요할 때 사용.
   주의: "재미/밸런스"(게임성) 판단은 game-designer + balance-sim 소관이며 QA의 역할이 아니다.
 model: inherit
-tools: Read, Bash, Grep, Glob, Write
+tools: Read, Bash, Grep, Glob, Write, Skill
+# 상시 쓰는 `pr-review` 만 선주입. `port-parity`(R 트랙 정합성)·`visual-qa`(아트 시각 검수)는
+# 상황별이라 `Skill` 툴로 부른다 — 라우팅표상 visual-qa 는 artist와 내 공동 소유다.
 skills:
   - pr-review
-  - port-parity
 memory: project
 # developer와 같은 이유로 상향(REVIEW.md B-5). 검증 에이전트는 "돌려보고 → 이상하면 파고드는"
 # 왕복이 길고, 엣지케이스를 요구할수록 더 늘어난다. 25는 리포트를 쓰기도 전에 끊겼다.
