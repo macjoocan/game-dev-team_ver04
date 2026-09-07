@@ -51,6 +51,7 @@ if (args.includes('--help') || args.includes('-h')) {
   console.log('  assets        에셋 폴더                -> 텍스처 예산 실측');
   console.log('  feel          feel.json                -> 연출 상수 감사 (polish)');
   console.log('  fxManifest    fx-gen manifest.json     -> 광과민성 플래시 안전 판정 (polish)');
+  console.log('  sprites       프레임 폴더               -> 스프라이트 정합성 판정');
   process.exit(2);
 }
 
@@ -187,6 +188,15 @@ if (cfg.fxManifest) {
   results.push(runTool('플래시 안전(WCAG 2.3.1)', skill('polish', 'scripts', 'flash-check.mjs'), [cfg.fxManifest]));
 } else {
   skipped.push('플래시 안전 — `fxManifest` 미설정. **광과민성 발작 위험을 판정하지 못했다** (WCAG 2.3.1 / 콘솔 심의 대상)');
+}
+
+// 8) 스프라이트 정합성 — 캔버스·정체성 드리프트·떨림·알파·축소 판독성
+if (cfg.sprites) {
+  const a = [cfg.sprites];
+  if (cfg.spriteAtlas) a.push('--atlas', cfg.spriteAtlas);
+  results.push(runTool('스프라이트 정합성', skill('sprite-pipeline', 'scripts', 'sprite-qa.mjs'), a));
+} else {
+  skipped.push('스프라이트 정합성 — `sprites` 미설정. 프레임 간 정체성 드리프트·떨림을 판정하지 못했다');
 }
 
 // ── 판정 집계 ────────────────────────────────────────────────────────────────

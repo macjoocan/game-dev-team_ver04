@@ -288,6 +288,7 @@ const GATE_TOOLS = [
   'art-gate.mjs',         // 아트 게이트 통합 판정 (양 하네스 공동 컨트롤 표면)
   'flash-check.mjs',      // 광과민성 플래시 안전 (P2 게이트 · 출하 차단 사유)
   'feel-audit.mjs',       // 연출 상수 감사 (P1·P2 게이트)
+  'sprite-qa.mjs',        // 스프라이트 정합성 (⑦ 아트 게이트)
 ];
 const agentsMdPath = path.join(ROOT, 'AGENTS.md');
 if (exists(agentsMdPath)) {
