@@ -71,6 +71,51 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 상태 파일 형식은 [pipeline-brief](./skills/pipeline-brief/SKILL.md)에 있다. `state.json`이 없으면
 SessionStart 훅은 아무것도 하지 않는다.
 
+## 판정 도구 인덱스 — 무엇이 무엇을 기계로 판정하나
+
+이 플러그인의 게이트는 산문이 아니라 **종료 코드**다. 전부 `0` 충족 / `1` 미달 / `3` 측정 불가.
+의존성 0(Node 내장만) — 설치할 게 없다.
+
+### 아트 — 한 명령으로 6축 (`scripts/art-gate.mjs`)
+```bash
+node scripts/art-gate.mjs --init          # 프로젝트에 art-gate.json 생성 (커밋한다)
+node scripts/art-gate.mjs --out art-out   # 6축을 한 번에, 5섹션 리포트 하나로
+```
+**두 하네스(Claude Code·Codex)가 같은 명령을 돌리는 공동 컨트롤 표면**이다 — 리포트에
+하네스·브랜치·대상 커밋이 박혀 판정을 비교할 수 있다. 상세: `ORCHESTRATION.md` §10.
+
+| 축 | 도구 | 무엇을 판정하나 |
+|---|---|---|
+| 색각이상 | `visual-qa/cvd-check` | 의미가 다른 색쌍이 4가지 색각이상에서 구분되나. **유병률로 우선순위**(정상 시야 > 적/녹색맹 > 드문 유형) |
+| 텍스트 | `ui-art-system/pseudo-loc` | 의사 로케일로 슬롯 넘침. **한국어는 짧은 언어**라 영어·독일어에서 터진다 |
+| 에셋 회귀 | `asset-pipeline/asset-baseline` | 재생성이 크기·피벗·9-slice를 바꿨나 (픽셀만 바뀐 건 조건부) |
+| 스타일 규격 | `art-direction/style-score` | 생성물이 레퍼런스 프로필 + 프로젝트 팔레트 안에 있나 |
+| 예산 | `asset-budget/scan-textures` | 용량·텍스처 메모리·압축 설정 (Unity `.meta` 기준) |
+| 스프라이트 | `sprite-pipeline/sprite-qa` | 캔버스 정합 · **정체성 드리프트** · 떨림(2차 차분) · 알파 · 축소 판독성 |
+
+### 연출 (`skills/polish/`)
+| 도구 | 무엇을 판정하나 |
+|---|---|
+| `flash-check` | **광과민성 플래시 안전 (WCAG 2.3.1)** — 1초 3회 초과 금지. **미달은 출하 차단 사유** |
+| `feel-audit` | `feel.json`의 논리 모순(무게역전)·예산 초과·접근성(모션 감소) 누락. 관행 이탈은 경고 |
+
+### 검증 하네스 — 스캐폴드로 깔고 프로젝트가 계약만 구현
+| 도구 | 무엇 |
+|---|---|
+| `balance-sim/sim-scaffold` | 게임성(봇). 시드·배치·**95% 신뢰구간**·판정·리포트·커밋 스탬핑을 스캐폴드가 소유 |
+| `econ-sim/econ-scaffold` | 경제. **페르소나별** 코호트 — 무과금 완주율·**페이투윈 격차**·재화 수지 |
+| `playtest-capture/funnel-report` | 게임성(사람). FTUE **단계 퍼널** + 세션1→2 전환 + 사망 뭉침 |
+
+**판정은 점추정이 아니라 구간으로 한다.** 목표 35~55%에서 100판의 52%는 구간이 42~62%라
+`측정 불가`고, 같은 52%를 1000판에서 얻으면 49~55%로 좁아져 `충족`이 된다.
+미달은 기획으로, 측정 불가는 판수·도구로 되돌린다 — 되돌릴 곳이 다르다.
+
+### 생성 도구 (판정 아님)
+`ui-art-system/ui-kit-gen`(9-slice UI 스프라이트) · `fx-art-system/fx-gen`(이펙트 시트) ·
+`art-direction`의 레퍼런스 측정 4종 · `char-art-system`의 생성·정규화·아틀라스 10종.
+출발 스펙은 `skills/art-direction/references/starter-kit/`에 있다 —
+**동봉 기준값은 자기 검사를 통과한다**(CI가 강제한다).
+
 ## 무결성 검사 (`scripts/validate-plugin.mjs`)
 ```bash
 node scripts/validate-plugin.mjs
