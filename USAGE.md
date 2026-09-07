@@ -92,12 +92,33 @@ codex plugin add game-dev-team@game-dev-team-local
 Codex 설정의 기본 모델은 GPT 계열을 사용한다. 역할 파일의 `model:` 값은 설치 안정성을 위해
 `inherit`로 두고, 깊은 판단/일반 실행 같은 GPT 라우팅 기준은 `AGENTS.md`에서 관리한다.
 
+#### Codex 에서 무엇이 되고 무엇이 안 되나 (설치 전에 알아둘 것)
+
+Codex 플러그인으로 배포되는 건 **스킬뿐이다.** 나머지는 Claude Code 전용 기능이다.
+
+| 컴포넌트 | Claude Code | Codex |
+|---|---|---|
+| **스킬 23개** (판정·생성 도구 전부) | O | **O** |
+| 역할 에이전트 6개 | O | **X** — Codex 커스텀 에이전트는 TOML이고 플러그인 배포 미지원 |
+| 훅 4종 (하드코딩 감시·커밋 게이트·상태 주입·감사 로그) | O | **X** — 경로가 `${CLAUDE_PLUGIN_ROOT}`이고 이벤트명이 Claude 체계 |
+| `/gate` 커맨드 | O | **X** |
+| 에이전트 메모리 (`memory: project`) | O | **X** |
+
+**그래서 Codex 세션은**: 도구는 다 쓸 수 있지만 게이트 상태(`state.json`)가 자동 주입되지 않고,
+감사 로그가 안 쌓이고, 밸런스 하드코딩 경고가 안 뜬다. `AGENTS.md`가 유일한 규칙 전달 경로이므로
+**작업 시작 전에 `AGENTS.md`를 읽는 게 전제다.**
+
+두 하네스를 병행한다면 **파일 소유권 계약**을 먼저 정한다 → `ORCHESTRATION.md` §10.
+아트 트랙은 실행부가 하네스 무관(결정론적 Node 스크립트)이라 양산을 Codex로 넘기기 좋지만,
+`palette.json`·`VISUAL_DESIGN.md`·`state.json`은 정본이므로 한쪽만 고쳐야 한다.
+
 ### 설치 확인
 ```
 /plugin      # Installed 탭에 game-dev-team이 있고 Errors 탭이 비어 있는지
 /agents      # pm · game-designer · developer · qa · artist · meta-economy-designer
 /game-dev-team:gate
 ```
+Codex(`codex plugin list`)에서는 스킬만 보인다 — `/agents`·`/gate`가 없는 게 정상이다.
 훅은 **Node가 PATH에 있어야** 돈다. 없으면 훅만 조용히 실패하고 나머지 기능은 정상 동작한다.
 
 ## 2. 게임 프로젝트에 팀 세팅

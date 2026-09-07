@@ -271,6 +271,30 @@ for (const d of skillDirs) {
   }
 }
 
+// ── 7b-2. 게이트 판정 도구가 Codex 규칙서(AGENTS.md)에도 있나 ─────────────
+// Codex 로는 **스킬만** 배포된다(에이전트·훅·커맨드 미지원). 그래서 훅이 강제해주는 게 없고
+// AGENTS.md 가 유일한 규칙 전달 경로다. 실제로 아트 판정 도구 3종이 추가됐는데 AGENTS.md 는
+// 그걸 몰랐다 — Claude 쪽 SKILL.md 만 갱신하고 Codex 규칙서가 뒤처지는 드리프트다(§10).
+//
+// 여기 적힌 건 **게이트 판정에 쓰이는 도구**만이다. 모든 스크립트를 AGENTS.md 에 요구하지 않는다
+// (그건 요약 문서의 역할이 아니다). 새 판정 도구를 만들면 이 목록에 추가해라.
+const GATE_TOOLS = [
+  'cvd-check.mjs',        // 색각이상 판정 (아트 게이트)
+  'pseudo-loc.mjs',       // 텍스트 오버플로 판정 (아트 게이트)
+  'asset-baseline.mjs',   // 에셋 회귀 판정 (아트 게이트)
+  'sim-scaffold.mjs',     // 게임성 하네스 (3↔4 게이트)
+  'econ-scaffold.mjs',    // 경제 하네스 (8→9 게이트)
+  'funnel-report.mjs',    // FTUE 퍼널 (④ 사람 축)
+];
+const agentsMdPath = path.join(ROOT, 'AGENTS.md');
+if (exists(agentsMdPath)) {
+  const agentsMd = read(agentsMdPath);
+  const missingTools = GATE_TOOLS.filter((t) => !agentsMd.includes(t));
+  if (missingTools.length) {
+    err('AGENTS.md', `게이트 판정 도구가 Codex 규칙서에 없다: ${missingTools.join(', ')} — Codex 는 훅이 없어 AGENTS.md 가 유일한 전달 경로다(ORCHESTRATION.md §10).`);
+  }
+}
+
 // ── 7c. 라우팅표 소유권 ↔ 에이전트 실제 도달 가능성 ───────────────────────
 // `skills:` 는 **선주입**일 뿐이고, 목록에 없는 스킬을 런타임에 부르려면 `tools:` 에 `Skill` 이
 // 있어야 한다. 그래서 ORCHESTRATION 라우팅표가 소유자로 지목했는데 선주입도 없고 Skill 도 없으면
