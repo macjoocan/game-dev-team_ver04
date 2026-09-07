@@ -144,6 +144,19 @@ node skills/art-direction/scripts/style-score.mjs <생성폴더> --profile ref-a
 ```
 `ref-classify`를 건너뛰면 "이 게임의 그림"이 아니라 "리소스 폴더 평균"이 나온다.
 
+### 판정 — **한 명령으로 모은다** (공동 컨트롤 표면)
+```bash
+node scripts/art-gate.mjs --init            # 프로젝트에 art-gate.json 생성 (커밋한다)
+node scripts/art-gate.mjs --out art-out     # CVD·오버플로·회귀·규격·예산 한 번에
+```
+Claude Code 세션과 **같은 명령**이다. 리포트에 어느 하네스에서 돌렸는지와 대상 커밋이 박히므로
+두 세션의 판정을 비교할 수 있다. 종료 코드 0 충족 / 1 미달 / 3 측정 불가.
+
+**작업 시작 전에 한 번 돌려라.** 남이 깨놓은 걸 내가 깬 것으로 오해하지 않으려면 그게 먼저다.
+그리고 `state.json` 의 `openGates` 를 직접 읽어라 — Codex 는 자동 주입이 없다.
+
+개별 도구를 따로 돌릴 수도 있다:
+
 ### 판정 3종 — **게이트 근거는 이 출력이다**
 ```bash
 # 색각이상에서 색 신호가 살아 있나 (0 충족 / 1 미달)

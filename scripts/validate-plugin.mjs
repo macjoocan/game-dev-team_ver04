@@ -285,6 +285,7 @@ const GATE_TOOLS = [
   'sim-scaffold.mjs',     // 게임성 하네스 (3↔4 게이트)
   'econ-scaffold.mjs',    // 경제 하네스 (8→9 게이트)
   'funnel-report.mjs',    // FTUE 퍼널 (④ 사람 축)
+  'art-gate.mjs',         // 아트 게이트 통합 판정 (양 하네스 공동 컨트롤 표면)
 ];
 const agentsMdPath = path.join(ROOT, 'AGENTS.md');
 if (exists(agentsMdPath)) {
