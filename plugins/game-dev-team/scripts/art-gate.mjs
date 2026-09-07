@@ -49,6 +49,8 @@ if (args.includes('--help') || args.includes('-h')) {
   console.log('  assets+baseline 에셋 폴더 + 베이스라인 -> 에셋 회귀 판정');
   console.log('  generated+styleProfile 생성물 + 프로필 -> 스타일 규격 채점');
   console.log('  assets        에셋 폴더                -> 텍스처 예산 실측');
+  console.log('  feel          feel.json                -> 연출 상수 감사 (polish)');
+  console.log('  fxManifest    fx-gen manifest.json     -> 광과민성 플래시 안전 판정 (polish)');
   process.exit(2);
 }
 
@@ -171,6 +173,20 @@ if (cfg.assets) {
   results.push(runTool('텍스처 예산', skill('asset-budget', 'scripts', 'scan-textures.mjs'), [cfg.assets]));
 } else {
   skipped.push('텍스처 예산 — `assets` 미설정. 용량·텍스처 메모리를 실측하지 못했다');
+}
+
+// 6) 연출 상수 — 논리 모순·예산 초과·접근성 누락
+if (cfg.feel) {
+  results.push(runTool('연출 상수', skill('polish', 'scripts', 'feel-audit.mjs'), [cfg.feel]));
+} else {
+  skipped.push('연출 상수 — `feel` 미설정. hit-stop·흔들림 예산과 모션 감소 경로를 판정하지 못했다');
+}
+
+// 7) 광과민성 플래시 — **안전 게이트**. 미달은 출하 차단 사유다.
+if (cfg.fxManifest) {
+  results.push(runTool('플래시 안전(WCAG 2.3.1)', skill('polish', 'scripts', 'flash-check.mjs'), [cfg.fxManifest]));
+} else {
+  skipped.push('플래시 안전 — `fxManifest` 미설정. **광과민성 발작 위험을 판정하지 못했다** (WCAG 2.3.1 / 콘솔 심의 대상)');
 }
 
 // ── 판정 집계 ────────────────────────────────────────────────────────────────

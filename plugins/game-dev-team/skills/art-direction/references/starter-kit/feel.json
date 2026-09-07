@@ -1,0 +1,86 @@
+{
+  "_note": "연출 상수 정본(feel bible). polish 가 이 값을 구현하고 feel-audit.mjs 가 검사한다. 숫자를 코드에 흩뿌리지 마라 — 흩어지면 일관성 검사가 불가능해진다.",
+  "fps": 60,
+
+  "pace": {
+    "_note": "핵심 액션의 리듬(연속 공격 간격). 피드백 총 길이가 이 값의 feedbackBudgetRatio 를 넘으면 다음 입력이 피드백에 묻힌다. 프로젝트 실측값으로 바꿔라 — 이 값이 틀리면 예산 검사가 무의미하다.",
+    "actionIntervalMs": 700,
+    "turnBasedGame": false
+  },
+
+  "reducedMotion": {
+    "_note": "접근성. 모션 민감·광과민 사용자를 위한 대안 경로. P2 게이트 필수 항목이다.",
+    "declared": true,
+    "disables": ["flash", "chromaticAberration"],
+    "scales": { "shake": 0, "particles": 0.3, "zoomPunch": 0 }
+  },
+
+  "events": {
+    "hit_light": {
+      "class": "hit",
+      "weight": 1,
+      "hitStopFrames": 3,
+      "shake": { "amplitudePx": 2, "durationMs": 80, "decay": "expo" },
+      "flash": { "durationMs": 50, "intensity": 0.35 },
+      "damageNumberDelayMs": 40,
+      "sound": "sfx_hit_light"
+    },
+    "hit_heavy": {
+      "class": "hit",
+      "weight": 3,
+      "hitStopFrames": 7,
+      "shake": { "amplitudePx": 6, "durationMs": 160, "decay": "expo" },
+      "flash": { "durationMs": 70, "intensity": 0.5 },
+      "damageNumberDelayMs": 60,
+      "sound": "sfx_hit_heavy"
+    },
+    "hit_critical": {
+      "class": "hit",
+      "weight": 5,
+      "hitStopFrames": 10,
+      "shake": { "amplitudePx": 9, "durationMs": 220, "decay": "expo" },
+      "flash": { "durationMs": 90, "intensity": 0.65 },
+      "damageNumberDelayMs": 60,
+      "sound": "sfx_hit_crit"
+    },
+    "player_damaged": {
+      "class": "damage_taken",
+      "weight": 1,
+      "hitStopFrames": 5,
+      "shake": { "amplitudePx": 7, "durationMs": 180, "decay": "expo" },
+      "flash": { "durationMs": 100, "intensity": 0.4 },
+      "sound": "sfx_player_hurt"
+    },
+
+    "button_press": {
+      "responseFrames": 1,
+      "easing": "easeOutQuad",
+      "durationMs": 90,
+      "sound": "sfx_ui_tap"
+    },
+    "panel_enter": {
+      "responseFrames": 1,
+      "easing": "easeOutCubic",
+      "durationMs": 180
+    },
+    "panel_exit": {
+      "easing": "easeInCubic",
+      "durationMs": 140
+    },
+    "reward_popup": {
+      "responseFrames": 2,
+      "easing": "easeOutBack",
+      "durationMs": 260,
+      "sound": "sfx_reward"
+    }
+  },
+
+  "_thresholds": {
+    "_note": "프로젝트가 기준을 다르게 두려면 여기서 덮어쓴다. 비우면 도구 기본값을 쓴다.",
+    "inputResponseMaxMs": 50,
+    "hitStopFrameRange": [2, 12],
+    "shakeMaxDurationMs": 400,
+    "shakeMaxAmplitudePx": 12,
+    "feedbackBudgetRatio": 0.6
+  }
+}

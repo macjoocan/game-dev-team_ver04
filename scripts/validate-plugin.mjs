@@ -286,6 +286,8 @@ const GATE_TOOLS = [
   'econ-scaffold.mjs',    // 경제 하네스 (8→9 게이트)
   'funnel-report.mjs',    // FTUE 퍼널 (④ 사람 축)
   'art-gate.mjs',         // 아트 게이트 통합 판정 (양 하네스 공동 컨트롤 표면)
+  'flash-check.mjs',      // 광과민성 플래시 안전 (P2 게이트 · 출하 차단 사유)
+  'feel-audit.mjs',       // 연출 상수 감사 (P1·P2 게이트)
 ];
 const agentsMdPath = path.join(ROOT, 'AGENTS.md');
 if (exists(agentsMdPath)) {
