@@ -10,6 +10,9 @@ game-dev-team 플러그인(게임 개발 역할 에이전트 팀 + 사람 승인
 - **기능 추가/수정 후 `node scripts/validate-plugin.mjs` 실행** — 스킬·에이전트·훅·매니페스트·미러의
   참조 무결성을 기계 검사한다(맞는지 틀린지 판단하는 하네스). 커밋 훅과 CI(validate.yml)에서도 자동 실행.
 - 커밋 전 `.githooks/pre-commit`이 드리프트+무결성을 자동 검사한다(최초 1회 `git config core.hooksPath .githooks` 필요).
+- **CI를 건드렸으면 `node scripts/ci-local.mjs`** — 워크플로 `run:` 블록을 **`bash -e`로** 돌린다.
+  맨 `bash`로 재현하면 통과하는데 CI에서 죽는 부류가 있다(`; code=$?` — v0.27.2에 CI가 7번
+  연속 빨간 상태였던 원인, REVIEW.md B-13). `--ci`는 첫 실패에서 중단(GitHub 동일), 기본은 전부 실행.
 
 ## PowerShell 스크립트 규칙
 - `scripts/*.ps1`은 **ASCII 전용**으로 작성한다. PS 5.1이 BOM 없는 .ps1을 ANSI로 파싱해

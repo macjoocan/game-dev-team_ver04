@@ -369,6 +369,26 @@ if (exists(MIRROR)) {
   }
 }
 
+// ── 9. CI 워크플로의 bash -e 호환성 ──────────────────────────────────────
+// GitHub Actions 는 run: 블록을 `bash -e` 로 돈다. 그래서 `cmd; code=$?` 는
+// cmd 가 비영점이면 그 줄에서 스텝이 죽고, 바로 다음 줄의 `test $code -eq 3` 은
+// 실행조차 안 된다. 이 레포는 "exit 3(측정 불가)을 기대하는" 검사가 여럿이라
+// 이 형태를 쓰면 CI 가 통째로 빨개진다 — v0.27.1 에서 실제로 그랬다(REVIEW.md B-13).
+// 맨 bash 로 재현하면 통과하므로 사람 눈으로는 안 잡힌다. 그래서 여기서 막는다.
+const WF_DIR = path.join(ROOT, '.github', 'workflows');
+if (exists(WF_DIR)) {
+  for (const wf of fs.readdirSync(WF_DIR).filter((f) => /\.ya?ml$/.test(f))) {
+    const rel = `.github/workflows/${wf}`;
+    const lines = read(path.join(WF_DIR, wf)).split(/\r?\n/);
+    lines.forEach((ln, i) => {
+      if (/^\s*#/.test(ln)) return; // 주석 안의 설명은 통과시킨다
+      if (/;\s*code=\$\?/.test(ln) || /;\s*(?:rc|status|ec)=\$\?/.test(ln)) {
+        err(rel, `${i + 1}행: \`; code=$?\` 는 bash -e 에서 그 줄에서 죽는다 — \`code=0; cmd || code=$?\` 로 써라.`);
+      }
+    });
+  }
+}
+
 // ── 결과 ─────────────────────────────────────────────────────────────────
 const line = (x) => `  ${x.where}: ${x.msg}`;
 
