@@ -83,6 +83,10 @@ if (!rm || rm.declared !== true) {
 // ── 2) 이벤트별 범위·예산 ────────────────────────────────────────────────────
 const pace = feel.pace || {};
 const actionMs = Number(pace.actionIntervalMs) || 0;
+// 턴제는 다음 액션이 플레이어 입력을 기다리므로 **피드백 예산 개념이 없다.**
+// 이 필드가 장식으로만 있어서 리포트가 "액션 간격 미설정"(누락처럼 읽힘)을 냈다 —
+// 실사용(hex-danmaku, 턴제)에서 확인했다. **해당 없음과 누락은 다르게 보고해야 한다.**
+const turnBased = pace.turnBasedGame === true;
 
 for (const n of names) {
   const e = events[n];
@@ -131,7 +135,7 @@ for (const n of names) {
   }
 
   // **예산 초과는 미달이다.** 취향이 아니라 조작감이 실제로 망가진다.
-  if (actionMs > 0 && totalMs > actionMs * T.feedbackBudgetRatio) {
+  if (!turnBased && actionMs > 0 && totalMs > actionMs * T.feedbackBudgetRatio) {
     fails.push({
       kind: '예산초과', where: n,
       msg: `피드백 ${totalMs.toFixed(0)}ms > 액션 간격 ${actionMs}ms 의 ${(T.feedbackBudgetRatio * 100).toFixed(0)}%(${(actionMs * T.feedbackBudgetRatio).toFixed(0)}ms). 다음 입력이 피드백에 묻힌다`,
@@ -205,7 +209,10 @@ const verdict = fails.length ? '미달' : '충족';
 
 const L = [];
 L.push('', '# 연출 상수 감사 (feel bible)', '');
-L.push(`\`${src}\` · 이벤트 ${names.length}개 · ${FPS}fps` + (actionMs ? ` · 액션 간격 ${actionMs}ms` : ' · **액션 간격 미설정**'));
+L.push(`\`${src}\` · 이벤트 ${names.length}개 · ${FPS}fps` +
+  (turnBased ? ' · **턴제** (피드백 예산 해당 없음)'
+    : actionMs ? ` · 액션 간격 ${actionMs}ms`
+      : ' · **액션 간격 미설정**'));
 L.push('');
 L.push('## [주장]');
 L.push(`판정: **${verdict}**` + (fails.length ? ` — 미달 ${fails.length}건` : '') + (warns.length ? ` · 경고 ${warns.length}건` : ''));
@@ -253,7 +260,8 @@ L.push('넓게는 3~12프레임(0.05~0.2초)까지 쓴다. 무게에 따라 나�
 L.push('');
 
 L.push('## [공백]');
-if (!actionMs) L.push('- **`pace.actionIntervalMs` 가 없어 예산 검사를 못 했다.** 피드백이 조작감을 해치는지 모른다.');
+if (turnBased) L.push('- **턴제라 피드백 예산 검사를 건너뛰었다** — 다음 액션이 입력을 기다리므로 피드백이 입력을 가리지 않는다. 이건 누락이 아니라 **해당 없음**이다.');
+else if (!actionMs) L.push('- **`pace.actionIntervalMs` 가 없어 예산 검사를 못 했다.** 피드백이 조작감을 해치는지 모른다.');
 L.push('- **"느낌이 좋은가"는 이 도구 밖이다.** 사람 사인오프가 P1·P2 게이트의 본체다.');
 L.push('- 선언된 값과 **실제 구현이 일치하는지는 검사하지 않았다.** 코드가 이 표를 읽어야 의미가 있다 —');
 L.push('  숫자를 코드에 따로 박아두면 이 감사는 장식이다.');

@@ -84,8 +84,33 @@ const results = pairs.map((pr) => {
   return { ...pr, hexA: flat[pr.a], hexB: flat[pr.b], ...r };
 });
 
+// ── 유병률 가중 ─────────────────────────────────────────────────────────────
+// 실사용(hex-danmaku)에서 나온 결함: 붕괴 7건 중 5건이 **전색맹 전용**이었는데
+// 유병률 가중이 없어서 흔한 유형(녹색맹 남성 6%)의 진짜 2건이 그 안에 묻혔다.
+// 전색맹은 <0.01% 다. 같은 무게로 보고하면 우선순위를 사람이 다시 매겨야 하고,
+// 그러면 이 도구의 판정을 쓰지 않게 된다.
+const COMMON = new Set(['protanopia', 'deuteranopia']);   // 남성 약 8% 합계
+const RARE = new Set(['tritanopia', 'achromatopsia']);    // 매우 드묾
+
+for (const r of results) {
+  const failing = r.rows.filter((x) => x.type !== 'normal' && !x.ok).map((x) => x.type);
+  const normalRow = r.rows.find((x) => x.type === 'normal');
+  r.failsNormal = !normalRow.ok;                          // 정상 시야에서도 안 구분된다
+  r.failsCommon = failing.some((t) => COMMON.has(t));
+  r.failsRareOnly = failing.length > 0 && failing.every((t) => RARE.has(t));
+  r.failing = failing;
+  // 정상 시야 붕괴 > 흔한 색약 붕괴 > 드문 유형만
+  r.severity = r.failsNormal ? 3 : r.failsCommon ? 2 : r.failsRareOnly ? 1 : 0;
+}
+
+const sevNormal = results.filter((r) => r.severity === 3);
+const sevCommon = results.filter((r) => r.severity === 2);
+const sevRare = results.filter((r) => r.severity === 1);
 const collapsed = results.filter((r) => !r.ok);
-const verdict = collapsed.length ? '미달' : '충족';
+
+// 드문 유형만 붕괴하면 `조건부` 다 — 고칠 값은 있지만 출하를 막을 근거는 아니다.
+const verdict = (sevNormal.length || sevCommon.length) ? '미달'
+  : sevRare.length ? '조건부' : '충족';
 
 // ── 이미지 시뮬 (선택) ──────────────────────────────────────────────────────
 let imageNote = null;
@@ -125,16 +150,40 @@ out.push('', '# 색각이상(CVD) 판정', '');
 out.push(`팔레트 \`${src}\` · 색 ${Object.keys(flat).length}개 · 검사 쌍 ${results.length}개`);
 out.push('');
 out.push('## [주장]');
-out.push(`판정: **${verdict}**` + (collapsed.length ? ` — 색만으로 구분되지 않는 쌍 ${collapsed.length}개` : ''), '');
-
+out.push(`판정: **${verdict}**` +
+  (sevNormal.length ? ` — **정상 시야에서도 안 구분 ${sevNormal.length}개**` : '') +
+  (sevCommon.length ? `${sevNormal.length ? ' · ' : ' — '}흔한 색약 붕괴 ${sevCommon.length}개` : '') +
+  (sevRare.length ? `${sevNormal.length || sevCommon.length ? ' · ' : ' — '}드문 유형만 ${sevRare.length}개` : ''), '');
 if (collapsed.length) {
-  out.push('## [발견] 붕괴하는 색쌍', '');
-  out.push('| 쌍 | 이유 | 정상 dE | 최악 유형 | 최악 dE | 명암비 |', '|---|---|---|---|---|---|');
-  for (const r of collapsed) {
+  out.push('> **유병률로 우선순위를 매긴다.** 녹색맹·적색맹은 남성 약 8%고 청색맹·전색맹은 <0.01%다.');
+  out.push('> 같은 무게로 보고하면 드문 유형이 흔한 유형을 묻어버린다(실사용에서 실제로 그랬다).');
+  out.push('');
+}
+
+const severityBlock = (list, title, note) => {
+  if (!list.length) return;
+  out.push(`## [발견] ${title}`, '');
+  out.push('| 쌍 | 이유 | 정상 dE | 붕괴 유형 | 최악 dE | 명암비 |', '|---|---|---|---|---|---|');
+  for (const r of list) {
     const normal = r.rows.find((x) => x.type === 'normal');
-    out.push(`| \`${r.a}\` vs \`${r.b}\` | ${r.why} | ${normal.deltaE.toFixed(1)} | **${CVD_LABEL[r.worst.type]}** | **${r.worst.deltaE.toFixed(1)}** | ${r.worst.contrast.toFixed(2)}:1 |`);
+    const types = r.failing.length ? r.failing.map((t) => CVD_LABEL[t]).join(', ') : '정상';
+    out.push(`| \`${r.a}\` vs \`${r.b}\` | ${r.why} | ${normal.deltaE.toFixed(1)} | **${types}** | **${r.worst.deltaE.toFixed(1)}** | ${r.worst.contrast.toFixed(2)}:1 |`);
   }
   out.push('');
+  if (note) { out.push(note, ''); }
+};
+
+severityBlock(sevNormal, '정상 시야에서도 구분되지 않는다 — **가장 먼저 본다**',
+  '> 이건 색각이상 문제가 아니라 **모든 플레이어**의 문제다. 두 색이 사실상 같으므로\n' +
+  '> 구분이 형태·외곽선·위치에만 의존한다. **그게 게임 크기·이동 중에 충분한지는 사람이 확인해라** —\n' +
+  '> 같은 팔레트를 공유하는 게 의도라면(같은 계열 아이템 등) 형태 차이를 `visual-qa` 로 검수하면 된다.');
+severityBlock(sevCommon, '흔한 색약(적/녹)에서 붕괴 — **우선 고친다**',
+  '> 녹색맹은 남성 약 6%, 적색맹 약 2%다. 실제 플레이어 중에 있다고 보는 게 맞다.');
+severityBlock(sevRare, '드문 유형(청색맹·전색맹)에서만 붕괴 — 우선순위 낮음',
+  '> 유병률 <0.01%다. 흔한 유형에서는 구분되므로 **출하를 막을 근거는 아니다.**\n' +
+  '> 고대비·색약 모드를 만들 때 같이 손보면 싸다.');
+
+if (collapsed.length) {
   out.push(`> dE < ${DELTA_E_MIN} 이면 의미가 다른 두 색이 **한눈에 구분되지 않는다.**`);
   out.push('> 고치는 방법은 둘 중 하나다:');
   out.push('> 1. **명도를 벌린다** — 색상만 다르면 적/녹색맹에서 붕괴한다. 밝기 차이는 모든 유형에서 남는다.');
@@ -191,3 +240,4 @@ if (OUT) {
 }
 
 if (verdict === '미달') process.exit(1);
+if (verdict === '조건부') process.exit(0);   // 드문 유형만 붕괴 — 출하를 막지 않는다
