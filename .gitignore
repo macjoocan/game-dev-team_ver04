@@ -35,3 +35,8 @@ dist/
 
 # ref-classify 기본 출력 폴더
 classify/
+
+# playwright MCP artifacts / ad-hoc screenshots
+.playwright-mcp/
+*.png
+!skills/**/*.png

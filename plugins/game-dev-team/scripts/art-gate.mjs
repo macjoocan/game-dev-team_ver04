@@ -31,6 +31,7 @@ const CONFIG_NAME = 'art-gate.json';
 const TEMPLATE = {
   _note: '아트 게이트 설정. 없는 항목은 건너뛴다(건너뛴 항목은 [공백]에 남는다).',
   palette: 'art/palette.json',
+  pairs: null,
   strings: null,
   uiSpec: null,
   assets: null,
@@ -45,6 +46,7 @@ if (args.includes('--help') || args.includes('-h')) {
   console.log('');
   console.log('설정 항목 (없으면 그 검사를 건너뛰고 [공백]에 남긴다):');
   console.log('  palette       palette.json            -> CVD 판정');
+  console.log('  pairs         cvd-pairs.json          -> CVD 색쌍 명시 (없으면 state/primary/accent 이름에서 자동 유도 — 그 그룹이 없는 팔레트는 측정 불가가 된다)');
   console.log('  strings+uiSpec 문자열 + UI 스펙        -> 텍스트 오버플로 판정');
   console.log('  assets+baseline 에셋 폴더 + 베이스라인 -> 에셋 회귀 판정');
   console.log('  generated+styleProfile 생성물 + 프로필 -> 스타일 규격 채점');
@@ -137,7 +139,11 @@ const skipped = [];
 
 // 1) 색각이상 — 팔레트를 고칠 때마다 돌려야 하는 검사
 if (cfg.palette) {
-  results.push(runTool('색각이상(CVD)', skill('visual-qa', 'scripts', 'cvd-check.mjs'), [cfg.palette]));
+  // 팔레트 그룹명이 state/primary/accent 가 아니면(예: ui.*/entity.*) cvd-check 가 쌍을 유도하지 못해 측정 불가가 된다.
+  // 실사용(hex-danmaku, 2026-09-08)에서 그랬다 — 프로젝트는 pairs 로 의미 쌍을 명시한다.
+  const a = [cfg.palette];
+  if (cfg.pairs) a.push('--pairs', cfg.pairs);
+  results.push(runTool('색각이상(CVD)', skill('visual-qa', 'scripts', 'cvd-check.mjs'), a));
 } else {
   skipped.push('색각이상 — `palette` 미설정. 색 신호가 색각이상에서 살아 있는지 판정하지 못했다');
 }
