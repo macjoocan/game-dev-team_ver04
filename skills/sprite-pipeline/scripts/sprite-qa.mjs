@@ -56,6 +56,7 @@ const T = {
   jitterFloorPx: 1.0,                                 // 이 미만은 정지 스프라이트의 잡음
   baselineSpreadRatio: 0.04,                     // baseline 산포 / 높이. 지상 동작 기준
   driftMax: Number(opt('--drift', 0.18)),        // 색 분포 비유사도 상한 (0=동일)
+  shapeMin: Number(opt('--shape', 0.5)),         // 실루엣 IoU 하한 (1=동일). 동작하면 당연히 내려가므로 느슨하게 둔다
   strayRatio: 0.05,                              // 최대 덩어리 대비 이 미만은 고아 섬 후보
   holeRatio: 0.002,                              // 피사체 내부 구멍 허용 비율
   fringeRatio: Number(opt('--fringe', 0.22)),    // 반투명 픽셀 / 경계 픽셀 상한
@@ -186,6 +187,19 @@ function measure(fr) {
     }
     small[y * hw + x] = c ? s / c : 0;
   }
+  // 실루엣 마스크 — 형태 비교용. 64x64 로 줄여 보관한다(IoU 계산은 정렬된 저해상도로 충분하다).
+  // bbox 기준으로 정규화해 담는다 — 캐릭터 위치가 달라도 형태만 비교하려면 그래야 한다.
+  const silW = 64, silH = 64;
+  const sil = new Uint8Array(silW * silH);
+  if (maxX >= 0) {
+    const bw = maxX - minX + 1, bh = maxY - minY + 1;
+    for (let y = 0; y < silH; y++) for (let x = 0; x < silW; x++) {
+      const sxp = minX + Math.floor((x + 0.5) * bw / silW);
+      const syp = minY + Math.floor((y + 0.5) * bh / silH);
+      if (sxp < w && syp < h && data[(syp * w + sxp) * 4 + 3] >= 128) sil[y * silW + x] = 1;
+    }
+  }
+
   const sm = mean([...small]);
   let v = 0;
   for (const s of small) v += (s - sm) ** 2;
@@ -198,7 +212,7 @@ function measure(fr) {
     opq, semi, edge, holes, stray, blobs: blobs.length,
     fringe: edge ? semi / edge : 0,
     holeRatio: opq ? holes / opq : 0,
-    hist, smallContrast,
+    hist, smallContrast, sil, silW, silH,
   };
 }
 
@@ -271,6 +285,13 @@ function cosSim(a, b) {
   for (let i = 0; i < a.length; i++) { dot += a[i] * b[i]; na += a[i] * a[i]; nb += b[i] * b[i]; }
   return na && nb ? dot / Math.sqrt(na * nb) : 0;
 }
+/** 두 실루엣 마스크의 IoU. bbox 정규화된 같은 크기 마스크를 전제로 한다. */
+function iou(a, b) {
+  if (!a || !b) return 1;
+  let inter = 0, uni = 0;
+  for (let i = 0; i < a.length; i++) { const x = a[i], y = b[i]; if (x && y) inter++; if (x || y) uni++; }
+  return uni ? inter / uni : 1;
+}
 const driftRows = [];
 if (valid.length >= 2) {
   // 기준 = 모든 프레임과의 평균 유사도가 가장 높은 프레임(대표 프레임)
@@ -283,8 +304,25 @@ if (valid.length >= 2) {
   const bad = driftRows.filter((r) => r.drift > T.driftMax);
   if (bad.length) {
     fails.push({
-      kind: '정체성', where: bad.map((r) => r.name).join(', '),
+      kind: '정체성(색)', where: bad.map((r) => r.name).join(', '),
       msg: `색 분포가 대표 프레임(${valid[refIdx].name})에서 ${bad.map((r) => r.drift.toFixed(2)).join(', ')} 벗어났다 (상한 ${T.driftMax}) — 프레임마다 캐릭터가 달라 보인다. seed 프레임에서 시트로 다시 뽑아라`,
+    });
+  }
+
+  // ── 형태 드리프트 — 색 분포로는 **못 잡는** 붕괴가 있다.
+  // 실측(2026-09-08): 영상 모델 시퀀스에서 캐릭터가 파편으로 흩어졌는데 색 구성이 그대로라
+  // 색 드리프트가 통과했다. 실루엣 IoU 로 형태를 따로 본다.
+  //
+  // 주의: 동작하는 스프라이트는 실루엣이 **당연히** 바뀐다(팔다리가 움직인다). 그래서 임계가 느슨하다 —
+  // 정상 걷기에서 IoU 0.75~0.90, 붕괴에서 0.5 밑으로 떨어진다(실측). 여기서 잡는 건 "알아볼 수 없게 된 것"이다.
+  for (let i = 0; i < valid.length; i++) {
+    driftRows[i].shape = iou(valid[refIdx].sil, valid[i].sil);
+  }
+  const badShape = driftRows.filter((r) => r.shape < T.shapeMin);
+  if (badShape.length) {
+    fails.push({
+      kind: '정체성(형태)', where: badShape.map((r) => r.name).join(', '),
+      msg: `실루엣이 대표 프레임(${valid[refIdx].name})과 겹치는 비율(IoU)이 ${badShape.map((r) => r.shape.toFixed(2)).join(', ')} 뿐이다 (하한 ${T.shapeMin}) — 형태가 무너져 같은 캐릭터로 안 보인다. 색은 같아도 실루엣이 깨진 경우다(생성 시퀀스에서 흔하다)`,
     });
   }
 }
@@ -393,7 +431,7 @@ if (atlas) {
 L.push('');
 
 L.push('## [기준]');
-L.push(`떨림 격렬함 ≤ ${pct(T.jitterViolentRatio)}(최소변 대비) 또는 이상치 ≤ ${T.jitterOutlier}배(중위 대비) · baseline 산포 ≤ ${pct(T.baselineSpreadRatio)} · 드리프트 ≤ ${T.driftMax} ·`);
+L.push(`떨림 격렬함 ≤ ${pct(T.jitterViolentRatio)}(최소변 대비) 또는 이상치 ≤ ${T.jitterOutlier}배(중위 대비) · baseline 산포 ≤ ${pct(T.baselineSpreadRatio)} · 색 드리프트 ≤ ${T.driftMax} · 실루엣 IoU ≥ ${T.shapeMin} ·`);
 L.push(`프린지 ≤ ${pct(T.fringeRatio)} · 구멍 ≤ ${pct(T.holeRatio)} · 축소대비 ≥ ${T.smallContrastMin} · 아틀라스 ≥ ${pct(T.atlasFillMin)}`);
 L.push('전부 인자로 덮어쓸 수 있다(`--jitter`·`--drift`·`--fringe`·`--small`·`--atlas-fill`).');
 L.push('');
@@ -401,7 +439,7 @@ L.push('');
 L.push('## [공백]');
 L.push('- **애니메이션 타이밍·타격 프레임은 판정하지 않았다** — `polish` 의 `feel-audit` 소관이다.');
 L.push('- **그림이 좋은지는 판정하지 않는다.** 정합성만 본다(`visual-qa` 가 보이는 것을 본다).');
-L.push('- 정체성 드리프트는 **색 분포**로만 잰다. 색은 같고 형태(의상 실루엣)만 바뀌는 드리프트는 못 잡는다.');
+L.push('- 정체성은 **색 분포 + 실루엣 IoU** 두 축으로 본다. 그래도 세부(문양·장식)가 바뀌는 드리프트는 못 잡는다.');
 L.push('- 축소 판독성은 알파 격자 대비의 근사다. 실제 게임 배경 위 가독성은 `visual-qa` 로 본다.');
 if (!atlasPath) L.push('- `--atlas` 를 안 줘서 **아틀라스 낭비를 판정하지 못했다.**');
 L.push('');

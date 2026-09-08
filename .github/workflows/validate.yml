@@ -184,6 +184,35 @@ jobs:
           rm -rf "$box"
           echo "아트 판정 도구 3종 통과 (동봉 팔레트 자기검사 · 붕괴 적출 · 오버플로 · 회귀 양방향)"
 
+      # 컷아웃이 "제거율은 높은데 피사체가 녹은" 산출물을 통과시키면 그게 아틀라스까지 간다.
+      # 구멍 검사로는 안 잡힌다 — 전체가 반투명해지면 구멍이 0 이다(실측: 불투명 48~64% -> 0.1~3.3%, "구멍 0 · 제거 93%").
+      - name: 컷아웃 녹음 적출 (정상 통과 · 과도한 tol 미달)
+        run: |
+          box="$(mktemp -d)"
+          # 그라디언트 배경 위의 단색 피사체 — 실사용(생성 모델의 vignette 배경)과 같은 모양
+          node -e "
+            const fs=require('fs');
+            (async()=>{
+              const {writePNG}=await import('./scripts/lib-png.mjs');
+              const w=256,h=256,b=Buffer.alloc(w*h*4);
+              for(let y=0;y<h;y++)for(let x=0;x<w;x++){
+                const o=(y*w+x)*4;
+                const d=Math.hypot(x-w/2,y-h/2);
+                const g=Math.round(120+70*(d/(w/2)));   // 비네트 그라디언트 배경
+                b[o]=g;b[o+1]=g;b[o+2]=g+10;b[o+3]=255;
+                if(d<70){b[o]=200;b[o+1]=190;b[o+2]=180;} // 배경과 가까운 밝은 피사체
+              }
+              writePNG(process.argv[1],w,h,b);
+            })();
+          " "$box/subject.png"
+          code=0; node skills/char-art-system/scripts/cutout.mjs "$box/subject.png" --out "$box/lo" > "$box/lo.log" || code=$?
+          test $code -eq 0 || { echo "FAIL: 정상 tol 에서 미달로 잡았다(오탐) exit $code"; cat "$box/lo.log"; exit 1; }
+          code=0; node skills/char-art-system/scripts/cutout.mjs "$box/subject.png" --out "$box/hi" --tol 120 > "$box/hi.log" || code=$?
+          test $code -eq 1 || { echo "FAIL: tol 120 에서 피사체가 녹았는데 exit $code (1 이어야 한다)"; cat "$box/hi.log"; exit 1; }
+          grep -q '피사체가 녹았다' "$box/hi.log" || { echo "FAIL: 녹음 사유를 안 적었다"; cat "$box/hi.log"; exit 1; }
+          rm -rf "$box"
+          echo "컷아웃 녹음 적출 통과 (정상 오탐 0 · 과도한 tol 적출)"
+
       # 종료 코드 계약: 입력이 없으면 3(측정 불가)이어야 한다. 1 이면 art-gate 가 "미달"로 읽어
       # 경로 오타가 판정 실패로 둔갑하고, 0 이면 "잰 게 없는데 충족"이 된다(B-14 에서 5개 도구가 위반).
       - name: 판정 도구 입력-없음 계약 (전부 exit 3)
