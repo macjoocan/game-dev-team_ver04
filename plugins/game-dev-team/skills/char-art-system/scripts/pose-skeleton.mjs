@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 // pose-skeleton.mjs - OpenPose 스켈레톤 이미지를 코드로 그린다.
-//   node pose-skeleton.mjs <포즈이름|all> --out <dir> [--w 1024] [--h 1536]
+//   node pose-skeleton.mjs <포즈이름|all|walk-cycle[:N]> --out <dir> [--w 1024] [--h 1536]
+//   walk-cycle:8  걷기 한 사이클을 8프레임으로 낸다 — 루프가 맞는 포즈 시퀀스
+//   --view front|side       정면(기본)은 다리가 교차하지 않게 스윙을 세로로 옮긴다
+//   --proportion chibi|hero  체형. 캐릭터와 안 맞으면 ControlNet 이 캐릭터를 그 비율로 늘린다
 //
 // 왜: ControlNet 으로 포즈를 지정하려면 스켈레톤 이미지가 필요한데, 보통은 사진에서 뽑는
 // 전처리 노드(comfyui_controlnet_aux)를 깐다. 게임 캐릭터는 **우리가 원하는 포즈가 정해져 있으므로**
@@ -19,6 +22,8 @@ const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] :
 const OUT = opt('--out', 'poses');
 const W = Number(opt('--w', 1024));
 const H = Number(opt('--h', 1536));
+const VIEW = opt('--view', 'front');
+const PROP = opt('--proportion', 'chibi');   // chibi | hero. 캐릭터 체형에 맞춰라 - 틀리면 ControlNet 이 캐릭터를 늘린다.   // front | side. 정면이 기본 - 모바일 캐주얼 적이 대개 정면이다.
 
 // COCO-18: 0코 1목 2오른어깨 3오른팔꿈 4오른손 5왼어깨 6왼팔꿈 7왼손
 //          8오른골반 9오른무릎 10오른발 11왼골반 12왼무릎 13왼발 14오른눈 15왼눈 16오른귀 17왼귀
@@ -55,6 +60,103 @@ const POSES = {
     11:[.55,.58], 12:[.57,.73], 13:[.58,.88], 14:[.47,.18], 15:[.53,.18], 16:[.43,.20], 17:[.57,.20],
   },
 };
+
+// ── 체형 비율 ────────────────────────────────────────────────────────────────
+// OpenPose 에는 "머리 크기"라는 입력이 없다. 코·눈·귀 키포인트가 목에서 얼마나 멀리,
+// 얼마나 넓게 떨어져 있는지가 곧 머리 크기다. 그래서 비율을 틀리면 ControlNet 이
+// 캐릭터를 그 비율로 **늘린다** — 실측: 2.5등신 고블린에 7등신 스켈레톤을 물렸더니
+// 팔다리가 막대처럼 늘어나고 갑옷·창이 통째로 사라졌다.
+//
+// 캐릭터를 보고 고른다. 모바일 캐주얼 적/아군은 대개 chibi 다.
+const PROPORTIONS = {
+  chibi: { head: 0.36, eye: 0.34, ear: 0.32, earX: 0.20, neck: 0.46, sh: 0.47, shX: 0.14,
+           hip: 0.66, hipX: 0.07, thigh: 0.13, shin: 0.13, upperArm: 0.09, foreArm: 0.09 },
+  hero:  { head: 0.20, eye: 0.18, ear: 0.20, earX: 0.07, neck: 0.34, sh: 0.35, shX: 0.08,
+           hip: 0.58, hipX: 0.05, thigh: 0.15, shin: 0.15, upperArm: 0.12, foreArm: 0.11 },
+};
+
+// ── 걷기 사이클 — 프레임 시퀀스 생성 ──────────────────────────────────────────
+// 낱개 포즈로는 애니메이션을 못 만든다. 걷기는 **위상(phase)의 연속**이라 파라미터로 낳는 게 맞다.
+// COCO-18 에서 다리는 8~13(골반·무릎·발목), 팔은 2~7(어깨·팔꿈치·손목)이다.
+// 걸을 때 팔은 다리와 **반대로** 흔들리고(대각 균형), 몸통은 두 번 위아래로 흔들린다(사이클당 2회).
+//
+// 각 관절을 사인파로 돌리되 위상만 어긋나게 준다. 좌우 다리는 정확히 반대 위상(π)이다.
+function walkCyclePose(t, view, P) {   // t: 0~1, view: 'front'|'side', P: PROPORTIONS 항목
+  const TAU = Math.PI * 2;
+  const s = (phase) => Math.sin(TAU * (t + phase));
+  // 몸통 상하 - 사이클당 2회(양발이 지면을 밀 때마다)
+  const bob = -0.008 * Math.cos(TAU * 2 * t);
+  const hipY = P.hip + bob, shY = P.sh + bob, neckY = P.neck + bob, headY = P.head + bob;
+  const kneeD = P.thigh, ankD = P.thigh + P.shin;
+  const lifted = ankD * 0.18;   // 든 발이 올라가는 양은 다리 길이에 비례한다
+
+  if (view === 'side') {
+    const leg = (phase) => {
+      const sw = s(phase);
+      const lift = Math.max(0, sw) * lifted;
+      return {
+        hip: [0.50, hipY],
+        knee: [0.50 + sw * ankD * 0.18, hipY + kneeD - lift],
+        ankle: [0.50 + sw * ankD * 0.32, hipY + ankD - lift * 1.6],
+      };
+    };
+    const R = leg(0), L = leg(0.5);
+    const arm = (phase) => {
+      const sw = s(phase);
+      return {
+        sh: [0.50, shY],
+        elb: [0.50 - sw * 0.045, shY + P.upperArm],
+        wri: [0.50 - sw * 0.080, shY + P.upperArm + P.foreArm],
+      };
+    };
+    const RA = arm(0.5), LA = arm(0);
+    return {
+      0: [0.50 + P.earX * 0.15, headY], 1: [0.50, neckY],
+      2: RA.sh, 3: RA.elb, 4: RA.wri,
+      5: LA.sh, 6: LA.elb, 7: LA.wri,
+      8: R.hip, 9: R.knee, 10: R.ankle,
+      11: L.hip, 12: L.knee, 13: L.ankle,
+      14: [0.50 + P.earX * 0.25, P.eye + bob], 16: [0.50 + P.earX * 0.05, P.ear + bob],
+    };
+  }
+
+  // 정면: **앞뒤 스윙을 x 로 옮기면 다리가 좌우로 교차한다** - 걷기가 아니라 가위질로 보인다.
+  // 정면에서 앞으로 내딛는 다리는 화면상 위로 들리고 짧아 보인다(전방 단축). 스윙을 y 로 옮긴다.
+  // side 는 -1(오른다리, 화면 왼쪽) / +1(왼다리). 발목 x 가 중심선(0.5)을 넘지 않게 묶는다.
+  const leg = (phase, hx, side) => {
+    const sw = s(phase);
+    const fwd = Math.max(0, sw), back = Math.max(0, -sw);
+    const lift = fwd * lifted;
+    return {
+      hip: [hx, hipY],
+      knee: [hx + side * 0.012 * fwd, hipY + kneeD - lift],
+      ankle: [hx + side * 0.004 - side * 0.012 * fwd, hipY + ankD - lift * 1.9 + back * 0.010],
+    };
+  };
+  const R = leg(0, 0.5 - P.hipX, -1), L = leg(0.5, 0.5 + P.hipX, 1);
+
+  // 팔: 정면에서는 팔도 앞뒤로 흔들리므로 x 진폭을 작게 준다.
+  // 무기를 든 캐릭터는 팔이 크게 흔들리면 무기가 흔들려 부서진다 - 여기서 아끼는 게 낫다.
+  const arm = (phase, sx, side) => {
+    const sw = s(phase);
+    return {
+      sh: [sx, shY],
+      elb: [sx + side * 0.03 - side * 0.012 * sw, shY + P.upperArm],
+      wri: [sx + side * 0.05 - side * 0.022 * sw, shY + P.upperArm + P.foreArm],
+    };
+  };
+  const RA = arm(0.5, 0.5 - P.shX, -1), LA = arm(0, 0.5 + P.shX, 1);
+
+  return {
+    0: [0.50, headY], 1: [0.50, neckY],
+    2: RA.sh, 3: RA.elb, 4: RA.wri,
+    5: LA.sh, 6: LA.elb, 7: LA.wri,
+    8: R.hip, 9: R.knee, 10: R.ankle,
+    11: L.hip, 12: L.knee, 13: L.ankle,
+    14: [0.50 - P.earX * 0.35, P.eye + bob], 15: [0.50 + P.earX * 0.35, P.eye + bob],
+    16: [0.50 - P.earX, P.ear + bob],        17: [0.50 + P.earX, P.ear + bob],
+  };
+}
 
 function draw(pose, name) {
   const buf = Buffer.alloc(W * H * 4);
@@ -94,10 +196,27 @@ function draw(pose, name) {
   return dest;
 }
 
-const names = which === 'all' ? Object.keys(POSES) : [which];
-for (const n of names) {
-  if (!POSES[n]) { console.error(`모르는 포즈: ${n} (있는 것: ${Object.keys(POSES).join(', ')})`); process.exit(1); }
-  console.log('  ' + draw(POSES[n], n));
+// walk-cycle:N — 걷기 한 사이클을 N 프레임으로. 애니메이션 시트의 포즈 정본이 된다.
+const P = PROPORTIONS[PROP];
+if (!P) { console.error(`모르는 체형: ${PROP} (있는 것: ${Object.keys(PROPORTIONS).join(', ')})`); process.exit(2); }
+const cycleMatch = /^walk-cycle(?::([0-9]+))?$/.exec(which);
+let names;
+if (cycleMatch) {
+  const cnt = Number(cycleMatch[1] || 8);
+  if (cnt < 2 || cnt > 64) { console.error('프레임 수는 2~64'); process.exit(2); }
+  names = [];
+  for (let i = 0; i < cnt; i++) {
+    const nm = `walk${String(i).padStart(2, '0')}`;
+    console.log('  ' + draw(walkCyclePose(i / cnt, VIEW, P), nm));
+    names.push(nm);
+  }
+} else {
+  names = which === 'all' ? Object.keys(POSES) : [which];
+  for (const nm of names) {
+    if (!POSES[nm]) { console.error(`모르는 포즈: ${nm} (있는 것: ${Object.keys(POSES).join(', ')}, walk-cycle[:N])`); process.exit(1); }
+    console.log('  ' + draw(POSES[nm], nm));
+  }
 }
 console.log(`\n${names.length}개 · ${W}x${H} · ControlNet(OpenPose) 입력용`);
+if (cycleMatch) console.log('걷기 사이클은 **루프가 맞는다** — 마지막 다음이 첫 프레임이다. 생성 모델 시퀀스와 다른 점이다.');
 console.log('색은 OpenPose 표준이다. 바꾸면 ControlNet 이 부위를 오인한다.');
