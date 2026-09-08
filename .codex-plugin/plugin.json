@@ -1,6 +1,6 @@
 {
   "name": "game-dev-team",
-  "version": "0.27.4",
+  "version": "0.28.0",
   "description": "게임 개발용 역할 에이전트 팀(PM, 기획, 개발, QA, 아트)과 사람 승인 게이트 기반 파이프라인. 아트 디렉션, 에셋 파이프라인, 시각 QA 포함.",
   "author": {
     "name": "맥주캔"
