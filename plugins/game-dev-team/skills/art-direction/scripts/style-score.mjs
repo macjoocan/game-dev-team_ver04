@@ -25,17 +25,33 @@ const PALETTE = opt('--palette', null);
 
 if (!root || root.startsWith('--') || !PROFILE) {
   console.error('usage: node style-score.mjs <이미지폴더> --profile <profile.json> [--out dir] [--pass 70]');
+  console.error('       [--palette palette.json] [--palette-fail 20]  프로젝트 팔레트 준수. 평균 dE 가 이 값을 넘으면 하드 탈락');
+  console.error('종료 코드: 0 = 통과 장이 1장 이상 · 1 = 전부 탈락 · 3 = 측정 불가(입력 없음)');
   process.exit(2);
 }
-const prof = JSON.parse(fs.readFileSync(PROFILE, 'utf8'));
+// 입력이 없으면 **측정 불가(3)** 다. 예외로 죽으면 exit 1 이 되고 art-gate 는 그걸 "미달"로 읽는다 —
+// 경로 오타가 판정 실패로 둔갑한 실측 사례(2026-09-08). 미달과 측정 불가는 되돌릴 곳이 다르다.
+function readJsonOrUnmeasurable(file, what) {
+  if (!fs.existsSync(file)) { console.error(`${what} 파일이 없다: ${file}\n판정: 측정 불가 — 경로를 확인해라.`); process.exit(3); }
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch (e) { console.error(`${what} 파일을 JSON 으로 읽지 못했다: ${file} (${e.message})\n판정: 측정 불가.`); process.exit(3); }
+}
+if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+  console.error(`이미지 폴더가 없다: ${root}\n판정: 측정 불가.`); process.exit(3);
+}
+const prof = readJsonOrUnmeasurable(PROFILE, '스타일 프로필');
 // 프로젝트 팔레트(선택) — art-direction 의 palette.json. 있으면 톤 준수를 함께 채점한다.
 const projectHexes = PALETTE
-  ? Object.values(flattenPalette(JSON.parse(fs.readFileSync(PALETTE, 'utf8'))))
+  ? Object.values(flattenPalette(readJsonOrUnmeasurable(PALETTE, '프로젝트 팔레트')))
   : [];
+// 팔레트 이탈 하드 게이트. 가중치 10/110 짜리 감점만으로는 dE 30 짜리(완전히 다른 톤)가 90점으로
+// 통과했다(2026-09-08 실측). 판정에 영향이 없는 검사는 장식이다 — 평균 dE 가 이 값을 넘으면 점수와 무관하게 탈락.
+// 기본 20 은 paletteDeviation 의 "0점" 지점과 같다.
+const PALETTE_FAIL = Number(opt('--palette-fail', 20));
 const T = prof.target;
 
 const files = fs.readdirSync(root).filter((f) => /\.png$/i.test(f)).map((f) => path.join(root, f));
-if (!files.length) { console.log(`PNG 가 없다: ${root}`); process.exit(0); }
+if (!files.length) { console.error(`PNG 가 없다: ${root}\n판정: 측정 불가 — 채점할 것이 없다.`); process.exit(3); }
 
 // ── 측정 ─────────────────────────────────────────────────────────────────────
 function measure(img) {
@@ -209,6 +225,7 @@ for (const f of files) {
   const hardFail = [];
   if (T.singleSubject && m.blobs > 1 && m.secondBlobShare >= 0.12) hardFail.push('다중 피사체');
   if (m.bgPurity < 0.08) hardFail.push('배경 없음(잘라낼 수 없다)');
+  if (dev && dev.meanDe > PALETTE_FAIL) hardFail.push(`팔레트 이탈 dE ${dev.meanDe.toFixed(0)}>${PALETTE_FAIL}`);
   results.push({
     file: path.basename(f), score,
     verdict: hardFail.length ? `탈락(${hardFail.join('·')})` : score >= PASS ? '통과' : '탈락',
@@ -244,4 +261,11 @@ if (OUT) {
   fs.mkdirSync(passDir, { recursive: true });
   for (const r of pass) fs.copyFileSync(path.join(root, r.file), path.join(passDir, r.file));
   console.log(`-> ${OUT}/score.json · passed/ (${pass.length}장)`);
+}
+
+// 종료 코드 — 이 도구는 "고르는" 도구라 일부 탈락은 정상이다. 게이트 질문은 "이 배치에서 쓸 게 있나"다.
+// 한 장도 못 남으면 1(미달). 전엔 늘 0 을 내서 art-gate 의 스타일 축이 미달이 될 수 없었다(2026-09-08).
+if (!pass.length) {
+  console.log('판정: **미달** — 통과한 장이 없다. 프롬프트·프로필·팔레트 중 어디가 어긋났는지는 위 사유를 본다.');
+  process.exit(1);
 }

@@ -184,6 +184,27 @@ jobs:
           rm -rf "$box"
           echo "아트 판정 도구 3종 통과 (동봉 팔레트 자기검사 · 붕괴 적출 · 오버플로 · 회귀 양방향)"
 
+      # 종료 코드 계약: 입력이 없으면 3(측정 불가)이어야 한다. 1 이면 art-gate 가 "미달"로 읽어
+      # 경로 오타가 판정 실패로 둔갑하고, 0 이면 "잰 게 없는데 충족"이 된다(B-14 에서 5개 도구가 위반).
+      - name: 판정 도구 입력-없음 계약 (전부 exit 3)
+        run: |
+          fail=0
+          check() { # $1 = 라벨, 나머지 = 명령
+            local label="$1"; shift
+            local code=0; "$@" >/dev/null 2>&1 || code=$?
+            if [ "$code" -ne 3 ]; then echo "FAIL: $label — 없는 입력에 exit $code (3 이어야 한다)"; fail=1; else echo "  ok  $label"; fi
+          }
+          check cvd-check       node skills/visual-qa/scripts/cvd-check.mjs __none__/palette.json
+          check style-score     node skills/art-direction/scripts/style-score.mjs __none__/dir --profile __none__/profile.json
+          check pseudo-loc      node skills/ui-art-system/scripts/pseudo-loc.mjs __none__/strings.json
+          check asset-baseline  node skills/asset-pipeline/scripts/asset-baseline.mjs check __none__/dir --baseline __none__/b.json
+          check scan-textures   node skills/asset-budget/scripts/scan-textures.mjs __none__/dir
+          check sprite-qa       node skills/sprite-pipeline/scripts/sprite-qa.mjs __none__/dir
+          check flash-check     node skills/polish/scripts/flash-check.mjs __none__/manifest.json
+          check feel-audit      node skills/polish/scripts/feel-audit.mjs __none__/feel.json
+          test $fail -eq 0 || exit 1
+          echo "판정 도구 8종 입력-없음 계약 통과 (전부 exit 3)"
+
       # heredoc 은 YAML 블록 스칼라 안에서 들여쓰기와 얽히므로 쓰지 않는다.
       - name: FTUE 퍼널 리포트 스모크
         run: |

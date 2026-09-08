@@ -19,6 +19,12 @@ if (!root || args.includes('-h') || args.includes('--help')) {
   process.exit(2);
 }
 const opt = (name, dflt) => { const i = args.indexOf(name); return i >= 0 ? args[i + 1] : dflt; };
+// 없는 폴더는 측정 불가(3)다. 전엔 walk 가 조용히 빠져 "스캔 대상 없음"으로 exit 0 을 냈다 —
+// 경로 오타가 "예산 충족"으로 보고되는 가장 나쁜 종류의 오탐이다(B-14).
+if (!fs.existsSync(root) || !fs.statSync(root).isDirectory()) {
+  console.error(`스캔할 폴더가 없다: ${root}\n판정: 측정 불가 — 경로를 확인해라.`);
+  process.exit(3);
+}
 const TOP = Number(opt('--top', 15));
 const BASELINE = opt('--baseline', null);
 const JSON_OUT = opt('--json', null);
@@ -156,8 +162,9 @@ let excluded = 0;
 })(root);
 
 if (rows.length === 0) {
-  console.log(`\n스캔 대상 이미지가 없다: ${root}\n`);
-  process.exit(0);
+  // 이미지가 0장이면 예산을 "충족"한 게 아니라 **잰 게 없다**. 측정 불가(3).
+  console.error(`\n스캔 대상 이미지가 없다: ${root}\n판정: 측정 불가 — --only/--exclude 나 경로를 확인해라.\n`);
+  process.exit(3);
 }
 
 // ── 경고 규칙 ────────────────────────────────────────────────────────────────

@@ -33,7 +33,14 @@ if (!src || src.startsWith('--')) {
   process.exit(2);
 }
 
-const palette = JSON.parse(fs.readFileSync(src, 'utf8'));
+// 입력이 없으면 **측정 불가(3)** 다. 예외로 죽으면 exit 1 이 되고, art-gate 는 1 을 "미달"로 읽는다 —
+// 설정 파일의 경로 오타가 "색각이상 미달"로 보고된 실측 사례가 있다(2026-09-08).
+function readJsonOrUnmeasurable(file, what) {
+  if (!fs.existsSync(file)) { console.error(`${what} 파일이 없다: ${file}\n판정: 측정 불가 — 경로를 확인해라.`); process.exit(3); }
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch (e) { console.error(`${what} 파일을 JSON 으로 읽지 못했다: ${file} (${e.message})\n판정: 측정 불가.`); process.exit(3); }
+}
+const palette = readJsonOrUnmeasurable(src, '팔레트');
 const flat = flattenPalette(palette);
 if (!Object.keys(flat).length) { console.error('팔레트에서 색을 못 찾았다.'); process.exit(3); }
 
@@ -45,7 +52,7 @@ const notes = [];
 let pairs = null;
 const pairsPath = opt('--pairs', null);
 if (pairsPath) {
-  const cfg = JSON.parse(fs.readFileSync(pairsPath, 'utf8'));
+  const cfg = readJsonOrUnmeasurable(pairsPath, '색쌍(--pairs)');
   pairs = cfg.pairs;
 } else {
   pairs = [];

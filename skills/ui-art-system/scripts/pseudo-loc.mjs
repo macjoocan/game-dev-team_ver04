@@ -33,7 +33,13 @@ const OUT = opt('--out', null);
 const notes = [];
 
 // ── 문자열 로드 ──────────────────────────────────────────────────────────────
-const raw = JSON.parse(fs.readFileSync(src, 'utf8'));
+// 입력이 없으면 측정 불가(3). 예외로 죽으면 exit 1 이 되고 art-gate 는 1 을 "미달"로 읽는다(B-14).
+function readJsonOrUnmeasurable(file, what) {
+  if (!fs.existsSync(file)) { console.error(`${what} 파일이 없다: ${file}\n판정: 측정 불가 — 경로를 확인해라.`); process.exit(3); }
+  try { return JSON.parse(fs.readFileSync(file, 'utf8')); }
+  catch (e) { console.error(`${what} 파일을 JSON 으로 읽지 못했다: ${file} (${e.message})\n판정: 측정 불가.`); process.exit(3); }
+}
+const raw = readJsonOrUnmeasurable(src, '문자열');
 /** { key: { ko, en } } 로 정규화 */
 const strings = {};
 for (const [k, v] of Object.entries(raw)) {
@@ -100,7 +106,7 @@ function tokensOf(s) { return (String(s).match(TOKEN) || []).sort().join('|'); }
 let slots = null;
 const specPath = opt('--spec', null);
 if (specPath) {
-  const spec = JSON.parse(fs.readFileSync(specPath, 'utf8'));
+  const spec = readJsonOrUnmeasurable(specPath, 'UI 스펙(--spec)');
   slots = {};
   for (const s of spec.sprites || []) {
     if (!s.name) continue;

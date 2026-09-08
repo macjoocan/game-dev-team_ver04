@@ -58,7 +58,11 @@ const notes = [];
 // ── 입력 정규화: [{ name, frames:[경로], fps, loop, blend }] ─────────────────
 function fromManifest(mfPath) {
   const dir = path.dirname(mfPath);
-  const mf = JSON.parse(fs.readFileSync(mfPath, 'utf8'));
+  // 없는 manifest 는 측정 불가(3)다. 예외로 죽으면 exit 1 → art-gate 가 "미달"로 읽는다(B-14).
+  if (!fs.existsSync(mfPath)) { console.error(`manifest 가 없다: ${mfPath}\n판정: 측정 불가 — 경로를 확인해라.`); process.exit(3); }
+  let mf;
+  try { mf = JSON.parse(fs.readFileSync(mfPath, 'utf8')); }
+  catch (e) { console.error(`manifest 를 JSON 으로 읽지 못했다: ${mfPath} (${e.message})\n판정: 측정 불가.`); process.exit(3); }
   const items = mf.effects || mf.sprites || [];
   const out = [];
   for (const e of items) {

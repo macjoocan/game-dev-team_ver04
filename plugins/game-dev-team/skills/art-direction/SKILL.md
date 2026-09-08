@@ -72,7 +72,7 @@ node skills/visual-qa/scripts/cvd-check.mjs palette.json
 | `ref-classify.mjs` | 파일명 토큰 + 픽셀 지표(크기·비율·단일피사체·배경순도·채도·명도·대비)로 자동 분류 | 용도 라벨 |
 | `contact-sheet.mjs` | 여러 장을 격자 한 장으로 합침 | 분류 검수 |
 | `ref-analyze.mjs` | 대표색·규격 실측 → `profile.json`·`palette-draft.json` | 수치 근거 |
-| `style-score.mjs` | 생성물을 `profile.json`의 target과 대조해 점수·탈락. `--palette`를 주면 **프로젝트 톤 준수**(CIE Lab dE)를 함께 채점 | **규격만** |
+| `style-score.mjs` | 생성물을 `profile.json`의 target과 대조해 점수·탈락. `--palette`를 주면 **프로젝트 톤 준수**(CIE Lab dE)를 함께 채점하고, 평균 dE가 `--palette-fail`(기본 20)을 넘으면 점수와 무관하게 **하드 탈락**. 종료 코드 0=통과 1장 이상 · 1=전부 탈락 · 3=입력 없음 | **규격만** |
 
 - **`profile.json`은 생성과 채점이 공유하는 한 파일이다.** 생성에 쓴 프로필과 채점에 쓴 프로필이
   다르면 그 점수는 근거가 아니다.
