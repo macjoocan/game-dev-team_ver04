@@ -2,7 +2,8 @@
 // walk-composite.mjs - 정지 스프라이트 한 장에서 걷기 프레임을 **코드로** 만든다.
 //   node walk-composite.mjs <알파있는캐릭터.png> --out <dir> [--frames 8]
 //                           [--lift 0.30] [--bob 0.018] [--box lx,rx] [--mid x]
-//                           [--hip 0.72] [--strip <out.png>]
+//                           [--hip 0.72] [--strip <out.png>] [--nearest]
+//   --nearest  도트 전용. 선형 보간을 끄고 원본 색만 쓴다(팔레트·이진 알파 보존)
 //
 // 왜 이게 필요한가 — 생성 모델 경로가 **양쪽 다** 막혔기 때문이다(hex-danmaku 실측 2026-09-08):
 //
@@ -39,7 +40,7 @@ const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 if (!input || input.startsWith('--') || args.includes('-h') || args.includes('--help')) {
   console.error('usage: node walk-composite.mjs <캐릭터.png> --out <dir> [--frames 8] [--lift 0.30]');
-  console.error('       [--bob 0.018] [--box lx,rx] [--mid x] [--hip 0.72] [--strip out.png]');
+  console.error('       [--bob 0.018] [--box lx,rx] [--mid x] [--hip 0.72] [--strip out.png] [--nearest]');
   process.exit(2);
 }
 const OUT = opt('--out', 'walk');
@@ -50,6 +51,9 @@ const HIPR = Number(opt('--hip', 0.72));      // 이 비율 아래를 다리로 
 const BOX = opt('--box', null);
 const MID = opt('--mid', null);
 const STRIP = opt('--strip', null);
+// 도트(픽셀아트)는 **선형 보간을 쓰면 안 된다.** 없던 색이 생기고 반투명이 끼어
+// 도트 계약(팔레트 N색·알파 이진)이 깨진다 — 실측: 8프레임 중 4프레임이 미달로 나왔다.
+const NEAREST = args.includes('--nearest');
 if (!(N >= 2 && N <= 64)) { console.error('--frames 는 2~64'); process.exit(2); }
 
 const img = readPNG(input);
@@ -124,13 +128,22 @@ for (let i = 0; i < N; i++) {
     }
     for (let y = 0; y < legH; y++) for (let x = x0; x <= x1; x++) buf.fill(0, ((hipY + y) * W + x) * 4, ((hipY + y) * W + x) * 4 + 4);
     for (let y = 0; y < newH; y++) {
-      const fy = (y + 0.5) * legH / newH - 0.5;           // 선형 보간 — 계단이 덜 보인다
-      const y0 = Math.max(0, Math.min(legH - 1, Math.floor(fy)));
-      const y1i = Math.min(legH - 1, y0 + 1), f = fy - y0;
-      for (let x = x0; x <= x1; x++) {
-        const a = src[y0][x - x0], b = src[y1i][x - x0];
-        const o = ((hipY + y) * W + x) * 4;
-        for (let c = 0; c < 4; c++) buf[o + c] = Math.round(a[c] + (b[c] - a[c]) * f);
+      const fy = (y + 0.5) * legH / newH - 0.5;
+      if (NEAREST) {
+        // 최근접 — 원본에 있던 색만 쓴다. 도트는 이쪽이어야 한다
+        const ys = Math.max(0, Math.min(legH - 1, Math.round(fy)));
+        for (let x = x0; x <= x1; x++) {
+          const a = src[ys][x - x0], o = ((hipY + y) * W + x) * 4;
+          for (let c = 0; c < 4; c++) buf[o + c] = a[c];
+        }
+      } else {
+        const y0 = Math.max(0, Math.min(legH - 1, Math.floor(fy)));   // 선형 보간 — 계단이 덜 보인다
+        const y1i = Math.min(legH - 1, y0 + 1), f = fy - y0;
+        for (let x = x0; x <= x1; x++) {
+          const a = src[y0][x - x0], b = src[y1i][x - x0];
+          const o = ((hipY + y) * W + x) * 4;
+          for (let c = 0; c < 4; c++) buf[o + c] = Math.round(a[c] + (b[c] - a[c]) * f);
+        }
       }
     }
   }

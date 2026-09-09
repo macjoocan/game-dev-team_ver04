@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // cutout.mjs - 생성 이미지의 배경을 지워 알파(투명)를 만든다.
-//   node cutout.mjs <입력.png|폴더> [--out <dir>] [--tol 26] [--feather 1.5] [--trim]
+//   node cutout.mjs <입력.png|폴더> [--out <dir>] [--tol 26] [--feather 1.5] [--trim] [--binary-alpha]
 //
 // 왜 필요한가: 생성 모델은 알파를 못 만든다. 나오는 건 항상 RGB 라서, 게임에 넣으려면
 // 배경을 잘라내야 한다.
@@ -49,6 +49,7 @@ if (!input || input.startsWith('--')) {
   console.error('  --tol      확실한 배경으로 볼 색 거리 (기본 26)');
   console.error('  --soft     부분 배경 상한 (기본 tol*2.6). 접지 그림자를 반투명으로 녹인다');
   console.error('  --feather  경계 부드럽게 (기본 1.5px). 0 이면 계단이 남는다');
+  console.error('  --binary-alpha  알파를 0/255 로만 낸다. **도트(픽셀아트) 전용** — 반투명이 있으면 도트가 아니다');
   console.error('  --trim     투명 여백을 잘라 캔버스를 줄인다');
   console.error('  --enclosed 다리 사이처럼 **피사체가 둘러싼** 배경도 지운다 (흰 옷이 있으면 켜지 마라)');
   console.error('  --deshadow 발밑 접지 그림자를 지운다 (게임이 그림자를 코드로 그릴 때). --shadow-tol/--shadow-band 로 조절');
@@ -71,6 +72,10 @@ const DESPILL = CHROMA && !args.includes('--no-despill');
 const TOL = Number(opt('--tol', 26));            // 확실한 배경
 const SOFT = Number(opt('--soft', 0)) || TOL * 2.6; // 여기까지는 "부분 배경"(접지 그림자 등)
 const FEATHER = Number(opt('--feather', 1.5));
+// 도트는 안티에일리어싱이 없다(실측: 상용 픽셀아트 300장 중 91% 가 반투명 0%).
+// feather 0 만으로는 부족하다 — 톨러런스 경계에서 여전히 1.1% 가 반투명으로 남는다.
+const BINARY_ALPHA = args.includes('--binary-alpha');
+const ALPHA_CUT = Number(opt('--alpha-cut', 0.5));
 const TRIM = args.includes('--trim');
 // 갇힌 배경(다리 사이 등)까지 지운다. 기본은 꺼 둔다 — 흰 옷·눈 흰자를 색만으로는 구분 못 한다.
 const ENCLOSED = args.includes('--enclosed');
@@ -236,6 +241,7 @@ function cutout(file, destDir) {
     // 갇힌 배경은 --enclosed 일 때만 지운다. 경계는 바깥 배경과 같은 방식으로 부드럽게.
     if (ENCLOSED && enclosed[p]) a = 0;
     if (DESHADOW && shadow[p]) a = 0;
+    if (BINARY_ALPHA) a = a >= ALPHA_CUT ? 1 : 0;
     out[i] = data[i]; out[i + 1] = data[i + 1]; out[i + 2] = data[i + 2];
 
     // 디스필: 부분 투명 픽셀에는 배경색이 섞여 있다. 마젠타 배경이면 그게 자주색 테두리로
