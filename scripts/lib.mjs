@@ -33,8 +33,23 @@ export function projectDir(input) {
   return process.env.CLAUDE_PROJECT_DIR || input?.cwd || process.cwd();
 }
 
+/**
+ * 파이프라인 상태 폴더.
+ *
+ * 정본은 `docs/pipeline/` 이지만 **`.claude/docs/pipeline/` 도 본다.**
+ * 프로젝트가 문서를 `.claude/` 아래로 옮기는 일이 실제로 있었고(hex-danmaku, 2026-09-08),
+ * 그러면 세션 시작 훅이 상태를 못 찾아 **게이트가 조용히 증발한다** — 에러도 안 난다.
+ * 훅은 원래 "없으면 조용히 넘어간다"라서 이 실패가 눈에 안 띈다.
+ *
+ * 새로 만들 때는 정본 경로를 쓴다. 여기 fallback 은 이미 옮긴 프로젝트를 위한 것이다.
+ */
 export function pipelineDir(input) {
-  return path.join(projectDir(input), 'docs', 'pipeline');
+  const root = projectDir(input);
+  const canonical = path.join(root, 'docs', 'pipeline');
+  if (fs.existsSync(path.join(canonical, 'state.json'))) return canonical;
+  const moved = path.join(root, '.claude', 'docs', 'pipeline');
+  if (fs.existsSync(path.join(moved, 'state.json'))) return moved;
+  return canonical;
 }
 
 /**
