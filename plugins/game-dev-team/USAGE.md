@@ -47,14 +47,34 @@ git clone https://github.com/macjoocan/game-dev-team_ver04.git
 /plugin marketplace add ./game-dev-team_ver04
 /plugin install game-dev-team@game-dev-team
 ```
-디렉터리 소스는 **작업 중인 파일을 그대로 읽는다.** 스킬·훅을 고치고 `/reload-plugins` 만 하면
-반영된다. 반면 GitHub 소스는 스냅샷이라 `/plugin marketplace update game-dev-team` 으로 갱신해야
-새 버전이 온다.
+> **설치본은 디렉터리 소스여도 스냅샷이다.** `~/.claude/plugins/cache/<마켓>/<플러그인>/<버전>/` 으로
+> 복사된다. 소스를 고치거나 push 해도 **이미 설치된 것은 안 바뀐다.**
+> 실측(2026-09-09): user 스코프 0.27.2 / hex-danmaku project 스코프 **0.17.0**(12버전 뒤처짐, 5일간 방치).
+> 도구가 "없다"고 말하지 않으므로 세션은 정상으로 보인다 — 그래서 조용히 틀린 결과가 나온다.
 
 설치 없이 한 세션만 시험하려면:
 ```bash
 claude --plugin-dir ./game-dev-team_ver04
 ```
+
+### 업데이트 — 고쳤으면 덮어써야 반영된다
+
+```bash
+claude plugin marketplace update game-dev-team      # 소스 갱신(디렉터리/GitHub 공통)
+claude plugin update game-dev-team@game-dev-team --scope user
+claude plugin update game-dev-team@game-dev-team --scope project   # 그 프로젝트 폴더에서
+```
+**갱신 뒤 재시작해야 적용된다.** 스코프를 나눠 설치했으면 **스코프마다 따로** 갱신해야 한다 —
+user 만 올리고 project 를 두면 그 프로젝트는 계속 옛 버전을 쓴다(실제로 그랬다).
+
+번들(zip)로 설치했으면 새 zip 을 같은 폴더에 덮어쓰고 `install.ps1` / `install.sh` 를 다시 돌린다.
+
+지금 뒤처졌는지 확인:
+```bash
+node scripts/check-plugin-version.mjs      # 0 최신 · 1 뒤처짐 · 3 알 수 없음
+```
+**SessionStart 훅이 자동으로 확인한다** — 뒤처졌을 때만 스코프별 갱신 명령과 함께 알린다.
+최신이면 아무 말도 안 한다.
 
 ### C. 게임 레포에 고정해 팀원 전원에게 적용
 게임 레포의 `.claude/settings.json` 에 넣고 커밋한다. 팀원이 그 폴더를 신뢰하면 마켓플레이스가

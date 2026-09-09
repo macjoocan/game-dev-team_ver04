@@ -5,7 +5,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { readInput, emit, silent, run, readState, pipelineDir, asList } from './lib.mjs';
+import { readInput, emit, silent, run, readState, pipelineDir, projectDir, asList } from './lib.mjs';
 
 const STAGES = {
   0: '컨셉 발굴', 1: '기획+게임성지표', 2: '태스크 분해', 3: '프로토',
@@ -85,6 +85,15 @@ run(async () => {
   }
 
   if (state.updated) lines.push('', `(state.json 갱신: ${state.updated})`);
+
+  // 설치본이 소스보다 뒤처졌으면 알린다. **묻지 않으면 아무도 모른다** —
+  // 실측(2026-09-09): hex-danmaku 가 5일 동안 12버전 뒤처진 플러그인(0.17.0)을 쓰고 있었다.
+  // 도구가 "없다"고 말하지 않으므로 세션은 정상으로 보인다. 최신이면 아무 말도 안 한다.
+  try {
+    const { staleReport } = await import('./check-plugin-version.mjs');
+    const stale = staleReport(projectDir(input));
+    if (stale) lines.push('', '**플러그인 버전 주의**', stale);
+  } catch { /* 버전 확인 실패는 파이프라인 상태 주입을 막지 않는다 */ }
 
   emit({
     hookSpecificOutput: {
