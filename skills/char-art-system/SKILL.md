@@ -43,6 +43,7 @@ description: >
 **Codex 경로가 중요한 이유**: 이 스킬은 "아트 3축 중 유일하게 절차적 생성이 안 되는 축"이라
 백엔드 세팅이 선행됐다. Codex의 내장 `image_gen`은 **투명 배경을 네이티브로 지원**하고
 API 키가 필요 없어서, 그 선행 조건 없이 시안을 시작할 수 있다.
+(실사용 확인: hex-danmaku 의 회화풍 캐스트가 이 경로 산출물이다 — 1254x1254 RGBA, 투명 54~60%.)
 
 ```
 Codex 세션에서:  $imagegen 으로 시안 생성 (투명 배경 요청)
@@ -51,6 +52,32 @@ Codex 세션에서:  $imagegen 으로 시안 생성 (투명 배경 요청)
 아래 결정론적 체인은 두 경로가 공유한다:
   cutout → sprite-normalize → rig-split/sheet-split → atlas-pack → style-score
 ```
+
+### Codex 안에 다시 두 갈래가 있다 — 알파냐 배치냐 (실측 2026-09-14)
+
+| | **내장 `image_gen`** (Codex 세션/MCP) | **CLI 래퍼** (`codex-imagegen`) |
+|---|---|---|
+| 투명 배경 | **된다** (실측 투명 55%) | **거부한다** |
+| 스크립트·배치 | 안 된다 (대화로 시켜야 한다) | **된다** (`--n`, JSONL `batch`) |
+| 장당 시간 | 약 50초 | 약 30초 |
+| 인증 | ChatGPT 구독 | ChatGPT 구독 (같은 `auth.json` 재사용) |
+
+CLI 는 `--background transparent` 를 주면 이렇게 거절한다:
+`Transparent background is not supported for this model.` (기본 모델 `gpt-5.6-sol`)
+
+**그래도 CLI 가 쓸모없지 않다.** 흰 배경으로 뽑고 `cutout` 으로 자르면 된다 —
+실측에서 유리병 하이라이트·흰 반사가 그대로 살아남았다(제거 64.8% · 구멍 0).
+**전역 색키를 쓰면 그게 뚫린다.** `cutout` 은 테두리에서만 번져 들어가므로 안전하다.
+
+고르는 기준:
+- **한두 장, 알파가 바로 필요** → 내장 `image_gen`
+- **여러 장을 같은 조건으로** → CLI 래퍼 + `cutout`. 프롬프트를 JSONL 로 적어 한 번에 돌린다
+
+주의:
+- 공식 `scripts/image_gen.py` (Codex 스킬의 CLI fallback)는 **`OPENAI_API_KEY` 가 필요하다.**
+  구독만 있으면 못 쓴다 — 서드파티 래퍼가 존재하는 이유가 그것이다
+- **구독 할당량**을 쓴다(5시간 롤링 + 주간 상한). 배치 전에 규모를 정한다
+- CLI 는 `--dry-run` 으로 요청 JSON 을 먼저 볼 수 있다. 배치를 짜기 전에 한 번 찍어본다
 
 - **배경은 흰색으로 뽑는다.** 프롬프트 앞뒤에 `plain white background, isolated on white, product photo style cutout`
   을 두고, 네거티브에 `gradient background, vignette, colored background, scenery, floor, ground` 를 넣는다.
