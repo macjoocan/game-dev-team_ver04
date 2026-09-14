@@ -276,20 +276,27 @@ for (const d of skillDirs) {
 // AGENTS.md 가 유일한 규칙 전달 경로다. 실제로 아트 판정 도구 3종이 추가됐는데 AGENTS.md 는
 // 그걸 몰랐다 — Claude 쪽 SKILL.md 만 갱신하고 Codex 규칙서가 뒤처지는 드리프트다(§10).
 //
-// 여기 적힌 건 **게이트 판정에 쓰이는 도구**만이다. 모든 스크립트를 AGENTS.md 에 요구하지 않는다
-// (그건 요약 문서의 역할이 아니다). 새 판정 도구를 만들면 이 목록에 추가해라.
-const GATE_TOOLS = [
-  'cvd-check.mjs',        // 색각이상 판정 (아트 게이트)
-  'pseudo-loc.mjs',       // 텍스트 오버플로 판정 (아트 게이트)
-  'asset-baseline.mjs',   // 에셋 회귀 판정 (아트 게이트)
-  'sim-scaffold.mjs',     // 게임성 하네스 (3↔4 게이트)
-  'econ-scaffold.mjs',    // 경제 하네스 (8→9 게이트)
-  'funnel-report.mjs',    // FTUE 퍼널 (④ 사람 축)
-  'art-gate.mjs',         // 아트 게이트 통합 판정 (양 하네스 공동 컨트롤 표면)
-  'flash-check.mjs',      // 광과민성 플래시 안전 (P2 게이트 · 출하 차단 사유)
-  'feel-audit.mjs',       // 연출 상수 감사 (P1·P2 게이트)
-  'sprite-qa.mjs',        // 스프라이트 정합성 (⑦ 아트 게이트)
-];
+// 대상은 **게이트 판정에 쓰이는 도구**만이다. 모든 스크립트를 AGENTS.md 에 요구하지 않는다
+// (그건 요약 문서의 역할이 아니다 — 생성 도구는 §7b 가 SKILL.md 에서 잡는다).
+// 판정 도구는 **자동으로 찾는다.** 손으로 관리하는 목록은 샜다 — v0.28~v0.30 에서
+// cast-distinct·pixel-contract 가 목록에 안 들어가 AGENTS.md 에 0회로 남았는데
+// 검사는 통과했다(REVIEW.md B-16). 이 레포의 판정 도구는 예외 없이
+// '측정 불가'(exit 3) 계약을 가지므로 그걸 표식으로 쓴다.
+const EXIT3 = /process\.exit\(3\)/;
+const scanDirs = [path.join(ROOT, 'scripts')];
+for (const d of skillDirs) scanDirs.push(path.join(ROOT, 'skills', d, 'scripts'));
+const GATE_TOOLS = [];
+for (const dir of scanDirs) {
+  if (!exists(dir)) continue;
+  for (const f of fs.readdirSync(dir)) {
+    if (!f.endsWith('.mjs')) continue;
+    if (EXIT3.test(read(path.join(dir, f)))) GATE_TOOLS.push(f);
+  }
+}
+// 하네스 생성기는 스스로 3 을 안 낸다 — 계약은 생성물(run.mjs)이 진다. 그래서 명시한다.
+for (const t of ['sim-scaffold.mjs', 'econ-scaffold.mjs']) {
+  if (!GATE_TOOLS.includes(t)) GATE_TOOLS.push(t);
+}
 const agentsMdPath = path.join(ROOT, 'AGENTS.md');
 if (exists(agentsMdPath)) {
   const agentsMd = read(agentsMdPath);

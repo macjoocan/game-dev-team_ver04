@@ -188,7 +188,43 @@ node skills/sprite-pipeline/scripts/sprite-qa.mjs <프레임폴더> [--atlas atl
   스프라이트 최소변 대비 비율 + 중위값 대비 이상치 배수를 같이 본다.
 - **애니메이션 타이밍은 여기서 판정하지 않는다** → `polish`의 `feel-audit`.
 
-### 판정 3종 — **게이트 근거는 이 출력이다**
+### 캐스트 구분 판정 — `sprite-qa` 와 **반대 질문**
+```bash
+node skills/visual-qa/scripts/cast-distinct.mjs <캐릭터폴더> [--size 48] [--sizes a.json] [--cvd]
+```
+`sprite-qa` 는 한 캐릭터의 프레임이 서로 **같은가**를 보고, 이건 서로 다른 캐릭터가 **다른가**를 본다.
+적·아군을 여러 종 만들면 반드시 돌려라 — 원본 512px 에서는 다 달라 보인다.
+- **게임 크기로 잰다.** 화면에 실제로 그려지는 크기(39~56px)로 줄여야 판별력이 나온다.
+  축소하면 세부가 사라지고 **색과 실루엣만** 남는다
+- 두 축 중 **하나만 통과해도 구분된다**: 색(축소본 대표색 Lab dE) 또는 형태(실루엣 IoU).
+  색이 같아도 실루엣이 다르면 사람은 알아본다
+- `--cvd` 로 색각이상 4종에서도 잰다. 색에만 기댄 구분은 여기서 무너진다
+
+### 도트(픽셀아트) — 모델 바깥에서 격자·팔레트·알파를 강제한다
+확산 모델은 도트를 **못 만든다.** 품질이 아니라 종류 문제다 — VAE 가 연속 RGB 를 뱉으므로
+색이 10만 개 넘고 경계가 부드럽다. 48px 로 줄이면 도트가 아니라 흐릿한 썸네일이 된다.
+```bash
+# 변환: 알파 이진화 -> 알파 가중 축소 -> Lab k-means -> 외톨이 정리 (순서를 바꾸지 마라)
+node skills/char-art-system/scripts/pixel-quantize.mjs <입력> --cell 48 --colors 24 --clean 2
+# 판정: 0 충족 / 1 미달 / 3 측정 불가
+node skills/char-art-system/scripts/pixel-contract.mjs <스프라이트|폴더> [--cell 48]
+```
+- 순서를 바꾸면 반투명 테두리 색이 본체에 섞여 탁해진다. `--clean 2` 가 레퍼런스 대역
+- **하드 게이트와 화풍 지표를 섞지 마라**: 미달 사유는 색 수·반투명 비율뿐이다.
+  외톨이·평평 픽셀은 **보고만** 한다 — 도트 전용 모델 출력(외톨이 21~26%)과
+  축소한 일러스트(36.5%)가 종이 한 장 차이라 이 지표로는 못 가른다
+- 팔레트는 프레임이 아니라 **시트 속성**이다(후면 컷이 14색인 건 정상)
+- `cutout --binary-alpha` · `walk-composite --nearest` 를 같이 써라 —
+  `--feather 0` 만으로는 반투명이 1.1% 남고, 선형 보간은 없던 색을 만들어 팔레트를 깬다
+
+### 걷기 애니메이션 — 생성이 아니라 **코드 합성**
+```bash
+node skills/char-art-system/scripts/walk-composite.mjs <파츠폴더> --out dir --nearest
+```
+생성 모델 세 경로(i2i·비디오·프레임별)가 다 막혔고 코드 합성이 답이었다(REVIEW.md B-15).
+파츠를 쪼개 스켈레톤으로 돌린다 — 프레임 간 정체성이 **구조적으로** 유지된다.
+
+### 판정 도구 — **게이트 근거는 이 출력이다**
 ```bash
 # 색각이상에서 색 신호가 살아 있나 (0 충족 / 1 미달)
 node skills/visual-qa/scripts/cvd-check.mjs <palette.json>
@@ -233,6 +269,10 @@ Claude Code 세션은 하네스가 시드·판수·커밋을 출력에 박아준
 - 밸런스 수치는 코드에 흩뿌리지 않고 데이터 객체나 테이블에 모은다.
 - 전투/런 로직은 UI와 분리해 헤드리스 시뮬레이션이 가능하게 한다.
 - 완료 보고는 실행, 테스트, 시뮬레이션 등 확인 가능한 근거와 함께 한다.
+- **설치본은 스냅샷이다.** 소스를 고치거나 push 해도 이미 설치된 프로젝트는 안 바뀌고
+  아무도 알려주지 않는다(실측: project 스코프가 12버전 뒤처진 채 5일 방치 — 그동안
+  `art-gate`·`cast-distinct`·`sprite-qa` 가 **없는** 플러그인을 쓰고 있었다).
+  `node scripts/check-plugin-version.mjs` 로 확인한다 — 0 최신 / 1 뒤처짐 / 3 알 수 없음.
 - 이 레포(플러그인 개발) 자체를 고쳤으면 `node scripts/validate-plugin.mjs`,
   CI(`.github/workflows/`)를 고쳤으면 `node scripts/ci-local.mjs`를 돌려라.
   후자는 워크플로를 **`bash -e`로** 실행한다 — 맨 `bash`로 재현하면 통과하는데

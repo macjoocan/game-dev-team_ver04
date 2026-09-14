@@ -93,6 +93,12 @@ node scripts/art-gate.mjs --out art-out   # 6축을 한 번에, 5섹션 리포�
 | 예산 | `asset-budget/scan-textures` | 용량·텍스처 메모리·압축 설정 (Unity `.meta` 기준) |
 | 스프라이트 | `sprite-pipeline/sprite-qa` | 캔버스 정합 · **정체성 드리프트** · 떨림(2차 차분) · 알파 · 축소 판독성 |
 
+### 캐릭터 (`skills/visual-qa/` · `skills/char-art-system/`)
+| 도구 | 무엇을 판정하나 |
+|---|---|
+| `visual-qa/cast-distinct` | 캐릭터 여럿이 **게임 크기에서 서로 구분되나**. `sprite-qa`와 반대 질문(같은가↔다른가). 색(Lab dE) 또는 실루엣(IoU) **하나만 통과해도 구분**, `--cvd`로 색각이상까지 |
+| `char-art-system/pixel-contract` | **이게 진짜 도트인가.** 상용 픽셀아트 300장 실측이 기준선. 미달 사유는 색 수·반투명 비율뿐 — 외톨이·평평 픽셀은 **보고만** 한다(화풍 지표를 게이트로 쓰면 멀쩡한 걸 반려한다) |
+
 ### 연출 (`skills/polish/`)
 | 도구 | 무엇을 판정하나 |
 |---|---|
@@ -112,7 +118,8 @@ node scripts/art-gate.mjs --out art-out   # 6축을 한 번에, 5섹션 리포�
 
 ### 생성 도구 (판정 아님)
 `ui-art-system/ui-kit-gen`(9-slice UI 스프라이트) · `fx-art-system/fx-gen`(이펙트 시트) ·
-`art-direction`의 레퍼런스 측정 4종 · `char-art-system`의 생성·정규화·아틀라스 10종.
+`art-direction`의 레퍼런스 측정 4종 · `char-art-system`의 생성·정규화·아틀라스 10종
+(도트 변환 `pixel-quantize` · 걷기 합성 `walk-composite` 포함 — **생성 모델이 못 하는 것을 코드로 한다**).
 출발 스펙은 `skills/art-direction/references/starter-kit/`에 있다 —
 **동봉 기준값은 자기 검사를 통과한다**(CI가 강제한다).
 
