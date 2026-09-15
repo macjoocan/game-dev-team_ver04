@@ -79,3 +79,8 @@
 - Godot/Unreal/Web: 로컬 실행/테스트 명령 우선, MCP는 선택.
 - Blender MCP/Figma/Canva: 3D, 시안, 보드가 필요할 때만 연결.
 - GitHub/Linear/Notion: 이슈, PR, 문서 추적이 필요할 때만 연결.
+
+## 사람 검수 공동 루프
+- Codex·Claude Code 산출물과 사람 피드백의 정본은 `.review-loop/`다.
+- 작업 전 `review-loop`의 `summary`, 작업 후 같은 stable ID의 새 버전을 등록한다.
+- 사람의 `approve` 전에는 프로덕션 manifest로 승격하지 않는다.

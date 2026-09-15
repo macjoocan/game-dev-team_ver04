@@ -1,0 +1,25 @@
+{
+  "id": "chr.sample_warrior.v1",
+  "name": "Sample Warrior",
+  "status": "review",
+  "source": "Procedurally created with Blender MCP",
+  "license": "project-owned",
+  "files": {
+    "source": "samples/blender/sample_warrior.blend",
+    "preview": "samples/blender/sample_warrior.png"
+  },
+  "spec": {
+    "blenderVersion": "5.2.1 LTS",
+    "unitScaleMeters": 1.0,
+    "heightMeters": 1.97,
+    "forwardAxis": "-Y",
+    "upAxis": "Z",
+    "pivot": "ground-center",
+    "meshObjects": 29,
+    "triangles": 4500,
+    "materials": 8,
+    "collision": "not included",
+    "lodCount": 0,
+    "intendedExport": "GLB"
+  }
+}

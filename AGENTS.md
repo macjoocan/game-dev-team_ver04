@@ -9,7 +9,7 @@ Claude 전용 지시문은 참고만 하고, Codex에서는 이 파일과 `skill
 
 | 컴포넌트 | Codex | 뜻 |
 |---|---|---|
-| **스킬 23개** (판정 도구 전부 포함) | **된다** | `.codex-plugin`이 `"skills": "./skills/"`로 배선. 아래 도구를 그대로 쓴다 |
+| **스킬 24개** (판정 도구 전부 포함) | **된다** | `.codex-plugin`이 `"skills": "./skills/"`로 배선. 아래 도구를 그대로 쓴다 |
 | 역할 에이전트 6개 | **안 된다** | Codex 커스텀 에이전트는 TOML이고 플러그인 배포가 미지원이다. `## 역할`은 **메인 세션이 직접 지키는 규칙**으로 읽어라 |
 | 훅 4종 | **안 된다** | `hooks/hooks.json` 위치는 맞지만 경로가 `${CLAUDE_PLUGIN_ROOT}`이고 이벤트명이 Claude 체계다 |
 | `/gate` 커맨드 | **안 된다** | 게이트 판정은 이 파일의 `## 게이트`를 보고 손으로 한다 |
@@ -247,6 +247,21 @@ node skills/asset-budget/scripts/scan-textures.mjs <경로>
   눈으로는 안 보인다.
 
 ## 완료 보고 규칙 (훅이 없으므로 더 엄격하다)
+
+### 사람 검수 공동 루프
+
+Codex와 Claude Code가 만든 검토 대상은 `review-loop`로 프로젝트의 `.review-loop/`에 등록한다.
+대화 메모리나 하네스별 별도 목록을 정본으로 쓰지 않는다.
+
+```bash
+node <플러그인>/skills/review-loop/scripts/review-loop.mjs summary --project <프로젝트>
+node <플러그인>/skills/review-loop/scripts/review-loop.mjs serve --project <프로젝트> --port 4177
+```
+
+- 작업 시작 전 `summary`에서 `revise` 피드백과 활성 규칙을 읽는다.
+- 산출물을 만든 쪽이 stable ID·버전·프리뷰·원본·QA 경로와 `--harness codex`를 등록한다.
+- 사람의 `approve` 전에는 프로덕션 manifest로 승격하지 않는다.
+- 한 번의 피드백은 해당 에셋 수정에만 쓴다. 반복 항목도 사람이 승격해야 공통 규칙이 된다.
 
 Claude Code 세션은 하네스가 시드·판수·커밋을 출력에 박아준다. **Codex에는 그게 없어서 손으로
 채워야 하고, 손으로 적는 칸이 늘면 위조 여지도 늘어난다.** 그래서 규칙을 좁힌다.

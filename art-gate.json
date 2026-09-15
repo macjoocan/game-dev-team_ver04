@@ -1,0 +1,15 @@
+{
+  "_note": "아트 게이트 설정. 없는 항목은 건너뛴다(건너뛴 항목은 [공백]에 남는다).",
+  "palette": null,
+  "pairs": null,
+  "strings": null,
+  "uiSpec": null,
+  "assets": null,
+  "baseline": null,
+  "styleProfile": null,
+  "generated": null,
+  "feel": null,
+  "fxManifest": null,
+  "sprites": "samples/hex-blender-sprite/walk",
+  "spriteAtlas": "samples/hex-blender-sprite/hex_hero_walk_sheet.json"
+}

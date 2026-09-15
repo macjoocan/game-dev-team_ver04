@@ -1,0 +1,42 @@
+{
+  "id": "chr.hex_hero.blender_sprite_test.v1",
+  "status": "review",
+  "purpose": "Feasibility test for Blender-rendered Hex character sprites",
+  "source": {
+    "reference": "C:/00.SVN/Hex/assets/dot/hero.png",
+    "blend": "samples/hex-blender-sprite/hex_hero_sprite_test.blend"
+  },
+  "render": {
+    "projection": "orthographic",
+    "background": "transparent",
+    "frameSize": [128, 128],
+    "pivot": [64, 115],
+    "facing": "front-quarter",
+    "engine": "Blender Eevee"
+  },
+  "animations": {
+    "walk": {
+      "frames": 8,
+      "fps": 10,
+      "strip": "samples/hex-blender-sprite/hex_hero_walk_strip.png",
+      "atlas": "samples/hex-blender-sprite/hex_hero_walk_sheet.png",
+      "atlasData": "samples/hex-blender-sprite/hex_hero_walk_sheet.json"
+    },
+    "attack": {
+      "frames": 8,
+      "fps": 12,
+      "strip": "samples/hex-blender-sprite/hex_hero_attack_strip.png",
+      "atlas": "samples/hex-blender-sprite/hex_hero_attack_sheet.png",
+      "atlasData": "samples/hex-blender-sprite/hex_hero_attack_sheet.json"
+    }
+  },
+  "qa": {
+    "walk": "pass-with-warnings",
+    "attack": "pass-with-warnings",
+    "knownWarnings": [
+      "Eevee antialiasing creates high semi-transparent edge ratios",
+      "Attack frame 4 has an intentional fast center-of-mass change"
+    ]
+  },
+  "license": "test asset; derived visual interpretation, not for production"
+}

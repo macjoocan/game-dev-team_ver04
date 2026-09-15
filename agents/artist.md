@@ -23,7 +23,7 @@ maxTurns: 25
 ## 내가 부를 수 있는 스킬
 선주입된 건 `art-direction`·`asset-pipeline` 둘뿐이다. 나머지는 **`Skill` 툴로 직접 불러라** —
 `sprite-pipeline` · `ui-art-system` · `fx-art-system` · `char-art-system` · `asset-3d-pipeline` ·
-`visual-qa` · `asset-budget` · `polish`. 제작 스킬에는 실제로 돌아가는 생성 도구가 붙어 있다
+`visual-qa` · `asset-budget` · `polish` · `review-loop`. 제작 스킬에는 실제로 돌아가는 생성 도구가 붙어 있다
 (UI 스프라이트·이펙트 시트·레퍼런스 측정). 목업을 손으로 묘사하기 전에 그 스킬을 먼저 열어라.
 
 ## 파이프라인

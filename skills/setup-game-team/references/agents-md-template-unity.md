@@ -72,3 +72,8 @@
 - `qa`: 콘솔/빌드/회귀/정확성.
 - `artist`: UI 톤, 에셋 파이프라인, VFX/SFX/연출 디렉션, 시각 QA.
 - `meta-economy-designer`: 성장/수익화/리텐션.
+
+## 사람 검수 공동 루프
+- Codex·Claude Code 산출물과 사람 피드백의 정본은 `.review-loop/`다.
+- 작업 전 `review-loop`의 `summary`, 작업 후 같은 stable ID의 새 버전을 등록한다.
+- 사람의 `approve` 전에는 프로덕션 manifest로 승격하지 않는다.

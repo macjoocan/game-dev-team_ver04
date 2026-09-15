@@ -26,7 +26,7 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 전 에이전트가 **`memory: project`**(Claude Code) — 프로젝트별 메모리(`.claude/agent-memory/<agent>/`)에
 **일하는 방식·함정·교정**이 세션을 넘어 축적된다(상태값의 정본은 `docs/pipeline/state.json`).
 
-### 스킬 23개 (`skills/`)
+### 스킬 24개 (`skills/`)
 - **`concept-discovery`** — 초기 아이디어·코어 규칙을 사람과 대화하며 유사 사례 검색·제안으로 다듬어 **코어 컨셉 확보**(0단계, 오케스트레이터 대화형).
 - **`setup-game-team`** — 게임 레포에 팀 규칙(`CLAUDE.md`/`AGENTS.md`)과 상태 파일·설정을 세팅. 진행 중 프로젝트 온보딩(중간 진입) 포함.
 - **`gdd-completeness-checker`** — 기획 문서를 **기획 게이트**로 검수(근거 없는 수치·공란·숨은 미결·정의 안 된 지표). designer/meta 소유.
@@ -36,6 +36,7 @@ Claude Code에서는 `CLAUDE.md`·`.claude/rules/`(path-scoped 규칙)·**에이
 - **`econ-sim`** — 성장/수익화/리텐션을 **페르소나별** 코호트 시뮬로 검증하는 **경제 검증**(core 통과 후). 무과금 완주율·페이투윈 격차·재화 수지를 기계 판정한다.
 - **`art-direction`** — 아트 스타일·팔레트·실루엣·UI 톤을 정해 `VISUAL_DESIGN.md`로 고정. 아트 단계의 **입구**. `references/starter-kit/`에 팔레트+UI/FX 스펙 출발점 동봉.
 - **`asset-pipeline`** — 에셋 요청 접수·폴더 구조·manifest(안정 ID·승인 상태·출처/라이선스)·엔진 핸드오프.
+- **`review-loop`** — Codex·Claude Code 산출물을 같은 로컬 대시보드에 등록하고 사람의 승인·수정·거절과 구조화된 피드백을 다음 버전과 규칙 후보에 연결.
 - **`sprite-pipeline`** — 2D 스프라이트를 프레임 간 일관성이 유지되게(seed 프레임 → 시트 → 정규화 → 아틀라스). `sprite-qa`가 **정합성을 판정**한다 — 캔버스·정체성 드리프트·떨림(2차 차분)·알파 품질·축소 판독성·아틀라스 점유율.
 - **`ui-art-system`** — HUD·버튼·카드·아이콘·희귀도 프레임을 **상태별 변형**까지 설계. `ui-kit-gen`으로 스펙→PNG+9-slice 자동 생성(외부 API 불필요).
 - **`fx-art-system`** — 이펙트(임팩트·소멸·글로우·획득)를 스펙에서 프레임 시퀀스+스트립 시트로 생성. 어두운 배경 프리뷰로 검수.

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "key": "chr.hex-hero.walk@1",
+      "id": "chr.hex-hero.walk",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "Hex Hero Walk",
+      "status": "review",
+      "preview": "samples/hex-blender-sprite/hex_hero_walk_strip.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-blender-sprite/hex_hero_sprite_test.blend",
+      "qa": "samples/hex-blender-sprite/qa-walk/sprite-qa.md",
+      "harness": "codex",
+      "commit": "7145b27",
+      "createdAt": "2026-09-14T05:59:08.933Z"
+    },
+    {
+      "key": "chr.hex-hero.attack@1",
+      "id": "chr.hex-hero.attack",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "Hex Hero Attack",
+      "status": "review",
+      "preview": "samples/hex-blender-sprite/hex_hero_attack_strip.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-blender-sprite/hex_hero_sprite_test.blend",
+      "qa": "samples/hex-blender-sprite/qa-attack/sprite-qa.md",
+      "harness": "codex",
+      "commit": "7145b27",
+      "createdAt": "2026-09-14T05:59:15.031Z"
+    }
+  ]
+}

@@ -106,3 +106,8 @@ P2. **2차 폴리싱 — 파이널 연출 패스** (`polish` · artist+developer
 
 ## 사람(당신)의 승인 지점
 - 기획/게임성 지표 확정 · 게임성 검증 통과(본구현 착수) · 어셈블리/폴더 구조 승인 · 머지 · 아트 시안 선택 · 폴리싱(P1/P2) 사인오프
+
+## 사람 검수 공동 루프
+- Claude Code·Codex 산출물과 사람 피드백의 정본은 `.review-loop/`다.
+- 작업 전 `review-loop`의 `summary`, 작업 후 같은 stable ID의 새 버전을 등록한다.
+- 사람의 `approve` 전에는 프로덕션 manifest로 승격하지 않는다.

@@ -40,3 +40,6 @@ classify/
 .playwright-mcp/
 *.png
 !skills/**/*.png
+!samples/**/*.png
+.review-loop/*.lock
+.review-loop/*.tmp-*

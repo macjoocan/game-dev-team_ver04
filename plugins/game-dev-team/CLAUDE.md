@@ -29,6 +29,14 @@ game-dev-team 플러그인(게임 개발 역할 에이전트 팀 + 사람 승인
 - [ORCHESTRATION.md](ORCHESTRATION.md) — 허브-앤-스포크 조율 규칙, 게이트 모드(full/lean/solo)
 - [REVIEW.md](REVIEW.md) — 품질 리뷰 기록
 
+## 사람 검수 공동 루프
+
+Codex와 Claude Code의 검토 대상은 `review-loop`로 같은 프로젝트의 `.review-loop/`에 등록한다.
+Claude 메모리는 작업 방식 보조이며 승인·피드백의 정본이 아니다. 새 작업과 수정 작업을 시작하기 전에
+`review-loop.mjs summary --project <프로젝트>`를 읽고, 산출물은 `--harness claude-code`로 등록한다.
+사람 승인 전에는 프로덕션 manifest로 승격하지 않으며, 공통 규칙은 사람이 대시보드에서 승격한
+`.review-loop/rules.json` 항목만 적용한다.
+
 ## 핵심 설계 원칙 (플러그인 내용 수정 시)
 - 최종 권위자는 항상 사람. 모든 단계 전환은 승인 게이트.
 - 역할 에이전트 6개는 허브-앤-스포크 — 서로 직접 대화하지 않는다.
