@@ -43,7 +43,7 @@
       "artifact": "samples/hex-ui-kit",
       "qa": "9-slice 자동 산출 · 늘림 8건 모서리 0.000 · 상태 실루엣 정합 0px",
       "harness": "claude-code",
-      "commit": "74b5a5b",
+      "commit": "407aca3",
       "createdAt": "2026-09-17T11:52:27.238Z"
     },
     {
@@ -58,7 +58,7 @@
       "artifact": "samples/hex-fx",
       "qa": "루프 이음매 1.0 < 내부평균 3.0 · manifest fps/blend/pivot",
       "harness": "claude-code",
-      "commit": "74b5a5b",
+      "commit": "407aca3",
       "createdAt": "2026-09-17T11:52:28.183Z"
     }
   ]
