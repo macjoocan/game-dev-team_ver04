@@ -217,6 +217,21 @@ R7(추출 에셋 → 자체 에셋 교체)은 배포 전 하드 게이트다. �
 [pipeline-brief 스킬](./skills/pipeline-brief/SKILL.md)). 없으면 훅은 조용히 넘어간다.
 `docs/pipeline/audit.log`는 자동 생성되니 `.gitignore`에 넣을지 정해두면 좋다.
 
+### 경고 하나만 끄기 — `.claude/game-dev-team.json`
+`/hooks`는 훅 **전체**를 끈다. 경고 하나만 빼려면 프로젝트에 이 파일을 둔다.
+
+```json
+{ "commitGate": { "warnDefaultBranch": false } }
+```
+
+| 키 | 기본 | 끄면 |
+|---|---|---|
+| `commitGate.warnDefaultBranch` | `true` | `main`/`master`/`develop` 직접 커밋 알림만 끈다 |
+
+**트렁크 기반 레포라면 끄는 게 맞다.** 모든 커밋에서 발화하는 경고는 정보량이 0이고,
+같이 뜬 열린 게이트·`--no-verify` 경고까지 묻는다. 끄는 건 이 항목 하나뿐이고
+나머지 커밋 게이트는 그대로 돈다. 파일이 없으면 전부 켜진 상태다.
+
 훅이 시끄러우면 `/hooks`에서 개별로 끄거나 플러그인 자체를 비활성화한다.
 Node가 PATH에 있어야 동작한다(없으면 훅만 조용히 실패하고 나머지 기능은 정상).
 

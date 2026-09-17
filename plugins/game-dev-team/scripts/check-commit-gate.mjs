@@ -3,7 +3,7 @@
 // 차단하지 않는다. "지금 열린 게이트가 있는데 커밋하려 한다"는 사실을 사람과 모델에게 보여줄 뿐.
 
 import { execFileSync } from 'node:child_process';
-import { readInput, emit, silent, run, readState, projectDir, asList } from './lib.mjs';
+import { readInput, emit, silent, run, readState, readConfig, projectDir, asList } from './lib.mjs';
 
 function git(args, cwd) {
   try {
@@ -41,9 +41,14 @@ run(async () => {
     );
   }
 
-  const branch = git(['rev-parse', '--abbrev-ref', 'HEAD'], cwd);
-  if (branch && /^(main|master|develop)$/.test(branch)) {
-    warnings.push(`기본 브랜치(\`${branch}\`)에 직접 커밋하려 한다. 작업 브랜치를 먼저 파는 게 맞는지 확인.`);
+  // 기본 브랜치 경고는 끌 수 있다. 트렁크 기반 레포에서는 모든 커밋에서 발화해
+  // 정보량이 0이 되고, 같이 뜬 열린 게이트·--no-verify 경고까지 묻는다.
+  // `.claude/game-dev-team.json` 의 commitGate.warnDefaultBranch=false 로 끈다. 기본은 켜짐.
+  if (readConfig(input).commitGate?.warnDefaultBranch !== false) {
+    const branch = git(['rev-parse', '--abbrev-ref', 'HEAD'], cwd);
+    if (branch && /^(main|master|develop)$/.test(branch)) {
+      warnings.push(`기본 브랜치(\`${branch}\`)에 직접 커밋하려 한다. 작업 브랜치를 먼저 파는 게 맞는지 확인.`);
+    }
   }
 
   if (/(^|\s)(--no-verify|-n)(\s|$)/.test(commitSegment)) {

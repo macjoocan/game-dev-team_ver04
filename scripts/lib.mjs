@@ -83,6 +83,25 @@ export function readState(input) {
   }
 }
 
+/**
+ * 프로젝트별 훅 설정(`.claude/game-dev-team.json`)을 읽는다. 없거나 깨졌으면 `{}`.
+ *
+ * 훅 경고는 **프로젝트마다 값어치가 다르다.** 트렁크 기반으로 일하는 레포에서는
+ * "기본 브랜치에 커밋한다"가 100% 발화하는데, 항상 뜨는 경고는 정보량이 0이고
+ * 같이 뜬 진짜 경고까지 묻는다. 그래서 끌 수 있어야 한다.
+ * 기본값은 항상 "켜짐"이다 — 설정 파일이 없는 기존 프로젝트의 동작이 바뀌면 안 된다.
+ */
+export function readConfig(input) {
+  try {
+    const p = path.join(projectDir(input), '.claude', 'game-dev-team.json');
+    if (!fs.existsSync(p)) return {};
+    const c = JSON.parse(fs.readFileSync(p, 'utf8'));
+    return c && typeof c === 'object' && !Array.isArray(c) ? c : {};
+  } catch {
+    return {};
+  }
+}
+
 /** 배열이면 문자열 배열로 정규화, 아니면 빈 배열. */
 export function asList(v) {
   if (!Array.isArray(v)) return [];
