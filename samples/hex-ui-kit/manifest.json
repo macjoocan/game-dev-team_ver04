@@ -1,0 +1,124 @@
+{
+  "generatedFrom": "hex-ui.json",
+  "sprites": [
+    {
+      "name": "btn-primary-normal",
+      "file": "btn-primary-normal.png",
+      "w": 96,
+      "h": 32,
+      "nineSlice": {
+        "left": 15,
+        "bottom": 15,
+        "right": 15,
+        "top": 15
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "btn-primary-pressed",
+      "file": "btn-primary-pressed.png",
+      "w": 96,
+      "h": 32,
+      "nineSlice": {
+        "left": 13,
+        "bottom": 13,
+        "right": 13,
+        "top": 13
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "btn-primary-disabled",
+      "file": "btn-primary-disabled.png",
+      "w": 96,
+      "h": 32,
+      "nineSlice": {
+        "left": 14,
+        "bottom": 14,
+        "right": 14,
+        "top": 14
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "btn-danger-normal",
+      "file": "btn-danger-normal.png",
+      "w": 96,
+      "h": 32,
+      "nineSlice": {
+        "left": 15,
+        "bottom": 15,
+        "right": 15,
+        "top": 15
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "panel",
+      "file": "panel.png",
+      "w": 128,
+      "h": 96,
+      "nineSlice": {
+        "left": 20,
+        "bottom": 20,
+        "right": 20,
+        "top": 20
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "bar-hp-fill",
+      "file": "bar-hp-fill.png",
+      "w": 64,
+      "h": 12,
+      "nineSlice": {
+        "left": 7,
+        "bottom": 5,
+        "right": 7,
+        "top": 5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    },
+    {
+      "name": "bar-track",
+      "file": "bar-track.png",
+      "w": 64,
+      "h": 12,
+      "nineSlice": {
+        "left": 7,
+        "bottom": 5,
+        "right": 7,
+        "top": 5
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "pixelsPerUnit": 100
+    }
+  ]
+}

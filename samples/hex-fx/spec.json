@@ -1,0 +1,37 @@
+{
+  "previewBg": "#1b2a24",
+  "effects": [
+    {
+      "name": "hit",
+      "type": "impact",
+      "size": 64,
+      "frames": 6,
+      "loop": false,
+      "color": "#ffd27a"
+    },
+    {
+      "name": "enemyPop",
+      "type": "pop",
+      "size": 64,
+      "frames": 6,
+      "loop": false,
+      "color": "#ff8a6b"
+    },
+    {
+      "name": "runeCharge",
+      "type": "pulse",
+      "size": 64,
+      "frames": 8,
+      "loop": true,
+      "color": "#7dd3fc"
+    },
+    {
+      "name": "coinGet",
+      "type": "sparkle",
+      "size": 48,
+      "frames": 6,
+      "loop": false,
+      "color": "#f2d794"
+    }
+  ]
+}

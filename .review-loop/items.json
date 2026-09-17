@@ -30,6 +30,36 @@
       "harness": "codex",
       "commit": "7145b27",
       "createdAt": "2026-09-14T05:59:15.031Z"
+    },
+    {
+      "key": "ui.hex-kit@1",
+      "id": "ui.hex-kit",
+      "version": 1,
+      "type": "ui-kit",
+      "title": "Hex UI 키트 7종 (버튼 4상태·패널·바)",
+      "status": "review",
+      "preview": "samples/hex-ui-kit/preview.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-ui-kit",
+      "qa": "9-slice 자동 산출 · 늘림 8건 모서리 0.000 · 상태 실루엣 정합 0px",
+      "harness": "claude-code",
+      "commit": "74b5a5b",
+      "createdAt": "2026-09-17T11:52:27.238Z"
+    },
+    {
+      "key": "fx.hex-set@1",
+      "id": "fx.hex-set",
+      "version": 1,
+      "type": "vfx",
+      "title": "Hex 이펙트 4종 (hit·pop·pulse·sparkle)",
+      "status": "review",
+      "preview": "samples/hex-fx/preview.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-fx",
+      "qa": "루프 이음매 1.0 < 내부평균 3.0 · manifest fps/blend/pivot",
+      "harness": "claude-code",
+      "commit": "74b5a5b",
+      "createdAt": "2026-09-17T11:52:28.183Z"
     }
   ]
 }

@@ -1,0 +1,69 @@
+{
+  "generatedFrom": "hex-fx.json",
+  "effects": [
+    {
+      "name": "hit",
+      "type": "impact",
+      "frames": 6,
+      "size": 64,
+      "sheet": "hit_sheet.png",
+      "layout": "horizontal-strip",
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "color": "#ffd27a"
+    },
+    {
+      "name": "enemyPop",
+      "type": "pop",
+      "frames": 6,
+      "size": 64,
+      "sheet": "enemyPop_sheet.png",
+      "layout": "horizontal-strip",
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "color": "#ff8a6b"
+    },
+    {
+      "name": "runeCharge",
+      "type": "pulse",
+      "frames": 8,
+      "size": 64,
+      "sheet": "runeCharge_sheet.png",
+      "layout": "horizontal-strip",
+      "fps": 12,
+      "loop": true,
+      "blend": "additive",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "color": "#7dd3fc"
+    },
+    {
+      "name": "coinGet",
+      "type": "sparkle",
+      "frames": 6,
+      "size": 48,
+      "sheet": "coinGet_sheet.png",
+      "layout": "horizontal-strip",
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "color": "#f2d794"
+    }
+  ]
+}

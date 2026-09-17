@@ -131,6 +131,29 @@ const oi = process.argv.indexOf('--out');
 const outDir = oi >= 0 ? process.argv[oi + 1] : (spec.out || 'ui-out');
 fs.mkdirSync(outDir, { recursive: true });
 
+/**
+ * 9-slice 보더를 스펙에서 **계산한다.**
+ *
+ * 예전엔 스펙이 적어준 값을 그대로 흘려보내기만 해서 거의 항상 `null` 이 나갔다.
+ * 그런데 늘어나는 UI 에서 보더가 없으면 **모서리 반경과 선 두께가 같이 늘어난다** —
+ * 96x32 버튼을 240px 로 늘려보면 눈에 바로 보인다(실측 2026-09-17).
+ * 이 도구는 반경·선 두께·그림자 오프셋을 **알고 그렸으므로** 사람이 추측할 이유가 없다.
+ *
+ * 보더는 "늘리면 안 되는 바깥 테두리"다 = 여백 + 모서리 반경 + 선 두께 + 그림자.
+ * 양쪽 보더 합이 변보다 크면 9-slice 가 성립하지 않으므로 절반 미만으로 조인다.
+ */
+function autoNineSlice(s) {
+  const pad = s.pad || 0;
+  const radius = s.radius || 0;
+  const stroke = s.stroke?.width || 0;
+  const shadow = Math.max(0, s.shadow?.offset || 0);
+  const b = Math.ceil(pad + radius + stroke + shadow);
+  const bx = Math.max(0, Math.min(b, Math.floor((s.w - 1) / 2)));
+  const by = Math.max(0, Math.min(b, Math.floor((s.h - 1) / 2)));
+  if (bx === 0 && by === 0) return null;        // 늘릴 여지가 없다
+  return { left: bx, bottom: by, right: bx, top: by };
+}
+
 const manifest = { generatedFrom: path.basename(specPath), sprites: [] };
 for (const s of spec.sprites) {
   const rgba = render(s);
@@ -139,12 +162,15 @@ for (const s of spec.sprites) {
   manifest.sprites.push({
     name: s.name, file: s.name + '.png', w: s.w, h: s.h,
     // Unity Sprite Border 는 (left, bottom, right, top) 순서다. 헷갈리기 쉬워 이름으로 적는다.
-    nineSlice: s.nineSlice || null,
+    nineSlice: s.nineSlice || autoNineSlice(s),
     pivot: s.pivot || { x: 0.5, y: 0.5 },
     pixelsPerUnit: s.pixelsPerUnit || 100,
   });
-  console.log(`  ${s.name}.png  ${s.w}x${s.h}`);
+  const ns = manifest.sprites[manifest.sprites.length - 1].nineSlice;
+  console.log(`  ${s.name}.png  ${s.w}x${s.h}  9-slice ${ns ? `${ns.left},${ns.bottom},${ns.right},${ns.top}` : '없음'}`);
 }
 fs.writeFileSync(path.join(outDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
 console.log(`\n${manifest.sprites.length}장 생성 -> ${outDir}`);
-console.log(`manifest.json 에 9-slice 보더·피벗이 들어 있다 (Unity 임포트 때 그대로 쓴다).`);
+const withNS = manifest.sprites.filter((x) => x.nineSlice).length;
+console.log(`9-slice 보더 ${withNS}/${manifest.sprites.length} · manifest.json 에 피벗과 함께 들어 있다 (Unity 임포트 때 그대로 쓴다).`);
+console.log('보더는 여백+반경+선두께+그림자로 계산했다. 늘렸을 때 모서리가 뭉개지면 스펙에 nineSlice 를 직접 줘라.');

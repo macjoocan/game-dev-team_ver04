@@ -1,0 +1,57 @@
+{
+  "sprites": [
+    {
+      "name": "btn-primary-normal",
+      "w": 96, "h": 32, "pad": 2, "radius": 8,
+      "fill": { "from": "#2f9280", "to": "#247c6b" },
+      "stroke": { "color": "#1a5a4d", "width": 2 },
+      "highlight": { "color": "#66cbb5", "height": 0.42, "alpha": 0.30 },
+      "shadow": { "color": "#123f36", "offset": 3, "alpha": 0.9 }
+    },
+    {
+      "name": "btn-primary-pressed",
+      "w": 96, "h": 32, "pad": 2, "radius": 8,
+      "fill": { "from": "#1f6c5d", "to": "#1a5a4d" },
+      "stroke": { "color": "#123f36", "width": 2 },
+      "highlight": { "color": "#66cbb5", "height": 0.22, "alpha": 0.16 },
+      "shadow": { "color": "#123f36", "offset": 1, "alpha": 0.9 }
+    },
+    {
+      "name": "btn-primary-disabled",
+      "w": 96, "h": 32, "pad": 2, "radius": 8,
+      "fill": { "from": "#eef2ec", "to": "#e9ede7" },
+      "stroke": { "color": "#c7d0c9", "width": 2 },
+      "highlight": { "color": "#ffffff", "height": 0.42, "alpha": 0.20 },
+      "shadow": { "color": "#c7d0c9", "offset": 2, "alpha": 0.6 }
+    },
+    {
+      "name": "btn-danger-normal",
+      "w": 96, "h": 32, "pad": 2, "radius": 8,
+      "fill": { "from": "#e06a76", "to": "#d75462" },
+      "stroke": { "color": "#9e2f3c", "width": 2 },
+      "highlight": { "color": "#ffe2df", "height": 0.42, "alpha": 0.30 },
+      "shadow": { "color": "#7f1d1d", "offset": 3, "alpha": 0.9 }
+    },
+    {
+      "name": "panel",
+      "w": 128, "h": 96, "pad": 3, "radius": 12,
+      "fill": { "from": "#fffef8", "to": "#f4f8ef" },
+      "stroke": { "color": "#c3d2c6", "width": 2 },
+      "highlight": { "color": "#ffffff", "height": 0.30, "alpha": 0.5 },
+      "shadow": { "color": "#9fb3a6", "offset": 3, "alpha": 0.7 }
+    },
+    {
+      "name": "bar-hp-fill",
+      "w": 64, "h": 12, "pad": 1, "radius": 5,
+      "fill": { "from": "#e06a76", "to": "#d75462" },
+      "stroke": { "color": "#9e2f3c", "width": 1 },
+      "highlight": { "color": "#ffe2df", "height": 0.45, "alpha": 0.35 }
+    },
+    {
+      "name": "bar-track",
+      "w": 64, "h": 12, "pad": 1, "radius": 5,
+      "fill": { "from": "#dfe6de", "to": "#e9ede7" },
+      "stroke": { "color": "#c7d0c9", "width": 1 }
+    }
+  ]
+}
