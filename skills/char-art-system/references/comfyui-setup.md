@@ -81,7 +81,7 @@ cd D:\ComfyUI\ComfyUI_windows_portable
 |---|---|---|
 | 캐주얼/일러스트 캐릭터 | SDXL 계열 1개 | 8GB에서 무난. 해상도 1024 |
 | 빠른 시안 대량 생성 | SD1.5 계열 | 훨씬 빠름. 512~768로 뽑고 업스케일 |
-| 픽셀아트 | SD1.5 + 픽셀아트 LoRA | 팔레트 양자화는 Aseprite에서 후처리 |
+| 픽셀아트 | SD1.5 + 픽셀아트 LoRA | 팔레트 양자화는 `palette-force.mjs` 가 자동으로 한다 |
 
 **6. 실행**
 ```powershell

@@ -330,7 +330,24 @@ node skills/char-art-system/scripts/pixel-contract.mjs cut --cell 48
 **`--binary-alpha` 를 빼지 마라.** `--feather 0` 만으로는 톨러런스 경계에 반투명이 1.1% 남아
 도트 계약(0.5%)을 어긴다.
 
-**마지막은 사람이다.** 얼굴(48px 에서 6x6), 소품 정리, 면 단순화는 Aseprite 로 손본다.
+**화풍 통일은 `palette-force.mjs` 가 한다 — 손으로 하지 마라.**
+`pixel-quantize` 는 **이미지마다** 자기 24색을 뽑는다(팔레트 입력이 아예 없다). 그래서 주인공·적·보스가
+전부 다른 24색이 되고 나란히 놓으면 결이 다르다. 이게 "화풍이 갈린다"의 기계적 원인이다.
+`palette-force` 는 **캐스트 전체에서 공용 팔레트 하나를 뽑아** Aseprite 로 전원에게 먹인다.
+
+```bash
+node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --colors 24
+# -> forced/force.lua 를 Aseprite MCP run_lua_script 로 실행
+node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --verify-only
+```
+
+실측(2026-09-18, 주인공 걷기 8프레임): 3825색 -> **공용 24색**, 외톨이 85.5% -> **9.1%**(참고 대역 한복판),
+반투명 0%, 실루엣 100% 보존 · 평균 dE 7.5~7.7. 8장이 **같은 24색**을 공유한다.
+
+**`--verify-only` 를 건너뛰지 마라.** 계약은 색과 알파만 본다 — **그림이 남아 있는지는 안 본다.**
+실제로 캐릭터가 통째로 사라진 결과가 "31색 · 반투명 0%" 로 계약을 통과할 뻔했다(같은 날).
+
+**아직 사람이 하는 것:** 얼굴(48px 에서 6x6), 애매한 색 소품 정리.
 판정 도구는 "도트인가"만 본다 — "좋은가"는 안 본다.
 
 ### 생성으로 도트를 뽑을 거면 도트 전용 모델을 쓴다
