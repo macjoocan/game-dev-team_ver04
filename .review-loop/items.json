@@ -60,6 +60,21 @@
       "harness": "claude-code",
       "commit": "407aca3",
       "createdAt": "2026-09-17T11:52:28.183Z"
+    },
+    {
+      "key": "art.hex-palette-unified@1",
+      "id": "art.hex-palette-unified",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "주인공 걷기 8프레임 · 공용 24색 강제",
+      "status": "review",
+      "preview": "samples/hex-palette-unified/compare.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-palette-unified",
+      "qa": "실루엣 100% 보존 · dE 7.5~7.7 · 24색 · 외톨이 9.1% · 반투명 0%",
+      "harness": "claude-code",
+      "commit": "9e1aedd",
+      "createdAt": "2026-09-18T09:47:04.150Z"
     }
   ]
 }
