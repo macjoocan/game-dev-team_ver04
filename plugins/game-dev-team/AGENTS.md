@@ -217,6 +217,22 @@ node skills/char-art-system/scripts/pixel-contract.mjs <스프라이트|폴더> 
 - `cutout --binary-alpha` · `walk-composite --nearest` 를 같이 써라 —
   `--feather 0` 만으로는 반투명이 1.1% 남고, 선형 보간은 없던 색을 만들어 팔레트를 깬다
 
+### 화풍 통일 — 팔레트는 캐스트 단위로 강제한다
+`pixel-quantize` 는 **이미지마다** 자기 색을 뽑는다(팔레트 입력이 없다). 그래서 주인공·적·보스가
+전부 다른 24색이 되고 나란히 놓으면 결이 다르다. 이게 "화풍이 갈린다"의 기계적 원인이다.
+```bash
+# 팔레트 고르기: Lospec 후보들의 적합도 순위 (0 정상 / 2 입력 오류 / 3 네트워크 등 측정 불가)
+node skills/char-art-system/scripts/palette-fetch.mjs --match <캐스트폴더> --out-dir cand
+node skills/char-art-system/scripts/palette-fetch.mjs --slug endesga-32 --out pal.json
+# 강제 + 자기 검사: 0 통과 / 1 미달
+node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --colors 24 --apply
+```
+- **순위 1등이 정답이 아니다.** 평균 dE 가 낮다 = 원본과 가깝다이지 "도트로 더 낫다"가 아니다.
+  실측: dE 1위 `vinik24` 를 먹였더니 얼굴이 초록빛으로 뜨고 장화가 분홍으로 돌았다
+- **`pixel-contract` 는 그림이 남았는지 안 본다.** 색과 알파만 본다 — 캐릭터가 사라진 결과가
+  "31색·반투명 0%" 로 통과할 뻔했다. `palette-force --verify-only`(실루엣·dE)를 같이 돌려라
+- `--apply`(Node, Lab)와 Aseprite(RGB)는 **같은 작업이 아니다**. 같은 팔레트에서 픽셀 29% 가 다르다
+
 ### 걷기 애니메이션 — 생성이 아니라 **코드 합성**
 ```bash
 node skills/char-art-system/scripts/walk-composite.mjs <파츠폴더> --out dir --nearest

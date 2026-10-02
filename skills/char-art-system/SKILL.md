@@ -338,16 +338,38 @@ ComfyUI 버전 · GPU 가 들어간다. 손으로 manifest 에 옮겨 적을 것
 **`--binary-alpha` 를 빼지 마라.** `--feather 0` 만으로는 톨러런스 경계에 반투명이 1.1% 남아
 도트 계약(0.5%)을 어긴다.
 
+**팔레트를 어디서 가져오나 — `palette-fetch.mjs`.**
+캐스트에서 k-means 로 뽑으면 **그 캐스트의 평균**일 뿐이다. 원본이 3D 렌더처럼 탁하면
+탁한 24색이 나온다. 도트 화풍은 **색 선택 자체가 화풍**이라 거기서 안 생긴다.
+Lospec 팔레트는 널리 쓰여서 걸러진 것들이고, 받은 JSON 은 `palette-force --palette` 에 그대로 들어간다.
+
+```bash
+node skills/char-art-system/scripts/palette-fetch.mjs --slug endesga-32 --out pal.json
+node skills/char-art-system/scripts/palette-fetch.mjs --match <캐스트폴더> --out-dir cand   # 적합도 순위
+```
+
+**순위 1등이 정답이 아니다.** 평균 dE 가 낮다는 건 "원본과 가깝다"지 "도트로 더 낫다"가 아니다.
+실측(2026-10-02, 주인공 걷기): dE 1위였던 `vinik24`(12.87)를 실제로 먹여보니 **얼굴이 초록빛으로
+뜨고 장화가 분홍으로 돌았다.** 캐스트에서 뽑은 24색이 눈으로는 분명히 나았다.
+도구는 순위만 낸다 — **두세 개를 실제로 먹여서 사람이 고른다.**
+
 **화풍 통일은 `palette-force.mjs` 가 한다 — 손으로 하지 마라.**
 `pixel-quantize` 는 **이미지마다** 자기 24색을 뽑는다(팔레트 입력이 아예 없다). 그래서 주인공·적·보스가
 전부 다른 24색이 되고 나란히 놓으면 결이 다르다. 이게 "화풍이 갈린다"의 기계적 원인이다.
 `palette-force` 는 **캐스트 전체에서 공용 팔레트 하나를 뽑아** Aseprite 로 전원에게 먹인다.
 
 ```bash
+# 기본 경로 — Aseprite 없이 Node 에서 최근접 매핑하고 자기 검사까지 한다
+node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --colors 24 --apply
+
+# 디더링·indexed PNG 가 필요하면 Aseprite 경로
 node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --colors 24
-# -> forced/force.lua 를 Aseprite MCP run_lua_script 로 실행
-node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --verify-only
+# -> forced/force.lua 를 Aseprite MCP run_lua_script 로 실행 -> 그 뒤 --verify-only
 ```
+
+**`--apply`(Node, Lab 거리)와 Aseprite(`ChangePixelFormat`, RGB 거리)는 같은 작업이 아니다.**
+같은 팔레트로 돌려도 **픽셀 29% 가 다르고**, Node 쪽이 원본에 더 가깝다(dE 5.3 대 7.5, 실측 2026-10-02).
+Aseprite MCP 가 끊기면 아무것도 못 하는 상태를 피하려고 `--apply` 를 기본 경로로 둔다.
 
 실측(2026-09-18, 주인공 걷기 8프레임): 3825색 -> **공용 24색**, 외톨이 85.5% -> **9.1%**(참고 대역 한복판),
 반투명 0%, 실루엣 100% 보존 · 평균 dE 7.5~7.7. 8장이 **같은 24색**을 공유한다.

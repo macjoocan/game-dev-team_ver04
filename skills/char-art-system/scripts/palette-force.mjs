@@ -26,6 +26,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { readPNG } from '../../../scripts/lib-png-read.mjs';
+import { writePNG } from '../../../scripts/lib-png.mjs';
 import { toLab, deltaE76, toHex } from '../../../scripts/lib-color.mjs';
 
 const args = process.argv.slice(2);
@@ -34,6 +35,7 @@ if (!args.length || args.includes('-h') || args.includes('--help')) {
   console.error('  --colors   뽑을 공용 색 수 (기본 24 — 상용 도트 300장 중앙값 22, 대역 16~32)');
   console.error('  --palette  직접 정한 팔레트를 쓴다. {"colors":["#rrggbb",...]} 또는 ["#rrggbb",...]');
   console.error('  --verify-only  Lua 를 만들지 않고, --out 에 이미 있는 결과만 검사한다');
+  console.error('  --apply        Aseprite 없이 Node 에서 바로 최근접 매핑한다 (기본 경로)');
   process.exit(2);
 }
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
@@ -147,6 +149,38 @@ if (VERIFY_ONLY) {
   process.exit(bad ? 1 : 0);
 }
 
+/**
+ * Node 에서 직접 최근접 색 매핑(`--apply`).
+ *
+ * 원래는 Aseprite 의 `ChangePixelFormat` 에만 맡겼는데, **MCP 가 끊기면 아무것도 못 한다.**
+ * 실제로 세션 중 Aseprite MCP 가 내려가 작업이 막혔다(2026-10-02).
+ * 디더링이나 indexed PNG 가 필요하면 Aseprite 경로(force.lua)를 쓰고,
+ * 그냥 팔레트를 먹이는 것뿐이면 이쪽이 의존성이 없다.
+ *
+ * 알파는 건드리지 않는다 — 이진화는 `cutout --binary-alpha` 의 일이고, 여기서 또 만지면
+ * 어느 단계가 바꿨는지 추적이 안 된다.
+ */
+function applyInNode(file, dst, palLab, palRgb) {
+  const img = readPNG(file);
+  const buf = Buffer.alloc(img.width * img.height * 4);
+  const cache = new Map();
+  for (let p = 0; p < img.width * img.height; p++) {
+    const o = p * 4, a = img.data[o + 3];
+    buf[o + 3] = a;
+    if (a === 0) continue;                       // 투명 픽셀의 RGB 는 그대로 둔다
+    const key = (img.data[o] << 16) | (img.data[o + 1] << 8) | img.data[o + 2];
+    let bi = cache.get(key);
+    if (bi === undefined) {
+      const lab = toLab({ r: img.data[o] / 255, g: img.data[o + 1] / 255, b: img.data[o + 2] / 255 });
+      let bd = Infinity; bi = 0;
+      for (let i = 0; i < palLab.length; i++) { const d = labDist(lab, palLab[i]); if (d < bd) { bd = d; bi = i; } }
+      cache.set(key, bi);
+    }
+    buf[o] = palRgb[bi][0]; buf[o + 1] = palRgb[bi][1]; buf[o + 2] = palRgb[bi][2];
+  }
+  writePNG(dst, img.width, img.height, buf);
+}
+
 // ── 팔레트 결정 ───────────────────────────────────────────────────────────────
 let colors;
 if (PAL_IN) {
@@ -162,6 +196,22 @@ if (PAL_IN) {
   console.log(`  -> ${colors.length}색`);
 }
 fs.writeFileSync(path.join(OUT, 'palette.json'), JSON.stringify({ colors }, null, 2));
+
+if (args.includes('--apply')) {
+  const palRgb = colors.map((h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)]);
+  const palLab = palRgb.map(([r, g, b]) => toLab({ r: r / 255, g: g / 255, b: b / 255 }));
+  for (const f of inputs) applyInNode(f, path.join(OUT, path.basename(f)), palLab, palRgb);
+  console.log(`\n${inputs.length}장 매핑 완료 (Node 최근접) -> ${OUT}`);
+  let bad = 0;
+  for (const f of inputs) {
+    const v = verify(f, path.join(OUT, path.basename(f)));
+    console.log(`  ${v.ok ? 'O' : 'X'} ${path.basename(f)}  실루엣 ${(v.kept * 100).toFixed(1)}% · dE ${v.meanDe.toFixed(1)}${v.ok ? '' : ' — ' + v.why}`);
+    if (!v.ok) bad++;
+  }
+  console.log(bad ? `\n미달 ${bad}/${inputs.length} — 팔레트가 대상과 안 맞는다.` : `\n자기 검사 통과 (${inputs.length}장).`);
+  console.log('계약 판정은 따로 돌려라: node pixel-contract.mjs ' + OUT);
+  process.exit(bad ? 1 : 0);
+}
 
 // ── Aseprite Lua 생성 ─────────────────────────────────────────────────────────
 // 한 세션에서 열기 -> 팔레트 설정 -> 최근접 매칭(indexed) -> 저장까지 끝낸다(함정 1).
