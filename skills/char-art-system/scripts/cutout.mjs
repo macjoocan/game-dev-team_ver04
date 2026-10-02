@@ -52,6 +52,7 @@ if (!input || input.startsWith('--')) {
   console.error('  --binary-alpha  알파를 0/255 로만 낸다. **도트(픽셀아트) 전용** — 반투명이 있으면 도트가 아니다');
   console.error('  --trim     투명 여백을 잘라 캔버스를 줄인다');
   console.error('  --enclosed 다리 사이처럼 **피사체가 둘러싼** 배경도 지운다 (흰 옷이 있으면 켜지 마라)');
+  console.error('  --enclosed-min <비율>  이 크기 이상인 갇힌 배경만 지운다 (예: 0.004). 눈 흰자·이빨을 살린다');
   console.error('  --deshadow 발밑 접지 그림자를 지운다 (게임이 그림자를 코드로 그릴 때). --shadow-tol/--shadow-band 로 조절');
   console.error('  --chroma   배경색을 명시한다 (예: --chroma "#FF00FF"). 프롬프트로 배경을 통제할 때');
   console.error('  --no-despill  크로마 모드의 디스필을 끈다 (기본 켜짐)');
@@ -79,6 +80,10 @@ const ALPHA_CUT = Number(opt('--alpha-cut', 0.5));
 const TRIM = args.includes('--trim');
 // 갇힌 배경(다리 사이 등)까지 지운다. 기본은 꺼 둔다 — 흰 옷·눈 흰자를 색만으로는 구분 못 한다.
 const ENCLOSED = args.includes('--enclosed');
+// 갇힌 배경을 **크기로 가른다.** 다리 사이 틈은 크고, 눈 흰자·이빨은 작다 — 색은 같지만 크기가 다르다.
+// 2026-10-02 실측: 오거에 --enclosed 를 걸었더니 다리 틈(1.2%)과 함께 **눈과 이빨이 통째로 뚫렸다.**
+// 0 이면 기존 동작(전부 지움).
+const ENCLOSED_MIN = Number(opt('--enclosed-min', 0));
 // 접지 그림자를 지운다. 게임이 발밑 그림자를 코드로 그리는 경우 구운 그림자는 이중이 되고,
 // 캐릭터가 움직여도 안 따라간다. 색만으로는 은색 갑옷과 못 가르므로 **배경과 이어진 경로**로만 번진다.
 const DESHADOW = args.includes('--deshadow');
@@ -131,7 +136,7 @@ function cutout(file, destDir) {
   // 여기서는 **찾아서 보고만** 한다. 지우는 건 `--enclosed` 로 사람이 켠다 — 흰 옷·눈 흰자와
   // 구분할 방법이 색 하나뿐이라 자동으로 지우면 그게 다시 "흰 옷을 먹는" 사고가 된다.
   const enclosed = new Uint8Array(w * h);
-  let enclosedCount = 0, enclosedBlobs = 0, biggestBlob = 0;
+  let enclosedCount = 0, enclosedBlobs = 0, biggestBlob = 0, enclosedKept = 0;
   {
     const st2 = new Int32Array(w * h);
     const seen = new Uint8Array(w * h);
@@ -155,6 +160,8 @@ function cutout(file, destDir) {
       if (size < Math.max(24, w * h * 0.0001)) continue;
       enclosedBlobs++; enclosedCount += size;
       if (size > biggestBlob) biggestBlob = size;
+      // --enclosed-min 미만은 **보고는 하되 지우지 않는다.** 눈 흰자·이빨이 여기 걸린다.
+      if (ENCLOSED_MIN > 0 && size < w * h * ENCLOSED_MIN) { enclosedKept++; continue; }
       for (const p of blob) enclosed[p] = 1;
     }
   }
@@ -296,7 +303,7 @@ function cutout(file, destDir) {
     removedPct: +((1 - opaque / (w * h)) * 100).toFixed(1), holes,
     opaquePct: +(opaqueRatio * 100).toFixed(1), semiPct: +(semiRatio * 100).toFixed(1),
     ghosted: opaqueRatio < OPAQUE_MIN || semi > fullyOpaque * SEMI_RATIO_MAX,
-    enclosedPct: +(enclosedCount * 100 / (w * h)).toFixed(2), enclosedBlobs,
+    enclosedPct: +(enclosedCount * 100 / (w * h)).toFixed(2), enclosedBlobs, enclosedKept,
     shadowPct: +(shadowCount * 100 / (w * h)).toFixed(2),
     biggestEnclosedPct: +(biggestBlob * 100 / (w * h)).toFixed(2),
     size: `${w}x${h}${TRIM ? ` -> ${W}x${H}` : ''}`, dest,
@@ -316,7 +323,7 @@ for (const f of files) {
   console.log(`  ${r.file}  배경 ${r.bg} · 제거 ${r.removedPct}% · 불투명 ${r.opaquePct}% · 반투명 ${r.semiPct}% · 구멍 ${r.holes} · ${r.size}`);
   if (DESHADOW && r.shadowPct > 0) console.log(`      ·  접지 그림자 ${r.shadowPct}% 제거`);
   if (!ENCLOSED && r.enclosedBlobs > 0) {
-    console.log(`      ?  갇힌 배경 ${r.enclosedBlobs}곳 · 합계 ${r.enclosedPct}% (최대 ${r.biggestEnclosedPct}%) — 다리 사이·팔 아래처럼 피사체가 둘러싼 배경이다.`);
+    console.log(`      ?  갇힌 배경 ${r.enclosedBlobs}곳 · 합계 ${r.enclosedPct}% (최대 ${r.biggestEnclosedPct}%)${r.enclosedKept ? ` · 작아서 보존 ${r.enclosedKept}곳` : ''} — 다리 사이·팔 아래처럼 피사체가 둘러싼 배경이다.`);
     console.log(`         테두리 flood fill 은 여기 못 들어간다. 지우려면 --enclosed. 흰 옷·눈 흰자가 있으면 켜지 마라.`);
   }
   if (r.holes > 0) console.log(`      !! 캐릭터가 뚫렸다 — --tol 을 내려라`);

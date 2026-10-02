@@ -1,0 +1,5 @@
+{"id":"invalidate-1790914830075-btjel","itemKey":"art.cast-v2@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-02T04:20:30.075Z"}
+{"id":"invalidate-1790916072726-267m0","itemKey":"art.cast-v2@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-02T04:41:12.726Z"}
+{"id":"removed-1790917467565-m1ztv","itemKey":"chr.hex-hero.walk@1","decision":"rejected","previousStatus":"review","comment":"3D 렌더 캐스트 폐기 — 사람 판정 \"모델링이 구리다\". cast-v2 로 대체했다. 산출물 파일도 함께 삭제.","reviewer":"human","createdAt":"2026-10-02T05:04:27.565Z"}
+{"id":"removed-1790917467569-mekdm","itemKey":"chr.hex-hero.attack@1","decision":"rejected","previousStatus":"review","comment":"3D 렌더 캐스트 폐기 — 사람 판정 \"모델링이 구리다\". cast-v2 로 대체했다. 산출물 파일도 함께 삭제.","reviewer":"human","createdAt":"2026-10-02T05:04:27.569Z"}
+{"id":"invalidate-1790917482414-zoqn4","itemKey":"art.cast-v2@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-02T05:04:42.414Z"}

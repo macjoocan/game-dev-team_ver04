@@ -11,19 +11,19 @@
     "4.ckpt_name": "animagine-xl-4.0.safetensors"
   },
   "comfyVersion": "0.33.1",
-  "startedAt": "2026-10-02T03:19:59.220Z",
+  "startedAt": "2026-10-02T04:31:12.970Z",
   "runs": [
     {
       "seed": 1102,
-      "promptId": "1e744976-87e6-420b-9d5a-894ee4d6cc30",
+      "promptId": "b888e09b-a368-442f-8d69-2da73e07bc25",
       "files": [
         {
-          "name": "s1102_char_00061_.png",
+          "name": "s1102_char_00066_.png",
           "sha256": "022569da2e98d8df0b10f0920bb3367c3b9ccc7f8d8d435bef11f2a2562dec19"
         }
       ]
     }
   ],
   "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
-  "finishedAt": "2026-10-02T03:21:00.262Z"
+  "finishedAt": "2026-10-02T04:32:17.817Z"
 }
