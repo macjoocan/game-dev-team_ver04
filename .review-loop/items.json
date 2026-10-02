@@ -80,6 +80,22 @@
       "commit": "9e1aedd",
       "createdAt": "2026-09-18T09:47:04.150Z",
       "contentHash": "5ce0d54b34b157ac971fc6d3d150389123fc7c3493db888c9c83866a666ba800"
+    },
+    {
+      "key": "art.palette-candidates@1",
+      "id": "art.palette-candidates",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "팔레트 후보 비교 — 캐스트24 vs Lospec vinik24",
+      "status": "review",
+      "preview": "samples/hex-palette-candidates/compare.png",
+      "comparePreview": null,
+      "artifact": "samples/hex-palette-candidates",
+      "qa": "적합도 1위 vinik24 가 눈으로는 더 나쁨 · Node(Lab) vs Aseprite(RGB) 픽셀 29% 차이",
+      "harness": "claude-code",
+      "commit": "ddad053",
+      "createdAt": "2026-10-02T02:01:15.828Z",
+      "contentHash": "a082618d4cf4e1b39f887a8c49e561e409322582f57d23555f64f85ac11a8c6b"
     }
   ]
 }
