@@ -1,0 +1,50 @@
+{
+  "workflow": "wf-lora.api.json",
+  "workflowSha256": "2fc5c33e84c692fcbe1422bcbf52d701bc4069172fde15e550c92b5c33c6249b",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "pixel art, chibi, solo, full body, front view, standing, facing viewer, white background, simple background, knight, blue tunic, white armor, round shield, short sword, brown hair",
+    "7": "drop shadow, ground shadow, cast shadow, blurry, soft, gradient, anti-aliased, 3d, realistic, photo, text, watermark, frame, border, scenery, multiple characters, cropped"
+  },
+  "models": {
+    "4.ckpt_name": "sd_xl_base_1.0.safetensors",
+    "20.lora_name": "pixel-art-xl.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T06:07:37.295Z",
+  "runs": [
+    {
+      "seed": 8101,
+      "promptId": "f77f9a0c-5a6b-4b1e-b93f-2fa2a2cb2e94",
+      "files": [
+        {
+          "name": "s8101_char_00073_.png",
+          "sha256": "fba7996d1da998d9581cb47393214f60f45cf740580e911cf30840441dfef474"
+        }
+      ]
+    },
+    {
+      "seed": 8102,
+      "promptId": "c7565e96-a091-4fcb-8c07-708bff56205d",
+      "files": [
+        {
+          "name": "s8102_char_00074_.png",
+          "sha256": "72a3c5e19b85cffbaca1e90ccc8cc32ff85c872556f5cd50c1a0ea9f5cecaaa2"
+        }
+      ]
+    },
+    {
+      "seed": 8103,
+      "promptId": "ceaa97e9-aa00-4a06-baa4-90447ee24acc",
+      "files": [
+        {
+          "name": "s8103_char_00075_.png",
+          "sha256": "c3ef4c3e1c68347826e4b6a7427cde4fa8e656274c1de2c14ee388dc5853cc24"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T06:09:14.567Z"
+}

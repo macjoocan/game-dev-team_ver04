@@ -1,0 +1,50 @@
+{
+  "workflow": "wf-lora.api.json",
+  "workflowSha256": "5a34c44253a608c7dbd1d59b2dd9f5403fdbe622304228cd12b8493a8adb3e66",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "pixel art, chibi, solo, full body, front view, standing, facing viewer, white background, simple background, small goblin, green skin, brown ragged clothes, dagger, pointed ears",
+    "7": "drop shadow, ground shadow, cast shadow, blurry, soft, gradient, anti-aliased, 3d, realistic, photo, text, watermark, frame, border, scenery, multiple characters, cropped"
+  },
+  "models": {
+    "4.ckpt_name": "sd_xl_base_1.0.safetensors",
+    "20.lora_name": "pixel-art-xl.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T06:09:18.095Z",
+  "runs": [
+    {
+      "seed": 8201,
+      "promptId": "974630aa-b31e-40a9-86dc-3c3d968eeb8f",
+      "files": [
+        {
+          "name": "s8201_char_00076_.png",
+          "sha256": "cdfd1029456a5552e08b2e517de76b87ea0bbe5bf8476ef23355f57a68d9a9be"
+        }
+      ]
+    },
+    {
+      "seed": 8202,
+      "promptId": "c19c0fdc-8b10-4e1f-a214-2a011e5c739f",
+      "files": [
+        {
+          "name": "s8202_char_00077_.png",
+          "sha256": "cba0bef569a1afe03f57f5aeef14b8a0405324c5b9e1c5ec190594699b83bcd9"
+        }
+      ]
+    },
+    {
+      "seed": 8203,
+      "promptId": "a038dd6d-c8a2-4631-a4ee-ee52f0bc0d02",
+      "files": [
+        {
+          "name": "s8203_char_00078_.png",
+          "sha256": "5e619ad8daf3f66f09eac10f052bb64078a73eab0360df4ee61a446d6974c064"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T06:10:00.631Z"
+}
