@@ -9,6 +9,7 @@
 // 일반 Save 로 받은 파일은 구조가 달라 /prompt 가 400 으로 거부한다 — 제일 흔한 실수다.
 
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 import path from 'node:path';
 import { colorName } from '../../../scripts/lib-palette.mjs';
 
@@ -19,6 +20,7 @@ if (!wfPath || args.includes('-h') || args.includes('--help')) {
   console.error('       [--set 6.text="a cat"] [--seed 12345] [--batch 4]');
   console.error('       [--style <profile.json>]  ref-analyze 가 만든 스타일 프로필 주입');
   console.error('       [--keep-loaded]  배치 후 모델을 내리지 않는다(기본은 내린다)');
+  console.error('       [--dry-run]      제출하지 않고 run-log.json(provenance)만 쓴다');
   process.exit(2);
 }
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
@@ -87,6 +89,39 @@ function seedFor(i) {
 const seedNodes = Object.entries(wf).filter(([, n]) => n.inputs && 'seed' in n.inputs).map(([id]) => id);
 const noiseNodes = Object.entries(wf).filter(([, n]) => n.inputs && 'noise_seed' in n.inputs).map(([id]) => id);
 
+/**
+ * 재현에 필요한 것을 **전부** 남긴다.
+ *
+ * 예전에는 시드·prompt_id·파일명만 남기고 "manifest 에 옮겨 적어야 재현된다"고 적어뒀다.
+ * 손으로 옮기라는 건 안 옮겨진다는 뜻이다. 시안 20장에서 3번을 골랐는데 3번의 프롬프트를
+ * 모르면 거기서 끝난다(2026-09-17 확인, 2026-10-02 수정).
+ *
+ * 워크플로는 --style 과 --set 이 적용된 **제출 직전 상태**를 해시한다. 원본 파일을 해시하면
+ * 실제로 돌린 것과 다른 것을 기록하게 된다.
+ */
+const sha256 = (buf) => crypto.createHash('sha256').update(buf).digest('hex');
+
+function promptTexts(graph) {
+  // CLIPTextEncode 계열의 text 입력이 실제로 모델에 들어간 문구다.
+  // 노드 id 를 같이 남겨야 긍정/부정을 나중에 구분할 수 있다.
+  const out = {};
+  for (const [id, n] of Object.entries(graph)) {
+    const t = n?.inputs?.text;
+    if (typeof t === 'string' && t.trim()) out[id] = t;
+  }
+  return out;
+}
+
+function modelsUsed(graph) {
+  // 체크포인트·LoRA·VAE·ControlNet 파일명. 같은 프롬프트라도 모델이 다르면 다른 그림이다.
+  const keys = ['ckpt_name', 'lora_name', 'vae_name', 'control_net_name', 'clip_name', 'model_name', 'unet_name'];
+  const out = {};
+  for (const [id, n] of Object.entries(graph)) {
+    for (const k of keys) if (typeof n?.inputs?.[k] === 'string') out[`${id}.${k}`] = n.inputs[k];
+  }
+  return out;
+}
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function submit(seed) {
@@ -133,10 +168,13 @@ async function download(img, destDir, prefix) {
 }
 
 // ── 실행 ─────────────────────────────────────────────────────────────────────
+let comfyVersion = null, gpuName = null;
 try {
   const stats = await fetch(`${BASE}/system_stats`).then((r) => r.json());
   const dev = stats.devices?.[0];
   console.log(`ComfyUI ${stats.system?.comfyui_version} · ${dev?.name} · VRAM 여유 ${Math.round((dev?.vram_free || 0) / 1048576)}MB`);
+  comfyVersion = stats.system?.comfyui_version ?? null;
+  gpuName = dev?.name ?? null;
 } catch {
   console.error(`ComfyUI 에 붙지 못했다 (${BASE}). 서버가 떠 있는지 확인해라.`);
   console.error('판정: 생성 실패가 아니라 **측정 불가** 다 — 되돌아갈 곳은 프롬프트가 아니라 환경이다.');
@@ -144,7 +182,31 @@ try {
 }
 
 fs.mkdirSync(OUT, { recursive: true });
-const runLog = { workflow: path.basename(wfPath), host: HOST, style: styleInfo, runs: [] };
+const runLog = {
+  workflow: path.basename(wfPath),
+  workflowSha256: sha256(JSON.stringify(wf)),   // 제출 직전 그래프. 원본 파일이 아니다
+  host: HOST,
+  style: styleInfo,
+  prompts: promptTexts(wf),
+  models: modelsUsed(wf),
+  comfyVersion: null,
+  startedAt: new Date().toISOString(),
+  runs: [],
+};
+
+// --dry-run: 제출 없이 provenance 만 남긴다. GPU 가 없거나 VRAM 이 부족해도
+// "무엇을 보낼 참이었는지"는 기록·검증할 수 있어야 한다.
+if (args.includes('--dry-run')) {
+  runLog.dryRun = true;
+  runLog.plannedSeeds = [...Array(BATCH)].map((_, i) => seedFor(i));
+  runLog.comfyVersion = comfyVersion;
+  runLog.gpu = gpuName;
+  runLog.finishedAt = new Date().toISOString();
+  fs.writeFileSync(path.join(OUT, 'run-log.json'), JSON.stringify(runLog, null, 2));
+  console.log(`dry-run — 제출하지 않았다. provenance -> ${path.join(OUT, 'run-log.json')}`);
+  console.log(`  프롬프트 ${Object.keys(runLog.prompts).length}개 · 모델 ${Object.keys(runLog.models).length}개 · 워크플로 ${runLog.workflowSha256.slice(0, 12)}`);
+  process.exit(0);
+}
 
 for (let i = 0; i < BATCH; i++) {
   const seed = seedFor(i);
@@ -157,7 +219,11 @@ for (let i = 0; i < BATCH; i++) {
   }
   console.log(`완료 (${files.length}장)`);
   // 재현에 필요한 것 전부 남긴다 — 시드가 없으면 6개월 뒤 같은 캐릭터를 못 만든다
-  runLog.runs.push({ seed, promptId: id, files: files.map((f) => path.basename(f)) });
+  runLog.runs.push({
+    seed,
+    promptId: id,
+    files: files.map((f) => ({ name: path.basename(f), sha256: sha256(fs.readFileSync(f)) })),
+  });
 }
 
 // 배치가 끝나면 모델을 내린다. SDXL 하나가 커밋 10GB 를 잡고 있어서, 생성이 끝난 뒤에도
@@ -177,6 +243,10 @@ if (!args.includes('--keep-loaded')) {
   }
 }
 
+runLog.comfyVersion = comfyVersion;
+runLog.gpu = gpuName;
+runLog.finishedAt = new Date().toISOString();
 fs.writeFileSync(path.join(OUT, 'run-log.json'), JSON.stringify(runLog, null, 2));
 console.log(`\n${runLog.runs.length}회 · ${OUT}`);
-console.log('run-log.json 에 시드·prompt_id·파일명이 있다. manifest 에 옮겨 적어야 재현된다.');
+console.log('run-log.json 에 프롬프트 본문·모델 파일명·워크플로 해시·시드·출력 sha256 이 들어 있다.');
+console.log('이것만으로 재현된다 — 손으로 옮겨 적을 것이 없다.');

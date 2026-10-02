@@ -14,7 +14,8 @@
       "qa": "samples/hex-blender-sprite/qa-walk/sprite-qa.md",
       "harness": "codex",
       "commit": "7145b27",
-      "createdAt": "2026-09-14T05:59:08.933Z"
+      "createdAt": "2026-09-14T05:59:08.933Z",
+      "contentHash": "e3650d275ab521a119fa9b207485eb374c87255c87a7bb073a7a086d9e09c7f8"
     },
     {
       "key": "chr.hex-hero.attack@1",
@@ -29,7 +30,8 @@
       "qa": "samples/hex-blender-sprite/qa-attack/sprite-qa.md",
       "harness": "codex",
       "commit": "7145b27",
-      "createdAt": "2026-09-14T05:59:15.031Z"
+      "createdAt": "2026-09-14T05:59:15.031Z",
+      "contentHash": "e3650d275ab521a119fa9b207485eb374c87255c87a7bb073a7a086d9e09c7f8"
     },
     {
       "key": "ui.hex-kit@1",
@@ -44,7 +46,8 @@
       "qa": "9-slice 자동 산출 · 늘림 8건 모서리 0.000 · 상태 실루엣 정합 0px",
       "harness": "claude-code",
       "commit": "407aca3",
-      "createdAt": "2026-09-17T11:52:27.238Z"
+      "createdAt": "2026-09-17T11:52:27.238Z",
+      "contentHash": "5e2ec3fd68332670e3627afff61241e0a426d977d0861f027f18569ef2ee5fea"
     },
     {
       "key": "fx.hex-set@1",
@@ -59,7 +62,8 @@
       "qa": "루프 이음매 1.0 < 내부평균 3.0 · manifest fps/blend/pivot",
       "harness": "claude-code",
       "commit": "407aca3",
-      "createdAt": "2026-09-17T11:52:28.183Z"
+      "createdAt": "2026-09-17T11:52:28.183Z",
+      "contentHash": "fbc6acee1c090be8526a091b635810ea50d51a3269c89665fb0e8984d92b25f2"
     },
     {
       "key": "art.hex-palette-unified@1",
@@ -74,7 +78,8 @@
       "qa": "실루엣 100% 보존 · dE 7.5~7.7 · 24색 · 외톨이 9.1% · 반투명 0%",
       "harness": "claude-code",
       "commit": "9e1aedd",
-      "createdAt": "2026-09-18T09:47:04.150Z"
+      "createdAt": "2026-09-18T09:47:04.150Z",
+      "contentHash": "5ce0d54b34b157ac971fc6d3d150389123fc7c3493db888c9c83866a666ba800"
     }
   ]
 }

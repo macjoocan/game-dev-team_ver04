@@ -329,6 +329,12 @@ node skills/char-art-system/scripts/cutout.mjs <출력.png> --out cut --feather 
 node skills/char-art-system/scripts/pixel-contract.mjs cut --cell 48
 ```
 
+**생성 기록은 `run-log.json` 하나로 끝난다.** 프롬프트 본문(`--set` 치환 반영) · 모델 파일명
+(체크포인트·LoRA·VAE·ControlNet) · **제출 직전** 워크플로 해시 · 시드 · 출력 파일 sha256 ·
+ComfyUI 버전 · GPU 가 들어간다. 손으로 manifest 에 옮겨 적을 것이 없다.
+`--dry-run` 은 제출 없이 그 기록만 쓴다 — GPU 가 없거나 VRAM 이 모자라도 **무엇을 보낼
+참이었는지**는 남는다.
+
 **`--binary-alpha` 를 빼지 마라.** `--feather 0` 만으로는 톨러런스 경계에 반투명이 1.1% 남아
 도트 계약(0.5%)을 어긴다.
 
