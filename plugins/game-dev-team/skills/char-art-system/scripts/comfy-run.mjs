@@ -249,4 +249,12 @@ runLog.finishedAt = new Date().toISOString();
 fs.writeFileSync(path.join(OUT, 'run-log.json'), JSON.stringify(runLog, null, 2));
 console.log(`\n${runLog.runs.length}회 · ${OUT}`);
 console.log('run-log.json 에 프롬프트 본문·모델 파일명·워크플로 해시·시드·출력 sha256 이 들어 있다.');
+// 배치에서 **어느 것을 골랐는지**는 생성이 기록할 수 없다. 사람이 고른 뒤 적어야 한다.
+// 이게 비면 "같은 프롬프트로 다시 뽑았는데 다른 그림"이 된다 — 2026-10-02 에 실제로 났다.
+if (runLog.runs.length > 1) {
+  console.log(`
+**${runLog.runs.length}장 중 하나를 고르면 ${path.join(OUT, 'run-log.json')} 의 pickedSeed 에 적어라.**`);
+  console.log(`   시드: ${runLog.runs.map((r) => r.seed).join(' · ')}`);
+  console.log('   안 적으면 나중에 복원할 때 어느 시드였는지 모른다(시드 하나만 보고 runs[0] 을 집게 된다).');
+}
 console.log('이것만으로 재현된다 — 손으로 옮겨 적을 것이 없다.');

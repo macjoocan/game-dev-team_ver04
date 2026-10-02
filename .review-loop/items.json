@@ -7,7 +7,7 @@
       "version": 1,
       "type": "ui-kit",
       "title": "Hex UI 키트 7종 (버튼 4상태·패널·바)",
-      "status": "review",
+      "status": "rejected",
       "preview": "samples/hex-ui-kit/preview.png",
       "comparePreview": null,
       "artifact": "samples/hex-ui-kit",
@@ -39,7 +39,7 @@
       "version": 1,
       "type": "sprite-animation",
       "title": "주인공 걷기 8프레임 · 공용 24색 강제",
-      "status": "review",
+      "status": "rejected",
       "preview": "samples/hex-palette-unified/compare.png",
       "comparePreview": null,
       "artifact": "samples/hex-palette-unified",
@@ -55,7 +55,7 @@
       "version": 1,
       "type": "sprite-animation",
       "title": "팔레트 후보 비교 — 캐스트24 vs Lospec vinik24",
-      "status": "review",
+      "status": "rejected",
       "preview": "samples/hex-palette-candidates/compare.png",
       "comparePreview": null,
       "artifact": "samples/hex-palette-candidates",
@@ -79,8 +79,24 @@
       "harness": "claude-code",
       "commit": "5c10c3b",
       "createdAt": "2026-10-02T02:41:36.148Z",
-      "contentHash": "f95251541f543ce2c69e3567d323af715820616813df3b20141bc162896cc9c3",
-      "invalidatedAt": "2026-10-02T06:27:20.199Z"
+      "contentHash": "4070e29fb669890b2a9920cf815a88e84595d3ebe21ed428b899286b95263c1e",
+      "invalidatedAt": "2026-10-02T11:42:04.444Z"
+    },
+    {
+      "key": "art.cast-v2-walk@1",
+      "id": "art.cast-v2-walk",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "걷기 8프레임 4종 (도트) — 의상 고정·다리만",
+      "status": "review",
+      "preview": "samples/cast-v2/walk/preview-2x.png",
+      "comparePreview": null,
+      "artifact": "samples/cast-v2/walk",
+      "qa": "의상차 0.11~0.94 · 다리차 7.20~24.76 · hip 0.45 bob 0 · 다리상자 자동(발띠)",
+      "harness": "claude-code",
+      "commit": "868f2b5",
+      "createdAt": "2026-10-02T10:59:43.512Z",
+      "contentHash": "84434a78691c62c2dfb54bcd7e9b727b4b96302bcbd357f43e1239c949a4e365"
     }
   ]
 }

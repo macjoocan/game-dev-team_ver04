@@ -329,6 +329,16 @@ node skills/char-art-system/scripts/cutout.mjs <출력.png> --out cut --feather 
 node skills/char-art-system/scripts/pixel-contract.mjs cut --cell 48
 ```
 
+**배치로 뽑았으면 `pickedSeed` 를 적어라.** 생성은 "3장 뽑았다"까지만 기록한다 —
+**그중 뭘 골랐는지는 사람이 적어야 한다.** 안 적으면 나중에 같은 프롬프트로 복원해도
+**다른 그림이 나온다**(2026-10-02 실측: `ls | sed -n 3p` 로 집은 게 2번째 시드였는데
+복원할 땐 `runs[0]` 을 썼다).
+
+**갇힌 배경은 양자화 전에 잡아라.** 팔레트 양자화 뒤에는 배경 잔재와 캐릭터 흰색이
+같은 팔레트 색으로 합쳐져 **색·크기·위치 어느 것으로도 못 가른다**(실측: 둘 다 `239,241,243`).
+`--enclosed` 를 쓸지는 **배경색과 캐릭터 흰색의 거리**로 정한다 —
+픽셀아트 LoRA 는 배경 208 / 흰색 255 로 멀어서 안전하고, Animagine 은 252 / 255 로 붙어서 위험하다.
+
 **생성 기록은 `run-log.json` 하나로 끝난다.** 프롬프트 본문(`--set` 치환 반영) · 모델 파일명
 (체크포인트·LoRA·VAE·ControlNet) · **제출 직전** 워크플로 해시 · 시드 · 출력 파일 sha256 ·
 ComfyUI 버전 · GPU 가 들어간다. 손으로 manifest 에 옮겨 적을 것이 없다.

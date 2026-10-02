@@ -46,5 +46,7 @@
     }
   ],
   "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
-  "finishedAt": "2026-10-02T06:10:00.631Z"
+  "finishedAt": "2026-10-02T06:10:00.631Z",
+  "pickedSeed": 8202,
+  "pickNote": "배치 3장 중 사람이 고른 시드. 2026-10-02 에 이 기록이 없어 복원 시 다른 그림이 나왔다."
 }
