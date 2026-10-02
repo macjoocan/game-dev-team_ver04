@@ -1,0 +1,281 @@
+{
+  "generatedFrom": "spec.json",
+  "tileSize": 32,
+  "tiles": [
+    {
+      "name": "grass_0",
+      "file": "grass_0.png",
+      "material": "grass",
+      "variant": 0,
+      "seed": 11,
+      "seamH": 30.38,
+      "seamV": 25.31,
+      "maxCol": 55.69,
+      "maxRow": 65.81
+    },
+    {
+      "name": "grass_1",
+      "file": "grass_1.png",
+      "material": "grass",
+      "variant": 1,
+      "seed": 112,
+      "seamH": 35.44,
+      "seamV": 20.25,
+      "maxCol": 55.69,
+      "maxRow": 60.75
+    },
+    {
+      "name": "grass_2",
+      "file": "grass_2.png",
+      "material": "grass",
+      "variant": 2,
+      "seed": 213,
+      "seamH": 25.31,
+      "seamV": 20.25,
+      "maxCol": 45.56,
+      "maxRow": 55.69
+    },
+    {
+      "name": "dirt_0",
+      "file": "dirt_0.png",
+      "material": "dirt",
+      "variant": 0,
+      "seed": 23,
+      "seamH": 2.59,
+      "seamV": 0,
+      "maxCol": 25.94,
+      "maxRow": 23.34
+    },
+    {
+      "name": "dirt_1",
+      "file": "dirt_1.png",
+      "material": "dirt",
+      "variant": 1,
+      "seed": 124,
+      "seamH": 5.19,
+      "seamV": 7.78,
+      "maxCol": 20.75,
+      "maxRow": 18.16
+    },
+    {
+      "name": "stone_0",
+      "file": "stone_0.png",
+      "material": "stone",
+      "variant": 0,
+      "seed": 37,
+      "seamH": 14.16,
+      "seamV": 9.44,
+      "maxCol": 47.19,
+      "maxRow": 37.75
+    },
+    {
+      "name": "stone_1",
+      "file": "stone_1.png",
+      "material": "stone",
+      "variant": 1,
+      "seed": 138,
+      "seamH": 0,
+      "seamV": 18.88,
+      "maxCol": 42.47,
+      "maxRow": 23.59
+    },
+    {
+      "name": "grass-dirt_00",
+      "file": "grass-dirt_00.png",
+      "transition": "grass->dirt",
+      "cornerMask": 0,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_01",
+      "file": "grass-dirt_01.png",
+      "transition": "grass->dirt",
+      "cornerMask": 1,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 0,
+        "bottomLeft": 0,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_02",
+      "file": "grass-dirt_02.png",
+      "transition": "grass->dirt",
+      "cornerMask": 2,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 1,
+        "bottomLeft": 0,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_03",
+      "file": "grass-dirt_03.png",
+      "transition": "grass->dirt",
+      "cornerMask": 3,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 1,
+        "bottomLeft": 0,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_04",
+      "file": "grass-dirt_04.png",
+      "transition": "grass->dirt",
+      "cornerMask": 4,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 1,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_05",
+      "file": "grass-dirt_05.png",
+      "transition": "grass->dirt",
+      "cornerMask": 5,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 0,
+        "bottomLeft": 1,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_06",
+      "file": "grass-dirt_06.png",
+      "transition": "grass->dirt",
+      "cornerMask": 6,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 1,
+        "bottomLeft": 1,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_07",
+      "file": "grass-dirt_07.png",
+      "transition": "grass->dirt",
+      "cornerMask": 7,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 1,
+        "bottomLeft": 1,
+        "bottomRight": 0
+      }
+    },
+    {
+      "name": "grass-dirt_08",
+      "file": "grass-dirt_08.png",
+      "transition": "grass->dirt",
+      "cornerMask": 8,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 0,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_09",
+      "file": "grass-dirt_09.png",
+      "transition": "grass->dirt",
+      "cornerMask": 9,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 0,
+        "bottomLeft": 0,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_10",
+      "file": "grass-dirt_10.png",
+      "transition": "grass->dirt",
+      "cornerMask": 10,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 1,
+        "bottomLeft": 0,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_11",
+      "file": "grass-dirt_11.png",
+      "transition": "grass->dirt",
+      "cornerMask": 11,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 1,
+        "bottomLeft": 0,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_12",
+      "file": "grass-dirt_12.png",
+      "transition": "grass->dirt",
+      "cornerMask": 12,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 0,
+        "bottomLeft": 1,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_13",
+      "file": "grass-dirt_13.png",
+      "transition": "grass->dirt",
+      "cornerMask": 13,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 0,
+        "bottomLeft": 1,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_14",
+      "file": "grass-dirt_14.png",
+      "transition": "grass->dirt",
+      "cornerMask": 14,
+      "corners": {
+        "topLeft": 0,
+        "topRight": 1,
+        "bottomLeft": 1,
+        "bottomRight": 1
+      }
+    },
+    {
+      "name": "grass-dirt_15",
+      "file": "grass-dirt_15.png",
+      "transition": "grass->dirt",
+      "cornerMask": 15,
+      "corners": {
+        "topLeft": 1,
+        "topRight": 1,
+        "bottomLeft": 1,
+        "bottomRight": 1
+      }
+    }
+  ],
+  "sheet": {
+    "path": "tileset.png",
+    "columns": 23,
+    "rows": 1,
+    "padding": 0
+  }
+}
