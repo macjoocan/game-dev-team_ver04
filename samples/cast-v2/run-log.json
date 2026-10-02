@@ -1,0 +1,49 @@
+{
+  "workflow": "sdxl-character.api.json",
+  "workflowSha256": "0441944eadab4247783e3f0bc0ce3f9b75a0c302ed21f3b0911a4afe2e395e41",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, 1other, large ogre, purple skin, iron armor, giant hammer, tusks",
+    "7": "ornate frame, border, decorative frame, background, scenery, landscape, petals, leaves, pattern, vignette, lowres, worst quality, low quality, jpeg artifacts, 3d, realistic, photo, colored background, gradient, multiple views, turnaround, multiple characters, text, watermark, cropped"
+  },
+  "models": {
+    "4.ckpt_name": "animagine-xl-4.0.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T02:26:42.134Z",
+  "runs": [
+    {
+      "seed": 4101,
+      "promptId": "dde65b7f-3241-4109-ac90-d911299b9df0",
+      "files": [
+        {
+          "name": "s4101_char_00043_.png",
+          "sha256": "7e616781309b3e5208a26111d8531485fac9bc176b90b157e19fa919beb5c365"
+        }
+      ]
+    },
+    {
+      "seed": 4102,
+      "promptId": "d616370f-a504-464a-90ec-7cc7d48082ed",
+      "files": [
+        {
+          "name": "s4102_char_00044_.png",
+          "sha256": "36d52221d67754eb32fc65f69d0e088698e8aa17c012949cec53db7b927db2a7"
+        }
+      ]
+    },
+    {
+      "seed": 4103,
+      "promptId": "1e71867b-6148-413a-9525-08dd1ecf7081",
+      "files": [
+        {
+          "name": "s4103_char_00045_.png",
+          "sha256": "0d536aa063a3351881a02b3ea5242e24cc78d0a96cf207796839a269779b3b27"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T02:27:32.839Z"
+}

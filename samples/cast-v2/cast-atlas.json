@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "image": "cast-atlas.png",
+    "size": {
+      "w": 512,
+      "h": 1040
+    },
+    "padding": 2,
+    "trimmed": false,
+    "originTopLeft": true,
+    "note": "유니티 Sprite Editor 는 좌하단 원점이다. y 를 뒤집어 넣어라.",
+    "fps": 8,
+    "totalMs": 500,
+    "timingNote": "fps 와 durationMs 가 충돌하면 durationMs 를 따른다."
+  },
+  "frames": [
+    {
+      "name": "boss",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 256,
+        "h": 256
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "chaser",
+      "frame": {
+        "x": 2,
+        "y": 262,
+        "w": 256,
+        "h": 256
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "hero",
+      "frame": {
+        "x": 2,
+        "y": 522,
+        "w": 256,
+        "h": 256
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "lunger",
+      "frame": {
+        "x": 2,
+        "y": 782,
+        "w": 256,
+        "h": 256
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 256,
+        "h": 256
+      },
+      "sourceSize": {
+        "w": 256,
+        "h": 256
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    }
+  ]
+}

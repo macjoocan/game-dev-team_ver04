@@ -1,0 +1,49 @@
+{
+  "workflow": "sdxl-character.api.json",
+  "workflowSha256": "6659b9c0682f20dc6e3cfb5677ee6c759927adf23893dbf655df3d0713bd2899",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, 1boy, knight, blue tunic, brown boots, round shield, short sword, brown hair",
+    "7": "ornate frame, border, decorative frame, background, scenery, landscape, petals, leaves, pattern, vignette, lowres, worst quality, low quality, jpeg artifacts, 3d, realistic, photo, colored background, gradient, multiple views, turnaround, multiple characters, text, watermark, cropped"
+  },
+  "models": {
+    "4.ckpt_name": "animagine-xl-4.0.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T02:23:23.788Z",
+  "runs": [
+    {
+      "seed": 1101,
+      "promptId": "e051cf3d-684c-4081-8c83-3a7aa5365ae5",
+      "files": [
+        {
+          "name": "s1101_char_00034_.png",
+          "sha256": "80b68e9c63d9babc436ebc0addf4912eaecddc42437a865ad7e36dff48d1fce4"
+        }
+      ]
+    },
+    {
+      "seed": 1102,
+      "promptId": "2cebbd83-1af0-4285-a68c-2dcde5d75519",
+      "files": [
+        {
+          "name": "s1102_char_00035_.png",
+          "sha256": "022569da2e98d8df0b10f0920bb3367c3b9ccc7f8d8d435bef11f2a2562dec19"
+        }
+      ]
+    },
+    {
+      "seed": 1103,
+      "promptId": "94b41f08-1a82-4a50-a90b-3d913f0484fa",
+      "files": [
+        {
+          "name": "s1103_char_00036_.png",
+          "sha256": "b74bd0e87e1f053a637353365674302f9d4df653e2d8b8d373e974eb66407691"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T02:25:01.326Z"
+}

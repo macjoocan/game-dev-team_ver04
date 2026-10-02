@@ -37,6 +37,7 @@ const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 if (!input || input.startsWith('--') || args.includes('-h') || args.includes('--help')) {
   console.error('usage: node pixel-contract.mjs <스프라이트.png|폴더> [--cell 48] [--out dir]');
+  console.error('  --cast  여러 파일이 **한 팔레트를 나눠 쓰는** 경우. 합집합으로 판정한다(캐스트 단위)');
   console.error('       [--colors 16,32] [--lonely 0.04,0.15] [--flat 0.08] [--semi 0.005]');
   process.exit(2);
 }
@@ -99,6 +100,7 @@ function measure(img, x0, y0, w, h) {
 
 const rows = [];
 const sheetPalette = new Map();   // 파일 -> 색 합집합
+let castUnionSize = null;         // --cast 일 때 전체 합집합 크기
 for (const f of files) {
   let img;
   try { img = readPNG(f); } catch { continue; }
@@ -134,10 +136,25 @@ for (const r of rows) {
 }
 
 // 팔레트는 **시트 속성**이다 — 프레임마다 거는 게 아니라 파일 전체 합집합으로 본다.
+//
+// `--cast` 는 한 층 더 올린다: **여러 파일이 한 팔레트를 나눠 쓰는 경우**(캐스트)다.
+// 주인공·적·보스가 공용 24색을 쓰면 각자는 11~18색만 쓴다 — 파일별로 하한 16 을 걸면
+// 정상인 캐스트가 통째로 미달이 된다(2026-10-02 실측에서 실제로 났다).
+// 이건 2026-09-14 에 "프레임 -> 시트" 로 고친 것과 **같은 계열의 버그**이고 층위만 다르다.
+// 판정 단위는 "팔레트를 공유하는 범위"여야 한다.
+const CAST = args.includes('--cast');
 const sheetBad = [];
-for (const [f, set] of sheetPalette) {
-  if (set.size < CMIN || set.size > CMAX)
-    sheetBad.push(`${path.basename(f)}: 시트 팔레트 ${set.size}색 (${CMIN}~${CMAX} 밖)`);
+if (CAST) {
+  const union = new Set();
+  for (const set of sheetPalette.values()) for (const c of set) union.add(c);
+  if (union.size < CMIN || union.size > CMAX)
+    sheetBad.push(`캐스트 공용 팔레트 ${union.size}색 (${CMIN}~${CMAX} 밖) · 파일 ${sheetPalette.size}개`);
+  castUnionSize = union.size;
+} else {
+  for (const [f, set] of sheetPalette) {
+    if (set.size < CMIN || set.size > CMAX)
+      sheetBad.push(`${path.basename(f)}: 시트 팔레트 ${set.size}색 (${CMIN}~${CMAX} 밖)`);
+  }
 }
 const bad = fails.length + sheetBad.length;
 
@@ -146,7 +163,8 @@ L.push('# 도트 계약 판정\n');
 L.push(`\`${input}\` · 프레임 ${rows.length}개\n`);
 L.push('## [주장]');
 L.push(bad ? `판정: **미달** — ${sheetBad.length ? `시트 팔레트 ${sheetBad.length}건 · ` : ''}프레임 ${fails.length}/${rows.length}\n`
-           : `판정: **충족** — ${rows.length}개 프레임 · 시트 팔레트 ${[...sheetPalette.values()].map((s2) => s2.size).join('/')}색\n`);
+           : `판정: **충족** — ${rows.length}개 프레임 · ${castUnionSize !== null ? `캐스트 공용 팔레트 ${castUnionSize}색 (파일별 ${[...sheetPalette.values()].map((s2) => s2.size).join('/')})` : `시트 팔레트 ${[...sheetPalette.values()].map((s2) => s2.size).join('/')}색`}
+`);
 L.push('## [증거]\n```');
 L.push('프레임'.padEnd(30) + '색'.padStart(5) + '외톨이'.padStart(9) + '평평'.padStart(8) + '반투명'.padStart(9) + '  판정');
 for (const r of rows) {
