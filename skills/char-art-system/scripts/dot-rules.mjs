@@ -22,16 +22,45 @@ import { readPNG } from '../../../scripts/lib-png-read.mjs';
 import { toLab, parseHex } from '../../../scripts/lib-color.mjs';
 
 const args = process.argv.slice(2);
+import fsx from 'node:fs';
+// 동봉 프로필 — `--against stardewvalley` 처럼 **이름만으로** 고를 수 있다.
+// 목표 게임은 프로젝트마다 다르다. "상용 도트의 규칙"이라는 단일 기준은 없다(아래 참조).
+const PROFILE_DIR = path.join(path.dirname(new URL(import.meta.url).pathname.replace(/^\//, '')), '..', 'references', 'style-profiles');
+function listProfiles() {
+  try { return fs.readdirSync(PROFILE_DIR).filter((f) => f.endsWith('.json')).map((f) => f.replace('.json', '')); }
+  catch { return []; }
+}
+if (args.includes('--list')) {
+  const rows = listProfiles().map((g) => { const j = JSON.parse(fs.readFileSync(path.join(PROFILE_DIR, g + '.json'), 'utf8')); return { g, c: j.class, step: j.shade?.maxSteps?.median, cv: j.jaggy?.cv?.median }; });
+  rows.sort((a, b) => (a.c === b.c ? a.cv - b.cv : a.c < b.c ? -1 : 1));
+  console.log('동봉 프로필 — `--against <이름>` 으로 쓴다');
+  console.log('');
+  console.log('  이름                부류    계단cv  색군당단계');
+  for (const r of rows) console.log(`  ${r.g.padEnd(20)}${String(r.c).padEnd(8)}${String(r.cv).padStart(6)}${String(r.step).padStart(10)}`);
+  console.log('');
+  console.log('  **색군당 단계가 도트와 HD 를 가른다** — 도트 2~26, HD 2D 82~606 (실측).');
+  console.log('  목표 게임은 프로젝트가 고른다. 단일 "상용 기준"은 없다.');
+  process.exit(0);
+}
+
 const target = args[0];
 if (!target || target.startsWith('--')) {
   console.error('usage: node dot-rules.mjs <레퍼런스폴더> [--sample 400] [--out rules.json]');
-  console.error('       node dot-rules.mjs <대상.png|폴더> --against rules.json');
+  console.error('       node dot-rules.mjs <대상.png|폴더> --against <rules.json|게임이름>');
+  console.error('       node dot-rules.mjs --list        동봉된 상용 게임 프로필 목록');
   console.error('  측정 축: 계단 런렝스 · 외곽선 · 명암 단계. (색 수·반투명·외톨이는 pixel-contract 가 본다)');
   process.exit(2);
 }
 const opt = (n, d = null) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 const SAMPLE = Number(opt('--sample', 400));
-const AGAINST = opt('--against', null);
+let AGAINST = opt('--against', null);
+
+if (AGAINST && !AGAINST.endsWith('.json')) {
+  const cand = path.join(PROFILE_DIR, AGAINST + '.json');
+  if (!fs.existsSync(cand)) { console.error(`모르는 프로필: ${AGAINST}
+동봉 목록: ${listProfiles().join(', ')}`); process.exit(2); }
+  AGAINST = cand;
+}
 
 function listPngs(root, limit) {
   const out = [];
