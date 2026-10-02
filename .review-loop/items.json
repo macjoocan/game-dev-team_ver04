@@ -96,6 +96,22 @@
       "commit": "ddad053",
       "createdAt": "2026-10-02T02:01:15.828Z",
       "contentHash": "a082618d4cf4e1b39f887a8c49e561e409322582f57d23555f64f85ac11a8c6b"
+    },
+    {
+      "key": "art.cast-v2@1",
+      "id": "art.cast-v2",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "새 캐스트 4종 — 기사·고블린·스켈레톤·오거 (공용 24색)",
+      "status": "review",
+      "preview": "samples/cast-v2/compare.png",
+      "comparePreview": null,
+      "artifact": "samples/cast-v2",
+      "qa": "캐스트 공용 24색 · 반투명 0% · 실루엣 100%(dE 3.2~5.3) · 도트 계약 충족 · 상대 크기 0.75/1.0/1.05/1.4",
+      "harness": "claude-code",
+      "commit": "5c10c3b",
+      "createdAt": "2026-10-02T02:41:36.148Z",
+      "contentHash": "9f7fc9afaa285a5d6e5d0bbfcc75443b850fc2695d857cafc7e1ee032faa8f6d"
     }
   ]
 }
