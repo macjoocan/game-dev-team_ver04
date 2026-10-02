@@ -235,6 +235,16 @@ node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out fo
   "31색·반투명 0%" 로 통과할 뻔했다. `palette-force --verify-only`(실루엣·dE)를 같이 돌려라
 - `--apply`(Node, Lab)와 Aseprite(RGB)는 **같은 작업이 아니다**. 같은 팔레트에서 픽셀 29% 가 다르다
 
+### 보정 규칙은 레퍼런스에서 재서 뽑는다
+```bash
+node skills/char-art-system/scripts/dot-rules.mjs <레퍼런스폴더> --sample 800 --out rules.json
+node skills/char-art-system/scripts/dot-rules.mjs <우리결과> --against rules.json
+```
+계약이 안 보는 축(계단 런렝스·외곽선·명암 단계)의 **분포**를 낸다. 게이트가 아니다.
+- 상용 755장 실측: 계단 cv 0.52~0.89 · 외곽선 어두움 중앙값 **-0.012**(사실상 없음) · **색군 1~5**
+- **색군은 한 장당 수치다.** 캐스트에 `--hues` 로 강제하면 캐릭터 고유색이 서로 끌려간다 —
+  기사 파랑이 오거 보라로 빨려 들어가 얼굴이 뭉갰다(dE 4.5 로 낮은데 눈으로는 나빴다)
+
 ### 걷기 애니메이션 — 생성이 아니라 **코드 합성**
 ```bash
 node skills/char-art-system/scripts/walk-composite.mjs <파츠폴더> --out dir --nearest

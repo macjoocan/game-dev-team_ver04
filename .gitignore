@@ -43,3 +43,6 @@ classify/
 !samples/**/*.png
 .review-loop/*.lock
 .review-loop/*.tmp-*
+
+# Windows 예약 이름 — /dev/null 로 출력을 버리려다 생긴다
+nul

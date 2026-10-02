@@ -33,6 +33,7 @@ const args = process.argv.slice(2);
 if (!args.length || args.includes('-h') || args.includes('--help')) {
   console.error('usage: node palette-force.mjs <폴더|파일...> --out <dir> [--colors 24] [--palette <pal.json>]');
   console.error('  --colors   뽑을 공용 색 수 (기본 24 — 상용 도트 300장 중앙값 22, 대역 16~32)');
+  console.error('  --hues N   색상 계열을 N개로 제약한다. **캐스트 전체에 걸린다 — 보통 쓰지 마라**(아래 주의)');
   console.error('  --palette  직접 정한 팔레트를 쓴다. {"colors":["#rrggbb",...]} 또는 ["#rrggbb",...]');
   console.error('  --verify-only  Lua 를 만들지 않고, --out 에 이미 있는 결과만 검사한다');
   console.error('  --apply        Aseprite 없이 Node 에서 바로 최근접 매핑한다 (기본 경로)');
@@ -41,6 +42,7 @@ if (!args.length || args.includes('-h') || args.includes('--help')) {
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
 const OUT = opt('--out', 'palette-out');
 const K = Number(opt('--colors', 24));
+const HUES = Number(opt('--hues', 0));   // 0 = 제약 없음(기존 동작)
 const PAL_IN = opt('--palette', null);
 const VERIFY_ONLY = args.includes('--verify-only');
 
@@ -48,7 +50,7 @@ const VERIFY_ONLY = args.includes('--verify-only');
 const inputs = [];
 for (let i = 0; i < args.length; i++) {
   const a = args[i];
-  if (a.startsWith('--')) { if (['--out', '--colors', '--palette'].includes(a)) i++; continue; }
+  if (a.startsWith('--')) { if (['--out', '--colors', '--palette', '--hues'].includes(a)) i++; continue; }
   if (!fs.existsSync(a)) continue;
   if (fs.statSync(a).isDirectory()) {
     for (const f of fs.readdirSync(a)) if (f.toLowerCase().endsWith('.png')) inputs.push(path.join(a, f));
@@ -109,6 +111,92 @@ function kmeansLab(pixels, k, iters = 24) {
     if (!moved) break;
   }
   return cent.filter((c) => c.rgb).map((c) => c.rgb);
+}
+
+/**
+ * 색상 계열을 N개로 제약해 팔레트를 뽑는다 (`--hues`).
+ *
+ * **주의 — 이건 캐스트 전체에 걸린다. 보통은 쓰지 마라.**
+ * 상용 도트의 "색상 계열 1~5개"는 **스프라이트 한 장당** 수치다(실측 755장).
+ * 캐스트 전체에 그 수를 강제하면 **캐릭터 고유색이 서로 끌려간다** —
+ * 실측(2026-10-02): 캐스트 4종에 `--hues 4` 를 걸었더니 기사의 파란 튜닉이
+ * 오거의 보라 계열로 빨려 들어가 얼굴까지 뭉갰다. dE 는 4.5 로 낮았는데 눈으로는 분명히 나빴다.
+ *
+ * 고블린은 초록, 기사는 파랑, 오거는 보라 — 캐스트 전체로 보면 색군이 많은 게 **정상**이다.
+ * 색군을 보려면 **스프라이트 한 장씩** 재라: `dot-rules.mjs <한장.png>`.
+ * 이 옵션은 "의도적으로 한 톤으로 묶고 싶을 때"(예: 흑백 회상 씬) 쓴다.
+ *
+ * 그냥 k-means 를 돌리면 색상이 흩어진다. 실측(2026-10-02):
+ * 상용 도트는 **색상 계열 1~5개**를 쓰는데 우리 결과물은 **7~10개**였다.
+ * 24색을 쓰더라도 색상을 흩뿌리는 게 아니라 **몇 개 계열 안에서 명암 단계를 쓰는 것**이 도트 문법이다.
+ *
+ * 2단계로 푼다:
+ *   1) 색도(a,b)만 보고 N개 계열로 묶는다 — 밝기는 무시한다(같은 색의 명암은 같은 계열이다)
+ *   2) 계열마다 픽셀 양에 비례해 색 예산을 나누고, 그 안에서 **밝기(L)로만** 단계를 뽑는다
+ *
+ * 무채색(채도가 낮은 픽셀)은 별도 계열로 둔다. 회색 램프를 색상 계열로 세면 예산이 샌다.
+ */
+function kmeansPalette(pixels, k, hues) {
+  const labs = pixels.map((p) => ({ ...p, lab: toLab(p) }));
+  const CHROMA_MIN = 6;                       // 이 밑은 무채색으로 본다
+  const chromatic = [], neutral = [];
+  for (const e of labs) (Math.hypot(e.lab.a, e.lab.b) >= CHROMA_MIN ? chromatic : neutral).push(e);
+
+  // 1) 색도만으로 계열 나누기 (k-means++ 초기화, 결정론적)
+  const want = Math.max(1, hues);
+  const cent = [];
+  if (chromatic.length) {
+    cent.push({ a: chromatic[Math.floor(chromatic.length / 2)].lab.a, b: chromatic[Math.floor(chromatic.length / 2)].lab.b });
+    const step = Math.max(1, Math.floor(chromatic.length / 4000));
+    while (cent.length < want) {
+      let best = null, bd = -1;
+      for (let i = 0; i < chromatic.length; i += step) {
+        let d = Infinity;
+        for (const c of cent) d = Math.min(d, Math.hypot(chromatic[i].lab.a - c.a, chromatic[i].lab.b - c.b));
+        if (d > bd) { bd = d; best = chromatic[i].lab; }
+      }
+      if (!best || bd <= 0) break;
+      cent.push({ a: best.a, b: best.b });
+    }
+    for (let it = 0; it < 12; it++) {
+      const sum = cent.map(() => ({ a: 0, b: 0, n: 0 }));
+      for (const e of chromatic) {
+        let bi = 0, bd = Infinity;
+        for (let c = 0; c < cent.length; c++) { const d = Math.hypot(e.lab.a - cent[c].a, e.lab.b - cent[c].b); if (d < bd) { bd = d; bi = c; } }
+        e.famIdx = bi; const S = sum[bi];   // `g` 를 쓰면 **초록 채널을 덮는다**(실제로 밟았다) S.a += e.lab.a; S.b += e.lab.b; S.n++;
+      }
+      for (let c = 0; c < cent.length; c++) if (sum[c].n) { cent[c].a = sum[c].a / sum[c].n; cent[c].b = sum[c].b / sum[c].n; }
+    }
+  }
+
+  // 2) 계열별 예산 — 픽셀 양에 비례. 무채색 램프도 한 몫을 받는다.
+  const families = cent.map((_, i) => chromatic.filter((e) => e.famIdx === i));
+  if (neutral.length) families.push(neutral);
+  const total = labs.length;
+  const budget = families.map((f) => Math.max(2, Math.round((f.length / total) * k)));
+  // 합을 k 에 맞춘다 (큰 계열부터 조정)
+  const order = families.map((f, i) => i).sort((x, y) => families[y].length - families[x].length);
+  let sum = budget.reduce((a, b) => a + b, 0);
+  for (let i = 0; sum !== k && i < 1000; i++) {
+    const idx = order[i % order.length];
+    if (sum > k && budget[idx] > 2) { budget[idx]--; sum--; }
+    else if (sum < k) { budget[idx]++; sum++; }
+  }
+
+  // 3) 계열 안에서는 **밝기로만** 단계를 나눈다 — 1차원 k-means
+  const out = [];
+  families.forEach((fam, i) => {
+    if (!fam.length) return;
+    const n = Math.min(budget[i], fam.length);
+    const sorted = [...fam].sort((x, y) => x.lab.L - y.lab.L);
+    for (let s = 0; s < n; s++) {
+      const lo = Math.floor((s * sorted.length) / n), hi = Math.floor(((s + 1) * sorted.length) / n);
+      let r = 0, g = 0, b = 0, c = 0;
+      for (let t = lo; t < hi; t++) { r += sorted[t].r; g += sorted[t].g; b += sorted[t].b; c++; }
+      if (c) out.push({ r: r / c, g: g / c, b: b / c });
+    }
+  });
+  return out;
 }
 
 fs.mkdirSync(OUT, { recursive: true });
@@ -192,7 +280,8 @@ if (PAL_IN) {
   const all = [];
   for (const f of inputs) all.push(...opaquePixels(f));
   console.log(`캐스트 ${inputs.length}장 · 불투명 픽셀 ${all.length}개에서 공용 ${K}색을 뽑는다`);
-  colors = kmeansLab(all, K).map(toHex);
+  colors = (HUES > 0 ? kmeansPalette(all, K, HUES) : kmeansLab(all, K)).map(toHex);
+  if (HUES > 0) console.log(`  색상 계열 ${HUES}개로 제약 (상용 실측 1~5)`);
   console.log(`  -> ${colors.length}색`);
 }
 fs.writeFileSync(path.join(OUT, 'palette.json'), JSON.stringify({ colors }, null, 2));
