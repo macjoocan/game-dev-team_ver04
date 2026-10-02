@@ -1,29 +1,29 @@
 {
   "workflow": "sdxl-character.api.json",
-  "workflowSha256": "6659b9c0682f20dc6e3cfb5677ee6c759927adf23893dbf655df3d0713bd2899",
+  "workflowSha256": "e28d90a08094eff24c665e573730f286d93ea671a11844739d348cbdf37ad0aa",
   "host": "127.0.0.1:8188",
   "style": null,
   "prompts": {
-    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, 1boy, knight, blue tunic, brown boots, round shield, short sword, brown hair",
+    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, 1other, small goblin, green skin, brown ragged clothes, dagger, pointed ears",
     "7": "ornate frame, border, decorative frame, background, scenery, landscape, petals, leaves, pattern, vignette, lowres, worst quality, low quality, jpeg artifacts, 3d, realistic, photo, colored background, gradient, multiple views, turnaround, multiple characters, text, watermark, cropped"
   },
   "models": {
     "4.ckpt_name": "animagine-xl-4.0.safetensors"
   },
   "comfyVersion": "0.33.1",
-  "startedAt": "2026-10-02T03:19:59.220Z",
+  "startedAt": "2026-10-02T03:21:07.808Z",
   "runs": [
     {
-      "seed": 1102,
-      "promptId": "1e744976-87e6-420b-9d5a-894ee4d6cc30",
+      "seed": 2103,
+      "promptId": "ada7349b-7923-488f-95f5-301cebde58c7",
       "files": [
         {
-          "name": "s1102_char_00061_.png",
-          "sha256": "022569da2e98d8df0b10f0920bb3367c3b9ccc7f8d8d435bef11f2a2562dec19"
+          "name": "s2103_char_00062_.png",
+          "sha256": "e0d6410f5d9c2b78593c5469a4a4fef5568b31ec020ede3cd758f4694170017f"
         }
       ]
     }
   ],
   "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
-  "finishedAt": "2026-10-02T03:21:00.262Z"
+  "finishedAt": "2026-10-02T03:21:24.132Z"
 }

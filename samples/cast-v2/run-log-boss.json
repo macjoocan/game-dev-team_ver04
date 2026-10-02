@@ -11,39 +11,19 @@
     "4.ckpt_name": "animagine-xl-4.0.safetensors"
   },
   "comfyVersion": "0.33.1",
-  "startedAt": "2026-10-02T02:30:58.799Z",
+  "startedAt": "2026-10-02T03:22:06.387Z",
   "runs": [
     {
-      "seed": 4201,
-      "promptId": "bf9678f4-6cf7-40e8-a54e-3d09f4273052",
-      "files": [
-        {
-          "name": "s4201_char_00046_.png",
-          "sha256": "1d88844038c818c0f95f8f3dbc9fd5f9266f31eb45d32bbbd4cfe8e33ffee390"
-        }
-      ]
-    },
-    {
       "seed": 4202,
-      "promptId": "f3c9fe41-1b66-4671-a7d9-719792680eea",
+      "promptId": "0d178ae5-3dbd-4d6f-abe1-cc8b6f791621",
       "files": [
         {
-          "name": "s4202_char_00047_.png",
+          "name": "s4202_char_00064_.png",
           "sha256": "21888f45077442589578f857c1388dad53a929f783b95f069cc547f19748918f"
-        }
-      ]
-    },
-    {
-      "seed": 4203,
-      "promptId": "d9acf22b-20e8-463c-931b-277cdfba4b8e",
-      "files": [
-        {
-          "name": "s4203_char_00048_.png",
-          "sha256": "6bf6d4dd5381babbba3504454d4daa804538e5827637e15f4c5828ed4732e145"
         }
       ]
     }
   ],
   "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
-  "finishedAt": "2026-10-02T02:32:28.445Z"
+  "finishedAt": "2026-10-02T03:22:26.645Z"
 }

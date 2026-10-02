@@ -1,0 +1,44 @@
+{
+  "canvas": 256,
+  "baseHeightPx": 150,
+  "floorMarginPx": 10,
+  "anchor": "bottom-center",
+  "sprites": {
+    "chaser": {
+      "relativeScale": 0.75,
+      "heightPx": 113,
+      "widthPx": 69,
+      "anchorPx": [
+        128,
+        246
+      ]
+    },
+    "hero": {
+      "relativeScale": 1,
+      "heightPx": 150,
+      "widthPx": 97,
+      "anchorPx": [
+        128,
+        246
+      ]
+    },
+    "lunger": {
+      "relativeScale": 1.05,
+      "heightPx": 158,
+      "widthPx": 117,
+      "anchorPx": [
+        128,
+        246
+      ]
+    },
+    "boss": {
+      "relativeScale": 1.4,
+      "heightPx": 210,
+      "widthPx": 148,
+      "anchorPx": [
+        128,
+        246
+      ]
+    }
+  }
+}
