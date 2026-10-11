@@ -1,0 +1,161 @@
+{
+  "id": "chr.fantasy.scail2.thrust",
+  "status": "concept",
+  "frames": 25,
+  "fps": 24,
+  "canvas": [
+    160,
+    160
+  ],
+  "pivot": [
+    0.5,
+    1
+  ],
+  "source": "local pilot; see docs/art",
+  "source_hashes": [
+    "3b6579875adbb07f72bc644fcc3d2ce6450584cdc533894c5aa70e081ea23165",
+    "74c1f28b9283b4e3967ce3218f1fe847c99854adc1ec40047960742eb1195544",
+    "1920bd606530da4988b7bd45d74874c90e81938f3c4b6625abea48dae3393664",
+    "e5d8230103828c76685b8be7a4c62492b7f5aa46d6d7d900bf9741b4be573cc3",
+    "407ca5e9645b1a267174f53ffd30aa07362823ad36f719ca20521cfa832a7d8e",
+    "8ca3dbc4fc67a5bd6fdcaf6ab0cad64ef0a2a75134d94dbbcf36982180a21ded",
+    "17d6edf5374d06294c6530ce361d2b4889113064736c054454fd096dd198bcd2",
+    "e416f71e68d4e6b4242c79b6555259c84b91cb27fe42842d20df45b0f0039300",
+    "88eac1dcbd8f101db85c3c47a70c0fb89667cdbe0031467be27ec3aac439bc32",
+    "1771c5f9cb43ba591dc7d0d029df479d363e8f9adbac7fa022caf78a0af50bea",
+    "f1bc81b0a33329f46c086bb24971be7c47cd99ca181344e9f777cc2552f89df2",
+    "c0c4f65f523146405c5279e980a63feaad74ae3c558389cc3999712ad9143c7f",
+    "4c63c9b66911f656e0a07296a3d38cd809388736f35beec1de820834b4f0992d",
+    "3872192062a1075ad65a03f7ac8a0075eb9d9881d6fa70510d5f7dbf73e2dd68",
+    "5c14b4dd2ec6cef43501ff8d51fe7f0303cd725f6055c890b696345deb882799",
+    "d8191a99e615cc6a7840e18a9f9dc7357a9eae7cf54351324b41748b9f0278d0",
+    "8552434357f3b7dc0152640ac92bdca4d2e98f39749692c57ffbd057ea69f007",
+    "0addf7e6e37ff64d900604978afa7384161ec84642bf8b65b21e05108d56da80",
+    "61de50246ea9203237a21f5e3a38d29de58828c1cc22ddaa175cedaabf3c86fb",
+    "c694bd91ed88b34b4d1f172bafd304359cb4763afadfb45f431a466734e00ffc",
+    "62b5c7c76709024f69f6efb7442dfb100554c8f7110187e83ed4488a4e0fda32",
+    "70fe85b0f2314fe0afc2c4699879a1e7aac774cd9301983c6987131917c5c34a",
+    "ac5479768b99ba3f5fc662e5149ca86a7e0aa000ac0d232f72249d2888a013be",
+    "3f81f58adbedd69f14b238b7544eb60a992d78ea41b48120f59883d1678bee2a",
+    "b34332160cd9d062efe648d2ed2cac9d090f81431a0b063d97302b63fde5b41f"
+  ],
+  "pixel": false,
+  "pixeloe": false,
+  "clean": 0,
+  "approval": "pending-human-motion-review",
+  "sheet": "sheet.png",
+  "files": [
+    {
+      "path": "frame_0000.png",
+      "sha256": "4e8fbeb2c3c2f17fac4e40119cd7c1323323505ef3936ef3b6740d2864c43eb1"
+    },
+    {
+      "path": "frame_0001.png",
+      "sha256": "b381dfcfffb7671be4cb77938c3d4336203118698079dee1059a905561113722"
+    },
+    {
+      "path": "frame_0002.png",
+      "sha256": "fa5374394bd83360d2bd79affd841db797006ad4c6c8ded3c9693899e677b74b"
+    },
+    {
+      "path": "frame_0003.png",
+      "sha256": "e6519737fe39bc470fd72e7de5d30bcddeadc4928c22aa00dd7d4a07c040b394"
+    },
+    {
+      "path": "frame_0004.png",
+      "sha256": "de042f0277709cd8e71d4d89339444e30983d454d28196397d2edfa3e59866d4"
+    },
+    {
+      "path": "frame_0005.png",
+      "sha256": "35645ae96c5d7c0b43a41980449216f0ae0e7ca0475b34eeb84923402102fda5"
+    },
+    {
+      "path": "frame_0006.png",
+      "sha256": "33d260184e3f8aaccf53de04f5cfa6a071750217b64828d6628d9b5808996db0"
+    },
+    {
+      "path": "frame_0007.png",
+      "sha256": "4a7161726803ebada15916305ef39bb9f7edc096d7d52c8ab73a826f83ac24cb"
+    },
+    {
+      "path": "frame_0008.png",
+      "sha256": "90b4c44cc2e53dc8b1c5e5d4c06e324882624a9d1c45be136e801982ff44c899"
+    },
+    {
+      "path": "frame_0009.png",
+      "sha256": "152294ab5c9b255db94a3a585cb07ac4526658a51245fd247eb2af679bf2d568"
+    },
+    {
+      "path": "frame_0010.png",
+      "sha256": "011e9d21a30c5b575b8cadb91a923fb6716d895b974be845384ebcac05474ef6"
+    },
+    {
+      "path": "frame_0011.png",
+      "sha256": "2c9e8a9145b733c5fb453bc5d89b1b014fc59f0e6e90de8da31593802ae2750b"
+    },
+    {
+      "path": "frame_0012.png",
+      "sha256": "aeaf13fd99152bbbb579d8d55a54e8ec873da9f98abb93937c097e6ba3ea10d0"
+    },
+    {
+      "path": "frame_0013.png",
+      "sha256": "c39750f6c10c9238d0f080513e5ed8cfe03c3548f86f18baed58e4d431e26f17"
+    },
+    {
+      "path": "frame_0014.png",
+      "sha256": "8bf626d1eeab1400b065a44706b6a3e3ee653c24396d18d2b8a12cac51dccc6b"
+    },
+    {
+      "path": "frame_0015.png",
+      "sha256": "856281070cdca86684d9ffbe9975ba8864388cc2989295647f0cb2537404e90f"
+    },
+    {
+      "path": "frame_0016.png",
+      "sha256": "7663c6112ac228b2c6c999d05bb1863f771785fa2af4c0f046ccf53374112903"
+    },
+    {
+      "path": "frame_0017.png",
+      "sha256": "b92b10969394638fe4a582e7fba2a7c799028f976551dc6dc2841f2c9ccdc38b"
+    },
+    {
+      "path": "frame_0018.png",
+      "sha256": "b5c3365ed059620c14c77fc28df3956d3b4e564a61ce04e32ef29e427f0d4c33"
+    },
+    {
+      "path": "frame_0019.png",
+      "sha256": "f1e6658cedb0262a63b1273a2c05f026dd040544cbb8f084df7a9672464f3151"
+    },
+    {
+      "path": "frame_0020.png",
+      "sha256": "1d7f16f28280af12ba7a794b8918f20936429dd7e23070535d338ec55c29781a"
+    },
+    {
+      "path": "frame_0021.png",
+      "sha256": "34c5fd07ccc27e6b5fda7795b566688fdb99040a27655fbae49e1cba891b6ff2"
+    },
+    {
+      "path": "frame_0022.png",
+      "sha256": "9ec556acceffd97c6ac1af5c0a53fa8162300c50b27db9c780cddb158afed38b"
+    },
+    {
+      "path": "frame_0023.png",
+      "sha256": "454c16bdde16653ec67e52c02f358ed84be1e07eae0ea6a5aea56c2381c3f41a"
+    },
+    {
+      "path": "frame_0024.png",
+      "sha256": "3fcff072413155b7349be36b831ce5aec40ec6faf1610951be077a6509983a13"
+    },
+    {
+      "path": "sheet.png",
+      "sha256": "dd9f1a5d5b35f2744abc71658d47448b4b6e59c0adab0384bcb9c802f7070499"
+    }
+  ],
+  "palette": null,
+  "tool_sha256": "72e346703bb16cffb6f47d9edc097e20f69d512bcbd9be02b5de2d388ec57573",
+  "version": 4,
+  "motion_source": "out/sprite-lab/action-thrust-v4-driver/motion.json",
+  "generation": "out/sprite-lab/action-thrust-v4-scail/manifest.json",
+  "graph": "out/sprite-lab/action-thrust-v4-scail/graph.api.json",
+  "spec": "out/sprite-lab/specs/action-thrust-v4.json",
+  "model_manifest": "out/sprite-lab/models-manifest.json"
+}

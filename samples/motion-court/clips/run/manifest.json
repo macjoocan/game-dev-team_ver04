@@ -1,0 +1,153 @@
+{
+  "id": "chr.fantasy.scail2.run",
+  "status": "concept",
+  "frames": 25,
+  "fps": 36,
+  "canvas": [
+    160,
+    160
+  ],
+  "pivot": [
+    0.5,
+    1
+  ],
+  "source": "local pilot; see docs/art",
+  "source_hashes": [
+    "5852eb32564f481751162266d946897a8013605d35193caa4330b9e8ff27fe74",
+    "d9b30e346701540ef20f41b5971e50d421668369ae89964b36830d47b11939ef",
+    "2a9f7a8774a1b412d4c80b3e5dbf753b6af19b4e6338e5ca540686d38009bd1d",
+    "bc362c865ef4a5b5c75be33a07951237d4213a49757e2b2827c4176f3a959acf",
+    "57a3de83a0a838f319c987294fb5c667c2085dd335583080e9cd74c875f0e1e6",
+    "60ba67f9e61c8fd10d9299052e678b59c0c61d06ac2e6e82680bf67cf6995fd9",
+    "eeb594278a954add05cb37eadd8d610c66ea72826d9a00c0eca92511895b1375",
+    "151399a73181fe780cd22bdb2bfbe2b3c4226c74f405c52dc3c373687d4dbf32",
+    "daac187e3d6b26a120c614b2ca100c8281171120e38397c0a5f525fa11536941",
+    "504e6f582f0c8fc0f4068803c33843994a281e5fd4c6265473c27b6583696307",
+    "fbb21dd8832854a9349173dcc7ac6ec02a0f57cfe0ec2f060b42b264f96fa586",
+    "a48157a5e5f88ca65be11e56ab783fc36c9e09091239f6b34a34e60b39c8d577",
+    "7e43a35483dff7bbe91a1e01773f4cc86b7ef0c44e81051cce41bab17eb34ab3",
+    "28667421502266c8a0fec3dd955c376ee8ad178bf929ab737c06a28546f13afe",
+    "e98269ccdb1c6197016849de215a71dbe79008ef9319e0c1e0e7433426b901b0",
+    "0685bada179262111be8b382ba8500554a94d12495913c16867984a2f2bb280b",
+    "c57a0cc0c685dd7c6c39ef1f3bcd1580c399e655420e98db05e1ccc3d3d2ce67",
+    "8b2c085847322b565b759f156074367e48ad3ff76415a91575d7f3e974190242",
+    "e67b2cb89bac97fc0d33ec42a513e0d616401ec4c1a78795368dbc5736d7b8e2",
+    "bfb15ef20b8377dc4d327d0a90f48b2f5ff8a58a39af251fed7d41f4dc4fff77",
+    "d246bb23997a88aac8558da1d89875c1813759d71d4cdf26b398d907030ff370",
+    "a1ad4e7ff7300cf0ffa1304864b316deab42fa82721ddc54912d7ce0f3c8271b",
+    "a5f50d3545dbd585a5a33a94930d55a7fbcf907730fe168d29e82be890a87fa9",
+    "ce1212bafc2e4311af39f7d2cf10c3a84c705e2ac0ffde4946999a43d3373bc1",
+    "288d3097d9f69cf2c26370509ccb8a507706c9df6f9e265b3975a45f1c53d4fa"
+  ],
+  "pixel": false,
+  "pixeloe": false,
+  "clean": 0,
+  "approval": "pending-human-color-review",
+  "sheet": "sheet.png",
+  "files": [
+    {
+      "path": "frame_0000.png",
+      "sha256": "5eed00b377da23fe83e2076d16268fd8598cbd04c2264cd649514af86d16111e"
+    },
+    {
+      "path": "frame_0001.png",
+      "sha256": "4cb9681e9dd3e722939175f9c1bf2088136232533906b017a7d1f8cbf48685f8"
+    },
+    {
+      "path": "frame_0002.png",
+      "sha256": "ed9ab0eac727b08836f2ac3b0c2e5158cfdaf5e236e2b8e53fedf1833c90d6db"
+    },
+    {
+      "path": "frame_0003.png",
+      "sha256": "73d907e8541555deaaa7cc53fbf6fb1560880d8e717bc2af5754f1792ec841b0"
+    },
+    {
+      "path": "frame_0004.png",
+      "sha256": "03b0eb794630de8b276ed513628023c6068ee7931516d7b76c43fae9d170438d"
+    },
+    {
+      "path": "frame_0005.png",
+      "sha256": "fbe7225a99a575d0a01ad87b459509bc1a282efcb721d8506097c248ac78405d"
+    },
+    {
+      "path": "frame_0006.png",
+      "sha256": "dd306f7df5780c6708ac3f789548ee77e25ca5f388d288cb2aa861b678bf28d9"
+    },
+    {
+      "path": "frame_0007.png",
+      "sha256": "789ac95addeebdf7dd001a421bf72f02d3186592d15f276cd7b78cfa21846921"
+    },
+    {
+      "path": "frame_0008.png",
+      "sha256": "6dcf809f46dc950766f3da4f1b3354012f1235ac8df3b326ebdc053b8f796be8"
+    },
+    {
+      "path": "frame_0009.png",
+      "sha256": "0b259ec70a2510880bdcd44cbcb8acfd96dd64b58b79b055e8394aa996c7aafc"
+    },
+    {
+      "path": "frame_0010.png",
+      "sha256": "db53d19da6789856745d3c6a93af43645ed46f283c0c5213703fd9ec567987d9"
+    },
+    {
+      "path": "frame_0011.png",
+      "sha256": "b35fff70d855189394ac2514793ff51b442bb6e8ccc36335b3a25a4e21263fd0"
+    },
+    {
+      "path": "frame_0012.png",
+      "sha256": "46283e61a9f7a6dc2f96aee6888de574ab949a6d0eb85dc90e7dec608bb618cd"
+    },
+    {
+      "path": "frame_0013.png",
+      "sha256": "db64658263d1effe4847c850981db8858c9bfdcd1228b4dd1171a4c4844869b9"
+    },
+    {
+      "path": "frame_0014.png",
+      "sha256": "21cdaad0afdaa574a85749f1c9b568389bb89bc16da525ba302832029302790a"
+    },
+    {
+      "path": "frame_0015.png",
+      "sha256": "171a5ba29bc16efb48ae728b5e9b504c6b3e415428236c3090475373deb30650"
+    },
+    {
+      "path": "frame_0016.png",
+      "sha256": "4508c0c6ee73c9561762b2700f83aa1cb46a102bae59de66d91c27b552a142c6"
+    },
+    {
+      "path": "frame_0017.png",
+      "sha256": "add7290e177b5a098537621fb14296f2e23947209178ae8ee67ea8a71f455d84"
+    },
+    {
+      "path": "frame_0018.png",
+      "sha256": "4e549d9600e272025d010a47a3592b3fea2c9c883797ed7d19112c6704f56762"
+    },
+    {
+      "path": "frame_0019.png",
+      "sha256": "7bbba00d926cbae93a5ece1b9b6a4c498b7e8ab1df41b63abbe791a592242ff7"
+    },
+    {
+      "path": "frame_0020.png",
+      "sha256": "5ff1c3748b127796442605994b77117c136233e2a02c6c37eb37d72ef7a3de45"
+    },
+    {
+      "path": "frame_0021.png",
+      "sha256": "c79872948d4aca9b7810d5099a9656292af6ee34efdf563f268bbd0a41ed7f2f"
+    },
+    {
+      "path": "frame_0022.png",
+      "sha256": "3b85fe45418b76a12d093bf94d646204997ad6d8c7c280b8234d81239e28708a"
+    },
+    {
+      "path": "frame_0023.png",
+      "sha256": "5bcd2aa0243fe4a6b79a7a039ea6d241e970278e7552037a9bf1d4dc624c5a49"
+    },
+    {
+      "path": "frame_0024.png",
+      "sha256": "46f6c69a4326b2c62f5f2941578509033d804cf2b60ff0e48bd254409536492e"
+    }
+  ],
+  "palette": null,
+  "tool_sha256": "72e346703bb16cffb6f47d9edc097e20f69d512bcbd9be02b5de2d388ec57573",
+  "version": 3,
+  "correction": "color-qa.json"
+}

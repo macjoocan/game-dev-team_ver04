@@ -1,0 +1,33 @@
+{
+  "fps": 60,
+  "pace": {
+    "actionIntervalMs": 1042
+  },
+  "reducedMotion": {
+    "declared": true,
+    "disables": [
+      "particles",
+      "flash"
+    ],
+    "scales": {
+      "shake": 0
+    }
+  },
+  "events": {
+    "hit_light": {
+      "class": "hit",
+      "weight": 1,
+      "hitStopFrames": 3,
+      "shake": {
+        "amplitudePx": 0,
+        "durationMs": 0
+      },
+      "flash": {
+        "durationMs": 0
+      }
+    }
+  },
+  "damageNumberSeconds": 0.7,
+  "impactSeconds": 0.12,
+  "targetStunSeconds": 0.25
+}

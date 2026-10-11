@@ -1,0 +1,23 @@
+<!doctype html><meta charset=utf-8><title>Sprite motion review</title>
+<style>body{background:#172029;color:#eee;font:16px sans-serif}canvas{background:repeating-conic-gradient(#303b44 0% 25%,#24313b 0% 50%) 0/24px 24px;image-rendering:pixelated}button,input{margin:8px}</style>
+<h1>Concept · 모션 검수</h1><p>접지 · 발 교차 · 체중 이동 · 장비 · 루프 경계를 확인하세요.</p>
+<canvas id=c></canvas><br><button id=p>일시정지</button><button id=b>이전</button><button id=n>다음</button><br>
+<label>프레임 <input id=s type=range min=0></label><span id=t></span><br>
+<label>재생 속도 <input id=rate type=range min=4 max=30><span id=rt></span> 36.0</label><br>
+<label>확대 <select id=z><option value=1>1× 실제 크기</option><option value=2>2×</option><option value=3 selected>3×</option><option value=6>6×</option></select></label>
+<label>배경 <select id=bg><option value=checker>체커</option><option value=dark>어두움</option><option value=light>밝음</option></select></label>
+<script>
+const count=25,size=160;let fps=36.0,f=0,playing=true,last=0;
+const c=document.querySelector('#c'),ctx=c.getContext('2d'),s=document.querySelector('#s'),t=document.querySelector('#t'),p=document.querySelector('#p');
+c.width=size;c.height=size;s.max=count-1;ctx.imageSmoothingEnabled=false;
+function zoom(){const z=+document.querySelector('#z').value;c.style.width=(size*z)+'px';c.style.height=(size*z)+'px'}zoom();
+document.querySelector('#z').onchange=zoom;
+document.querySelector('#bg').onchange=e=>{c.style.background=e.target.value==='dark'?'#111923':e.target.value==='light'?'#dfd8ca':''};
+const rate=document.querySelector('#rate'),rt=document.querySelector('#rt');rate.value=fps;rt.textContent=fps;rate.oninput=()=>{fps=+rate.value;rt.textContent=fps};
+const img=new Image();img.src='sheet.png';
+function draw(){ctx.clearRect(0,0,size,size);ctx.drawImage(img,f*size,0,size,size,0,0,size,size);s.value=f;t.textContent=(f+1)+' / '+count}
+function pause(){playing=false;p.textContent='재생'}img.onload=draw;p.onclick=()=>{playing=!playing;p.textContent=playing?'일시정지':'재생'};
+document.querySelector('#b').onclick=()=>{pause();f=(f+count-1)%count;draw()};document.querySelector('#n').onclick=()=>{pause();f=(f+1)%count;draw()};
+s.oninput=()=>{pause();f=+s.value;draw()};
+function tick(now){if(playing&&img.complete&&img.naturalWidth&&now-last>=1000/fps){f=(f+1)%count;draw();last=now}requestAnimationFrame(tick)}requestAnimationFrame(tick);
+</script>

@@ -211,3 +211,10 @@ R0 합법성·목적 확인(사람) → R1 추출(resource-extract) → R2 데�
 정본은 레포 루트다. `plugins/game-dev-team/`은 Codex 로컬 마켓플레이스용 미러이며,
 루트 수정 후 `scripts/sync-plugin.ps1`로 재생성한다(`-Check`로 드리프트 검사).
 기능 추가/수정 후에는 `node scripts/validate-plugin.mjs`로 참조 무결성을 검사한다(커밋 훅·CI 자동 실행).
+
+## v0.46.0 — 전신 모션과 회사 PC 재현
+
+- Blender authored 전신 모션 + 장비 가이드 + ComfyUI 연속 생성의 제작·검수 규칙.
+- 색만 보정, 명시적 프레임 매핑, idle 루프, root 이동 정렬 도구.
+- 걷기/달리기/베기/찌르기/피격/구르기/idle이 들어 있는 `samples/motion-court` concept 샘플.
+- 회사 모델 복원: [models/README.md](models/README.md). 가중치는 별도 Release이며 플러그인 설치에 자동 다운로드되지 않는다.

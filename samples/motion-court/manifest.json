@@ -1,0 +1,57 @@
+{
+  "id": "demo.fantasy.motion-court",
+  "status": "concept",
+  "assets": [
+    {
+      "clip": "walk",
+      "path": "clips/walk",
+      "manifest_sha256": "5c4867665314ba935676a239ca3fb32a401adb68d27cc70ef98918774ff14da7",
+      "sheet_sha256": "ff92311bc5c4f55428eb3745436e32deabf7c17f79211b26b8ae1fb8478e9319",
+      "status": "concept"
+    },
+    {
+      "clip": "slash",
+      "path": "clips/slash",
+      "manifest_sha256": "7ca269d6e3ffc986d4eba4159a642752acfb5fcde7b5b0299340f2a5b52ebc2e",
+      "sheet_sha256": "7562c3cc682a2a65705de35765ec49ca96dea74d97e7386e58ccdb4a21c5b84e",
+      "status": "concept"
+    },
+    {
+      "clip": "thrust",
+      "path": "clips/thrust",
+      "manifest_sha256": "d1470d0211db4a313ff79e1eab6c5d183b389a1b207800e081b3fac868af7852",
+      "sheet_sha256": "dd9f1a5d5b35f2744abc71658d47448b4b6e59c0adab0384bcb9c802f7070499",
+      "status": "concept"
+    },
+    {
+      "clip": "hit",
+      "path": "clips/hit",
+      "manifest_sha256": "a1fae0e85c63cd1f6e39a9c7725f8b96519138c8ae07112cd952fa1ff0380479",
+      "sheet_sha256": "c68d1900e0d10b4ee227d5b0a68d099745ee34ae05a9e1dfe44007e0976ebb99",
+      "status": "concept"
+    },
+    {
+      "clip": "roll",
+      "path": "clips/roll",
+      "manifest_sha256": "c5211de34d45155501f511371088dcc09e26f4ffdae6d1ac70c7681fcc7896ec",
+      "sheet_sha256": "af576d62abd0d76e091401fe59774325927938010da5ccb62c5e227a24269a62",
+      "status": "concept"
+    },
+    {
+      "clip": "run",
+      "path": "clips/run",
+      "manifest_sha256": "ce3b1f400c059de27630ec0f0d4b49b7c96df2c42459de7276a0837f5b719bd8",
+      "sheet_sha256": "7f7f77a0946dafc1ae50fb73d45fadfa8b6f2332cdee674957e3b6ac90894b93",
+      "status": "concept"
+    },
+    {
+      "clip": "idle",
+      "path": "clips/idle",
+      "manifest_sha256": "7a031da97a3ef453ea12cd03c9fb8f03fdde7dd3ffe6053638d2a2870b7b17a8",
+      "sheet_sha256": "aeeb33b19d42a260bb5d4fd27ac8ff1636244c837cc9dd4cc5614c6d6b2dac5e",
+      "status": "concept"
+    }
+  ],
+  "approval": "pending-human-playtest",
+  "preview": "index.html"
+}

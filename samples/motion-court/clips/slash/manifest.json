@@ -1,0 +1,161 @@
+{
+  "id": "chr.fantasy.scail2.slash",
+  "status": "concept",
+  "frames": 25,
+  "fps": 15.652,
+  "canvas": [
+    160,
+    160
+  ],
+  "pivot": [
+    0.5,
+    1
+  ],
+  "source": "local pilot; see docs/art",
+  "source_hashes": [
+    "327d29f725a5ad25db6b8570d9a37b289f9e350ce8baabdd2ef6d11928f48057",
+    "1a456c55955cb7d8cc927ee4fb834ba900015064bfc8d61ffd5025d8b61a7fb0",
+    "3a8bf6bbf8f38dcf28500202fbd466d6800855298baca1a427050b999e174a4b",
+    "e8c4e14643579a69f50f9355cd4b7aeda2faade119f2668b1c6b60b06ec4807c",
+    "db22814c8de6fa6738489f3bd59dded2ebad8ac9e18f37bdeb7d973aa3f23ab4",
+    "75c5ee0a3aa57459d167589ae0b3d2eb30430f986922e77da34f314cd6c54756",
+    "e83fac0b1d9702788c1d069868adbe2e7726c1e95a32157fc423322850b17985",
+    "77888fd5d0030276df3bbd55d44f0139fa810902a09e66da24d3962fdcec0956",
+    "c0cb03d8f5191a7ba267a3e28533abe0572d58d2b543875d0f1be2379e0677d2",
+    "cd80ed2237bd137a4505587000c8b470c43f13809b9dfd09b78fdc9c786366c1",
+    "395d79cdd0fc78baa596c6befec90842eb1f388f7367ac1a1abe3c9ef4e3c40f",
+    "8c5154efedebfd83d30bc15ecd29314f80bfdd47f59973e45505d192eb5203c9",
+    "ee3b0bbac1f7e4b1cd87c2a7846e5118de53191583acb39dfea41e36e067d870",
+    "6d058ef969b578ce57d6921e06c1013335155fdd7dd3be07c97dc8a0f41657ca",
+    "4d332ba14f4a05a23cdb3182657108f502bf446679ce4f80e103919d8d5040c7",
+    "12abf06ed48951f85bf13cb008adb309bbfa6362257325cceafa70e6f11230e3",
+    "94bd940774df78f7b83f4ba23190cd5e4b20c89f0a196e264ab7ba916afdcbe8",
+    "9bd5b4e3a86e4e8e2a4491587103f2c9375b168d0b77538f5f72b7b97585668d",
+    "6991283e84df99497dcce1c5978f4034659f42bfb54e20b20d2e68c91474c0a8",
+    "39a7d0a60e4cbaa2289bc4b959eb16dd6145793dede58370cbb3eaec59d1fe81",
+    "06081fd4b5a7ebb99e8b3883327f0742a0f5d964bb04edc1cae083dd5499b836",
+    "9dbb8542934145116bd1a50f6a47e53cf3d7f0db44ee6174e7ae45a481da6ae6",
+    "7b9996bd05d6217a933139df806b493f78cd055124db5acb909eeec066a750e7",
+    "22a6c590baabec0e5ba916d520160094d7a7beab94e16c5c5aaf5a3093be4eeb",
+    "e9433ccbc4d97890c817982444e3c5db89ee730182d37d226956a05ec183fc3f"
+  ],
+  "pixel": false,
+  "pixeloe": false,
+  "clean": 0,
+  "approval": "pending-human-side-view-review",
+  "sheet": "sheet.png",
+  "files": [
+    {
+      "path": "frame_0000.png",
+      "sha256": "d266ea16718aec959772419f655c28cbc2a4c2b364e8fe44f755832f2209e1ee"
+    },
+    {
+      "path": "frame_0001.png",
+      "sha256": "9ac8c7448d197e8e14f5b9f9f9eda719d60c1a25996ca0c1fb12edbf38da471e"
+    },
+    {
+      "path": "frame_0002.png",
+      "sha256": "a94593e494d3bf08a5135c7effc721d1823538f78865be508518448a118a4e19"
+    },
+    {
+      "path": "frame_0003.png",
+      "sha256": "387d38bb8c42a2257530780983873260afa8583fecd775c0bfc1376d5f7a54a4"
+    },
+    {
+      "path": "frame_0004.png",
+      "sha256": "85d4dacb499f1fec82ef0a65d054fad6edba59b0d141f9f03ade4c7efb782831"
+    },
+    {
+      "path": "frame_0005.png",
+      "sha256": "c46c29421051e8a0e2e18538a9dc2d97f66c89b592afcc0b8e5f0b19290e629d"
+    },
+    {
+      "path": "frame_0006.png",
+      "sha256": "adeb45b456b8da9376994a073c6ddef0798dd15bb167e9d37126918d9faab30b"
+    },
+    {
+      "path": "frame_0007.png",
+      "sha256": "770bafc3e2ab22afc985c5ce1845690e3168388ff8ddf50530cde128079e226d"
+    },
+    {
+      "path": "frame_0008.png",
+      "sha256": "8a02ad1651f62c00f21c5db8c98e3937dca53fef90a6ea81013df2be2c67b1f8"
+    },
+    {
+      "path": "frame_0009.png",
+      "sha256": "656b4b2ff1731b2ddee3c0c66764b3af470957993e130e48d87125160e3ea5d1"
+    },
+    {
+      "path": "frame_0010.png",
+      "sha256": "85609177dc91c4d59b099d2f31f39bfc3d1f6f079020c048228f898c9949d6c5"
+    },
+    {
+      "path": "frame_0011.png",
+      "sha256": "85ab6d623cd5cf76e37a46310358edcda1130f52b26975cc7357658402cbc1bb"
+    },
+    {
+      "path": "frame_0012.png",
+      "sha256": "af7a6bec7e3fb6555b9d6843a46817dcc46ca61c164025603415ce72c67f772b"
+    },
+    {
+      "path": "frame_0013.png",
+      "sha256": "e76a7959e6506d52b03dfac771a285ebd739901347fb3a229aab135e133ee9a5"
+    },
+    {
+      "path": "frame_0014.png",
+      "sha256": "c96a067f2da920d7cdf7a4b37f374271420ee101d62655028421ddfc7648646f"
+    },
+    {
+      "path": "frame_0015.png",
+      "sha256": "3bb11cc4335ca0d18b13188a6162fd7fa8da854052538e9973b10bcf35384d80"
+    },
+    {
+      "path": "frame_0016.png",
+      "sha256": "9fafebd18ba2eb7dda4a5697f797fc0a7341cf7b0e516b2c1e0f052c904735cd"
+    },
+    {
+      "path": "frame_0017.png",
+      "sha256": "4824f6fa7a0f38d44e11528069af5a4b57c71dcf36d3f6d473e7489ca408de55"
+    },
+    {
+      "path": "frame_0018.png",
+      "sha256": "0bafda96cbb94ffd9f6da583d8a3c02e97f19db3a961ed4274019adaf462cd7b"
+    },
+    {
+      "path": "frame_0019.png",
+      "sha256": "fe53ec2f98c2cd7b452a1d8e731e398f27f4439d93e6b257fa1dbaf02fa77142"
+    },
+    {
+      "path": "frame_0020.png",
+      "sha256": "5c63e017e3792f1fb56f92bf34c299f03438cd7b952ddd42a40820a1f7a06f34"
+    },
+    {
+      "path": "frame_0021.png",
+      "sha256": "a6866ca52b6a907a2172c43618483b6c91acdde48fa11c2669bd6ec72952c58a"
+    },
+    {
+      "path": "frame_0022.png",
+      "sha256": "5b06f514fca44be751572ab59898a54473e2748755a24cf80e4360f93e5a0740"
+    },
+    {
+      "path": "frame_0023.png",
+      "sha256": "66feea00a74d698326a2e363562faa6ca216e9f556e47887140efa342967127a"
+    },
+    {
+      "path": "frame_0024.png",
+      "sha256": "8b0bf72c57d43740d712a36d30ab712fbf68f9ed6ed85e6a289e8d2c4fd52428"
+    },
+    {
+      "path": "sheet.png",
+      "sha256": "7562c3cc682a2a65705de35765ec49ca96dea74d97e7386e58ccdb4a21c5b84e"
+    }
+  ],
+  "palette": null,
+  "tool_sha256": "72e346703bb16cffb6f47d9edc097e20f69d512bcbd9be02b5de2d388ec57573",
+  "version": 5,
+  "motion_source": "out/sprite-lab/action-slash-v5-driver/motion.json",
+  "generation": "out/sprite-lab/action-slash-v5-scail/manifest.json",
+  "graph": "out/sprite-lab/action-slash-v5-scail/graph.api.json",
+  "spec": "out/sprite-lab/specs/action-slash-v5.json",
+  "model_manifest": "out/sprite-lab/models-manifest.json"
+}

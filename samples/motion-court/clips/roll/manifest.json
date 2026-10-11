@@ -1,0 +1,184 @@
+{
+  "id": "chr.fantasy.scail2.roll",
+  "status": "concept",
+  "frames": 25,
+  "fps": 30,
+  "canvas": [
+    160,
+    160
+  ],
+  "pivot": [
+    0.5,
+    1
+  ],
+  "source": "local pilot; see docs/art",
+  "source_hashes": [
+    "1b3da9d404f4121de329598e3c5f6682b5bc8258ce46d151a148c172dde626cd",
+    "90dc9d88b8495a13b6d97560a572c07e2d31ab37cfab4b4f7ce26894a6037125",
+    "de4cb55d0ea9c7fc4fee9cb1ba2b88cf3065d13bbf4f55b9b9d67ed34d90388f",
+    "880daa4f54725740c219d4808c6f4a4b272104f99bee840f53848ee85431e957",
+    "b9dd1a87d1d382ec7e7f12369e63af44d00d83ca57db73a85cb83a836689e873",
+    "1df5880ceadd125544b2b7ab90becb24127df382c8fe33f57e5eb2424c123580",
+    "556f5cb2e033d5c57e42ce49369ce2835882311304a6b4b675f076fa25281435",
+    "076e6bf3a8c97cf0baa02cff2b63a5c70e521c40f2e95264126e9d549e750b93",
+    "d51498b6feeecc31b57807e586282802fba130c320eb4f17449ea62bf1652e47",
+    "5ccd97d49c3f798861debd3c8eb2058a4f12b115b9481add2fec5df79605eb8f",
+    "23c1939fde4a0775f2d05e36799fa816698d49f38a64d1306ce20cce7f386e5b",
+    "301110aadbd4d55084642ad14737db59d6618f71cf66dee3772c69949a0eb53e",
+    "c801d1080a3c31000756a7e5f5883f9e9c663dab84f24b241ea78cb12fb5d327",
+    "e21d218a1523af9d858ac334916ad6a8fce809a288a0ea1b4f8d80de02fcb93b",
+    "07ac59c5f45c8a279a37103c930c79c14c0ab466b4a0372b62977fada1a9ab22",
+    "bfaaeae998cc313eba957d15002689f997eabdc648409cf3f56f09691c35e509",
+    "7e10bb2a6b26e8b3deca6878740516c6da62619cc804132c1d141f17f83c91c0",
+    "5e67212ec75a96525611cb3046c49d72b04edf1436393ed16f912b6751e587d0",
+    "252e490cce012b102588f87bb6d3cf5009f99d78dec4f778727b053176dbb755",
+    "3d605593e6aeaf467a46a369e16ceba5072f5873712305c77ea79a0346c0086e",
+    "6b58e84fd07924096e944c9f5dbc6249988d84b7da64bc84aa88113334207e79",
+    "9bbe904a7039d446aa1425d5a4f5a1e78dd792248199ef5d39838a6c913a4abf",
+    "09079f30345c4595481e8f3e74ee339485bdeb07037fd454562636cbbf8444b0",
+    "abfc9e429ef3443c58cedb3b85c66c7b6b5e7dbb9dd885009251d12410936321",
+    "9639590a75c17dde6169be1195ddf302ae794db25733e5f96e264c1fc5ef9d13"
+  ],
+  "pixel": false,
+  "pixeloe": false,
+  "clean": 0,
+  "approval": "pending-human-headgear-review",
+  "sheet": "sheet.png",
+  "files": [
+    {
+      "path": "frame_0000.png",
+      "sha256": "3d0bda02f13f7308642b7eda6509d90f47e0160392a35880c3dc252dbe76390c"
+    },
+    {
+      "path": "frame_0001.png",
+      "sha256": "834a2dcb8fc7ac7c3e2d1fe8d36b4fffc6ea3ca265ec5b9a791a908ffbc89a12"
+    },
+    {
+      "path": "frame_0002.png",
+      "sha256": "e73deec01a7522eb4ca4a986a3a80c87183024152fd24a292b5fcfcd3367c41c"
+    },
+    {
+      "path": "frame_0003.png",
+      "sha256": "7447949c4a9390a4f00164f25e25dafd055bb0950c50bb4a644cee5b578970b1"
+    },
+    {
+      "path": "frame_0004.png",
+      "sha256": "0267672f0d3b352ac3c51bbc7dc3b21e5a0640389ef01b70743577ee758442b1"
+    },
+    {
+      "path": "frame_0005.png",
+      "sha256": "8abeab83e81a407fc1ce0692ea7ba10f97c925c65ef13b39bc060be81f92498e"
+    },
+    {
+      "path": "frame_0006.png",
+      "sha256": "13839900e034d87e62f9193e30ed1139ac4b8c173a4ec5a6a23746ec50a7baa3"
+    },
+    {
+      "path": "frame_0007.png",
+      "sha256": "f775609d843e3be0bd3a53a0154e7630a355b0e2b86d74579ae1ca13082cddf7"
+    },
+    {
+      "path": "frame_0008.png",
+      "sha256": "0a0718b9c4953284db33b96f83818e86ba2e44fa173cf964c1eccc6fe6c56fec"
+    },
+    {
+      "path": "frame_0009.png",
+      "sha256": "919f4dc69051b69b24958cb0e373cb146235620de68a2a7a266b139b9d515ad0"
+    },
+    {
+      "path": "frame_0010.png",
+      "sha256": "7ce74cfd5563ec882f4f1a498130a4de2e8e68e0be9734c827f934548281a19c"
+    },
+    {
+      "path": "frame_0011.png",
+      "sha256": "6bd83c32420b207517a512d6d331201064d0cc06cf7dab480fc73cf24eb3d200"
+    },
+    {
+      "path": "frame_0012.png",
+      "sha256": "d1bc74644499047f3bd22a189fe8437159a3186c87894c78ddf18d15e14294dc"
+    },
+    {
+      "path": "frame_0013.png",
+      "sha256": "42971010c0656b77925647ae3861a2d69da9b4ca1bff44ab3e0c97b4ecb92928"
+    },
+    {
+      "path": "frame_0014.png",
+      "sha256": "42971010c0656b77925647ae3861a2d69da9b4ca1bff44ab3e0c97b4ecb92928"
+    },
+    {
+      "path": "frame_0015.png",
+      "sha256": "77e20864ad10723dc9d46bc91de3dd266430791a2ae356ebc176b15ef1fbfcb5"
+    },
+    {
+      "path": "frame_0016.png",
+      "sha256": "b1fc28c51307e84097eed419105b6b028fb4a35e5aec1844028c74da97688315"
+    },
+    {
+      "path": "frame_0017.png",
+      "sha256": "2a7e2da365c1b35522c217729507a0ba46205a17c341d9c292cf2e945890efd2"
+    },
+    {
+      "path": "frame_0018.png",
+      "sha256": "181d2b05cae08d178e4181570144489cbc46c83a8eb85956e244c6f8adb7518d"
+    },
+    {
+      "path": "frame_0019.png",
+      "sha256": "99abe19ed327636e533f3adbe960d4bd24e34f560c87eed97fd7e708dcdf2c68"
+    },
+    {
+      "path": "frame_0020.png",
+      "sha256": "958e29e998183d8da69731633be0f24b56a8a9a7fc01e88ae9c47aa04f9ff839"
+    },
+    {
+      "path": "frame_0021.png",
+      "sha256": "4739a04f69d841a34587776bc7f4549a193d3bd707f6e210e11e5a0cebe08cdd"
+    },
+    {
+      "path": "frame_0022.png",
+      "sha256": "29abace773ae66b9e66ca1992259fa57c296ee58288b72299af33ed6d9088c1f"
+    },
+    {
+      "path": "frame_0023.png",
+      "sha256": "256ca56c4eda124c554a11f72ae77914304ae986b4ceeca766ab46c60b687119"
+    },
+    {
+      "path": "frame_0024.png",
+      "sha256": "704c994a6436c912f95474746076a5c24eedfa751146ad577218a4b6de11e496"
+    }
+  ],
+  "palette": null,
+  "tool_sha256": "72e346703bb16cffb6f47d9edc097e20f69d512bcbd9be02b5de2d388ec57573",
+  "version": 3,
+  "correction": "color-qa.json",
+  "frame_selection": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "rejected_source_frames": [
+    14
+  ],
+  "selection": "one 33ms hold of existing frame; source pixel files copied unchanged"
+}
