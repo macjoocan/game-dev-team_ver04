@@ -20,7 +20,24 @@ node <플러그인>/skills/review-loop/scripts/review-loop.mjs add --project <�
   --preview art/previews/hero-walk.png --artifact art/final/hero-walk.png --harness codex
 node <플러그인>/skills/review-loop/scripts/review-loop.mjs summary --project <프로젝트>
 node <플러그인>/skills/review-loop/scripts/review-loop.mjs serve --project <프로젝트> --port 4177
+node <플러그인>/skills/review-loop/scripts/review-loop.mjs verify --project <프로젝트>
 ```
+
+## 승인은 그 시점의 파일에 대한 승인이다
+
+`add` 와 승인 시점에 산출물의 **내용 해시**(파일은 바이트, 폴더는 정렬된 경로+내용)를 기록한다.
+내용이 달라지면 `summary`·`serve`·`verify` 가 **승인을 자동 무효화**하고 상태를 `review` 로 되돌리며
+`reviews.jsonl` 에 사유를 남긴다(append-only).
+
+없으면 **장부가 거짓말을 한다** — 승인된 산출물을 갈아끼워도 `approved` 가 그대로 남는다.
+사람이 승인한 것은 "그 파일"이지 "그 이름"이 아니다.
+
+```
+node ... verify --project .     # 0 전부 일치 · 1 무효화 발생 · 3 산출물 없음(측정 불가)
+```
+
+해시가 없던 기존 항목은 **소급 기록만 하고 무효화하지 않는다.** 바뀐 적도 없는데 전부
+미승인으로 떨어뜨리면 장부가 또 거짓이 된다.
 
 `add`의 경로는 프로젝트 상대 경로로 기록한다. 3D는 `--artifact`에 GLB/BLEND를 두고
 `--preview`에는 턴테이블 이미지나 영상을 둔다. `--compare`로 이전 버전 프리뷰를 연결하면 A/B로 보인다.

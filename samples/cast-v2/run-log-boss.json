@@ -1,0 +1,29 @@
+{
+  "workflow": "sdxl-character.api.json",
+  "workflowSha256": "d3b7590f98e2ba89647498e247af062e52c9c1bec3ac2533654604d56179b62b",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, full body visible, head to toe, 1other, ogre, purple skin, iron armor, war hammer, tusks, bulky",
+    "7": "ornate frame, border, decorative frame, background, scenery, landscape, petals, leaves, pattern, vignette, drop shadow, ground shadow, lowres, worst quality, low quality, jpeg artifacts, 3d, realistic, photo, colored background, gradient, multiple views, turnaround, multiple characters, text, watermark, cropped, out of frame, zoomed in"
+  },
+  "models": {
+    "4.ckpt_name": "animagine-xl-4.0.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T04:33:26.776Z",
+  "runs": [
+    {
+      "seed": 4202,
+      "promptId": "6a761b09-fc41-4863-a22d-1c747a533477",
+      "files": [
+        {
+          "name": "s4202_char_00069_.png",
+          "sha256": "21888f45077442589578f857c1388dad53a929f783b95f069cc547f19748918f"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T04:33:42.974Z"
+}

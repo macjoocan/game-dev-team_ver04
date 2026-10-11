@@ -1,0 +1,64 @@
+{
+  "tileSize": 32,
+  "materials": [
+    {
+      "name": "grass",
+      "seed": 11,
+      "variants": 3,
+      "grain": 6,
+      "octaves": 3,
+      "contrast": 1.4,
+      "colors": [
+        "#5c8f4a",
+        "#4a7c3f",
+        "#3c6634"
+      ],
+      "speckle": {
+        "color": "#6fa15a",
+        "density": 0.03,
+        "size": 1
+      }
+    },
+    {
+      "name": "dirt",
+      "seed": 23,
+      "variants": 2,
+      "grain": 5,
+      "octaves": 3,
+      "contrast": 1.2,
+      "colors": [
+        "#9a7a52",
+        "#86613f",
+        "#6b4b30"
+      ],
+      "speckle": {
+        "color": "#5a3f28",
+        "density": 0.02,
+        "size": 1
+      }
+    },
+    {
+      "name": "stone",
+      "seed": 37,
+      "variants": 2,
+      "grain": 4,
+      "octaves": 4,
+      "contrast": 1.6,
+      "colors": [
+        "#a8a6ab",
+        "#8c888f",
+        "#6e6a72"
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "from": "grass",
+      "to": "dirt",
+      "seed": 71,
+      "edgeGrain": 6,
+      "edgeSeed": 909,
+      "edgeAmp": 0.35
+    }
+  ]
+}

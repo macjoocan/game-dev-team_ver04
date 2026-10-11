@@ -27,7 +27,9 @@
 // 한계 (알고 쓴다):
 //   - **옆모습 스트라이드는 못 만든다.** 앞뒤로 다리를 벌리는 건 없는 픽셀이 필요하다.
 //     이건 정면/정면3/4 캐릭터의 제자리 걷기용이다
-//   - 다리 상자 자동 검출은 초안이다. 창·망토처럼 아래까지 오는 소품이 있으면 `--box` 로 직접 준다
+//   - 다리 상자는 **발띠(아래 12%)** 에서 씨앗을 잡고 위로 따라 올라간다. 맨 아랫줄 한 줄만 보면
+//     그 줄 사정에 휘둘린다(해골 7px / 오거 98px 로 잡혔던 실측). 그래도 바닥에 닿은 소품
+//     (방패·망치·창끝)은 딸려온다 — **그 부분은 같이 늘어난다.** 거슬리면 `--box lx,rx` 로 직접 줘라
 //   - 무릎이 접히지 않는다. 압축은 균일하다 — 관절이 필요하면 rig-split + 스켈레탈로 가라
 
 import fs from 'node:fs';
@@ -88,9 +90,19 @@ let lx, rx;
 if (BOX) {
   [lx, rx] = BOX.split(',').map(Number);
 } else {
-  const seed = segs(maxY);
-  if (!seed.length) { console.error('맨 아랫줄이 비었다'); process.exit(1); }
-  lx = seed[0][0]; rx = seed[seed.length - 1][1];
+  // 씨앗은 **맨 아랫줄 하나가 아니라 발띠(아래 12%)** 에서 잡는다.
+  // 한 줄만 보면 그 줄의 사정에 통째로 휘둘린다(2026-10-02 실측):
+  //   - 해골: 맨 아랫줄에 창끝과 발 몇 픽셀뿐이라 상자가 **7px** 로 잡혔고 다리가 거의 안 움직였다
+  //   - 오거: 맨 아랫줄에 망치 머리가 깔려 상자가 **98px**(팔까지) 로 벌어졌다
+  // 발띠로 바꾸니 해골 7->24px, 오거 98->81px 이 되고 다리 움직임이 0.72 -> 6.95 로 올랐다.
+  const band = Math.max(2, Math.round(BH * 0.12));
+  let seedL = Infinity, seedR = -1;
+  for (let y = maxY - band + 1; y <= maxY; y++) for (const [s0, s1] of segs(y)) {
+    if (s0 < seedL) seedL = s0;
+    if (s1 > seedR) seedR = s1;
+  }
+  if (seedR < 0) { console.error('발띠가 비었다'); process.exit(1); }
+  lx = seedL; rx = seedR;
   const margin = Math.round(BW * 0.12);
   const winL = lx - margin, winR = rx + margin;
   for (let y = maxY - 1; y >= hipY; y--) for (const [s0, s1] of segs(y)) {

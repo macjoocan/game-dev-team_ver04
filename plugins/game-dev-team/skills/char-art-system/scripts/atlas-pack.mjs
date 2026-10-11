@@ -19,7 +19,10 @@ import { writePNG } from '../../../scripts/lib-png.mjs';
 const args = process.argv.slice(2);
 const input = args[0];
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
-if (!input || input.startsWith('--')) { console.error('usage: node atlas-pack.mjs <폴더> --out atlas.png [--max 2048] [--pad 2] [--trim] [--pot]'); process.exit(2); }
+if (!input || input.startsWith('--')) { console.error('usage: node atlas-pack.mjs <폴더> --out atlas.png [--max 2048] [--pad 2] [--trim] [--pot]');
+  console.error('       [--fps 8] [--durations 125,125,...]  애니메이션 타이밍을 manifest 에 넣는다'); process.exit(2); }
+const FPSOPT = opt('--fps', null);
+const DUR = opt('--durations', null);
 const OUT = opt('--out', 'atlas.png');
 const MAX = Number(opt('--max', 2048));
 const PAD = Number(opt('--pad', 2));
@@ -108,9 +111,36 @@ writePNG(OUT, W, H, buf);
 
 const jsonPath = OUT.replace(/\.png$/i, '.json');
 const usedPx = frames.reduce((a, f) => a + f.frame.w * f.frame.h, 0);
+/**
+ * 애니메이션 타이밍을 manifest 에 넣는다.
+ *
+ * `fps` 하나만으로는 **균일 타이밍밖에 못 적는다.** 공격은 anticipation 을 길게 끌고
+ * 타격 프레임을 짧게 치는 식으로 프레임마다 길이가 다르다 — 그게 타격감이다.
+ * 그래서 프레임별 `durationMs` 를 따로 둔다. 안 주면 fps 에서 균등 분배한다.
+ *
+ * 둘이 충돌하면 **`durationMs` 가 이긴다.** 더 구체적인 쪽이 의도에 가깝기 때문이다.
+ * 임포터도 같은 규칙을 따라야 하므로 manifest 에 명시해 둔다.
+ */
+const FPS = FPSOPT === null ? null : Number(FPSOPT);
+let durations = null;
+if (DUR) {
+  durations = DUR.split(',').map((x) => Number(x.trim())).filter((x) => Number.isFinite(x) && x > 0);
+  if (durations.length !== frames.length) {
+    console.error(`--durations 개수(${durations.length})가 프레임 수(${frames.length})와 다르다.`);
+    process.exit(2);
+  }
+} else if (FPS) {
+  durations = frames.map(() => Math.round(1000 / FPS));
+}
+if (durations) frames.forEach((f, i) => { f.durationMs = durations[i]; });
+
 fs.writeFileSync(jsonPath, JSON.stringify({
-  meta: { image: path.basename(OUT), size: { w: W, h: H }, padding: PAD, trimmed: TRIM,
-          originTopLeft: true, note: '유니티 Sprite Editor 는 좌하단 원점이다. y 를 뒤집어 넣어라.' },
+  meta: {
+    image: path.basename(OUT), size: { w: W, h: H }, padding: PAD, trimmed: TRIM,
+    originTopLeft: true, note: '유니티 Sprite Editor 는 좌하단 원점이다. y 를 뒤집어 넣어라.',
+    ...(FPS ? { fps: FPS } : {}),
+    ...(durations ? { totalMs: durations.reduce((a, b) => a + b, 0), timingNote: 'fps 와 durationMs 가 충돌하면 durationMs 를 따른다.' } : {}),
+  },
   frames,
 }, null, 2));
 

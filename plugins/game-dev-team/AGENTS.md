@@ -205,8 +205,10 @@ node skills/visual-qa/scripts/cast-distinct.mjs <캐릭터폴더> [--size 48] [-
 - `--cvd` 로 색각이상 4종에서도 잰다. 색에만 기댄 구분은 여기서 무너진다
 
 ### 도트(픽셀아트) — 모델 바깥에서 격자·팔레트·알파를 강제한다
-확산 모델은 도트를 **못 만든다.** 품질이 아니라 종류 문제다 — VAE 가 연속 RGB 를 뱉으므로
-색이 10만 개 넘고 경계가 부드럽다. 48px 로 줄이면 도트가 아니라 흐릿한 썸네일이 된다.
+**맨** 확산 모델은 도트를 못 만든다 — VAE 가 연속 RGB 를 뱉어 색이 10만 개 넘고 경계가 부드럽다.
+**픽셀아트 LoRA 를 끼우면 만든다**(`nerijs/pixel-art-xl`, 무료, 2026-10-02 실측).
+LoRA 출력도 격자는 아니므로 축소·양자화는 그대로 필요하다 — 달라지는 건 **원본 구조가 도트
+모양이라 축소해도 살아남는다**는 점이다. LoRA 없이 일러스트를 줄이면 48px 에서 얼굴이 6x6 이라 뭉갠다.
 ```bash
 # 변환: 알파 이진화 -> 알파 가중 축소 -> Lab k-means -> 외톨이 정리 (순서를 바꾸지 마라)
 node skills/char-art-system/scripts/pixel-quantize.mjs <입력> --cell 48 --colors 24 --clean 2
@@ -220,6 +222,32 @@ node skills/char-art-system/scripts/pixel-contract.mjs <스프라이트|폴더> 
 - 팔레트는 프레임이 아니라 **시트 속성**이다(후면 컷이 14색인 건 정상)
 - `cutout --binary-alpha` · `walk-composite --nearest` 를 같이 써라 —
   `--feather 0` 만으로는 반투명이 1.1% 남고, 선형 보간은 없던 색을 만들어 팔레트를 깬다
+
+### 화풍 통일 — 팔레트는 캐스트 단위로 강제한다
+`pixel-quantize` 는 **이미지마다** 자기 색을 뽑는다(팔레트 입력이 없다). 그래서 주인공·적·보스가
+전부 다른 24색이 되고 나란히 놓으면 결이 다르다. 이게 "화풍이 갈린다"의 기계적 원인이다.
+```bash
+# 팔레트 고르기: Lospec 후보들의 적합도 순위 (0 정상 / 2 입력 오류 / 3 네트워크 등 측정 불가)
+node skills/char-art-system/scripts/palette-fetch.mjs --match <캐스트폴더> --out-dir cand
+node skills/char-art-system/scripts/palette-fetch.mjs --slug endesga-32 --out pal.json
+# 강제 + 자기 검사: 0 통과 / 1 미달
+node skills/char-art-system/scripts/palette-force.mjs <캐스트폴더> --out forced --colors 24 --apply
+```
+- **순위 1등이 정답이 아니다.** 평균 dE 가 낮다 = 원본과 가깝다이지 "도트로 더 낫다"가 아니다.
+  실측: dE 1위 `vinik24` 를 먹였더니 얼굴이 초록빛으로 뜨고 장화가 분홍으로 돌았다
+- **`pixel-contract` 는 그림이 남았는지 안 본다.** 색과 알파만 본다 — 캐릭터가 사라진 결과가
+  "31색·반투명 0%" 로 통과할 뻔했다. `palette-force --verify-only`(실루엣·dE)를 같이 돌려라
+- `--apply`(Node, Lab)와 Aseprite(RGB)는 **같은 작업이 아니다**. 같은 팔레트에서 픽셀 29% 가 다르다
+
+### 보정 규칙은 레퍼런스에서 재서 뽑는다
+```bash
+node skills/char-art-system/scripts/dot-rules.mjs <레퍼런스폴더> --sample 800 --out rules.json
+node skills/char-art-system/scripts/dot-rules.mjs <우리결과> --against rules.json
+```
+계약이 안 보는 축(계단 런렝스·외곽선·명암 단계)의 **분포**를 낸다. 게이트가 아니다.
+- 상용 755장 실측: 계단 cv 0.52~0.89 · 외곽선 어두움 중앙값 **-0.012**(사실상 없음) · **색군 1~5**
+- **색군은 한 장당 수치다.** 캐스트에 `--hues` 로 강제하면 캐릭터 고유색이 서로 끌려간다 —
+  기사 파랑이 오거 보라로 빨려 들어가 얼굴이 뭉갰다(dE 4.5 로 낮은데 눈으로는 나빴다)
 
 ### 걷기 애니메이션 — 생성이 아니라 **코드 합성**
 ```bash

@@ -1,0 +1,10 @@
+{
+  "note": "cutout 설정은 **캐릭터마다 다르다.** 흰 영역이 어디에 얼마나 있느냐로 갈린다. 프로젝트 전역 설정으로 두면 누군가의 눈·이빨·뼈가 사라진다.",
+  "common": ["--binary-alpha", "--feather", "0", "--trim"],
+  "perCharacter": {
+    "hero":   { "extra": ["--enclosed", "--enclosed-min", "0.004"], "why": "흰 갑옷은 작은 조각이라 0.004 미만으로 보존된다" },
+    "chaser": { "extra": ["--enclosed", "--enclosed-min", "0.004"], "why": "갇힌 배경이 0.06% 뿐이라 켜든 말든 같다" },
+    "lunger": { "extra": [], "why": "**끄는 게 맞다.** 두개골·갈비뼈가 큰 흰 영역이라 크기 기준으로도 못 가른다 — 켜면 뼈가 통째로 사라진다" },
+    "boss":   { "extra": ["--enclosed", "--enclosed-min", "0.004"], "why": "다리 사이 틈(1.2%)은 지우고 눈 흰자·이빨(작음)은 보존된다" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "workflow": "sdxl-character.api.json",
+  "workflowSha256": "b3610ddbb0aca645a4a13f71b144451d666aa898ee107f4c3d7be4ea1755dedd",
+  "host": "127.0.0.1:8188",
+  "style": null,
+  "prompts": {
+    "6": "chibi, solo, full body, front view, standing, facing viewer, flat color, cel shading, bold outline, simple background, white background, isolated, 1other, skeleton warrior, bone armor, long spear, red cape, skull head",
+    "7": "ornate frame, border, decorative frame, background, scenery, landscape, petals, leaves, pattern, vignette, lowres, worst quality, low quality, jpeg artifacts, 3d, realistic, photo, colored background, gradient, multiple views, turnaround, multiple characters, text, watermark, cropped"
+  },
+  "models": {
+    "4.ckpt_name": "animagine-xl-4.0.safetensors"
+  },
+  "comfyVersion": "0.33.1",
+  "startedAt": "2026-10-02T04:32:56.238Z",
+  "runs": [
+    {
+      "seed": 3103,
+      "promptId": "fe434106-a7bd-4311-9642-2528e3448b50",
+      "files": [
+        {
+          "name": "s3103_char_00068_.png",
+          "sha256": "f63fc1169a394e73af78a32ee917429898f81d034f4eb55ac1e10abef999ccf7"
+        }
+      ]
+    }
+  ],
+  "gpu": "cuda:0 NVIDIA GeForce RTX 5060 : cudaMallocAsync",
+  "finishedAt": "2026-10-02T04:33:12.449Z"
+}
