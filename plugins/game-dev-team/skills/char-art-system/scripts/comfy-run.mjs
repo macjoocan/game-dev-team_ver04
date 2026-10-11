@@ -10,7 +10,9 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { colorName } from '../../../scripts/lib-palette.mjs';
+import { preflight } from './comfy-preflight.mjs';
 
 const args = process.argv.slice(2);
 const wfPath = args[0];
@@ -19,6 +21,7 @@ if (!wfPath || args.includes('-h') || args.includes('--help')) {
   console.error('       [--set 6.text="a cat"] [--seed 12345] [--batch 4]');
   console.error('       [--style <profile.json>]  ref-analyze 가 만든 스타일 프로필 주입');
   console.error('       [--keep-loaded]  배치 후 모델을 내리지 않는다(기본은 내린다)');
+  console.error('       [--model-manifest models.json --model-root <ComfyUI-root>]  모델 해시 검증');
   process.exit(2);
 }
 const opt = (n, d) => { const i = args.indexOf(n); return i >= 0 ? args[i + 1] : d; };
@@ -27,6 +30,12 @@ const OUT = opt('--out', 'comfy-out');
 const SEED = opt('--seed', null);
 const BATCH = Number(opt('--batch', 1));
 const BASE = `http://${HOST}`;
+const MODEL_MANIFEST = opt('--model-manifest', null);
+const MODEL_ROOT = opt('--model-root', null);
+if (Boolean(MODEL_MANIFEST) !== Boolean(MODEL_ROOT)) {
+  console.error('--model-manifest 와 --model-root 를 함께 줘야 한다');
+  process.exit(2);
+}
 
 const wf = JSON.parse(fs.readFileSync(wfPath, 'utf8'));
 
@@ -89,9 +98,7 @@ const noiseNodes = Object.entries(wf).filter(([, n]) => n.inputs && 'noise_seed'
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function submit(seed) {
-  for (const id of seedNodes) wf[id].inputs.seed = seed;
-  for (const id of noiseNodes) wf[id].inputs.noise_seed = seed;
+async function submit() {
   const res = await fetch(`${BASE}/prompt`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -140,16 +147,40 @@ try {
 } catch {
   console.error(`ComfyUI 에 붙지 못했다 (${BASE}). 서버가 떠 있는지 확인해라.`);
   console.error('판정: 생성 실패가 아니라 **측정 불가** 다 — 되돌아갈 곳은 프롬프트가 아니라 환경이다.');
-  process.exit(1);
+  process.exit(3);
 }
 
+let checked;
+try {
+  checked = await preflight(wf, { base: BASE, manifestPath: MODEL_MANIFEST, modelRoot: MODEL_ROOT });
+} catch (error) {
+  console.error(`ComfyUI 사전 검사 측정 불가: ${error.message}`);
+  process.exit(3);
+}
+if (!checked.ok) {
+  for (const error of checked.errors) console.error(`ComfyUI 사전 검사 미달: ${error}`);
+  process.exit(1);
+}
+console.log(`ComfyUI 사전 검사 충족 · 모델 해시 ${checked.models.length}개 검증`);
+if (!MODEL_MANIFEST) console.log('공백: 모델 파일 해시는 검사하지 않았다 (--model-manifest 미설정)');
+
 fs.mkdirSync(OUT, { recursive: true });
-const runLog = { workflow: path.basename(wfPath), host: HOST, style: styleInfo, runs: [] };
+const graphFile = path.join(OUT, 'graph-template.api.json');
+fs.writeFileSync(graphFile, JSON.stringify(wf, null, 2));
+const graphSha256 = crypto.createHash('sha256').update(fs.readFileSync(graphFile)).digest('hex');
+const runLog = { workflow: path.basename(wfPath), graphTemplate: path.basename(graphFile), graphTemplateSha256: graphSha256,
+  host: HOST, style: styleInfo, models: checked.models, runs: [] };
 
 for (let i = 0; i < BATCH; i++) {
   const seed = seedFor(i);
+  for (const nodeId of seedNodes) wf[nodeId].inputs.seed = seed;
+  for (const nodeId of noiseNodes) wf[nodeId].inputs.noise_seed = seed;
+  const runGraph = `graph-s${seed}.api.json`;
+  const runGraphText = JSON.stringify(wf, null, 2);
+  fs.writeFileSync(path.join(OUT, runGraph), runGraphText);
+  const runGraphSha256 = crypto.createHash('sha256').update(runGraphText).digest('hex');
   process.stdout.write(`  [${i + 1}/${BATCH}] seed=${seed} 제출... `);
-  const id = await submit(seed);
+  const id = await submit();
   const entry = await waitFor(id);
   const files = [];
   for (const out of Object.values(entry.outputs)) {
@@ -157,7 +188,8 @@ for (let i = 0; i < BATCH; i++) {
   }
   console.log(`완료 (${files.length}장)`);
   // 재현에 필요한 것 전부 남긴다 — 시드가 없으면 6개월 뒤 같은 캐릭터를 못 만든다
-  runLog.runs.push({ seed, promptId: id, files: files.map((f) => path.basename(f)) });
+  runLog.runs.push({ seed, promptId: id, graph: runGraph, graphSha256: runGraphSha256,
+    files: files.map((f) => path.basename(f)) });
 }
 
 // 배치가 끝나면 모델을 내린다. SDXL 하나가 커밋 10GB 를 잡고 있어서, 생성이 끝난 뒤에도

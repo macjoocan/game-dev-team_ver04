@@ -44,3 +44,16 @@
 이 파일럿에서 레퍼런스 적용 후 방향과 의상색 일관성은 개선됐고, 1px 외곽선은 배경 분리를 조금 개선했다. 그래플링 팔의 표현은 약했고, 투명 경계·그림자는 수동 정리가 필요했다. 공격 타이밍, 8–16프레임 연속 동작, 실제 게임 삽입은 검증하지 않았다. 양산 전에는 승인된 캐릭터 기준 이미지가 필요하며, 필요하면 캐릭터 LoRA나 수작업 보정을 검토한다.
 
 관련 판정: `sprite-pipeline`은 프레임 정합, `visual-qa`는 실제 크기·배경 판독성, `asset-pipeline`은 상태와 출처, `polish`는 애니메이션 타이밍을 맡는다.
+
+## ComfyUI 실행 전 검사와 수동 수정
+
+API Format 그래프를 저장한 뒤 서버를 켜고 아래 검사를 먼저 실행한다. `/object_info`에 노드와 모델 선택지가 있는지 확인하고, 모델 manifest를 주면 로컬 파일의 크기와 SHA-256도 확인한다. 해시는 1MB씩 읽어 8GB 환경에서 대형 모델 전체를 메모리에 올리지 않는다.
+
+```bash
+node skills/char-art-system/scripts/comfy-preflight.mjs graph.api.json --host 127.0.0.1:8188 --model-manifest models.json --model-root D:/ComfyUI/ComfyUI_windows_portable
+node skills/char-art-system/scripts/comfy-run.mjs graph.api.json --out concept-out --seed 42 --model-manifest models.json --model-root D:/ComfyUI/ComfyUI_windows_portable
+```
+
+`models.json`은 `{"models":[{"name":"모델파일.safetensors","path":"ComfyUI/models/checkpoints/모델파일.safetensors","bytes":실제바이트수,"sha256":"실제 SHA-256 64자리"}]}` 형식이다. 경로는 `--model-root` 기준 상대 경로다. 파일명·경로·크기·해시는 해당 설치에서 확인한 값만 기록한다. 실행 결과의 `graph-s<seed>.api.json`과 `run-log.json`은 실제 제출 그래프, 시드, 프롬프트, 모델 해시, 출력 파일을 연결한다. 사전 검사는 노드 설치와 모델 파일을 확인할 뿐, 이미지 품질이나 라이선스 승인을 대신하지 않는다.
+
+수동 수정은 원본 PNG와 별도 파일로 남긴다. Krita AI Diffusion([공식 저장소](https://github.com/Acly/krita-ai-diffusion))이나 Pixelorama([공식 저장소](https://github.com/Orama-Interactive/Pixelorama))는 선택 가능한 편집 도구다. 작은 게임 크기에서 장비의 형태, 투명 경계, 그림자, 픽셀 격자를 사람이 고친 뒤 원본·수정본·실제 배경 미리보기를 `review-loop`에 함께 등록한다. 승인 전 상태는 계속 `concept`다. 외부 도구와 모델을 공유 패키지에 넣기 전에는 각각의 라이선스와 배포 조건을 검토한다.

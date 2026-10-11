@@ -43,3 +43,7 @@ classify/
 !samples/**/*.png
 .review-loop/*.lock
 .review-loop/*.tmp-*
+
+# Sprite backend credentials (local only)
+.secrets/
+**/__pycache__/

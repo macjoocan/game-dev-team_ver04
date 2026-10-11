@@ -61,7 +61,32 @@ node skills/ui-art-system/scripts/ui-kit-gen.mjs <spec.json> [--out <dir>] [--pa
 `palette.json` 하나만 고치면 UI와 이펙트가 같이 바뀐다 — hex를 박으면 그 연결이 끊어진다.
 
 - 상태 변형은 **같은 스펙에서 값만 바꿔** 뽑는다. 따로 그리면 픽셀 정합이 깨진다.
-- 아이콘·일러스트처럼 절차적으로 못 만드는 것은 이 도구 밖이다 → `char-art-system`.
+- 아이콘·일러스트처럼 절차적으로 못 만드는 것은 `char-art-system`에서 제작한다. 외부 아이콘은 아래 `icon-import`로 출처와 함께 반입한다.
+
+## 외부 아이콘 반입
+
+Game Icons나 Kenney처럼 출처가 분명한 아이콘도 바로 프로덕션에 넣지 않는다. SVG 원본을 편집기에서 필요한 게임 크기의 투명 PNG로 래스터화한 뒤, 다음 스펙으로 반입한다. 이 도구는 SVG를 렌더링하지 않는다.
+
+```json
+{
+  "palette": "palette.json",
+  "icons": [{
+    "id": "skill.bolt",
+    "source": "source/bolt.svg",
+    "raster": "raster/bolt.png",
+    "sourceUrl": "https://example.org/original-icon-page",
+    "license": "CC BY 4.0",
+    "author": "원저작자 이름",
+    "tint": "@accent.main"
+  }]
+}
+```
+
+```bash
+node skills/ui-art-system/scripts/icon-import.mjs icons.json --out icon-out
+```
+
+`tint`는 선택 사항이며 `palette.json`의 토큰만 받는다. 출력은 원본·래스터 PNG·게임용 PNG·`CREDITS.txt`·`manifest.json`이다. CC BY 자산에는 저작자를 요구하고 출처 URL과 라이선스를 기록하지만, 라이선스 적합성은 사람이 확인한다. manifest 상태는 `concept`다. `visual-qa`에서 실제 HUD 크기, 바쁜 화면, 색각이상·명암 조건을 검수하고 사람 승인 후 최종 파일 경로를 채운다.
 
 ## 도구 — 텍스트가 들어가는지 미리 잰다
 

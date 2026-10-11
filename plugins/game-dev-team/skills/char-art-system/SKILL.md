@@ -26,6 +26,7 @@ description: >
 ## 이 축의 본질은 정체성이다
 
 서로 다른 포즈를 별도 생성하면서 같은 캐릭터를 유지해야 하는 **시안 단계**에는 OpenPose 입력과 고정 레퍼런스를 함께 쓰는 [선택적 2D 포즈 파일럿](references/pose-reference-pilot.md)을 참고한다. 두 프레임의 유사성은 완성 애니메이션이나 프로덕션 승인 근거가 아니다.
+해당 파일럿을 재실행할 때는 `comfy-preflight.mjs`로 서버 노드·모델 선택지를 확인하고, 검증된 모델 manifest가 있으면 크기와 해시까지 확인한다. 실행·수동 수정·승인은 각각 별도 단계다.
 
 "예쁜 캐릭터 한 장"은 쉽다. 어려운 건 **같은 캐릭터가 포즈·앵글·표정이 바뀌어도 같아 보이는 것**이다. 강도 순:
 
@@ -113,6 +114,8 @@ CLI 는 `--background transparent` 를 주면 이렇게 거절한다:
 > 마젠타 크로마키도 거기서 널리 쓰이는 수법이다.
 
 ## 실행 (로컬 ComfyUI 백엔드가 떠 있을 때)
+
+연속 스프라이트·모션 전이·Blender 제어·투명 FX를 비교할 때는 [Sprite Lab](references/sprite-lab.md)을 사용한다. 생성, 알파, 도트와 내보내기를 별도 단계로 실행하며, 출력 성공을 모션 승인으로 취급하지 않는다.
 
 ```bash
 node <플러그인>/skills/char-art-system/scripts/comfy-run.mjs \

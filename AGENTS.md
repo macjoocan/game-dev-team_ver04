@@ -136,19 +136,23 @@ node skills/polish/scripts/flash-check.mjs <프레임폴더> --fps 30 --loop
 
 ## 아트 트랙 운용 (Codex에 가장 잘 맞는 구간)
 
-**아트 도구는 전부 의존성 0의 결정론적 Node 스크립트다.** 모델이 결과를 만들지 않으므로
-Codex에서 그대로 돌고, 결과가 하네스에 따라 달라지지 않는다. 손으로 묘사하지 말고 도구를 써라.
+**규격화·판정 도구는 의존성 0의 결정론적 Node 스크립트다.** ComfyUI 생성 도구는 실행 중인 서버와 설치 모델에 의존하므로 사전 검사를 거친다. 손으로 묘사하지 말고 도구를 써라.
 
 ### 생성
 ```bash
 # UI 스프라이트 (버튼·패널·프레임·바) — 9-slice 보더까지 든 PNG + manifest
 node skills/ui-art-system/scripts/ui-kit-gen.mjs <ui-spec.json> --out out
+# 외부 아이콘 원본·PNG·출처를 concept 상태로 반입
+node skills/ui-art-system/scripts/icon-import.mjs <icons.json> --out out
 # 이펙트 시퀀스 + 스트립 시트
 node skills/fx-art-system/scripts/fx-gen.mjs <fx-spec.json> --out out
 # 스프라이트 정규화·컷아웃·아틀라스 (char-art-system 에 모여 있다)
 node skills/char-art-system/scripts/sprite-normalize.mjs frames --out normalized
 node skills/char-art-system/scripts/cutout.mjs <폴더> --out cut
 node skills/char-art-system/scripts/atlas-pack.mjs normalized --out atlas.png --trim
+# ComfyUI API 그래프의 노드·모델 선택지 검증. 모델 해시는 manifest를 준 경우에만 확인
+node skills/char-art-system/scripts/comfy-preflight.mjs <graph.api.json> --model-manifest <models.json> --model-root <ComfyUI-root>
+node skills/char-art-system/scripts/comfy-run.mjs <graph.api.json> --out out --seed 42 --model-manifest <models.json> --model-root <ComfyUI-root>
 ```
 출발 스펙은 `skills/art-direction/references/starter-kit/`에 있다(`ui-spec.json`·`fx-spec.json`).
 **색은 `@group.key` 토큰만 쓴다.** hex를 스펙에 박으면 `palette.json`이 정본이 아니게 된다.

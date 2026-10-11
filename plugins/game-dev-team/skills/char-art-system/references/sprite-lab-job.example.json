@@ -1,0 +1,18 @@
+{
+  "id": "chr.hero.walk.concept",
+  "backend": "vace",
+  "reference": "art/reference.png",
+  "driver": "art/driver/frames",
+  "canvas": [512, 512],
+  "frames": 25,
+  "seed": 42,
+  "steps": 20,
+  "cfg": 6,
+  "prompt": "One full body fantasy warrior, side view facing right, walking, consistent costume, fixed camera, plain background",
+  "negative": "multiple characters, camera movement, backwards walk, extra limbs",
+  "models": {
+    "diffusion": "wan2.1_vace_1.3B_fp16.safetensors",
+    "text": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+    "vae": "wan_2.1_vae.safetensors"
+  }
+}

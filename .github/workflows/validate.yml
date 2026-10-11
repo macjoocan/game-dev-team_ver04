@@ -40,6 +40,9 @@ jobs:
           done
           echo "문법 검사 $n 파일 통과"
 
+      - name: ComfyUI 사전 검사와 아이콘 반입 테스트
+        run: node --test test/comfy-preflight.test.mjs test/icon-import.test.mjs
+
       - name: 생성 도구 스모크 (스펙 -> 실제 산출물)
         run: |
           KIT=skills/art-direction/references/starter-kit
