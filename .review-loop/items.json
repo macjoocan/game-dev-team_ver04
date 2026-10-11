@@ -799,6 +799,22 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T10:26:47.541Z"
+    },
+    {
+      "key": "demo.fantasy.motion-court@6",
+      "id": "demo.fantasy.motion-court",
+      "version": 6,
+      "type": "prototype",
+      "title": "회사 PC 재현용 전신 모션 샘플",
+      "status": "review",
+      "preview": "samples/motion-court/index.html",
+      "comparePreview": null,
+      "artifact": "samples/motion-court",
+      "qa": "test/motion-court.test.mjs",
+      "harness": "codex",
+      "commit": "3861cdd",
+      "createdAt": "2026-10-11T10:56:20.896Z",
+      "contentHash": "638141ac789d3f3f2d8713bd067f797fb2c342750ce2174e2c6c25861e9de073"
     }
   ]
 }

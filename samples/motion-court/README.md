@@ -27,6 +27,6 @@ http://127.0.0.1:8788/samples/motion-court/index.html
 - `config.json`: 모션 폴더·피해·범위·타이밍·연출
 - `alignment.json`: 첫 프레임 기준 키·발 앵커, 클립 전체에 고정 적용
 - `manifest.json`: 원본 모션 경로와 해시, concept 상태
-- `verify.mjs`: 중복 타격·방향·공격 잠금·피격·복구 및 HTTP/MIME 검사
+- `test/motion-court.test.mjs` (저장소 루트): 중복 타격·방향·공격 잠금·피격·복구·root 이동·idle·먼지 검사
 
-원본의 칼끝 잘림·색 변화는 유지된다. 이 데모를 만든 것은 모션의 production 승인과 별개다.
+새 캐릭터나 액션을 만들 때는 장비·색·크롭·동작을 다시 검수한다. 샘플 수용은 모션의 production 승인과 별개다.

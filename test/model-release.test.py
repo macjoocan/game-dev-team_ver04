@@ -3,10 +3,12 @@ import json
 import hashlib
 import tempfile
 import unittest
+import sys
 from pathlib import Path
 from types import SimpleNamespace
 from unittest.mock import patch
 
+sys.dont_write_bytecode=True
 spec=importlib.util.spec_from_file_location('model_release',Path(__file__).resolve().parents[1]/'scripts/model-release.py')
 module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
 

@@ -1,0 +1,8 @@
+verified model-00-000.bin
+restored diffusion/test.bin
+verified diffusion/test.bin
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.042s
+
+OK

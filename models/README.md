@@ -15,6 +15,17 @@ python scripts/model-release.py restore --catalog models/company-models.json --r
 총 용량 외에 가장 큰 모델의 분할 파일과 조립 파일을 동시에 둘 공간이 필요하다.
 ComfyUI와 Python 의존성, custom nodes, Blender는 별도 설치한다.
 
+GitHub 업로드가 진행 중일 때는 동일 해시의 공식 원본에서 필요한 가중치를 먼저 받는다:
+
+```powershell
+python scripts/model-release.py restore --catalog models/company-models.json --root D:/ComfyUI/ComfyUI_windows_portable/ComfyUI/models --source upstream --skip-unverified
+```
+
+이 모드에서는 고정 revision과 byte range를 사용해 동일한 분할·전체 해시를 검증한다.
+로컬 portable에 들어 있던 작은 VAE preview 8개는 정확한 원본 파일 매칭이 없어 명시적으로
+건너뛴다. 생성용 diffusion/text/vision/VAE 가중치는 정확한 원본 파일이 기록돼 있다.
+8개 preview의 로컬 바이트는 GitHub Release에 포함된다.
+
 ```powershell
 python skills/char-art-system/scripts/sprite-lab-setup.py --root D:/ComfyUI/ComfyUI_windows_portable/ComfyUI --nodes animatediff controlnet pixel alpha sam2 --dependencies --out out/company-nodes
 python skills/char-art-system/scripts/sprite-lab.py doctor --out out/company-doctor

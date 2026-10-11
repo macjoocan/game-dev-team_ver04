@@ -49,3 +49,4 @@ classify/
 **/__pycache__/
 # Windows 예약 이름 — /dev/null 로 출력을 버리려다 생긴다
 nul
+out/model-release/
