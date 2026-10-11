@@ -14,7 +14,9 @@
       "qa": "9-slice 자동 산출 · 늘림 8건 모서리 0.000 · 상태 실루엣 정합 0px",
       "harness": "claude-code",
       "commit": "407aca3",
-      "createdAt": "2026-09-17T11:52:27.238Z"
+      "createdAt": "2026-09-17T11:52:27.238Z",
+      "contentHash": "bfc67b91737f8fd1926426a0cc8bdf37d141c63ca1730bcee840cf5ac1e65bdf",
+      "invalidatedAt": "2026-10-11T11:00:57.384Z"
     },
     {
       "key": "fx.hex-set@1",
@@ -29,7 +31,9 @@
       "qa": "루프 이음매 1.0 < 내부평균 3.0 · manifest fps/blend/pivot",
       "harness": "claude-code",
       "commit": "407aca3",
-      "createdAt": "2026-09-17T11:52:28.183Z"
+      "createdAt": "2026-09-17T11:52:28.183Z",
+      "contentHash": "519f5839eb4c4413b328d63b92b05f45b586efa0bdabc1bcb5371c3edd1582b8",
+      "invalidatedAt": "2026-10-11T11:00:57.416Z"
     },
     {
       "key": "art.hex-palette-unified@1",
@@ -44,7 +48,9 @@
       "qa": "실루엣 100% 보존 · dE 7.5~7.7 · 24색 · 외톨이 9.1% · 반투명 0%",
       "harness": "claude-code",
       "commit": "9e1aedd",
-      "createdAt": "2026-09-18T09:47:04.150Z"
+      "createdAt": "2026-09-18T09:47:04.150Z",
+      "contentHash": "0e13474846bab61c1606fd3a174b71c538ab5684db87bddec8c8b9bbea4fb0e1",
+      "invalidatedAt": "2026-10-11T11:00:57.426Z"
     },
     {
       "key": "art.palette-candidates@1",
@@ -52,7 +58,7 @@
       "version": 1,
       "type": "sprite-animation",
       "title": "팔레트 후보 비교 — 캐스트24 vs Lospec vinik24",
-      "status": "rejected",
+      "status": "review",
       "preview": "samples/hex-palette-candidates/compare.png",
       "comparePreview": null,
       "artifact": "samples/hex-palette-candidates",
@@ -60,7 +66,8 @@
       "harness": "claude-code",
       "commit": "ddad053",
       "createdAt": "2026-10-02T02:01:15.828Z",
-      "contentHash": "a082618d4cf4e1b39f887a8c49e561e409322582f57d23555f64f85ac11a8c6b"
+      "contentHash": "82f7c26c4727dc96cc4b730e6e5ec3771f592a05013ecc8df3ca4b7648e4921b",
+      "invalidatedAt": "2026-10-11T11:00:57.428Z"
     },
     {
       "key": "art.cast-v2@1",
@@ -76,8 +83,8 @@
       "harness": "claude-code",
       "commit": "5c10c3b",
       "createdAt": "2026-10-02T02:41:36.148Z",
-      "contentHash": "4070e29fb669890b2a9920cf815a88e84595d3ebe21ed428b899286b95263c1e",
-      "invalidatedAt": "2026-10-02T11:42:04.444Z"
+      "contentHash": "98197b2ba2078f8c9473712cc4f8a1ebe1a5b23bb0c1bc78b7227c27188bbc63",
+      "invalidatedAt": "2026-10-11T11:00:57.440Z"
     },
     {
       "key": "art.cast-v2-walk@1",
@@ -93,7 +100,8 @@
       "harness": "claude-code",
       "commit": "868f2b5",
       "createdAt": "2026-10-02T10:59:43.512Z",
-      "contentHash": "84434a78691c62c2dfb54bcd7e9b727b4b96302bcbd357f43e1239c949a4e365"
+      "contentHash": "5c248b095b0959a2e8adac118b2193173e28b9d333e3e177c1798bcdce73fbdb",
+      "invalidatedAt": "2026-10-11T11:00:57.445Z"
     },
     {
       "key": "chr.hex-hero.walk@1",
@@ -108,7 +116,8 @@
       "qa": "samples/hex-blender-sprite/qa-walk/sprite-qa.md",
       "harness": "codex",
       "commit": "7145b27",
-      "createdAt": "2026-09-14T05:59:08.933Z"
+      "createdAt": "2026-09-14T05:59:08.933Z",
+      "contentMissing": true
     },
     {
       "key": "chr.hex-hero.attack@1",
@@ -123,7 +132,8 @@
       "qa": "samples/hex-blender-sprite/qa-attack/sprite-qa.md",
       "harness": "codex",
       "commit": "7145b27",
-      "createdAt": "2026-09-14T05:59:15.031Z"
+      "createdAt": "2026-09-14T05:59:15.031Z",
+      "contentMissing": true
     },
     {
       "key": "ui.sanabi-concept-kit@1",
@@ -138,7 +148,8 @@
       "qa": "out/art-review-dashboard/UI_GAME_QA.md",
       "harness": "codex",
       "commit": "167ad56",
-      "createdAt": "2026-09-27T14:43:19.824Z"
+      "createdAt": "2026-09-27T14:43:19.824Z",
+      "contentHash": "4bc6b2ed9421e5c50849187a469de16a956e0f56e10242b200345df8c4411730"
     },
     {
       "key": "art.model-pilot-8gb@1",
@@ -153,7 +164,8 @@
       "qa": "docs/art/model-pilot-2026-09-28.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-09-27T15:28:24.163Z"
+      "createdAt": "2026-09-27T15:28:24.163Z",
+      "contentHash": "ec9d42538d06884ee52ff0ced2b8ed53486d59db975e63983bb0ff0efa5a2fc4"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@1",
@@ -168,7 +180,8 @@
       "qa": "out/fantasy-sprite-pilot/qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T12:36:01.577Z"
+      "createdAt": "2026-10-09T12:36:01.577Z",
+      "contentHash": "910dfd155ea16cb466448601eee162f91fc665f158f01f8614e478eb30e69879"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@2",
@@ -183,7 +196,8 @@
       "qa": "out/fantasy-sprite-pilot-v2/walk-locked-qa.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T12:47:24.769Z"
+      "createdAt": "2026-10-09T12:47:24.769Z",
+      "contentHash": "6c217dcf2714730a6e41655be8da41d768fce03c872afbe3c2a2f490f622852a"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@3",
@@ -198,7 +212,8 @@
       "qa": "out/fantasy-sprite-pilot-v3/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T13:01:04.589Z"
+      "createdAt": "2026-10-09T13:01:04.589Z",
+      "contentHash": "e032f3fec13fc4a57729789089ef2de73c1dc5da0f92976d4ce4366efddb093a"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@4",
@@ -213,7 +228,8 @@
       "qa": "out/fantasy-sprite-pilot-v4/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T13:13:07.573Z"
+      "createdAt": "2026-10-09T13:13:07.573Z",
+      "contentHash": "51c0a3a07050532de539e768338647ae041d1b3b15ec9b8ec81a7f0aea1def74"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@5",
@@ -228,7 +244,8 @@
       "qa": "out/fantasy-sprite-pilot-v5/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T13:56:41.080Z"
+      "createdAt": "2026-10-09T13:56:41.080Z",
+      "contentHash": "9a628ab818f6dc2b09333f9ab836e8d885f16f6189045a52497865ed4a5085ed"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@6",
@@ -243,7 +260,8 @@
       "qa": "out/fantasy-sprite-pilot-v6/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T14:13:22.284Z"
+      "createdAt": "2026-10-09T14:13:22.284Z",
+      "contentHash": "ff076bc4a7099fcc09c9abefd1f485cf218a2107be1223b5cc5e1c122f7d2ee9"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@7",
@@ -258,7 +276,8 @@
       "qa": "out/fantasy-sprite-pilot-v7/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T14:21:09.959Z"
+      "createdAt": "2026-10-09T14:21:09.959Z",
+      "contentHash": "a27de3e144bb059b208ccd96eadd50f9e7ff5151d01c9ad7117572c7df2b5d96"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@8",
@@ -273,7 +292,8 @@
       "qa": "out/fantasy-sprite-pilot-v8/sprite-qa-report.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T14:42:12.555Z"
+      "createdAt": "2026-10-09T14:42:12.555Z",
+      "contentHash": "1a8d39b00952f26b3eff2de1e724817cf0fa37fba0e0f95feef9ee069e991db9"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@9",
@@ -288,7 +308,8 @@
       "qa": "out/fantasy-sprite-pilot-v9/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T14:50:03.996Z"
+      "createdAt": "2026-10-09T14:50:03.996Z",
+      "contentHash": "7afaf5eebfcdb5b41b11547bbc8b4ed35d158ab4ba131a8fad7457431d609d72"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@10",
@@ -303,7 +324,8 @@
       "qa": "out/fantasy-sprite-pilot-v10/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T14:57:00.647Z"
+      "createdAt": "2026-10-09T14:57:00.647Z",
+      "contentHash": "964fc11b4131dda0dc146cab3731c6081651576bef47fcd5685356f5fe00515c"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@11",
@@ -318,7 +340,8 @@
       "qa": "out/fantasy-sprite-pilot-v11/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T15:18:12.157Z"
+      "createdAt": "2026-10-09T15:18:12.157Z",
+      "contentHash": "7aa67ca7d2c6bfd212aadac65d1cad21f27c6b87d997ab691a5c6318461acdf3"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@13",
@@ -333,7 +356,8 @@
       "qa": "out/fantasy-sprite-pilot-v13/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T15:27:35.227Z"
+      "createdAt": "2026-10-09T15:27:35.227Z",
+      "contentHash": "34291f772c57fca04ce509c7f8cba7f25c458ac3e842b545272fa44216932d45"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@14",
@@ -348,7 +372,8 @@
       "qa": "out/fantasy-sprite-pilot-v14/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-09T16:14:46.639Z"
+      "createdAt": "2026-10-09T16:14:46.639Z",
+      "contentHash": "053d4e0de8ccf512b6c9c78efc62e6d89639aa588a0be890dba72f25e1726dd7"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@15",
@@ -363,7 +388,8 @@
       "qa": "out/fantasy-sprite-pilot-v15/README.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-10T11:24:13.449Z"
+      "createdAt": "2026-10-10T11:24:13.449Z",
+      "contentHash": "3863d54b6173fbeb34185c5959e08ff3492b207f5643489c148feef53ce3529e"
     },
     {
       "key": "chr.fantasy.pixellab-walk@1",
@@ -378,7 +404,8 @@
       "qa": "out/sprite-lab/pixellab-walk/manifest.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T06:53:01.633Z"
+      "createdAt": "2026-10-11T06:53:01.633Z",
+      "contentHash": "e2ffd94a718a3b3174ba159758f4edc79851c3990d7f9041de260012b0a05160"
     },
     {
       "key": "chr.fantasy.pixellab-walk.pixel48@1",
@@ -393,7 +420,8 @@
       "qa": "out/sprite-lab/pixellab-pixel-clean-review/pixel-qa.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:27:53.951Z"
+      "createdAt": "2026-10-11T07:27:53.951Z",
+      "contentHash": "51163c1df29df9688bbe3b61ebd25d1893a40b64407acadae3cb32f7a98f0afc"
     },
     {
       "key": "chr.fantasy.wan-animate2.walk@1",
@@ -408,7 +436,8 @@
       "qa": "out/sprite-lab/wan-animate2-fast-alpha-review/manifest.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:27:54.046Z"
+      "createdAt": "2026-10-11T07:27:54.046Z",
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
     },
     {
       "key": "chr.fantasy.scail2.walk@1",
@@ -423,7 +452,8 @@
       "qa": "out/sprite-lab/scail2-fast-alpha-review/sprite-qa.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:33:38.227Z"
+      "createdAt": "2026-10-11T07:33:38.227Z",
+      "contentHash": "9f52ed0207c06ae91d5c82bd97be11667d82528381205aba5f706c7db58b146b"
     },
     {
       "key": "fx.magic-burst.wan-alpha@1",
@@ -438,7 +468,8 @@
       "qa": "out/sprite-lab/wan-alpha-review/flash-qa-8fps.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:39:20.403Z"
+      "createdAt": "2026-10-11T07:39:20.403Z",
+      "contentHash": "c79854b43deb64ead2ed9b7417dbd6744c109fccf1ab65ce708f805902ba1d6f"
     },
     {
       "key": "ctrl.blender.walk.sword@1",
@@ -453,7 +484,8 @@
       "qa": "out/sprite-lab/walk-v2-qa.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:54:29.002Z"
+      "createdAt": "2026-10-11T07:54:29.002Z",
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
     },
     {
       "key": "chr.fantasy.scail2.walk.sword-v2@1",
@@ -468,7 +500,8 @@
       "qa": "out/sprite-lab/scail2-sword-v2-alpha-review/sprite-qa.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T07:55:13.978Z"
+      "createdAt": "2026-10-11T07:55:13.978Z",
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
     },
     {
       "key": "chr.fantasy.scail2.walk.sword-v2@2",
@@ -483,7 +516,8 @@
       "qa": "docs/art/walk-color-followup-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:02:34.596Z"
+      "createdAt": "2026-10-11T08:02:34.596Z",
+      "contentHash": "c2949de57370158f89d398c553c47897d6771dcd25e5bb16d5feb029f42c5277"
     },
     {
       "key": "chr.fantasy.scail2.hit@1",
@@ -498,7 +532,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:14:35.206Z"
+      "createdAt": "2026-10-11T08:14:35.206Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.slash@1",
@@ -513,7 +548,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:19:04.509Z"
+      "createdAt": "2026-10-11T08:19:04.509Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.slash@2",
@@ -528,7 +564,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:19:04.628Z"
+      "createdAt": "2026-10-11T08:19:04.628Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.thrust@1",
@@ -543,7 +580,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:19:04.736Z"
+      "createdAt": "2026-10-11T08:19:04.736Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.thrust@2",
@@ -558,7 +596,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:19:04.849Z"
+      "createdAt": "2026-10-11T08:19:04.849Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.hit@2",
@@ -573,7 +612,8 @@
       "qa": "docs/art/action-pilot-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:19:04.964Z"
+      "createdAt": "2026-10-11T08:19:04.964Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.slash@3",
@@ -588,7 +628,8 @@
       "qa": "docs/art/action-forward-framing-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:33:15.194Z"
+      "createdAt": "2026-10-11T08:33:15.194Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.thrust@3",
@@ -603,7 +644,8 @@
       "qa": "docs/art/action-forward-framing-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:33:15.330Z"
+      "createdAt": "2026-10-11T08:33:15.330Z",
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
     },
     {
       "key": "chr.fantasy.scail2.slash@4",
@@ -618,7 +660,8 @@
       "qa": "out/sprite-lab/action-slash-v4-qa.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:45:41.346Z"
+      "createdAt": "2026-10-11T08:45:41.346Z",
+      "contentHash": "efb88fcfb64fcacf5d48775ffb467ab0d55ca47ce877b2e0130abeb8370ad49a"
     },
     {
       "key": "chr.fantasy.scail2.slash@5",
@@ -633,7 +676,8 @@
       "qa": "out/sprite-lab/action-slash-v5-qa.json",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T08:55:54.750Z"
+      "createdAt": "2026-10-11T08:55:54.750Z",
+      "contentHash": "27874f84c545a355a5be9205e8e60e269bf229c38800095eaa227dcc20103b92"
     },
     {
       "key": "demo.fantasy.motion-court@1",
@@ -648,7 +692,8 @@
       "qa": "docs/art/motion-game-sample-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:03:57.610Z"
+      "createdAt": "2026-10-11T09:03:57.610Z",
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
     },
     {
       "key": "chr.fantasy.scail2.thrust@4",
@@ -663,7 +708,8 @@
       "qa": "docs/art/motion-game-root-roll-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:19:53.428Z"
+      "createdAt": "2026-10-11T09:19:53.428Z",
+      "contentHash": "0f4472199b05149d960987cda7bc1df724e743fa6e3268cd1493e3b1fd5190ff"
     },
     {
       "key": "chr.fantasy.scail2.roll@1",
@@ -678,7 +724,8 @@
       "qa": "out/sprite-lab/action-roll-sprite-qa.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:19:53.527Z"
+      "createdAt": "2026-10-11T09:19:53.527Z",
+      "contentHash": "8d2cc366945a0ee3b62c941ba8090948da042a81dcf2478e92b3ddda00ccea27"
     },
     {
       "key": "demo.fantasy.motion-court@2",
@@ -693,7 +740,8 @@
       "qa": "docs/art/motion-game-root-roll-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:19:53.614Z"
+      "createdAt": "2026-10-11T09:19:53.614Z",
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
     },
     {
       "key": "chr.fantasy.scail2.run@1",
@@ -708,7 +756,8 @@
       "qa": "out/sprite-lab/action-run-v2-sprite-qa.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:39:13.838Z"
+      "createdAt": "2026-10-11T09:39:13.838Z",
+      "contentHash": "2d721aca196c34906a8c8d91a804c84aefca40ea6b4f972e079718009c191a9c"
     },
     {
       "key": "chr.fantasy.scail2.roll@2",
@@ -723,7 +772,8 @@
       "qa": "out/sprite-lab/action-roll-v3-sprite-qa.txt",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:39:13.950Z"
+      "createdAt": "2026-10-11T09:39:13.950Z",
+      "contentHash": "ec01833b3c8146ac72080d3c4cc1f15c4434eb578b38111ea4f63c4e17336f19"
     },
     {
       "key": "demo.fantasy.motion-court@3",
@@ -738,7 +788,8 @@
       "qa": "docs/art/motion-game-run-dust-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T09:39:14.064Z"
+      "createdAt": "2026-10-11T09:39:14.064Z",
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
     },
     {
       "key": "chr.fantasy.scail2.roll@3",
@@ -753,7 +804,8 @@
       "qa": "docs/art/roll-headgear-fix-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T10:18:32.709Z"
+      "createdAt": "2026-10-11T10:18:32.709Z",
+      "contentHash": "8f4104cb42de424e7894a993fb5aaa24015dbee8cdb57f09ebdc274b7544be7e"
     },
     {
       "key": "demo.fantasy.motion-court@4",
@@ -768,7 +820,8 @@
       "qa": "docs/art/roll-headgear-fix-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T10:18:32.829Z"
+      "createdAt": "2026-10-11T10:18:32.829Z",
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
     },
     {
       "key": "chr.fantasy.scail2.idle@1",
@@ -783,7 +836,8 @@
       "qa": "docs/art/idle-motion-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T10:26:47.419Z"
+      "createdAt": "2026-10-11T10:26:47.419Z",
+      "contentHash": "fe947b5dd4fb0efd6f82836fc7ce517d4d9480079193c51a604b45c1f55f8833"
     },
     {
       "key": "demo.fantasy.motion-court@5",
@@ -798,7 +852,8 @@
       "qa": "docs/art/idle-motion-2026-10-11.md",
       "harness": "codex",
       "commit": "48413a5",
-      "createdAt": "2026-10-11T10:26:47.541Z"
+      "createdAt": "2026-10-11T10:26:47.541Z",
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
     },
     {
       "key": "demo.fantasy.motion-court@6",
