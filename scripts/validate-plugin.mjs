@@ -156,6 +156,17 @@ if (!exists(hooksPath)) {
             err('hooks/hooks.json', `${event}: 존재하지 않는 스크립트를 가리킨다 → ${m[1]}`);
           }
         }
+        // Windows Codex 는 훅 명령을 cmd 로 돌린다. `${VAR:-...}` 같은 bash 문법은 글자 그대로
+        // 경로가 돼 매번 exit 1("Hook failed")이 난다. 셸 확장 없이 node 가 환경변수를 읽게 쓴다.
+        const cmd = String(h.command || '');
+        if (/\$\{|\$[A-Z_]/.test(cmd)) {
+          err('hooks/hooks.json', `${event}: 셸 변수 확장은 Windows(cmd)에서 안 된다 → ${cmd}`);
+        }
+        for (const s of cmd.matchAll(/'scripts','([^']+)'/g)) {
+          if (!exists(path.join(ROOT, 'scripts', s[1]))) {
+            err('hooks/hooks.json', `${event}: 존재하지 않는 스크립트를 가리킨다 → scripts/${s[1]}`);
+          }
+        }
       }
     }
   }

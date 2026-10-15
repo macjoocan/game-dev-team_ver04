@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/scripts/check-balance-hardcode.mjs\"",
+            "command": "node -e \"import(require('url').pathToFileURL(require('path').join(process.env.CLAUDE_PLUGIN_ROOT||process.env.PLUGIN_ROOT,'scripts','check-balance-hardcode.mjs')).href)\"",
             "statusMessage": "밸런스 하드코딩 점검",
             "timeout": 10
           }
@@ -17,7 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/scripts/check-commit-gate.mjs\"",
+            "command": "node -e \"import(require('url').pathToFileURL(require('path').join(process.env.CLAUDE_PLUGIN_ROOT||process.env.PLUGIN_ROOT,'scripts','check-commit-gate.mjs')).href)\"",
             "if": "Bash(git commit*)",
             "statusMessage": "커밋 게이트 확인",
             "timeout": 10
@@ -30,7 +30,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/scripts/inject-pipeline-state.mjs\"",
+            "command": "node -e \"import(require('url').pathToFileURL(require('path').join(process.env.CLAUDE_PLUGIN_ROOT||process.env.PLUGIN_ROOT,'scripts','inject-pipeline-state.mjs')).href)\"",
             "statusMessage": "파이프라인 상태 로드",
             "timeout": 10
           }
@@ -43,7 +43,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "node \"${CLAUDE_PLUGIN_ROOT:-$PLUGIN_ROOT}/scripts/log-agent-gate.mjs\"",
+            "command": "node -e \"import(require('url').pathToFileURL(require('path').join(process.env.CLAUDE_PLUGIN_ROOT||process.env.PLUGIN_ROOT,'scripts','log-agent-gate.mjs')).href)\"",
             "timeout": 10
           }
         ]
