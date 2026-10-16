@@ -1,0 +1,24 @@
+{
+  "motions": 278,
+  "poseSamples": 834,
+  "failures": [],
+  "offlineNavigator": true,
+  "externalRequests": [],
+  "assetsRead": 284,
+  "hashes": {
+    "model.glb": {
+      "bytes": 8315660,
+      "sha256": "2d745101dbc084cdc4d9cb939c9ca672836d5fb4ec502cc129f65245918f15f8"
+    },
+    "model.blend": {
+      "bytes": 23186614,
+      "sha256": "f64951cd128185aef9ab457846a94df824dc4164dec4cd23ae2f2ff8de333b2e"
+    }
+  },
+  "downloadCheck": {
+    "filename": "character-native.glb",
+    "failure": null
+  },
+  "search": 1,
+  "mobileOverflow": false
+}

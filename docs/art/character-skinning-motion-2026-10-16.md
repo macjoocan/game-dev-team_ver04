@@ -49,6 +49,14 @@ Blender 5.2.1의 `NLA_TRACKS` 내보내기는 `export_force_sampling=False`여�
 
 근거: [native Blender 검사](character-skinning-motion-2026-10-16/multi/native-blender-validation.json), [native GLB 왕복](character-skinning-motion-2026-10-16/multi/native-glb-roundtrip.json), [모션 라이브러리](character-skinning-motion-2026-10-16/multi/motion-library-validation.json), [브라우저 QA](character-skinning-motion-2026-10-16/multi/qa-summary.json), [문서44 원문](character-skinning-motion-2026-10-16/multi/source-44.txt).
 
+### 후속 공유: 단일 HTML 대시보드
+
+Multi의 `web/exports/character-motion-dashboard.html`은 91,035,289바이트이며 모델 2종·278항목·기본 5종 native GLB/Blend 다운로드를 내장한다. gzip 282 assets, 브라우저 내 gunzip, inline Three ESM을 사용한다. 원본 세션은 네트워크 차단·`file://`에서 834자세 검사, 외부 요청 0, GLB 다운로드, 모델 해시 일치, 390px 넘침 없음을 보고했다. 이 저장소에서는 HTML의 크기·SHA-256이 manifest와 일치함을 확인했으며, 오프라인 브라우저 검사는 재실행하지 않았다. HTML 본체는 복사하지 않았다.
+
+번들 생성 시 `require.resolve('three')`가 CJS를 선택해 브라우저에서 `process.emitWarning`으로 실패했다. 설치된 `three.module.js`를 명시해 해결했다. Blend 곡선 해시 보존과 실제 GLB 시간 키 보존은 별개 검사이며, 과거 70본·5클립 구조 확인만으로 native 키 보존을 주장하지 않는다. 현행 OriginalRetry/native 유지와 후보 5종 미채택은 동일하다.
+
+후속 근거: [갱신 문서43](character-skinning-motion-2026-10-16/standalone/source-43.txt), [갱신 문서44](character-skinning-motion-2026-10-16/standalone/source-44.txt), [내장 manifest](character-skinning-motion-2026-10-16/standalone/manifest.json), [원본 세션의 오프라인 검사](character-skinning-motion-2026-10-16/standalone/validation.json), [수신 해시 및 로컬 HTML 대조](character-skinning-motion-2026-10-16/standalone/provenance.json).
+
 ## 기준
 
 원본·rest·계층·키 시각 보존, 스킨 finite, 기존 클립의 동일 영역 간선 늘어남을 각각 확인한다. 수치 통과와 사람의 외형 승인을 구분한다. 다음 손 보정은 고정 관절에 맞춘 손바닥·손가락 기저부의 연속 cage와 굴곡 topology부터 검토한다. 어깨는 현행 heat를 유지하며 제한 corrective를 검토할 경우 웹에서도 동일 구동·GLB 재입력을 별도로 검사한다.

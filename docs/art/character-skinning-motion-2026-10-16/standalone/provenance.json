@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-10-16T12:26:15.215Z",
+  "scope": "Follow-up source snapshots; reported browser tests not rerun. HTML verified locally against received manifest but not copied.",
+  "htmlVerified": {
+    "bytes": 91035289,
+    "sha256": "e6704b9235d74691cd3ca0005fa6dfb2946410ba68157cf55eb9b76f4f5e87ea"
+  },
+  "files": [
+    {
+      "source": "C:/00.SVN/Multi/web/docs/43-character-skinning-knowhow.md",
+      "snapshot": "source-43.txt",
+      "bytes": 8537,
+      "sha256": "5087fbf598f7e7d882a396f1daf1fd59c135d7bd09e9aad57185fb75cec605db"
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/docs/44-motion-dashboard.md",
+      "snapshot": "source-44.txt",
+      "bytes": 4364,
+      "sha256": "6f4f8d5f2b11168a311028f3259490e3c3eab5492f7fcc94d9f9f49fe27d612f"
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/exports/character-motion-dashboard-manifest.json",
+      "snapshot": "manifest.json",
+      "bytes": 383,
+      "sha256": "525d275fc5d9c3931ad400af399adfc729765a3957e508f12bfd9d8de81a61c0"
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/exports/character-motion-dashboard-validation.json",
+      "snapshot": "validation.json",
+      "bytes": 551,
+      "sha256": "e313e64c7167849d9389185d7750a724faabcaa13c68792e419e0a70151fc55d"
+    }
+  ]
+}

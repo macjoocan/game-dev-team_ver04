@@ -1,0 +1,12 @@
+{
+  "file": "C:\\00.SVN\\Multi\\web\\exports\\character-motion-dashboard.html",
+  "htmlBytes": 91035289,
+  "rawAssetBytes": 197286411,
+  "gzipAssetBytes": 67733246,
+  "embeddedAssets": 282,
+  "motionItems": 278,
+  "oneFramePoses": 5,
+  "sha256": "e6704b9235d74691cd3ca0005fa6dfb2946410ba68157cf55eb9b76f4f5e87ea",
+  "externalDependencies": 0,
+  "downloadGLBAndBlendIncluded": true
+}
