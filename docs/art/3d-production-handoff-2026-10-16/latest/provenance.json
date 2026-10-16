@@ -1,0 +1,24 @@
+{
+  "capturedAt": "2026-10-16T11:47:55.320Z",
+  "purpose": "User-authorized archive of shared handoff evidence; no installation, model changes or test execution.",
+  "files": [
+    {
+      "source": "C:\\00.SVN\\Multi\\web\\docs\\37-3d-production-handoff.md",
+      "snapshot": "source-37.txt",
+      "sha256": "2ffebf4a1b335f62aa267c5e8d9d6854547ca67dca484d1fe972e50cf6538679",
+      "bytes": 16140
+    },
+    {
+      "source": "C:\\00.SVN\\Multi\\web\\docs\\38-standard-image3d-study.md",
+      "snapshot": "source-38.txt",
+      "sha256": "98753ea252974ff17c64a040be7f5b44f69741e64392d58277bf1f80f0e23003",
+      "bytes": 8616
+    },
+    {
+      "source": "C:\\00.SVN\\Multi\\web\\docs\\39-reference-character-variants.md",
+      "snapshot": "source-39.txt",
+      "sha256": "43f8d49fb8aa08b7d62e52f0b4f9f04a4ce7f81f19c07f89516b4b8d8d9d1d2e",
+      "bytes": 3119
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+# Temporary contact-sheet groups and export staging; source PNGs are retained.
+inputs/pose-groups/
+gpt/frames256/
+gpt/export/

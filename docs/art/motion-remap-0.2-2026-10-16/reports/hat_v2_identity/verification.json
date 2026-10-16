@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "source_sha_unchanged": "bbf7f4c8952d3f7af9c387e4cf95d9a0d768710bc86bb9b257cf2221426c7766",
+  "identity_max_matrix_abs": 3.0517578125e-05,
+  "saved_reload_max_matrix_abs": 0,
+  "matrix_samples": 1050,
+  "clips": 5,
+  "glb": {
+    "animations": 5,
+    "skins": 1,
+    "files": {
+      "hatkid_body_identity.blend": "d6d436b968c9e9fbdc90c7ff48eb75783bf4a2731ae4a94eb4dc056a84059f1d",
+      "hatkid_body_identity.glb": "7f02073997f99b3522d9a751b5d6fa9902c07a367edde0827353e0c60b1499b1"
+    }
+  },
+  "source_rest_unchanged": true,
+  "deformed_vertices_finite": true
+}

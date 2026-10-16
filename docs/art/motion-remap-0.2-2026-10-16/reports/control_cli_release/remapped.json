@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "method": "independent rest-relative armature-space rotation transfer",
+  "scale_ratio_world": 0.8333332909064193,
+  "clips": [
+    {
+      "source_action": "Curve",
+      "output_action": "Remap__Curve.002",
+      "samples": 11,
+      "frame_start": 1,
+      "frame_end": 11,
+      "max_basis_projection_error": 4.76837158203125e-07,
+      "adaptive": {
+        "enabled": false
+      },
+      "postprocess": null
+    }
+  ],
+  "warnings": [
+    "Target control constraints/drivers removed on copied export skeleton only; use controls adapter for an animated control rig"
+  ],
+  "ik_clamped_samples": 0,
+  "source_preserved": true,
+  "target_mode": "deform_proxy",
+  "unmapped_target_bones": [
+    "CTRL_end",
+    "CTRL_lower",
+    "CTRL_root",
+    "CTRL_tip",
+    "CTRL_upper",
+    "Unused"
+  ],
+  "input": {
+    "path": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\controls_scale_release\\advanced_fixtures.blend",
+    "sha256": "2cecbb81f190e66a1807fbd65d083b45bf420f06b9e7cb5a571b420b5f17ece9"
+  },
+  "control_rig": {
+    "name": "ControlTarget__Remapped.003",
+    "report": {
+      "clips": [
+        {
+          "source_action": "Curve",
+          "output_action": "Controls__Curve.001",
+          "frame_start": 1.0,
+          "frame_end": 11.0,
+          "samples": 11,
+          "max_deform_position_error_world": 5.623090941939713e-07,
+          "max_deform_rotation_error_degrees": 1.707547292503175e-05,
+          "max_deform_scale_error": 4.2981520598697533e-07
+        }
+      ],
+      "method": "explicit copied control rig; evaluated deform verification",
+      "profile": {
+        "approved": true,
+        "fk": [
+          {
+            "bone": "root",
+            "control": "CTRL_root",
+            "location": true,
+            "rotation": true,
+            "scale": true
+          },
+          {
+            "bone": "upper",
+            "control": "CTRL_upper",
+            "location": true,
+            "rotation": true,
+            "scale": true
+          },
+          {
+            "bone": "lower",
+            "control": "CTRL_lower",
+            "location": true,
+            "rotation": true,
+            "scale": true
+          },
+          {
+            "bone": "end",
+            "control": "CTRL_end",
+            "location": true,
+            "rotation": true,
+            "scale": true
+          },
+          {
+            "bone": "tip",
+            "control": "CTRL_tip",
+            "location": true,
+            "rotation": true,
+            "scale": true
+          }
+        ],
+        "properties": [
+          {
+            "bone": "CTRL_root",
+            "name": "IK_FK",
+            "value": 1
+          }
+        ],
+        "verify_bones": [
+          {
+            "reference": "root",
+            "target": "root"
+          },
+          {
+            "reference": "upper",
+            "target": "upper"
+          },
+          {
+            "reference": "lower",
+            "target": "lower"
+          },
+          {
+            "reference": "end",
+            "target": "end"
+          },
+          {
+            "reference": "tip",
+            "target": "tip"
+          }
+        ],
+        "max_position_error": 0.002,
+        "max_rotation_error_degrees": 0.2,
+        "strict": true
+      },
+      "driver_count": 1,
+      "armature_data_driver_count": 1,
+      "unverified_deform_bones": []
+    }
+  },
+  "export": {
+    "animations": 1,
+    "skins": 1,
+    "files": {
+      "remapped.blend": "02c3158862632a3de56b5a1c1105fd2e87778da232561583391728b88fd30a47",
+      "remapped.glb": "3471beb19e93f56607d2bfd6d9b8edafc34a96125e107a7f29b2033a96422172"
+    }
+  }
+}

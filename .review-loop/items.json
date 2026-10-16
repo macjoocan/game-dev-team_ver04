@@ -1001,6 +1001,22 @@
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:26:21.611Z",
       "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76"
+    },
+    {
+      "key": "chr.fantasy.gpt.walk-reproduction@1",
+      "id": "chr.fantasy.gpt.walk-reproduction",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "GPT 걷기 재현 시험 · 사용자 Ludo24 선호",
+      "status": "review",
+      "preview": "samples/gpt-walk-reproduction-2026-10-16/raw/gpt-sheet-v1.png",
+      "comparePreview": "samples/gpt-walk-reproduction-2026-10-16/inputs/pose-reference.png",
+      "artifact": "samples/gpt-walk-reproduction-2026-10-16/comparison.json",
+      "qa": "samples/gpt-walk-reproduction-2026-10-16/README.md",
+      "harness": "codex",
+      "commit": "a6b81bd",
+      "createdAt": "2026-10-16T07:52:42.629Z",
+      "contentHash": "fda86da7faaa62f9b7a48cff954f25fbc6358201421d8a56eb07837400d585c4"
     }
   ]
 }

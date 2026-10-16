@@ -1,0 +1,21 @@
+{
+  "mode": "built-in image_gen",
+  "backendModelId": "not exposed by the tool; do not infer a specific model version",
+  "transparentBackgroundRequested": true,
+  "prompt": "Create ONE production-test 2D sprite sheet, matching the supplied character and the complete supplied walk motion reference. Input image 1 is the clean character identity/style reference: a right-facing male fantasy swordsman with red broad-brim hat, large ivory feather, red torn cape, cream shirt, brown leather vest, dark trousers, tall brown boots. Input image 2 is ONLY the motion/layout reference: 24 successive frames of a selected full walk cycle, arranged 6 columns by 4 rows, read left-to-right top-to-bottom. Reproduce the corresponding leg, knee, ankle, foot-contact, hand, torso, cape and feather pose in EVERY matching cell as closely as possible. This is an experiment in exact motion transfer, not a new invented walk. Make a NEW clean rendered sprite sheet in the art style of image 1. Do not reproduce the reference sheet's diagonal text or its dark background. Actual transparent alpha background everywhere outside the character. Output canvas 1536 by 1024 pixels, EXACTLY six equal 256px columns and four equal 256px rows, no gutters, no borders, no labels or frame numbers. EXACTLY 24 distinct chronological frames, exactly one complete character in each cell. Fix character scale, horizontal body anchor and floor baseline to the same position within every cell: body centered near local x128, feet on local y240, feather above local y12; keep the entire cape, hat, feather and boots within the cell. No clipping or overlapping adjacent cells. Follow alternating feet and actual bent knees through a full left-and-right gait; do not replace motion with static poses or simple sprite translation. Keep face, hat, feather, costume, boots and silhouette identity consistent across ALL frames. Keep side view facing right; no camera motion, no perspective rotation. Retain the whole 24-frame action order from image2, with a smooth transition from cell24 back to cell1; do not duplicate the first frame as the last. No dust, glow, ground shadow, scenery or effects. A single unified animation sheet, not separately designed characters.",
+  "inputRoles": [
+    {
+      "path": "inputs/character.png",
+      "role": "clean existing character identity and style reference"
+    },
+    {
+      "path": "inputs/pose-reference.png",
+      "role": "24 selected Ludo walk poses; row-major 6x4; source watermark preserved in input"
+    }
+  ],
+  "output": "raw/gpt-sheet-v1.png",
+  "sourceSelection": "../art-comparison-2026-10-16/ludo-cycle/manifest.json",
+  "sourceCommit": "a6b81bd",
+  "timingPolicy": "24 frames replayed at the selected Ludo comparison timing 13.5 FPS; generated timing not provided",
+  "approval": "concept; reproduction quality unverified"
+}

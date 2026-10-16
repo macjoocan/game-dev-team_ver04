@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "zip_sha256": "219901de2cff2aa7456985c7ff255cbd99b09916e86eaf7c6d396dea8ace38f3",
+  "zip_entries": [
+    "motion_remap/__init__.py",
+    "motion_remap/core.py",
+    "motion_remap/engine.py",
+    "motion_remap/ui.py",
+    "motion_remap/batch.py",
+    "motion_remap/contacts.py",
+    "motion_remap/postprocess.py",
+    "motion_remap/sampling.py",
+    "motion_remap/controls.py",
+    "motion_remap/deform_export.py",
+    "motion_remap/README.md",
+    "motion_remap/example_preset.json",
+    "motion_remap/advanced_preset.json",
+    "motion_remap/control_profile_example.json"
+  ],
+  "source_input_sha256": "bbf7f4c8952d3f7af9c387e4cf95d9a0d768710bc86bb9b257cf2221426c7766",
+  "python_tests": 556,
+  "python_skipped": 3,
+  "reports": {
+    "v2_final_baseline/verification.json": "93e5b41b08897fca1843a5b281ccb70e3109928bd517d2904247914975231982",
+    "controls_scale_release/verification.json": "07fab3827894fb057282af1703c47e32d8b3746a6c491450702e4647619eb5a0",
+    "ik_scale_release/verification.json": "cf524c2d085f2d992712f828b21c2124cd493f0af6ff90a4c46089642cd02316",
+    "hat_v2_identity/verification.json": "272d360924d26611ba7fe76b6d42b2246ab04b25566b23b11343ab9d2ff45f1f",
+    "hat_contacts_release/verification.json": "8dfb43e629a05a54ce30838d09ba5b5a2c7338b5b26b7bc4dd25f852b428c842",
+    "control_cli_release/remapped.json": "cd54ae1ea6a61f9a2cb9e978985935cd90a2c4231658462941fc165b3cd627bc",
+    "deform_cli_release/remapped.json": "1cc17a36a28ac4e78870d0dca6ea1f5da9f48d4a6126eeda247f0d7304f9c8ea"
+  },
+  "checks": {
+    "zip_crc": true,
+    "archive_matches_source": true,
+    "compile": true,
+    "actual_input_sha_unchanged": true,
+    "all_required_reports_pass": true
+  },
+  "raw_test_log_encoding": "UTF-16 BOM from Windows PowerShell redirection; normalized UTF-8 copy also preserved"
+}

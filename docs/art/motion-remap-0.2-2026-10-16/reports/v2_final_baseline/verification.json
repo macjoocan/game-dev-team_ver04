@@ -1,0 +1,60 @@
+{
+  "checks": {
+    "ui_register_unregister": true,
+    "source_rest_pose_action_frame_preserved": true,
+    "identity_2actions_4frames_5bones_max_error": 4.172325134277344e-07,
+    "fractional_source_key_preserved": true,
+    "scale_and_local_translation_preserved": true,
+    "different_rest_roll_world_ratio3_in_place_x": true,
+    "non_destructive_reference_pose": true,
+    "ik_reachable_unreachable_singular_and_descendant": true,
+    "unsupported_scale_and_budget_rejected": true,
+    "rollback_animated_object_rejected": true,
+    "saved_reopen_skin_and_root": true
+  },
+  "report": {
+    "version": 1,
+    "method": "independent rest-relative armature-space rotation transfer",
+    "scale_ratio_world": 1.0,
+    "clips": [
+      {
+        "source_action": "WalkFixture",
+        "output_action": "Remap__WalkFixture",
+        "samples": 11,
+        "frame_start": 1,
+        "frame_end": 11,
+        "max_basis_projection_error": 2.384185791015625e-07,
+        "adaptive": {
+          "enabled": false
+        },
+        "postprocess": null
+      },
+      {
+        "source_action": "RunFixture",
+        "output_action": "Remap__RunFixture",
+        "samples": 11,
+        "frame_start": 1,
+        "frame_end": 11,
+        "max_basis_projection_error": 2.384185791015625e-07,
+        "adaptive": {
+          "enabled": false
+        },
+        "postprocess": null
+      }
+    ],
+    "warnings": [],
+    "ik_clamped_samples": 0,
+    "source_preserved": true,
+    "target_mode": "plain",
+    "unmapped_target_bones": [],
+    "export": {
+      "animations": 2,
+      "skins": 1,
+      "files": {
+        "synthetic.blend": "391e3bb574f631951bbdd7edfc007c61be87898dafb68fa835f6f80f617a502d",
+        "synthetic.glb": "9656dcee3df2f6b9c4c63be2da491d2e032ec2831b1450a56d8db926a67c1db2"
+      }
+    }
+  },
+  "passed": true
+}

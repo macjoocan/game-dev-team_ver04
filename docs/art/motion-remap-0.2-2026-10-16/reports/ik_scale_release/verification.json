@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "ik_control": {
+    "clips": [
+      {
+        "source_action": "IKMotion",
+        "output_action": "Controls__IKMotion",
+        "frame_start": 1.0,
+        "frame_end": 11.0,
+        "samples": 11,
+        "max_deform_position_error_world": 7.251217997429632e-07,
+        "max_deform_rotation_error_degrees": 6.8301899842348385e-06,
+        "max_deform_scale_error": 2.1490760299348766e-07
+      }
+    ],
+    "method": "explicit copied control rig; evaluated deform verification",
+    "profile": {
+      "approved": true,
+      "ik": [
+        {
+          "bone": "end",
+          "control": "FootIK",
+          "location": true,
+          "rotation": true,
+          "rest_offset": false
+        }
+      ],
+      "verify_bones": [
+        {
+          "reference": "end",
+          "target": "end"
+        }
+      ],
+      "max_position_error": 0.02,
+      "max_rotation_error_degrees": 0.2,
+      "strict": true
+    },
+    "driver_count": 0,
+    "armature_data_driver_count": 0,
+    "unverified_deform_bones": [
+      "root",
+      "upper",
+      "lower",
+      "tip"
+    ]
+  },
+  "segmented_deform_export": {
+    "clips": [
+      {
+        "source_action": "BendMotion",
+        "output_action": "Deform__BendMotion",
+        "frame_start": 1.0,
+        "frame_end": 11.0,
+        "samples": 11
+      }
+    ],
+    "method": "evaluated linear skin/Blender B-Bone segment matrices",
+    "segment_mapping": {
+      "Ribbon": [
+        "Ribbon__segment_00",
+        "Ribbon__segment_01",
+        "Ribbon__segment_02",
+        "Ribbon__segment_03",
+        "Ribbon__segment_04"
+      ]
+    },
+    "max_matrix_projection_error": 5.960464477539063e-08,
+    "max_skin_vertex_error_world": 2.388837865275353e-07,
+    "export": {
+      "animations": 1,
+      "skins": 1,
+      "files": {
+        "bendy_export.blend": "b2f31ffc171aed15a0db04f7f73233042b6ddc7788ca361eab8764265a1f84f6",
+        "bendy_export.glb": "413e760cca39b13fb1c4e71e295b108a59d696dbf3d357d4d978af4a9582ce70"
+      }
+    }
+  },
+  "source_vertices_and_segments_unchanged": true
+}

@@ -1,0 +1,35 @@
+{
+  "clips": [
+    {
+      "source_action": "BendMotion",
+      "output_action": "Deform__BendMotion.001",
+      "frame_start": 1.0,
+      "frame_end": 11.0,
+      "samples": 11
+    }
+  ],
+  "method": "evaluated linear skin/Blender B-Bone segment matrices",
+  "segment_mapping": {
+    "Ribbon": [
+      "Ribbon__segment_00",
+      "Ribbon__segment_01",
+      "Ribbon__segment_02",
+      "Ribbon__segment_03",
+      "Ribbon__segment_04"
+    ]
+  },
+  "max_matrix_projection_error": 5.960464477539063e-08,
+  "max_skin_vertex_error_world": 2.388837865275353e-07,
+  "input": {
+    "path": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\adapters_release\\bendy_export.blend",
+    "sha256": "779610beb88433dfc71f111df5a3cdd46dc35edfe1c62aa133aac6bd76353b2f"
+  },
+  "export": {
+    "animations": 1,
+    "skins": 1,
+    "files": {
+      "remapped.blend": "50d05f062920642438d9ab12acb35bcb08a590982b0e3194d2479a1462b7bad3",
+      "remapped.glb": "f75ac80e6d65491b6bae4d05f3a624bc0114eb9467b01787793a6b3421321c64"
+    }
+  }
+}

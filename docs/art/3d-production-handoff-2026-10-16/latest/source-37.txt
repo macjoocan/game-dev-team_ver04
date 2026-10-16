@@ -1,0 +1,178 @@
+# 3D 제작 이력·노하우 인수인계
+
+2026-10-16 · Multi → game-dev-team_ver04 세션 공유용
+
+- 전달 대상: `01a13d31-184e-7960-9eac-fed37eccf181`
+- 작업 루트: `C:/00.SVN/Multi`
+- 용도: 기존 제작 재현, 후속 모델·애니메이션 자동화 설계의 근거
+- 현재 게임 단계: 파티 서빙 P-0, 사람 확인 대기. 이번 문서는 게이트·반복 예산 변경 없음.
+
+## 1. 먼저 볼 결론
+
+### 최신 갱신 — 원화·Standard·비용 절감 비교 완료
+
+사람 확인으로 **GPT 원화 → 이미지 기반 Standard 3D → Blender 정리·검수**를 기본 흐름으로 적용. 캐릭터의 모션/리그를 먼저 확인하는 원칙은 함께 유지. 잘 나온 기준 원화 재사용으로 GPT 생성 사용량을 줄이고, ComfyUI 보정/변형은 선택적으로 검토.
+
+| 확인한 노하우 | 근거·한계 |
+|---|---|
+| 이미지Standard는 Hunyuan3D 사용 | Tripo 이미지 입력은High로 계산. provider/quality를 명시하고 기존job으로만 재개. 월 제공량은 페이지 캐시와 직접 조회가 달랐으므로 계정 패널 확인 전 확정 금지 |
+| Standard도 모델이 무거울 수 있음 | 연구누계Standard5건, 원본약139~150만삼각형·2K PBR. 표시용약6만으로 축소, 원본 별도 보존. High추가0건. 저폴리/리깅완료와 품질 옵션 구분 |
+| 기존 SDXL의 저강도img2img로 원화 재사용 | GPT기준 원화에denoise0.28은 얼굴/의상/구도를 상당 부분 유지. 독립 로컬 신규 디자인이 아님 |
+| 기존 Animagine도 모델별 설정으로 개선 | 공식 태그·CFG5·Euler a·28steps, 기존 설치 모델로2D캐주얼 신규 원화. 자연어 긴 프롬프트로 범용SDXL을 돌린 결과와 구분. 이 원화의Standard3D도 별도로 완료 |
+| 다른 캐릭터 변형에는 상충 관계 있음 | img2img0.50~0.60은 원본에 묶임.0.75~0.80은 수염남성/안경여성으로 구분되지만 손 포즈·체형·의상색 이탈. 모델링 전 재정리 필요 |
+| 이번 사람 선호는GPT원화 | 단일 모델/워크플로 시험으로 ComfyUI 전체가 불가능하다고 일반화하지 않음. 새 원화GPT우선, 로컬보정은 선택적 |
+| 근접 눈 돌출은 후속 수작업 대상 | Animagine3D의 눈썹/윗눈꺼풀과 앞머리 겹침.117정점 투영 실험은 잔여 조각이 남아 미채택. 원본/default GLB 유지, 해결 완료로 보고 금지 |
+
+원본·프롬프트·워크플로·시드·모델/출력SHA·3D job·raw/final/preview를 보존. 이번 로컬 개선/캐릭터 변형에는 추가GPT생성0건. Standard3D5건은 사람 요청으로 각각 접수한 별도 작업.
+
+- [Standard 연구와 실제 파일](38-standard-image3d-study.md), 폴더 `web/assets/studies/standard-quality/`.
+- [캐릭터 변형 연구](39-reference-character-variants.md), 폴더 `web/assets/studies/reference-variants-v1/`.
+- 원화 비교 `/comfy-reference.html`, 캐릭터 변형 `/character-variants.html`,3D비교 `/standard-quality.html?model=animagine-server` (웹서버5180).
+- 검수대시보드4177·15항목, 사람 최종아트/모션 승인은 별도. 아래10월15일 제작 수치와 초기 단계 기록은 이력으로 보존.
+
+2026-10-16 추가 사람 지시: **GPT 또는 ComfyUI 원화 제작 후 이미지 기반 모델링을 원칙으로 채택.** 텍스트 단독 3D는 별도 요청 때만 사용. 기존 모션/리그 우선 원칙과 함께 적용. Standard 이미지 시험은 `web/assets/studies/standard-quality/`, 비교 화면은 `/standard-quality.html`.
+
+**동작·리그를 먼저 고르고 외형을 맞추는 방식이 후속 제작의 기준.**
+
+이미지→3D는 정지 상태 외형을 빠르게 확인하는 데 유용했음. 생성 메시를 그대로 기존 동작에 넣는 단계에서 어깨·무릎·치마·머리카락 문제가 발생했음. 같은 뼈 이름만으로 체형 호환을 보장할 수 없음.
+
+```text
+필요 행동·카메라 정리
+ → 검증된 기본 몸·리그·동작 확보
+ → 관절에 맞는 원화
+ → 외형 제작/이미지→3D
+ → 체형·관절·가중치 보정
+ → 같은 시간의 원본/수정본 비교
+ → GLB·실제 게임 검수
+ → 같은 stable ID에 새 버전 등록
+```
+
+생성 메시에는 원본 리그의 뼈·면 구조·가중치가 자동 보존되지 않았음. 현재 맞춤 17뼈 동작은 프로토 시안이며, 자연스러운 완성 모션 확보와 구분 필요.
+
+## 2. 제작 이력
+
+수치는 각 작업 기록 기준. MB는 십진 반올림. 검수 상태는 `.review-loop/`가 정본.
+
+| 순서 | 작업·결과 | 얻은 점·상태 | 근거 |
+|---|---|---|---|
+| 1 | 웹 PvP 로봇·무기·사물의 Blender 제작, 관절·손 소켓 동작 | 사격 판정·공격 피드백은 별도 게임 로직으로 검증 필요. 해당 게임 보류 | [액션·모델](16-jump-combat-and-models.md), [조준·피드백](17-aim-and-attack-feedback.md) |
+| 2 | 올빼미 원화→Tripo high→Blender. 5,147삼각형, 2K PBR 3장, GLB 5.28MB | 정지 전시품 품질 시험. 높이 0.8m. 게임 미연결 | [초기 시험](19-museum-coop-and-art-study.md), `web/assets/museum/owl/generation.json` |
+| 3 | 미쿠 정지 생성. 4,606삼각형, GLB 약3.24MB | 얼굴·의상 확인. 팬 캐릭터 시험 | `web/assets/studies/miku/`, 기존 위키 제작 기록 |
+| 4 | 미쿠 임시 34뼈·4클립, GLB 3.50MB | 관절·소매·치마 접힘이 어색하다는 사람 피드백. 제작 순서 변경 | [임시 리깅](20-miku-rig-and-animation-study.md) |
+| 5 | Quaternius Standard CC0 기준 몸 65뼈·43클립 확보. 11개 선택해 캐주얼 외형 비교 | 원본 몸 가중치·rest 변환 유지. 동작을 먼저 정한 첫 시험 | [캐주얼 계획·결과](21-casual-character-motion-plan.md) |
+| 6 | T 자세 미쿠 재생성. 4,405삼각형·65뼈·11클립, GLB 4.23MB | 기존 모션 이식 후 어깨·무릎 보정 v2. 최종 품질 검수 대기 | [모션 맞춤 미쿠](22-miku-motion-fit-study.md) |
+| 7 | 박물관 경찰. 27,151삼각형·65뼈·7클립, GLB 1.71MB | 경찰모·몽둥이·권총. 기존 CC0 몸에 부착물/동작 추가. 프로토 연결 | [경찰·HUD](29-police-and-objective-hud.md), `web/assets/heist/police-validation.json` |
+| 8 | 뗏목 신규 원화→Tripo→17뼈·6클립. 게임용33,684/고밀도134,736삼각형, GLB4.14MB | 3등신 시안 4명 연결. 직접 작성한 초기 동작. 최종 아트 대기 | [뗏목 제작](33-raft-character-image3d.md) |
+| 9 | 서빙 신규 원화→Tripo→17뼈·6클립. 게임용32,076/고밀도128,304삼각형, GLB4.58MB | 뗏목 메시 재사용 없이 새 외형 생성. 제작 코드/리그 틀 재사용. 4명 연결 | [서빙 프로토](34-party-serving-first-playable.md), `web/assets/serving/crew-v1/generation.json` |
+
+## 3. 실제 수정 사례
+
+| 증상 | 확인한 원인·대응 | 재사용할 판단 |
+|---|---|---|
+| 미쿠 어깨가 너무 벌어짐 | 기준 몸의 rest 관절을 다른 체형에 적용. 어깨 폭0.3838m→0.284m, 겨드랑이 가중치 보정 | 뼈 이름·계층·클립이 같아도 관절 위치는 체형별 확인 |
+| 무릎 아래가 접힘 | 무릎 높이0.5318m→0.65m, 엉덩이/발목 연결과 가중치 보정 | 보이는 무릎·회전 중심·가중치 경계를 함께 확인 |
+| 머리카락이 다리에 끌려감 | 분리 머리카락6조각의 몸/다리 가중치 제거 | 가까운 표면에서 가중치를 옮길 때 머리카락·치마·소품을 분리 |
+| 긴 머리·치마가 몸을 관통 | 현재 고정 변형 또는 임시 키프레임. 천/머리 물리 충돌 없음 | 정지 원화 품질과 동작 중 품질을 각각 검수 |
+| 고품질 생성인데 면 수가 적음 | 실제 생성 원본은 약5천삼각형. high 옵션만으로 하이폴·관절 토폴로지 보장 불가 | 옵션명 대신 실제 면 수·텍스처·변형을 기록 |
+| 하이폴로 바꿔도 새 디테일이 없음 | 용접 후 subdivision으로 표면 보강 | 고밀도 보관본과 게임용을 분리. subdivision을 새 조각 디테일로 보고하지 않음 |
+
+미쿠 v2는 원본과 이름·계층·동작 소스는 공유하지만 **rest 관절 위치와 가중치는 다름**. 초기 캐주얼 비교의 ‘원본 뼈 행렬 차이0’ 결과를 미쿠 v2에 그대로 적용하면 안 됨.
+
+## 4. 재현 코드·파일
+
+아래 경로는 모두 `C:/00.SVN/Multi/` 기준. 실행 전 각 스크립트의 입력 경로·씬·중복 실행 조건 확인 필요. 원본에 보정 작업을 두 번 적용하지 않음.
+
+| 대상 | 폴더·재현 코드 | 최신 파일·주의 |
+|---|---|---|
+| 캐주얼 기준 | `web/assets/studies/casual-motion/source/prepare-casual.py`, `export-casual.py` | `final/casual-baseline.glb`, `casual-explorer.glb`. 준비 후 수정본 export만 실행 |
+| 초기 미쿠 | `web/assets/studies/miku/source/rig-miku.py`, `export-animation.py` | `final/miku-animated.blend`, `miku-animated.glb`. 이력용 |
+| 모션 맞춤 미쿠 | `web/assets/studies/miku-motion-fit/source/fit-miku-to-motion.py`, `calibrate-joints.py`, `export-miku-motion-fit.py` | `final/miku-motion-fit.blend`, `miku-motion-fit.glb`. 관절 보정 후 export만 실행. 최신 검증 `validation-browser-v2.json` |
+| 뗏목 | `web/assets/raft/crew-v1/source/build-crew.py` | `source/raft-crew-study.blend`, `raw/tripo-generated.glb`, `raw/raft-crew-highpoly.glb`, `final/raft-crew.glb` |
+| 서빙 | `web/assets/serving/crew-v1/source/build-crew.py` | `source/party-crew-study.blend`, `raw/tripo-generated.glb`, `raw/party-crew-highpoly.glb`, `final/party-crew.glb` |
+| 경찰 | `web/assets/heist/` | `final/heist-police.glb`, `police-validation.json`, `manifest.json` |
+| 올빼미 | `web/assets/museum/owl/` | `final/museum-bronze-owl.glb`, `generation.json` |
+
+각 에셋의 원화·프롬프트·생성 원본·Blend·게임용 GLB·미리보기·검증 JSON을 함께 보존. 정확한 생성 요청은 해당 `source/image-prompt.txt` 확인.
+
+### 기존 생성 job — 중복 비용 방지
+
+| 에셋 | 보존된 job |
+|---|---|
+| 올빼미 | `tripo:rid:3eaabac6-19f5-4a4c-bb09-30dde7a9dbdc` |
+| 모션 맞춤 미쿠 | `tripo:rid:3057b663-8d6e-4048-aee0-050823fc5fae` |
+| 뗏목 | `tripo:rid:22230ab9-962b-4af5-845c-e57642e3e35a` |
+| 서빙 | `tripo:rid:5729aad4-53e8-46ce-aa14-9753480e04e6` |
+
+생성 완료 결과가 있으면 재사용. 연결이 끊겨도 새 생성 전에 job 상태·로컬 파일부터 확인. 연결 당시 Blender5.2.1 LTS/addon1.8/protocol1.3이었으며 다음 세션에서 현재 상태를 다시 조회해야 함. 계정 키는 문서·로그로 출력하지 않음.
+
+## 5. 애니메이션·내보내기 기준
+
+- 기본 출력 GLB. 단위 미터, 발 중심 피벗. 캐릭터는 GLB +Y 위/+Z 앞. 올빼미는 기존 -Z 전방 기록이 있으므로 일괄 가정 금지.
+- 캐주얼/미쿠 기반은65뼈. 뗏목/서빙은 맞춤17뼈. 서로 같은 리그로 처리하지 않음.
+- 선택 라이브러리11클립: 대기·걷기·조깅·질주·웅크림 대기/이동·점프 시작/공중/착지·상호작용·가슴 피격.
+- 뗏목/서빙6클립 원본 이름: `Idle`, `Walk`, `Row`, `Repair`, `Repel`, `Rescue`. 서빙 전용 완성 연기로 오해하지 않음.
+- 뼈·가중치·동작 내보내기와 게임 상태 전환을 각각 확인. 무기/도구 부착과 실제 타격 판정도 별도 확인.
+- 장식 메시가 이동 충돌을 바꾸지 않도록 기존 게임 프록시 유지. LOD 추가·최종 성능 예산은 미결.
+
+## 6. 검증 순서·판정 범위
+
+| 순서 | 확인 | 남길 근거 |
+|---|---|---|
+| 파일 | 원본 출처/라이선스·job·해시·크기·실제 삼각형·텍스처 | provenance/generation/manifest |
+| 리그 | 관절 계층·rest 자세·단위/축·미가중 정점·가중치 합·영향 개수 | rig-validation 등 |
+| 동작 | 클립 이름/길이·유한 좌표·반복 경계·점프 순서 | 샘플 검증 JSON |
+| 비교 | 같은 클립/시간의 기준·수정본. 정면/측면/뒷면, 느린 재생 | 미리보기 PNG·브라우저 기록 |
+| 게임 | 실제 카메라·조명·4명 복제·손/발·도구·타격 시점 | 실제 브라우저 캡처·콘솔 |
+| 승인 | 자연스러움·외형·관통·최종 채택 | 사람 검수 기록 |
+
+캐주얼65뼈 비교는11클립×9시점에서 원본/외형 뼈 행렬 차이0 확인. 미쿠 v2도11×9시점의 유한값·시간 등을 확인했으나 전체 자기 관통 검사는 아님. 뗏목은6클립×3시점 검사. 서빙은4명 모델 로드와 게임 행동 연결 확인. 세부 근거는 각 문서/JSON 참조.
+
+최신 전체 기능 테스트는165/165·빌드 성공(박물관 RDP 입력8개 추가 포함). 모델 자연스러움·게임 재미 통과 근거가 아님. 기존 Three.js 공용 청크500KB 초과 경고는 남아 있음. 이번 인수인계 작성에서는 빌드·게임 테스트 재실행 없음.
+
+## 7. 화면·검수 대시보드
+
+주소는 로컬 서버 실행 시 사용 가능. 전달 시점에 서버 생존을 재검증한 것은 아님.
+
+| 보기 | 주소 |
+|---|---|
+| 검수 대시보드 | http://127.0.0.1:4177/ |
+| 캐주얼 기준/외형 비교 | http://127.0.0.1:5180/casual-motion.html |
+| 모션 맞춤 미쿠 v2 | http://127.0.0.1:5180/miku-motion-fit.html |
+| 올빼미 | http://127.0.0.1:5180/museum-asset.html |
+| 뗏목 모델 | http://127.0.0.1:5180/raft-character.html |
+| 서빙 모델 | http://127.0.0.1:5180/serving-character.html |
+| 경찰 게임 적용 | http://127.0.0.1:5180/heist.html |
+
+웹 실행: `web/`에서 `npm.cmd run dev:pvp`. 전체 기능 확인: `npm.cmd test`, `npm.cmd run build`.
+
+검수 stable ID: `raft.crew.image3d`, `raft.crew.highpoly`, `serving.crew.image3d`, `study.miku.motion-fit`, `museum.owl.image3d`, `museum.police`. 기존 등록은 각 `@1`. 최종 승인 없이 production으로 승격하지 않음. 수정본은 같은 stable ID의 다음 버전으로 등록.
+
+## 8. 다음 자동화 작업
+
+사람이 게임별 모델·동작 데이터를 확보해 전달할 예정. 아직 받은 데이터 없음. [생활4종·액션8종 후보와 전달 규격](36-animation-reference-games.md)에 정리됨. 실제 추출 가능 여부·리그 호환·포함 클립은 미검증.
+
+```text
+게임별 원본 보존/파일 목록
+ → 스켈레톤별 그룹
+ → 대표 캐릭터1개: 대기·이동·공격·피격 확인
+ → rest 자세·축·체형별 매핑
+ → 3등신 리타기팅 시안
+ → 손발/도구 접촉 보정
+ → 동작 일괄 변환·미리보기·검수 등록
+```
+
+필요 자료: 스킨 메시+뼈+bind/rest 자세+동작+텍스처. 무기/소켓과 상대가 맞물리는 동작의 위치 기준도 함께 확보. 원본 이름/폴더 보존. OBJ만으로는 같은 수준의 리그 자동화가 어려움.
+
+root motion·가산 동작·IK·이벤트·물리 반응을 각각 분류. Party Animals 같은 물리 결과는 독립 클립으로 존재한다고 가정하지 않음. 분석 자료와 출시용 재사용 권한을 구분해 기록.
+
+자동화 가능한 후보: 파일 검사·뼈 매핑 프리셋·클립 목록/미리보기·반복 export·대시보드 등록. 체형/관절·가중치·손발 접촉·치마/머리 충돌은 샘플을 보고 가능 범위를 판단. 전 자동 완성은 미검증.
+
+## 9. 후속 세션에 요청할 범위
+
+- 먼저 이 문서와 원본 스크립트/검증 파일을 읽고 재사용 가능한 절차를 선별.
+- 플러그인에 반영할 때는 ‘실제 확인한 절차’와 ‘자동화 제안’을 구분.
+- 작업 이력 공유가 새 유료 생성·모델 변경·배포·게이트 승인까지 뜻하지 않음.
+- `party/`, `sim/`, 보류한 프로토와 타 세션 변경 보존.
+- 활성 개발 정본은 `docs/pipeline/state.json`과 `lastHandoff`. 본 문서는3D 인수인계 정본.
+
+기존 위키 이력: [3D 작업 히스토리](https://nhncorp.dooray.com/wiki/2668173571253827735/4443942959895757018). 10월15일 게시분이며 뗏목·서빙 최신 모델까지 포함한 정리는 이 문서 참조. 위키 추가 게시 없이 세션에 전달.

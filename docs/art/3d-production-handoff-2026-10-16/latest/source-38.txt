@@ -1,0 +1,74 @@
+# 원화 → Standard 3D 품질 시험
+
+2026-10-16. 사람 요청: 현재 Premium 플랜의 Standard 수준 확인. 초기3건 접수 후 GPT 원화 기반으로 방향 수정. 이어 ComfyUI 원화 기반1건 추가 요청.
+
+## 보기
+
+- [원화·3D 회전 비교](http://127.0.0.1:5180/standard-quality.html)
+- [모델링 검수 대시보드](http://127.0.0.1:4177/)
+- 자료: `web/assets/studies/standard-quality/`
+
+## 확인한 결과
+
+| 샘플 | 입력·요청 옵션 | 원본 삼각형 | 표시용 삼각형 | 관찰 |
+|---|---|---:|---:|---|
+| 초기 텍스트 캐릭터 | Tripo Standard / 텍스트 | 1,496,568 | 60,000 | 머리 중복 결함. 재시도 없이 보존 |
+| GPT 서빙 캐릭터 | 새 built-in imagegen 원화 → Hunyuan3D Standard | 1,388,528 | 59,999 | 얼굴·짧은 머리·앞치마·바지 형태 확인. 사람 긍정 피드백 |
+| GPT 올빼미 | 기존 GPT 원화 → Hunyuan3D Standard | 1,443,062 | 60,000 | 깃털·받침대 무늬 확인. 사람 긍정 피드백 |
+| 기존 올빼미 비교 | 동일 원화 → 이전 Tripo High | 5,147 | 5,147 | 새 생성 없음. 같은 원화지만 생성기/시점/면 수가 달라 순수 옵션 비교 아님 |
+| ComfyUI 서빙 캐릭터 | SDXL 원화 → Hunyuan3D Standard | 1,431,333 | 59,999 | 원화의 인형 느낌/의상 불일치도 그대로 반영. 사람 부정 피드백 |
+
+신규4건 모두2K PBR 3장, 뼈/동작 없음. 원본은 `raw/`, 면 수만 줄이고 축/스케일을 정리한 사본은 `final/`. 새 디테일 조각이나 텍스처 재도색 없음. 최신 수치·정확한 바이트·job·프롬프트는 `generation.json` 참조.
+
+Standard 이름만으로 저폴리 모델이 되는 것은 아님. 원본은 약42~46MB이며 웹 표시용은 약4~7MB. 정지 외형 결과를 게임용 토폴로지·리깅·모션 품질로 판정하지 않음.
+
+## 사람 제작 원칙
+
+**GPT 또는 ComfyUI 원화 제작 → 이미지 기반 3D 모델링**을 기본으로 채택. 텍스트 단독3D는 별도 요청 때만 사용. `AGENTS.md`, `web/VISUAL_DESIGN.md`, 3D 인수인계 문서37에 반영.
+
+원화·프롬프트·모델·시드·워크플로·생성 job·생성 원본 보존. 캐릭터는 기존 모션/리그 요구를 먼저 확인하고 전신 자세와 관절 공간 확보. 이번 시안의 실제 비율은 원화/3D를 보고 검수하며 ‘정확히3등신’으로 확정하지 않음.
+
+## 제공 횟수·생성기 주의
+
+[Premium 공식 문서](https://www.mcp-for-blender.com/docs/premium)는 이미지 입력 시 Hunyuan3D Standard/High 지원, Tripo는 이미지 입력을 High로 계산한다고 안내. 이번 이미지 Standard 요청은 `provider=hunyuan3d`, `quality=standard`를 명시함.
+
+요금표는 검색 캐시와 직접 조회 내용이 달랐음. 앞서 말한 Pro40/10을 현재 계정의 확정 제공량으로 사용하지 않음. 실제 제공량·잔여량은 계정 패널 확인 필요. 이번 초기3건 외 재생성 없음. ComfyUI 추가 시험은 사람 지시로1건 완료. 합계Standard4건, High 추가0건.
+
+## 검증·승인
+
+- 원본 보존, 가벼운 사본 GLB 출력. 재현 스크립트 `source/export-study.py`, 원본/사본 Blender `source/standard-quality-study.blend`.
+- 실제 브라우저1280×800에서 신규3개+기존High 모델/원화 로드, 탭·정면·와이어·자동 회전 확인. 페이지 오류0, 가로 넘침 없음.
+- 정면 축 수정: 가져온 오브젝트의 QUATERNION 모드에서는 Euler 변경이 적용되지 않았음. 사본만 XYZ로 설정 후 방향 재출력.
+- 빌드 성공. 기존 Three.js 공통 청크500KB 경고 유지. 게임 규칙 미변경으로 전체 게임 테스트 재실행 없음.
+- 검수 ID: `study.standard.image-server`, `study.standard.image-owl`, `study.standard.text-server`, `study.standard.comfy-server`. `review`, 프로덕션 미승격.
+- 사람의 ‘Standard도 둘 다 최고’ 피드백은 긍정 의견으로 보존. 전체 게임 최종 아트·모션 승인으로 확장하지 않음.
+- 파티 서빙 개발 단계와0/3 반복, 보류 프로젝트 상태 유지.
+
+## ComfyUI 추가 시험
+
+ComfyUI0.39.0 / SDXL Base1.0 / RTX5060 8GB. 체크포인트SHA-256 검사 후 로컬 생성. 832×1216,28steps,DPM++2M/Karras. 첫 시드2026101601은 배경/주머니손 때문에 모델링 미사용. 보정 시드2026101602,CFG7.0은 인형형 전신/분리 팔을 확보했으나 앞치마·바지·색상은 지시와 다름. 원화2회와Standard3D1건을 구분해 기록. 워크플로·프롬프트·모델 해시·시드·출력 해시는 `source/comfy/`에 보존.
+
+### 비용 절감 목적의 원화 개선
+
+사람 목적은 GPT 이미지 생성 사용량 절약. 추가 GPT 생성 없이 기존 설치 모델로 품질 향상 가능 범위를 확인. 기존 GPT 원화를 SDXL img2img denoise0.28로 로컬 보정한 결과는 얼굴/의상/구도 유지. 순수 로컬 신규 생성과 구분. 기존 Animagine4.0은 공식 태그/CFG5/Euler a/28steps로 별도 신규 원화 시험. 새 모델 다운로드·새3D 생성 없음.
+
+### 기존 모델 개선 결과
+
+[원화4종 비교](http://127.0.0.1:5180/comfy-reference.html). Animagine4.0 태그 방식은 기존 SDXL Base 시험보다 큰 머리의 캐주얼 형태·노란 앞치마·청록 바지 반영이 개선됨. 기존 GPT 입력 없이 로컬 신규 생성. 단,2D 애니 그림체이며 손 세부·3D변환 적합성·동일 인물 변형은 미검증. 모델과 프롬프트 설정을 함께 바꿨으므로 모델 단독 효과로 분리하지 않음.
+
+기존 GPT 원화+SDXL 보정은3D풍 외형 유지에 유리했음. 이 결과만으로 로컬에서 GPT 수준의 새3D풍 원화를 자유롭게 만들 수 있다고 단정하지 않음. 비용 절감 방향: 신규 시안은 로컬 특화 모델 시험, 이미 채택한 기준 원화는 재사용해 로컬 보정. 이후 개선 시험에서 GPT 생성0건·추가3D0건. 로컬GPU시간과 전력 사용은 발생.
+
+재현: `source/comfy/server-animagine.api.json`, `models-animagine.json`, `output-animagine/run-log.json`; 보정은 `server-gpt-guided.api.json`, `output-guided/run-log.json`. 기본 노드만 사용, 새 모델 다운로드/외부 이미지API 없음. [Animagine 공식 모델별 태그/설정](https://huggingface.co/cagliostrolab/animagine-xl-4.0), [ComfyUI img2img 설명](https://github.com/Comfy-Org/workflow_templates/blob/main/site/knowledge/concepts/img2img.md).
+
+## Animagine 태그 원화 → Standard3D
+
+2026-10-16 추가 사람 요청. 기존 Animagine 태그 원화를 그대로 사용해 Hunyuan3D Standard1건 접수. GPT 이미지 추가 생성 없음. job `hunyuan3d:job:job_64466897-9500-446e-99dd-2af6a559f23c`. 완료. 원본1,462,332삼각형·44,332,328B, 표시용60,000삼각형·GLB4,386,416B,2K PBR3장. 뼈/동작 없음. 이 요청은 모델 품질 시험이며 게임 최종 아트/리깅 승인과 구분.
+
+- Animagine 새 모델: [원화·3D 직접 비교](http://127.0.0.1:5180/standard-quality.html?model=animagine-server). 큰 머리·앞치마·청록 바지·뒤 리본 확인. 손가락·비대칭 자세·관절 변형은 후속 검수. 원화에서 추정한 뒷면을 포함하며 정지 모델임.
+- `final/animagine-server.glb`, `raw/animagine-server.glb`, `preview/animagine-front.png`·`animagine-back.png`·`animagine-side.png`. 재현은 기존 export-study.py.
+- 브라우저1280×720에서 원화/GLB·정면/뒷면/측면·와이어/회전 확인, 페이지 오류0·가로/세로 넘침 없음. 검수 `study.standard.animagine-server@1`, 사람 승인 대기.
+- 이번 요청으로 Standard1건 추가. 연구 누계Standard5건, High추가0건. GPT 원화 추가 생성 없음.
+
+## 눈 주변 근접 결함 피드백
+
+사람: 멀리서는 괜찮으나 눈 주변이 별도 조각처럼 붙어 보임. 근접 관찰에서 눈썹/윗눈꺼풀 돌출이 앞머리와 겹치는 현상 확인. GLB 오브젝트는1개이며 내부 연결/겹침 형상 문제와 별도 오브젝트 수를 구분. 얇은 눈썹 형상117정점 투영 실험은 일부 돌출이 줄었으나 잔여 조각이 남아 미채택. 기본 GLB와 대시보드13번째 모델은 원본 유지. 새 생성0건. `eye-components-v1.json`, `eye-ray-analysis-v1.json`, `eye-cleanup-v2.json`, `source/clean-eye-attachments.py`에 실험 보존. 완전 정리/근접 자연스러움은 미해결. 이후 사람은 GPT원화→ComfyUI보정 이미지를 기준으로 다른 캐릭터 변형을 요청해 해당 원화 시험을 우선함.

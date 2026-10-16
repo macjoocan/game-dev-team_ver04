@@ -1,0 +1,84 @@
+{
+  "capturedAt": "2026-10-16T11:47:55.308Z",
+  "purpose": "User-authorized archive of shared handoff evidence; no installation, model changes or test execution.",
+  "files": [
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\Levelscope_Motion_Remap_0.2.0.zip",
+      "snapshot": "Levelscope_Motion_Remap_0.2.0.zip",
+      "sha256": "219901de2cff2aa7456985c7ff255cbd99b09916e86eaf7c6d396dea8ace38f3",
+      "bytes": 37403
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\tools\\motion_remap\\README.md",
+      "snapshot": "README-source.txt",
+      "sha256": "9521e867e6714f82abf4c846cc66cea697b86300ee913af8835518aa703e54a3",
+      "bytes": 15712
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\docs\\MOTION_REMAP_KNOWHOW.md",
+      "snapshot": "KNOWHOW-source.txt",
+      "sha256": "cba5f20765b8e530bf2f7cf9b21bf12b181ad712796ef02a511862592a2e0748",
+      "bytes": 9174
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\release_manifest_0.2.0.json",
+      "snapshot": "release_manifest_0.2.0.json",
+      "sha256": "ce3003addbf90ffe68e54f28a739ffae97412de0187492e57ed951a9e7fb69ad",
+      "bytes": 1868
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\unittest_v2_utf8.log",
+      "snapshot": "unittest_v2_utf8.log",
+      "sha256": "9215c1f9862fe3a196f528c6de051c68a724ff6d3cb95b6adcb6abdf4c43b7aa",
+      "bytes": 1072
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\v2_final_baseline\\verification.json",
+      "snapshot": "reports/v2_final_baseline/verification.json",
+      "sha256": "93e5b41b08897fca1843a5b281ccb70e3109928bd517d2904247914975231982",
+      "bytes": 1889
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\controls_scale_release\\verification.json",
+      "snapshot": "reports/controls_scale_release/verification.json",
+      "sha256": "07fab3827894fb057282af1703c47e32d8b3746a6c491450702e4647619eb5a0",
+      "bytes": 4892
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\ik_scale_release\\verification.json",
+      "snapshot": "reports/ik_scale_release/verification.json",
+      "sha256": "cf524c2d085f2d992712f828b21c2124cd493f0af6ff90a4c46089642cd02316",
+      "bytes": 2147
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\hat_v2_identity\\verification.json",
+      "snapshot": "reports/hat_v2_identity/verification.json",
+      "sha256": "272d360924d26611ba7fe76b6d42b2246ab04b25566b23b11343ab9d2ff45f1f",
+      "bytes": 604
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\hat_contacts_release\\verification.json",
+      "snapshot": "reports/hat_contacts_release/verification.json",
+      "sha256": "8dfb43e629a05a54ce30838d09ba5b5a2c7338b5b26b7bc4dd25f852b428c842",
+      "bytes": 2127
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\control_cli_release\\remapped.json",
+      "snapshot": "reports/control_cli_release/remapped.json",
+      "sha256": "cd54ae1ea6a61f9a2cb9e978985935cd90a2c4231658462941fc165b3cd627bc",
+      "bytes": 3792
+    },
+    {
+      "source": "D:\\99.기타\\levelscope-publish-20261014\\out\\motion_remap\\deform_cli_release\\remapped.json",
+      "snapshot": "reports/deform_cli_release/remapped.json",
+      "sha256": "1cc17a36a28ac4e78870d0dca6ea1f5da9f48d4a6126eeda247f0d7304f9c8ea",
+      "bytes": 1067
+    }
+  ],
+  "independentlyChecked": {
+    "zipSha256": true,
+    "releaseReportSha256Count": 7
+  },
+  "testsReexecuted": false,
+  "installed": false
+}

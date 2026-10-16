@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "source_sha_unchanged": "bbf7f4c8952d3f7af9c387e4cf95d9a0d768710bc86bb9b257cf2221426c7766",
+  "postprocess": {
+    "contacts": {
+      "bip_footL01": [
+        [
+          1,
+          540.0018310546875
+        ]
+      ],
+      "bip_footR01": [
+        [
+          1,
+          540.0018310546875
+        ]
+      ]
+    },
+    "ground_misses": 0,
+    "ik_clamped_samples": 0,
+    "max_contact_error_world": 7.3880912935000265e-06,
+    "max_pelvis_shift_world": 5.106200185507092,
+    "max_basis_projection_error": 1.1444091796875e-05,
+    "ground_space": "world Z; explicit user geometry/plane",
+    "samples": 1080,
+    "authority": "Configured thresholds and geometry; auto segments are inferred contacts",
+    "settings": {
+      "feet": [
+        {
+          "end": "bip_footL01",
+          "sole_offset": 4.207897186279297,
+          "contact": {
+            "mode": "auto",
+            "height": 1.0,
+            "speed": 8.0,
+            "min_duration": 0.1,
+            "blend_frames": 3
+          }
+        },
+        {
+          "end": "bip_footR01",
+          "sole_offset": 4.207905292510986,
+          "contact": {
+            "mode": "auto",
+            "height": 1.0,
+            "speed": 8.0,
+            "min_duration": 0.1,
+            "blend_frames": 3
+          }
+        }
+      ],
+      "ground": {
+        "height": 0
+      },
+      "pelvis": {
+        "bone": "Root",
+        "max_shift": 8.0,
+        "axes": [
+          "Z"
+        ],
+        "smoothness": 2
+      }
+    },
+    "contact_satisfied": true
+  },
+  "skin_vertices_finite": true,
+  "source_rest_unchanged": true,
+  "scope": "HatKid legs only; deliberately shortened 0.8 target, configured ankle-to-toe sole offset, inferred Idle contacts; not native game ground/physics",
+  "export": {
+    "animations": 1,
+    "skins": 1,
+    "files": {
+      "hat_short_legs.blend": "3f1b76f007bd13eeb083befc1cdc07ee94cca89bcf6eda3ef452061674992eb3",
+      "hat_short_legs.glb": "d9c01d96198b9474f1956618bb12d7ac1336ec03bbc0e2cda592fec8678cb191"
+    }
+  }
+}

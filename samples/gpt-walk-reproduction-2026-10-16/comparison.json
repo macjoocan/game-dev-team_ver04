@@ -1,0 +1,1028 @@
+{
+  "id": "chr.fantasy.gpt.walk-reproduction.v1",
+  "status": "concept",
+  "harness": "codex",
+  "sourceCommit": "a6b81bd",
+  "request": "request.json",
+  "mode": "built-in image_gen; backend model version not exposed",
+  "attempts": 1,
+  "generatedSheet": {
+    "path": "raw/gpt-sheet-v1.png",
+    "sha256": "03ef3b105d570c222f6f1296e328b41956b3d9828e2e8499b444a6adb4832be4",
+    "canvas": [
+      1536,
+      1024
+    ],
+    "columns": 6,
+    "rows": 4
+  },
+  "reference": {
+    "manifest": "../art-comparison-2026-10-16/ludo-cycle/manifest.json",
+    "inputHashes": {
+      "character": "96afc5c3bcebd30f303b37d103df7708a033946d721ff5073bd7c51e64e640c7",
+      "poses": "353b25c178dcda53177a883b8a86bf0b4777a9083f66ba70e20a0d20f468f015"
+    }
+  },
+  "normalization": "Exact row-major 6x4 cells, each256px; whole cell uniformly resized to128px with sprite-lab export. No per-frame bbox fitting, pose correction or loop trimming.",
+  "timing": "Same24-frame count and13.5FPS comparison timing as selected reference; image generation provides no animation timestamps.",
+  "clips": [
+    {
+      "provider": "ludo-reference",
+      "action": "walk",
+      "label": "사용자 선택 · Ludo 24장",
+      "fps": 13.5,
+      "fpsNote": "Comparison playback estimated as 36 frames / 2.666667 second source video; service export FPS not confirmed.",
+      "status": "concept",
+      "anchor": {
+        "x": 63.5,
+        "y": 128,
+        "height": 128,
+        "method": "fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling"
+      },
+      "frames": [
+        {
+          "path": "reference/walk/frame_0000.png",
+          "sha256": "bd3f986b0ab9713f33196e720b4859aa2d80a03b9f3a276be6de59c2c1659eb6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.553082816490332,
+          "sourcePath": "ludo/walk/frame_0005.png",
+          "sourceFrameZeroBased": 5
+        },
+        {
+          "path": "reference/walk/frame_0001.png",
+          "sha256": "b597da3bcd4f67ae538b7f26bcb112d24cf60fd4536fe01b8adc4e7686b34fc3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.5026795284030011,
+          "sourcePath": "ludo/walk/frame_0006.png",
+          "sourceFrameZeroBased": 6
+        },
+        {
+          "path": "reference/walk/frame_0002.png",
+          "sha256": "59b1cbfa56f5e421f356333b05f653e3ef12f7aba0805b3c9e359c77c3389123",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.5261299435028248,
+          "sourcePath": "ludo/walk/frame_0007.png",
+          "sourceFrameZeroBased": 7
+        },
+        {
+          "path": "reference/walk/frame_0003.png",
+          "sha256": "f1a580bd867d0d1983794345d2906db8be14da6bc359374d9864aafb44e82eff",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.545583038869258,
+          "sourcePath": "ludo/walk/frame_0008.png",
+          "sourceFrameZeroBased": 8
+        },
+        {
+          "path": "reference/walk/frame_0004.png",
+          "sha256": "8e90c17cd83f9137688a19ceb64e405250a9e43483963b2be08fdcae1274520a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6329113924050633,
+          "sourcePath": "ludo/walk/frame_0009.png",
+          "sourceFrameZeroBased": 9
+        },
+        {
+          "path": "reference/walk/frame_0005.png",
+          "sha256": "4cb11ccf4d78f991455ce91b7fec0f850ca357e7ab5fa879b53d4be462dc55b5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.7177293934681181,
+          "sourcePath": "ludo/walk/frame_0010.png",
+          "sourceFrameZeroBased": 10
+        },
+        {
+          "path": "reference/walk/frame_0006.png",
+          "sha256": "7c8cb9d0afcf3dd43cff88508c792b3d38f93bc34411feedb1fc304a8d257183",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.7954918032786885,
+          "sourcePath": "ludo/walk/frame_0011.png",
+          "sourceFrameZeroBased": 11
+        },
+        {
+          "path": "reference/walk/frame_0007.png",
+          "sha256": "2a25c89a73f1ac19ba5bb5d13d48e9bd9df1e4e15ca1de2115577148c954fd7a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.8404390037990713,
+          "sourcePath": "ludo/walk/frame_0012.png",
+          "sourceFrameZeroBased": 12
+        },
+        {
+          "path": "reference/walk/frame_0008.png",
+          "sha256": "6de1412a81ebe4a19b5e4f5e64afd6e197b86cf5b04e1436085084aef3c1fa6e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.7661388550548112,
+          "sourcePath": "ludo/walk/frame_0013.png",
+          "sourceFrameZeroBased": 13
+        },
+        {
+          "path": "reference/walk/frame_0009.png",
+          "sha256": "2f391335517523a6d8dcbeaa7d0875314e3ddfd079f0a75f05c4e544eb747664",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.6790697674418604,
+          "sourcePath": "ludo/walk/frame_0014.png",
+          "sourceFrameZeroBased": 14
+        },
+        {
+          "path": "reference/walk/frame_0010.png",
+          "sha256": "d756ababcd471525c8b5c607ecea69b7513cb6ed3b0aba58722ff02c0632dafe",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.6607487456580471,
+          "sourcePath": "ludo/walk/frame_0015.png",
+          "sourceFrameZeroBased": 15
+        },
+        {
+          "path": "reference/walk/frame_0011.png",
+          "sha256": "2d59227a2569af355065d7c2ee6471a1580d7fdd438ebfc06bffeda2d68245c8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.6173163418290855,
+          "sourcePath": "ludo/walk/frame_0016.png",
+          "sourceFrameZeroBased": 16
+        },
+        {
+          "path": "reference/walk/frame_0012.png",
+          "sha256": "e84001f7b0211091163ee09f0e4d1a4e9ba9bbcdb65fec9cbc41045797a402bb",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 37,
+          "lowerBodySilhouetteIoUToFirst": 0.5907046476761619,
+          "sourcePath": "ludo/walk/frame_0017.png",
+          "sourceFrameZeroBased": 17
+        },
+        {
+          "path": "reference/walk/frame_0013.png",
+          "sha256": "e62e001dd034bf5d5ade33e63df6355070e3b5b5b5b70a6863a296c3a7f0830b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.5229357798165137,
+          "sourcePath": "ludo/walk/frame_0018.png",
+          "sourceFrameZeroBased": 18
+        },
+        {
+          "path": "reference/walk/frame_0014.png",
+          "sha256": "13ce43bdb00e1e6c44c4b19fefd0e52c8f3484ead7629ae6469a8e36672afdfd",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.49475966750993855,
+          "sourcePath": "ludo/walk/frame_0019.png",
+          "sourceFrameZeroBased": 19
+        },
+        {
+          "path": "reference/walk/frame_0015.png",
+          "sha256": "7bf0725f3cd6ec140780ff4c67faf8ec206cf0ec5f54bcee1e4b4ac44f76ac6a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.5153738644304682,
+          "sourcePath": "ludo/walk/frame_0020.png",
+          "sourceFrameZeroBased": 20
+        },
+        {
+          "path": "reference/walk/frame_0016.png",
+          "sha256": "e6713744b02636fbddcefe4ca04e1c7f3e9e064383e01d82e0f77deed034e8a1",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.5930064888248018,
+          "sourcePath": "ludo/walk/frame_0021.png",
+          "sourceFrameZeroBased": 21
+        },
+        {
+          "path": "reference/walk/frame_0017.png",
+          "sha256": "5594504308f8279f771ec0d58a2fb47a9e56227d4b09cbcb403c506f150cfe2f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.6735849056603773,
+          "sourcePath": "ludo/walk/frame_0022.png",
+          "sourceFrameZeroBased": 22
+        },
+        {
+          "path": "reference/walk/frame_0018.png",
+          "sha256": "6778d00742a17b649251ec2b803fa32b5cd7b22bbeb86087b3b959f8c14ed2cd",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.795868772782503,
+          "sourcePath": "ludo/walk/frame_0023.png",
+          "sourceFrameZeroBased": 23
+        },
+        {
+          "path": "reference/walk/frame_0019.png",
+          "sha256": "5eb76ed357c6f2373597ac1618280fc8a6f156a8452fc5d31bb22b229a432f92",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.8202061855670103,
+          "sourcePath": "ludo/walk/frame_0024.png",
+          "sourceFrameZeroBased": 24
+        },
+        {
+          "path": "reference/walk/frame_0020.png",
+          "sha256": "6d1ff1f124fad6fa97ad3b8590b5ffdb06ba56903e02a750732212307b09bf0d",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.7575516693163752,
+          "sourcePath": "ludo/walk/frame_0025.png",
+          "sourceFrameZeroBased": 25
+        },
+        {
+          "path": "reference/walk/frame_0021.png",
+          "sha256": "beed27039b4038edfba80bed701f24a9134afa8a18c01e5888138880371e2192",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 37,
+          "lowerBodySilhouetteIoUToFirst": 0.7121913580246914,
+          "sourcePath": "ludo/walk/frame_0026.png",
+          "sourceFrameZeroBased": 26
+        },
+        {
+          "path": "reference/walk/frame_0022.png",
+          "sha256": "aa0e2a1e873369b8bf476d8b5f0f4b0e30970409075ad70808616a26d8890e3f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6144885329450309,
+          "sourcePath": "ludo/walk/frame_0027.png",
+          "sourceFrameZeroBased": 27
+        },
+        {
+          "path": "reference/walk/frame_0023.png",
+          "sha256": "ebb4167e2cbdbe32da33d39424fd8b01cb147fb8dab00d1a549248cd87262ed6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.547979797979798,
+          "sourcePath": "ludo/walk/frame_0028.png",
+          "sourceFrameZeroBased": 28
+        }
+      ],
+      "qaExit": 0
+    },
+    {
+      "provider": "gpt",
+      "label": "GPT 이미지 생성 · 24장 시트",
+      "fps": 13.5,
+      "qaExit": 1,
+      "status": "concept",
+      "anchor": {
+        "x": 55.5,
+        "y": 127,
+        "height": 124,
+        "method": "fixed first-frame anchor; no per-frame recentering or resizing"
+      },
+      "frames": [
+        {
+          "path": "gpt/walk/frame_0000.png",
+          "sha256": "f370ea44ec57f7bf28e16072097205c2e141e97b2a0085217596ea0c21cf4527",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            10,
+            3,
+            101,
+            127
+          ],
+          "alphaClearRatio": 0.6307373046875,
+          "semiRatio": 0.35955810546875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 0,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0001.png",
+          "sha256": "ae654819b79a5b76d7020d8fd1ef7db17ae62693276d5d1dfb9bd68b573162e2",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            3,
+            98,
+            127
+          ],
+          "alphaClearRatio": 0.65301513671875,
+          "semiRatio": 0.33782958984375,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 1,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0002.png",
+          "sha256": "1846aef15e6cb618a08f3c28300cf9e01b6485a53a3c893876bfd8bfa17ff655",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            10,
+            3,
+            100,
+            127
+          ],
+          "alphaClearRatio": 0.64910888671875,
+          "semiRatio": 0.3406982421875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 2,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0003.png",
+          "sha256": "1ce7b562f7c05fcd4837cc853115c5b7bf5a442e16e990397f7219e1d4225197",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            3,
+            101,
+            127
+          ],
+          "alphaClearRatio": 0.6478271484375,
+          "semiRatio": 0.34100341796875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 3,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0004.png",
+          "sha256": "4b272e6c4e9e95bce27dc9d9797c2a07cee04121a633e881cc92d80430eeebd5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            3,
+            111,
+            127
+          ],
+          "alphaClearRatio": 0.63201904296875,
+          "semiRatio": 0.35687255859375,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 4,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0005.png",
+          "sha256": "3c13c840b4ade793c2261801e59d5f2c9b98d22c0b0293bc1e4b630978d3ee4e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            3,
+            111,
+            127
+          ],
+          "alphaClearRatio": 0.6055908203125,
+          "semiRatio": 0.38287353515625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 5,
+            "row": 0,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0006.png",
+          "sha256": "b8e0ee3c743b9643861ebb6bffddf07f5a550d8f509dd402fb68ac7b2eed5ca0",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            13,
+            3,
+            113,
+            126
+          ],
+          "alphaClearRatio": 0.60455322265625,
+          "semiRatio": 0.38543701171875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 0,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0007.png",
+          "sha256": "f6e687364416d608eb12aaa100991017955f5669dfcb112e3c64a9fe2bc76e83",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            16,
+            2,
+            112,
+            126
+          ],
+          "alphaClearRatio": 0.61529541015625,
+          "semiRatio": 0.37445068359375,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 1,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0008.png",
+          "sha256": "ade32fd76d2c738f46cff641afd8b392175eacf3e50199075af55b612fa5b961",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            3,
+            111,
+            126
+          ],
+          "alphaClearRatio": 0.60797119140625,
+          "semiRatio": 0.3819580078125,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 2,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0009.png",
+          "sha256": "d3e6edc723b329297e4db689eae53ffc74ee365f625bd52348081162dea313a6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            10,
+            3,
+            109,
+            126
+          ],
+          "alphaClearRatio": 0.61102294921875,
+          "semiRatio": 0.37860107421875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 3,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0010.png",
+          "sha256": "7592268904e3a4455fcea7e5fe177f38e0fc2067cc0482841e36304976f65561",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            3,
+            107,
+            126
+          ],
+          "alphaClearRatio": 0.61065673828125,
+          "semiRatio": 0.37890625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 4,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0011.png",
+          "sha256": "e955b9559a3acd7ec13424dd9b6bfceb5837e2904fa6035eff1887fb27450567",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            3,
+            107,
+            126
+          ],
+          "alphaClearRatio": 0.62493896484375,
+          "semiRatio": 0.36529541015625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 5,
+            "row": 1,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0012.png",
+          "sha256": "1decc59e740cd28f8666b1ebe20690617308e84cf5e9e255ac09a0bd7c931088",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            2,
+            101,
+            127
+          ],
+          "alphaClearRatio": 0.61309814453125,
+          "semiRatio": 0.37603759765625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 0,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0013.png",
+          "sha256": "6098b7c1c7db634cfbeee48cc3a83b09cce96249f08005cc5d8928515f476864",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            2,
+            98,
+            127
+          ],
+          "alphaClearRatio": 0.62933349609375,
+          "semiRatio": 0.3599853515625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 1,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0014.png",
+          "sha256": "40598d9879ede7fc5849210be0c0f155b16a300b533f03e056f38a5b915048a1",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            2,
+            98,
+            127
+          ],
+          "alphaClearRatio": 0.63177490234375,
+          "semiRatio": 0.35748291015625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 2,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0015.png",
+          "sha256": "ec80f22e47fbc70e7d5b692bf938226d69a6cee5217f95d90fe6261749f7d904",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            2,
+            101,
+            127
+          ],
+          "alphaClearRatio": 0.62615966796875,
+          "semiRatio": 0.36212158203125,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 3,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0016.png",
+          "sha256": "94c63c3deb5d06bf9fb5eed68cab5210e3607aa58f29110d0c5be95b3a7da198",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            1,
+            111,
+            127
+          ],
+          "alphaClearRatio": 0.59393310546875,
+          "semiRatio": 0.39508056640625,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 4,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0017.png",
+          "sha256": "241b9f26cc4ddb719572b8e1656ef40d817a5c35931912f9e993ca061ab445a1",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            7,
+            1,
+            111,
+            128
+          ],
+          "alphaClearRatio": 0.6046142578125,
+          "semiRatio": 0.38409423828125,
+          "edgePixels": 1,
+          "sourceCell": {
+            "column": 5,
+            "row": 2,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0018.png",
+          "sha256": "716149ad675fd983993ccb8c24f371dfbce655a14044c5a037001a1407ab0532",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            1,
+            113,
+            126
+          ],
+          "alphaClearRatio": 0.58941650390625,
+          "semiRatio": 0.39837646484375,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 0,
+            "row": 3,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0019.png",
+          "sha256": "155ed2f5aa76c48bfc243af718bc4668516d0c7931770b5375df733067b10032",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            2,
+            109,
+            126
+          ],
+          "alphaClearRatio": 0.60247802734375,
+          "semiRatio": 0.384033203125,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 1,
+            "row": 3,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0020.png",
+          "sha256": "c779c0878b5cb84ea9e02df1b137f3c2c3c8a8eb77cdf21e519bcc01d19151ce",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            14,
+            1,
+            110,
+            126
+          ],
+          "alphaClearRatio": 0.5902099609375,
+          "semiRatio": 0.3988037109375,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 2,
+            "row": 3,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0021.png",
+          "sha256": "d70efa95973b75a6fb6ed6c3fd94c1b231d30b8155429055bb614c2e7b754d65",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            2,
+            111,
+            126
+          ],
+          "alphaClearRatio": 0.60064697265625,
+          "semiRatio": 0.38787841796875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 3,
+            "row": 3,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0022.png",
+          "sha256": "39e8a512fd93e0207773a86c595d30da5da280d78f91f7b92f361c259cbb3b3f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            2,
+            110,
+            126
+          ],
+          "alphaClearRatio": 0.607177734375,
+          "semiRatio": 0.3800048828125,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 4,
+            "row": 3,
+            "size": 256
+          }
+        },
+        {
+          "path": "gpt/walk/frame_0023.png",
+          "sha256": "49cb6c689698d43b42b78f4c1db61294e1008b20abd24d5f690c569a161a3e09",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            13,
+            2,
+            111,
+            126
+          ],
+          "alphaClearRatio": 0.602294921875,
+          "semiRatio": 0.3865966796875,
+          "edgePixels": 0,
+          "sourceCell": {
+            "column": 5,
+            "row": 3,
+            "size": 256
+          }
+        }
+      ]
+    }
+  ],
+  "verdict": "Single trial: similar walk sheet generated, but exact frame-by-frame motion reproduction was not achieved sufficiently for replacement. Different foot/knee progression and repeated poses; sprite QA exit1. Existing selected Ludo24 unchanged.",
+  "userFeedback": {
+    "quote": "ludo 가 짱이네",
+    "preferred": "existing selected Ludo 24-frame cycle",
+    "scope": "This swordsman walk comparison; not a universal ranking or production approval."
+  }
+}
