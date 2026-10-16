@@ -1,0 +1,2 @@
+# Preserve the received snapshot bytes for SHA-256 verification across platforms.
+source.txt -text

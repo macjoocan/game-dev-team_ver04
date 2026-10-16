@@ -1,0 +1,10 @@
+{
+  "sourceProject": "C:/00.SVN/Multi",
+  "sourceDocument": "C:/00.SVN/Multi/web/docs/37-3d-production-handoff.md",
+  "snapshot": "source.txt",
+  "sha256": "ebc415af5c44fe9dfbdaf80a2ce4ce9322c11017099e992bf5826f5c58a61a7d",
+  "bytes": 13005,
+  "capturedAt": "2026-10-16T07:17:33.015Z",
+  "basis": "User-authorized cross-session handoff archive; measurements reported by source session, not independently re-executed here.",
+  "scope": "Documentation only. No models, generated assets, project state or plugin behavior changed."
+}
