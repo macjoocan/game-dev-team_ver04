@@ -1,0 +1,2671 @@
+{
+  "id": "art.vendor-comparison.2026-10-16",
+  "status": "concept",
+  "createdAt": "2026-10-16T05:20:40.452Z",
+  "commit": "40f23f0",
+  "reference": {
+    "path": "reference/reference.png",
+    "sha256": "96afc5c3bcebd30f303b37d103df7708a033946d721ff5073bd7c51e64e640c7",
+    "approval": "existing concept reference; not production-approved"
+  },
+  "comparison": {
+    "facing": "right side view",
+    "actions": [
+      "walk",
+      "slash"
+    ],
+    "displayHeight": 138,
+    "scalePolicy": "fixed first-frame clip anchor, never normalize each frame independently",
+    "criteria": [
+      "identity and headgear",
+      "sword preservation and crop",
+      "foot contact and weight shift",
+      "action transition and root travel",
+      "alpha fringe",
+      "elapsed time and credits"
+    ],
+    "note": "Single-reference pilot, one original walk generation per service plus one Ludo Fix Loop repair. Structural QA does not establish walking quality. No production approval."
+  },
+  "vendors": {
+    "voidless": {
+      "status": "result-downloaded",
+      "initialCredits": 25,
+      "inputTransform": "Service requested contain/pad to 1024x1024 from 1254x1254; no Remove BG applied",
+      "creditsSpent": 15,
+      "sourceUrl": "https://voidless.dev/asset/115612",
+      "prompt": "Right-facing side-view walk cycle, in place, seamless loop. Natural alternating steps, planted feet, bent knees and weight shift. Preserve red feathered hat, ivory feather, red cape, face and outfit. Hold one sword. Whole body and sword inside a fixed canvas. No dust, glow or camera motion.",
+      "multipleAnimatorCostObserved": "100 credits for one-pass, 200 credits platformer set; not submitted",
+      "resultFrames": 16,
+      "motionVerdict": "failed-walk: all 16 frames hold nearly the same leg pose; lower-body IoU to first >= 0.990; user feedback confirms no walk",
+      "remainingCredits": 10,
+      "endFrameCondition": "Existing default end frame was the base image; left selected for seamless loop. Other end-frame conditions not tested.",
+      "serviceReportedGenerationSeconds": 58.08,
+      "serviceReportedUploadSeconds": 2.34
+    },
+    "ludo": {
+      "status": "hydra-walk-downloaded; directional-unmeasurable",
+      "initialCredits": 30,
+      "remainingCredits": 3,
+      "sourceUrl": "https://app.ludo.ai/3d-generator",
+      "browserError": "ReferenceError: setNoWalk is not defined (2026-10-16T05:34:13.529Z)",
+      "supplementalWorkflow": "Sprite Generator Animate, Hydra, max duration 3s, Max Frames 36, size Max, loop on, Auto margin; 9 credits; same reference and submitted walk prompt as Voidless",
+      "resultFrames": 36,
+      "creditsBreakdown": {
+        "imageTo3D": 15,
+        "humanoidRigRequest": 1,
+        "hydraAnimate": 9,
+        "fixLoopQuoted": 3
+      },
+      "hydra": {
+        "motionVerdict": "Alternating steps visible; candidate for further review. User reports abrupt loop seam. Watermarked export.",
+        "watermark": true,
+        "sourceVideoDurationSeconds": 2.666667,
+        "sourceVideoSize": [
+          488,
+          516
+        ],
+        "exportFrameSize": [
+          418,
+          491
+        ],
+        "frames": 36,
+        "prompt": "Right-facing side-view walk cycle, in place, seamless loop. Natural alternating steps, planted feet, bent knees and weight shift. Preserve red feathered hat, ivory feather, red cape, face and outfit. Hold one sword. Whole body and sword inside a fixed canvas. No dust, glow or camera motion.",
+        "serviceFpsConfirmed": false,
+        "userFeedback": {
+          "quote": "ludo 가 깔끔한데 루프 되기 전에 뚝 끊기는게 아쉽네",
+          "tags": [
+            "loop-seam",
+            "visual-positive"
+          ],
+          "interpretation": "Visual quality preferred; loop boundary needs correction. This is not production approval.",
+          "scope": "this Ludo Hydra walk output only"
+        }
+      },
+      "repair": {
+        "id": "chr.fantasy.ludo.fix-loop.walk",
+        "status": "concept",
+        "harness": "codex",
+        "date": "2026-10-16",
+        "commit": "40f23f0",
+        "operation": "Ludo built-in Fix Loop on the existing Hydra animation, once; original retained",
+        "requestQuoteCredits": 3,
+        "balanceBeforeDisplayed": 5,
+        "balanceImmediatelyAfterSubmissionDisplayed": 2,
+        "balanceAfterCompletionDisplayed": 3,
+        "billingNote": "UI showed a +0.2 credit adjustment after completion. Final exact debit and fractional starting balance were not reconciled; quote and displayed balance are recorded separately.",
+        "model": "Forge per Ludo official documentation; not independently confirmed from job response",
+        "sourcePage": "https://app.ludo.ai/sprite-generator",
+        "resultThumbnailUrl": "https://storage.googleapis.com/ludo-assets/c56252c6bb9a62a860e8afba95f98603.webp",
+        "resultVideoUrl": "https://storage.googleapis.com/ludo-assets/c3dd58482f396212a85190b2c87c9a7f.mp4",
+        "videoDurationSeconds": 2.6875,
+        "videoSize": [
+          512,
+          544
+        ],
+        "exportedFrames": 36,
+        "exportedFrameSize": [
+          418,
+          491
+        ],
+        "exportSettings": "Animation Pack; individual frames; Smooth Art; common frame 418x491, common target height491, vertical offset-1. Original100%, repair93% chosen automatically by service. Both outputs exported; paths labelled hydra-original/fix-loop.",
+        "watermarkPreserved": true,
+        "zipSha256": "98193f01f9d16a739c5dcef4043c05a0b0efc25f62305fc71a65531df2df1ca9",
+        "qaExit": 0,
+        "loopDiagnostic": {
+          "type": "diagnostic-only",
+          "method": "Mean absolute premultiplied RGBA difference over nonempty union; wrap pair compared with internal adjacent pairs. No automatic pass/fail.",
+          "limitations": "Watermarks included. Different rendering and framing can change the values; does not establish natural motion, identity or a visually seamless loop.",
+          "clips": [
+            {
+              "provider": "ludo",
+              "frames": 36,
+              "wrapDifference": 0.05569839383807133,
+              "internalMedianDifference": 0.03364104830351689,
+              "wrapToInternalMedianRatio": 1.6556676039209077,
+              "adjacentDifferences": [
+                0.030740979309341436,
+                0.03603933163545628,
+                0.0375722668857381,
+                0.03967183280834258,
+                0.02342672185052069,
+                0.03851329413585235,
+                0.043314196724038814,
+                0.021597566709584376,
+                0.03812901047796664,
+                0.03764192435631712,
+                0.03364104830351689,
+                0.02224812871794764,
+                0.030685383985278113,
+                0.029165310920196003,
+                0.020502924636995736,
+                0.03543567825933842,
+                0.038109058228316006,
+                0.039411938812854985,
+                0.02416435031527923,
+                0.045057478693681,
+                0.0391311691043165,
+                0.023017990133386772,
+                0.03569246825585559,
+                0.03291839569634337,
+                0.02573722334782801,
+                0.015723356539518885,
+                0.03229403790502191,
+                0.035000457619032165,
+                0.019840595762041755,
+                0.034381034011823505,
+                0.02763420424560898,
+                0.032602630607722324,
+                0.021782787584384847,
+                0.038827895479582916,
+                0.03678736938544118
+              ]
+            },
+            {
+              "provider": "ludo-fixed",
+              "frames": 36,
+              "wrapDifference": 0.02943716833845643,
+              "internalMedianDifference": 0.031105366743944148,
+              "wrapToInternalMedianRatio": 0.9463694345988543,
+              "adjacentDifferences": [
+                0.013988639196251068,
+                0.020983865284204012,
+                0.054574878243758,
+                0.05434962476144677,
+                0.048303195619379916,
+                0.04081822044915657,
+                0.028515067303474924,
+                0.03546552083203224,
+                0.038358533349450524,
+                0.020901989492721547,
+                0.04407747484858439,
+                0.0294709603903997,
+                0.015708647627704117,
+                0.01730023747549777,
+                0.0337738039444987,
+                0.035369880974796,
+                0.022485753461671774,
+                0.02329205771000339,
+                0.038741123887637424,
+                0.044820283234711884,
+                0.03741613345554343,
+                0.03786970473316631,
+                0.031105366743944148,
+                0.01881735079135571,
+                0.015183167562375649,
+                0.025064980753815528,
+                0.031496825263667955,
+                0.03389634628626728,
+                0.019153603143938984,
+                0.019604764127009705,
+                0.05041717956161092,
+                0.04458214034582642,
+                0.014535223233297785,
+                0.020904356213169936,
+                0.0305496109493365
+              ]
+            }
+          ]
+        },
+        "verdict": "Loop boundary difference decreased. Walking poses and reference identity remain recognizable. Naturalness, detail drift and final loop quality require human review; no production approval.",
+        "userReview": "User reports that the Fix Loop result still does not connect at the end/start; not accepted as seamless."
+      },
+      "creditsSpentBeforeRepairQuoted": 25,
+      "totalCreditsQuoted": 28,
+      "billingNote": "UI showed a +0.2 credit adjustment after completion. Final exact debit and fractional starting balance were not reconciled; quote and displayed balance are recorded separately.",
+      "localCycle": {
+        "manifest": "ludo-cycle/manifest.json",
+        "preview": "cycle.html",
+        "sourceRangeOneBased": [
+          6,
+          29
+        ],
+        "frames": 24,
+        "creditsSpent": 0,
+        "status": "preferred-concept",
+        "userSelection": {
+          "candidateId": "chr.fantasy.ludo.cycle24.walk",
+          "selectedFor": "preferred walk candidate in this comparison",
+          "feedback": "한 주기 추출  24장 이게 젤 좋아",
+          "reviewer": "human",
+          "date": "2026-10-16",
+          "productionApproval": false
+        }
+      }
+    }
+  },
+  "clips": [
+    {
+      "provider": "baseline",
+      "action": "walk",
+      "label": "기존 SCAIL-2 · 걷기",
+      "fps": 24,
+      "anchor": {
+        "x": 56,
+        "y": 122,
+        "height": 115,
+        "method": "fixed clip anchor from first-frame torso centroid and lower alpha bound; no per-frame resizing"
+      },
+      "source": "samples/motion-court/clips/walk",
+      "sourceManifestHash": "5c4867665314ba935676a239ca3fb32a401adb68d27cc70ef98918774ff14da7",
+      "status": "concept",
+      "qaExit": 1,
+      "frames": [
+        {
+          "path": "baseline/walk/frame_0000.png",
+          "sha256": "cbe02ed122b59319937ba30323e9aaf351382cac65472e46ed6a22406c6fe296",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            6,
+            7,
+            128,
+            123
+          ],
+          "edgePixels": 2,
+          "semiTransparentPixels": 2126,
+          "nonzeroPixels": 5150
+        },
+        {
+          "path": "baseline/walk/frame_0001.png",
+          "sha256": "65f7280fe0c5452220eacc5373d28711bafa9a08639b23e6f01b555a401ec651",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            7,
+            128,
+            123
+          ],
+          "edgePixels": 3,
+          "semiTransparentPixels": 2062,
+          "nonzeroPixels": 5042
+        },
+        {
+          "path": "baseline/walk/frame_0002.png",
+          "sha256": "6ffc6681fdd09426cf3a240ee2784c3af1eb4420a6ca2ed089a7f631d211c20c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            10,
+            8,
+            128,
+            123
+          ],
+          "edgePixels": 1,
+          "semiTransparentPixels": 2069,
+          "nonzeroPixels": 4944
+        },
+        {
+          "path": "baseline/walk/frame_0003.png",
+          "sha256": "da2fc25bfb74d861f8efeb3ee21f1257a384cb8808e8947cdcd154676e25e27e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            13,
+            8,
+            127,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1941,
+          "nonzeroPixels": 4859
+        },
+        {
+          "path": "baseline/walk/frame_0004.png",
+          "sha256": "db4084a1a6491148076a990bb419c60689fad000eddb77b22d1c73b90bcb33d9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            16,
+            7,
+            127,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1929,
+          "nonzeroPixels": 4804
+        },
+        {
+          "path": "baseline/walk/frame_0005.png",
+          "sha256": "93c802310fa8a7a928828bbdcad90ed89cb0102c3a1a52908c82aeed0b5c9ddd",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            18,
+            6,
+            125,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1966,
+          "nonzeroPixels": 4706
+        },
+        {
+          "path": "baseline/walk/frame_0006.png",
+          "sha256": "898fc77002b099779d080fdbb844652160559d275b15b547c2b325a35ef5d9e9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            17,
+            5,
+            124,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1853,
+          "nonzeroPixels": 4601
+        },
+        {
+          "path": "baseline/walk/frame_0007.png",
+          "sha256": "591dde7d5bae45ef285d75b8670ea888602cceb05b513398bcbbba82cc502bb9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            13,
+            4,
+            121,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1762,
+          "nonzeroPixels": 4595
+        },
+        {
+          "path": "baseline/walk/frame_0008.png",
+          "sha256": "c44d64ce648e23ddf3b0b916280b320c902e6571bd0d92970db6a3e302a35928",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            4,
+            119,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1750,
+          "nonzeroPixels": 4684
+        },
+        {
+          "path": "baseline/walk/frame_0009.png",
+          "sha256": "89a3a84abfa056284e9e0f8b221c89d463e4d13c984cd864d668a0ba8051cff8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            4,
+            117,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1842,
+          "nonzeroPixels": 4868
+        },
+        {
+          "path": "baseline/walk/frame_0010.png",
+          "sha256": "42175ddd2456521609af805452cbe672deac9866a3c6b22183aab6bb21292717",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            7,
+            5,
+            114,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1937,
+          "nonzeroPixels": 4959
+        },
+        {
+          "path": "baseline/walk/frame_0011.png",
+          "sha256": "48b101e02eca036ab8d45b856ed29972e231102b1af15d5fe8fc79115117bf4a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            6,
+            5,
+            112,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1960,
+          "nonzeroPixels": 4953
+        },
+        {
+          "path": "baseline/walk/frame_0012.png",
+          "sha256": "f6e03cb6efeea1cdc27e487165278d007a8f6636366fd656638cd1fc9e6ee7ce",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            7,
+            6,
+            111,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 2002,
+          "nonzeroPixels": 4869
+        },
+        {
+          "path": "baseline/walk/frame_0013.png",
+          "sha256": "92becaed21704bf3e3e2eabf154e4ee2e73e6e5e8a42ac8a5da1579027aed334",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            8,
+            7,
+            106,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1828,
+          "nonzeroPixels": 4561
+        },
+        {
+          "path": "baseline/walk/frame_0014.png",
+          "sha256": "9e1d4c31c4ed32f817bcd785620bda5fee9f42394c762efcfd6f8135f79989a2",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            10,
+            8,
+            109,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1894,
+          "nonzeroPixels": 4590
+        },
+        {
+          "path": "baseline/walk/frame_0015.png",
+          "sha256": "3511a37f222addf6339ac6c405231901b49e2f8ea8a2bbf7b9213243971ec7a7",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            12,
+            8,
+            110,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1899,
+          "nonzeroPixels": 4600
+        },
+        {
+          "path": "baseline/walk/frame_0016.png",
+          "sha256": "e4a2b2f05579046ff9ceb70e6ffb7e0801f1962239a4f46822d941d68322f1c5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            15,
+            7,
+            111,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1878,
+          "nonzeroPixels": 4569
+        },
+        {
+          "path": "baseline/walk/frame_0017.png",
+          "sha256": "555852c55064fcbdc78a0dc2ffb64c23e73ec74d04500ed2629dce9229ac3615",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            18,
+            6,
+            114,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1909,
+          "nonzeroPixels": 4551
+        },
+        {
+          "path": "baseline/walk/frame_0018.png",
+          "sha256": "f36852b92be36ba18c7647590d0e8272eac7cf7d3c2234ceceb65e49a2fbca66",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            17,
+            5,
+            117,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1757,
+          "nonzeroPixels": 4488
+        },
+        {
+          "path": "baseline/walk/frame_0019.png",
+          "sha256": "513e59444e2155ec41fa977657bd2e55e4d260e3ca9be6158336914ad759890d",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            14,
+            4,
+            120,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1789,
+          "nonzeroPixels": 4600
+        },
+        {
+          "path": "baseline/walk/frame_0020.png",
+          "sha256": "6d58881096af466310d3b09e8839076de40d963c3d524f470e6f6bf4c4c14ec9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            11,
+            4,
+            123,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1788,
+          "nonzeroPixels": 4830
+        },
+        {
+          "path": "baseline/walk/frame_0021.png",
+          "sha256": "454238ad558954e4108c92669b3ddd67b57a1e185533825b58177444a1a5f805",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            4,
+            125,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1968,
+          "nonzeroPixels": 5114
+        },
+        {
+          "path": "baseline/walk/frame_0022.png",
+          "sha256": "1432f9bdb568b990a7766340291a4a8f7d60ea4cb832be845ca6cd6ffc942d13",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            7,
+            4,
+            127,
+            123
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 2131,
+          "nonzeroPixels": 5280
+        },
+        {
+          "path": "baseline/walk/frame_0023.png",
+          "sha256": "f85e0c884376e2e71707c3be9f0a09771e7063174e915054efa3f25c6e00765b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            5,
+            128,
+            123
+          ],
+          "edgePixels": 2,
+          "semiTransparentPixels": 2178,
+          "nonzeroPixels": 5316
+        },
+        {
+          "path": "baseline/walk/frame_0024.png",
+          "sha256": "a92e57e92f6e8c16a47bff66621a7c66fe8edbeb96b1e75b16aa3bf71889432c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            6,
+            128,
+            123
+          ],
+          "edgePixels": 2,
+          "semiTransparentPixels": 2129,
+          "nonzeroPixels": 5248
+        }
+      ]
+    },
+    {
+      "provider": "baseline",
+      "action": "slash",
+      "label": "기존 SCAIL-2 · 베기",
+      "fps": 15.652,
+      "anchor": {
+        "x": 45,
+        "y": 138,
+        "height": 96,
+        "method": "fixed clip anchor from first-frame torso centroid and lower alpha bound; no per-frame resizing",
+        "visualRoot": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4.63816121579191,
+          19.877840217097525,
+          31.804551211497056,
+          31.804551211497056,
+          31.804551211497056,
+          31.804551211497056,
+          31.804551211497056,
+          31.804551211497056,
+          34.46338052271387,
+          37.12221412401882,
+          39.7810391451475,
+          42.43986845636432,
+          45.09869347749301,
+          47.757527078797956,
+          50.416356390014776,
+          53.07518999131972,
+          54,
+          54,
+          54,
+          54
+        ],
+        "rootMotion": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6.667356747700871,
+          28.574395312077694,
+          45.71904236652702,
+          45.71904236652702,
+          45.71904236652702,
+          45.71904236652702,
+          45.71904236652702,
+          45.71904236652702,
+          49.54110950140119,
+          53.36318280327705,
+          57.18524377114954,
+          61.00731090602372,
+          64.82937187389619,
+          68.65144517577205,
+          72.47351231064624,
+          76.29558561252209,
+          77.625,
+          77.625,
+          77.625,
+          77.625
+        ],
+        "driver": "drivers/slash/motion.json",
+        "endAnchorX": 99,
+        "visualY": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          -2,
+          -2,
+          -5,
+          -4,
+          -5,
+          -5,
+          -5,
+          -5,
+          -5.4973821989528915,
+          -4.4973821989528915,
+          -4.4973821989528915,
+          -4.4973821989528915,
+          -4.4973821989528915,
+          -5,
+          -5,
+          -4,
+          -4,
+          -4,
+          -4,
+          -5
+        ]
+      },
+      "source": "samples/motion-court/clips/slash",
+      "sourceManifestHash": "7ca269d6e3ffc986d4eba4159a642752acfb5fcde7b5b0299340f2a5b52ebc2e",
+      "status": "concept",
+      "qaExit": 1,
+      "frames": [
+        {
+          "path": "baseline/slash/frame_0000.png",
+          "sha256": "d266ea16718aec959772419f655c28cbc2a4c2b364e8fe44f755832f2209e1ee",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            10,
+            41,
+            77,
+            138
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1419,
+          "nonzeroPixels": 3604
+        },
+        {
+          "path": "baseline/slash/frame_0001.png",
+          "sha256": "9ac8c7448d197e8e14f5b9f9f9eda719d60c1a25996ca0c1fb12edbf38da471e",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            17,
+            43,
+            77,
+            138
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1333,
+          "nonzeroPixels": 3418
+        },
+        {
+          "path": "baseline/slash/frame_0002.png",
+          "sha256": "a94593e494d3bf08a5135c7effc721d1823538f78865be508518448a118a4e19",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            24,
+            42,
+            79,
+            138
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1338,
+          "nonzeroPixels": 3372
+        },
+        {
+          "path": "baseline/slash/frame_0003.png",
+          "sha256": "387d38bb8c42a2257530780983873260afa8583fecd775c0bfc1376d5f7a54a4",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            17,
+            41,
+            84,
+            138
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1406,
+          "nonzeroPixels": 3591
+        },
+        {
+          "path": "baseline/slash/frame_0004.png",
+          "sha256": "85d4dacb499f1fec82ef0a65d054fad6edba59b0d141f9f03ade4c7efb782831",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            14,
+            16,
+            88,
+            138
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1779,
+          "nonzeroPixels": 4060
+        },
+        {
+          "path": "baseline/slash/frame_0005.png",
+          "sha256": "c46c29421051e8a0e2e18538a9dc2d97f66c89b592afcc0b8e5f0b19290e629d",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            17,
+            21,
+            90,
+            137
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1627,
+          "nonzeroPixels": 4198
+        },
+        {
+          "path": "baseline/slash/frame_0006.png",
+          "sha256": "adeb45b456b8da9376994a073c6ddef0798dd15bb167e9d37126918d9faab30b",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            14,
+            32,
+            104,
+            136
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1796,
+          "nonzeroPixels": 4469
+        },
+        {
+          "path": "baseline/slash/frame_0007.png",
+          "sha256": "770bafc3e2ab22afc985c5ce1845690e3168388ff8ddf50530cde128079e226d",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            30,
+            51,
+            160,
+            133
+          ],
+          "edgePixels": 7,
+          "semiTransparentPixels": 2047,
+          "nonzeroPixels": 4251
+        },
+        {
+          "path": "baseline/slash/frame_0008.png",
+          "sha256": "8a02ad1651f62c00f21c5db8c98e3937dca53fef90a6ea81013df2be2c67b1f8",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            40,
+            51,
+            142,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1642,
+          "nonzeroPixels": 3552
+        },
+        {
+          "path": "baseline/slash/frame_0009.png",
+          "sha256": "656b4b2ff1731b2ddee3c0c66764b3af470957993e130e48d87125160e3ea5d1",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            51,
+            143,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1499,
+          "nonzeroPixels": 3350
+        },
+        {
+          "path": "baseline/slash/frame_0010.png",
+          "sha256": "85609177dc91c4d59b099d2f31f39bfc3d1f6f079020c048228f898c9949d6c5",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            51,
+            144,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1486,
+          "nonzeroPixels": 3350
+        },
+        {
+          "path": "baseline/slash/frame_0011.png",
+          "sha256": "85ab6d623cd5cf76e37a46310358edcda1130f52b26975cc7357658402cbc1bb",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            54,
+            147,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1520,
+          "nonzeroPixels": 3427
+        },
+        {
+          "path": "baseline/slash/frame_0012.png",
+          "sha256": "af7a6bec7e3fb6555b9d6843a46817dcc46ca61c164025603415ce72c67f772b",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            49,
+            56,
+            154,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1614,
+          "nonzeroPixels": 3607
+        },
+        {
+          "path": "baseline/slash/frame_0013.png",
+          "sha256": "e76a7959e6506d52b03dfac771a285ebd739901347fb3a229aab135e133ee9a5",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            50,
+            55,
+            160,
+            133
+          ],
+          "edgePixels": 7,
+          "semiTransparentPixels": 1507,
+          "nonzeroPixels": 3715
+        },
+        {
+          "path": "baseline/slash/frame_0014.png",
+          "sha256": "c96a067f2da920d7cdf7a4b37f374271420ee101d62655028421ddfc7648646f",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            47,
+            47,
+            150,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1674,
+          "nonzeroPixels": 3694
+        },
+        {
+          "path": "baseline/slash/frame_0015.png",
+          "sha256": "3bb11cc4335ca0d18b13188a6162fd7fa8da854052538e9973b10bcf35384d80",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            50,
+            33,
+            131,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1659,
+          "nonzeroPixels": 3570
+        },
+        {
+          "path": "baseline/slash/frame_0016.png",
+          "sha256": "9fafebd18ba2eb7dda4a5697f797fc0a7341cf7b0e516b2c1e0f052c904735cd",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            56,
+            38,
+            135,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1657,
+          "nonzeroPixels": 3276
+        },
+        {
+          "path": "baseline/slash/frame_0017.png",
+          "sha256": "4824f6fa7a0f38d44e11528069af5a4b57c71dcf36d3f6d473e7489ca408de55",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            59,
+            41,
+            139,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1392,
+          "nonzeroPixels": 2943
+        },
+        {
+          "path": "baseline/slash/frame_0018.png",
+          "sha256": "0bafda96cbb94ffd9f6da583d8a3c02e97f19db3a961ed4274019adaf462cd7b",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            60,
+            43,
+            127,
+            133
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1312,
+          "nonzeroPixels": 3162
+        },
+        {
+          "path": "baseline/slash/frame_0019.png",
+          "sha256": "fe53ec2f98c2cd7b452a1d8e731e398f27f4439d93e6b257fa1dbaf02fa77142",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            48,
+            44,
+            131,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1539,
+          "nonzeroPixels": 3574
+        },
+        {
+          "path": "baseline/slash/frame_0020.png",
+          "sha256": "5c63e017e3792f1fb56f92bf34c299f03438cd7b952ddd42a40820a1f7a06f34",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            45,
+            43,
+            134,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1609,
+          "nonzeroPixels": 3766
+        },
+        {
+          "path": "baseline/slash/frame_0021.png",
+          "sha256": "a6866ca52b6a907a2172c43618483b6c91acdde48fa11c2669bd6ec72952c58a",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            46,
+            41,
+            135,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1682,
+          "nonzeroPixels": 3822
+        },
+        {
+          "path": "baseline/slash/frame_0022.png",
+          "sha256": "5b06f514fca44be751572ab59898a54473e2748755a24cf80e4360f93e5a0740",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            46,
+            42,
+            135,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1721,
+          "nonzeroPixels": 3806
+        },
+        {
+          "path": "baseline/slash/frame_0023.png",
+          "sha256": "66feea00a74d698326a2e363562faa6ca216e9f556e47887140efa342967127a",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            46,
+            44,
+            135,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1661,
+          "nonzeroPixels": 3706
+        },
+        {
+          "path": "baseline/slash/frame_0024.png",
+          "sha256": "8b0bf72c57d43740d712a36d30ab712fbf68f9ed6ed85e6a289e8d2c4fd52428",
+          "canvas": [
+            160,
+            160
+          ],
+          "bounds": [
+            46,
+            42,
+            135,
+            134
+          ],
+          "edgePixels": 0,
+          "semiTransparentPixels": 1670,
+          "nonzeroPixels": 3674
+        }
+      ]
+    },
+    {
+      "provider": "voidless",
+      "action": "walk",
+      "label": "Voidless · 걷기 요청",
+      "fps": 5,
+      "status": "concept",
+      "qaExit": 0,
+      "anchor": {
+        "x": 46,
+        "y": 121,
+        "height": 95,
+        "method": "fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling"
+      },
+      "frames": [
+        {
+          "path": "voidless/walk/frame_0000.png",
+          "sha256": "d74c57a24e39d38f85ac8da9a953abfb86c203b3ddd64a82693076c4daf8b09c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 1
+        },
+        {
+          "path": "voidless/walk/frame_0001.png",
+          "sha256": "ea1530cdc1cfd2f8fc012fa11187dcba28ff23765d3a3532a37c38af40807313",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9924981245311327
+        },
+        {
+          "path": "voidless/walk/frame_0002.png",
+          "sha256": "2d887d13fc4c19943f9df2c9a0794bb3e4e029a7f554e3cf12de18553340bfd2",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            86,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9932533733133433
+        },
+        {
+          "path": "voidless/walk/frame_0003.png",
+          "sha256": "6cd2b699d18ca951ffde416fc5229b6aae16c76d910e3e99f52d2ab94d47c837",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9924924924924925
+        },
+        {
+          "path": "voidless/walk/frame_0004.png",
+          "sha256": "697aa7df809037a9810d947ff8ad5707a1aa251eb04c3ce45a16b0ba7fa31534",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9947447447447447
+        },
+        {
+          "path": "voidless/walk/frame_0005.png",
+          "sha256": "09440957f2dcd482146f123f83d8d6292f3ec4b775e95e536b2e4ecd904d4991",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9917541229385307
+        },
+        {
+          "path": "voidless/walk/frame_0006.png",
+          "sha256": "432fe6f2267c3feba647d5bfce69f0da548b9f389d4ddf864b6d765a4481d373",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            86,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9932483120780196
+        },
+        {
+          "path": "voidless/walk/frame_0007.png",
+          "sha256": "0bc6620e3a97e861dc426fc7d6da9c34ff57de3d420c4f8689a7041169472b1c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.990990990990991
+        },
+        {
+          "path": "voidless/walk/frame_0008.png",
+          "sha256": "ada868e4e9f83ee76c62b91905a837a48c0bca989ba5885a0350a050b26449aa",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            86,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.994748687171793
+        },
+        {
+          "path": "voidless/walk/frame_0009.png",
+          "sha256": "23715aad26dc66d8296ba995f35c395805f41dc2d2aae9f0b819a99508aa6cf8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9917541229385307
+        },
+        {
+          "path": "voidless/walk/frame_0010.png",
+          "sha256": "6692ef64ce58029a56fd069cfc4ccabf1aa05ee3a53a978791091f307452b352",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            86,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9932483120780196
+        },
+        {
+          "path": "voidless/walk/frame_0011.png",
+          "sha256": "a468c4223190b33152c855b8a3675472a42c76857c1a3339381b1a78a780472a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9902475618904726
+        },
+        {
+          "path": "voidless/walk/frame_0012.png",
+          "sha256": "936afe27bae9708cb32b4c03b9dbc2e094119894d7e67f90b81b272da5105bc1",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9925093632958801
+        },
+        {
+          "path": "voidless/walk/frame_0013.png",
+          "sha256": "b7f9b22ac3783651f77e355aaa24516c2f2825b740324d1999b5ccd6f4ccfda5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9917541229385307
+        },
+        {
+          "path": "voidless/walk/frame_0014.png",
+          "sha256": "5d3d80bf87b63bc266c0515ce462d6570b1d6b8c4484d67ec8a9d381800a0bc5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            86,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.9932483120780196
+        },
+        {
+          "path": "voidless/walk/frame_0015.png",
+          "sha256": "77710a74e0bfb4f9b2c257ad6c6c98ff200b67fef1f90ddf0f327868f09f5950",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            5,
+            26,
+            87,
+            121
+          ],
+          "edgePixels": 0,
+          "lowerBodySilhouetteIoUToFirst": 0.993993993993994
+        }
+      ]
+    },
+    {
+      "provider": "ludo",
+      "action": "walk",
+      "label": "Ludo Hydra · 일반 Animate 걷기",
+      "fps": 13.5,
+      "status": "concept",
+      "qaExit": 0,
+      "anchor": {
+        "x": 63.5,
+        "y": 128,
+        "height": 128,
+        "method": "fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling"
+      },
+      "frames": [
+        {
+          "path": "ludo/walk/frame_0000.png",
+          "sha256": "39291fa8f393ff9b5a22b8708cba959c787fd2260ba132026cc30be023bf8881",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 1
+        },
+        {
+          "path": "ludo/walk/frame_0001.png",
+          "sha256": "615eb51959758a70296ac40696397896780c032aac6ca77ca212a028eb20d750",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.8531144781144782
+        },
+        {
+          "path": "ludo/walk/frame_0002.png",
+          "sha256": "98b2aab5b721ac9c751e474f71a8797ac944678fa5a81604adee5f11e910fc72",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.7317932654659358
+        },
+        {
+          "path": "ludo/walk/frame_0003.png",
+          "sha256": "7f9d81c5ea7bf3126c028e78d2e7d0ba517aa00abe1ef0258f4e1229a63a3a3a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.6380527684875511
+        },
+        {
+          "path": "ludo/walk/frame_0004.png",
+          "sha256": "1e5b05c8a2745a305e5111113421a52b188bb8672615f3536fdc84b3cf6da348",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.5822645657750092
+        },
+        {
+          "path": "ludo/walk/frame_0005.png",
+          "sha256": "bd3f986b0ab9713f33196e720b4859aa2d80a03b9f3a276be6de59c2c1659eb6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.553082816490332
+        },
+        {
+          "path": "ludo/walk/frame_0006.png",
+          "sha256": "b597da3bcd4f67ae538b7f26bcb112d24cf60fd4536fe01b8adc4e7686b34fc3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.5026795284030011
+        },
+        {
+          "path": "ludo/walk/frame_0007.png",
+          "sha256": "59b1cbfa56f5e421f356333b05f653e3ef12f7aba0805b3c9e359c77c3389123",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.5261299435028248
+        },
+        {
+          "path": "ludo/walk/frame_0008.png",
+          "sha256": "f1a580bd867d0d1983794345d2906db8be14da6bc359374d9864aafb44e82eff",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.545583038869258
+        },
+        {
+          "path": "ludo/walk/frame_0009.png",
+          "sha256": "8e90c17cd83f9137688a19ceb64e405250a9e43483963b2be08fdcae1274520a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6329113924050633
+        },
+        {
+          "path": "ludo/walk/frame_0010.png",
+          "sha256": "4cb11ccf4d78f991455ce91b7fec0f850ca357e7ab5fa879b53d4be462dc55b5",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.7177293934681181
+        },
+        {
+          "path": "ludo/walk/frame_0011.png",
+          "sha256": "7c8cb9d0afcf3dd43cff88508c792b3d38f93bc34411feedb1fc304a8d257183",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.7954918032786885
+        },
+        {
+          "path": "ludo/walk/frame_0012.png",
+          "sha256": "2a25c89a73f1ac19ba5bb5d13d48e9bd9df1e4e15ca1de2115577148c954fd7a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.8404390037990713
+        },
+        {
+          "path": "ludo/walk/frame_0013.png",
+          "sha256": "6de1412a81ebe4a19b5e4f5e64afd6e197b86cf5b04e1436085084aef3c1fa6e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.7661388550548112
+        },
+        {
+          "path": "ludo/walk/frame_0014.png",
+          "sha256": "2f391335517523a6d8dcbeaa7d0875314e3ddfd079f0a75f05c4e544eb747664",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.6790697674418604
+        },
+        {
+          "path": "ludo/walk/frame_0015.png",
+          "sha256": "d756ababcd471525c8b5c607ecea69b7513cb6ed3b0aba58722ff02c0632dafe",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.6607487456580471
+        },
+        {
+          "path": "ludo/walk/frame_0016.png",
+          "sha256": "2d59227a2569af355065d7c2ee6471a1580d7fdd438ebfc06bffeda2d68245c8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.6173163418290855
+        },
+        {
+          "path": "ludo/walk/frame_0017.png",
+          "sha256": "e84001f7b0211091163ee09f0e4d1a4e9ba9bbcdb65fec9cbc41045797a402bb",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 37,
+          "lowerBodySilhouetteIoUToFirst": 0.5907046476761619
+        },
+        {
+          "path": "ludo/walk/frame_0018.png",
+          "sha256": "e62e001dd034bf5d5ade33e63df6355070e3b5b5b5b70a6863a296c3a7f0830b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.5229357798165137
+        },
+        {
+          "path": "ludo/walk/frame_0019.png",
+          "sha256": "13ce43bdb00e1e6c44c4b19fefd0e52c8f3484ead7629ae6469a8e36672afdfd",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.49475966750993855
+        },
+        {
+          "path": "ludo/walk/frame_0020.png",
+          "sha256": "7bf0725f3cd6ec140780ff4c67faf8ec206cf0ec5f54bcee1e4b4ac44f76ac6a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 33,
+          "lowerBodySilhouetteIoUToFirst": 0.5153738644304682
+        },
+        {
+          "path": "ludo/walk/frame_0021.png",
+          "sha256": "e6713744b02636fbddcefe4ca04e1c7f3e9e064383e01d82e0f77deed034e8a1",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.5930064888248018
+        },
+        {
+          "path": "ludo/walk/frame_0022.png",
+          "sha256": "5594504308f8279f771ec0d58a2fb47a9e56227d4b09cbcb403c506f150cfe2f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.6735849056603773
+        },
+        {
+          "path": "ludo/walk/frame_0023.png",
+          "sha256": "6778d00742a17b649251ec2b803fa32b5cd7b22bbeb86087b3b959f8c14ed2cd",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.795868772782503
+        },
+        {
+          "path": "ludo/walk/frame_0024.png",
+          "sha256": "5eb76ed357c6f2373597ac1618280fc8a6f156a8452fc5d31bb22b229a432f92",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.8202061855670103
+        },
+        {
+          "path": "ludo/walk/frame_0025.png",
+          "sha256": "6d1ff1f124fad6fa97ad3b8590b5ffdb06ba56903e02a750732212307b09bf0d",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.7575516693163752
+        },
+        {
+          "path": "ludo/walk/frame_0026.png",
+          "sha256": "beed27039b4038edfba80bed701f24a9134afa8a18c01e5888138880371e2192",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 37,
+          "lowerBodySilhouetteIoUToFirst": 0.7121913580246914
+        },
+        {
+          "path": "ludo/walk/frame_0027.png",
+          "sha256": "aa0e2a1e873369b8bf476d8b5f0f4b0e30970409075ad70808616a26d8890e3f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6144885329450309
+        },
+        {
+          "path": "ludo/walk/frame_0028.png",
+          "sha256": "ebb4167e2cbdbe32da33d39424fd8b01cb147fb8dab00d1a549248cd87262ed6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.547979797979798
+        },
+        {
+          "path": "ludo/walk/frame_0029.png",
+          "sha256": "fcf117801d47e5894f137c1c71f0d49324580b3433191acb47299aa77f89baa6",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.5087281795511222
+        },
+        {
+          "path": "ludo/walk/frame_0030.png",
+          "sha256": "9659933cb92130ed61fbe709f718ca3ece9a9efd44a056686b4be1e14e0e1e66",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.48034006376195537
+        },
+        {
+          "path": "ludo/walk/frame_0031.png",
+          "sha256": "bf14ff51af2217a658dab7929a9ed53fc9bc29b14f33ce848cc45e499a2981b9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.5096049293222182
+        },
+        {
+          "path": "ludo/walk/frame_0032.png",
+          "sha256": "38ca0c1b299ec80dc7dfee8f6b38dde74cc42912644c00cb224d6dc58b9136a2",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.5214335910049192
+        },
+        {
+          "path": "ludo/walk/frame_0033.png",
+          "sha256": "23aa69259ce4df98a8198ffed38e1e64f6f6ce63a9749e842c04d3a1e70982ca",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 35,
+          "lowerBodySilhouetteIoUToFirst": 0.5518465909090909
+        },
+        {
+          "path": "ludo/walk/frame_0034.png",
+          "sha256": "856b4e6f0a8c950bdbbc5114d18c2fcc6bb8731e5cdb36fb8fb57f36b25eb0f9",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 34,
+          "lowerBodySilhouetteIoUToFirst": 0.6648895658796649
+        },
+        {
+          "path": "ludo/walk/frame_0035.png",
+          "sha256": "cd76c92f453d62d8f47fd05a02ed7f15e41dc40f48795d27b8ee01557b60f4e3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 32,
+          "lowerBodySilhouetteIoUToFirst": 0.7597428686219365
+        }
+      ],
+      "workflow": "Sprite Generator Animate / Hydra",
+      "fpsNote": "Comparison playback estimated as 36 frames / 2.666667 second source video; service export FPS not confirmed.",
+      "watermark": true,
+      "productionEligible": false
+    },
+    {
+      "provider": "ludo-fixed",
+      "action": "walk",
+      "label": "Ludo Fix Loop · 보정본",
+      "fps": 13.395348837209303,
+      "status": "concept",
+      "qaExit": 0,
+      "anchor": {
+        "x": 63.5,
+        "y": 128,
+        "height": 128,
+        "method": "fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling"
+      },
+      "frames": [
+        {
+          "path": "ludo-fixed/walk/frame_0000.png",
+          "sha256": "8cb5586df08e958e5331f5d6c3c9cb9fd863fdaac976511d738c5c78dfd21d16",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 1
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0001.png",
+          "sha256": "30ff4280820b35bb56b476bea5a0cf533bceb9edae50de3241e453e78c2fdf33",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 41,
+          "lowerBodySilhouetteIoUToFirst": 0.9174630755864466
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0002.png",
+          "sha256": "73b1403fe0fcf4c14d25cba4d15e7b1de8b64259fac4ed2c34cae8ce11dc12e3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 43,
+          "lowerBodySilhouetteIoUToFirst": 0.8188167625308135
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0003.png",
+          "sha256": "a3da1b36d19df51b1b92857642dc4e5557c3c98e2b45e89891faef0a39344585",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 45,
+          "lowerBodySilhouetteIoUToFirst": 0.6637995512341062
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0004.png",
+          "sha256": "22badbb90f6d0186737e03d66241cd7152d12e7f9dcc17c5bbc746f44852395a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 49,
+          "lowerBodySilhouetteIoUToFirst": 0.6115641215715345
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0005.png",
+          "sha256": "fd16114405cb697080603bbcb5f08bef833c750d79163fea2f4cf8ca955bc2fb",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 48,
+          "lowerBodySilhouetteIoUToFirst": 0.5407569141193596
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0006.png",
+          "sha256": "47a08e77311c311c8dafde98395d05dc2dbc819116f516e73c9e16ed2b1a8037",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 48,
+          "lowerBodySilhouetteIoUToFirst": 0.5259502923976608
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0007.png",
+          "sha256": "b1c695efba26a5630aded2af3353349a105e733efea7cecee254944c45261726",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 47,
+          "lowerBodySilhouetteIoUToFirst": 0.5256637168141592
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0008.png",
+          "sha256": "bd4878f727108076796b2ba21ee416136c8293b71468286cd0f127ef6832529b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 46,
+          "lowerBodySilhouetteIoUToFirst": 0.5940233236151603
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0009.png",
+          "sha256": "7eeb9667db1be4c15c280201634081cae62eae7d98630fc06e175903f4248a59",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 46,
+          "lowerBodySilhouetteIoUToFirst": 0.6385362210604929
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0010.png",
+          "sha256": "d3ea83e58fbc7c9bc7d5327bd96247c79e101873c65b9c44f8d823c3541d2ef3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 44,
+          "lowerBodySilhouetteIoUToFirst": 0.6388371226239284
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0011.png",
+          "sha256": "729ecb4717cf649be65057b8983311f3745c5b9440e76e1dad067035968cc7da",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.7383326685281213
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0012.png",
+          "sha256": "4d2149d33cfed883f24d3027ff2815a285eda16fe2dacca05530193d54f354a3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 37,
+          "lowerBodySilhouetteIoUToFirst": 0.7318725099601594
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0013.png",
+          "sha256": "c9a37f0e4d48bf5ba504095b9eabe90a2e3d023ac85d630b550962062119168c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.708300395256917
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0014.png",
+          "sha256": "bb0fafd643ae793d5a5d4a4ac36dc80647455558b9973818e2efc05435a8350e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6917057902973396
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0015.png",
+          "sha256": "c60c3899dbafba36320686e1c2133a96a000f9d77deca25b86cfecae88de0c4c",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.6782778864970646
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0016.png",
+          "sha256": "0c773ff52dd277f1559d10b90ebd3cd0cabbef620a5f7ea0ab015f4f993b6fdc",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.6281807823775162
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0017.png",
+          "sha256": "df5b802d16cb4cef8cec449d459a136d3a2713c0ee51a5361aed467526ba4af0",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6141822340831109
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0018.png",
+          "sha256": "6d94fccf6554a4a4b101b7a7d9a3125b029a04dfa5016330a41c25da4476ec7a",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 42,
+          "lowerBodySilhouetteIoUToFirst": 0.5757347400150716
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0019.png",
+          "sha256": "b2a6bf65f5ef6fcb45a88d23bec957781fbcf91f547114ed12165eeb1b174829",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.5133846718005134
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0020.png",
+          "sha256": "21f5cb73f68114570cfd45d03bac0989901b1153a597592d775b0326b074a96b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.5242957746478873
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0021.png",
+          "sha256": "bc94d78b5fd50526175057e5dd3cb1ea68e3a5333ed8645ca4fe0686dc8e1d99",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6233431516936672
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0022.png",
+          "sha256": "2cf6426600406466f73787e2cf6b214f3b1d2091a86c1b8d7eb55a7741566dc8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.7173405909797823
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0023.png",
+          "sha256": "b17ab21b9df33b3425924bbd80b8c83fcc532a11687523e540b0c873967f8034",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 40,
+          "lowerBodySilhouetteIoUToFirst": 0.7549642573471008
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0024.png",
+          "sha256": "741dd2c80f24d3b17aeddf55e99229a3ed3c45f68f2e55d1ff7285b23dc1a92b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.7730012053033347
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0025.png",
+          "sha256": "bf6a7938d98047f48f7bd8fc0234b5765dc199d3d5c23eccd3632642f1645601",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.7807832054905127
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0026.png",
+          "sha256": "598b6b3607815a34ef081777206dc09adabd506bcb5004cfbbad4a6abc6f369f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 43,
+          "lowerBodySilhouetteIoUToFirst": 0.7496050552922591
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0027.png",
+          "sha256": "bdf6b3240f37547398d902e221d14b59132a6fb9033d070076c9f8c7b20525b8",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 46,
+          "lowerBodySilhouetteIoUToFirst": 0.6650339110776187
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0028.png",
+          "sha256": "7c4243f03c7b96c1e0ecfe381271d94ef12d953c7e6b851161fa801b4f6e1d7e",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 47,
+          "lowerBodySilhouetteIoUToFirst": 0.5701689933872153
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0029.png",
+          "sha256": "5a8e1a1e3b5a53752e539492387abe5b64fd740a20dfa7982cb8374fa8bd0b73",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 48,
+          "lowerBodySilhouetteIoUToFirst": 0.5234657039711191
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0030.png",
+          "sha256": "e655e67893d25486eb687ed565e44c3efbefd7435a595d374b6f70d55f0668aa",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 48,
+          "lowerBodySilhouetteIoUToFirst": 0.5050107372942019
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0031.png",
+          "sha256": "c30e17407917721f662b0b43d16c352985c3718673bb449c1205afde1864c0e3",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.5195530726256983
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0032.png",
+          "sha256": "196b6efc8562a5a7619d306a0ed32eb3c9758c37270d25d259944596b915d587",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.6264432029795158
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0033.png",
+          "sha256": "1a117283a7e40b39473ee04a7b75b9e159e9cf0b79a08e997f83c5927d61347b",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.6655251141552512
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0034.png",
+          "sha256": "9e23cdff3ff0839adfa33e797a22534d4ba98d2d93ea3db0accc942ee35e819f",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 38,
+          "lowerBodySilhouetteIoUToFirst": 0.7314851485148515
+        },
+        {
+          "path": "ludo-fixed/walk/frame_0035.png",
+          "sha256": "749c02eaea7b314c1fdd33990398b87276a8c430b3515d27f737dc71ba9f2a13",
+          "canvas": [
+            128,
+            128
+          ],
+          "bounds": [
+            9,
+            0,
+            118,
+            128
+          ],
+          "edgePixels": 39,
+          "lowerBodySilhouetteIoUToFirst": 0.8525073746312685
+        }
+      ],
+      "workflow": "Ludo Fix Loop (Forge, per vendor documentation)",
+      "fpsNote": "Comparison playback estimated as 36 frames / 2.6875 second source video; service export FPS not confirmed.",
+      "watermark": true,
+      "productionEligible": false
+    }
+  ]
+}

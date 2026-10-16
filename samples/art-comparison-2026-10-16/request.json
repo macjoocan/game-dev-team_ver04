@@ -1,0 +1,12 @@
+{
+  "reference": {
+    "path": "reference/reference.png",
+    "sha256": "96afc5c3bcebd30f303b37d103df7708a033946d721ff5073bd7c51e64e640c7",
+    "approval": "existing concept reference; not production-approved"
+  },
+  "commonDescription": "One male fantasy swordsman facing right in strict 2D side view. Preserve the red wide-brim feathered hat, large ivory feather, brown hair, red cape, cream shirt, dark fitted vest, brown boots and full-length sword. Preserve the reference design and proportions. Entire body and sword remain inside a fixed canvas. No dust, no glow, no background, no camera motion.",
+  "walk": "A natural in-place walking cycle, alternating feet with planted support foot, knee bend, hip and shoulder weight transfer. Keep the sword grip, feather and hat unchanged. Seamless loop.",
+  "slash": "A single side-view sword slash with forward weight transfer and a readable sword arc. Preparation, strike and recovery. Maintain consistent headgear and sword length. No teleport back, no extra weapons.",
+  "costPolicy": "No new purchase. Record exact displayed cost before generation. Pending requests are resumed, never resubmitted blindly.",
+  "status": "prepared-not-submitted"
+}

@@ -1,0 +1,20 @@
+﻿Dashboard validation — 2026-10-16 / codex / commit 40f23f0
+
+PASS: generated HTML JavaScript syntax compiled by Node vm.compileFunction.
+PASS: Chrome HTTP view reports 4 clips / 102 frames loaded; screenshot confirms all three walk canvases render.
+PASS: pause/resume, first frame, background white/dark, display height 48/138, slider End and walk/slash selection exercised.
+PASS: slash selection shows baseline 25 frames at 15.652 FPS and external services as not generated.
+PASS: embedded images and QA text; no fetch(), external scripts or remote image URLs required for rendering.
+NOT EXECUTED: direct file:// browser opening. Browser tool URL policy allows only http/https. Offline design verified by static embedded-resource inspection, not by a direct file open.
+PASS: node scripts/validate-plugin.mjs exit 0.
+Exact output:
+✓  검사 통과 — 에이전트 6 · 스킬 25 · 훅 4 · 커맨드 1
+
+2026-10-16 Ludo Fix Loop update:
+PASS: 5 clips / 138 frames loaded in Chrome HTTP view, all four canvases visibly rendered.
+PASS: Space keyboard toggles play/pause; slider End and sync checkbox controls exercised.
+PASS: background and display-height selectors exercised; loop comparison script syntax compiled.
+PASS: sprite QA for ludo-fixed/walk exited 0 (raw output in ludo-fixed-walk.txt).
+PASS: loop-audit report saved, diagnostic only; no automatic loop-quality pass claimed.
+PASS: validate-plugin exited 0 after adding repair scripts.
+NOT EXECUTED: final human approval, engine integration, watermark-free export.

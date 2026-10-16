@@ -1,0 +1,25 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url)),repo=path.resolve(root,'../..');
+const data=JSON.parse(fs.readFileSync(path.join(root,'comparison.json'),'utf8'));
+const source=data.clips.find(c=>c.provider==='ludo'&&c.action==='walk');
+const start=5,end=28,folder=path.join(root,'ludo-cycle/walk');fs.mkdirSync(folder,{recursive:true});
+const clip={provider:'ludo-cycle',action:'walk',label:'원본 6~29번 · 24프레임 주기 후보',fps:source.fps,fpsNote:source.fpsNote,status:'concept',anchor:source.anchor,frames:source.frames.slice(start,end+1).map((f,i)=>{
+ const target=path.join(folder,`frame_${String(i).padStart(4,'0')}.png`);fs.copyFileSync(path.join(root,f.path),target);const sha=crypto.createHash('sha256').update(fs.readFileSync(target)).digest('hex');if(sha!==f.sha256)throw Error('Copied frame hash mismatch');return {...f,path:path.relative(root,target).replaceAll('\\','/'),sourcePath:f.path,sourceFrameZeroBased:start+i,sha256:sha};
+})};
+const qa=spawnSync(process.execPath,['skills/sprite-pipeline/scripts/sprite-qa.mjs',path.relative(repo,folder),'--out',path.relative(repo,path.join(root,'qa/ludo-cycle-walk'))],{cwd:repo,encoding:'utf8'});
+clip.qaExit=qa.status;fs.writeFileSync(path.join(root,'qa/ludo-cycle-walk.txt'),`command: node skills/sprite-pipeline/scripts/sprite-qa.mjs ${path.relative(repo,folder)}\nexit: ${qa.status}\n${qa.stdout}${qa.stderr}`);
+const manifest={id:'chr.fantasy.ludo.cycle24.walk',status:'concept',harness:'codex',commit:data.commit,method:'Copy existing normalized frames 5..28 inclusive (zero-based), excluding near-matching closing frame29. No generated, blended, reversed, translated or repainted pixels; every copied SHA-256 matches its source.',creditsSpent:0,durationSeconds:clip.frames.length/clip.fps,sourceInput:'ludo/walk',selectionEvidence:'qa/cycle-search.json',userFeedback:{quote:'루도 픽스도 모션 끝과 시작이 연결이 안되는데 이건 방법이 읍나?',scope:'Fix Loop is still not visually accepted; lower seam metric is insufficient.'},verdict:'Candidate only: full-stride selection needs human review for loop seam, support foot, cape and leg identity. No automatic seamless claim.',clip};
+const selectionPath=path.join(root,'ludo-cycle/selection.json');
+if(fs.existsSync(selectionPath))manifest.userSelection=JSON.parse(fs.readFileSync(selectionPath,'utf8'));
+fs.writeFileSync(path.join(root,'ludo-cycle/manifest.json'),JSON.stringify(manifest,null,2)+'\n');
+const payload={...manifest,clips:[source,data.clips.find(c=>c.provider==='ludo-fixed'),clip].map(c=>({...c,frames:c.frames.map(f=>({...f,image:'data:image/png;base64,'+fs.readFileSync(path.join(root,f.path)).toString('base64')}))}))};
+const html=fs.readFileSync(path.join(root,'cycle.template.html'),'utf8').replace('/*__PAYLOAD__*/',JSON.stringify(payload).replace(/</g,'\\u003c'));
+fs.writeFileSync(path.join(root,'cycle.html'),html);
+data.vendors.ludo.localCycle={manifest:'ludo-cycle/manifest.json',preview:'cycle.html',sourceRangeOneBased:[6,29],frames:24,creditsSpent:0,status:manifest.userSelection?'preferred-concept':'concept-human-review-required',userSelection:manifest.userSelection};
+data.vendors.ludo.repair.userReview='User reports that the Fix Loop result still does not connect at the end/start; not accepted as seamless.';
+fs.writeFileSync(path.join(root,'comparison.json'),JSON.stringify(data,null,2)+'\n');
+console.log(JSON.stringify({frames:24,sourceRangeOneBased:[6,29],qaExit:qa.status,hashesVerified:24,credits:0}));

@@ -1,0 +1,11 @@
+{
+  "page": "https://app.ludo.ai/directional-sprites",
+  "timestamp": "2026-10-16T05:34:13.529Z",
+  "message": "ReferenceError: setNoWalk is not defined\n    at https://app.ludo.ai/assets/index-CSB0c-1y.js:1:33489\n    at xl (https://app.ludo.ai/assets/react-vendor-BoiAldYo.js:1:109756)\n    at $n (https://app.ludo.ai/assets/react-vendor-BoiAldYo.js:1:128009)\n    at https://app.ludo.ai/assets/react-vendor-BoiAldYo.js:1:126297\n    at m (https://app.ludo.ai/assets/react-vendor-BoiAldYo.js:1:10450)\n    at MessagePort.de (https://app.ludo.ai/assets/react-vendor-BoiAldYo.js:1:10817)",
+  "observedEffect": "Directional Sprites content disappeared; navigation shell remained",
+  "recovery": "Reload kept the content blank. Navigating to /3d-generator restored the existing 3D asset view.",
+  "creditsSpent": {"heroImageTo3d":15,"humanoidRigRequest":1},
+  "remainingCredits":14,
+  "spriteGenerationSubmitted":false,
+  "motionVerdict":"unmeasurable-service-ui-error"
+}

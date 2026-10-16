@@ -1,0 +1,347 @@
+{
+  "status": "diagnostic-only",
+  "method": "Search same-pose closing frames with 18..30 frame spans to prefer a full left-and-right stride; compare lower-body pose, all-frame pose and incoming/outgoing velocity. Closing match is excluded from candidate export; no pixel synthesis.",
+  "limitations": "A numeric match can swap leg identity or hide a pause. Human review required; watermark and clothing motion affect metrics.",
+  "providers": [
+    {
+      "provider": "ludo",
+      "candidates": [
+        {
+          "start": 5,
+          "close": 29,
+          "end": 28,
+          "frames": 24,
+          "score": 0.7138341131626437,
+          "fullPoseStepRatio": 0.6967603791685673,
+          "lowerPoseStepRatio": 0.6616295253149513,
+          "velocityStepRatio": 0.8063691065959124,
+          "wrapStepRatio": 0.7721143224290289
+        },
+        {
+          "start": 6,
+          "close": 30,
+          "end": 29,
+          "frames": 24,
+          "score": 0.7544175553484771,
+          "fullPoseStepRatio": 0.6963359161918979,
+          "lowerPoseStepRatio": 0.65270868950952,
+          "velocityStepRatio": 0.9553822200707291,
+          "wrapStepRatio": 1.1626103532373893
+        },
+        {
+          "start": 3,
+          "close": 27,
+          "end": 26,
+          "frames": 24,
+          "score": 0.7558175404875072,
+          "fullPoseStepRatio": 0.7197951643322689,
+          "lowerPoseStepRatio": 0.7271605755512679,
+          "velocityStepRatio": 0.8288216346878983,
+          "wrapStepRatio": 1.2252388709159772
+        },
+        {
+          "start": 4,
+          "close": 28,
+          "end": 27,
+          "frames": 24,
+          "score": 0.7609211097758108,
+          "fullPoseStepRatio": 0.6973972614379653,
+          "lowerPoseStepRatio": 0.6585399153536238,
+          "velocityStepRatio": 0.967429441690629,
+          "wrapStepRatio": 1.1534190725230666
+        },
+        {
+          "start": 8,
+          "close": 33,
+          "end": 32,
+          "frames": 25,
+          "score": 0.7931473153413608,
+          "fullPoseStepRatio": 0.7652651879043141,
+          "lowerPoseStepRatio": 0.7536911553990919,
+          "velocityStepRatio": 0.8755666614523032,
+          "wrapStepRatio": 0.7552194806545726
+        },
+        {
+          "start": 9,
+          "close": 34,
+          "end": 33,
+          "frames": 25,
+          "score": 0.8284526643281334,
+          "fullPoseStepRatio": 0.7504153774173067,
+          "lowerPoseStepRatio": 0.7205235407714567,
+          "velocityStepRatio": 1.0553774220888374,
+          "wrapStepRatio": 1.087255007704098
+        },
+        {
+          "start": 2,
+          "close": 26,
+          "end": 25,
+          "frames": 24,
+          "score": 0.851374401906493,
+          "fullPoseStepRatio": 0.7864654913761868,
+          "lowerPoseStepRatio": 0.8196547362374648,
+          "velocityStepRatio": 0.9530446591852907,
+          "wrapStepRatio": 0.9853299892687888
+        },
+        {
+          "start": 8,
+          "close": 32,
+          "end": 31,
+          "frames": 24,
+          "score": 0.8622846437114939,
+          "fullPoseStepRatio": 0.7552194806545726,
+          "lowerPoseStepRatio": 0.7241648707106774,
+          "velocityStepRatio": 1.15868527242682,
+          "wrapStepRatio": 1.2559059098972396
+        },
+        {
+          "start": 5,
+          "close": 28,
+          "end": 27,
+          "frames": 23,
+          "score": 0.8724446836069251,
+          "fullPoseStepRatio": 0.7721143224290289,
+          "lowerPoseStepRatio": 0.6696150902241733,
+          "velocityStepRatio": 1.260297707995966,
+          "wrapStepRatio": 1.4530012820279603
+        },
+        {
+          "start": 7,
+          "close": 32,
+          "end": 31,
+          "frames": 25,
+          "score": 0.9505686092138705,
+          "fullPoseStepRatio": 0.7775581625625214,
+          "lowerPoseStepRatio": 0.7706531102516849,
+          "velocityStepRatio": 1.3646172298666066,
+          "wrapStepRatio": 1.008894424564937
+        },
+        {
+          "start": 2,
+          "close": 25,
+          "end": 24,
+          "frames": 23,
+          "score": 1.0453771407785772,
+          "fullPoseStepRatio": 0.9853299892687888,
+          "lowerPoseStepRatio": 1.000644269117435,
+          "velocityStepRatio": 1.162515741195114,
+          "wrapStepRatio": 1.355439894571809
+        },
+        {
+          "start": 1,
+          "close": 25,
+          "end": 24,
+          "frames": 24,
+          "score": 1.063269469597716,
+          "fullPoseStepRatio": 1.0368555277202751,
+          "lowerPoseStepRatio": 1.0445157252246713,
+          "velocityStepRatio": 1.1134117043884837,
+          "wrapStepRatio": 1.1246294181046983
+        },
+        {
+          "start": 1,
+          "close": 24,
+          "end": 23,
+          "frames": 23,
+          "score": 1.0822030954283242,
+          "fullPoseStepRatio": 1.1246294181046983,
+          "lowerPoseStepRatio": 1.0040885845793044,
+          "velocityStepRatio": 1.1640195928048755,
+          "wrapStepRatio": 1.6107221770165538
+        },
+        {
+          "start": 7,
+          "close": 31,
+          "end": 30,
+          "frames": 24,
+          "score": 1.1052126406501745,
+          "fullPoseStepRatio": 1.008894424564937,
+          "lowerPoseStepRatio": 1.0603932923418857,
+          "velocityStepRatio": 1.252706843183639,
+          "wrapStepRatio": 1.2803652790504036
+        },
+        {
+          "start": 9,
+          "close": 33,
+          "end": 32,
+          "frames": 24,
+          "score": 1.1817219002264767,
+          "fullPoseStepRatio": 1.087255007704098,
+          "lowerPoseStepRatio": 1.1240007805520653,
+          "velocityStepRatio": 1.3470259901734092,
+          "wrapStepRatio": 1.3434700937191093
+        }
+      ]
+    },
+    {
+      "provider": "ludo-fixed",
+      "candidates": [
+        {
+          "start": 5,
+          "close": 29,
+          "end": 28,
+          "frames": 24,
+          "score": 0.9231491440260118,
+          "fullPoseStepRatio": 0.8693245157694175,
+          "lowerPoseStepRatio": 0.7652313514743322,
+          "velocityStepRatio": 1.2048796897340261,
+          "wrapStepRatio": 1.2608792165287783
+        },
+        {
+          "start": 5,
+          "close": 30,
+          "end": 29,
+          "frames": 25,
+          "score": 0.9501386992620378,
+          "fullPoseStepRatio": 0.7480195969097009,
+          "lowerPoseStepRatio": 0.6985998305742306,
+          "velocityStepRatio": 1.4958795875873623,
+          "wrapStepRatio": 0.8693245157694175
+        },
+        {
+          "start": 4,
+          "close": 28,
+          "end": 27,
+          "frames": 24,
+          "score": 1.2206849619666695,
+          "fullPoseStepRatio": 1.3086277869204361,
+          "lowerPoseStepRatio": 1.018172017553473,
+          "velocityStepRatio": 1.4511686911249921,
+          "wrapStepRatio": 1.4339548018184223
+        },
+        {
+          "start": 7,
+          "close": 31,
+          "end": 30,
+          "frames": 24,
+          "score": 1.2751815361403844,
+          "fullPoseStepRatio": 1.2523178635815184,
+          "lowerPoseStepRatio": 1.0666016548475512,
+          "velocityStepRatio": 1.6071044185453562,
+          "wrapStepRatio": 1.5894699158955397
+        },
+        {
+          "start": 1,
+          "close": 25,
+          "end": 24,
+          "frames": 24,
+          "score": 1.3342962047804396,
+          "fullPoseStepRatio": 1.812239809767524,
+          "lowerPoseStepRatio": 1.3849827914010597,
+          "velocityStepRatio": 0.8599799873602727,
+          "wrapStepRatio": 1.8308394321127615
+        },
+        {
+          "start": 10,
+          "close": 34,
+          "end": 33,
+          "frames": 24,
+          "score": 1.3471790254246132,
+          "fullPoseStepRatio": 1.5633260881612967,
+          "lowerPoseStepRatio": 1.4195900797849694,
+          "velocityStepRatio": 1.0584398916035092,
+          "wrapStepRatio": 1.5608969948380826
+        },
+        {
+          "start": 1,
+          "close": 24,
+          "end": 23,
+          "frames": 23,
+          "score": 1.3634999645972254,
+          "fullPoseStepRatio": 1.8308394321127615,
+          "lowerPoseStepRatio": 1.3996400932023232,
+          "velocityStepRatio": 0.9198402154266323,
+          "wrapStepRatio": 1.929818256444331
+        },
+        {
+          "start": 6,
+          "close": 30,
+          "end": 29,
+          "frames": 24,
+          "score": 1.3636933273617595,
+          "fullPoseStepRatio": 1.3408793565268604,
+          "lowerPoseStepRatio": 1.2826091913462196,
+          "velocityStepRatio": 1.5043311737474858,
+          "wrapStepRatio": 1.6322812748840483
+        },
+        {
+          "start": 10,
+          "close": 33,
+          "end": 32,
+          "frames": 23,
+          "score": 1.377519941586582,
+          "fullPoseStepRatio": 1.5608969948380826,
+          "lowerPoseStepRatio": 1.5258228686152575,
+          "velocityStepRatio": 1.0022513400006512,
+          "wrapStepRatio": 1.6293789012256064
+        },
+        {
+          "start": 8,
+          "close": 32,
+          "end": 31,
+          "frames": 24,
+          "score": 1.3818391165913435,
+          "fullPoseStepRatio": 1.4343508842452226,
+          "lowerPoseStepRatio": 1.225198471394604,
+          "velocityStepRatio": 1.57304027800822,
+          "wrapStepRatio": 1.4332993973643327
+        },
+        {
+          "start": 2,
+          "close": 25,
+          "end": 24,
+          "frames": 23,
+          "score": 1.3907157655817715,
+          "fullPoseStepRatio": 1.8460796612234207,
+          "lowerPoseStepRatio": 1.437851054657614,
+          "velocityStepRatio": 0.9405429189332993,
+          "wrapStepRatio": 1.9295937711489097
+        },
+        {
+          "start": 9,
+          "close": 33,
+          "end": 32,
+          "frames": 24,
+          "score": 1.4029093063494262,
+          "fullPoseStepRatio": 1.483463820950608,
+          "lowerPoseStepRatio": 1.3601282743975893,
+          "velocityStepRatio": 1.3999520921095303,
+          "wrapStepRatio": 1.5095972663981858
+        },
+        {
+          "start": 5,
+          "close": 28,
+          "end": 27,
+          "frames": 23,
+          "score": 1.4185040341381119,
+          "fullPoseStepRatio": 1.2608792165287783,
+          "lowerPoseStepRatio": 1.1945443663936228,
+          "velocityStepRatio": 1.8857975504292899,
+          "wrapStepRatio": 1.8160877221465952
+        },
+        {
+          "start": 1,
+          "close": 26,
+          "end": 25,
+          "frames": 25,
+          "score": 1.432697119334323,
+          "fullPoseStepRatio": 1.8494187420748718,
+          "lowerPoseStepRatio": 1.431511031199357,
+          "velocityStepRatio": 1.087208232586314,
+          "wrapStepRatio": 1.812239809767524
+        },
+        {
+          "start": 3,
+          "close": 27,
+          "end": 26,
+          "frames": 24,
+          "score": 1.4540977838235822,
+          "fullPoseStepRatio": 1.724050198030324,
+          "lowerPoseStepRatio": 1.1702177363397717,
+          "velocityStepRatio": 1.6549575098770133,
+          "wrapStepRatio": 1.9147157102012071
+        }
+      ]
+    }
+  ]
+}

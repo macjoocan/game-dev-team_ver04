@@ -1,0 +1,15 @@
+# Rebuildable extraction / export staging. Original downloads are retained.
+server.*.log
+voidless/raw/
+voidless/ordered/
+voidless/export/
+voidless/contact-groups/
+ludo/hydra-raw/
+ludo/ordered/
+ludo/export/
+ludo/contact-groups/
+ludo-fixed/raw/
+ludo-fixed/ordered/
+ludo-fixed/export/
+ludo-fixed/boundary/
+ludo-fixed/cycle-inspection/

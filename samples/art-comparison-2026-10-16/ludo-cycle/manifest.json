@@ -1,0 +1,473 @@
+{
+  "id": "chr.fantasy.ludo.cycle24.walk",
+  "status": "concept",
+  "harness": "codex",
+  "commit": "40f23f0",
+  "method": "Copy existing normalized frames 5..28 inclusive (zero-based), excluding near-matching closing frame29. No generated, blended, reversed, translated or repainted pixels; every copied SHA-256 matches its source.",
+  "creditsSpent": 0,
+  "durationSeconds": 1.7777777777777777,
+  "sourceInput": "ludo/walk",
+  "selectionEvidence": "qa/cycle-search.json",
+  "userFeedback": {
+    "quote": "루도 픽스도 모션 끝과 시작이 연결이 안되는데 이건 방법이 읍나?",
+    "scope": "Fix Loop is still not visually accepted; lower seam metric is insufficient."
+  },
+  "verdict": "Candidate only: full-stride selection needs human review for loop seam, support foot, cape and leg identity. No automatic seamless claim.",
+  "clip": {
+    "provider": "ludo-cycle",
+    "action": "walk",
+    "label": "원본 6~29번 · 24프레임 주기 후보",
+    "fps": 13.5,
+    "fpsNote": "Comparison playback estimated as 36 frames / 2.666667 second source video; service export FPS not confirmed.",
+    "status": "concept",
+    "anchor": {
+      "x": 63.5,
+      "y": 128,
+      "height": 128,
+      "method": "fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling"
+    },
+    "frames": [
+      {
+        "path": "ludo-cycle/walk/frame_0000.png",
+        "sha256": "bd3f986b0ab9713f33196e720b4859aa2d80a03b9f3a276be6de59c2c1659eb6",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 41,
+        "lowerBodySilhouetteIoUToFirst": 0.553082816490332,
+        "sourcePath": "ludo/walk/frame_0005.png",
+        "sourceFrameZeroBased": 5
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0001.png",
+        "sha256": "b597da3bcd4f67ae538b7f26bcb112d24cf60fd4536fe01b8adc4e7686b34fc3",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 41,
+        "lowerBodySilhouetteIoUToFirst": 0.5026795284030011,
+        "sourcePath": "ludo/walk/frame_0006.png",
+        "sourceFrameZeroBased": 6
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0002.png",
+        "sha256": "59b1cbfa56f5e421f356333b05f653e3ef12f7aba0805b3c9e359c77c3389123",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 40,
+        "lowerBodySilhouetteIoUToFirst": 0.5261299435028248,
+        "sourcePath": "ludo/walk/frame_0007.png",
+        "sourceFrameZeroBased": 7
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0003.png",
+        "sha256": "f1a580bd867d0d1983794345d2906db8be14da6bc359374d9864aafb44e82eff",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 39,
+        "lowerBodySilhouetteIoUToFirst": 0.545583038869258,
+        "sourcePath": "ludo/walk/frame_0008.png",
+        "sourceFrameZeroBased": 8
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0004.png",
+        "sha256": "8e90c17cd83f9137688a19ceb64e405250a9e43483963b2be08fdcae1274520a",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 39,
+        "lowerBodySilhouetteIoUToFirst": 0.6329113924050633,
+        "sourcePath": "ludo/walk/frame_0009.png",
+        "sourceFrameZeroBased": 9
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0005.png",
+        "sha256": "4cb11ccf4d78f991455ce91b7fec0f850ca357e7ab5fa879b53d4be462dc55b5",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 38,
+        "lowerBodySilhouetteIoUToFirst": 0.7177293934681181,
+        "sourcePath": "ludo/walk/frame_0010.png",
+        "sourceFrameZeroBased": 10
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0006.png",
+        "sha256": "7c8cb9d0afcf3dd43cff88508c792b3d38f93bc34411feedb1fc304a8d257183",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 34,
+        "lowerBodySilhouetteIoUToFirst": 0.7954918032786885,
+        "sourcePath": "ludo/walk/frame_0011.png",
+        "sourceFrameZeroBased": 11
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0007.png",
+        "sha256": "2a25c89a73f1ac19ba5bb5d13d48e9bd9df1e4e15ca1de2115577148c954fd7a",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 33,
+        "lowerBodySilhouetteIoUToFirst": 0.8404390037990713,
+        "sourcePath": "ludo/walk/frame_0012.png",
+        "sourceFrameZeroBased": 12
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0008.png",
+        "sha256": "6de1412a81ebe4a19b5e4f5e64afd6e197b86cf5b04e1436085084aef3c1fa6e",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 32,
+        "lowerBodySilhouetteIoUToFirst": 0.7661388550548112,
+        "sourcePath": "ludo/walk/frame_0013.png",
+        "sourceFrameZeroBased": 13
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0009.png",
+        "sha256": "2f391335517523a6d8dcbeaa7d0875314e3ddfd079f0a75f05c4e544eb747664",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 32,
+        "lowerBodySilhouetteIoUToFirst": 0.6790697674418604,
+        "sourcePath": "ludo/walk/frame_0014.png",
+        "sourceFrameZeroBased": 14
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0010.png",
+        "sha256": "d756ababcd471525c8b5c607ecea69b7513cb6ed3b0aba58722ff02c0632dafe",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 33,
+        "lowerBodySilhouetteIoUToFirst": 0.6607487456580471,
+        "sourcePath": "ludo/walk/frame_0015.png",
+        "sourceFrameZeroBased": 15
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0011.png",
+        "sha256": "2d59227a2569af355065d7c2ee6471a1580d7fdd438ebfc06bffeda2d68245c8",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 34,
+        "lowerBodySilhouetteIoUToFirst": 0.6173163418290855,
+        "sourcePath": "ludo/walk/frame_0016.png",
+        "sourceFrameZeroBased": 16
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0012.png",
+        "sha256": "e84001f7b0211091163ee09f0e4d1a4e9ba9bbcdb65fec9cbc41045797a402bb",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 37,
+        "lowerBodySilhouetteIoUToFirst": 0.5907046476761619,
+        "sourcePath": "ludo/walk/frame_0017.png",
+        "sourceFrameZeroBased": 17
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0013.png",
+        "sha256": "e62e001dd034bf5d5ade33e63df6355070e3b5b5b5b70a6863a296c3a7f0830b",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 33,
+        "lowerBodySilhouetteIoUToFirst": 0.5229357798165137,
+        "sourcePath": "ludo/walk/frame_0018.png",
+        "sourceFrameZeroBased": 18
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0014.png",
+        "sha256": "13ce43bdb00e1e6c44c4b19fefd0e52c8f3484ead7629ae6469a8e36672afdfd",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 33,
+        "lowerBodySilhouetteIoUToFirst": 0.49475966750993855,
+        "sourcePath": "ludo/walk/frame_0019.png",
+        "sourceFrameZeroBased": 19
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0015.png",
+        "sha256": "7bf0725f3cd6ec140780ff4c67faf8ec206cf0ec5f54bcee1e4b4ac44f76ac6a",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 33,
+        "lowerBodySilhouetteIoUToFirst": 0.5153738644304682,
+        "sourcePath": "ludo/walk/frame_0020.png",
+        "sourceFrameZeroBased": 20
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0016.png",
+        "sha256": "e6713744b02636fbddcefe4ca04e1c7f3e9e064383e01d82e0f77deed034e8a1",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 32,
+        "lowerBodySilhouetteIoUToFirst": 0.5930064888248018,
+        "sourcePath": "ludo/walk/frame_0021.png",
+        "sourceFrameZeroBased": 21
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0017.png",
+        "sha256": "5594504308f8279f771ec0d58a2fb47a9e56227d4b09cbcb403c506f150cfe2f",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 34,
+        "lowerBodySilhouetteIoUToFirst": 0.6735849056603773,
+        "sourcePath": "ludo/walk/frame_0022.png",
+        "sourceFrameZeroBased": 22
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0018.png",
+        "sha256": "6778d00742a17b649251ec2b803fa32b5cd7b22bbeb86087b3b959f8c14ed2cd",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 34,
+        "lowerBodySilhouetteIoUToFirst": 0.795868772782503,
+        "sourcePath": "ludo/walk/frame_0023.png",
+        "sourceFrameZeroBased": 23
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0019.png",
+        "sha256": "5eb76ed357c6f2373597ac1618280fc8a6f156a8452fc5d31bb22b229a432f92",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 32,
+        "lowerBodySilhouetteIoUToFirst": 0.8202061855670103,
+        "sourcePath": "ludo/walk/frame_0024.png",
+        "sourceFrameZeroBased": 24
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0020.png",
+        "sha256": "6d1ff1f124fad6fa97ad3b8590b5ffdb06ba56903e02a750732212307b09bf0d",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 34,
+        "lowerBodySilhouetteIoUToFirst": 0.7575516693163752,
+        "sourcePath": "ludo/walk/frame_0025.png",
+        "sourceFrameZeroBased": 25
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0021.png",
+        "sha256": "beed27039b4038edfba80bed701f24a9134afa8a18c01e5888138880371e2192",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 37,
+        "lowerBodySilhouetteIoUToFirst": 0.7121913580246914,
+        "sourcePath": "ludo/walk/frame_0026.png",
+        "sourceFrameZeroBased": 26
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0022.png",
+        "sha256": "aa0e2a1e873369b8bf476d8b5f0f4b0e30970409075ad70808616a26d8890e3f",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 39,
+        "lowerBodySilhouetteIoUToFirst": 0.6144885329450309,
+        "sourcePath": "ludo/walk/frame_0027.png",
+        "sourceFrameZeroBased": 27
+      },
+      {
+        "path": "ludo-cycle/walk/frame_0023.png",
+        "sha256": "ebb4167e2cbdbe32da33d39424fd8b01cb147fb8dab00d1a549248cd87262ed6",
+        "canvas": [
+          128,
+          128
+        ],
+        "bounds": [
+          9,
+          0,
+          118,
+          128
+        ],
+        "edgePixels": 39,
+        "lowerBodySilhouetteIoUToFirst": 0.547979797979798,
+        "sourcePath": "ludo/walk/frame_0028.png",
+        "sourceFrameZeroBased": 28
+      }
+    ],
+    "qaExit": 0
+  },
+  "userSelection": {
+    "candidateId": "chr.fantasy.ludo.cycle24.walk",
+    "selectedFor": "preferred walk candidate in this comparison",
+    "feedback": "한 주기 추출  24장 이게 젤 좋아",
+    "reviewer": "human",
+    "date": "2026-10-16",
+    "productionApproval": false
+  }
+}

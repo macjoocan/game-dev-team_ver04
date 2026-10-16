@@ -1,0 +1,22 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+import {readPNG} from '../../scripts/lib-png-read.mjs';
+const out=path.dirname(fileURLToPath(import.meta.url)),root=path.resolve(out,'../..');
+const [provider,action,source,fpsText]=process.argv.slice(2),fps=Number(fpsText);
+if(!['voidless','ludo','ludo-fixed'].includes(provider)||!['walk','slash'].includes(action)||!source||!(fps>0))throw Error('usage: node import.mjs voidless|ludo|ludo-fixed walk|slash frame-folder fps');
+const dest=path.join(out,provider,action);fs.mkdirSync(dest,{recursive:true});
+const names=fs.readdirSync(source).filter(n=>/^frame_\d+\.png$/.test(n)).sort();if(!names.length)throw Error('No ordered PNG frames');
+const hash=p=>crypto.createHash('sha256').update(fs.readFileSync(p)).digest('hex');
+let firstImage,firstBounds;
+const frames=names.map((name,index)=>{const input=path.join(source,name),target=path.join(dest,name);if(path.resolve(input)!==target)fs.copyFileSync(input,target);const im=readPNG(target);let l=im.width,t=im.height,r=-1,b=-1,edgePixels=0;for(let y=0;y<im.height;y++)for(let x=0;x<im.width;x++)if(im.data[(y*im.width+x)*4+3]>16){l=Math.min(l,x);t=Math.min(t,y);r=Math.max(r,x);b=Math.max(b,y);if(x===0||y===0||x===im.width-1||y===im.height-1)edgePixels++;}if(r<0)throw Error('Empty frame');if(index===0){firstImage=im;firstBounds=[l,t,r,b];}let lowerIntersection=0,lowerUnion=0;for(let y=Math.floor(im.height*.6);y<im.height;y++)for(let x=0;x<im.width;x++){const i=(y*im.width+x)*4+3,a=im.data[i]>128,z=firstImage.data[i]>128;if(a||z)lowerUnion++;if(a&&z)lowerIntersection++;}return{path:path.relative(out,target).replaceAll('\\','/'),sha256:hash(target),canvas:[im.width,im.height],bounds:[l,t,r+1,b+1],edgePixels,lowerBodySilhouetteIoUToFirst:lowerUnion?lowerIntersection/lowerUnion:null};});
+const qa=spawnSync(process.execPath,['skills/sprite-pipeline/scripts/sprite-qa.mjs',path.relative(root,dest),'--out',path.relative(root,path.join(out,'qa',`${provider}-${action}`))],{cwd:root,encoding:'utf8'});
+fs.writeFileSync(path.join(out,'qa',`${provider}-${action}.txt`),`command: node skills/sprite-pipeline/scripts/sprite-qa.mjs ${path.relative(root,dest)}\nexit: ${qa.status}\n${qa.stdout}${qa.stderr}`);
+const file=path.join(out,'comparison.json'),data=JSON.parse(fs.readFileSync(file,'utf8').replace(/^\uFEFF/,''));
+data.clips=data.clips.filter(c=>!(c.provider===provider&&c.action===action));
+data.clips.push({provider,action,label:`${provider==='voidless'?'Voidless':'Ludo'} · ${action==='walk'?'걷기':'베기'}`,fps,status:'concept',qaExit:qa.status,anchor:{x:(firstBounds[0]+firstBounds[2]+1)/2,y:firstBounds[3]+1,height:firstBounds[3]-firstBounds[1]+1,method:'fixed first-frame alpha bounds; includes headgear; no per-frame recentering or scaling'},frames});
+if(provider!=='ludo-fixed'){data.vendors[provider].status='result-downloaded';data.vendors[provider].resultFrames=frames.length;}
+fs.writeFileSync(file,JSON.stringify(data,null,2)+'\n');
+console.log(JSON.stringify({provider,action,frames:frames.length,fps,qaExit:qa.status,lowerBodyIoURange:[Math.min(...frames.map(f=>f.lowerBodySilhouetteIoUToFirst)),Math.max(...frames.map(f=>f.lowerBodySilhouetteIoUToFirst))]},null,2));

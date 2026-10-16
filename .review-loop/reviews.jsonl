@@ -31,3 +31,7 @@
 {"id":"invalidate-1791716457428-ahd0l","itemKey":"art.palette-candidates@1","decision":"invalidated","previousStatus":"rejected","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-11T11:00:57.428Z"}
 {"id":"invalidate-1791716457440-bfjcl","itemKey":"art.cast-v2@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-11T11:00:57.440Z"}
 {"id":"invalidate-1791716457445-r0dw4","itemKey":"art.cast-v2-walk@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-11T11:00:57.445Z"}
+{"id":"invalidate-1792130511503-0dx5w","itemKey":"art.vendor-comparison.2026-10-16@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-16T06:01:51.503Z"}
+{"id":"invalidate-1792131624420-rupbo","itemKey":"art.vendor-comparison.2026-10-16@1","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-16T06:20:24.420Z"}
+{"id":"invalidate-1792131624421-uinal","itemKey":"art.vendor-comparison.2026-10-16@2","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-16T06:20:24.421Z"}
+{"id":"invalidate-1792131624422-7x1qa","itemKey":"art.vendor-comparison.2026-10-16@3","decision":"invalidated","previousStatus":"review","comment":"산출물 내용이 바뀌어 승인을 무효화했다","reviewer":"system","createdAt":"2026-10-16T06:20:24.422Z"}
