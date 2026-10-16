@@ -1,0 +1,46 @@
+{
+  "sourceMeshUnchanged": true,
+  "skins": 1,
+  "bones": 70,
+  "animations": [
+    {
+      "name": "Idle__Idle",
+      "frames": 541,
+      "nativeFps": 60.11111068725586,
+      "firstTime": 0.01666666753590107,
+      "lastTime": 9.000030517578125
+    },
+    {
+      "name": "Walk__Walk",
+      "frames": 37,
+      "nativeFps": 61.666664123535156,
+      "firstTime": 0.01666666753590107,
+      "lastTime": 0.6004504561424255
+    },
+    {
+      "name": "Run__RunCycle",
+      "frames": 31,
+      "nativeFps": 62.0,
+      "firstTime": 0.01666666753590107,
+      "lastTime": 0.500537633895874
+    },
+    {
+      "name": "Attack__Puncha",
+      "frames": 19,
+      "nativeFps": 31.66666603088379,
+      "firstTime": 0.01666666753590107,
+      "lastTime": 0.5850877165794373
+    },
+    {
+      "name": "Hit_Candidate__HandHurt",
+      "frames": 29,
+      "nativeFps": 31.071428298950195,
+      "firstTime": 0.01666666753590107,
+      "lastTime": 0.9178161025047302
+    }
+  ],
+  "bytes": 8315660,
+  "sha256": "2d745101dbc084cdc4d9cb939c9ca672836d5fb4ec502cc129f65245918f15f8",
+  "allChannelsUseOriginalNativeTimes": true,
+  "note": "Five native clips only; full 278-item library is loaded on demand by the dashboard."
+}

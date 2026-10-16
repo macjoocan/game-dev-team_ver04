@@ -1,0 +1,347 @@
+{
+  "scope": "5 synthetic poses, not all library motions; covariance proxy is not physical volume; crossing count excludes joint-adjacent regions and coplanar contacts, not global penetration clearance",
+  "variants": {
+    "baseline": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0090635796709881,
+        "upper_arm_edge_max_elongation_m": 0.005430353604235532,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 46,
+        "bvh_candidates": 46,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9810355333813192,
+        "upper_arm_edge_max_elongation_m": 0.002136892978545542,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 593,
+        "bvh_candidates": 593,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9719506896021238,
+        "upper_arm_edge_max_elongation_m": 0.0014337492965629044,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ],
+    "finger_weights_only": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0090635796709881,
+        "upper_arm_edge_max_elongation_m": 0.005430353604235532,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 46,
+        "bvh_candidates": 46,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9810355274477497,
+        "upper_arm_edge_max_elongation_m": 0.002136892978545542,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 593,
+        "bvh_candidates": 593,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9719506857124697,
+        "upper_arm_edge_max_elongation_m": 0.0014337492965629044,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ],
+    "finger_fit": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0090635796709881,
+        "upper_arm_edge_max_elongation_m": 0.005430353604235532,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 46,
+        "bvh_candidates": 46,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9810355274477497,
+        "upper_arm_edge_max_elongation_m": 0.002136892978545542,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 581,
+        "bvh_candidates": 581,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9719506857124697,
+        "upper_arm_edge_max_elongation_m": 0.0014337492965629044,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ],
+    "finger_fit_smooth": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0090635796709881,
+        "upper_arm_edge_max_elongation_m": 0.005430353604235532,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 46,
+        "bvh_candidates": 46,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9810355274477497,
+        "upper_arm_edge_max_elongation_m": 0.002136892978545542,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 581,
+        "bvh_candidates": 581,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9719506857124697,
+        "upper_arm_edge_max_elongation_m": 0.0014337492965629044,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ],
+    "shoulder_local_probe": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.000000225080201,
+        "upper_arm_edge_max_elongation_m": 3.892408677128875e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.000000225080201,
+        "upper_arm_edge_max_elongation_m": 3.892408677128875e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.2201195548964943,
+        "upper_arm_edge_max_elongation_m": 0.03576490043963259,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 43,
+        "bvh_candidates": 43,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9969505318360169,
+        "upper_arm_edge_max_elongation_m": 0.034002750556907234,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 605,
+        "bvh_candidates": 605,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.681026877826018,
+        "upper_arm_edge_max_elongation_m": 0.05436600822377288,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ],
+    "finger_continuous_probe": [
+      {
+        "pose": "rest",
+        "synthetic_not_original_clip": false,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "finger_curl",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0000003173774654,
+        "upper_arm_edge_max_elongation_m": 2.3578199416428818e-08,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "overhead120",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 1.0090635796709881,
+        "upper_arm_edge_max_elongation_m": 0.005430353604235532,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 46,
+        "bvh_candidates": 46,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "cross_chest130",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9810355274477497,
+        "upper_arm_edge_max_elongation_m": 0.002136892978545542,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 590,
+        "bvh_candidates": 590,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      },
+      {
+        "pose": "upperarm_twist180",
+        "synthetic_not_original_clip": true,
+        "finite": true,
+        "upper_arm_covariance_volume_proxy_ratio": 0.9719506857124697,
+        "upper_arm_edge_max_elongation_m": 0.0014337492965629044,
+        "nonadjacent_arm_torso_crossing_triangle_pairs": 0,
+        "bvh_candidates": 0,
+        "truncated": false,
+        "coplanar_contacts_not_counted": true
+      }
+    ]
+  }
+}

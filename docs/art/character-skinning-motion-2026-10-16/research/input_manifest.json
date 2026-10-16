@@ -1,0 +1,56 @@
+[
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\final\\original-retry.blend",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\final\\original-retry.blend",
+    "bytes": 23001462,
+    "sha256": "48060a1fa42eb6e709332de33ba6cb8fc8f4c9c2291c86d2202427b54d1a692d"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\final\\original-retry.glb",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\final\\original-retry.glb",
+    "bytes": 6345224,
+    "sha256": "f73c0e72b5eb23d1de41efbf2752e476f0f1451bd2fafbcfb2e0f42924d84f81"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\prepare.py",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\prepare.py",
+    "bytes": 3200,
+    "sha256": "a6e241cd8de06723c910e463b04c2a40ad8bb0870ea76fd65faccbb85272671c"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\skin.py",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\skin.py",
+    "bytes": 3921,
+    "sha256": "ba2d8d414897ec6e0dba3ffd2507b996383746d321322ab3c28e007244854a0c"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\validate.py",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\validate.py",
+    "bytes": 3560,
+    "sha256": "8eded628306a549222232ed361c33549d1d2c5eb3fae3d2a2a46fbf025ed855a"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\export.py",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\export.py",
+    "bytes": 2820,
+    "sha256": "b238bc82844fbf726abedf7b4e080b8f2484ec2384e76a8ded912ef1ff9c88bf"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\preparation.json",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\preparation.json",
+    "bytes": 478,
+    "sha256": "de80ae25df3ca0b16f63f04fd58d0927322d98657d7f1349f8871d7ef36ffc9b"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\skin.json",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\skin.json",
+    "bytes": 307,
+    "sha256": "9c17808d2d096d7da9fb13751cdbc76210462c65844ae2db3ff5386b8c9a967b"
+  },
+  {
+    "source": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\validation.json",
+    "copy": "D:\\99.\uae30\ud0c0\\out_hatintime\\_reference\\skinning_research_20261016\\input\\source\\retry-original\\validation.json",
+    "bytes": 1262,
+    "sha256": "763bd1d3a2e4eb22343df64eb13dddcbda9a0c918cb400175b01ee8b60c64741"
+  }
+]

@@ -1,0 +1,384 @@
+{
+  "landmarks": [
+    {
+      "side": "L",
+      "digit": "pinky",
+      "vertices": 107,
+      "source_seed": [
+        29.20264466603597,
+        -0.3666850679372955,
+        41.477200190226235
+      ],
+      "bone_first": "bip_handL_pinky01",
+      "bone_second": "bip_handL_pinky02",
+      "generated_first_landmark": [
+        27.5,
+        -0.3666850679372955,
+        41.52532196044922
+      ],
+      "fixed_first": [
+        27.272380828857422,
+        1.1576441526412964,
+        42.65435028076172
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "L",
+      "digit": "ring",
+      "vertices": 131,
+      "source_seed": [
+        29.970684612498562,
+        -1.5996927817662556,
+        41.688736934287874
+      ],
+      "bone_first": "bip_handL_ring01",
+      "bone_second": "bip_handL_ring02",
+      "generated_first_landmark": [
+        27.5,
+        -1.5996927817662556,
+        41.690345764160156
+      ],
+      "fixed_first": [
+        27.126985549926758,
+        -0.07330107688903809,
+        42.514495849609375
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "L",
+      "digit": "middle",
+      "vertices": 120,
+      "source_seed": [
+        30.123753609195834,
+        -3.18830696998104,
+        41.88370034002489
+      ],
+      "bone_first": "bip_handL_middle01",
+      "bone_second": "bip_handL_middle02",
+      "generated_first_landmark": [
+        27.5,
+        -3.18830696998104,
+        41.90621376037598
+      ],
+      "fixed_first": [
+        27.11014747619629,
+        -1.2567386627197266,
+        42.610260009765625
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "L",
+      "digit": "index",
+      "vertices": 116,
+      "source_seed": [
+        29.76278930486635,
+        -4.5941537313683085,
+        41.72237263169399
+      ],
+      "bone_first": "bip_handL_index01",
+      "bone_second": "bip_handL_index02",
+      "generated_first_landmark": [
+        27.5,
+        -4.5941537313683085,
+        41.723358154296875
+      ],
+      "fixed_first": [
+        27.074913024902344,
+        -2.522263526916504,
+        42.72700500488281
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "L",
+      "digit": "thumb",
+      "vertices": 171,
+      "source_seed": [
+        27.45901674382827,
+        -6.487358079237096,
+        40.42314428441665
+      ],
+      "bone_first": "bip_handL_thumb01",
+      "bone_second": "bip_handL_thumb02",
+      "generated_first_landmark": [
+        25.5,
+        -5.0,
+        40.9
+      ],
+      "fixed_first": [
+        26.163280487060547,
+        -3.080458164215088,
+        41.51352310180664
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "R",
+      "digit": "pinky",
+      "vertices": 125,
+      "source_seed": [
+        -29.227446017058,
+        -0.34040884665496973,
+        41.45701267408288
+      ],
+      "bone_first": "bip_handR_pinky01",
+      "bone_second": "bip_handR_pinky02",
+      "generated_first_landmark": [
+        -27.5,
+        -0.34040884665496973,
+        41.46671676635742
+      ],
+      "fixed_first": [
+        -27.29254722595215,
+        1.0912476778030396,
+        42.69214630126953
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "R",
+      "digit": "ring",
+      "vertices": 104,
+      "source_seed": [
+        -30.076714158058167,
+        -1.6525400305787723,
+        41.673743883768715
+      ],
+      "bone_first": "bip_handR_ring01",
+      "bone_second": "bip_handR_ring02",
+      "generated_first_landmark": [
+        -27.5,
+        -1.6525400305787723,
+        41.64343452453613
+      ],
+      "fixed_first": [
+        -27.133726119995117,
+        -0.13545921444892883,
+        42.5311164855957
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "R",
+      "digit": "middle",
+      "vertices": 116,
+      "source_seed": [
+        -30.12241742105195,
+        -3.2364126443862915,
+        41.87096376130075
+      ],
+      "bone_first": "bip_handR_middle01",
+      "bone_second": "bip_handR_middle02",
+      "generated_first_landmark": [
+        -27.5,
+        -3.2364126443862915,
+        41.8795166015625
+      ],
+      "fixed_first": [
+        -27.103683471679688,
+        -1.320093035697937,
+        42.60669708251953
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "R",
+      "digit": "index",
+      "vertices": 122,
+      "source_seed": [
+        -29.82671144273546,
+        -4.572431304719713,
+        41.74568583170573
+      ],
+      "bone_first": "bip_handR_index01",
+      "bone_second": "bip_handR_index02",
+      "generated_first_landmark": [
+        -27.5,
+        -4.572431304719713,
+        41.72603988647461
+      ],
+      "fixed_first": [
+        -27.054332733154297,
+        -2.5869510173797607,
+        42.70197677612305
+      ],
+      "geometry_fit_is_derived": true
+    },
+    {
+      "side": "R",
+      "digit": "thumb",
+      "vertices": 160,
+      "source_seed": [
+        -27.47948164098403,
+        -6.4872486731585335,
+        40.44733541152056
+      ],
+      "bone_first": "bip_handR_thumb01",
+      "bone_second": "bip_handR_thumb02",
+      "generated_first_landmark": [
+        -25.5,
+        -5.0,
+        40.9
+      ],
+      "fixed_first": [
+        -26.138072967529297,
+        -3.1143224239349365,
+        41.47835922241211
+      ],
+      "geometry_fit_is_derived": true
+    }
+  ],
+  "variants": {
+    "baseline": {
+      "variant": "baseline",
+      "max_influences": 4,
+      "missing": 0,
+      "geometry_max_shift_m": 0.0,
+      "digit_nonzero_vertices": {
+        "bip_handL_base": 804,
+        "bip_handL_index01": 0,
+        "bip_handL_index02": 0,
+        "bip_handL_middle01": 0,
+        "bip_handL_middle02": 0,
+        "bip_handL_pinky01": 0,
+        "bip_handL_pinky02": 0,
+        "bip_handL_ring01": 0,
+        "bip_handL_ring02": 0,
+        "bip_handL_thumb01": 0,
+        "bip_handL_thumb02": 0,
+        "bip_handR_base": 780,
+        "bip_handR_index01": 0,
+        "bip_handR_index02": 0,
+        "bip_handR_middle01": 0,
+        "bip_handR_middle02": 0,
+        "bip_handR_pinky01": 0,
+        "bip_handR_pinky02": 0,
+        "bip_handR_ring01": 0,
+        "bip_handR_ring02": 0,
+        "bip_handR_thumb01": 0,
+        "bip_handR_thumb02": 0
+      },
+      "clips": [
+        {
+          "action": "MotionFirst_Attack__Puncha",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.015538944794985124,
+          "digit_edge_max_elongation_m": 0.002317029169960129,
+          "digit_edge_ratio_min": 0.9072172973990268,
+          "digit_edge_ratio_max": 1.2132197842369405
+        },
+        {
+          "action": "MotionFirst_Hit_Candidate__HandHurt",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.021585664682727487,
+          "digit_edge_max_elongation_m": 0.0010840457342528571,
+          "digit_edge_ratio_min": 0.6686406006859154,
+          "digit_edge_ratio_max": 1.151666596796153
+        },
+        {
+          "action": "MotionFirst_Idle__Idle",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.006019258020851548,
+          "digit_edge_max_elongation_m": 0.0007967023054264293,
+          "digit_edge_ratio_min": 0.9602623376743983,
+          "digit_edge_ratio_max": 1.1274576977180397
+        },
+        {
+          "action": "MotionFirst_Run__RunCycle",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.012596879512787727,
+          "digit_edge_max_elongation_m": 0.00115517058567176,
+          "digit_edge_ratio_min": 0.8761259957694029,
+          "digit_edge_ratio_max": 1.132514409998015
+        },
+        {
+          "action": "MotionFirst_Walk__Walk",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.015591482804818984,
+          "digit_edge_max_elongation_m": 0.0012333433076170536,
+          "digit_edge_ratio_min": 0.868324961840829,
+          "digit_edge_ratio_max": 1.1781129458194484
+        }
+      ],
+      "finite": true,
+      "rest_unchanged": true
+    },
+    "finger_continuous_probe": {
+      "variant": "finger_continuous_probe",
+      "max_influences": 4,
+      "missing": 0,
+      "geometry_max_shift_m": 0.09814644231550845,
+      "digit_nonzero_vertices": {
+        "bip_handL_base": 606,
+        "bip_handL_index01": 96,
+        "bip_handL_index02": 173,
+        "bip_handL_middle01": 67,
+        "bip_handL_middle02": 190,
+        "bip_handL_pinky01": 95,
+        "bip_handL_pinky02": 130,
+        "bip_handL_ring01": 116,
+        "bip_handL_ring02": 170,
+        "bip_handL_thumb01": 201,
+        "bip_handL_thumb02": 156,
+        "bip_handR_base": 562,
+        "bip_handR_index01": 117,
+        "bip_handR_index02": 167,
+        "bip_handR_middle01": 50,
+        "bip_handR_middle02": 190,
+        "bip_handR_pinky01": 118,
+        "bip_handR_pinky02": 132,
+        "bip_handR_ring01": 55,
+        "bip_handR_ring02": 168,
+        "bip_handR_thumb01": 194,
+        "bip_handR_thumb02": 148
+      },
+      "clips": [
+        {
+          "action": "MotionFirst_Attack__Puncha",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.02298662536932096,
+          "digit_edge_max_elongation_m": 0.0061307667059736105,
+          "digit_edge_ratio_min": 0.07010400208396939,
+          "digit_edge_ratio_max": 3.9218894868352794
+        },
+        {
+          "action": "MotionFirst_Hit_Candidate__HandHurt",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.021585664682727487,
+          "digit_edge_max_elongation_m": 0.007854171560703031,
+          "digit_edge_ratio_min": 0.4947382206617098,
+          "digit_edge_ratio_max": 4.389532402474246
+        },
+        {
+          "action": "MotionFirst_Idle__Idle",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.017852477342242958,
+          "digit_edge_max_elongation_m": 0.007161781978791261,
+          "digit_edge_ratio_min": 0.3112751549439971,
+          "digit_edge_ratio_max": 4.570543637390722
+        },
+        {
+          "action": "MotionFirst_Run__RunCycle",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.012596879512787727,
+          "digit_edge_max_elongation_m": 0.005130915053684413,
+          "digit_edge_ratio_min": 0.5850351880327179,
+          "digit_edge_ratio_max": 3.512762687399008
+        },
+        {
+          "action": "MotionFirst_Walk__Walk",
+          "samples": 25,
+          "arm_edge_max_elongation_m": 0.02968550783745631,
+          "digit_edge_max_elongation_m": 0.0056816565473508844,
+          "digit_edge_ratio_min": 0.10711693502802871,
+          "digit_edge_ratio_max": 2.0995766309382873
+        }
+      ],
+      "finite": true,
+      "rest_unchanged": true
+    }
+  }
+}

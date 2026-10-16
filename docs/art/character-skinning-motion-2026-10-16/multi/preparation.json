@@ -1,0 +1,23 @@
+{
+  "fromRaw": true,
+  "rawUnchanged": true,
+  "generationJobs": 0,
+  "weldToleranceRaw": 1e-05,
+  "beforeWeld": {
+    "vertices": 776678,
+    "faces": 1494637,
+    "boundaryEdges": 58189
+  },
+  "afterWeld": {
+    "vertices": 747170,
+    "faces": 1494447,
+    "boundaryEdges": 191
+  },
+  "afterReduction": {
+    "vertices": 39946,
+    "faces": 79999
+  },
+  "uvLayers": 1,
+  "rig": "HatKidBody_Rig original rest; no edits",
+  "bodyNarrowingApplied": false
+}

@@ -1,0 +1,7 @@
+{
+  "roundTripFloatValues": 597870,
+  "exactMatches": true,
+  "errors": [],
+  "source": "motions/*.bin",
+  "artifact": "final/original-retry-native.glb"
+}

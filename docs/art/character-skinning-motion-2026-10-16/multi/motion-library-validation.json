@@ -1,0 +1,58 @@
+{
+  "sourceFiles": 309,
+  "sourceByteUnique": 278,
+  "decodedUnique": 278,
+  "oneFramePoses": 5,
+  "failures": [],
+  "calibration": [
+    {
+      "sequence": "HandHurt",
+      "maxComponentErrors": {
+        "translation": 0.0003493065444268286,
+        "rotation": 0.00025457315623228505,
+        "scale": 7.152557373046875e-07
+      },
+      "passed": true
+    },
+    {
+      "sequence": "Idle",
+      "maxComponentErrors": {
+        "translation": 0.0003488742361292243,
+        "rotation": 4.1949906340654763e-05,
+        "scale": 8.344650268554688e-07
+      },
+      "passed": true
+    },
+    {
+      "sequence": "Puncha",
+      "maxComponentErrors": {
+        "translation": 0.00034656446883268654,
+        "rotation": 0.0014084771188407341,
+        "scale": 8.344650268554688e-07
+      },
+      "passed": true
+    },
+    {
+      "sequence": "RunCycle",
+      "maxComponentErrors": {
+        "translation": 0.00035648746551387013,
+        "rotation": 0.0010643400505555567,
+        "scale": 7.152557373046875e-07
+      },
+      "passed": true
+    },
+    {
+      "sequence": "Walk",
+      "maxComponentErrors": {
+        "translation": 0.00034992978908121586,
+        "rotation": 4.4350592043440606e-05,
+        "scale": 7.152557373046875e-07
+      },
+      "passed": true
+    }
+  ],
+  "calibrationPassed": true,
+  "totalBytes": 156979136,
+  "note": "Compatibility by exact bone names, local transforms and five-clip calibration. All-motion visual, runtime event and contact parity unverified.",
+  "calibrationMethod": "Common 24/60 FPS sample keys of earlier GLB; not a continuous-time bound. Native Blender raw checks are separate."
+}

@@ -1,0 +1,9 @@
+{
+  "method": "bone heat on pre-welded original surface, anatomical helper tails only",
+  "fallbackVertices": 0,
+  "vertices": 39946,
+  "sourceRigRestEdited": false,
+  "maxInfluences": 4,
+  "headJawCorrectionApplied": false,
+  "fingerArticulation": "palm rigid; individual digits not weighted yet"
+}

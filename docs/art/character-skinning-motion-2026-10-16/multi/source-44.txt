@@ -1,0 +1,41 @@
+# 캐릭터 모션 대시보드
+
+주소: http://127.0.0.1:5180/motion-first.html
+
+원본 HatKid와 GPT 원화 기반 Standard 캐릭터를 같은 동작으로 비교한다. 기존 보정본은 보존했다.
+
+| 구성 | 수 |
+|---|---:|
+| 뼈 이름70개가 일치하는 추출 파일 | 309 |
+| 중복 데이터를 제외한 재생 항목 | 278 |
+| 위 항목 중 1프레임 정지 포즈 | 5 |
+| 기본 어깨 수치·렌더 검사 | 대기·걷기·달리기·공격·손 통증 후보 5종 |
+
+278개 전체가 일반 플레이 동작이거나 외형 검수를 통과한 것은 아니다. 컷신과 특수 동작도 있다. 추가 항목은 외형 검수 대기로 표시한다. 기본5종의 자동 통과도 사람의 최종 승인은 아니다.
+
+## 조작
+
+- 이름·한국어 이름으로 검색. 이동, 점프·등반, 전투·반응, 상호작용, 대기·표현, 컷신, 정지 포즈로 분류한다.
+- 동작을 누르면 양쪽 캐릭터에 적용한다. 필요한 모션 파일만 읽으며 캐시는32MiB로 제한한다.
+- 재생/정지, 반복, 0.25~1.5배속, 시간 슬라이더, 전체 연속 재생을 지원한다. 연속 재생은 현재 검색·분류 결과를 순서대로 재생한다.
+- 마우스 드래그 회전, 휠 확대. 정면·측면·뒷면·화면 맞춤을 제공한다.
+- 뼈대, 원본 비교, 제자리 미리보기를 켜고 끈다. 제자리 모드는 Root의 수평 이동만 고정한다.
+- 다운로드 GLB와 Blender 파일에는 기본5종을 담았다. 전체278항목은 대시보드가 별도 라이브러리에서 불러온다.
+
+## 검증과 남은 부분
+
+278항목/834자세에서 전체 뼈 행렬과 스킨별2개 표본 정점의 유한 값을 확인했다. 모든 정점·모든 연속 시간·외형·게임 이벤트의 일치를 검사한 것은 아니다. 검색, 분류, 뼈 표시, 비교 전환, 제자리 전환, 연속 재생, 다운로드,390px 화면 가로 넘침, 실제 dist 경로를 확인했다. 빌드 통과. Three.js 공통 번들 크기 경고는 남는다.
+
+기본5종의 새 Blender Action은 raw 모션과1,050본 행렬 표본 최대오차0.0000267 원본 단위.15자세 전체 스킨 정점finite. native GLB는 시간·TRS597,870개float를 라이브러리 데이터와 정확히 대조했다. GLB파일의 모든 연속 시간·픽셀 동등성을 뜻하지 않는다.
+
+손가락은 손바닥과 함께 움직인다. 개별 손가락, 발 접지, 모든 극단 자세의 관통 보정은 남았다. 원작 런타임의 IK·물리·Notify를 복원한 것은 아니다.
+
+## 파일
+
+- 화면: `motion-first.html`, `src/motion-dashboard.js`, `src/motion-dashboard.css`.
+- 원본 재작업: `assets/studies/motion-first-crew/source/retry-original/`.
+- 모델: `assets/studies/motion-first-crew/final/original-retry-native.glb`, `.blend`.
+- 전체 모션: `assets/studies/motion-first-crew/motions/index.json`,278개binary약157MB. 브라우저가 전부 선로딩하지 않는다.
+- 재생기: `src/motion-library.js`. 생성: `tools/build-hat-motion-library.py`, `tools/build-native-motion-glb.py`.
+- QA: `source/retry-original/qa-summary.json`, `native-blender-validation.json`, `native-glb-roundtrip.json`.
+- 보정 노하우 정본: [43-character-skinning-knowhow.md](43-character-skinning-knowhow.md).

@@ -1,0 +1,102 @@
+{
+  "capturedAt": "2026-10-16T12:23:42.161Z",
+  "scope": "User-authorized knowledge and evidence archive. No model assets copied; source-reported tests were not rerun here.",
+  "files": [
+    {
+      "source": "C:/00.SVN/Multi/web/docs/43-character-skinning-knowhow.md",
+      "snapshot": "multi/source-43.txt",
+      "sha256": "20ff6020f0a7eda71cf0635b7e13d30123d4cf79e5a0b695e6915c74c0b00de1",
+      "bytes": 7965
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/docs/44-motion-dashboard.md",
+      "snapshot": "multi/source-44.txt",
+      "sha256": "ffff6292a7940a43a8dbad0b54857deca1b463d82fe090692bbe8981c8d896d8",
+      "bytes": 3290
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/preparation.json",
+      "snapshot": "multi/preparation.json",
+      "sha256": "de80ae25df3ca0b16f63f04fd58d0927322d98657d7f1349f8871d7ef36ffc9b",
+      "bytes": 478
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/skin.json",
+      "snapshot": "multi/skin.json",
+      "sha256": "9c17808d2d096d7da9fb13751cdbc76210462c65844ae2db3ff5386b8c9a967b",
+      "bytes": 307
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/validation.json",
+      "snapshot": "multi/validation.json",
+      "sha256": "763bd1d3a2e4eb22343df64eb13dddcbda9a0c918cb400175b01ee8b60c64741",
+      "bytes": 1262
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/native-blender-validation.json",
+      "snapshot": "multi/native-blender-validation.json",
+      "sha256": "8d861c2610f30c1868d3cf9d4f0eff796943628d1c9633077fe4adf5a8c774c0",
+      "bytes": 797
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/native-glb-roundtrip.json",
+      "snapshot": "multi/native-glb-roundtrip.json",
+      "sha256": "e371c76d22e096422a18952f9ec36cfa718bf3e1849bbaee75ad61d27d8a3cc4",
+      "bytes": 160
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/native-glb.json",
+      "snapshot": "multi/native-glb.json",
+      "sha256": "fad44360ba1655dd21c991409f41cc6eb110f04eec2558588907c2dfa4a8a9bd",
+      "bytes": 1259
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/qa-summary.json",
+      "snapshot": "multi/qa-summary.json",
+      "sha256": "1d45ff71becfe0b39ac9427843d03b4aec6c92970228bd444f922412dadb5bde",
+      "bytes": 1913
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/source/retry-original/dashboard-validation.json",
+      "snapshot": "multi/dashboard-validation.json",
+      "sha256": "18543200f79d9274906610a9af58a83f48efc97d2543a8ed99bd5c2cf477ce97",
+      "bytes": 829
+    },
+    {
+      "source": "C:/00.SVN/Multi/web/assets/studies/motion-first-crew/motions/validation.json",
+      "snapshot": "multi/motion-library-validation.json",
+      "sha256": "93681237bd6237e40f0f2ed710e76af92340b48034f74f59be2fe55e739d3697",
+      "bytes": 1700
+    },
+    {
+      "source": "D:/99.기타/out_hatintime/_reference/skinning_research_20261016/README.md",
+      "snapshot": "research/README-source.txt",
+      "sha256": "40b81b15e22929c3bcf02d1bbcc0d68504a1ade98877987a0fed7056294e5519",
+      "bytes": 7019
+    },
+    {
+      "source": "D:/99.기타/out_hatintime/_reference/skinning_research_20261016/preservation_validation.json",
+      "snapshot": "research/preservation_validation.json",
+      "sha256": "720155acfcb866e4f19c8d8e004616d71501399375232404fc1ace7f32d1198d",
+      "bytes": 3238
+    },
+    {
+      "source": "D:/99.기타/out_hatintime/_reference/skinning_research_20261016/candidate_comparison.json",
+      "snapshot": "research/candidate_comparison.json",
+      "sha256": "a27c9783ee97d13b39a2c044773762ba32c71bf8d5d0312a63e890dcd8505362",
+      "bytes": 11072
+    },
+    {
+      "source": "D:/99.기타/out_hatintime/_reference/skinning_research_20261016/stress_comparison.json",
+      "snapshot": "research/stress_comparison.json",
+      "sha256": "e4078fa91fb12970f4fc43aa3e61114f52dc3f57cb9b3847a7916c5986294c91",
+      "bytes": 13319
+    },
+    {
+      "source": "D:/99.기타/out_hatintime/_reference/skinning_research_20261016/input_manifest.json",
+      "snapshot": "research/input_manifest.json",
+      "sha256": "fe663b3f4d8ee5b8baea6cf1b830a29fd3a2237e9f83e5719f918eb9139ac96d",
+      "bytes": 3230
+    }
+  ]
+}

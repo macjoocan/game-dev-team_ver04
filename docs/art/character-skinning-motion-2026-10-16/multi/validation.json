@@ -1,0 +1,47 @@
+{
+  "matrixSamples": 97090,
+  "skinSamples": 155,
+  "restUnchanged": true,
+  "finite": true,
+  "clips": [
+    {
+      "clip": "Idle__Idle",
+      "times": 1079,
+      "matrixMaxError": 0.0,
+      "armEdgeElongationMeters": 0.0060634393611937055,
+      "armEdgeStretch": 1.2526990783434555
+    },
+    {
+      "clip": "Walk__Walk",
+      "times": 71,
+      "matrixMaxError": 0.0,
+      "armEdgeElongationMeters": 0.015591471395215918,
+      "armEdgeStretch": 1.597304810536605
+    },
+    {
+      "clip": "Run__RunCycle",
+      "times": 59,
+      "matrixMaxError": 0.0,
+      "armEdgeElongationMeters": 0.012950381242948051,
+      "armEdgeStretch": 1.577245921383778
+    },
+    {
+      "clip": "Attack__Puncha",
+      "times": 69,
+      "matrixMaxError": 0.0,
+      "armEdgeElongationMeters": 0.015566911526968768,
+      "armEdgeStretch": 1.5646634670339934
+    },
+    {
+      "clip": "Hit_Candidate__HandHurt",
+      "times": 109,
+      "matrixMaxError": 0.0,
+      "armEdgeElongationMeters": 0.021585664682727487,
+      "armEdgeStretch": 1.8618779433772248
+    }
+  ],
+  "maxArmEdgeElongationMeters": 0.021585664682727487,
+  "sameProvisionalLimitMeters": 0.03,
+  "fingerArticulationComplete": false,
+  "passed": true
+}

@@ -1,0 +1,107 @@
+{
+  "source_files": [
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\final\\original-retry.blend",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\final\\original-retry.glb",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\prepare.py",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\skin.py",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\validate.py",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\export.py",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\preparation.json",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\skin.json",
+      "unchanged": true,
+      "copy_matches": true
+    },
+    {
+      "path": "C:\\00.SVN\\Multi\\web\\assets\\studies\\motion-first-crew\\source\\retry-original\\validation.json",
+      "unchanged": true,
+      "copy_matches": true
+    }
+  ],
+  "candidates": {
+    "finger_continuous_probe": {
+      "rest_hierarchy_exact": true,
+      "source_curve_hashes_exact": true,
+      "action_count": 5,
+      "glb_total_length_valid": true,
+      "glb_skin_joint_counts": [
+        70
+      ],
+      "glb_animation_count": 5,
+      "blender_reopen_success": true
+    },
+    "finger_fit": {
+      "rest_hierarchy_exact": true,
+      "source_curve_hashes_exact": true,
+      "action_count": 5,
+      "glb_total_length_valid": true,
+      "glb_skin_joint_counts": [
+        70
+      ],
+      "glb_animation_count": 5,
+      "blender_reopen_success": true
+    },
+    "finger_fit_smooth": {
+      "rest_hierarchy_exact": true,
+      "source_curve_hashes_exact": true,
+      "action_count": 5,
+      "glb_total_length_valid": true,
+      "glb_skin_joint_counts": [
+        70
+      ],
+      "glb_animation_count": 5,
+      "blender_reopen_success": true
+    },
+    "finger_weights_only": {
+      "rest_hierarchy_exact": true,
+      "source_curve_hashes_exact": true,
+      "action_count": 5,
+      "glb_total_length_valid": true,
+      "glb_skin_joint_counts": [
+        70
+      ],
+      "glb_animation_count": 5,
+      "blender_reopen_success": true
+    },
+    "shoulder_local_probe": {
+      "rest_hierarchy_exact": true,
+      "source_curve_hashes_exact": true,
+      "action_count": 5,
+      "glb_total_length_valid": true,
+      "glb_skin_joint_counts": [
+        70
+      ],
+      "glb_animation_count": 5,
+      "blender_reopen_success": true
+    }
+  },
+  "pass": true
+}

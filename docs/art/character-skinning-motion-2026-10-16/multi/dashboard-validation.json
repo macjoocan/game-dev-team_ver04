@@ -1,0 +1,44 @@
+{
+  "all": {
+    "motions": 278,
+    "poseSamples": 834,
+    "failures": [],
+    "scope": "All bone matrices and two vertex samples per skin, three times per motion; not full vertex or visual validation"
+  },
+  "searchCount": 1,
+  "noInPlace": true,
+  "sequence": true,
+  "downloads": [
+    {
+      "status": 200,
+      "bytes": 8315660
+    },
+    {
+      "status": 200,
+      "bytes": 23186614
+    }
+  ],
+  "mobileOverflow": false,
+  "errors": [],
+  "status": {
+    "loaded": true,
+    "loading": false,
+    "playing": false,
+    "current": "Walk",
+    "currentId": "60d45b17521568c6cdcb",
+    "total": 278,
+    "filtered": 278,
+    "sequence": false,
+    "speed": 1,
+    "models": [
+      {
+        "names": 70,
+        "boneInstances": 210
+      },
+      {
+        "names": 70,
+        "boneInstances": 70
+      }
+    ]
+  }
+}
