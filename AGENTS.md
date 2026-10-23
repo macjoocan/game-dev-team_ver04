@@ -132,6 +132,7 @@ node skills/polish/scripts/flash-check.mjs <프레임폴더> --fps 30 --loop
 - 스프라이트는 seed frame 승인 후 시트/스트립으로 만들고, 프레임 크기·피벗·baseline을 통일한다.
 - UI 아트는 HUD, 버튼, 카드, 아이콘, 상태/피해 숫자의 상태별 변형과 작은 화면 가독성을 확인한다.
 - 3D 에셋은 scale, pivot, material name, collision proxy, LOD/export format을 엔진 반영 전에 확인한다.
+- 리타깃·리깅·가중치·줄이기·굽기·임포트 설정처럼 방법이 여러 개면 후보 2~3개를 같은 조건으로 돌려 같은 지표 표로 비교한다. 시작 전에 `lessons/`를 읽고, 끝나면 교훈을 남긴다. 절차: [`skills/asset-3d-pipeline/references/propose-probe-compose.md`](skills/asset-3d-pipeline/references/propose-probe-compose.md)
 - visual-qa는 실제 게임 화면, 가장 작은 목표 화면, 바쁜 전투/상태 화면에서 증거를 남긴다.
 
 ## 아트 트랙 운용 (Codex에 가장 잘 맞는 구간)
