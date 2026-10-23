@@ -26,7 +26,7 @@ if hasattr(sys.stdout, "reconfigure"):
 THRESHOLDS = {
     "effector_err_max_m": ("손·발 끝 위치 오차 최대", "m", 0.05, "max", "[확인 필요]"),
     "stretch_max_mm": ("간선 최대 늘어남", "mm", 30.0, "max",
-                       "web/docs/43 어깨 임시 기준 30mm(HatKid 모델). 다른 모델은 [확인 필요]"),
+                       "한 사례(웹 캐릭터 어깨) 임시 기준 30mm"),
     "foot_slide_cm": ("발 미끄러짐 최대", "cm", 5.0, "max", "[확인 필요]"),
     "ground_penetration_cm": ("바닥 관통", "cm", 1.0, "max", "[확인 필요]"),
     "ground_float_cm": ("바닥 뜸", "cm", 2.0, "max", "[확인 필요]"),

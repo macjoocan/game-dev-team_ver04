@@ -147,7 +147,7 @@ Unity 배치로 직접 만들 때도 이 형식을 따른다.
 | 검사 통과 / 외형 승인 | **따로 적는다.** 자동 검사 통과는 사람의 외형 승인이 아니다 |
 
 기록된 교훈:
-- [2026-10-23 자동 리깅 동작을 기존 Humanoid 캐릭터에 붙이기](lessons/2026-10-23-humanoid-autorig-retarget.md) — 진행 중
+- [2026-10-23 자동 리깅 동작을 기존 Humanoid 캐릭터에 붙이기](lessons/2026-10-23-humanoid-autorig-retarget.md) — 완료, 새 리그 메시 채택
 - [2026-10-19 생성 모델을 기존 모션 리그에 맞추기(웹 three.js)](lessons/2026-10-19-web-character-skinning.md)
 
 새 과제를 시작할 때 `lessons/`를 먼저 훑는다. 같은 리그·같은 공급자의 기록이 있으면 그 후보부터 시험한다.
