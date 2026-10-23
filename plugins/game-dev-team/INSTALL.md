@@ -7,7 +7,7 @@
 - **Claude Code** 또는 **Codex** 중 **하나 이상** — 있는 쪽에 자동으로 설치됩니다.
   - Claude Code: `claude --version` ([설치](https://claude.com/claude-code))
   - Codex: `codex --version` (`npm i -g @openai/codex`)
-- **Node.js** (선택) — 없어도 설치·사용은 되지만, 품질 훅 4개가 조용히 꺼집니다(Claude 전용).
+- **Node.js** (선택) — 없어도 설치·사용은 되지만, 품질 훅 4개가 조용히 꺼집니다.
 
 > **마켓플레이스 이름을 직접 칠 필요 없습니다.** 하네스마다 다르고 레포 이름과도 다릅니다
 > (Claude는 `game-dev-team`, Codex는 `game-dev-team-local`, 레포는 `game-dev-team_ver04`).
@@ -46,9 +46,11 @@ sh ./install.sh
 | `-Uninstall` / `--uninstall` | 제거 (찾은 하네스 전부) |
 
 ### Codex에서 무엇이 되나
-스킬 24개는 **전부** 됩니다. 역할 에이전트 6개·훅 4종·`/gate`는 **Claude 전용**입니다
-(Codex 커스텀 에이전트는 TOML이라 플러그인으로 배포되지 않고, 훅은 이벤트 체계가 다릅니다).
-그래서 Codex 세션은 **`AGENTS.md`가 유일한 규칙 전달 경로**입니다 — 작업 시작 전에 그걸 읽으세요.
+스킬 25개는 **전부** 됩니다. 역할 에이전트 6개와 `/gate`는 **Claude 전용**입니다
+(Codex 커스텀 에이전트는 TOML이라 플러그인으로 배포되지 않습니다).
+훅 4종은 Codex에서도 **실행은 됩니다**(v0.46.2부터 Windows 포함). 다만 Codex가 훅 출력을
+컨텍스트로 받아들이는지는 아직 확인하지 못했습니다.
+그래서 Codex 세션은 **`AGENTS.md`가 믿을 수 있는 유일한 규칙 전달 경로**입니다. 작업 시작 전에 그걸 읽으세요.
 자세한 대조표는 [USAGE.md](./USAGE.md)에 있습니다.
 
 ## 3. 확인
