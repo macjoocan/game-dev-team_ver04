@@ -34,6 +34,12 @@ Blender MCP가 붙어 있으면 모델링·머티리얼 세팅·리깅/애니메
 - 애니메이션 클립 이름이 붙고 트림돼 있다.
 - 엔진 안 스크린샷으로 스케일·라이팅을 확인했다.
 
+## 방법이 여러 개면 후보로 비교한다
+- 리타깃·리깅·가중치·줄이기 비율·굽기·임포트 설정처럼 결과를 수치·렌더로 비교할 수 있으면, 하나를 바로 고르지 않는다.
+- 후보 2~3개를 같은 입력·카메라·프레임으로 돌리고 같은 지표 표로 비교한다(`scripts/blender-dump-frames.py` → `scripts/probe-metrics.py`).
+- 시작 전에 `references/lessons/`를 훑고, 끝나면 채택 이유와 교훈을 같은 형식으로 남긴다. 검사 통과는 외형 승인이 아니다.
+- 절차·지표 표준표·입력 형식: [references/propose-probe-compose.md](references/propose-probe-compose.md)
+
 ## 흔한 실수
 | 실수 | 교정 |
 |---|---|
