@@ -28,30 +28,30 @@
 Files: scripts/candidate-contract.mjs, scripts/candidate-adapters.mjs, test/candidate-harness.test.mjs.
 Interfaces: loadContract(file) -> context; digest(path) -> SHA256; normalize(check, process, output) -> {code, metrics, gaps}.
 
-- [ ] 실패 테스트: 유효 계약, 후보 ID 중복, 경로/해시 오류, 목표 출처 누락, workflow 실행 증거 누락.
-- [ ] 테스트 실행: `node --test test/candidate-harness.test.mjs` (모듈 없음으로 실패).
-- [ ] 계약·검증 JSON·balance-sim 어댑터 구현. `node --test test/candidate-harness.test.mjs` 통과.
+- [x] 실패 테스트: 유효 계약, 후보 ID 중복, 경로/해시 오류, 목표 출처 누락, workflow 실행 증거 누락.
+- [x] 테스트 실행: `node --test test/candidate-harness.test.mjs` (모듈 없음으로 실패).
+- [x] 계약·검증 JSON·balance-sim 어댑터 구현. `node --test test/candidate-harness.test.mjs` 통과.
 
 ## Task 2 — 실행·재개·보고
 
 Files: scripts/candidate-run.mjs, scripts/candidate-executor.mjs; same test.
 Interfaces: CLI init/check/run/report/record; run(ctx,{resume}) -> {runDir,code}; report -> 원시 증거 검증 후 표/5섹션.
 
-- [ ] 기준안/대안 반대 결과, missing output, timeout, 중단·안전 재개, lock, hash tamper 테스트 추가·실패 확인.
-- [ ] 순차 spawn·로그·atomic journal·예산·프로세스 cleanup·재개 구현.
-- [ ] report/record는 실행 증거를 검증하고 무효면 3. 사람 승인을 변경하지 않음.
-- [ ] 같은 테스트 통과 확인.
+- [x] 기준안/대안 반대 결과, missing output, timeout, 중단·안전 재개, lock, hash tamper 테스트 추가·실패 확인.
+- [x] 순차 spawn·로그·atomic journal·예산·프로세스 cleanup·재개 구현.
+- [x] report/record는 실행 증거를 검증하고 무효면 3. 사람 승인을 변경하지 않음.
+- [x] 같은 테스트 통과 확인.
 
 ## Task 3 — 예제·사용 지침·배포
 
 Files: samples/candidate-harness/*, skills/balance-sim/references/candidate-harness.md, 관련 기존 SKILL.md/ORCHESTRATION.md/README/USAGE, plugin manifests, .github/workflows/validate.yml.
 Interfaces: documented `node scripts/candidate-run.mjs init --domain ... --out ...`; `--demo`는 로컬 fixture만 생성.
 
-- [ ] init planning/development 데모와 미완료 템플릿 테스트 추가·실패 확인 후 구현.
-- [ ] fresh shell에서 문서 명령 실행. raw 출력은 docs evidence에 보관.
-- [ ] 스킬 변경은 최신 파일에서 staging 후 승인된 범위로 적용; mirror sync; 0.48.0 버전 갱신.
-- [ ] validate-plugin 및 ci-local 실행, fresh reviewer 한 번 수행·중요 결함 수정.
-- [ ] 지정 경로만 커밋 후 로컬 main fast-forward·공식 installer·버전 확인. 미관련 파일 보존.
+- [x] init planning/development 데모와 미완료 템플릿 테스트 추가·실패 확인 후 구현.
+- [x] fresh shell에서 문서 명령 실행. raw 출력은 docs evidence에 보관.
+- [x] 스킬 변경은 최신 파일에서 staging 후 승인된 범위로 적용; mirror sync; 0.48.0 버전 갱신.
+- [x] validate-plugin 및 ci-local 실행, fresh reviewer 한 번 수행·중요 결함 수정.
+- [x] 지정 경로만 커밋 후 로컬 main fast-forward·공식 installer·버전 확인. 미관련 파일 보존.
 
 ## Self-review
 

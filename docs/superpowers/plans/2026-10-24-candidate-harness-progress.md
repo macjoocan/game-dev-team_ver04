@@ -11,5 +11,6 @@
 - Final: executable resolved path/binary and lib-stats fingerprints included; direct mutation guard test green.
 - Ruling: candidate cwd must be an isolated snapshot under the declared project root; outputs live outside it. Existing engine builds must redirect generated outputs to the run directory. Cost: one explicit snapshot/output setup per candidate.
 - Ruling: detached descendants outside the spawned tree/session are not guaranteed to be cleaned up. Local trusted test commands only; external side-effect retries remain manual.
-- Task 3: docs/examples/mirror 0.48.0 complete; full CI 18/18 green on Windows/Git Bash, final focused suite 23/23 green. Not a remote Linux CI run. Local installation pending.
+- Task 3: complete — docs/examples/mirror 0.48.0, full CI 18/18 green on Windows/Git Bash, final focused suite 23/23 green. Not a remote Linux CI run.
 - Final integration ruling: perform the approved reversible local application (main ff and official installation) after scoped commit. No remote push or publication.
+- Integration complete: implementation commit a921cf4 fast-forwarded into local main. Original untracked approved design backed up under out/candidate-harness-local-backup. Fresh checkout validates both sample contracts. Official installer applied Claude user and Codex global 0.48.0; version checker current; source/Codex candidate-executor SHA256 match. Remote push not performed.
