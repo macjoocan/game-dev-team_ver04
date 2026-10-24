@@ -140,3 +140,7 @@ node sim/curve-check.mjs sim-out/results.json
 
 ## 산출물
 - `sim/` 하네스 코드(재실행 가능), 집계 리포트(표), 조정 가설 목록.
+
+## 후보 비교 연결
+
+기준안과 대안 1~2개를 비교할 때 공통 CLI로 입력·평가·시드를 고정하고 원시 증거를 남긴다. 기존 시뮬레이션·95% 구간·사람 플레이 판정은 유지한다. [기획·개발 후보 비교 지침](references/candidate-harness.md)을 따른다.

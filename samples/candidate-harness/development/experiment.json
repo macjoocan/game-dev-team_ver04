@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "id": "demo",
+  "projectRoot": ".",
+  "domain": "development",
+  "axis": "artifact",
+  "purpose": "SYNTHETIC FIXTURE ONLY — demonstrate candidate evidence",
+  "baseline": "baseline",
+  "demoTarget": "# SYNTHETIC FIXTURE ONLY\nThis is not a real game. Win target: 35–55%. Development: pass the fixture assertion.\n",
+  "references": [
+    {
+      "path": "TARGETS.md",
+      "sha256": "e2e3b93ac6c0da203e4010e89e8ec63c99e501063650c73941d42dfa01b6d670"
+    }
+  ],
+  "lessonIntake": {
+    "searched": [
+      "synthetic fixture; no prior lessons"
+    ],
+    "uses": []
+  },
+  "conditions": {
+    "synthetic": true,
+    "runtime": "captured in run provenance"
+  },
+  "budget": {
+    "maxAttempts": 6,
+    "maxDurationMs": 60000
+  },
+  "candidates": [
+    {
+      "id": "baseline",
+      "cwd": "baseline",
+      "difference": "synthetic failing baseline",
+      "subject": "input.json",
+      "inputs": [
+        {
+          "path": "input.json",
+          "sha256": "1849a7851c8cd0b94065840e4ac0cc50c3faf2cac795ada3bed964097d4978c0"
+        }
+      ]
+    },
+    {
+      "id": "alternative",
+      "cwd": "alternative",
+      "difference": "synthetic passing candidate",
+      "subject": "input.json",
+      "inputs": [
+        {
+          "path": "input.json",
+          "sha256": "ad00b72af52a8d00e632f51a6de4ddacc1b8f02624dbca54c45edb029417d9d1"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "verify",
+      "required": true,
+      "adapter": "json",
+      "executable": "$NODE",
+      "args": [
+        "{project}/verify.mjs",
+        "development",
+        "{output}"
+      ],
+      "timeoutMs": 10000,
+      "retrySafe": true,
+      "result": "{output}/result.json",
+      "files": [
+        {
+          "path": "verify.mjs",
+          "sha256": "7095c159078507b7290111d81028d8fe03e2ed9562f510dd027fe354ad721d02"
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "id": "fixtureValue",
+      "check": "verify",
+      "unit": "ratio",
+      "direction": "observe",
+      "source": "TARGETS.md (synthetic)"
+    }
+  ]
+}

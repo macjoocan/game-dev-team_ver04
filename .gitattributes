@@ -1,0 +1,5 @@
+# Preserve byte fingerprints for the candidate harness across Windows checkouts.
+/scripts/candidate-*.mjs -text
+/plugins/game-dev-team/scripts/candidate-*.mjs -text
+/test/candidate-harness.test.mjs -text
+/docs/verification/candidate-harness-2026-10-24/*.txt -text

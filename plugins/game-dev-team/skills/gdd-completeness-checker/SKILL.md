@@ -166,3 +166,7 @@ description: >
 ## 산출물
 판정표 + 게이트 판정 한 줄 + "통과하려면 채워야 할 것" 목록.
 반려면 game-designer(또는 meta-economy-designer) 단계로 되돌린다.
+
+## 후보 비교 연결
+
+기획 후보를 비교할 때 목표·필러·미결·가정과 출처를 고정한다. 문서 검수·봇 결과·사람 플레이 증거를 각각 연결하고 문서 완결성으로 재미를 승인하지 않는다. [기획·개발 후보 비교 지침](../balance-sim/references/candidate-harness.md)을 따른다.

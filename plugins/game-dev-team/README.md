@@ -1,5 +1,7 @@
 # game-dev-team
 
+기획·개발의 대안을 같은 조건에서 비교하려면 [후보 비교 실행 지침](skills/balance-sim/references/candidate-harness.md)을 사용한다. `scripts/candidate-run.mjs`가 원시 로그·해시·0/1/3 판정·안전 재개·채택 제안을 기록한다. [비용 없는 합성 예제](samples/candidate-harness/README.md)로 먼저 확인할 수 있다.
+
 게임 개발용 **역할 에이전트 팀**과 **사람 승인 게이트 기반 파이프라인**을 어느 게임
 프로젝트에서든 재사용하도록 묶은 플러그인. 목적은 **기획 → 게임성 검증 → 프로토타입**을
 데이터 기반으로 굴리는 것. 최종 권위자는 항상 사람(당신)이다.

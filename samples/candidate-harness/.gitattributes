@@ -1,0 +1,2 @@
+# Hash-pinned fixture bytes must survive core.autocrlf on Windows.
+* -text

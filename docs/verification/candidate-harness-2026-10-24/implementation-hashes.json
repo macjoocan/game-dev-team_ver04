@@ -1,0 +1,22 @@
+[
+    {
+        "path":  "scripts/candidate-contract.mjs",
+        "sha256":  "e6a4f6867d81f9f00d11322cf946592798c7f69ed18b441c1c60e25869ff5f43"
+    },
+    {
+        "path":  "scripts/candidate-adapters.mjs",
+        "sha256":  "0a6022b083377a0c31ee41e112845cba60a43f77ba880933e64195114961ecb7"
+    },
+    {
+        "path":  "scripts/candidate-executor.mjs",
+        "sha256":  "8d7512a440db7a369ec111e0c89e6f95aa468b84684c615e9a3fdfef090ca202"
+    },
+    {
+        "path":  "scripts/candidate-run.mjs",
+        "sha256":  "766d85584248bfc2e9c0bd86a3b45929859374e9cd8e155df6a231a7f7806c11"
+    },
+    {
+        "path":  "test/candidate-harness.test.mjs",
+        "sha256":  "3f9739249452bb699ca8f9c6fbf98876898dfd840d34a0d466f333c9e3b0e3e4"
+    }
+]
