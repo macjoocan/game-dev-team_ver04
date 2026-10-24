@@ -65,31 +65,55 @@ function acquire(ctx) {
   return () => { if (fs.existsSync(p) && readJSON(p).token === owner.token) fs.unlinkSync(p); };
 }
 function killTree(child) {
-  if (!child.pid) return;
-  if (process.platform === 'win32') spawnSync('taskkill', ['/pid', String(child.pid), '/T', '/F'], { stdio: 'ignore', windowsHide: true, timeout: 10000 });
-  else { try { process.kill(-child.pid, 'SIGKILL'); } catch { /* group already gone */ } }
+  if (!child.pid) return { ok: true };
+  if (process.platform === 'win32') {
+    const r = spawnSync('taskkill', ['/pid', String(child.pid), '/T', '/F'], { stdio: 'ignore', windowsHide: true, timeout: 10000 });
+    return { ok: r.status === 0, error: r.status === 0 ? undefined : `taskkill failed: ${r.error?.code || r.status}` };
+  }
+  try { process.kill(-child.pid, 'SIGKILL'); return { ok: true }; }
+  catch (e) { return { ok: e.code === 'ESRCH', error: e.code }; }
 }
-async function execute(check, cwd, values, stdout, stderr, timeout, signal) {
+export async function execute(check, cwd, values, stdout, stderr, timeout, signal, terminate = killTree) {
   const executable = check.executable === '$NODE' ? process.execPath : check.executable;
   const args = check.args.map(a => expand(a, values));
   const out = fs.openSync(stdout, 'wx'), err = fs.openSync(stderr, 'wx');
-  let child, timer, abort;
+  let child, timer, abort, cleanupTimer, settle, stopping = false;
   const p = { executable, args, cwd, startedAt: stamp(), exitCode: null, timedOut: false, interrupted: false };
   try {
     child = spawn(executable, args, { cwd, shell: false, detached: process.platform !== 'win32', windowsHide: true, stdio: ['ignore', out, err] });
-    abort = () => { p.interrupted = true; killTree(child); };
+    p.pid = child.pid;
+    const stopChild = () => {
+      if (stopping) return;
+      stopping = true;
+      let outcome;
+      try { outcome = terminate(child); } catch (e) { outcome = { ok: false, error: e.code || e.message }; }
+      if (!outcome.ok) {
+        p.terminationError = outcome.error || 'process tree cleanup unconfirmed';
+        p.error = p.terminationError;
+        // Stop our direct child where possible, but never claim its descendants were cleaned.
+        try { child.kill('SIGKILL'); } catch { /* lock remains for manual cleanup */ }
+        child.unref();
+        cleanupTimer = setTimeout(() => settle?.(), 1000);
+      }
+    };
+    abort = () => { p.interrupted = true; stopChild(); };
     signal.addEventListener('abort', abort, { once: true });
     if (signal.aborted) abort();
-    timer = setTimeout(() => { p.timedOut = true; killTree(child); }, timeout);
+    timer = setTimeout(() => { p.timedOut = true; stopChild(); }, timeout);
     await new Promise(resolve => {
+      settle = resolve;
       child.on('error', e => { p.error = e.message; resolve(); });
       child.on('close', (code, sig) => { p.exitCode = code; p.signal = sig; resolve(); });
     });
   } finally {
     clearTimeout(timer);
+    clearTimeout(cleanupTimer);
     if (abort) signal.removeEventListener('abort', abort);
     // POSIX descendants share an isolated group, even when the root exits first.
-    if (child && process.platform !== 'win32') killTree(child);
+    if (child && process.platform !== 'win32') {
+      const cleanup = killTree(child);
+      if (!cleanup.ok) { p.terminationError = cleanup.error; p.error = cleanup.error; }
+    }
     fs.closeSync(out); fs.closeSync(err); p.endedAt = stamp();
   }
   return p;
@@ -113,10 +137,11 @@ export async function run(ctx, { resume = false } = {}) {
   const controller = new AbortController();
   const stop = () => controller.abort();
   process.on('SIGINT', stop); process.on('SIGTERM', stop);
-  let state, dir;
+  let state, dir, cleanupBlocked = false;
   try {
     if (resume) {
       ({ state, dir } = latest(ctx, true)); verifyState(ctx, dir, state);
+      requireThat(!state.cleanupRequired, 'cleanup-blocked execution cannot resume; verify cleanup and start a new run');
       if (state.status === 'complete') return { dir, state, code: state.code };
     } else {
       const runId = `${stamp().replace(/[:.]/g, '-')}-${randomUUID().slice(0, 8)}`;
@@ -155,6 +180,7 @@ export async function run(ctx, { resume = false } = {}) {
         if (check.adapter === 'evidence') { fs.writeFileSync(stdout, ''); fs.writeFileSync(stderr, ''); proc = { exitCode: 0 }; }
         else proc = await execute({ ...check, executable: ctx.executables[check.id] }, values.candidate, values, stdout, stderr,
           Math.min(check.timeoutMs, ctx.contract.budget.maxDurationMs - state.durationMs), controller.signal);
+        if (proc.terminationError) cleanupBlocked = true;
         state.durationMs += Date.now() - start;
         let payload, normalized, measurementError, extras = [];
         try {
@@ -172,6 +198,12 @@ export async function run(ctx, { resume = false } = {}) {
         Object.assign(step, { status: proc.interrupted ? 'interrupted' : 'complete', normalized,
           result: relative(dir, resultPath), endedAt: stamp(), proofs: [stdout, stderr, resultPath, ...extras].map(p => proof(dir, p)) });
         persist();
+        if (cleanupBlocked) {
+          state.status = 'blocked'; state.code = 3;
+          state.cleanupRequired = { pid: proc.pid, reason: proc.terminationError };
+          persist();
+          throw new Error('Process tree cleanup unconfirmed; lock retained. Verify processes stopped before manual recovery.');
+        }
         if (controller.signal.aborted) throw new Error('interrupted');
       }
       entry.metrics = metricResults(ctx.contract, entry);
@@ -183,7 +215,8 @@ export async function run(ctx, { resume = false } = {}) {
     state.status = 'complete'; persist();
     return { dir, state, code: state.code };
   } finally {
-    process.removeListener('SIGINT', stop); process.removeListener('SIGTERM', stop); unlock();
+    process.removeListener('SIGINT', stop); process.removeListener('SIGTERM', stop);
+    if (!cleanupBlocked) unlock();
   }
 }
 export function report(ctx) {

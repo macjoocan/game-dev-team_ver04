@@ -26,6 +26,10 @@ node scripts/candidate-run.mjs report out/planning-comparison/experiment.json
 
 ## 계약을 실제 과제에 맞추기
 
+후보 cwd는 실제 작업 원장·검수 원장·공용 스킬 등 정본 경로와 겹칠 수 없다. 계약 검사가 `.team-work`, `.review-loop`, `.hermes`, `.agents`, `.claude`, `.codex`, `skills`, `docs/pipeline`과 주요 정본 파일의 상하위 겹침을 거부한다. 별도 후보 사본에서만 지침을 실험한다. 경계 모듈도 도구 fingerprint에 포함되므로 업그레이드 뒤 이전 실행을 재개하지 못할 수 있다. 담당 범위와 한계: [데브팀 구조](../../../scripts/team-architecture.md).
+
+후보 cwd끼리도 동일/상하위 경로를 사용할 수 없다. 프로세스 트리 종료 실패는 cleanupRequired로 기록하고 잠금을 유지한다. 정리 확인 없이 재시도하지 않으며, 잠금을 복구해도 해당 blocked run의 resume은 거부된다. 정리 확인 후 새 run을 만든다.
+
 experiment.json 경로 기준 `projectRoot`를 실제 프로젝트 루트로 지정한다. 후보별 cwd는 프로젝트 아래의 별도 스냅샷 폴더다. cwd 전체와 declared inputs를 고정하므로 검증 산출물은 후보 소스에 쓰지 말고 `{output}`에 쓴다. 후보 cwd를 프로젝트 루트로 잡으면 out과 겹치므로 거부된다. 다른 체크아웃의 소스를 쓸 때는 프로젝트 아래 별도 후보 스냅샷을 준비한다.
 
 | 필드 | 계약 |

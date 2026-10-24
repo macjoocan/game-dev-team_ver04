@@ -5,6 +5,7 @@ import path from 'node:path';
 import { createHash, randomUUID } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { collectHandoff } from './team-handoff.mjs';
+import { TEAM_AUTHORITIES } from './team-boundaries.mjs';
 
 const MAX = 2 * 1024 * 1024;
 const ROLES = ['pm', 'game-designer', 'developer', 'qa', 'artist', 'meta-economy-designer'];
@@ -79,7 +80,7 @@ export function briefProject(project) {
   } catch { work = { status: 'unknown', error: 'Cannot read work state; preserve it for recovery.', tasks: null, lessonProposals: null }; unknown = true; }
   const handoff = collectHandoff(root);
   return { schemaVersion: 1, project: root, work, handoff, collectionStatus: unknown || handoff.collectionStatus === 'unknown' ? 'unknown' : 'collected',
-    boundaries: { modelCalls: 0, paidSubmissionEnabled: false, taskDoneIsGateApproval: false, evidenceReceiptIsTestPass: false, lessonPromotionEnabled: false } };
+    boundaries: { modelCalls: 0, paidSubmissionEnabled: false, taskDoneIsGateApproval: false, evidenceReceiptIsTestPass: false, lessonPromotionEnabled: false, authorities: TEAM_AUTHORITIES } };
 }
 
 export function updateWork(project, action, options) {
@@ -97,7 +98,12 @@ export function updateWork(project, action, options) {
   try {
     fs.writeFileSync(handle, JSON.stringify({ pid: process.pid, actor: options.actor }));
     const db = load(root) ?? { schemaVersion: 1, revision: 0, tasks: [], events: [], lessonProposals: [] };
-    const event = { action, actor: options.actor, taskId: options.id, createdAt: new Date().toISOString() };
+    // Lock prevents simultaneous writes; revision rejects stale decisions after a lock is released.
+    const observed = options.revision;
+    ok((db.revision === 0 && observed === undefined) ||
+      (/^(0|[1-9]\d*)$/.test(String(observed)) && Number.isSafeInteger(Number(observed)) && Number(observed) === db.revision),
+      'Work revision missing or stale; run brief and pass its work.revision with --revision.');
+    const event = { action, actor: options.actor, taskId: options.id, basedOnRevision: db.revision, createdAt: new Date().toISOString() };
     const task = db.tasks.find(t => t.id === options.id);
     if (action === 'add') {
       ok(!task, 'Duplicate task ID'); ok(str(options.title) && str(options.next) && ROLES.includes(options.role), 'Title, next action and valid role required');
@@ -143,11 +149,11 @@ export function updateWork(project, action, options) {
 
 const allowed = {
   brief: ['project'],
-  add: ['project', 'actor', 'id', 'title', 'role', 'next'],
-  checkpoint: ['project', 'actor', 'id', 'status', 'next', 'reason', 'note'],
-  handoff: ['project', 'actor', 'id', 'role', 'next', 'note'],
-  evidence: ['project', 'actor', 'id', 'file'],
-  lesson: ['project', 'actor', 'id', 'file', 'note'],
+  add: ['project', 'actor', 'id', 'title', 'role', 'next', 'revision'],
+  checkpoint: ['project', 'actor', 'id', 'status', 'next', 'reason', 'note', 'revision'],
+  handoff: ['project', 'actor', 'id', 'role', 'next', 'note', 'revision'],
+  evidence: ['project', 'actor', 'id', 'file', 'revision'],
+  lesson: ['project', 'actor', 'id', 'file', 'note', 'revision'],
 };
 export function runWorkCli(args = process.argv.slice(2)) {
   try {

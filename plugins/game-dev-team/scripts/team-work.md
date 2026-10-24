@@ -15,8 +15,8 @@ node scripts/team-work.mjs brief --project "D:\00.project\GameDevTeam"
 ## 작업 등록과 체크포인트
 
 ```powershell
-node scripts/team-work.mjs add --project . --id hero.walk --title "걷기 모션 개선" --role artist --next "03~06 프레임 확인" --actor codex
-node scripts/team-work.mjs checkpoint --project . --id hero.walk --status blocked --reason "승인된 원화 필요" --next "검수 피드백 확인" --note "발 방향부터 수정" --actor codex
+node scripts/team-work.mjs add --project . --id hero.walk --title "걷기 모션 개선" --role artist --next "03~06 프레임 확인" --actor codex --revision 0
+node scripts/team-work.mjs checkpoint --project . --id hero.walk --status blocked --reason "승인된 원화 필요" --next "검수 피드백 확인" --note "발 방향부터 수정" --actor codex --revision 1
 ```
 
 역할: `pm`, `game-designer`, `developer`, `qa`, `artist`, `meta-economy-designer`.
@@ -24,10 +24,16 @@ node scripts/team-work.mjs checkpoint --project . --id hero.walk --status blocke
 
 다른 PC에서도 기록 자체가 필요하다면 민감 내용을 확인한 뒤 원장을 별도로 전달해야 한다. 소스를 push해도 로컬 작업 기록은 전송되지 않는다.
 
+### 오래된 세션의 덮어쓰기 방지
+
+v0.50.0부터 기존 원장을 바꾸는 모든 명령에는 `brief`에서 확인한 `work.revision`을 `--revision`으로 전달한다. 아래 예제의 0~5는 빈 원장에서 순서대로 실행했을 때의 값이다. 기존 프로젝트에서는 반드시 실제 revision으로 바꾼다. 새 원장의 최초 add만 생략 가능하며 그때는 0으로 취급한다.
+
+revision이 다르거나 빠지면 파일을 바꾸지 않고 거부한다. 이때 값을 자동으로 최신 번호로 바꿔 반복하지 않는다. brief를 다시 읽고 다른 세션의 변경·담당 역할·다음 행동을 확인한 후 새 작업 지시를 결정한다. 쓰기 잠금은 동시 기록을, revision은 오래된 판단의 후속 기록을 막는다. 배우 이름은 권한 인증 수단이 아니다.
+
 ## 역할 인계
 
 ```powershell
-node scripts/team-work.mjs handoff --project . --id hero.walk --role qa --next "같은 배경에서 루프 확인" --note "상체와 칼 위치 유지, 발 방향 검사" --actor codex
+node scripts/team-work.mjs handoff --project . --id hero.walk --role qa --next "같은 배경에서 루프 확인" --note "상체와 칼 위치 유지, 발 방향 검사" --actor codex --revision 2
 ```
 
 역할과 인계 메모를 바꾸고 이전/새 역할을 이벤트에 남긴다. blocked 원인이 해결되기 전에는 역할을 바꿔도 blocked 상태를 유지한다. 실제 에이전트를 실행하거나 정본 파일의 쓰기 소유권을 강제로 부여하는 기능은 아니다. 파일 소유권은 ORCHESTRATION.md의 기존 계약을 따른다.
@@ -37,8 +43,8 @@ node scripts/team-work.mjs handoff --project . --id hero.walk --role qa --next "
 기획은 GDD 검사·candidate harness, 개발은 프로젝트 테스트·candidate harness, 아트는 art-gate·sprite-qa·review-loop를 그대로 사용한다. 먼저 해당 도구를 실행해 원시 로그와 리포트를 남긴 후 그 파일을 첨부한다.
 
 ```powershell
-node scripts/team-work.mjs evidence --project . --id hero.walk --file "out/walk-qa/report.json" --actor codex
-node scripts/team-work.mjs checkpoint --project . --id hero.walk --status review --next "사람 검수 대기" --note "검수 보드에 등록됨" --actor codex
+node scripts/team-work.mjs evidence --project . --id hero.walk --file "out/walk-qa/report.json" --actor codex --revision 3
+node scripts/team-work.mjs checkpoint --project . --id hero.walk --status review --next "사람 검수 대기" --note "검수 보드에 등록됨" --actor codex --revision 4
 ```
 
 `evidence`는 **파일 경로·SHA-256을 첨부하는 기능**이다. 검사 실행·통과를 주장하지 않으며 `validationExecuted: false`를 명시한다. 증거 파일은 프로젝트 내부 일반 파일, 최대 2MiB만 허용한다. 연결 경로·`.secrets`·`.git`·`.env`는 거부한다. 검증 로그에는 비밀을 남기지 않는다.
@@ -50,7 +56,7 @@ node scripts/team-work.mjs checkpoint --project . --id hero.walk --status review
 ## 경험 축적
 
 ```powershell
-node scripts/team-work.mjs lesson --project . --id hero.walk --file "out/walk-qa/report.json" --note "시트 공통 팔레트를 적용하면 색 흔들림을 줄였다" --actor codex
+node scripts/team-work.mjs lesson --project . --id hero.walk --file "out/walk-qa/report.json" --note "시트 공통 팔레트를 적용하면 색 흔들림을 줄였다" --actor codex --revision 5
 ```
 
 교훈은 `proposed` 상태로만 저장된다. 출처 증거가 변경·누락되면 brief에서 표시한다. 사람이 기존 review-loop에서 공통 규칙으로 승격한 기록만 `.review-loop/rules.json`을 통해 재사용한다. 작업 교훈 제안이나 한 번의 피드백을 공용 스킬에 자동 반영하지 않는다.
@@ -64,6 +70,8 @@ node scripts/team-work.mjs lesson --project . --id hero.walk --file "out/walk-qa
 짧은 쓰기 구간에는 `.team-work/write.lock`으로 동시 기록을 막는다. 새 세션도 잠금을 자동 탈취하지 않는다. 충돌하면 기존 작업이 끝난 뒤 재시도한다. 세션 강제 종료로 잠금/임시 파일이 남으면 원본을 보존하고 실제로 실행 중인 작성자가 없는지 확인한 뒤 수동 복구한다. JSON 손상을 새 빈 원장으로 덮어쓰지 않는다. 원장 최대 2MiB를 넘으면 보존·분리 후 다시 시작한다. 파일 권한은 OS 설정을 따르며 이 명령은 보안 샌드박스가 아니다.
 
 ## 호환
+
+역할 분담과 전체 실행 흐름은 [데브팀 구조 설명](team-architecture.md)에 정리되어 있다.
 
 읽기 전용 인계만 필요하면 `team-handoff.mjs --project <경로>`를 사용한다. 기존 `hermes-handoff.mjs`도 같은 수집기를 호출하는 호환 진입점으로 유지한다. 둘 다 Hermes 없이 실행된다. 기존 Hermes 설정 예시는 선택적 참고 자료다.
 
@@ -87,8 +95,10 @@ node --test test/team-work.test.mjs test/hermes-handoff.test.mjs
 |---|---|
 | 심볼릭 링크 생성 EPERM, 해당 테스트 생략 | Windows 개발자 모드·실행 토큰의 링크 생성 권한 |
 | 에이전트의 허용 작업 폴더 밖 읽기/쓰기 거절 | 에이전트 작업 공간·샌드박스·작업별 승인 |
-| 후보 하네스 타임아웃 테스트의 `null !== 3` | Windows 프로세스 종료·자식 프로세스 정리 동작. 권한 변경만으로 해결됐다고 판단하지 않는다 |
+| 후보 하네스 타임아웃 테스트의 `null !== 3` | 프로세스 트리 종료 권한을 확인한다. 이 환경에서는 샌드박스의 taskkill 거부를 재현했고 같은 테스트가 샌드박스 밖에서 통과했다 |
 
 개발자 모드는 에이전트 샌드박스나 조직 정책을 해제하지 않는다. 작업 재개 명령 자체는 일반 파일을 사용하므로 심볼릭 링크 생성 권한 없이도 동작한다. 권한 관련 설정은 이 도구가 자동 변경하지 않는다.
+
+후보 실행 중 프로세스 트리 종료가 거부되면 exit 3, cleanupRequired와 PID/이유를 남기고 다음 후보를 실행하지 않는다. 직접 자식 종료를 시도해 무한 대기를 피하지만 자손까지 정리됐다고 주장하지 않는다. 잠금은 남겨 자동 중복 실행을 막는다. 실제 프로세스 정리를 확인하고 잠금을 수동 복구한 뒤 **새 run**으로 시작한다. 기존 cleanup-blocked 실행은 resume하지 않는다.
 
 공식 근거: [Microsoft 개발자 모드 안내](https://learn.microsoft.com/en-us/windows/advanced-settings/developer-mode), [Windows 심볼릭 링크 안내](https://blogs.windows.com/windowsdeveloper/2016/12/02/symlinks-windows-10/).

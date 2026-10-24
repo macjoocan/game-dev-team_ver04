@@ -4,6 +4,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import { assertCandidateWorkspace } from './team-boundaries.mjs';
 
 export const requireThat = (ok, message) => { if (!ok) throw new Error(message); };
 export const readJSON = p => JSON.parse(fs.readFileSync(p, 'utf8'));
@@ -77,9 +78,12 @@ export function loadContract(file) {
   unique(c.candidates, 'candidate');
   requireThat(c.candidates.some(x => x.id === c.baseline), 'baseline candidate missing');
   const subjects = {};
+  const workspaces = [];
   for (const candidate of c.candidates) {
     requireThat(candidate.difference && Array.isArray(candidate.inputs) && candidate.inputs.length > 0, 'candidate difference and pinned inputs required');
     const cwd = inside(root, candidate.cwd);
+    assertCandidateWorkspace(root, cwd, workspaces);
+    workspaces.push(cwd);
     requireThat(fs.statSync(cwd).isDirectory(), 'candidate cwd must be directory');
     const localPins = candidate.inputs.map(ref => pin(cwd, ref));
     pins.push(...localPins);
@@ -127,7 +131,7 @@ export function loadContract(file) {
   const outputBase = inside(root, `out/experiments/${c.id}`, false);
   for (const p of pins) requireThat(!(outputBase === p.path || outputBase.startsWith(p.path + path.sep) || p.path.startsWith(outputBase + path.sep)), 'outputs overlap frozen inputs');
   const engine = path.dirname(fileURLToPath(import.meta.url));
-  const toolFiles = ['candidate-contract.mjs', 'candidate-adapters.mjs', 'candidate-executor.mjs', 'candidate-run.mjs', 'lib-stats.mjs'];
+  const toolFiles = ['candidate-contract.mjs', 'candidate-adapters.mjs', 'candidate-executor.mjs', 'candidate-run.mjs', 'lib-stats.mjs', 'team-boundaries.mjs'];
   const toolHash = sha(stable(toolFiles.map(n => [n, digest(path.join(engine, n))])));
   const signature = sha(stable({ contract: c, pins, subjects, toolHash, node: process.version, executable: process.execPath, platform: process.platform, arch: process.arch }));
   return { file, root, contract: c, pins, subjects, signature, toolHash, outputBase, executables };

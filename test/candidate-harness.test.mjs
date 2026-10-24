@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { loadContract, digest, verifyPins } from '../scripts/candidate-contract.mjs';
 import { normalize, aggregate } from '../scripts/candidate-adapters.mjs';
+import { execute } from '../scripts/candidate-executor.mjs';
 
 const cli = fileURLToPath(new URL('../scripts/candidate-run.mjs', import.meta.url));
 const hash = p => createHash('sha256').update(fs.readFileSync(p)).digest('hex');
@@ -27,6 +28,26 @@ function demo(t, domain = 'development') {
 }
 const json = p => JSON.parse(fs.readFileSync(p, 'utf8'));
 const save = (p, d) => fs.writeFileSync(p, JSON.stringify(d, null, 2));
+
+test('candidate workspaces cannot overlap live task, approval or skill authority', t => {
+  const { root, file } = demo(t);
+  const original = json(file);
+  for (const dir of ['.team-work', '.review-loop', '.hermes', 'skills', 'docs/pipeline']) {
+    const target = path.join(root, dir);
+    fs.mkdirSync(target, { recursive: true });
+    fs.writeFileSync(path.join(target, 'input.json'), fs.readFileSync(path.join(root, 'baseline/input.json')));
+    const c = structuredClone(original); c.candidates[0].cwd = dir; save(file, c);
+    assert.throws(() => loadContract(file), /authority|protected/i, dir);
+  }
+});
+
+test('different candidate IDs cannot compare the same mutable workspace', t => {
+  const { file } = demo(t), c = json(file);
+  c.candidates[1].cwd = c.candidates[0].cwd;
+  c.candidates[1].inputs = structuredClone(c.candidates[0].inputs);
+  save(file, c);
+  assert.throws(() => loadContract(file), /candidate.*overlap/i);
+});
 function state(root) {
   return json(path.join(runDir(root), 'state.json'));
 }
@@ -157,9 +178,34 @@ test('timeout is unknown; interrupted unsafe steps are not rerun', t => {
   assert.equal(command(root, 'run', file).status, 3);
   const p = path.join(runDir(root), 'state.json');
   const s = json(p); const step = s.candidates.baseline.steps[0];
+  if (s.cleanupRequired) {
+    assert.ok(fs.existsSync(path.join(root, 'out/experiments/demo/.lock')));
+    assert.equal(s.candidates.alternative, undefined);
+    const retry = command(root, 'run', file, '--resume');
+    assert.equal(retry.status, 3); assert.match(retry.stderr, /lock/); return;
+  }
   step.status = 'running'; s.candidates.baseline.status = 'running'; s.status = 'running'; save(p, s);
   const r = command(root, 'run', file, '--resume');
   assert.equal(r.status, 3); assert.match(r.stderr, /retrySafe|interrupted/);
+});
+
+test('denied process-tree cleanup returns unknown promptly instead of hanging', async t => {
+  const root = box(t), controller = new AbortController();
+  const proc = await execute({ executable: process.execPath, args: ['-e', 'setInterval(()=>{},1000)'] }, root, {},
+    path.join(root, 'stdout.log'), path.join(root, 'stderr.log'), 50, controller.signal,
+    () => ({ ok: false, error: 'fixture permission denied' }));
+  assert.equal(proc.timedOut, true);
+  assert.match(proc.terminationError, /permission denied/);
+  assert.equal(normalize({adapter:'exit'}, proc).code, 3);
+});
+
+test('cleanup-blocked runs cannot resume merely because a lock was manually removed', t => {
+  const { root, file } = demo(t); command(root, 'run', file);
+  const p = path.join(runDir(root), 'state.json'), s = json(p);
+  s.status = 'blocked'; s.cleanupRequired = { pid: 123, reason: 'fixture cleanup unconfirmed' }; save(p, s);
+  const resumed = command(root, 'run', file, '--resume');
+  assert.equal(resumed.status, 3);
+  assert.match(resumed.stderr, /cleanup.*new run/i);
 });
 test('workflow requires actual execution evidence and hashes; lessons require intake', t => {
   const { file } = demo(t);

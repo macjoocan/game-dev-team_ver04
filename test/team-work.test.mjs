@@ -13,6 +13,9 @@ function box(t) {
   return root;
 }
 function run(root, action, ...args) {
+  if (action !== 'brief' && !args.includes('--revision')) {
+    try { args.push('--revision', String(JSON.parse(fs.readFileSync(path.join(root, '.team-work/state.json'), 'utf8')).revision)); } catch { /* new or damaged store */ }
+  }
   return spawnSync(process.execPath, [cli, action, '--project', root, ...args], { encoding: 'utf8', timeout: 5000 });
 }
 function add(root) { return run(root, 'add', '--id', 'hero-walk', '--title', 'Hero walk', '--role', 'artist', '--next', 'Inspect feet', '--actor', 'codex'); }
@@ -125,4 +128,23 @@ test('a linked evidence parent is refused even when the destination file exists'
   fs.symlinkSync(outside, path.join(root, 'linked'), process.platform === 'win32' ? 'junction' : 'dir');
   assert.equal(run(root, 'evidence', '--id', 'hero-walk', '--file', 'linked/qa.txt', '--actor', 'codex').status, 1);
   assert.equal(state(root).tasks[0].evidence.length, 0);
+});
+
+test('stale sessions cannot overwrite a newer checkpoint', t => {
+  const root = box(t); add(root);
+  const revision = state(root).revision;
+  assert.equal(run(root, 'checkpoint', '--id', 'hero-walk', '--status', 'active', '--next', 'New plan', '--actor', 'claude-code', '--revision', String(revision)).status, 0);
+  const before = fs.readFileSync(stateFile(root));
+  const stale = run(root, 'handoff', '--id', 'hero-walk', '--role', 'qa', '--next', 'Old plan', '--note', 'Stale session', '--actor', 'codex', '--revision', String(revision));
+  assert.equal(stale.status, 1);
+  assert.match(stale.stderr, /revision/i);
+  assert.deepEqual(fs.readFileSync(stateFile(root)), before);
+});
+
+test('existing stores require an explicit observed revision', t => {
+  const root = box(t); add(root);
+  const r = spawnSync(process.execPath, [cli, 'checkpoint', '--project', root, '--id', 'hero-walk', '--status', 'active', '--next', 'Continue', '--actor', 'codex'], { encoding: 'utf8' });
+  assert.equal(r.status, 1);
+  assert.match(r.stderr, /revision/i);
+  assert.equal(state(root).revision, 1);
 });
