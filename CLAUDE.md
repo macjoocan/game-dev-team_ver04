@@ -31,6 +31,8 @@ game-dev-team 플러그인(게임 개발 역할 에이전트 팀 + 사람 승인
 
 ## 사람 검수 공동 루프
 
+세션을 재개하면 `node <플러그인>/scripts/team-work.mjs brief --project <프로젝트>`로 작업 기록·열린 게이트·검수 피드백을 읽는다. 장기 작업은 `add`로 등록하고 `checkpoint`·`handoff`·`evidence`로 인계한다. 사용법은 `scripts/team-work.md`다. 원장 없음/손상은 미확인으로 남긴다. 증거 첨부는 검사 통과가 아니며 작업 `done`도 사람 승인이 아니다. 교훈은 제안으로 저장하고 공통 규칙은 기존 검수 루프의 사람 승인 기록만 재사용한다.
+
 Codex와 Claude Code의 검토 대상은 `review-loop`로 같은 프로젝트의 `.review-loop/`에 등록한다.
 Claude 메모리는 작업 방식 보조이며 승인·피드백의 정본이 아니다. 새 작업과 수정 작업을 시작하기 전에
 `review-loop.mjs summary --project <프로젝트>`를 읽고, 산출물은 `--harness claude-code`로 등록한다.

@@ -1,0 +1,11 @@
+# Merge these entries into a DEDICATED Hermes profile config.yaml.
+# This is a config fragment, not a complete runnable profile or OS sandbox.
+# Do not replace an existing config or add credentials here.
+skills:
+  write_approval: true
+  external_dirs: []
+  project_discovery: false
+memory:
+  write_approval: true
+# Keep the standard Hermes runtime. Do not enable Codex app-server here.
+# Provider/model/authentication remain explicitly unconfigured by this example.

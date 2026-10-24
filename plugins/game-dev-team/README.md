@@ -1,5 +1,7 @@
 # game-dev-team
 
+세션이 끊기거나 Codex·Claude 사이에서 일을 넘길 때는 [데브팀 작업 재개·인계](scripts/team-work.md)를 사용한다. `node scripts/team-work.mjs brief --project <경로>`로 다음 행동·담당 역할·블로커·증거 최신성·검수 피드백을 함께 확인한다. 별도 에이전트 설치나 추가 모델 호출이 필요 없다. [Hermes 연결 조사](scripts/hermes-integration.md)는 선택적 참고 자료다.
+
 기획·개발의 대안을 같은 조건에서 비교하려면 [후보 비교 실행 지침](skills/balance-sim/references/candidate-harness.md)을 사용한다. `scripts/candidate-run.mjs`가 원시 로그·해시·0/1/3 판정·안전 재개·채택 제안을 기록한다. [비용 없는 합성 예제](samples/candidate-harness/README.md)로 먼저 확인할 수 있다.
 
 게임 개발용 **역할 에이전트 팀**과 **사람 승인 게이트 기반 파이프라인**을 어느 게임

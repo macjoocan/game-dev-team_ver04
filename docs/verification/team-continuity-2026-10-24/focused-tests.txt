@@ -1,0 +1,27 @@
+✔ missing state is unknown with exit 3, never an empty approved gate list (108.8056ms)
+✔ collects recorded gates and feedback without changing source bytes or emitting unrelated fields (157.3115ms)
+✔ malformed JSON and invalid gate schema remain unknown (135.3113ms)
+✔ rejects malformed review logs instead of silently dropping feedback (148.9519ms)
+﹣ refuses linked state files even inside the project (6.831ms) # Windows symlink privilege unavailable
+✔ oversized state files are reported as unknown (112.0946ms)
+✔ invalid project and unsupported flags are errors, without executing commands (115.4869ms)
+✔ refuses a linked parent directory without reading outside project state (114.5194ms)
+✔ new sessions resume checkpoints and role handoff with audit events (361.261ms)
+✔ duplicate IDs and invalid blocked checkpoints leave bytes unchanged (216.5631ms)
+✔ evidence is attached as an unverified receipt and stale content prevents done (304.631ms)
+✔ done requires fresh evidence but does not approve production or close a gate (275.3425ms)
+✔ lessons stay proposals, and brief rechecks their evidence (359.1854ms)
+✔ corruption and existing locks cannot be overwritten (226.6675ms)
+✔ sensitive and escaping evidence paths are refused (252.8346ms)
+✔ linked store directories are refused without writing outside the project (71.5989ms)
+✔ unsupported options, actors and roles are errors (135.0618ms)
+✔ Unicode notes survive cross-session reload and brief is read-only (292.9986ms)
+✔ a linked evidence parent is refused even when the destination file exists (182.9735ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 2757.5108

@@ -1,0 +1,230 @@
+✔ aggregate keeps confirmed failure separate from missing measurement (2.4464ms)
+✔ generic process crash is unknown; only configured test failures are failures (0.5205ms)
+✔ balance adapter recomputes CI and rejects missing sample, placeholder, conditions mismatch (0.65ms)
+✔ planning and development demos execute same checks for baseline and alternative (3866.3021ms)
+✔ unfinished template is not a runnable experiment (132.1205ms)
+✔ changed target, validation script, duplicate ids and escaping candidate paths rejected (202.5067ms)
+✔ missing output is unknown and stale json cannot satisfy a new execution (1054.0421ms)
+✔ report and resume reject changed raw evidence or inputs (1712.951ms)
+✔ completed resume reuses evidence; new run preserves previous state (2671.631ms)
+✔ reverse candidate outcomes are reported without assuming alternative is better (1754.9831ms)
+✔ lock denies concurrent run and is not stolen (288.0093ms)
+✔ dead process lock is not automatically stolen or deleted (313.0714ms)
+✖ timeout is unknown; interrupted unsafe steps are not rerun (20133.3453ms)
+✔ workflow requires actual execution evidence and hashes; lessons require intake (113.9023ms)
+✔ hashes directories in sorted order and refuses symbolic links (7.0477ms)
+✔ mandatory threshold rejects an otherwise passing candidate and missing metric is unknown (2194.4265ms)
+✔ budget cannot silently skip required checks (956.0443ms)
+✔ workflow evidence pins actual output, trace and instructions (1382.5246ms)
+✔ safe interrupted local check reruns once in a new attempt folder (1892.9321ms)
+✖ timeout kills spawned process tree (20118.59ms)
+✔ human evidence is subject-bound and missing reviewer cannot pass (3028.7415ms)
+✔ a fresh completed run is reportable despite an older abandoned contract (2574.8262ms)
+✔ resolved executable bytes are pinned and change the resume fingerprint (130.8738ms)
+✔ server node and loader choices are checked before generation (1.3635ms)
+✔ manifest checks bytes, hash, and path containment (7.7113ms)
+✔ preflight queries live object_info and rejects unavailable models (54.5821ms)
+✔ missing state is unknown with exit 3, never an empty approved gate list (157.2718ms)
+✔ collects recorded gates and feedback without changing source bytes or emitting unrelated fields (141.5908ms)
+✔ malformed JSON and invalid gate schema remain unknown (135.9275ms)
+✔ rejects malformed review logs instead of silently dropping feedback (119.0319ms)
+﹣ refuses linked state files even inside the project (7.1955ms) # Windows symlink privilege unavailable
+✔ oversized state files are reported as unknown (114.365ms)
+✔ invalid project and unsupported flags are errors, without executing commands (138.8305ms)
+✔ refuses a linked parent directory without reading outside project state (128.2647ms)
+✔ init creates a blank local key file and preserves existing content (9.2044ms)
+✔ missing credentials are unconfigured, not successful authentication (6.7994ms)
+✔ file credentials support BOM, quotes, CRLF and official separate fields (8.4031ms)
+✔ environment credential pair overrides file atomically; incomplete environment fails (5.7445ms)
+✔ malformed credential errors do not echo secrets or execute env content (6.213ms)
+✔ prepare constructs an offline request without credentials or paid execution (2.18ms)
+✔ status only GETs the fixed API origin with auth, never follows redirects (22.5517ms)
+✔ invalid request IDs, auth failures and transport failures leak no key and never retry (1.2277ms)
+✔ imports a rasterized icon with source, tint, credit, and concept manifest (130.8768ms)
+✔ rejects CC BY icon without author before creating output (81.347ms)
+✔ color changes dark RGB, preserves alpha, source, and untouched file bytes (30.8031ms)
+✔ pingpong and explicit holds copy pixels with documented mapping (40.7893ms)
+✔ reject overwrite, invalid frames and mixed canvas before output (13.3875ms)
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "one hit per target per attack",
+      "result": "pass"
+    },
+    {
+      "name": "attack remains locked and ignores movement",
+      "result": "pass"
+    },
+    {
+      "name": "attack misses target behind player",
+      "result": "pass"
+    },
+    {
+      "name": "left facing attack hits target on left",
+      "result": "pass"
+    },
+    {
+      "name": "hurt interrupts attack and recovers to idle",
+      "result": "pass"
+    },
+    {
+      "name": "defeated target respawns",
+      "result": "pass"
+    },
+    {
+      "name": "movement stays inside world and updates facing",
+      "result": "pass"
+    },
+    {
+      "name": "run uses a distinct clip and configured faster movement",
+      "result": "pass"
+    },
+    {
+      "name": "releasing sprint returns to accepted walk and stopping to idle",
+      "result": "pass"
+    },
+    {
+      "name": "run loops without selecting the duplicate closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "run input cannot interrupt attack or roll",
+      "result": "pass"
+    },
+    {
+      "name": "dust lives in world space and trails both roll directions",
+      "result": "pass"
+    },
+    {
+      "name": "dust toggle and reduced effects disable particles without altering roll",
+      "result": "pass"
+    },
+    {
+      "name": "idle animates while keeping world position and facing fixed",
+      "result": "pass"
+    },
+    {
+      "name": "idle wraps its loop without holding the closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "movement exits idle immediately and stopping restarts idle",
+      "result": "pass"
+    },
+    {
+      "name": "attack exits idle immediately and resets attack timing",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery returns to animated idle at its final world position",
+      "result": "pass"
+    },
+    {
+      "name": "idle emits no damage or dust events",
+      "result": "pass"
+    },
+    {
+      "name": "slash world position remains at terminal root after recovery",
+      "result": "pass"
+    },
+    {
+      "name": "slash end torso anchor joins idle with no horizontal snap",
+      "result": "pass"
+    },
+    {
+      "name": "roll travels forward and keeps final position",
+      "result": "pass"
+    },
+    {
+      "name": "roll invulnerability blocks damage during tuck",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery can take damage",
+      "result": "pass"
+    },
+    {
+      "name": "roll cancels slash without resetting existing root travel",
+      "result": "pass"
+    },
+    {
+      "name": "enemy telegraph strike damages player in range",
+      "result": "pass"
+    },
+    {
+      "name": "enemy strike is avoided during roll invulnerability",
+      "result": "pass"
+    },
+    {
+      "name": "enemy attack applies at most one hit per cycle",
+      "result": "pass"
+    }
+  ],
+  "browser_visual": "pending",
+  "scope": "headless combat invariants and served files; not human motion approval"
+}
+✔ D:\00.project\GameDevTeam\test\motion-court.test.mjs (92.2405ms)
+✔ new sessions resume checkpoints and role handoff with audit events (380.0912ms)
+✔ duplicate IDs and invalid blocked checkpoints leave bytes unchanged (205.8542ms)
+✔ evidence is attached as an unverified receipt and stale content prevents done (339.6553ms)
+✔ done requires fresh evidence but does not approve production or close a gate (402.439ms)
+✔ lessons stay proposals, and brief rechecks their evidence (342.6743ms)
+✔ corruption and existing locks cannot be overwritten (233.4703ms)
+✔ sensitive and escaping evidence paths are refused (308.288ms)
+✔ linked store directories are refused without writing outside the project (101.9043ms)
+✔ unsupported options, actors and roles are errors (152.7269ms)
+✔ Unicode notes survive cross-session reload and brief is read-only (282.2701ms)
+✔ a linked evidence parent is refused even when the destination file exists (152.2474ms)
+ℹ tests 59
+ℹ suites 0
+ℹ pass 56
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 64653.1751
+
+✖ failing tests:
+
+test at test\candidate-harness.test.mjs:152:1
+✖ timeout is unknown; interrupted unsafe steps are not rerun (20133.3453ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 3
+  
+      at TestContext.<anonymous> (file:///D:/00.project/GameDevTeam/test/candidate-harness.test.mjs:157:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at test\candidate-harness.test.mjs:212:1
+✖ timeout kills spawned process tree (20118.59ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  null !== 3
+  
+      at TestContext.<anonymous> (file:///D:/00.project/GameDevTeam/test/candidate-harness.test.mjs:220:25)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 3,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -46,6 +46,9 @@ jobs:
       - name: 기획·개발 후보 비교 하네스 테스트
         run: node --test test/candidate-harness.test.mjs
 
+      - name: 작업 재개·역할 인계와 기존 진입점 호환 테스트
+        run: node --test test/team-work.test.mjs test/hermes-handoff.test.mjs
+
       - name: 생성 도구 스모크 (스펙 -> 실제 산출물)
         run: |
           KIT=skills/art-direction/references/starter-kit
