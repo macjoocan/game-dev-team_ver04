@@ -86,8 +86,8 @@ node skills/playtest-capture/scripts/funnel-report.mjs <events.jsonl> --steps st
 - 봇은 승률·픽률·난이도 곡선을 재지만 **첫 인상·이해 실패·학습 곡선은 구조적으로 못 잰다.**
   봇 승률 ≠ 사람 승률이다(봇은 규칙을 알고 시작한다).
 - RITE 루프: 3명 → **수정** → 3명. 회차 사이에 안 고치면 RITE가 아니다.
-- **표본 수를 반드시 밝힌다.** 5명은 이슈의 55~95%를 잡는다(분산이 크다). "5명 봤는데 문제
-  없음"은 "최대 45% 놓쳤을 수 있음"과 같은 말이다. 1명은 통과가 아니라 측정 불가다.
+- **표본 수를 반드시 밝힌다.** 발견률은 문제와 참가자 구성에 따라 달라져 인원만으로 보장할 수 없다.
+  문제가 발견되지 않아도 문제가 없다는 뜻은 아니다. 1명은 통과가 아니라 측정 불가다.
 - FTUE는 **평균이 아니라 단계 퍼널**로 본다. 세션1→2 전환이 D1 리텐션의 선행지표다.
 - 설문은 새로 만들지 말고 GEQ/PENS 중 골라 **어느 척도인지 적는다**. 자작 설문은 비교가 안 된다.
 - 상세: `skills/playtest-capture/references/session-protocol.md`·`ftue-telemetry.md`
@@ -126,6 +126,7 @@ node skills/polish/scripts/flash-check.mjs <프레임폴더> --fps 30 --loop
 
 ### 기획 게이트 (1→2)
 `gdd-completeness-checker` 스킬로 검수한다. 수치 근거 등급·미결·지표 정의 외에 세 가지를 본다:
+- 기획 표에서 `node skills/gdd-completeness-checker/scripts/trace-draft.mjs <기획.md> <trace.json>`으로 검토용 초안을 만들고, `node skills/gdd-completeness-checker/scripts/trace-check.mjs <trace.json>`으로 정본 행과 QA 기록의 연결을 확인한다. 0은 기록 연결 충족, 1은 근거가 연결된 실패 기록, 3은 미실행·누락·재검토다. 테스트 실행이나 증거 진위를 대신하지 않는다.
 - **필러 ↔ 기능 추적성**: 필러 3~4개, 모든 기능이 최소 1개 필러에 걸려야 한다.
   어떤 필러도 지지하지 않는 기능은 컷 후보다 — **필러는 기능을 거절하는 도구다.**
 - **컷 규칙**: 일정이 밀렸을 때 버릴 순서가 미리 정해져 있나.
