@@ -147,6 +147,11 @@ Unity 배치로 직접 만들 때도 이 형식을 따른다.
 | 검사 통과 / 외형 승인 | **따로 적는다.** 자동 검사 통과는 사람의 외형 승인이 아니다 |
 
 기록된 교훈:
+- [2026-10-31 체형이 다른 이족 캐릭터의 발 관통·손 파고듦 고치기](lessons/2026-10-31-biped-body-shape-foot-lock.md) — 시범 완료, 체형이 크게 다르면 동작 공유 안 함
+- [2026-10-30 네발 캐릭터의 발 미끄러짐·관통을 보행 생성기와 클립 기반 가중치로 고치기](lessons/2026-10-30-quadruped-gait-and-clip-weights.md) — 제안, 외형 확인 전
+- [2026-10-30 손 뼈를 고칠 때 게임 쪽 손 자세 값도 같이 맞추기](lessons/2026-10-30-hand-rig-code-driven-poses.md) — 완료, 새 뼈 + 변환한 값 채택
+- [2026-10-29 Unity Humanoid 동작에서 다리가 뒤집히고 발이 떨릴 때](lessons/2026-10-29-unity-humanoid-avatar-legs-and-floor.md) — 완료
+- [2026-10-28 실사 손 리그의 손가락 뼈를 메시 모양에 맞춰 정상화하기](lessons/2026-10-28-hand-finger-normalize.md) — 도구 완성
 - [2026-10-23 자동 리깅 동작을 기존 Humanoid 캐릭터에 붙이기](lessons/2026-10-23-humanoid-autorig-retarget.md) — 완료, 새 리그 메시 채택
 - [2026-10-19 생성 모델을 기존 모션 리그에 맞추기(웹 three.js)](lessons/2026-10-19-web-character-skinning.md)
 
