@@ -6,6 +6,9 @@ Raw frames (from blender-dump-frames.py or a Unity batch dump):
 Existing Unity per-clip summary (EmoteCompare metrics.json style):
     python probe-metrics.py --unity-metrics metrics.json [--unity-metrics other.json ...] [--keys Wave,Dance1]
 
+Rig + motion check (blender-rig-check.py output, one model per file, clips as columns):
+    python probe-metrics.py --rig-check w0.json --rig-check w3.json [--keys Chase,G_Chase_b]
+
 Thresholds are provisional flags, not verdicts. Override with --thresholds t.json.
 Exit: 0 = no flag exceeded / 1 = some flag exceeded / 3 = nothing measurable.
 Standard library + numpy only. Input format: references/propose-probe-compose.md.
@@ -32,6 +35,18 @@ THRESHOLDS = {
     "ground_float_cm": ("바닥 뜸", "cm", 2.0, "max", "[확인 필요]"),
     "seam_rot_deg": ("반복 이음새 회전", "deg", 5.0, "max", "[확인 필요]"),
     "seam_pos_cm": ("반복 이음새 위치", "cm", 2.0, "max", "[확인 필요]"),
+    # blender-rig-check.py (--rig-check). Fixed criteria: contact 0.5cm, trim 1 frame, regions by rest position.
+    "rig_stance_off_cm": ("디딘 동안 발 높이 오차", "cm", None, "max", "[확인 필요]"),
+    "rig_foot_slip_cm": ("발 미끄러짐(디딘 구간 직선 이탈)", "cm", None, "max",
+                         "판정 고정(네발 접지 0.5cm, 이족 발 속도. 양 끝 1프레임 제외). 기준값 [확인 필요]"),
+    "rig_stretch_p99_mm": ("살 길이 변화 상위 1%", "mm", None, "max", "같은 메시끼리만 비교. 기준값 [확인 필요]"),
+    "rig_stretch_max_mm": ("살 길이 변화 최대", "mm", None, "max", "같은 메시끼리만 비교. 기준값 [확인 필요]"),
+    "rig_leg_stretch_mm": ("다리 영역 길이 변화 최대", "mm", None, "max", "영역은 기본 자세 위치로 고정. 기준값 [확인 필요]"),
+    "rig_seam_split_mm": ("이음매 벌어짐(겹친 정점 쌍)", "mm", None, "max",
+                          "실금을 없앤 사례(2026-10-30 w3)가 0. 허용폭 [확인 필요]"),
+    "rig_hand_pen_cm": ("손-몸 파고듦 깊이", "cm", None, "max", "기본 자세 값 뺌. 기준값 [확인 필요]"),
+    "rig_hand_pen_verts": ("손-몸 1cm 넘게 파고든 정점", "개", None, "max", "[확인 필요]"),
+    "rig_loop_seam_cm": ("반복 이음새(정점 첫·끝 차이)", "cm", None, "max", "반복 클립에만 의미 있음 [확인 필요]"),
     "open_edges": ("열린 모서리 수", "개", None, "max",
                    "삼각형 수보다 많으면 표면 조각남(함정 목록). 절대 기준 [확인 필요]"),
     "triangles": ("삼각형 수", "개", None, "max", "프로젝트 예산(asset-budget) [확인 필요]"),
@@ -201,6 +216,33 @@ def unity_rows(d, keys):
     return rows
 
 
+RIG_MAP = {
+    "ground_penetration_cm": "ground_pen_cm", "ground_float_cm": "ground_float_cm",
+    "rig_stance_off_cm": "stance_off_cm", "rig_foot_slip_cm": "slip_cm",
+    "rig_stretch_p99_mm": "stretch_p99_mm", "rig_stretch_max_mm": "stretch_max_mm",
+    "rig_leg_stretch_mm": "leg_stretch_mm", "rig_seam_split_mm": "seam_split_mm",
+    "rig_hand_pen_cm": "hand_pen_cm", "rig_hand_pen_verts": "hand_pen_verts", "rig_loop_seam_cm": "loop_seam_cm",
+}
+
+
+def rig_rows(d, keys, prefix):
+    """Map blender-rig-check.py output (one model, many clips) to rows. Clip filter = exact names."""
+    cr, model = d.get("criteria") or {}, d.get("model") or {}
+    base = [f"{d.get('kind')}", f"영역 {cr.get('region')}/{cr.get('leg_region')}",
+            (f"접지 {cr.get('contact_m', 0) * 100:g}cm" if cr.get("contact") == "height" else "발 속도 접지")
+            + f"·끝 {cr.get('trim_frames')}프레임 제외"]
+    rows = []
+    for clip, c in (d.get("clips") or {}).items():
+        if keys and clip not in keys:
+            continue
+        m = {k: c[src] for k, src in RIG_MAP.items() if c.get(src) is not None}
+        for k in ("open_edges", "triangles"):
+            if model.get(k) is not None:
+                m[k] = model[k]
+        rows.append((f"{prefix}:{clip}" if prefix else clip, m, base + [f"{c.get('frames')}프레임"]))
+    return rows
+
+
 def flag(key, v, th):
     lim, how = th[key][2], th[key][3]
     if v is None or lim is None:
@@ -239,7 +281,8 @@ def main():
     p.add_argument("candidates", nargs="*")
     p.add_argument("--ref")
     p.add_argument("--unity-metrics", action="append", default=[])
-    p.add_argument("--keys", default="")
+    p.add_argument("--rig-check", action="append", default=[], help="blender-rig-check.py output JSON")
+    p.add_argument("--keys", default="", help="clip names for --unity-metrics / --rig-check (exact)")
     p.add_argument("--thresholds")
     p.add_argument("--ground", type=float, default=0.0)
     p.add_argument("--contact-eps", type=float, default=0.03, help="m above the foot's lowest height counted as contact")
@@ -267,6 +310,10 @@ def main():
             rows = unity_rows(json.load(fp), keys)
         tag = os.path.basename(os.path.dirname(os.path.abspath(u)))
         cols += [(f"{tag}:{k}" if len(a.unity_metrics) > 1 else k, m, n) for k, m, n in rows]
+    for r in a.rig_check:
+        d = load(r)
+        tag = d.get("candidate") or os.path.splitext(os.path.basename(r))[0]
+        cols += rig_rows(d, keys, tag if len(a.rig_check) > 1 else "")
     if not cols:
         print("측정 불가: 입력 없음", file=sys.stderr)
         sys.exit(3)
@@ -277,6 +324,8 @@ def main():
         lines.append(f"- {n}: " + "; ".join(notes))
     if a.unity_metrics:
         lines.append("- Unity 요약 입력: 발 미끄러짐=max(slideL,slideR), 이음새 위치=seamHip. 원시 프레임 입력과 정의가 다를 수 있다.")
+    if a.rig_check:
+        lines.append("- 리그 검사 입력: 바닥은 기본 자세 최저점. rig_* 지표는 원시 프레임 지표(foot_slide_cm 등)와 정의가 달라 따로 둔다.")
     lines.append("- 임시 기준은 표시용이다. 채택은 렌더와 함께 사람이 정한다. 수치 하나로 결론 내지 않는다.")
     text = "\n".join(lines)
     print(text)
