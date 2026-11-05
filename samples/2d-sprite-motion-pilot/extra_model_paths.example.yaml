@@ -1,0 +1,6 @@
+moim_silver_pilot:
+  base_path: D:/00.project/GameDevTeam/out/moim-silver-pilot/models
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders
+  vae: vae
+  loras: loras
