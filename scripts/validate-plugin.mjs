@@ -407,6 +407,53 @@ if (exists(WF_DIR)) {
   }
 }
 
+// ── 10. test/ 의 테스트가 CI 에서 실제로 도는가 ──────────────────────────
+// 손으로 나열하는 목록은 샌다. CI 가 테스트 파일명을 나열하는 사이 test/ 에 4개가 더
+// 생겼고 **한 번도 안 돌았다**(REVIEW.md B-20). 통과하고 있었으니 아무도 몰랐다.
+//
+// 처음엔 여기서 "워크플로가 각 파일을 덮는가"를 텍스트로 검사하려 했는데 두 번 연속
+// 거짓 통과했다 — 스텝 `name:` 의 글롭, 그리고 `echo "FAIL: test/*.test.mjs"` 의 글롭이
+// 커버리지로 잡혔다. "언급된 문자열"과 "파일을 고르는 문자열"은 텍스트로 구분되지 않는다.
+// 그래서 목록 자체를 없앴다: `scripts/run-tests.mjs` 가 test/ 를 글롭한다.
+// 여기서는 **러너가 존재하고, CI 가 그걸 부르고, 러너가 파일명을 나열하지 않는가**만 본다.
+const RUNNER = 'scripts/run-tests.mjs';
+const WF_DIR2 = path.join(ROOT, '.github', 'workflows');
+if (exists(WF_DIR2)) {
+  const runnerPath = path.join(ROOT, RUNNER);
+  if (!exists(runnerPath)) {
+    err(RUNNER, '테스트 러너가 없다 — CI 가 돌릴 대상을 스스로 찾지 못한다.');
+  } else {
+    // 러너가 파일명을 박아두면 글롭의 의미가 사라진다.
+    const runnerSrc = read(runnerPath);
+    const hard = [...runnerSrc.matchAll(/['"`]test\/[A-Za-z0-9._-]+\.test\.[a-z]+['"`]/g)].map((m) => m[0]);
+    if (hard.length) {
+      err(RUNNER, `러너가 테스트 파일명을 박아두고 있다: ${hard.join(', ')} — test/ 를 읽어서 찾아라.`);
+    }
+
+    let callsRunner = false;
+    for (const wf of fs.readdirSync(WF_DIR2).filter((f) => /\.ya?ml$/.test(f))) {
+      for (const ln of read(path.join(WF_DIR2, wf)).split(/\r?\n/)) {
+        const t = ln.trim();
+        if (!t || t.startsWith('#')) continue;      // 주석은 실행되지 않는다
+        if (/^-?\s*name:/.test(t)) continue;        // 스텝 이름도 실행되지 않는다
+        // 정규식 대신 포함 검사 — 이스케이프 한 글자가 날아가면 조용히 못 찾는다(실제로 겪었다).
+        if (t.includes(RUNNER) && /(^|\s)node(\s|$)/.test(t)) callsRunner = true;
+      }
+    }
+    if (!callsRunner) {
+      err('.github/workflows', `CI 가 \`node ${RUNNER}\` 를 부르지 않는다 — 테스트가 안 돈다.`);
+    }
+
+    // 러너가 0개를 찾고 조용히 통과하는 걸 막는다(빈 결과 = 검사기 고장).
+    const td = path.join(ROOT, 'test');
+    if (exists(td)) {
+      const n = fs.readdirSync(td).filter((f) => /\.test\.(mjs|js|py)$/.test(f)).length;
+      if (n === 0) err('test/', 'test/ 에 테스트 파일이 하나도 없다 — 러너가 빈 집합을 돌린다.');
+    }
+  }
+}
+
+
 // ── 결과 ─────────────────────────────────────────────────────────────────
 const line = (x) => `  ${x.where}: ${x.msg}`;
 

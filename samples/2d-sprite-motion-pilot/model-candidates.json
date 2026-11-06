@@ -1,0 +1,58 @@
+[
+  {
+    "repo": "Comfy-Org/Flux-2-Klein-4B",
+    "revision": "5b3abca5c0dc1ecd4eaf3340868d09063fc1c965",
+    "file": "split_files/text_encoders/qwen_3_4b.safetensors",
+    "size": 8044982048,
+    "sha256": "6c671498573ac2f7a5501502ccce8d2b08ea6ca2f661c458e708f36b36edfc5a"
+  },
+  {
+    "repo": "Comfy-Org/Flux-2-Klein-4B",
+    "revision": "5b3abca5c0dc1ecd4eaf3340868d09063fc1c965",
+    "file": "split_files/vae/flux2-vae.safetensors",
+    "size": 336211292,
+    "sha256": "868fe7b343cc8f3a19dbcfcafbc3d5f888802be3f89bd81b65b3621a066ce8f3"
+  },
+  {
+    "repo": "black-forest-labs/FLUX.2-klein-4b-fp8",
+    "revision": "5b4408e59397a4a37ccb46afe426d8ed86379441",
+    "file": "flux-2-klein-4b-fp8.safetensors",
+    "size": 4070624520,
+    "sha256": "97ed34fe0567e436200f2faee3939b88f2b5d99f8af2a4dc16532c4245c0ccb6"
+  },
+  {
+    "repo": "thedeoxen/refcontrol-FLUX.2-klein-4B-reference-depth-lora",
+    "revision": "0ae1ef7f9acc4e55ec2237360943c3c3032d3583",
+    "file": "flux2_klein_4b_refcontrol_depth.safetensors",
+    "size": 92426784,
+    "sha256": "65ec4c71fa7538b2201481928609a5836773f0dc06a4041b2d28abd05826c401"
+  },
+  {
+    "repo": "Comfy-Org/Wan-2.2",
+    "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+    "file": "split_files/diffusion_models/wan2.2_fun_control_high_noise_14B_fp8_scaled.safetensors",
+    "size": 14296064656,
+    "sha256": "aa2f6b6f4cfc8a75a273a075db31730530f93320a996b153b8825205c3a3c498"
+  },
+  {
+    "repo": "Comfy-Org/Wan-2.2",
+    "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+    "file": "split_files/diffusion_models/wan2.2_fun_control_low_noise_14B_fp8_scaled.safetensors",
+    "size": 14296064656,
+    "sha256": "0f83c7b1cd6d509ff3504a8f604ca9d9876a8b1ed04f6e05095c4a7ccb9009cd"
+  },
+  {
+    "repo": "Comfy-Org/Wan-2.2",
+    "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+    "file": "split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_high_noise.safetensors",
+    "size": 1226977424,
+    "sha256": "d176c808d6fc461999b68e321efcb7501b20b8c3797523ed0df14f7d1deff11e"
+  },
+  {
+    "repo": "Comfy-Org/Wan-2.2",
+    "revision": "ee6f4a40737a995bf5818954cfce6d59443b0f04",
+    "file": "split_files/loras/wan2.2_i2v_lightx2v_4steps_lora_v1_low_noise.safetensors",
+    "size": 1226977424,
+    "sha256": "024f21de095bc8fad9809ded3e9e49a2e170dcf27075da8145ba7d60d8aab7f9"
+  }
+]

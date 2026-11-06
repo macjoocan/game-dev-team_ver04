@@ -40,14 +40,13 @@ jobs:
           done
           echo "문법 검사 $n 파일 통과"
 
-      - name: ComfyUI 사전 검사와 아이콘 반입 테스트
-        run: node --test test/comfy-preflight.test.mjs test/icon-import.test.mjs test/motion-clip-tools.test.mjs test/motion-court.test.mjs
-
-      - name: 기획·개발 후보 비교 하네스 테스트
-        run: node --test test/candidate-harness.test.mjs
-
-      - name: 작업 재개·역할 인계와 기존 진입점 호환 테스트
-        run: node --test test/team-work.test.mjs test/hermes-handoff.test.mjs
+      # 파일 이름을 손으로 나열하지 마라. 러너가 test/ 를 글롭한다 — 목록이 없으니
+      # 드리프트할 것도 없다. 나열하던 시절 test/ 에 4개가 더 생겼는데 CI 가 한 번도
+      # 안 돌렸다(REVIEW.md B-20). validate-plugin §10 이 "러너를 부르는가"를 검사한다.
+      - name: 테스트 전체 (러너가 test/ 를 글롭)
+        run: |
+          python3 -m pip install --quiet --disable-pip-version-check pillow numpy
+          node scripts/run-tests.mjs
 
       - name: 생성 도구 스모크 (스펙 -> 실제 산출물)
         run: |
