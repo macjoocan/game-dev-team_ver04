@@ -1,0 +1,101 @@
+{
+  "commit": "4c43b68",
+  "records": [
+    {
+      "label": "sprite-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\alpha-repaired",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\qa\\sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "label": "normalize-probe",
+      "args": [
+        "skills/char-art-system/scripts/sprite-normalize.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\alpha-repaired",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\normalized-probe",
+        "--canvas",
+        "640x512",
+        "--no-scale"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "uniform-atlas",
+      "args": [
+        "skills/char-art-system/scripts/atlas-pack.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\export\\uniform",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\export\\uniform.png",
+        "--trim",
+        "--max",
+        "4096"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "snappy-atlas",
+      "args": [
+        "skills/char-art-system/scripts/atlas-pack.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\export\\snappy",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\export\\snappy.png",
+        "--trim",
+        "--max",
+        "4096"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "timing-tests",
+      "args": [
+        "--test",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\timeline.test.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "feel-audit",
+      "args": [
+        "skills/polish/scripts/feel-audit.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\feel.json",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\qa\\feel"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "sourceHashes": {
+    "frame_0000.png": "7c0687fdfc2c4136c8eb545e5ce16841d05199aa7875f21a86b60ff225de7848",
+    "frame_0001.png": "73ecbe58709a18a270025be1acf188d75e2ff28df6a8b4302fd0125a0fb906d6",
+    "frame_0002.png": "1f1d7f7ee3fba7ee2144b8d68346cdabfbe17c0338142c7a1a65a677ed013064",
+    "frame_0003.png": "1b011a09b961c11c8403aafad0e1749fb7b0bf19e27c05c7daea8a496f08b405",
+    "frame_0004.png": "f8907058ba7a620f08ab96b39a0c8f679c47ba2e2eb5bbc02284e43c3965fc13",
+    "frame_0005.png": "18ca74fa7a5878964c3b9852810a3ff643e502512e9bb5c1d92eb4e26b2b8555",
+    "frame_0006.png": "95000114f274c1f28b5943db6ed1df661b18923209f2a21b4871fda69319d0da",
+    "frame_0007.png": "0c322966875225da6de082b7304c0da827aece4c81b5dd52e8bfb65d62e6168a",
+    "frame_0008.png": "3a4a40d4dd286974278ee28f5d8e527ecdec2d5fc114347d226e3740b940c954",
+    "frame_0009.png": "62f402658e70f019cd334256e985a053a3e4afa329aa6197f817e4681c773149",
+    "frame_0010.png": "098523968566f881d2041a0fbde47757737e0442ddf61165bfae8e25ad86d790",
+    "frame_0011.png": "c6018ad941e415b6e967a0391dacfd8b1eb1a23dcd3b4e104c09638601495b20",
+    "frame_0012.png": "44efa73ef5fd8845f368355ee616fb7c717e00b8c4d61360391a85680a61d2f3",
+    "frame_0013.png": "223eb154dcbecb9fd1d4305186441872adb82f980e29a4ecf388fc4d3836a124",
+    "frame_0014.png": "cfb3dcb979d451ff544a632c5f2a43e0a002a66ce01eb203adb52cafdd0629b9",
+    "frame_0015.png": "1e119f6a02925e345fed51fd6e83ccc2099d3566ed2c919e18879c7dd8d62ccb",
+    "frame_0016.png": "af33ab8f68b8e2aba7a04e4f874d079750a27ba984731e6075c110d1f0c22d66",
+    "frame_0017.png": "aa05c316ae327369594ddec9b47cabefb7bfab844860a988289ccf879798b06c",
+    "frame_0018.png": "c7ac3c575c2c41286da29a3c6a90f4a6f09eac3fb26f04c11782a9716a67e71e",
+    "frame_0019.png": "048fd1b74f03713740ecff9180907bbe3ac659faa81bcfd44c26b70140e4eb1a",
+    "frame_0020.png": "81c2774ce449c4e13cfe66c6ffd7eb4e453558746e99f8b42426d0625a1182fe",
+    "frame_0021.png": "553b725f523051494336e984557dfd78c40a87c8f3baf39dc8c73539f8b06d6b",
+    "frame_0022.png": "8c8955060b1759f64bc3dd269fbbd29a6b140ae2846f28e28e315be7909754db",
+    "frame_0023.png": "0a1c50ccd2d1249ca7de3db99a8064dabac9a64519c5a699616f4f9c6ca1df2d",
+    "frame_0024.png": "55bb6a671e808bc8f1a917dc57483a5b9d07153f9705d90c696561f255c8b16d"
+  },
+  "paidCalls": 0,
+  "engineValidationExecuted": false
+}

@@ -1,0 +1,193 @@
+{
+  "model": "D:\\AI\\models\\rembg\\birefnet-general-lite.onnx",
+  "modelMd5": "4fab47adc4ff364be1713e97b7e66334",
+  "provider": [
+    "CPUExecutionProvider"
+  ],
+  "method": "BiRefNet general lite, published rembg preprocessing; white edge decontamination",
+  "seconds": 225.63,
+  "frames": [
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0000.png",
+      "file": "frame_0000.png",
+      "opaquePixels": 40959,
+      "nonzeroPixels": 46548,
+      "sha256": "2bdd28ae2ac90c813196cacd7aac7ff9a358330ba6d15451c0e2d08a12f5d999"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0001.png",
+      "file": "frame_0001.png",
+      "opaquePixels": 40573,
+      "nonzeroPixels": 45465,
+      "sha256": "f57d7a736171791b6520dfd913f727acf72b6a7543b92ca9d507d4f24a9229b1"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0002.png",
+      "file": "frame_0002.png",
+      "opaquePixels": 39903,
+      "nonzeroPixels": 44614,
+      "sha256": "2867852c09f7f9e24c4ce1dca0117ff77d2959dcae0fd15f38b662bfd790495c"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0003.png",
+      "file": "frame_0003.png",
+      "opaquePixels": 41973,
+      "nonzeroPixels": 47219,
+      "sha256": "2e1ae5402b3ea826ea0063c2166f56edaa936526baefe3f1941600b18ee130a8"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0004.png",
+      "file": "frame_0004.png",
+      "opaquePixels": 42199,
+      "nonzeroPixels": 47630,
+      "sha256": "fb2c8352189d0c96808c3c8f56d0bad61e02cc80df570aa4810fd2a3512dc789"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0005.png",
+      "file": "frame_0005.png",
+      "opaquePixels": 42684,
+      "nonzeroPixels": 48017,
+      "sha256": "a9c338b972f27c2286401bb8039a25a189883ae6a708bf598420950bedc48449"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0006.png",
+      "file": "frame_0006.png",
+      "opaquePixels": 43096,
+      "nonzeroPixels": 48579,
+      "sha256": "ed18d027be777c2a2da8b02f4beddbdfdb501bfeadb6066f6987f2df0c137501"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0007.png",
+      "file": "frame_0007.png",
+      "opaquePixels": 43571,
+      "nonzeroPixels": 49229,
+      "sha256": "24f0c16d441257e771b6470d7cb37a7ac6e9b1a4ccbf9eafb01b68c27ae259c6"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0008.png",
+      "file": "frame_0008.png",
+      "opaquePixels": 43682,
+      "nonzeroPixels": 49471,
+      "sha256": "8f646cfe5189d323e69f20183f8ad21732986247b4e645856bd559635651ede6"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0009.png",
+      "file": "frame_0009.png",
+      "opaquePixels": 43340,
+      "nonzeroPixels": 49441,
+      "sha256": "30989773396fd1692b1319c7fcad8d243e37d980161f530cde459cfe1f9b6df9"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0010.png",
+      "file": "frame_0010.png",
+      "opaquePixels": 43447,
+      "nonzeroPixels": 49228,
+      "sha256": "123e4f23cbe9ec05f4393f949754dce5965f510bb872592445f859b50ff1af2f"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0011.png",
+      "file": "frame_0011.png",
+      "opaquePixels": 42570,
+      "nonzeroPixels": 48221,
+      "sha256": "0a7e91b64c5ec518b1672016527e8526667e13dc0caa2ecc1dc542317b61e59b"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0012.png",
+      "file": "frame_0012.png",
+      "opaquePixels": 42552,
+      "nonzeroPixels": 47993,
+      "sha256": "11f57cb477dc4329a35a578b1adbaf5562ca80bf79fb292e3d1679d075c36f9f"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0013.png",
+      "file": "frame_0013.png",
+      "opaquePixels": 41589,
+      "nonzeroPixels": 46698,
+      "sha256": "374a63d9c3e3548701419d9b1f77f1a3116a05e71896f8e0dde7ff475bbc7b15"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0014.png",
+      "file": "frame_0014.png",
+      "opaquePixels": 41035,
+      "nonzeroPixels": 45749,
+      "sha256": "815cf2e4d6aad0c578fb2369dfcef6845437c15b2812a23e2d684a2c20ea822f"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0015.png",
+      "file": "frame_0015.png",
+      "opaquePixels": 40249,
+      "nonzeroPixels": 45007,
+      "sha256": "04bdcf2cbdf6aa54724c4fc7aba9925b3d192f35a0b364dc34ac6c2d68a03d77"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0016.png",
+      "file": "frame_0016.png",
+      "opaquePixels": 42108,
+      "nonzeroPixels": 46794,
+      "sha256": "4fec267b92fd95149840428556c4ecf148bb38edaae5ffb30f272fdf205e226a"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0017.png",
+      "file": "frame_0017.png",
+      "opaquePixels": 44259,
+      "nonzeroPixels": 49512,
+      "sha256": "1449e7233b8029059cbaded287d3e61e300cd164c568ef84609885e99324c36a"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0018.png",
+      "file": "frame_0018.png",
+      "opaquePixels": 44887,
+      "nonzeroPixels": 50420,
+      "sha256": "e0723fa1023f1b6dac74e2c7337fe99467f03066ebcce44187a5a75f5d6cd3d6"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0019.png",
+      "file": "frame_0019.png",
+      "opaquePixels": 45310,
+      "nonzeroPixels": 50821,
+      "sha256": "8e644a0cd23ef67a286a6e5b7a21d2a802abef41d6809f6e874134a98edd6a8c"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0020.png",
+      "file": "frame_0020.png",
+      "opaquePixels": 45697,
+      "nonzeroPixels": 51239,
+      "sha256": "57cd7878f4d69ac3aaaef0153dbafbdd18d311579d5612f82c32b8864042d5fc"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0021.png",
+      "file": "frame_0021.png",
+      "opaquePixels": 45325,
+      "nonzeroPixels": 51059,
+      "sha256": "8b461987f17286d8240a7cf903d2993f8ef40aa9af648bf6e236ad0d43fa6cf0"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0022.png",
+      "file": "frame_0022.png",
+      "opaquePixels": 45448,
+      "nonzeroPixels": 51483,
+      "sha256": "8a75ac023d0ffa138cb2fed4bf31b65e64d0f4344b6f795e19fcbbed1e5624a2"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0023.png",
+      "file": "frame_0023.png",
+      "opaquePixels": 45588,
+      "nonzeroPixels": 51279,
+      "sha256": "427fa30184d6be90a0f3a6a8c678616670a3e858d408373d5acf49b202aefd47"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0024.png",
+      "file": "frame_0024.png",
+      "opaquePixels": 44923,
+      "nonzeroPixels": 50632,
+      "sha256": "10e4e8cffc8f9558519ed45d368238dd6aae6c9ae57910b702a6718da92f905c"
+    },
+    {
+      "source": "out\\experiments\\local-motion-20261106\\b-motion\\frame_0025.png",
+      "file": "frame_0025.png",
+      "opaquePixels": 44321,
+      "nonzeroPixels": 49404,
+      "sha256": "2cb304024edd00d6667daeae295f2b6d198c9ea87b02e777259f061b7fcb3ef5"
+    }
+  ]
+}

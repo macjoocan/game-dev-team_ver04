@@ -37,8 +37,11 @@ const OUT = opt('--out', 'sim');
 const FORCE = args.includes('--force');
 
 // 템플릿 + 플러그인에서 복사할 공용 라이브러리
-const fromTemplates = ['rng.mjs', 'policies.mjs', 'game.mjs', 'targets.mjs', 'run.mjs', 'curve-check.mjs', 'README.md'];
-const fromPlugin = { 'lib-stats.mjs': path.join(PLUGIN_ROOT, 'scripts', 'lib-stats.mjs') };
+const fromTemplates = ['rng.mjs', 'policies.mjs', 'game.mjs', 'targets.mjs', 'run.mjs', 'curve-check.mjs', 'clearability.mjs', 'README.md'];
+const fromPlugin = {
+  'lib-stats.mjs': path.join(PLUGIN_ROOT, 'scripts', 'lib-stats.mjs'),
+  'lib-playfeel.mjs': path.join(PLUGIN_ROOT, 'skills', 'playtest-capture', 'scripts', 'lib-playfeel.mjs'),
+};
 
 const missing = [
   ...fromTemplates.map((f) => path.join(TEMPLATES, f)),

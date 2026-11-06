@@ -3,3 +3,12 @@
 /plugins/game-dev-team/scripts/candidate-*.mjs -text
 /test/candidate-harness.test.mjs -text
 /docs/verification/candidate-harness-2026-10-24/*.txt -text
+
+# 검수 기록의 SHA-256을 다른 PC에서도 유지한다.
+/out/2d-gpt-20261106/** -text
+/out/experiments/** -text
+/out/fx-common-v2/** -text
+/out/fx-common-v2-qa/** -text
+/out/devteam-upgrade/** -text
+/out/integration-20261106/** -text
+/out/day-handoff-20261106/** -text

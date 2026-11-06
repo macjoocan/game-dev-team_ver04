@@ -1,0 +1,38 @@
+{
+  "verdict": "충족",
+  "bg": "#101010",
+  "thresholds": {
+    "FLASH_LUM_DELTA": 0.1,
+    "DARK_CEILING": 0.8,
+    "MAX_FLASHES_PER_SEC": 3,
+    "AREA_EXEMPT": 0.25
+  },
+  "results": [
+    {
+      "name": "preview_sheet",
+      "frames": 32,
+      "fps": 24,
+      "loop": true,
+      "blend": "normal",
+      "duration": 1.3333333333333333,
+      "flashes": [
+        {
+          "from": 9,
+          "to": 24,
+          "delta": 0.002015748840561063,
+          "darker": 0.006413427745113392,
+          "area": 0.01220703125,
+          "red": 0,
+          "t": 1
+        }
+      ],
+      "perSec": 1,
+      "worstWindow": 1,
+      "maxArea": 0.01220703125,
+      "maxRed": 0,
+      "status": "충족",
+      "overRate": false,
+      "areaExempt": true
+    }
+  ]
+}

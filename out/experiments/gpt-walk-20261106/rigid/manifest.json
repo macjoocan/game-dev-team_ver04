@@ -1,0 +1,73 @@
+{
+  "id": "chr.silver.gpt-walk.rigid",
+  "version": 1,
+  "status": "concept",
+  "humanApproved": false,
+  "preferred": false,
+  "input": "../input/master.png",
+  "inputSha256": "d51f93c77c6ff32281b440c9892d8c21695771439c35ce37a35c7b093e27a8d6",
+  "generator": "sprite-maker native Rust core; manual rig",
+  "license": "source code MIT / Apache-2.0; production rights of artwork not reviewed",
+  "files": [
+    {
+      "path": "contact-large.png",
+      "sha256": "be2c98013d426fa5cd0b6aa3de4b4b9021bdb2c6b9db9eb16f89a9131cea046c",
+      "bytes": 259814
+    },
+    {
+      "path": "frames/frame_00.png",
+      "sha256": "21e0346a9129599ebf67c4f8b6c94488db21dd66d8f3493ad76bfce5d947efe5",
+      "bytes": 166028
+    },
+    {
+      "path": "frames/frame_01.png",
+      "sha256": "d847ef5774611dd8721c9ad04687e5f67d915eba5530b7239b49673efe5751c3",
+      "bytes": 157882
+    },
+    {
+      "path": "frames/frame_02.png",
+      "sha256": "397bfd72ce1b4cea1e3f7b7c8cc3e370c6cdb08cf6228b499a8c768f33c3805b",
+      "bytes": 153074
+    },
+    {
+      "path": "frames/frame_03.png",
+      "sha256": "70395fa8f546e0566088417b19c98eef16246f6bf6ca5008c6c5b29c5c49ac29",
+      "bytes": 156488
+    },
+    {
+      "path": "frames/frame_04.png",
+      "sha256": "e192df4c1f605672f38f90f23f15e08676d9ea923997cbea71da42fe223563dd",
+      "bytes": 164246
+    },
+    {
+      "path": "frames/frame_05.png",
+      "sha256": "b471423d758ce6ec7258dbacbabdcfa1469d8984e66866bda59e989de3c84698",
+      "bytes": 155613
+    },
+    {
+      "path": "frames/frame_06.png",
+      "sha256": "cac74a0fc987ef68387b067ee037f32117a61185b45fde5502c0ba97a243cae8",
+      "bytes": 149135
+    },
+    {
+      "path": "frames/frame_07.png",
+      "sha256": "403957ed2a7f844f9a2ba570a1a0edbef9b9fcf12a451a91c1b8103d784e9128",
+      "bytes": 157699
+    },
+    {
+      "path": "frames/kinematics.json",
+      "sha256": "1c2b9445a222774407b9d35bf87b81ff43ff21e60c51e38a713b06a7e038d5ac",
+      "bytes": 27519
+    },
+    {
+      "path": "preview.gif",
+      "sha256": "3ff54f54138b351c5c459a0b5414401d4e9bb9d8fd827a7d633a3a49fa20fca2",
+      "bytes": 135736
+    },
+    {
+      "path": "sequence.json",
+      "sha256": "d3650123ef9be353a2d0a01d4db6593a49cd8e1f973f903200dfa80976ff48e9",
+      "bytes": 735
+    }
+  ]
+}

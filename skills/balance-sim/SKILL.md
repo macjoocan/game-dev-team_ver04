@@ -1,13 +1,15 @@
 ---
 name: balance-sim
 description: >
-  게임 밸런스를 자동 시뮬레이션으로 검증한다("게임성 검증"). 전투/런을 수백~수천 번 자동 플레이해
+  요청받은 게임 밸런스를 봇 시뮬레이션으로 측정한다. 전투/런을 수백~수천 번 자동 플레이해
   승률·런 길이·카드(선택지) 픽률·사망 곡선을 목표 지표와 대조한다. 정확성(버그) 검증인 QA와 구분된다.
-  "밸런스 시뮬레이션 돌려줘", "승률 뽑아줘", "게임성 검증해줘", "자동 플레이 N판",
+  "밸런스 시뮬레이션 돌려줘", "승률 뽑아줘", "자동 플레이 N판",
   "회복 예산 맞는지 확인", "밸런스 자동 검증" 같은 요청에 사용.
 ---
 
-이 스킬은 "재밌는가 / 밸런스가 맞는가"를 감이 아니라 데이터로 검증한다.
+이 스킬의 시뮬레이션은 사람이 요청할 때만 실행한다. ④에서 자동으로 돌리지 않는다. 봇 기준 수치를 측정하며 사람의 재미·난이도를 판정하지 않는다.
+
+④ 자동 검사는 `scripts/clearability-check.mjs`로 실제 데이터의 논리적 모순만 확인한다. [검사 계약](references/clearability.md)을 따른다.
 소유자는 game-designer이며, 필요한 시뮬 하네스는 developer가 만든다.
 
 ## 절차
@@ -35,7 +37,7 @@ node <플러그인>/skills/balance-sim/scripts/sim-scaffold.mjs --out sim
 | `simulateRun({ rng, config, policy })` | **프로젝트** — 런 로직 (여기만 구현하면 된다) |
 | 시드·배치·집계·신뢰구간·판정·리포트·커밋 스탬핑 | 스캐폴드 |
 
-생성물: `run.mjs`(배치 실행+리포트) · `curve-check.mjs`(난이도 곡선) · `rng.mjs`(시드 고정) ·
+생성물: `clearability.mjs`(실제 데이터 어댑터) · `lib-playfeel.mjs`(플레이 기록·예산) · `run.mjs`(배치 실행+리포트) · `curve-check.mjs`(봇 기준 곡선) · `rng.mjs`(시드 고정) ·
 `policies.mjs`(정책 2종) · `game.mjs`(계약 스텁) · `targets.mjs`(기획 소유 목표) ·
 `lib-stats.mjs`(통계) · `README.md`. **자기완결적**이라 플러그인 없이 프로젝트 CI에서 돈다.
 
@@ -49,6 +51,8 @@ node <플러그인>/skills/balance-sim/scripts/sim-scaffold.mjs --out sim
 - 정책 최소 2종(무작위=하한 / 휴리스틱)으로 상·하한을 본다.
 
 ### 3. 몬테카를로 실행 — **판수는 목표 오차에서 역산한다**
+
+프로젝트 루트의 `playfeel.md`가 있으면 마지막 사람 플레이 기록 이후 2회까지만 실행한다. 세 번째는 리포트 없이 예산 차단(exit 3)이다. 기록이 없으면 예산 검사를 쓰지 않는다. 실제 피드백은 `playtest-capture/scripts/playfeel.mjs`로 기록한다. 사람 기록을 지어내거나 예산을 임의로 리셋하지 않는다.
 
 ```bash
 node sim/run.mjs --seed 42 --runs auto --margin 0.02   # 오차 ±2pp 를 만족하는 판수 자동 계산
@@ -88,7 +92,7 @@ node sim/curve-check.mjs sim-out/results.json
 지표 미충족이면 "어떤 수치를 얼마로" 조정할지 가설을 제시하고 game-designer/기획 단계로 반환한다.
 임의로 밸런스 수치를 고치지 않는다(수치 변경은 기획 게이트 소관).
 
-종료 코드로 CI 게이트를 걸 수 있다: `0` 충족 · `1` 미달 · `3` 측정 불가.
+요청한 봇 지표의 종료 코드다. ④ 승인과 구분한다: `0` 충족 · `1` 미달 · `3` 측정 불가.
 
 ## 엔진별 참고
 - Unity 프로젝트: 전투 로직을 `Game.Core`(UnityEngine 무참조)로 분리해 dotnet/EditMode로 시뮬. 상세: `references/unity-headless-sim.md`

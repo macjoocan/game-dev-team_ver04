@@ -55,7 +55,7 @@ Claude Code 세션과 병행한다면 파일 소유권 계약을 먼저 확인�
 - 진행 중인 프로젝트 온보딩 시: 현재 상태를 진단해 올바른 단계로 중간 진입, 충족된 게이트는 근거와 함께 백필. ⓪부터 재시작하지 않는다.
 - 0→1 코어 확정.
 - 1→2 기획 게이트: 근거 없는 수치 0, 미결 명시, 핵심 수치 공란 0, 게임성 지표 정의.
-- 3↔4 프로토/게임성 검증 루프: 반복 예산 기본 3회, 1회 조정 노브 최대 2개.
+- 3↔4 통과는 사람 플레이와 사람 승인으로 정한다. 자동 검사는 논리적 클리어 가능성뿐이다. 밸런스 시뮬은 요청형이다. 사람 플레이 기록 이후 시뮬 2회까지 허용한다.
 - 5→6 본구현 후 정확성 QA.
 - 재미 통과 후에만 메타 경제/수익화 트랙으로 이동한다.
 
@@ -64,9 +64,19 @@ Claude Code 세션과 병행한다면 파일 소유권 계약을 먼저 확인�
 **하네스를 처음부터 만들지 마라.** 스캐폴드가 계약만 프로젝트에 남기고 나머지를 다 가져간다.
 전부 종료 코드를 낸다: `0` 충족 / `1` 미달 / `3` 측정 불가.
 
-### 게임성 검증 (3↔4 게이트, 봇 축)
+### 클리어 가능성 검사 (3↔4 자동 검사)
 ```bash
-node skills/balance-sim/scripts/sim-scaffold.mjs --out sim   # sim/ 골격 생성 (8파일, 자기완결적)
+node skills/balance-sim/scripts/clearability-check.mjs sim/clearability.mjs --out clear-out
+node skills/playtest-capture/scripts/playfeel.mjs record --felt "실제 사람 피드백"
+node skills/playtest-capture/scripts/playfeel.mjs log
+```
+- 공급·필수 소비량 합계, 잠금 도달성, 순서 제약을 검사한다. 어댑터는 실제 게임 데이터를 읽는다. 미제공 축과 잘못된 매핑을 통과로 숨기지 않는다.
+- 사람 플레이 뒤 2회 예산은 `run.mjs`가 직접 확인한다. `playfeel.md`가 없는 프로젝트는 예산 검사를 쓰지 않는다. 중단된 실행도 1회를 소비한다.
+- 사람 피드백을 지어내지 않는다. 기록 성공은 게이트 승인이나 충분한 표본을 뜻하지 않는다.
+
+### 요청형 밸런스 측정 (봇 기준)
+```bash
+node skills/balance-sim/scripts/sim-scaffold.mjs --out sim   # sim/ 골격 생성 (10파일, 자기완결적)
 node sim/run.mjs --seed 42 --runs auto --margin 0.02          # 목표 오차에서 판수 역산
 node sim/run.mjs --seed 42 --runs 1000 --ab damageMax=25      # 공통 난수 A/B
 node sim/curve-check.mjs sim-out/results.json                 # 난이도 곡선 판정
@@ -79,7 +89,7 @@ node sim/curve-check.mjs sim-out/results.json                 # 난이도 곡선
   측정 불가다. 같은 52%를 1000판에서 얻으면 49~55%로 좁아져 충족이 된다.
 - 난수는 인자로 받은 `rng`만 쓴다. `Math.random()`을 한 군데라도 부르면 재현이 깨진다.
 
-### 사람 플레이테스트 (3↔4 게이트, 사람 축 — **봇만으로는 조건부다**)
+### 사람 플레이테스트 (3↔4 게이트의 판단 근거)
 ```bash
 node skills/playtest-capture/scripts/funnel-report.mjs <events.jsonl> --steps steps.json
 ```
@@ -153,6 +163,9 @@ node skills/ui-art-system/scripts/ui-kit-gen.mjs <ui-spec.json> --out out
 node skills/ui-art-system/scripts/icon-import.mjs <icons.json> --out out
 # 이펙트 시퀀스 + 스트립 시트
 node skills/fx-art-system/scripts/fx-gen.mjs <fx-spec.json> --out out
+# 2D·3D 공통 제작과 규격 검사 — 실제 엔진·사람 승인은 별도
+node skills/fx-art-system/scripts/fx-build.mjs <fx-pipeline-spec.json> --out fx-v1
+node skills/fx-art-system/scripts/fx-check.mjs fx-v1/manifest.json --out fx-v1-qa
 # 스프라이트 정규화·컷아웃·아틀라스 (char-art-system 에 모여 있다)
 node skills/char-art-system/scripts/sprite-normalize.mjs frames --out normalized
 node skills/char-art-system/scripts/cutout.mjs <폴더> --out cut
@@ -332,7 +345,7 @@ Claude Code 세션은 하네스가 시드·판수·커밋을 출력에 박아준
 - **설치본은 스냅샷이다.** 소스를 고치거나 push 해도 이미 설치된 프로젝트는 안 바뀌고
   아무도 알려주지 않는다(실측: project 스코프가 12버전 뒤처진 채 5일 방치 — 그동안
   `art-gate`·`cast-distinct`·`sprite-qa` 가 **없는** 플러그인을 쓰고 있었다).
-  `node scripts/check-plugin-version.mjs` 로 확인한다 — 0 최신 / 1 뒤처짐 / 3 알 수 없음.
+  `node scripts/check-plugin-version.mjs --source .`로 하네스별 버전·배포 파일 해시를 확인한다. 0 로컬 소스와 일치 / 1 차이 / 3 측정 불가. 같은 버전이어도 누락·변경·추가 파일을 보고한다.
 - 이 레포(플러그인 개발) 자체를 고쳤으면 `node scripts/validate-plugin.mjs`,
   CI(`.github/workflows/`)를 고쳤으면 `node scripts/ci-local.mjs`를 돌려라.
   후자는 워크플로를 **`bash -e`로** 실행한다 — 맨 `bash`로 재현하면 통과하는데

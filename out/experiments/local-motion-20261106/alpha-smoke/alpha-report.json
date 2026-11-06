@@ -1,0 +1,18 @@
+{
+  "model": "D:\\AI\\models\\rembg\\birefnet-general-lite.onnx",
+  "modelMd5": "4fab47adc4ff364be1713e97b7e66334",
+  "provider": [
+    "CPUExecutionProvider"
+  ],
+  "method": "BiRefNet general lite, published rembg preprocessing; white edge decontamination",
+  "seconds": 11.4,
+  "frames": [
+    {
+      "source": "out\\experiments\\local-motion-20261106\\input\\gpt-reference.png",
+      "file": "frame_0000.png",
+      "opaquePixels": 45103,
+      "nonzeroPixels": 50675,
+      "sha256": "e1bb176efd04a355bf12bd12065fd000aa9e3cccbf6c34b28fd3d6bdea133f52"
+    }
+  ]
+}

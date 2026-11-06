@@ -1,0 +1,4 @@
+
+아틀라스 2048x2088 · 스프라이트 26장 · 점유율 81.4%
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\local-motion-20261106\c-preview\atlas.png
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\local-motion-20261106\c-preview\atlas.json

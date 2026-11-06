@@ -1,0 +1,13 @@
+{
+  "kind": "asset-feedback",
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-06",
+  "artifact": "out/experiments/local-motion-20261106/a-motion",
+  "quotes": [
+    "오 모션은 딱 좋은데 칼 중간에 짤리는건 어쩔 수 없나? 그리고 이미지 몇장이 색이 좀 달라 ㅋㅋ",
+    "칼 잘리는건 확인했는데 이미지가 기준보다 커서 그런거 같음"
+  ],
+  "interpretation": "걷기 모션은 긍정 평가. 칼 잘림과 일부 프레임 색 변화 수정 필요.",
+  "productionApproval": false
+}

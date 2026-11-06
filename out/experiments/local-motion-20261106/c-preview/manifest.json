@@ -1,0 +1,336 @@
+{
+  "id": "chr.silver.local-wan-animate2.walk",
+  "status": "review",
+  "canvas": [
+    480,
+    512
+  ],
+  "frameCount": 26,
+  "fps": 14.4,
+  "fpsSource": "estimated from existing Ludo export",
+  "origin": "top-left",
+  "pivot": [
+    260,
+    462
+  ],
+  "pivotStatus": "Ludo toolbox measured feet anchor; engine validation pending",
+  "normalization": "Common input padding and output canvas; no per-frame bbox recentering or scaling",
+  "source": "GPT still + existing Ludo cycle26 pose driver, local Wan Animate 2",
+  "generationReceipt": "c-motion-run.json",
+  "paidGenerationCalls": 0,
+  "productionApproved": false,
+  "frames": [
+    {
+      "frame": 0,
+      "file": "frame_0000.png",
+      "sha256": "3e0c2d3d866569b6a106a3bd0402255a63614cee1bb1f3ee2fe5c052c2375cd2",
+      "alpha16MarginsLTRB": [
+        93,
+        46,
+        101,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 1,
+      "file": "frame_0001.png",
+      "sha256": "82894d853b7d8dec85f9d49fd1b3eeb8ca0d30bd0da8ee38d2f6c33ba3bc9db6",
+      "alpha16MarginsLTRB": [
+        94,
+        45,
+        92,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 2,
+      "file": "frame_0002.png",
+      "sha256": "8ac0c2b14a55b0bb917dbd06379b67910813f01e99457886061a1023be85452a",
+      "alpha16MarginsLTRB": [
+        95,
+        45,
+        83,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 3,
+      "file": "frame_0003.png",
+      "sha256": "d895fa29d6ec98cf93c0896dc570dc612388abf7d758286a42d5d209ce894a35",
+      "alpha16MarginsLTRB": [
+        96,
+        45,
+        72,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 4,
+      "file": "frame_0004.png",
+      "sha256": "3daa8fd40234c0d18e7320fea2de85528e6f09adc0af94596d5317ec1a504b68",
+      "alpha16MarginsLTRB": [
+        96,
+        45,
+        63,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 5,
+      "file": "frame_0005.png",
+      "sha256": "c1c3f97fe7414d16309a3a3f9f740bd9db834d8ddb1a613290c468425e7ffc13",
+      "alpha16MarginsLTRB": [
+        96,
+        45,
+        53,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 6,
+      "file": "frame_0006.png",
+      "sha256": "84b048ed66912ac7626854079e714563f455c5f401015f3c1c633bc745a24a90",
+      "alpha16MarginsLTRB": [
+        96,
+        47,
+        44,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 7,
+      "file": "frame_0007.png",
+      "sha256": "95b3288af3bf6583ce2ad617df94c4ede61d23c17e23abae2e7683b08cc953a6",
+      "alpha16MarginsLTRB": [
+        95,
+        49,
+        36,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 8,
+      "file": "frame_0008.png",
+      "sha256": "df011524f38b747dc686c447e59747104a77ed55468ad47ab6adeebcdf343de7",
+      "alpha16MarginsLTRB": [
+        94,
+        50,
+        34,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 9,
+      "file": "frame_0009.png",
+      "sha256": "665aa786b3c0f5d758b91caf36885600e9a69aefd4a6bec8ab4e5bf3e3c366b3",
+      "alpha16MarginsLTRB": [
+        92,
+        53,
+        26,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 10,
+      "file": "frame_0010.png",
+      "sha256": "89241faae426c284f78cac541b289e6a847275791ee2f331ad60ff9eb26230fd",
+      "alpha16MarginsLTRB": [
+        90,
+        55,
+        24,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 11,
+      "file": "frame_0011.png",
+      "sha256": "41e489d29ffede85513915d0bfa8a9207c566ddb1bc72d302fbdf86c34e90a89",
+      "alpha16MarginsLTRB": [
+        90,
+        55,
+        24,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 12,
+      "file": "frame_0012.png",
+      "sha256": "68a179ff6d9f781e75255eb533835af6e4942f275122185c2979e185f8bfe60b",
+      "alpha16MarginsLTRB": [
+        91,
+        52,
+        26,
+        52
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 13,
+      "file": "frame_0013.png",
+      "sha256": "586a800595bd1d3fcc68f389fa28808a9c329ecbc24376a0aa4cc195060d9a09",
+      "alpha16MarginsLTRB": [
+        93,
+        50,
+        31,
+        52
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 14,
+      "file": "frame_0014.png",
+      "sha256": "e31dd65de94b51fc655cf6717aeba06f410bdb852e9a5d949e73acfd0b8f1c15",
+      "alpha16MarginsLTRB": [
+        97,
+        47,
+        43,
+        51
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 15,
+      "file": "frame_0015.png",
+      "sha256": "d5a3968cdeb905de73023ebc8e6b34aa9d468e7f98cbad5e43b0b81467e9ff38",
+      "alpha16MarginsLTRB": [
+        98,
+        46,
+        52,
+        50
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 16,
+      "file": "frame_0016.png",
+      "sha256": "09c9eec8a22f80dd7a8b3d09b6cbcc36682646a28fd47725d6b703a335639ee6",
+      "alpha16MarginsLTRB": [
+        99,
+        46,
+        52,
+        50
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 17,
+      "file": "frame_0017.png",
+      "sha256": "e8861521a3d77739f55430c96c395726c8e4b859a862ec1ae6cc21f5deb2e974",
+      "alpha16MarginsLTRB": [
+        100,
+        45,
+        63,
+        47
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 18,
+      "file": "frame_0018.png",
+      "sha256": "8f9e0eb0490b9f89448299125cef7d8945c83e24d173777f5035f025b9a0aa03",
+      "alpha16MarginsLTRB": [
+        100,
+        45,
+        73,
+        52
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 19,
+      "file": "frame_0019.png",
+      "sha256": "459aa6acf281c2d32c5d124467d6514d6e6d58b8ff8453080ed4c98188d58dd3",
+      "alpha16MarginsLTRB": [
+        99,
+        46,
+        83,
+        52
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 20,
+      "file": "frame_0020.png",
+      "sha256": "f359a0667d50a8c977bfec446ecf586f9b2661f70fc018b8faafad62fc4cdd2c",
+      "alpha16MarginsLTRB": [
+        97,
+        47,
+        73,
+        52
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 21,
+      "file": "frame_0021.png",
+      "sha256": "76f0580a9c79e491a3d8a19a57793d67e03e01e28470e6821327e3d771c4ed1a",
+      "alpha16MarginsLTRB": [
+        94,
+        50,
+        71,
+        51
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 22,
+      "file": "frame_0022.png",
+      "sha256": "5f931d79418a7989e037906afbadbf422a72bea72b0194edbaf4c619e2e1fc2c",
+      "alpha16MarginsLTRB": [
+        89,
+        53,
+        93,
+        48
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 23,
+      "file": "frame_0023.png",
+      "sha256": "8d49eaf36e27611189da6d6230a106592c1222a93e7ce5b0480d08640bcc76f9",
+      "alpha16MarginsLTRB": [
+        89,
+        54,
+        98,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 24,
+      "file": "frame_0024.png",
+      "sha256": "09745319717ce2b0c873fcff55e2c0336bd78003180ea4e41e036f9e8b63fec7",
+      "alpha16MarginsLTRB": [
+        88,
+        54,
+        110,
+        49
+      ],
+      "borderPixels": 0
+    },
+    {
+      "frame": 25,
+      "file": "frame_0025.png",
+      "sha256": "92279db9a88696974ec2b778dcbde3c35e590e33226d18e4477fc37e4d8dbf70",
+      "alpha16MarginsLTRB": [
+        90,
+        51,
+        107,
+        49
+      ],
+      "borderPixels": 0
+    }
+  ]
+}

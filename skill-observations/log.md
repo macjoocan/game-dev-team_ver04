@@ -75,3 +75,124 @@ Add a troubleshooting note to the 3D asset pipeline: if `uvx` reports cache init
 **Suggested improvement:** Keep the original and repaired outputs, compare their last-to-first frames at a common playback period, and report boundary change relative to internal changes as a diagnostic rather than a universal gate. Preserve service timing assumptions, export scaling, watermarks and quoted versus settled credit observations.
 
 **Principle:** Validate the transition back to the first frame, and do not trade identity preservation for a smaller seam metric without human review.
+
+### Observation 4: 같은 버전의 설치본에도 최신 도구가 없을 수 있다
+
+**Status:** ACTIONED
+**Date:** 2026-11-05
+**Session context:** 데브팀 기능 강화 전 변경 이력과 설치 상태 확인
+**Skill:** setup-game-team
+**Type:** open-source
+**Phase/Area:** 설치본 최신성 확인
+
+**Issue:** 소스와 설치본이 모두 0.50.0이라 버전 검사기는 최신으로 표시했다. 그러나 현재 Codex 캐시에는 소스에 추가된 blender-rig-check.py가 없었다. 같은 캐시의 team-work.mjs와 trace-check.mjs는 소스와 해시가 같았다. 버전 일치만으로 전체 내용의 일치를 확인할 수 없었다.
+
+**Suggested improvement:** 설치 확인 절차에서 하네스별 대상 경로를 밝힌다. 버전뿐 아니라 배포 파일 목록과 해시를 대조한다. 이번에는 관찰만 기록하며 검사기와 설치본은 변경하지 않는다.
+
+**Principle:** 배포 버전이 같다는 사실과 설치된 파일 내용이 같다는 사실을 구분한다.
+
+**Reference file:** scripts/check-plugin-version.mjs
+
+**Resolution (2026-11-05):** 사용자 요청에 따라 배포 파일 해시 검사를 구현했다. Claude·Codex 0.51.0 설치본 각각 213개 파일 일치와 전체 CI 21/21 통과를 확인했다. 근거: out/devteam-upgrade/REPORT.md.
+
+### Observation 5: 자동 발견한 테스트에도 직접 의존성을 선언해야 한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** 원격 변경 통합 뒤 전체 CI 검증
+**Skill:** ci-cd-pipelines
+**Type:** open-source
+**Phase/Area:** 테스트 환경과 의존성 준비
+
+**Issue:** 테스트 자동 탐지로 Python 검사 2개가 실행됐지만 CI 설치 목록에는 두 검사 대상이 import하는 requests가 없었다. 로컬의 다른 Python에는 설치돼 있었으나 CI가 선택한 Python에서는 ModuleNotFoundError가 났다.
+
+**Suggested improvement:** 테스트 실행 대상을 늘릴 때 직접 의존성과 실제 선택된 인터프리터를 함께 확인한다. 이번 저장소의 CI 설치 목록은 수정했으며, 공용 스킬 변경은 다음 검토로 남긴다.
+
+**Principle:** 파일을 모두 발견하는 것과 같은 환경에서 실행할 수 있는 것은 별도 조건이다. 개발 PC에 우연히 설치된 패키지에 기대지 않는다.
+
+**Reference file:** out/integration-20261106/tests-final.txt
+
+### Observation 6: 생성 요청 ID는 완료 전에 저장해야 한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** 로컬 ComfyUI의 대형 모델 검증
+**Skill:** char-art-system
+**Type:** open-source
+**Phase/Area:** 실행 기록과 중단 복구
+
+**Issue:** comfy-run.mjs는 요청 ID를 받은 뒤 생성 완료를 기다리고, 모든 결과를 받은 뒤에야 run-log.json을 쓴다. 대형 모델의 초기 적재가 길어지는 동안 프로세스가 종료되면 실행 중인 요청 ID가 로컬 기록에 남지 않는다. 이번에는 서버의 queue·history를 별도 저장해 추적했다.
+
+**Suggested improvement:** 제출 직후 요청 ID·그래프 해시·시드를 먼저 저장하고, 상태를 submitted/running/completed/failed로 갱신한다. 재개 시 기존 요청을 조회한 뒤 재제출 여부를 판단한다. 공용 도구 수정은 검토 뒤 진행한다.
+
+**Principle:** 결과가 늦게 나오는 작업은 완료 기록뿐 아니라 실행 중인 작업을 찾을 기록도 필요하다.
+
+**Reference file:** skills/char-art-system/scripts/comfy-run.mjs
+
+### Observation 7: 관절 연결과 렌더된 장비의 형태를 따로 검사해야 한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** GPT 캐릭터의 뼈대·시트 생성 방식 비교
+**Skill:** sprite-pipeline / visual-qa
+**Type:** open-source
+**Phase/Area:** 장비 보존 검수
+
+**Issue:** 손과 검의 뼈대 연결 간격은 0px이고 검 뼈대 길이도 일정했지만, 혼합 가중치로 변형한 픽셀 칼날은 휘었다. 자동 스프라이트 QA도 이 결과를 충족으로 판정했다.
+
+**Suggested improvement:** 장비가 보이는지, 손을 따라가는지, 장비 자체의 형태가 유지되는지를 나눠 검사한다. 뼈대 좌표 검증과 실제 프레임 시각 검수를 함께 남긴다. 공용 규칙 승격은 별도 검토로 남긴다.
+
+**Principle:** 데이터 연결이 맞아도 렌더된 형상이 맞는 것은 아니다.
+
+**Reference file:** out/experiments/gpt-walk-20261106/REPORT.md
+
+### Observation 8: 주기적인 색 변화는 디코딩 방식도 대조해야 한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** 로컬 은발 걷기의 칼 잘림과 색 변화 수정
+**Skill:** char-art-system / sprite-pipeline
+**Type:** open-source
+**Phase/Area:** 영상 디코딩과 생성 입력 여백
+
+**Issue:** Wan Animate 2 결과의 12·24번 구간에서 색 변화와 다리 잔상이 생겼다. 같은 latent에 시간축 타일 디코딩을 적용하면 문제가 재현됐고, 전체 디코딩에서는 개선됐다. 칼 잘림은 입력과 출력의 캔버스 여백을 넓혀 해결했다.
+
+**Suggested improvement:** 주기적인 영상 결함은 같은 latent로 디코딩 방식만 바꿔 비교한다. 장비가 화면을 벗어나면 이미 잘린 출력을 축소하지 말고 생성 입력 여백부터 확보한다. 공용 스킬 수정은 별도 검토로 남긴다.
+
+**Principle:** 생성 결과의 문제를 전부 생성 모델 탓으로 돌리지 않는다. 변환 단계와 화면 경계도 독립적으로 확인한다.
+
+**Reference file:** out/experiments/local-motion-20261106/REPORT.md
+
+### Observation 9: 프레임 재생 시간은 패킹 순서가 아니라 이름에 연결한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** 은발 베기의 비균등 타이밍 내보내기
+**Skill:** sprite-pipeline
+**Type:** open-source
+**Phase/Area:** 아틀라스와 애니메이션 메타데이터
+
+**Issue:** atlas-pack은 높이순으로 패킹한 배열에 duration 목록을 순서대로 붙인다. 입력 파일 순서로 만든 공격 타이밍은 다른 프레임에 연결될 수 있다.
+
+**Suggested improvement:** 프레임 이름으로 duration을 매핑하고 재생 순서를 별도로 보존한다. 이번 실험의 export 어댑터에서 매핑을 검사했다. 공용 도구 변경은 별도 검토로 남긴다.
+
+**Principle:** 공간에 담는 순서와 시간에 재생하는 순서를 구분한다.
+
+**Reference file:** out/experiments/silver-slash-20261106/export.mjs
+
+### Observation 10: 배경 제거 뒤 타격 프레임의 칼날을 다시 확인한다
+
+**Status:** OPEN
+**Date:** 2026-11-06
+**Session context:** 베기 7번의 칼날 투명도 복구
+**Skill:** char-art-system / visual-qa
+**Type:** open-source
+**Phase/Area:** 얇고 흐릿한 장비의 알파 검수
+
+**Issue:** 생성 원본에는 칼날이 있었지만 의미 기반 배경 제거가 흐릿한 칼날을 지웠다. 파일 개수·캔버스 검사만으로는 발견되지 않았다.
+
+**Suggested improvement:** 타격 프레임의 RGB 원본과 투명본을 나란히 확인한다. 원본에 형태가 남았을 때만 제한된 영역의 알파를 복구하고, 범위 밖 픽셀·나머지 프레임 불변을 검증한다.
+
+**Principle:** 생성에서 보존된 장비도 후처리에서 사라질 수 있다.
+
+**Reference file:** out/experiments/silver-slash-20261106/alpha-repaired/repair.json

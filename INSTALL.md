@@ -96,6 +96,16 @@ codex plugin list   game-dev-team 이 'installed, enabled' 여야 정상
 | Codex가 설치법을 못 찾음 | 마켓플레이스 이름이 `game-dev-team-local`입니다(레포명·플러그인명과 다릅니다). 손으로 치지 말고 설치 스크립트를 쓰세요 |
 
 ## 6. 최신 버전 받기
+
+설치 스크립트는 Node.js가 있으면 설치 후 배포 파일의 SHA-256을 비교합니다. 같은 버전에서도 누락·변경·추가 파일을 찾습니다. 직접 확인할 때는 소스 루트에서 다음 명령을 실행하세요.
+
+```bash
+node scripts/check-plugin-version.mjs --source .
+node scripts/check-plugin-version.mjs --source . --harness codex --json
+```
+
+결과는 하네스별 소스·설치 경로와 비교 파일 수를 표시합니다. 0은 지정한 로컬 소스와 일치, 1은 차이, 3은 측정 불가입니다. 원격 최신성이나 이미 열린 세션의 재로드 여부는 확인하지 않습니다. Codex 실행 파일이 PATH에 없으면 `CODEX_BIN`으로 지정할 수 있습니다.
+
 사내망에서는 이 압축 파일을 새로 받아 **같은 폴더에 덮어쓰고 설치 스크립트를 다시 실행**하면 됩니다.
 GitHub에 접근된다면 `git clone https://github.com/macjoocan/game-dev-team_ver04.git` 후 같은 스크립트를 쓰면 됩니다.
 

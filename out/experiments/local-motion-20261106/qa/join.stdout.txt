@@ -1,0 +1,1 @@
+{"sheet":"out\\experiments\\local-motion-20261106\\c-preview\\silver-local-c.png","grid":{"cols":6,"rows":5,"frames":26,"frame_width":480,"frame_height":512,"fps":14.4},"centred":false}

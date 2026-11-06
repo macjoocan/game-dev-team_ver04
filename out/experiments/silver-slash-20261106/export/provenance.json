@@ -1,0 +1,19 @@
+{
+  "id": "chr.silver.local.slash",
+  "status": "review",
+  "harness": "codex",
+  "reference": "out/2d-gpt-20261106/silver-swordswoman-gpt-v1.png",
+  "referenceOrigin": "Existing GPT-generated character supplied by this project",
+  "motion": "samples/motion-court/drivers/slash/motion.json",
+  "motionAuthor": "Quaternius",
+  "motionLicense": "CC0-1.0",
+  "backend": "local ComfyUI Wan Animate 2 INT8",
+  "runReceipt": "../a-slash-run.json",
+  "alphaRepair": "../alpha-repaired/repair.json",
+  "qa": "../REPORT.md",
+  "paidCalls": 0,
+  "productionApproved": false,
+  "timingVariants": {"uniformMs": 1600, "snappyMs": 430, "impactOnHitMs": 480, "impactOnMissMs": 430},
+  "eventSource": "../feel.json",
+  "engineValidationExecuted": false
+}

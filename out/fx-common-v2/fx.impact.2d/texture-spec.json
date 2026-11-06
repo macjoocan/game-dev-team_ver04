@@ -1,0 +1,18 @@
+{
+  "previewBg": "#101C2E",
+  "effects": [
+    {
+      "id": "fx.impact.2d",
+      "dimension": "2d",
+      "type": "impact",
+      "color": "#FFE082",
+      "size": 96,
+      "frames": 12,
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "worldSize": 1,
+      "name": "texture"
+    }
+  ]
+}

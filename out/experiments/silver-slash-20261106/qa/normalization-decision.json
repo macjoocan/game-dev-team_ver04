@@ -1,0 +1,141 @@
+{
+  "selected": false,
+  "reason": "Keep common clip origin; per-frame bounding-box normalization shifts the body with the weapon",
+  "predictedTranslationRanges": {
+    "x": [
+      -31,
+      70
+    ],
+    "y": [
+      30,
+      32
+    ]
+  },
+  "shifts": [
+    {
+      "frame": 0,
+      "x": 52,
+      "y": 30
+    },
+    {
+      "frame": 1,
+      "x": 50,
+      "y": 30
+    },
+    {
+      "frame": 2,
+      "x": 41,
+      "y": 30
+    },
+    {
+      "frame": 3,
+      "x": 37,
+      "y": 30
+    },
+    {
+      "frame": 4,
+      "x": 46,
+      "y": 31
+    },
+    {
+      "frame": 5,
+      "x": 62,
+      "y": 30
+    },
+    {
+      "frame": 6,
+      "x": 48,
+      "y": 31
+    },
+    {
+      "frame": 7,
+      "x": -31,
+      "y": 32
+    },
+    {
+      "frame": 8,
+      "x": 58,
+      "y": 32
+    },
+    {
+      "frame": 9,
+      "x": 60,
+      "y": 32
+    },
+    {
+      "frame": 10,
+      "x": 59,
+      "y": 32
+    },
+    {
+      "frame": 11,
+      "x": 59,
+      "y": 32
+    },
+    {
+      "frame": 12,
+      "x": 60,
+      "y": 32
+    },
+    {
+      "frame": 13,
+      "x": 10,
+      "y": 32
+    },
+    {
+      "frame": 14,
+      "x": -18,
+      "y": 32
+    },
+    {
+      "frame": 15,
+      "x": -8,
+      "y": 32
+    },
+    {
+      "frame": 16,
+      "x": -9,
+      "y": 32
+    },
+    {
+      "frame": 17,
+      "x": -5,
+      "y": 32
+    },
+    {
+      "frame": 18,
+      "x": 26,
+      "y": 30
+    },
+    {
+      "frame": 19,
+      "x": 55,
+      "y": 30
+    },
+    {
+      "frame": 20,
+      "x": 55,
+      "y": 30
+    },
+    {
+      "frame": 21,
+      "x": 62,
+      "y": 30
+    },
+    {
+      "frame": 22,
+      "x": 68,
+      "y": 30
+    },
+    {
+      "frame": 23,
+      "x": 70,
+      "y": 30
+    },
+    {
+      "frame": 24,
+      "x": 70,
+      "y": 30
+    }
+  ]
+}

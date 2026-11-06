@@ -1,0 +1,21 @@
+{
+  "generatedFrom": "texture-spec.json",
+  "effects": [
+    {
+      "name": "texture",
+      "type": "impact",
+      "frames": 12,
+      "size": 96,
+      "sheet": "texture_sheet.png",
+      "layout": "horizontal-strip",
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "pivot": {
+        "x": 0.5,
+        "y": 0.5
+      },
+      "color": "#FFE082"
+    }
+  ]
+}

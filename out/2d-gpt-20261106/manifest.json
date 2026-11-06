@@ -1,0 +1,13 @@
+﻿{
+    "humanApproved":  false,
+    "id":  "chr.silver.gpt-keypose",
+    "version":  1,
+    "reference":  "samples/2d-sprite-motion-pilot/reference-keypose.png",
+    "prompt":  "prompt.txt",
+    "sha256":  "3BF5B922FC29D833C3C3625E01EA401DEEDFE5816C4D8BBB20DA563C8D6AB822",
+    "bytes":  1059762,
+    "generator":  "built-in image_gen",
+    "status":  "concept",
+    "license":  "production rights not reviewed",
+    "file":  "silver-swordswoman-gpt-v1.png"
+}

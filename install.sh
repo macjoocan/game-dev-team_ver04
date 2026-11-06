@@ -86,7 +86,8 @@ if [ "$HAVE_CX" -eq 1 ] && command -v node >/dev/null 2>&1; then
     echo "  [!] validate-plugin reported a problem (possibly mirror drift)."
     echo "      Codex installs from plugins/game-dev-team - if that mirror is"
     echo "      stale, Codex gets old code. Run scripts/sync-plugin.ps1 and retry."
-    echo "      Continuing anyway."
+    echo "[X] Source validation failed. Sync and validate the bundle before installing." >&2
+    exit 1
   fi
 fi
 
@@ -159,6 +160,16 @@ if [ -n "$FAILED" ]; then
 fi
 
 # --- 6. next steps -----------------------------------------------------------
+if command -v node >/dev/null 2>&1; then
+  echo "[*] Verifying installed files"
+  if ! node "$PLUGIN_DIR/scripts/check-plugin-version.mjs" --source "$PLUGIN_DIR" --harness "$HARNESS"; then
+    echo "[X] Installed files could not be verified against this source." >&2
+    exit 1
+  fi
+else
+  echo "[!] Installed file hashes were not checked (Node.js is unavailable)."
+fi
+
 echo
 echo "[OK] game-dev-team ${VERSION:-unknown} installed"
 if [ "$HAVE_CC" -eq 1 ]; then

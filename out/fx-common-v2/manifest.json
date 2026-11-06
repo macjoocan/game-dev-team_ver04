@@ -1,0 +1,715 @@
+{
+  "schemaVersion": 1,
+  "status": "concept",
+  "productionApproved": false,
+  "generator": "fx-build",
+  "seed": 42,
+  "coordinateSystem": {
+    "handedness": "right",
+    "up": "Y",
+    "forward": "+Z",
+    "units": "meters"
+  },
+  "provenance": {
+    "kind": "procedural",
+    "sourceHash": "6e4d5b80efa43b1f5bbfc158eef8362f69524a273c828d576ed9a5971079d972",
+    "license": "UNSPECIFIED; concept only"
+  },
+  "sources": [
+    {
+      "path": "source-spec.json",
+      "sha256": "e801bd05a6275b4794989a7052b875c905fe1bab0b0cecae90b3a8e95e7cbead"
+    },
+    {
+      "path": "palette.json",
+      "sha256": "b7e714bed5d7e73e29c93e6d19765d253e4a5ca26be5dc3c4f63b67625606e9f"
+    },
+    {
+      "path": "VISUAL_DESIGN.md",
+      "sha256": "0a77af15888440d67bbc74d31c687e80f3dd843207b97b090e7c8c82e0fdcb03"
+    }
+  ],
+  "budgets": {
+    "textureBytes": 2097152,
+    "particles": 64,
+    "triangles": 256
+  },
+  "effects": [
+    {
+      "id": "fx.impact.2d",
+      "dimension": "2d",
+      "type": "impact",
+      "color": "#FFE082",
+      "size": 96,
+      "frames": 12,
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "worldSize": 1,
+      "duration": 0.5,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "simulationSpace": "local",
+      "depthWrite": false,
+      "alphaConvention": "straight",
+      "status": "concept",
+      "assets": [
+        {
+          "path": "fx.impact.2d/manifest.json",
+          "sha256": "7af497124ee797e2cbd278c6fedadf417f2c651fef31076dea52902b646a377f"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_00.png",
+          "sha256": "ba93e7056aea401b641d4bf90b1f4d4998308648d96ebe98ed7d5e6010ccecb6"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_01.png",
+          "sha256": "5fabc432f16f813fc430813124a63e3de6bab5cd88a8a3763c008c230597ab5f"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_02.png",
+          "sha256": "87b3ac8b54ab59545ac0a7fb26b00f4639445e57513e10c1bb0a93484a338230"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_03.png",
+          "sha256": "38192fc4e9ae112732b8ccde1b52788481ea2b3a7b405e5433b2a6fee4dafd11"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_04.png",
+          "sha256": "2e79e31be7bdc29c6deb5aece73773d3b9396e0586ed3c8d186c5e18a34c005b"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_05.png",
+          "sha256": "3d8c32e81c74c9ca3772fb9b74319a9e747507fa9bf7a955ba894778dc1595b3"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_06.png",
+          "sha256": "f0e35aa34c49d221c600ee514e44c269aaa0e65f3e64ccea4c403a2fcd3e9d73"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_07.png",
+          "sha256": "af72fe29514c1c9e92ce976cc4175243a01a361021965929d583aece90ab8cad"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_08.png",
+          "sha256": "aef3f56bacb6cfcd1d3a219191d7c3f96cdbaf1713f6b80cc617a1f6507c701e"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_09.png",
+          "sha256": "dc9e46ecedb34d8f5c3f89835a5b9ab1c36faeefa3025130daf21c29b777f29d"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_10.png",
+          "sha256": "29881f3dc545b62f26815f571aec29b8807e52e3437ffcbbf2e90dd2f1671657"
+        },
+        {
+          "path": "fx.impact.2d/texture/texture_11.png",
+          "sha256": "f3c1bd7f62b27ce3822be3fa6dd0a3529dbc9053edb487f8126a1900ae8a25ec"
+        },
+        {
+          "path": "fx.impact.2d/texture-spec.json",
+          "sha256": "fedcf0d78d5eceb3b2d36f4e3fd00e228476b3a7da2a8fcd43f24b81993bfb33"
+        },
+        {
+          "path": "fx.impact.2d/texture_preview.png",
+          "sha256": "aa673ea197fb0135ba6fd01c8a29a7fee79a93392a91599f402634be9ea298d9"
+        },
+        {
+          "path": "fx.impact.2d/texture_sheet.png",
+          "sha256": "84fc2255c2ac7d3011781c19f9f72fcc225d8e2dcae623fd431fe71d65304cbd"
+        }
+      ],
+      "logs": [
+        {
+          "path": "fx.impact.2d/build.log",
+          "sha256": "491c064354f4af0dfa56b8f6e44dd96e3ea659ef2395d15c786c0ef3d9fd321b"
+        }
+      ],
+      "sheet": "fx.impact.2d/texture_sheet.png",
+      "frameFiles": [
+        "fx.impact.2d/texture/texture_00.png",
+        "fx.impact.2d/texture/texture_01.png",
+        "fx.impact.2d/texture/texture_02.png",
+        "fx.impact.2d/texture/texture_03.png",
+        "fx.impact.2d/texture/texture_04.png",
+        "fx.impact.2d/texture/texture_05.png",
+        "fx.impact.2d/texture/texture_06.png",
+        "fx.impact.2d/texture/texture_07.png",
+        "fx.impact.2d/texture/texture_08.png",
+        "fx.impact.2d/texture/texture_09.png",
+        "fx.impact.2d/texture/texture_10.png",
+        "fx.impact.2d/texture/texture_11.png"
+      ],
+      "runtimeTextures": [
+        "fx.impact.2d/texture_sheet.png"
+      ]
+    },
+    {
+      "id": "fx.pulse.2d",
+      "dimension": "2d",
+      "type": "pulse",
+      "color": "#29A8E8",
+      "size": 96,
+      "frames": 24,
+      "fps": 24,
+      "loop": true,
+      "blend": "additive",
+      "worldSize": 1.5,
+      "duration": 1,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "simulationSpace": "local",
+      "depthWrite": false,
+      "alphaConvention": "straight",
+      "status": "concept",
+      "assets": [
+        {
+          "path": "fx.pulse.2d/manifest.json",
+          "sha256": "c8497b00e867723de6b8bdacab7f6244cb94eae5da00550b985383de06c44dda"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_00.png",
+          "sha256": "f7b836883bc344f721c393e3396bc9337fd5f5a7cc13ae3a3292d25b58e21fd9"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_01.png",
+          "sha256": "de75b9f19dce0c30ef5563d85c36cd652e3c4ee78cba3dd9a8c1bc2e0ff27bf4"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_02.png",
+          "sha256": "7440edac498c70c4f53eace23d9cf867820bb6c48b5a226946e73679712ed781"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_03.png",
+          "sha256": "d0f6c370e0b11b0f73e343d127830c9d4667dd5fd4ae2dfd3688e954de925e09"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_04.png",
+          "sha256": "bb91114e3dd18ff2766f7fc231d0414c7e14f762ff67341e8c295b376f7c8d97"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_05.png",
+          "sha256": "adc8d904b701e9a1e68eac843ee3742b99195cb227f345e3c616d23e12aa52a3"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_06.png",
+          "sha256": "ed55d10e37dee28786e15623fc548f4e365f246f3068238fce595645a6f8f64f"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_07.png",
+          "sha256": "1eb7aa4c1c5e74a397b526eac2337dc372c9befbc7e6cce7f0a25ed3e82e8e86"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_08.png",
+          "sha256": "d41958a88c677a9e9c37a4cc91be1016bbf5437faa22f8db1413a7083849caea"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_09.png",
+          "sha256": "61642232b0e7368b9df8cac2c96f6f804a88beffdf8924bbcfe295289bc7adfb"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_10.png",
+          "sha256": "b8b58e1c59d25fe8d91d2da88df57a955f51bb648493b4d12211e599448ec8b7"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_11.png",
+          "sha256": "853c4ad28eb4076aa85e0158a4503d9e5967cd9a4a52376c5397df4532b3719b"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_12.png",
+          "sha256": "41b5cce0208c12dab180204dff12615ecd74f6ea3c87ac714e540ddd24ffa22a"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_13.png",
+          "sha256": "853c4ad28eb4076aa85e0158a4503d9e5967cd9a4a52376c5397df4532b3719b"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_14.png",
+          "sha256": "b8b58e1c59d25fe8d91d2da88df57a955f51bb648493b4d12211e599448ec8b7"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_15.png",
+          "sha256": "61642232b0e7368b9df8cac2c96f6f804a88beffdf8924bbcfe295289bc7adfb"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_16.png",
+          "sha256": "d41958a88c677a9e9c37a4cc91be1016bbf5437faa22f8db1413a7083849caea"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_17.png",
+          "sha256": "1eb7aa4c1c5e74a397b526eac2337dc372c9befbc7e6cce7f0a25ed3e82e8e86"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_18.png",
+          "sha256": "ed55d10e37dee28786e15623fc548f4e365f246f3068238fce595645a6f8f64f"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_19.png",
+          "sha256": "adc8d904b701e9a1e68eac843ee3742b99195cb227f345e3c616d23e12aa52a3"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_20.png",
+          "sha256": "bb91114e3dd18ff2766f7fc231d0414c7e14f762ff67341e8c295b376f7c8d97"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_21.png",
+          "sha256": "d0f6c370e0b11b0f73e343d127830c9d4667dd5fd4ae2dfd3688e954de925e09"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_22.png",
+          "sha256": "7440edac498c70c4f53eace23d9cf867820bb6c48b5a226946e73679712ed781"
+        },
+        {
+          "path": "fx.pulse.2d/texture/texture_23.png",
+          "sha256": "de75b9f19dce0c30ef5563d85c36cd652e3c4ee78cba3dd9a8c1bc2e0ff27bf4"
+        },
+        {
+          "path": "fx.pulse.2d/texture-spec.json",
+          "sha256": "818e0f3eee8fe3bc5fa111e27f6a60922c0189b83a34cb508de1f9834dcdda32"
+        },
+        {
+          "path": "fx.pulse.2d/texture_preview.png",
+          "sha256": "609ef798d5abd7d7cd0ae00df589bc6ff639ca129c587ca8e1953e7156648877"
+        },
+        {
+          "path": "fx.pulse.2d/texture_sheet.png",
+          "sha256": "26a0ad38d77997ca7a5fbdb0f69d19d067a8d999d76a1e1cea4f49237ea9d3b0"
+        }
+      ],
+      "logs": [
+        {
+          "path": "fx.pulse.2d/build.log",
+          "sha256": "e1ea3522a40c0afb2c556544787e37dc7dd0724d796e668e5083e14a8a20e7b4"
+        }
+      ],
+      "sheet": "fx.pulse.2d/texture_sheet.png",
+      "frameFiles": [
+        "fx.pulse.2d/texture/texture_00.png",
+        "fx.pulse.2d/texture/texture_01.png",
+        "fx.pulse.2d/texture/texture_02.png",
+        "fx.pulse.2d/texture/texture_03.png",
+        "fx.pulse.2d/texture/texture_04.png",
+        "fx.pulse.2d/texture/texture_05.png",
+        "fx.pulse.2d/texture/texture_06.png",
+        "fx.pulse.2d/texture/texture_07.png",
+        "fx.pulse.2d/texture/texture_08.png",
+        "fx.pulse.2d/texture/texture_09.png",
+        "fx.pulse.2d/texture/texture_10.png",
+        "fx.pulse.2d/texture/texture_11.png",
+        "fx.pulse.2d/texture/texture_12.png",
+        "fx.pulse.2d/texture/texture_13.png",
+        "fx.pulse.2d/texture/texture_14.png",
+        "fx.pulse.2d/texture/texture_15.png",
+        "fx.pulse.2d/texture/texture_16.png",
+        "fx.pulse.2d/texture/texture_17.png",
+        "fx.pulse.2d/texture/texture_18.png",
+        "fx.pulse.2d/texture/texture_19.png",
+        "fx.pulse.2d/texture/texture_20.png",
+        "fx.pulse.2d/texture/texture_21.png",
+        "fx.pulse.2d/texture/texture_22.png",
+        "fx.pulse.2d/texture/texture_23.png"
+      ],
+      "runtimeTextures": [
+        "fx.pulse.2d/texture_sheet.png"
+      ]
+    },
+    {
+      "id": "fx.burst.3d",
+      "dimension": "3d",
+      "type": "burst",
+      "color": "#FFE082",
+      "frames": 24,
+      "fps": 24,
+      "loop": false,
+      "blend": "additive",
+      "worldSize": 2,
+      "particles": 24,
+      "speed": 2,
+      "gravity": 1.8,
+      "segments": 48,
+      "duration": 1,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "simulationSpace": "local",
+      "depthWrite": false,
+      "alphaConvention": "straight",
+      "status": "concept",
+      "assets": [
+        {
+          "path": "fx.burst.3d/frame_000.png",
+          "sha256": "75f0a0694c14b58e447d6d5b51161b432074e8c9eb6e1e9247d2ba79b4d37159"
+        },
+        {
+          "path": "fx.burst.3d/frame_001.png",
+          "sha256": "de64f5b80dcac91288501ab3ab61694e4cce5eb78778f2a114bacef9f4effff3"
+        },
+        {
+          "path": "fx.burst.3d/frame_002.png",
+          "sha256": "3ba2e96e7d3ff58fc258c7192cc664b4e8d9411262b3ff1014b400d494d5fcd2"
+        },
+        {
+          "path": "fx.burst.3d/frame_003.png",
+          "sha256": "e8d299ae1c58ee8eef80d29e8f0c779a1b6e5ac3a2bf325a0085fbcb2cf5dd00"
+        },
+        {
+          "path": "fx.burst.3d/frame_004.png",
+          "sha256": "cacf6b9dffc7df82587ad1523b359efa728f5e9b704ff0b0f10ce08155a5a88d"
+        },
+        {
+          "path": "fx.burst.3d/frame_005.png",
+          "sha256": "f92c7f6670abad20c42f4cdca90adc69fab59781a32d0d90c8eba4368d28042f"
+        },
+        {
+          "path": "fx.burst.3d/frame_006.png",
+          "sha256": "131cc300e20ebfa7256f4e5b27d88cdb11d47b44ef4a7e161000599795e87f91"
+        },
+        {
+          "path": "fx.burst.3d/frame_007.png",
+          "sha256": "2a6280ab5c0ff352113753826e8fcef7db774bbc491fa284551aa213fac99d94"
+        },
+        {
+          "path": "fx.burst.3d/frame_008.png",
+          "sha256": "809979f455a3b530f84a35300ff7098da4a0cf4db9c26777975ea770f09b04d5"
+        },
+        {
+          "path": "fx.burst.3d/frame_009.png",
+          "sha256": "a244050cc50741412fca8798999076e103bbd9379a6b204d66e8ac91f4fce8fc"
+        },
+        {
+          "path": "fx.burst.3d/frame_010.png",
+          "sha256": "56482966faa11a9e8fc9827aa33a1cdf83a3bcf1994ddc058728f17794a13bec"
+        },
+        {
+          "path": "fx.burst.3d/frame_011.png",
+          "sha256": "98def1cb6e0d36e26f8372a089b2ed692ac68bf56b0a6949d6ff0f23912c72a2"
+        },
+        {
+          "path": "fx.burst.3d/frame_012.png",
+          "sha256": "30cf7377db354464a679ee8a92c0ea57d3e11d1c235ecd6c08ffe8c56b751edd"
+        },
+        {
+          "path": "fx.burst.3d/frame_013.png",
+          "sha256": "3db3ae55739eb0c51a7af7d00772dec1be77ac0deac7c220c2a68ee88e31d694"
+        },
+        {
+          "path": "fx.burst.3d/frame_014.png",
+          "sha256": "802572cdc50bd3c5ced816644ca5b1c78b4c7b4e0bdcf40e20af5674f554bbaf"
+        },
+        {
+          "path": "fx.burst.3d/frame_015.png",
+          "sha256": "bcef77ca51d7e721cf9c5152e583d2d18319cedeff1b1879c4010c725bdd3b41"
+        },
+        {
+          "path": "fx.burst.3d/frame_016.png",
+          "sha256": "e45ecde8116a7fb3e712075e6b08aec3ea34be763c40a099e75371ce265183f6"
+        },
+        {
+          "path": "fx.burst.3d/frame_017.png",
+          "sha256": "4c41ed5c32a8a2c4bb986abf9054824cb5b1c3605bb9566c21c2830fa7d7fc0e"
+        },
+        {
+          "path": "fx.burst.3d/frame_018.png",
+          "sha256": "4d939a6e24074ffc50bdd100a88ade1d572f26915b7311f6bdf3df7d752d1507"
+        },
+        {
+          "path": "fx.burst.3d/frame_019.png",
+          "sha256": "bda196cf4beca24fa62efd1efa249439b0308adf1c7099f9a72e921f61b19e27"
+        },
+        {
+          "path": "fx.burst.3d/frame_020.png",
+          "sha256": "acb343f6274b7dabcc4fb7fd878373ab0e4ac7beb88bb3006326498a6cc0ae8d"
+        },
+        {
+          "path": "fx.burst.3d/frame_021.png",
+          "sha256": "dc4fcd367c2933974a18c271fb5874b354df4b1d6cbdf25a9d5c40ab5fd9486f"
+        },
+        {
+          "path": "fx.burst.3d/frame_022.png",
+          "sha256": "c2a77bc6203e7bca85f4b972987c26d7f26b58626e3a47c6c2b8aee379ed2b0a"
+        },
+        {
+          "path": "fx.burst.3d/frame_023.png",
+          "sha256": "8f7f5406e87dce78c8c3e4a49ce55d3494c9398f96fe3a0743185b93fc66291d"
+        },
+        {
+          "path": "fx.burst.3d/motion.json",
+          "sha256": "0605b8ff3eb7e427f76dc2880bc4cd24c4ac473176c60faf343bf00d228aac84"
+        },
+        {
+          "path": "fx.burst.3d/particle.png",
+          "sha256": "b50bbbd2b00142b3672f60fe0dd0a0e17557ef423aa4272f4e48128879047e62"
+        },
+        {
+          "path": "fx.burst.3d/preview_sheet.png",
+          "sha256": "301b5d646161faa8835279779a48fac4f646e562a8e41a2a2d708f532bf77856"
+        },
+        {
+          "path": "fx.burst.3d/ring.gltf",
+          "sha256": "38cc7e71d33be505d974b0f264f12a5be4ac1c91c507e335e9f233a14419abac"
+        }
+      ],
+      "logs": [],
+      "frameFiles": [
+        "fx.burst.3d/frame_000.png",
+        "fx.burst.3d/frame_001.png",
+        "fx.burst.3d/frame_002.png",
+        "fx.burst.3d/frame_003.png",
+        "fx.burst.3d/frame_004.png",
+        "fx.burst.3d/frame_005.png",
+        "fx.burst.3d/frame_006.png",
+        "fx.burst.3d/frame_007.png",
+        "fx.burst.3d/frame_008.png",
+        "fx.burst.3d/frame_009.png",
+        "fx.burst.3d/frame_010.png",
+        "fx.burst.3d/frame_011.png",
+        "fx.burst.3d/frame_012.png",
+        "fx.burst.3d/frame_013.png",
+        "fx.burst.3d/frame_014.png",
+        "fx.burst.3d/frame_015.png",
+        "fx.burst.3d/frame_016.png",
+        "fx.burst.3d/frame_017.png",
+        "fx.burst.3d/frame_018.png",
+        "fx.burst.3d/frame_019.png",
+        "fx.burst.3d/frame_020.png",
+        "fx.burst.3d/frame_021.png",
+        "fx.burst.3d/frame_022.png",
+        "fx.burst.3d/frame_023.png"
+      ],
+      "mesh": "fx.burst.3d/ring.gltf",
+      "motion": "fx.burst.3d/motion.json",
+      "sheet": "fx.burst.3d/preview_sheet.png",
+      "runtimeTextures": [
+        "fx.burst.3d/particle.png"
+      ],
+      "previewExtent": 2
+    },
+    {
+      "id": "fx.orbit.3d",
+      "dimension": "3d",
+      "type": "orbit",
+      "color": "#29A8E8",
+      "frames": 32,
+      "fps": 24,
+      "loop": true,
+      "blend": "additive",
+      "worldSize": 2,
+      "particles": 16,
+      "speed": 1,
+      "gravity": 0,
+      "segments": 48,
+      "duration": 1.3333333333333333,
+      "pivot": [
+        0.5,
+        0.5
+      ],
+      "simulationSpace": "local",
+      "depthWrite": false,
+      "alphaConvention": "straight",
+      "status": "concept",
+      "assets": [
+        {
+          "path": "fx.orbit.3d/frame_000.png",
+          "sha256": "68318ce55bac8f35f7dbb504302f80344e252920d208d5c22c0d72128770fca5"
+        },
+        {
+          "path": "fx.orbit.3d/frame_001.png",
+          "sha256": "8c5299f163c855cc7322065222123ca24678b11ced354cc96bc1ef40304ac16e"
+        },
+        {
+          "path": "fx.orbit.3d/frame_002.png",
+          "sha256": "7f62620abfc4f56e421d6bdbcab642000abcaf178b98da4ad877ea92b5cd1a2c"
+        },
+        {
+          "path": "fx.orbit.3d/frame_003.png",
+          "sha256": "90f7dfb50c9579530c4d2d340c46d542e1d4ad5c0e23b6f159708293ea80463f"
+        },
+        {
+          "path": "fx.orbit.3d/frame_004.png",
+          "sha256": "8f218a972df71058d593fddbfc1c29b7399ef3e780af43f74e387a5e78462a4c"
+        },
+        {
+          "path": "fx.orbit.3d/frame_005.png",
+          "sha256": "68f55525a0d54ef5b0aaa714a446bc2063864c5d4c50891aa7a6bc2db469301a"
+        },
+        {
+          "path": "fx.orbit.3d/frame_006.png",
+          "sha256": "33fba828180080d7050156445356215b38906c249609c8692aa2644f94471f6e"
+        },
+        {
+          "path": "fx.orbit.3d/frame_007.png",
+          "sha256": "79809b74d1d047a4a9ebb047b30dac1082cdbeb5a812776ee333e49a16995f58"
+        },
+        {
+          "path": "fx.orbit.3d/frame_008.png",
+          "sha256": "d880cb3113cc9fbab48c876e8c9cc936d253df91a26dfcece769f1a8372d1fde"
+        },
+        {
+          "path": "fx.orbit.3d/frame_009.png",
+          "sha256": "de1f430947a3b65693fc7e89b3d2acaf01125c7024937057412491164ddad5cb"
+        },
+        {
+          "path": "fx.orbit.3d/frame_010.png",
+          "sha256": "f8422420f9825da492795cd565da225f482263632c15b68878e8d72fb57d0ff0"
+        },
+        {
+          "path": "fx.orbit.3d/frame_011.png",
+          "sha256": "a699a97a13d4387c6828228477522f8195ead635193fcbc690bd9a87f41e11c3"
+        },
+        {
+          "path": "fx.orbit.3d/frame_012.png",
+          "sha256": "46ea8ddb1243a0e8b93bc45826221f3c1608386ea562c0747555d5f84715eecb"
+        },
+        {
+          "path": "fx.orbit.3d/frame_013.png",
+          "sha256": "b09af6209f30930d95f9833fd11ae30679903820ae73e823075c0878d0fc4cd7"
+        },
+        {
+          "path": "fx.orbit.3d/frame_014.png",
+          "sha256": "84dd90a3dd6f6c7b95b8477ec8b15fce5b8da91166f6510a4fc12c31e47b7e2d"
+        },
+        {
+          "path": "fx.orbit.3d/frame_015.png",
+          "sha256": "547b02bb56d03ad3301c6e7e809d12bf08488face111f4bafcabd95027bb7537"
+        },
+        {
+          "path": "fx.orbit.3d/frame_016.png",
+          "sha256": "7d544bc5f5a733f8f8234cdc66de197209b55cd0d59807455b15682b4697340e"
+        },
+        {
+          "path": "fx.orbit.3d/frame_017.png",
+          "sha256": "a68b45cca9afd3d7d3d1fe9e0a57cd206c3c6e35956f353ec7a9bb5587f049a3"
+        },
+        {
+          "path": "fx.orbit.3d/frame_018.png",
+          "sha256": "fff745c68f11dfa040b63b1adcc612a665e84c4a9d5118f204bf87273ee31c96"
+        },
+        {
+          "path": "fx.orbit.3d/frame_019.png",
+          "sha256": "03bf68bb1de78078c59d07ae906d2b3bcec7513a1b950a763564e7ae35f8fa8e"
+        },
+        {
+          "path": "fx.orbit.3d/frame_020.png",
+          "sha256": "0d9525dd9148070815b47d55095d5fc72332c667baacbeae92a93218c39220ca"
+        },
+        {
+          "path": "fx.orbit.3d/frame_021.png",
+          "sha256": "c12435743fb2e833b33c8c07918522258f82ac70ddace01c5e728ed69ca9c691"
+        },
+        {
+          "path": "fx.orbit.3d/frame_022.png",
+          "sha256": "4afe4734f39a530b60d63bb08b72abcf91200d74ebc30930fa15cee88f074e88"
+        },
+        {
+          "path": "fx.orbit.3d/frame_023.png",
+          "sha256": "1b30cbdf074b0a7973dd15f06e64527527700efeecefd218a38f807cb418d5aa"
+        },
+        {
+          "path": "fx.orbit.3d/frame_024.png",
+          "sha256": "d826a17198cbc72246296b5cd6a1022a5423a83816176157b931e7a4d0468ee4"
+        },
+        {
+          "path": "fx.orbit.3d/frame_025.png",
+          "sha256": "a7908ac308efe9a43e199bec212851981e48f3463a4d60104fcc480b35c25b4a"
+        },
+        {
+          "path": "fx.orbit.3d/frame_026.png",
+          "sha256": "126ba0b148615ca8bf2f197c183bea2647751a899978b562a775e9fcd8aeb46a"
+        },
+        {
+          "path": "fx.orbit.3d/frame_027.png",
+          "sha256": "73577f257dc7f14c62b02dbd96275fd55183a5dde1e12d0d620000c27e6e226f"
+        },
+        {
+          "path": "fx.orbit.3d/frame_028.png",
+          "sha256": "382d454c63491d91b5a045ba2f82083170e94134f1a626b3bf09d3875f519cf2"
+        },
+        {
+          "path": "fx.orbit.3d/frame_029.png",
+          "sha256": "48d5ce6ec7d0f6740de6ffbe8402477b9c37a8f88719ace92904838686ea4cbe"
+        },
+        {
+          "path": "fx.orbit.3d/frame_030.png",
+          "sha256": "1c45b29b8f5f54eb0b89c0a955e733df9affecf3f15fbb226b0a011849a8c25d"
+        },
+        {
+          "path": "fx.orbit.3d/frame_031.png",
+          "sha256": "715d22cbe16f218d34ca3a4f4d93b9835d90adb2fec756f0b42a128924e3f084"
+        },
+        {
+          "path": "fx.orbit.3d/motion.json",
+          "sha256": "c45f58c5174d90c0a8386fba85fc9f6ad2870e4d79dfadfd12781391a4414f1a"
+        },
+        {
+          "path": "fx.orbit.3d/particle.png",
+          "sha256": "eca9c846ca7257578b3901b8d353a86c31a29de0b25317821bb7fd557226bc24"
+        },
+        {
+          "path": "fx.orbit.3d/preview_sheet.png",
+          "sha256": "04e85af4f1077bb285c5190debbf5abd14b01133da68ebc9031bb24c72dcafe8"
+        },
+        {
+          "path": "fx.orbit.3d/ring.gltf",
+          "sha256": "d0b392e8c9034c767ae1edbefeb721e9c16e4e0451d2bec1c023e1db4690905b"
+        }
+      ],
+      "logs": [],
+      "frameFiles": [
+        "fx.orbit.3d/frame_000.png",
+        "fx.orbit.3d/frame_001.png",
+        "fx.orbit.3d/frame_002.png",
+        "fx.orbit.3d/frame_003.png",
+        "fx.orbit.3d/frame_004.png",
+        "fx.orbit.3d/frame_005.png",
+        "fx.orbit.3d/frame_006.png",
+        "fx.orbit.3d/frame_007.png",
+        "fx.orbit.3d/frame_008.png",
+        "fx.orbit.3d/frame_009.png",
+        "fx.orbit.3d/frame_010.png",
+        "fx.orbit.3d/frame_011.png",
+        "fx.orbit.3d/frame_012.png",
+        "fx.orbit.3d/frame_013.png",
+        "fx.orbit.3d/frame_014.png",
+        "fx.orbit.3d/frame_015.png",
+        "fx.orbit.3d/frame_016.png",
+        "fx.orbit.3d/frame_017.png",
+        "fx.orbit.3d/frame_018.png",
+        "fx.orbit.3d/frame_019.png",
+        "fx.orbit.3d/frame_020.png",
+        "fx.orbit.3d/frame_021.png",
+        "fx.orbit.3d/frame_022.png",
+        "fx.orbit.3d/frame_023.png",
+        "fx.orbit.3d/frame_024.png",
+        "fx.orbit.3d/frame_025.png",
+        "fx.orbit.3d/frame_026.png",
+        "fx.orbit.3d/frame_027.png",
+        "fx.orbit.3d/frame_028.png",
+        "fx.orbit.3d/frame_029.png",
+        "fx.orbit.3d/frame_030.png",
+        "fx.orbit.3d/frame_031.png"
+      ],
+      "mesh": "fx.orbit.3d/ring.gltf",
+      "motion": "fx.orbit.3d/motion.json",
+      "sheet": "fx.orbit.3d/preview_sheet.png",
+      "runtimeTextures": [
+        "fx.orbit.3d/particle.png"
+      ],
+      "previewExtent": 2
+    }
+  ],
+  "previews": [
+    {
+      "path": "preview.png",
+      "sha256": "a99404aa7ba704e85ba7569d37896dac80c625d998ea0fca936c4747236f0756"
+    },
+    {
+      "path": "preview.html",
+      "sha256": "54a834b07d5dafe2fb26a68c7af1ee3ddc4850d74e9bac6bbda7fda3cf009019"
+    }
+  ]
+}

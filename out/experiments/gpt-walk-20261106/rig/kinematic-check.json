@@ -1,0 +1,13 @@
+{
+  "measurement": "rig bone coordinates only; does NOT prove raster pixels follow bones",
+  "handSwordJointMaxGapPx": 0.0,
+  "swordBoneLengthRangePx": [
+    189.21152184790438,
+    189.2115218479044
+  ],
+  "swordTipTravelRangePx": [
+    84.91326072793413,
+    57.63476503764821
+  ],
+  "maxAnkleTargetErrorPx": 1.7053025658242404e-13
+}

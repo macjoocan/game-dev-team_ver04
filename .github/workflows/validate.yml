@@ -45,7 +45,7 @@ jobs:
       # 안 돌렸다(REVIEW.md B-20). validate-plugin §10 이 "러너를 부르는가"를 검사한다.
       - name: 테스트 전체 (러너가 test/ 를 글롭)
         run: |
-          python3 -m pip install --quiet --disable-pip-version-check pillow numpy
+          python3 -m pip install --quiet --disable-pip-version-check pillow numpy requests
           node scripts/run-tests.mjs
 
       - name: 생성 도구 스모크 (스펙 -> 실제 산출물)
@@ -71,7 +71,7 @@ jobs:
           echo x > a.txt && git add -A && git commit -qm init
 
           node "$repo/skills/balance-sim/scripts/sim-scaffold.mjs" --out sim
-          for f in run.mjs curve-check.mjs rng.mjs policies.mjs game.mjs targets.mjs lib-stats.mjs README.md; do
+          for f in run.mjs curve-check.mjs rng.mjs policies.mjs game.mjs targets.mjs lib-stats.mjs lib-playfeel.mjs clearability.mjs README.md; do
             test -f "sim/$f" || { echo "FAIL: sim/$f 가 생성되지 않았다"; exit 1; }
           done
 
@@ -90,7 +90,7 @@ jobs:
           node sim/curve-check.mjs r/results.json >/dev/null || true
 
           cd "$repo"; rm -rf "$box"
-          echo "하네스 왕복 통과 (생성 8파일 · 자리표시자 가드 · 5섹션 · A/B · 곡선)"
+          echo "하네스 왕복 통과 (생성 10파일 · 자리표시자 가드 · 5섹션 · A/B · 곡선)"
 
       - name: 경제 하네스 스캐폴드 왕복 (페르소나 비교 · 공정성 판정)
         run: |
@@ -402,45 +402,6 @@ jobs:
 
           rm -rf "$box"
           echo "스프라이트 정합성 통과 (정상 오탐 0 · 드리프트 적출)"
-
-      # 신선도 검사기는 **거짓 "최신"** 을 낸 전적이 있다(REVIEW.md B-18). 등록된 마켓플레이스가
-      # 죽은 옛 레포(0.16.0)를 가리키는데 설치본도 0.16.0 이라 "전부 최신"으로 보고했고,
-      # 정본은 그때 0.34.0 이었다. 종료 코드만 보면 통과라 아무도 18버전 드리프트를 못 봤다.
-      # 그래서 **출처를 찍는지**까지 검사한다 — 숫자만 맞히는 검사기는 이 사고를 또 낸다.
-      - name: 설치본 신선도 검사기 (출처 표기 · git 소스는 단정 금지)
-        run: |
-          repo="$PWD"
-          box="$(mktemp -d)"
-          mkdir -p "$box/.claude/plugins" "$box/src/.claude-plugin"
-          CPV="$repo/scripts/check-plugin-version.mjs"
-          KM="$box/.claude/plugins/known_marketplaces.json"
-          SRC="$box/src/.claude-plugin/plugin.json"
-
-          echo '{"name":"game-dev-team","version":"0.16.0"}' > "$SRC"
-          echo '{"plugins":{"game-dev-team@game-dev-team":[{"scope":"user","version":"0.16.0","installPath":"x"}]}}' \
-            > "$box/.claude/plugins/installed_plugins.json"
-
-          # 1) git 소스 + 같은 버전 -> **최신이라고 말하면 안 된다**(측정 불가 3).
-          #    로컬 클론과 같을 뿐 원격은 안 봤다. 여기서 0 을 내면 그게 거짓 안심이다.
-          BOX="$box" node -e 'const fs=require("fs"),p=require("path"),b=process.env.BOX;fs.writeFileSync(p.join(b,".claude","plugins","known_marketplaces.json"),JSON.stringify({"game-dev-team":{source:{source:"github",repo:"someone/dead-repo"},installLocation:p.join(b,"src")}}))'
-          code=0; HOME="$box" USERPROFILE="$box" node "$CPV" > "$box/git.txt" 2>&1 || code=$?
-          test $code -eq 3 || { echo "FAIL: git 소스인데 exit $code (3 이어야 한다)"; cat "$box/git.txt"; exit 1; }
-          grep -q 'dead-repo' "$box/git.txt" || { echo "FAIL: 소스 출처(레포)를 안 찍는다 — 엉뚱한 레포를 봐도 모른다"; cat "$box/git.txt"; exit 1; }
-
-          # 2) directory 소스 + 같은 버전 -> 진짜 최신(0). 여기서 3 이면 오탐이라 소음이 된다.
-          BOX="$box" node -e 'const fs=require("fs"),p=require("path"),b=process.env.BOX;fs.writeFileSync(p.join(b,".claude","plugins","known_marketplaces.json"),JSON.stringify({"game-dev-team":{source:{source:"directory",path:p.join(b,"src")}}}))'
-          code=0; HOME="$box" USERPROFILE="$box" node "$CPV" > "$box/dir.txt" 2>&1 || code=$?
-          test $code -eq 0 || { echo "FAIL: directory 소스 동일 버전인데 exit $code (0 이어야 한다)"; cat "$box/dir.txt"; exit 1; }
-          grep -q '소스 출처' "$box/dir.txt" || { echo "FAIL: directory 소스도 출처를 찍어야 한다"; exit 1; }
-
-          # 3) directory 소스 + 설치본이 뒤처짐 -> 미달(1), 그리고 출처가 메시지에 있어야 한다
-          echo '{"name":"game-dev-team","version":"0.34.0"}' > "$SRC"
-          code=0; HOME="$box" USERPROFILE="$box" node "$CPV" > "$box/old.txt" 2>&1 || code=$?
-          test $code -eq 1 || { echo "FAIL: 18버전 뒤처졌는데 exit $code (1 이어야 한다)"; cat "$box/old.txt"; exit 1; }
-          grep -q '소스 출처' "$box/old.txt" || { echo "FAIL: 뒤처짐 보고에 출처가 없다"; exit 1; }
-
-          rm -rf "$box"
-          echo "신선도 검사기 통과 (출처 표기 · git 단정 금지 · directory 정상 · 뒤처짐 적출)"
 
       # 지금까지 CI 는 훅 **스크립트**만 돌렸고 hooks.json 의 **명령줄**은 한 번도 안 돌렸다.
       # 그 틈에서 실제 사고가 났다(REVIEW.md B-19): 명령이 ${CLAUDE_PLUGIN_ROOT} 를 쓰는데

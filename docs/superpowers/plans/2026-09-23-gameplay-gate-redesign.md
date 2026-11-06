@@ -1,5 +1,7 @@
 # ④ 게임성 검증 규칙 변경 Implementation Plan
 
+2026-11-05: v0.51.0에서 구현했다. 아래 체크박스와 버전·CI 번호는 당시 계획을 보존한 것이다. 현재 검증은 `test/gameplay-gate.test.mjs`와 `.github/workflows/validate.yml`을 따른다. 필수 소비량 합산과 빈 모델 차단은 구현 과정에서 보완했다.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** 밸런스 시뮬을 ④ 게이트에서 내리고, 자동으로 도는 것은 판수 0의 "논리적 클리어 가능성" 검사만 남기며, 사람 플레이를 ④ 통과 판정으로 올린다.

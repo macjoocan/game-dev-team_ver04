@@ -1,0 +1,50 @@
+[
+  {
+    "id": "rig",
+    "title": "A · 뼈대 자동 변형",
+    "frames": [
+      "rig/frames/frame_00.png",
+      "rig/frames/frame_01.png",
+      "rig/frames/frame_02.png",
+      "rig/frames/frame_03.png",
+      "rig/frames/frame_04.png",
+      "rig/frames/frame_05.png",
+      "rig/frames/frame_06.png",
+      "rig/frames/frame_07.png"
+    ],
+    "status": "concept",
+    "approved": false
+  },
+  {
+    "id": "gpt-sheet",
+    "title": "B · GPT 걷기 시트",
+    "frames": [
+      "gpt-sheet/frames/frame_00.png",
+      "gpt-sheet/frames/frame_01.png",
+      "gpt-sheet/frames/frame_02.png",
+      "gpt-sheet/frames/frame_03.png",
+      "gpt-sheet/frames/frame_04.png",
+      "gpt-sheet/frames/frame_05.png",
+      "gpt-sheet/frames/frame_06.png",
+      "gpt-sheet/frames/frame_07.png"
+    ],
+    "status": "concept",
+    "approved": false
+  },
+  {
+    "id": "rigid",
+    "title": "참고 · 뼈대 강체 분리",
+    "frames": [
+      "rigid/frames/frame_00.png",
+      "rigid/frames/frame_01.png",
+      "rigid/frames/frame_02.png",
+      "rigid/frames/frame_03.png",
+      "rigid/frames/frame_04.png",
+      "rigid/frames/frame_05.png",
+      "rigid/frames/frame_06.png",
+      "rigid/frames/frame_07.png"
+    ],
+    "status": "concept",
+    "approved": false
+  }
+]

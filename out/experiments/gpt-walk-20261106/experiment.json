@@ -1,0 +1,22 @@
+{
+  "input": "input/master.png",
+  "source": "out/2d-gpt-20261106/silver-swordswoman-gpt-v1.png",
+  "status": "concept",
+  "humanApproved": false,
+  "canvas": [
+    512,
+    512
+  ],
+  "frames": 8,
+  "fps": 8,
+  "targetHeight": 432,
+  "baseline": 480,
+  "rigMode": "sprite-maker unchanged native flat-image mesh renderer; hand-authored landmarks and gait targets",
+  "frameMode": "built-in GPT image_gen single 4x2 sheet then sprite-gen slice-sheet",
+  "spriteMakerCommit": "9de73a6136a1a045af2e8769349fbadc17dbef69",
+  "spriteGenCommit": "4f5ccd55c7cf06685a41f954acc1e476b7772ece",
+  "limitations": [
+    "same image and output canvas; no shared random seed or identical poses across structurally different methods",
+    "desktop UI, automatic rig suggestion and cloud video providers not exercised"
+  ]
+}

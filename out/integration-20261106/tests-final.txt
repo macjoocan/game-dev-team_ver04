@@ -1,0 +1,235 @@
+# 테스트 러너 — test/ 에서 발견: node 11 · python 2
+  test/candidate-harness.test.mjs
+  test/comfy-preflight.test.mjs
+  test/fx-pipeline.test.mjs
+  test/gameplay-gate.test.mjs
+  test/hermes-handoff.test.mjs
+  test/icon-import.test.mjs
+  test/motion-clip-tools.test.mjs
+  test/motion-court.test.mjs
+  test/plugin-freshness.test.mjs
+  test/qa-trace.test.mjs
+  test/team-work.test.mjs
+  test/model-release.test.py
+  test/sprite-lab.test.py
+
+## node --test (11)
+✔ candidate workspaces cannot overlap live task, approval or skill authority (957.5789ms)
+✔ different candidate IDs cannot compare the same mutable workspace (1087.6431ms)
+✔ aggregate keeps confirmed failure separate from missing measurement (0.1821ms)
+✔ generic process crash is unknown; only configured test failures are failures (0.2578ms)
+✔ balance adapter recomputes CI and rejects missing sample, placeholder, conditions mismatch (0.3304ms)
+✔ planning and development demos execute same checks for baseline and alternative (17412.6627ms)
+✔ unfinished template is not a runnable experiment (1320.2011ms)
+✔ changed target, validation script, duplicate ids and escaping candidate paths rejected (697.3049ms)
+✔ missing output is unknown and stale json cannot satisfy a new execution (4444.4577ms)
+✔ report and resume reject changed raw evidence or inputs (6018.3866ms)
+✔ completed resume reuses evidence; new run preserves previous state (8907.4015ms)
+✔ reverse candidate outcomes are reported without assuming alternative is better (5206.2029ms)
+✔ lock denies concurrent run and is not stolen (1263.9463ms)
+✔ dead process lock is not automatically stolen or deleted (1260.8611ms)
+✔ timeout is unknown; interrupted unsafe steps are not rerun (6711.9991ms)
+✔ denied process-tree cleanup returns unknown promptly instead of hanging (248.9423ms)
+✔ cleanup-blocked runs cannot resume merely because a lock was manually removed (5096.463ms)
+✔ workflow requires actual execution evidence and hashes; lessons require intake (603.1888ms)
+✔ hashes directories in sorted order and refuses symbolic links (5.0172ms)
+✔ mandatory threshold rejects an otherwise passing candidate and missing metric is unknown (7538.999ms)
+✔ budget cannot silently skip required checks (4131.86ms)
+✔ workflow evidence pins actual output, trace and instructions (5667.0757ms)
+✔ safe interrupted local check reruns once in a new attempt folder (5877.9859ms)
+✔ timeout kills spawned process tree (7891.8672ms)
+✔ human evidence is subject-bound and missing reviewer cannot pass (8146.112ms)
+✔ a fresh completed run is reportable despite an older abandoned contract (8540.2921ms)
+✔ resolved executable bytes are pinned and change the resume fingerprint (608.152ms)
+✔ server node and loader choices are checked before generation (1.0675ms)
+✔ manifest checks bytes, hash, and path containment (10.4331ms)
+✔ preflight queries live object_info and rejects unavailable models (49.1251ms)
+✔ engine-neutral FX: deterministic 2D/3D artifacts, preview and static QA (7904.8412ms)
+✔ FX validation refuses invalid palette, duplicate IDs, traversal and missing inputs (5143.2919ms)
+✔ FX QA catches changed files, semantic damage and budget excess (5669.9299ms)
+✔ preview loop wraps immediately while one-shot keeps its inspection pause (2.1734ms)
+✔ clearability: missing, placeholder, empty and broken adapters are unknown (7352.3718ms)
+✔ clearability: sums consumable requirements and rejects unknown or invalid data (8412.3356ms)
+✔ clearability: lock and order cycles fail; valid partial/full models report scope (4919.5625ms)
+✔ playfeel: project log, CRLF, marker injection and human reset (5781.171ms)
+✔ scaffold: two runs, third blocked without report, human record resets, absent log opts out (12079.4276ms)
+✔ missing state is unknown with exit 3, never an empty approved gate list (1896.8461ms)
+✔ collects recorded gates and feedback without changing source bytes or emitting unrelated fields (2139.2139ms)
+✔ malformed JSON and invalid gate schema remain unknown (1891.8493ms)
+✔ rejects malformed review logs instead of silently dropping feedback (1449.2651ms)
+﹣ refuses linked state files even inside the project (17.2246ms) # Windows symlink privilege unavailable
+✔ oversized state files are reported as unknown (1329.0161ms)
+✔ invalid project and unsupported flags are errors, without executing commands (1460.6424ms)
+✔ refuses a linked parent directory without reading outside project state (994.3052ms)
+✔ imports a rasterized icon with source, tint, credit, and concept manifest (1058.6399ms)
+✔ rejects CC BY icon without author before creating output (1379.9011ms)
+✔ color changes dark RGB, preserves alpha, source, and untouched file bytes (34.0899ms)
+✔ pingpong and explicit holds copy pixels with documented mapping (49.5187ms)
+✔ reject overwrite, invalid frames and mixed canvas before output (14.1951ms)
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "one hit per target per attack",
+      "result": "pass"
+    },
+    {
+      "name": "attack remains locked and ignores movement",
+      "result": "pass"
+    },
+    {
+      "name": "attack misses target behind player",
+      "result": "pass"
+    },
+    {
+      "name": "left facing attack hits target on left",
+      "result": "pass"
+    },
+    {
+      "name": "hurt interrupts attack and recovers to idle",
+      "result": "pass"
+    },
+    {
+      "name": "defeated target respawns",
+      "result": "pass"
+    },
+    {
+      "name": "movement stays inside world and updates facing",
+      "result": "pass"
+    },
+    {
+      "name": "run uses a distinct clip and configured faster movement",
+      "result": "pass"
+    },
+    {
+      "name": "releasing sprint returns to accepted walk and stopping to idle",
+      "result": "pass"
+    },
+    {
+      "name": "run loops without selecting the duplicate closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "run input cannot interrupt attack or roll",
+      "result": "pass"
+    },
+    {
+      "name": "dust lives in world space and trails both roll directions",
+      "result": "pass"
+    },
+    {
+      "name": "dust toggle and reduced effects disable particles without altering roll",
+      "result": "pass"
+    },
+    {
+      "name": "idle animates while keeping world position and facing fixed",
+      "result": "pass"
+    },
+    {
+      "name": "idle wraps its loop without holding the closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "movement exits idle immediately and stopping restarts idle",
+      "result": "pass"
+    },
+    {
+      "name": "attack exits idle immediately and resets attack timing",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery returns to animated idle at its final world position",
+      "result": "pass"
+    },
+    {
+      "name": "idle emits no damage or dust events",
+      "result": "pass"
+    },
+    {
+      "name": "slash world position remains at terminal root after recovery",
+      "result": "pass"
+    },
+    {
+      "name": "slash end torso anchor joins idle with no horizontal snap",
+      "result": "pass"
+    },
+    {
+      "name": "roll travels forward and keeps final position",
+      "result": "pass"
+    },
+    {
+      "name": "roll invulnerability blocks damage during tuck",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery can take damage",
+      "result": "pass"
+    },
+    {
+      "name": "roll cancels slash without resetting existing root travel",
+      "result": "pass"
+    },
+    {
+      "name": "enemy telegraph strike damages player in range",
+      "result": "pass"
+    },
+    {
+      "name": "enemy strike is avoided during roll invulnerability",
+      "result": "pass"
+    },
+    {
+      "name": "enemy attack applies at most one hit per cycle",
+      "result": "pass"
+    }
+  ],
+  "browser_visual": "pending",
+  "scope": "headless combat invariants and served files; not human motion approval"
+}
+✔ test\motion-court.test.mjs (1078.1385ms)
+✔ same version checks missing, modified and extra deployed files (5984.1442ms)
+✔ missing installation cannot report latest; remote source remains unknown (1862.5697ms)
+✔ Codex installed registry selects active version, not archived cache (127.7398ms)
+✔ 초안 생성, 정본 변경, 실행 근거 및 커밋 확인 (10748.3007ms)
+✔ new sessions resume checkpoints and role handoff with audit events (5412.3882ms)
+✔ duplicate IDs and invalid blocked checkpoints leave bytes unchanged (2652.2315ms)
+✔ evidence is attached as an unverified receipt and stale content prevents done (3166.4662ms)
+✔ done requires fresh evidence but does not approve production or close a gate (2686.2251ms)
+✔ lessons stay proposals, and brief rechecks their evidence (3388.3927ms)
+✔ corruption and existing locks cannot be overwritten (1951.8748ms)
+✔ sensitive and escaping evidence paths are refused (2542.9825ms)
+✔ linked store directories are refused without writing outside the project (669.7684ms)
+✔ unsupported options, actors and roles are errors (1230.1874ms)
+✔ Unicode notes survive cross-session reload and brief is read-only (2175.227ms)
+✔ a linked evidence parent is refused even when the destination file exists (1259.7738ms)
+✔ stale sessions cannot overwrite a newer checkpoint (1924.3454ms)
+✔ existing stores require an explicit observed revision (1464.8836ms)
+ℹ tests 70
+ℹ suites 0
+ℹ pass 69
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 110400.5336
+
+## python (2)
+verified model-00-000.bin
+restored diffusion/test.bin
+verified diffusion/test.bin
+
+# 결과: 13개 전부 통과
+
+  WARNING: The script idna.exe is installed in 'C:\Users\NHN\AppData\Local\Python\pythoncore-3.14-64\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script normalizer.exe is installed in 'C:\Users\NHN\AppData\Local\Python\pythoncore-3.14-64\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.048s
+
+OK
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.085s
+
+OK

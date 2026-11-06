@@ -1,0 +1,4 @@
+{
+  "command": "python3 -m pip install --quiet --disable-pip-version-check pillow numpy requests\nnode scripts/run-tests.mjs\n",
+  "exitCode": 0
+}

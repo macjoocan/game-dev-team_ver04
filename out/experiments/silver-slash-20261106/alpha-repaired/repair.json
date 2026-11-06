@@ -1,0 +1,31 @@
+{
+  "frame": 7,
+  "method": "Recover only source-visible blurred blade alpha in inspected polygon; no new sword pixels painted",
+  "polygon": [
+    [
+      419,
+      352
+    ],
+    [
+      559,
+      383
+    ],
+    [
+      560,
+      401
+    ],
+    [
+      419,
+      376
+    ]
+  ],
+  "background": 255,
+  "contrastThreshold": 8,
+  "alphaContrastScale": 128,
+  "changedPixels": 1717,
+  "outsidePolygonUnchanged": true,
+  "originalGeneratedSha256": "6e7706841ce0711374830dbb6e8a2404acd3b13430c19c7155bc7969be133c4e",
+  "originalAlphaSha256": "3125b532efd7e145e427987a48aeecc4370718babff321c99158dbd8853a4984",
+  "outputSha256": "0c322966875225da6de082b7304c0da827aece4c81b5dd52e8bfb65d62e6168a",
+  "otherFramesUnchanged": true
+}

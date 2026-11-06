@@ -1,0 +1,16 @@
+{
+  "sourceCanvas": [
+    384,
+    448
+  ],
+  "canvas": [
+    480,
+    512
+  ],
+  "offset": [
+    48,
+    32
+  ],
+  "scale": 1,
+  "reason": "prevent generated sword from crossing frame; keep original reference pixel scale"
+}

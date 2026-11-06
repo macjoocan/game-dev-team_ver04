@@ -1,0 +1,343 @@
+{
+  "kind": "sprite-gen-motion-report",
+  "version": 1,
+  "status": "needs-review",
+  "frame_count": 8,
+  "duration_seconds": 1.0,
+  "size": [
+    512,
+    512
+  ],
+  "anchor_px": [
+    256.0,
+    480.0
+  ],
+  "facing": "right",
+  "contacts": [],
+  "foot_box": null,
+  "duplicate_frames": {
+    "exact": 0,
+    "adjacent_exact": 0,
+    "exact_silhouette": 0,
+    "near_silhouette": 0
+  },
+  "motion": {
+    "present": true,
+    "changed_transitions": 7,
+    "silhouette_changed_transitions": 7,
+    "silhouette_change_per_second": 2.715551807111868
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "time_seconds": 0.0,
+      "duration_seconds": 0.125,
+      "bbox": [
+        107,
+        49,
+        405,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -149.0,
+        -431.0,
+        149.0,
+        0.0
+      ],
+      "centroid_px": [
+        253.93280580109035,
+        256.0425289789869
+      ],
+      "opaque_pixels": 56679,
+      "edge_sides": []
+    },
+    {
+      "frame": 1,
+      "time_seconds": 0.125,
+      "duration_seconds": 0.125,
+      "bbox": [
+        110,
+        58,
+        402,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -146.0,
+        -422.0,
+        146.0,
+        0.0
+      ],
+      "centroid_px": [
+        251.48362254568207,
+        259.22995602009456
+      ],
+      "opaque_pixels": 54343,
+      "edge_sides": []
+    },
+    {
+      "frame": 2,
+      "time_seconds": 0.25,
+      "duration_seconds": 0.125,
+      "bbox": [
+        99,
+        48,
+        413,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -157.0,
+        -432.0,
+        157.0,
+        0.0
+      ],
+      "centroid_px": [
+        238.67746265172735,
+        244.68779178338002
+      ],
+      "opaque_pixels": 51408,
+      "edge_sides": []
+    },
+    {
+      "frame": 3,
+      "time_seconds": 0.375,
+      "duration_seconds": 0.125,
+      "bbox": [
+        100,
+        55,
+        413,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -156.0,
+        -425.0,
+        157.0,
+        0.0
+      ],
+      "centroid_px": [
+        238.48277886497064,
+        258.29118441897305
+      ],
+      "opaque_pixels": 53655,
+      "edge_sides": []
+    },
+    {
+      "frame": 4,
+      "time_seconds": 0.5,
+      "duration_seconds": 0.125,
+      "bbox": [
+        98,
+        50,
+        415,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -158.0,
+        -430.0,
+        159.0,
+        0.0
+      ],
+      "centroid_px": [
+        238.15692860774203,
+        256.48474834773765
+      ],
+      "opaque_pixels": 55076,
+      "edge_sides": []
+    },
+    {
+      "frame": 5,
+      "time_seconds": 0.625,
+      "duration_seconds": 0.125,
+      "bbox": [
+        113,
+        55,
+        400,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -143.0,
+        -425.0,
+        144.0,
+        0.0
+      ],
+      "centroid_px": [
+        253.81502029266113,
+        255.1350672078043
+      ],
+      "opaque_pixels": 53714,
+      "edge_sides": []
+    },
+    {
+      "frame": 6,
+      "time_seconds": 0.75,
+      "duration_seconds": 0.125,
+      "bbox": [
+        118,
+        51,
+        395,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -138.0,
+        -429.0,
+        139.0,
+        0.0
+      ],
+      "centroid_px": [
+        260.5314339268978,
+        243.07870665417056
+      ],
+      "opaque_pixels": 53350,
+      "edge_sides": []
+    },
+    {
+      "frame": 7,
+      "time_seconds": 0.875,
+      "duration_seconds": 0.125,
+      "bbox": [
+        105,
+        52,
+        408,
+        480
+      ],
+      "anchor_px": [
+        256.0,
+        480.0
+      ],
+      "bbox_from_anchor": [
+        -151.0,
+        -428.0,
+        152.0,
+        0.0
+      ],
+      "centroid_px": [
+        248.39258494324932,
+        254.22624421983807
+      ],
+      "opaque_pixels": 54713,
+      "edge_sides": []
+    }
+  ],
+  "bbox_stats": {
+    "union": [
+      98,
+      48,
+      415,
+      480
+    ],
+    "width_range": [
+      277,
+      317
+    ],
+    "height_range": [
+      422,
+      432
+    ],
+    "bottom_range": [
+      480,
+      480
+    ]
+  },
+  "edge_contact": {
+    "frames": [],
+    "sides": {
+      "left": [],
+      "top": [],
+      "right": [],
+      "bottom": []
+    }
+  },
+  "contact_candidates": [],
+  "confidence": 0.0,
+  "sequence": {
+    "source": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\sequence.json",
+    "state": null,
+    "fps_override": null,
+    "frame_count": 8,
+    "size": [
+      512,
+      512
+    ],
+    "anchor_px": [
+      256.0,
+      480.0
+    ],
+    "durations_seconds": [
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125,
+      0.125
+    ]
+  },
+  "source_fingerprints": {
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\sequence.json": "d3650123ef9be353a2d0a01d4db6593a49cd8e1f973f903200dfa80976ff48e9",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_00.png": "87a1d5fc32f588c31625f8f1b6b13156e64be09078b219f7238d84ca8a508a98",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_01.png": "0a7f1162ecf5114c2913f5f0c1dd9686ae2196b1f51277e1b276a3d3d3aae80a",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_02.png": "3197b1e9c7b7b2c169b769530117e6cff6b8a231c74f3bf258e39b374bef9224",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_03.png": "69d1a364e5491acd2e0d573d3ec1a5e9b7adfa57af3d2693f0eda67ddb5f2ff3",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_04.png": "4a62f5c302275dcc2508be93eee6ef6b1d6367c71d804c86c5c49d7dc10af346",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_05.png": "f885c51447af801d4642470a9f0a1eb6252231f32c295c09df4d11875626eb96",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_06.png": "88a466174c7fd334489d13a07fe767472941df06efe41330f30247b7604a8009",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_07.png": "60246c306f3ca9042ebdc614c3a1bfcfe759b3a4063b345f654bca3b1283a923"
+  },
+  "stride_verified": false,
+  "foot_velocity_px_per_second": null,
+  "stride_px_per_second": null,
+  "warnings": [
+    "Ground contact is unknown: provide both manual contacts and a single-foot ROI; silhouette bottoms do not identify a planted foot."
+  ],
+  "method": {
+    "silhouette": "alpha > 0 in source canvas coordinates; bbox right/bottom are exclusive",
+    "near_silhouette_iou": 0.98,
+    "duplicates": "Counts frames matching an earlier frame; near excludes exact silhouette matches. No time or frames are removed.",
+    "motion": "Adjacent visible pixel changes; silhouette XOR/union summed over full duration. No loop-seam assumption.",
+    "contact": "User-declared same-foot stance spans plus isolated ROI alpha centroid; no automatic contact or facing inference.",
+    "timing": "Cumulative frame-start seconds; repeated tracked poses use their first onset with all intervening durations retained. Final hold is included in duration but has no displacement endpoint.",
+    "velocity": "Endpoint horizontal displacement / pose-onset elapsed seconds; positive = image right. Stride is absolute velocity under manual ground-contact assumptions.",
+    "confidence": "0.9 = at least 3 distinct poses, stable baseline/shape, monotonic near-linear motion and consistent spans. Heuristic conditional confidence, not a calibrated contact probability.",
+    "sequence": "Identity of the analysed sequence: source, atlas state, fps override, frame count, size, anchor and effective per-frame durations. A consumer applying the stride must match all of it and source_fingerprints; another state or frame rate of the same files is a different sequence."
+  },
+  "source_files": [
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\sequence.json",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_00.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_01.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_02.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_03.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_04.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_05.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_06.png",
+    "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\frames\\frame_07.png"
+  ],
+  "source": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\gpt-walk-20261106\\gpt-sheet\\sequence.json"
+}

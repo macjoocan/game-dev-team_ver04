@@ -1,0 +1,5 @@
+{
+  "command": "node scripts/ci-local.mjs",
+  "exitCode": 0,
+  "completedAt": "2026-11-06T09:25:34.553Z"
+}

@@ -1,0 +1,346 @@
+{
+  "status": "concept",
+  "approved": false,
+  "items": [
+    {
+      "id": "ludo",
+      "title": "① 집 · Ludo 한 주기 24장",
+      "frames": [
+        "ludo/frame_00.png",
+        "ludo/frame_01.png",
+        "ludo/frame_02.png",
+        "ludo/frame_03.png",
+        "ludo/frame_04.png",
+        "ludo/frame_05.png",
+        "ludo/frame_06.png",
+        "ludo/frame_07.png",
+        "ludo/frame_08.png",
+        "ludo/frame_09.png",
+        "ludo/frame_10.png",
+        "ludo/frame_11.png",
+        "ludo/frame_12.png",
+        "ludo/frame_13.png",
+        "ludo/frame_14.png",
+        "ludo/frame_15.png",
+        "ludo/frame_16.png",
+        "ludo/frame_17.png",
+        "ludo/frame_18.png",
+        "ludo/frame_19.png",
+        "ludo/frame_20.png",
+        "ludo/frame_21.png",
+        "ludo/frame_22.png",
+        "ludo/frame_23.png"
+      ],
+      "durations": [
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408,
+        74.07407407407408
+      ],
+      "period": 1777.7777777777778,
+      "firstBounds": [
+        9,
+        0,
+        118,
+        128
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "timing": "13.5 FPS는 과거 원본 영상 길이에서 추정한 비교 속도",
+      "note": "다른 캐릭터. 무료 출력의 LUDO 워터마크를 그대로 보존",
+      "sources": [
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0000.png",
+          "sha256": "bd3f986b0ab9713f33196e720b4859aa2d80a03b9f3a276be6de59c2c1659eb6"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0001.png",
+          "sha256": "b597da3bcd4f67ae538b7f26bcb112d24cf60fd4536fe01b8adc4e7686b34fc3"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0002.png",
+          "sha256": "59b1cbfa56f5e421f356333b05f653e3ef12f7aba0805b3c9e359c77c3389123"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0003.png",
+          "sha256": "f1a580bd867d0d1983794345d2906db8be14da6bc359374d9864aafb44e82eff"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0004.png",
+          "sha256": "8e90c17cd83f9137688a19ceb64e405250a9e43483963b2be08fdcae1274520a"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0005.png",
+          "sha256": "4cb11ccf4d78f991455ce91b7fec0f850ca357e7ab5fa879b53d4be462dc55b5"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0006.png",
+          "sha256": "7c8cb9d0afcf3dd43cff88508c792b3d38f93bc34411feedb1fc304a8d257183"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0007.png",
+          "sha256": "2a25c89a73f1ac19ba5bb5d13d48e9bd9df1e4e15ca1de2115577148c954fd7a"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0008.png",
+          "sha256": "6de1412a81ebe4a19b5e4f5e64afd6e197b86cf5b04e1436085084aef3c1fa6e"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0009.png",
+          "sha256": "2f391335517523a6d8dcbeaa7d0875314e3ddfd079f0a75f05c4e544eb747664"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0010.png",
+          "sha256": "d756ababcd471525c8b5c607ecea69b7513cb6ed3b0aba58722ff02c0632dafe"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0011.png",
+          "sha256": "2d59227a2569af355065d7c2ee6471a1580d7fdd438ebfc06bffeda2d68245c8"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0012.png",
+          "sha256": "e84001f7b0211091163ee09f0e4d1a4e9ba9bbcdb65fec9cbc41045797a402bb"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0013.png",
+          "sha256": "e62e001dd034bf5d5ade33e63df6355070e3b5b5b5b70a6863a296c3a7f0830b"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0014.png",
+          "sha256": "13ce43bdb00e1e6c44c4b19fefd0e52c8f3484ead7629ae6469a8e36672afdfd"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0015.png",
+          "sha256": "7bf0725f3cd6ec140780ff4c67faf8ec206cf0ec5f54bcee1e4b4ac44f76ac6a"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0016.png",
+          "sha256": "e6713744b02636fbddcefe4ca04e1c7f3e9e064383e01d82e0f77deed034e8a1"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0017.png",
+          "sha256": "5594504308f8279f771ec0d58a2fb47a9e56227d4b09cbcb403c506f150cfe2f"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0018.png",
+          "sha256": "6778d00742a17b649251ec2b803fa32b5cd7b22bbeb86087b3b959f8c14ed2cd"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0019.png",
+          "sha256": "5eb76ed357c6f2373597ac1618280fc8a6f156a8452fc5d31bb22b229a432f92"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0020.png",
+          "sha256": "6d1ff1f124fad6fa97ad3b8590b5ffdb06ba56903e02a750732212307b09bf0d"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0021.png",
+          "sha256": "beed27039b4038edfba80bed701f24a9134afa8a18c01e5888138880371e2192"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0022.png",
+          "sha256": "aa0e2a1e873369b8bf476d8b5f0f4b0e30970409075ad70808616a26d8890e3f"
+        },
+        {
+          "file": "samples/art-comparison-2026-10-16/ludo-cycle/walk/frame_0023.png",
+          "sha256": "ebb4167e2cbdbe32da33d39424fd8b01cb147fb8dab00d1a549248cd87262ed6"
+        }
+      ],
+      "frameHashes": [
+        "bd3f986b0ab9713f33196e720b4859aa2d80a03b9f3a276be6de59c2c1659eb6",
+        "b597da3bcd4f67ae538b7f26bcb112d24cf60fd4536fe01b8adc4e7686b34fc3",
+        "59b1cbfa56f5e421f356333b05f653e3ef12f7aba0805b3c9e359c77c3389123",
+        "f1a580bd867d0d1983794345d2906db8be14da6bc359374d9864aafb44e82eff",
+        "8e90c17cd83f9137688a19ceb64e405250a9e43483963b2be08fdcae1274520a",
+        "4cb11ccf4d78f991455ce91b7fec0f850ca357e7ab5fa879b53d4be462dc55b5",
+        "7c8cb9d0afcf3dd43cff88508c792b3d38f93bc34411feedb1fc304a8d257183",
+        "2a25c89a73f1ac19ba5bb5d13d48e9bd9df1e4e15ca1de2115577148c954fd7a",
+        "6de1412a81ebe4a19b5e4f5e64afd6e197b86cf5b04e1436085084aef3c1fa6e",
+        "2f391335517523a6d8dcbeaa7d0875314e3ddfd079f0a75f05c4e544eb747664",
+        "d756ababcd471525c8b5c607ecea69b7513cb6ed3b0aba58722ff02c0632dafe",
+        "2d59227a2569af355065d7c2ee6471a1580d7fdd438ebfc06bffeda2d68245c8",
+        "e84001f7b0211091163ee09f0e4d1a4e9ba9bbcdb65fec9cbc41045797a402bb",
+        "e62e001dd034bf5d5ade33e63df6355070e3b5b5b5b70a6863a296c3a7f0830b",
+        "13ce43bdb00e1e6c44c4b19fefd0e52c8f3484ead7629ae6469a8e36672afdfd",
+        "7bf0725f3cd6ec140780ff4c67faf8ec206cf0ec5f54bcee1e4b4ac44f76ac6a",
+        "e6713744b02636fbddcefe4ca04e1c7f3e9e064383e01d82e0f77deed034e8a1",
+        "5594504308f8279f771ec0d58a2fb47a9e56227d4b09cbcb403c506f150cfe2f",
+        "6778d00742a17b649251ec2b803fa32b5cd7b22bbeb86087b3b959f8c14ed2cd",
+        "5eb76ed357c6f2373597ac1618280fc8a6f156a8452fc5d31bb22b229a432f92",
+        "6d1ff1f124fad6fa97ad3b8590b5ffdb06ba56903e02a750732212307b09bf0d",
+        "beed27039b4038edfba80bed701f24a9134afa8a18c01e5888138880371e2192",
+        "aa0e2a1e873369b8bf476d8b5f0f4b0e30970409075ad70808616a26d8890e3f",
+        "ebb4167e2cbdbe32da33d39424fd8b01cb147fb8dab00d1a549248cd87262ed6"
+      ]
+    },
+    {
+      "id": "home-comfy",
+      "title": "② 집 · 은발 검사 ComfyUI",
+      "frames": [
+        "home-comfy/frame_00.png",
+        "home-comfy/frame_01.png",
+        "home-comfy/frame_02.png",
+        "home-comfy/frame_03.png",
+        "home-comfy/frame_04.png",
+        "home-comfy/frame_05.png",
+        "home-comfy/frame_06.png",
+        "home-comfy/frame_07.png",
+        "home-comfy/frame_08.png",
+        "home-comfy/frame_09.png",
+        "home-comfy/frame_10.png",
+        "home-comfy/frame_11.png"
+      ],
+      "durations": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "period": 960,
+      "firstBounds": [
+        53,
+        48,
+        470,
+        657
+      ],
+      "size": [
+        480,
+        704
+      ],
+      "timing": "보존된 GIF의 프레임별 duration 사용. 원본 25프레임 전체가 아닌 후반 발췌본",
+      "note": "흰 배경 원본 보존. 포니테일 소실은 별도 외형 결함",
+      "sources": [
+        {
+          "file": "samples/2d-sprite-motion-pilot/video-probe-walk.gif",
+          "sha256": "51f63eb534ae0d2cc882eb5069ca4d88b05875877eef342e2a9a56c6fcc0154c"
+        }
+      ],
+      "frameHashes": [
+        "19fde7417c315216ead2fae3151cb99d877b2cb08125737e1472f4b7031c0bfb",
+        "b1e0e02d06f346a4d29b631e53881ef65cf1dac1d7e38731c777d093872997d1",
+        "b13a7c28ef72ef67e243d7d274921ab0d8a90b79017c9742f1325f206f79348c",
+        "5a3fc4c6da580298cc7d613ad26cf741b4f3dd0522bfd5e68bfcddf1d7626d0e",
+        "6bf0fb4dd8951ca4d63d08a039af033ce67253983bac0b7d8225bba4cdf7038e",
+        "9149ec8e34899c7bf8128c485a16fca2a000c7290135009ea9c5c10ad0cd9f3b",
+        "44e525d535933b6dbccf0fb9392013fbbe3583eca22287b4738e6d420ed56380",
+        "c6e0e4026c4317ff5d9a97a858be53d1b00904df3d3ce42ef329aed0051e28b3",
+        "0a7bcf9f8780f3f9f838ea5a1bfd4813d2c4969081c1205bc7a4774e1af97e3d",
+        "aeaac43d24e49928698797554fe627265c3d4cd62e215f799821435091e53361",
+        "47e4ba701841612e3b6211ec073b985bf18ec8698d50e49d2e6908316bc636a5",
+        "793e4e015c8ff05332c2de9d510f5a3f29592a1d2c9aaf54ac55a152be9b1d0d"
+      ]
+    },
+    {
+      "id": "gpt-b",
+      "title": "참고 · 현재 GPT B",
+      "frames": [
+        "gpt-b/frame_00.png",
+        "gpt-b/frame_01.png",
+        "gpt-b/frame_02.png",
+        "gpt-b/frame_03.png",
+        "gpt-b/frame_04.png",
+        "gpt-b/frame_05.png",
+        "gpt-b/frame_06.png",
+        "gpt-b/frame_07.png"
+      ],
+      "durations": [
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125,
+        125
+      ],
+      "period": 1000,
+      "firstBounds": [
+        108,
+        51,
+        403,
+        479
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "timing": "현재 실험에서 지정한 8 FPS",
+      "note": "현재 선택한 B. 발 접지·반복 경계는 추가 검수 필요",
+      "sources": [
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_00.png",
+          "sha256": "87a1d5fc32f588c31625f8f1b6b13156e64be09078b219f7238d84ca8a508a98"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_01.png",
+          "sha256": "0a7f1162ecf5114c2913f5f0c1dd9686ae2196b1f51277e1b276a3d3d3aae80a"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_02.png",
+          "sha256": "3197b1e9c7b7b2c169b769530117e6cff6b8a231c74f3bf258e39b374bef9224"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_03.png",
+          "sha256": "69d1a364e5491acd2e0d573d3ec1a5e9b7adfa57af3d2693f0eda67ddb5f2ff3"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_04.png",
+          "sha256": "4a62f5c302275dcc2508be93eee6ef6b1d6367c71d804c86c5c49d7dc10af346"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_05.png",
+          "sha256": "f885c51447af801d4642470a9f0a1eb6252231f32c295c09df4d11875626eb96"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_06.png",
+          "sha256": "88a466174c7fd334489d13a07fe767472941df06efe41330f30247b7604a8009"
+        },
+        {
+          "file": "out/experiments/gpt-walk-20261106/gpt-sheet/frames/frame_07.png",
+          "sha256": "60246c306f3ca9042ebdc614c3a1bfcfe759b3a4063b345f654bca3b1283a923"
+        }
+      ],
+      "frameHashes": [
+        "87a1d5fc32f588c31625f8f1b6b13156e64be09078b219f7238d84ca8a508a98",
+        "0a7f1162ecf5114c2913f5f0c1dd9686ae2196b1f51277e1b276a3d3d3aae80a",
+        "3197b1e9c7b7b2c169b769530117e6cff6b8a231c74f3bf258e39b374bef9224",
+        "69d1a364e5491acd2e0d573d3ec1a5e9b7adfa57af3d2693f0eda67ddb5f2ff3",
+        "4a62f5c302275dcc2508be93eee6ef6b1d6367c71d804c86c5c49d7dc10af346",
+        "f885c51447af801d4642470a9f0a1eb6252231f32c295c09df4d11875626eb96",
+        "88a466174c7fd334489d13a07fe767472941df06efe41330f30247b7604a8009",
+        "60246c306f3ca9042ebdc614c3a1bfcfe759b3a4063b345f654bca3b1283a923"
+      ]
+    }
+  ],
+  "policy": "Original pixels, order and durations retained. Fixed first-frame bounds used only for display. Same-cycle mode changes playback timing only."
+}

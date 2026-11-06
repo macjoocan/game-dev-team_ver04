@@ -1,0 +1,33 @@
+{
+  "sourceCommits": {
+    "sprite-maker": "9de73a6136a1a045af2e8769349fbadc17dbef69",
+    "sprite-gen": "4f5ccd55c7cf06685a41f954acc1e476b7772ece"
+  },
+  "selection": {
+    "selected": "gpt-sheet",
+    "scope": "preferred candidate for next improvement, not final approval",
+    "humanApproved": false,
+    "quote": "ㅋㅋㅋㅋㅋㅋㅋ B가 젤 나은데? ㅋㅋ",
+    "recordedBy": "codex",
+    "date": "2026-11-06"
+  },
+  "nativeSourceFiles": {
+    "types.rs": "741a56321cc2c6c9e975776518c9c7d650e17265271e30d0ce6131399735a9b0",
+    "ik.rs": "365802f34841243f79d8581008aa3e4075ee86f7c6988b6eab64497bee741b4a",
+    "mesh.rs": "8766f9507e2035d4bc0b226c9b0d517ac201eac4259d007f07d56e95316f23f7",
+    "skin.rs": "3dd14990a94638543f87f9a5f03d97cb5ebb22593d928a209ec5013f5bea395a",
+    "ik_tests.rs": "71f058ec508f87bb49ccecc3e4137698eeac7fdee008813c12716bed573d7a7d"
+  },
+  "inputs": {
+    "input/master.png": "d51f93c77c6ff32281b440c9892d8c21695771439c35ce37a35c7b093e27a8d6",
+    "rig.json": "928ea179f235eccd6632bb147e09b93a6541f814d33df02be3b5d530a3f12fb1",
+    "sheet-prompt.txt": "6038e6023cf52a4909a21e796917a0b03a46b403717ed447f47b8e0568e3a0b2",
+    "gpt-sheet/raw.png": "6e4f3c21f85332a0fce22dbacb9ebd89029870bb5dd74fa511260c27e64189b4"
+  },
+  "candidateManifests": {
+    "rig": "0563af78c4bfc22e89978e1893fd431616aa32562a5d4424154c1ff572f04c38",
+    "gpt-sheet": "49098ad11269a21c042c4bfd839252dc50227f9038ed17065d9097bc59c430eb",
+    "rigid": "121932fe58e2fbce2d90d83581a20bced582c0920dad3d169f7f4680d10b70bd"
+  },
+  "reportSha256": "a273aa2dd0b15acfefcd7852438df73560b2896d05a6b0b021733f4ff3332f06"
+}

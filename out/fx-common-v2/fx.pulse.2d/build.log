@@ -1,0 +1,5 @@
+  팔레트: C:\00.SVN\game-dev-team_ver04\out\fx-common-v2\palette.json
+  texture  24프레임 x 96px  -> texture_sheet.png (2304x96)
+
+이펙트 1종 -> C:\00.SVN\game-dev-team_ver04\out\fx-common-v2\fx.pulse.2d
+manifest.json 에 프레임 수·fps·블렌드·피벗이 있다 (Unity 임포트/파티클 설정에 그대로 쓴다).

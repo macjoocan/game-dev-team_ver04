@@ -10,6 +10,9 @@
 // 종료 코드: 0 충족 · 1 미달 · 3 측정 불가 (CI 게이트로 쓸 수 있다)
 
 import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { findLog, reserveSimulation, finishSimulation } from './lib-playfeel.mjs';
 import { execFileSync } from 'node:child_process';
 import { makeRng, runSeed } from './rng.mjs';
 import { POLICIES } from './policies.mjs';
@@ -105,6 +108,19 @@ if (AB) {
   const v = AB.slice(eq + 1);
   abConfig = { ...baseConfig, [k]: isNaN(Number(v)) ? v : Number(v) };
 }
+
+if (!Number.isSafeInteger(RUNS) || RUNS < 1 || !Number.isFinite(SEED)) {
+  console.error('판수는 양의 정수, 시드는 유한한 수여야 한다.'); process.exit(2);
+}
+let playfeel;
+try {
+  playfeel = findLog(path.dirname(fileURLToPath(import.meta.url)));
+  const reservation = reserveSimulation(playfeel, { seed: SEED, runs: RUNS, policy: POLICY_NAME, ab: AB, at: new Date().toISOString() });
+  if (!reservation.allowed) {
+    console.log('[시뮬] 예산 차단 — 마지막 사람 플레이 이후 2회를 썼다. 실제 플레이 뒤 playfeel record로 피드백을 남긴다.');
+    process.exit(3);
+  }
+} catch (e) { console.error('측정 불가: 플레이 기록 확인 실패 — ' + e.message); process.exit(3); }
 
 const t0 = Date.now();
 const A = aggregate(batch(baseConfig));
@@ -204,6 +220,8 @@ out.push('## [잔여 위험]');
 out.push('- (통과했지만 남는 위험을 여기 적는다. 비워두면 "위험이 없다"는 주장이 된다.)', '');
 
 const report = out.join('\n');
+try { finishSimulation(playfeel, { seed: SEED, winRate: A.winRate.p, verdict: winJudge.verdict }); }
+catch (e) { console.error('측정 불가: 실행 결과 기록 실패 — ' + e.message); process.exit(3); }
 console.log(report);
 
 if (OUT) {

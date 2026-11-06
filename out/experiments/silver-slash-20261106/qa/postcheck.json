@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "name": "selected-sprite-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\export\\snappy",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\qa\\selected-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "screen-flash",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\qa\\screen-frames",
+        "--fps",
+        "30",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\silver-slash-20261106\\qa\\screen-flash"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "commit": "4c43b68"
+}

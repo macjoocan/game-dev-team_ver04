@@ -1,0 +1,6 @@
+{
+  "6":{"class_type":"VAELoader","inputs":{"vae_name":"wan_2.1_vae.safetensors"}},
+  "16":{"class_type":"LoadLatent","inputs":{"latent":"b-latent.latent"}},
+  "17":{"class_type":"VAEDecodeTiled","inputs":{"samples":["16",0],"vae":["6",0],"tile_size":256,"overlap":64,"temporal_size":16,"temporal_overlap":4}},
+  "18":{"class_type":"SaveImage","inputs":{"images":["17",0],"filename_prefix":"decode-check/frame"}}
+}

@@ -1,0 +1,13 @@
+✔ a long browser frame still registers exactly one hit (0.5803ms)
+✔ hit-stop holds the impact pose and spends remaining delta correctly (0.1372ms)
+✔ a miss causes no damage and no hit-stop (0.9229ms)
+✔ every scheduled pose is selected at its exact start (0.1127ms)
+✔ new attacks do not inherit hit flags from previous attacks (0.0937ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 719.9678

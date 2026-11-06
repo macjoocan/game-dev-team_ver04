@@ -1,0 +1,401 @@
+{
+  "status": "success",
+  "graph": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\decode-check.api.json",
+  "graphSha256": "1c2bce6434b959681f58fa433c05f23eb81b65ff67b6f0092ede8af5f05406ab",
+  "startedAt": "2026-11-06T07:49:00.595Z",
+  "host": "http://127.0.0.1:8196",
+  "paidCalls": 0,
+  "submission": {
+    "prompt_id": "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+    "number": 3,
+    "node_errors": {}
+  },
+  "promptId": "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+  "finishedAt": "2026-11-06T07:52:33.399Z",
+  "history": {
+    "prompt": [
+      3,
+      "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+      {
+        "6": {
+          "class_type": "VAELoader",
+          "inputs": {
+            "vae_name": "wan_2.1_vae.safetensors"
+          }
+        },
+        "16": {
+          "class_type": "LoadLatent",
+          "inputs": {
+            "latent": "b-latent.latent"
+          }
+        },
+        "17": {
+          "class_type": "VAEDecodeTiled",
+          "inputs": {
+            "samples": [
+              "16",
+              0
+            ],
+            "vae": [
+              "6",
+              0
+            ],
+            "tile_size": 256,
+            "overlap": 64,
+            "temporal_size": 16,
+            "temporal_overlap": 4
+          }
+        },
+        "18": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "images": [
+              "17",
+              0
+            ],
+            "filename_prefix": "decode-check/frame"
+          }
+        }
+      },
+      {
+        "client_id": "local-silver-motion",
+        "create_time": 1793951341514
+      },
+      [
+        "18"
+      ]
+    ],
+    "outputs": {
+      "18": {
+        "images": [
+          {
+            "filename": "frame_00001_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00002_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00003_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00004_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00005_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00006_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00007_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00008_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00009_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00010_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00011_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00012_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00013_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00014_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00015_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00016_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00017_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00018_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00019_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00020_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00021_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00022_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00023_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00024_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00025_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00026_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00027_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00028_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00029_.png",
+            "subfolder": "decode-check",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          }
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+            "timestamp": 1793951547233
+          }
+        ],
+        [
+          "execution_cached",
+          {
+            "nodes": [],
+            "prompt_id": "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+            "timestamp": 1793951547235
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "7ee8461a-6972-43e3-b82d-9bd2abaa16e0",
+            "timestamp": 1793951551622
+          }
+        ]
+      ]
+    },
+    "meta": {
+      "18": {
+        "node_id": "18",
+        "display_node": "18",
+        "parent_node": null,
+        "real_node_id": "18"
+      }
+    }
+  }
+}

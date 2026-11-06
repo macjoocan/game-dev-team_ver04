@@ -1,0 +1,21 @@
+{
+  "kind": "asset-feedback",
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-06",
+  "itemKey": "chr.silver.local-wan-animate2.walk@1",
+  "artifact": "out/experiments/local-motion-20261106/c-alpha",
+  "quote": "이정도면 잘나오는듯",
+  "interpretation": "칼 여백과 색 변화를 수정한 C안의 현재 품질에 긍정 평가. 후속 제작의 비교 기준으로 보존한다.",
+  "scope": "은발 캐릭터 걷기 C안의 시각 품질",
+  "productionApproval": false,
+  "automatedQaUnchanged": true,
+  "recipe": {
+    "graph": "out/experiments/local-motion-20261106/c-motion.api.json",
+    "canvas": [480, 512],
+    "inputPaddingLTRB": [48, 32, 48, 32],
+    "decode": "VAEDecode",
+    "frameCount": 26,
+    "paidGenerationCalls": 0
+  }
+}

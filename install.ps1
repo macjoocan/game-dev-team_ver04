@@ -84,7 +84,7 @@ if ($codexCmd -and $node) {
         Say "[!] validate-plugin reported a problem (possibly mirror drift)."
         Say "    Codex installs from plugins\game-dev-team - if that mirror is"
         Say "    stale, Codex gets old code. Run scripts\sync-plugin.ps1 and retry."
-        Say "    Continuing anyway."
+        Fail "Source validation failed. Sync and validate the bundle before installing."
     }
 }
 
@@ -147,6 +147,14 @@ if ($codexCmd) {
     }
 }
 if ($failed.Count -gt 0) { Fail "Failed for: $($failed -join ', ')" }
+
+if ($node) {
+    Step "Verifying installed files"
+    & node (Join-Path $pluginDir 'scripts\check-plugin-version.mjs') --source "$pluginDir" --harness $Harness
+    if ($LASTEXITCODE -ne 0) { Fail "Installed files could not be verified against this source." }
+} else {
+    Say "[!] Installed file hashes were not checked (Node.js is unavailable)."
+}
 
 # --- 6. next steps -----------------------------------------------------------
 Write-Host ""

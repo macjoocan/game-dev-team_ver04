@@ -1,0 +1,85 @@
+{
+  "commit": "4c43b68",
+  "records": [
+    {
+      "label": "atlas",
+      "args": [
+        "skills/char-art-system/scripts/atlas-pack.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-alpha",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-preview\\atlas.png",
+        "--trim",
+        "--max",
+        "4096",
+        "--fps",
+        "14.4"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "sprite-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-alpha",
+        "--atlas",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-preview\\atlas.json",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\qa\\sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "label": "join",
+      "args": [
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\ludo-research-20261106\\source\\dist\\cli.js",
+        "toolbox",
+        "sprite",
+        "join",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-alpha",
+        "--cols",
+        "6",
+        "--fps",
+        "14.4",
+        "--name",
+        "silver-local-c",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-preview",
+        "--json",
+        "--quiet"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "loop",
+      "args": [
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\ludo-research-20261106\\source\\dist\\cli.js",
+        "toolbox",
+        "sprite",
+        "loop",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-preview\\silver-local-c.png",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\qa",
+        "--json",
+        "--quiet"
+      ],
+      "exitCode": 0
+    },
+    {
+      "label": "metrics",
+      "args": [
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\ludo-research-20261106\\source\\dist\\cli.js",
+        "toolbox",
+        "sprite",
+        "metrics",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\c-preview\\silver-local-c.png",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\qa",
+        "--json",
+        "--quiet"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "paidCalls": 0,
+  "engineValidationExecuted": false
+}

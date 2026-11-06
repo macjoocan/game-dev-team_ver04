@@ -1,0 +1,70 @@
+{
+  "canvas": {
+    "w": 512,
+    "h": 512
+  },
+  "fit": 0.86,
+  "anchor": "bottom",
+  "pivot": {
+    "x": 0.5,
+    "y": 0
+  },
+  "sprites": [
+    {
+      "name": "frame_00.png",
+      "srcSize": "280x443",
+      "placed": "280x443",
+      "heightRatio": 0.98,
+      "outlier": false
+    },
+    {
+      "name": "frame_01.png",
+      "srcSize": "261x450",
+      "placed": "261x450",
+      "heightRatio": 1,
+      "outlier": false
+    },
+    {
+      "name": "frame_02.png",
+      "srcSize": "266x455",
+      "placed": "266x455",
+      "heightRatio": 1.01,
+      "outlier": false
+    },
+    {
+      "name": "frame_03.png",
+      "srcSize": "265x455",
+      "placed": "265x455",
+      "heightRatio": 1.01,
+      "outlier": false
+    },
+    {
+      "name": "frame_04.png",
+      "srcSize": "275x454",
+      "placed": "275x454",
+      "heightRatio": 1.01,
+      "outlier": false
+    },
+    {
+      "name": "frame_05.png",
+      "srcSize": "300x438",
+      "placed": "300x438",
+      "heightRatio": 0.97,
+      "outlier": false
+    },
+    {
+      "name": "frame_06.png",
+      "srcSize": "308x433",
+      "placed": "308x433",
+      "heightRatio": 0.96,
+      "outlier": false
+    },
+    {
+      "name": "frame_07.png",
+      "srcSize": "300x434",
+      "placed": "300x434",
+      "heightRatio": 0.96,
+      "outlier": false
+    }
+  ]
+}

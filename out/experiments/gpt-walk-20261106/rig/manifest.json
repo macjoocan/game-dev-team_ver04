@@ -1,0 +1,178 @@
+{
+  "id": "chr.silver.gpt-walk.rig",
+  "version": 1,
+  "status": "concept",
+  "humanApproved": false,
+  "preferred": false,
+  "input": "../input/master.png",
+  "inputSha256": "d51f93c77c6ff32281b440c9892d8c21695771439c35ce37a35c7b093e27a8d6",
+  "generator": "sprite-maker native Rust core; manual rig",
+  "license": "source code MIT / Apache-2.0; production rights of artwork not reviewed",
+  "files": [
+    {
+      "path": "atlas.json",
+      "sha256": "281330c4446a494ed3810c2cc1d787f47643fbf7a67670e3d30697c2d3259292",
+      "bytes": 3518
+    },
+    {
+      "path": "atlas.log",
+      "sha256": "629d5bc8b8095aa4addfeec9bdb4b18482cb25c4e11e000a1d625713badc7d68",
+      "bytes": 294
+    },
+    {
+      "path": "atlas.png",
+      "sha256": "a111ea507590c720e32f679aea2c3421223f139063ea159852d4535a9e763de9",
+      "bytes": 742772
+    },
+    {
+      "path": "contact-large.png",
+      "sha256": "51af90315aa9f2d6d2afe350c4ef5ed5b64f5f5756862cbcc6baea8e2ab78b61",
+      "bytes": 274925
+    },
+    {
+      "path": "contact.png",
+      "sha256": "0c66352a93141562ddc8f68935609f30a2d1d2eeb357991083ecd5cd33e85e04",
+      "bytes": 65683
+    },
+    {
+      "path": "exit.json",
+      "sha256": "3707e820c3cb19a82ba5780f7e56d9abda01e1fee2fe74be643a6feb97b2b104",
+      "bytes": 29
+    },
+    {
+      "path": "frames/frame_00.png",
+      "sha256": "3b10ebeb36191791d3f2d346fe9def55147efb93edb160107279aca665b2ab12",
+      "bytes": 164740
+    },
+    {
+      "path": "frames/frame_01.png",
+      "sha256": "75eb359f6027c63146a27722ea97d59caf2511de374bc6cf422d22b5a9765e91",
+      "bytes": 160657
+    },
+    {
+      "path": "frames/frame_02.png",
+      "sha256": "aa74010c77ce691fe8e18ca3ee097085e325581de66d580fbd8f643a581e1060",
+      "bytes": 154127
+    },
+    {
+      "path": "frames/frame_03.png",
+      "sha256": "1d47261cf074cc73148ef790857ae12f76e5b861dd84b106797c54f351ec69cb",
+      "bytes": 154336
+    },
+    {
+      "path": "frames/frame_04.png",
+      "sha256": "52c401a3b0dc1d0609c12941ef9e5fbbe466aaedbeb6d6655c9e67440f179282",
+      "bytes": 160668
+    },
+    {
+      "path": "frames/frame_05.png",
+      "sha256": "5de708e675d2480ccd0925abdc2845a86be2ca4dd4c9103279b61ed52468bbbd",
+      "bytes": 154461
+    },
+    {
+      "path": "frames/frame_06.png",
+      "sha256": "202b0e7bf707f59f8b0bb63faca4e56c94e28d123eb31287355cc1b8f8615814",
+      "bytes": 151494
+    },
+    {
+      "path": "frames/frame_07.png",
+      "sha256": "00e947b553044b8303d0f0e0c40f45ea7abc25c3242b9e89dd4f761f86e21f98",
+      "bytes": 158496
+    },
+    {
+      "path": "frames/kinematics.json",
+      "sha256": "1c2b9445a222774407b9d35bf87b81ff43ff21e60c51e38a713b06a7e038d5ac",
+      "bytes": 27519
+    },
+    {
+      "path": "kinematic-check.json",
+      "sha256": "b908b877c85219598f3b7d37758fcc3887565bc120ef667b9ca50cb965a83f03",
+      "bytes": 347
+    },
+    {
+      "path": "motion.json",
+      "sha256": "daa87cdd6a5cd4514a4661867ca00b8d889d996392c36435414295ef98a7efc0",
+      "bytes": 9389
+    },
+    {
+      "path": "motion.log",
+      "sha256": "6a712184d64f9949868700a1797a93e9768ccbad81c436e630223a2547ec1500",
+      "bytes": 19466
+    },
+    {
+      "path": "normalize.log",
+      "sha256": "35566f9c9f39c8e1bf71d2eea39385034919d1892d4928593f7524a706b1da4c",
+      "bytes": 1002
+    },
+    {
+      "path": "normalized/frame_00.png",
+      "sha256": "c72169c02507dc7fae0b54e24d73167aaa2c090ce263a2b75b5a06ff800d899d",
+      "bytes": 164814
+    },
+    {
+      "path": "normalized/frame_01.png",
+      "sha256": "db4b61610f934deee05053cd895537dd22d2a8eabde0b0eb2fea3fe75067dd98",
+      "bytes": 158271
+    },
+    {
+      "path": "normalized/frame_02.png",
+      "sha256": "edb0ef5e102d4237db62b6a066d923d4190bb94a782699e12e3f75030afb52a9",
+      "bytes": 150797
+    },
+    {
+      "path": "normalized/frame_03.png",
+      "sha256": "def914ade8e509d252273d22b0a74f718a52eab7d98adf77ac99e2f5741a0305",
+      "bytes": 153391
+    },
+    {
+      "path": "normalized/frame_04.png",
+      "sha256": "c5d0db72d19cacac462da2da938318c5da014a5e76822c284240ef01852a1d93",
+      "bytes": 159435
+    },
+    {
+      "path": "normalized/frame_05.png",
+      "sha256": "3cbdd46388f953ffc98f2a609cf025009dc31b22a79cb763bbe6a4360d4afceb",
+      "bytes": 152380
+    },
+    {
+      "path": "normalized/frame_06.png",
+      "sha256": "e2c7b8201bd8fdea68c518e2eee28e203f70c624f7b8bb97694576ffb8a74153",
+      "bytes": 149706
+    },
+    {
+      "path": "normalized/frame_07.png",
+      "sha256": "ac616ab3cf427195b3c027f8921da5530bf55eceb3f89a9c1c20c9a8901f74ef",
+      "bytes": 157039
+    },
+    {
+      "path": "normalized/normalize.json",
+      "sha256": "4114724fc508e5afc38f9786f5b202d1987fdf90facccd643d08b02550dc72aa",
+      "bytes": 1328
+    },
+    {
+      "path": "preview.gif",
+      "sha256": "2e5d1a7859c00111096280acd7b1b2554fac0bd390940697a6a9b01731a274ba",
+      "bytes": 134917
+    },
+    {
+      "path": "qa/sprite-qa.json",
+      "sha256": "f8546e926652d1101529b099d4a18d05291fba4df93d1dcfce64b8b8c502eb21",
+      "bytes": 621377
+    },
+    {
+      "path": "qa/sprite-qa.md",
+      "sha256": "57b6c2903b9e68a26388b71978ee0c4ad08a20a438c7e3912fef7aaebb72268c",
+      "bytes": 4186
+    },
+    {
+      "path": "qa.log",
+      "sha256": "b5f657340329063f29a4944e76a7e1f1c2ad1ac08c0ba4e0f87719aacfb4314d",
+      "bytes": 6242
+    },
+    {
+      "path": "sequence.json",
+      "sha256": "d3650123ef9be353a2d0a01d4db6593a49cd8e1f973f903200dfa80976ff48e9",
+      "bytes": 735
+    }
+  ]
+}

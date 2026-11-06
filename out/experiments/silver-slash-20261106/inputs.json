@@ -1,0 +1,326 @@
+{
+  "canvas": [
+    640,
+    512
+  ],
+  "driver": "samples\\motion-court\\drivers\\slash",
+  "author": "Quaternius",
+  "license": "CC0-1.0",
+  "sourceSha256": "1b7bf67866360665426bb99e4c71bd619f19b408453c24e30f0c3071601eee5c",
+  "inputReferenceSha256": "3bf5b922fc29d833c3c3625e01ea401deedfe5816c4d8bbb20da563c8d6ab822",
+  "scale": 1.7230769230769232,
+  "offset": [
+    -20.786243769370913,
+    -185.10769230769233
+  ],
+  "ground": 477.662730186894,
+  "rootX": 275.0535508572569,
+  "bodyHeight": 296.80264709265526,
+  "sourceDuration": 1.5333333015441895,
+  "mapping": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "rootMotion": "removed in driver; stationary slash prototype",
+  "paidCalls": 0,
+  "frames": [
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0000.png",
+      "sha256": "b92b03c178e33cec58187ebf26aa35793eb39631043401aa8a81edb1f84ba095",
+      "rootRemovedPx": 0.0,
+      "bbox": [
+        153,
+        147,
+        376,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0001.png",
+      "sha256": "ba2d654ad85c529c32eb0b6cf88ff15f702637b6bde0a5688fced2dd9c494b36",
+      "rootRemovedPx": 0.0,
+      "bbox": [
+        144,
+        147,
+        376,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0002.png",
+      "sha256": "fd1d121bb5964997cd6d127017f8fbf26521c4de75f4f182a410e6ef0e441624",
+      "rootRemovedPx": 0.0,
+      "bbox": [
+        129,
+        142,
+        388,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0003.png",
+      "sha256": "6fb468acfc02d1b24c7f9c28b665a383b0b15c071e65a2e66a2b1bf2bcaaf1ee",
+      "rootRemovedPx": 0.0,
+      "bbox": [
+        106,
+        137,
+        414,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0004.png",
+      "sha256": "2ea3174cdf056a457b3af1433742b916e806ca9d82aa67b16256f2ab0c70d339",
+      "rootRemovedPx": 0.0,
+      "bbox": [
+        81,
+        30,
+        431,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0005.png",
+      "sha256": "61e980566c0051a7b6ec21d5b5d1e5b44feb553e0068d415f27a7cea060d2ddf",
+      "rootRemovedPx": 15.231486977036445,
+      "bbox": [
+        87,
+        59,
+        422,
+        481
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0006.png",
+      "sha256": "52d4383f72b238f4765f072152c8bf095bd1c10b02b6919c8d20f4c08b840c89",
+      "rootRemovedPx": 65.27782246280505,
+      "bbox": [
+        166,
+        109,
+        381,
+        481
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0007.png",
+      "sha256": "a22333aaff5039a882cf74e8817f9e8b887a613f98763bb2b2be6f0b619c101b",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        114,
+        190,
+        559,
+        481
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0008.png",
+      "sha256": "54b8cdce9a315abde4b50e0a4896943ae9d958a74671ee752efaa8963008dead",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        112,
+        202,
+        382,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0009.png",
+      "sha256": "99bbaa1dfe967c24701af2083598978d13bafde03d7bbabde11afcb284222b7b",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        111,
+        198,
+        382,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0010.png",
+      "sha256": "e2e2692c048638d965ad75629777dfbb10472be677bdb2bab64c7149a5cb364e",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        111,
+        195,
+        388,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0011.png",
+      "sha256": "dd058f2057eac2fe5d8106299726e6d41b028443ab7f779624a9638a2201a937",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        113,
+        201,
+        412,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0012.png",
+      "sha256": "958954a84421cadd33d3d51390ba0a5e4cec7408537c83c7a48a07f40b70226c",
+      "rootRemovedPx": 104.44453848198017,
+      "bbox": [
+        113,
+        197,
+        448,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0013.png",
+      "sha256": "cff04953d2026c8aed415e02921212c3eba7dc7edd433a32b82fa0ec695b264e",
+      "rootRemovedPx": 113.17599953815805,
+      "bbox": [
+        115,
+        183,
+        555,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0014.png",
+      "sha256": "7018992ed0bcf97d63108c4d40c8dd9a1ea60590beaad011eb8c82779549f2b6",
+      "rootRemovedPx": 121.90747468276851,
+      "bbox": [
+        131,
+        159,
+        514,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0015.png",
+      "sha256": "04b1be87c72d2c71d908e11c76735888155d102686eeceddafda60af10e5675e",
+      "rootRemovedPx": 130.63892165051382,
+      "bbox": [
+        159,
+        104,
+        430,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0016.png",
+      "sha256": "a496dfa418ca95584c3ddb93e8ed995544d53d11ab3861b8a3fa0ebfa75d3c5a",
+      "rootRemovedPx": 139.37038270669171,
+      "bbox": [
+        198,
+        135,
+        417,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0017.png",
+      "sha256": "9d454b47e5858563941494b287d30ec4dfd184e4fc28a505b568f93b572e5c34",
+      "rootRemovedPx": 148.10182967443703,
+      "bbox": [
+        219,
+        135,
+        407,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0018.png",
+      "sha256": "b86a7108e2db2f92931ebfe72edd5623c5c0e31c9d9f4e1cc04e736a327839c7",
+      "rootRemovedPx": 156.83330481904747,
+      "bbox": [
+        193,
+        140,
+        376,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0019.png",
+      "sha256": "a4cd906436fd77e973762eb0590a0189e05d050bb638f3a884fae47c717f1ec5",
+      "rootRemovedPx": 165.56476587522536,
+      "bbox": [
+        164,
+        142,
+        379,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0020.png",
+      "sha256": "6e35876678e35a29fcbc59981a244896b4f8d7910e57bda9fe3e9821e785c763",
+      "rootRemovedPx": 174.2962410198358,
+      "bbox": [
+        151,
+        145,
+        382,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0021.png",
+      "sha256": "c87243b446e091d113d34217f87a21f1c691699aaee9aa2f6dfc185ac165f3e5",
+      "rootRemovedPx": 177.33327033987888,
+      "bbox": [
+        147,
+        147,
+        381,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0022.png",
+      "sha256": "96cb36cfdc5fc15f4177ef1093343fc44fa31999dbdada7243eb6df552d2680d",
+      "rootRemovedPx": 177.33327033987888,
+      "bbox": [
+        149,
+        148,
+        379,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0023.png",
+      "sha256": "004c46fa68febc3b8aedc8d81e8b6d4e45eec7c79b721fdcda7079724efc69db",
+      "rootRemovedPx": 177.33327033987888,
+      "bbox": [
+        151,
+        147,
+        378,
+        479
+      ]
+    },
+    {
+      "source": "samples\\motion-court\\drivers\\slash\\frames\\frame_0024.png",
+      "sha256": "a036fcdffb54662f8d99d96a27f3cca2bcdde44987d7425645acd935474ddf8c",
+      "rootRemovedPx": 177.33327033987888,
+      "bbox": [
+        152,
+        148,
+        377,
+        479
+      ]
+    }
+  ]
+}

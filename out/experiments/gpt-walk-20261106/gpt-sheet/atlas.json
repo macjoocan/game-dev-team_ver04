@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "image": "atlas.png",
+    "size": {
+      "w": 1024,
+      "h": 1288
+    },
+    "padding": 2,
+    "trimmed": true,
+    "originTopLeft": true,
+    "note": "유니티 Sprite Editor 는 좌하단 원점이다. y 를 뒤집어 넣어라.",
+    "fps": 8,
+    "totalMs": 1000,
+    "timingNote": "fps 와 durationMs 가 충돌하면 durationMs 를 따른다."
+  },
+  "frames": [
+    {
+      "name": "frame_02",
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "w": 312,
+        "h": 430
+      },
+      "spriteSourceSize": {
+        "x": 100,
+        "y": 82,
+        "w": 312,
+        "h": 430
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_00",
+      "frame": {
+        "x": 318,
+        "y": 2,
+        "w": 295,
+        "h": 428
+      },
+      "spriteSourceSize": {
+        "x": 109,
+        "y": 84,
+        "w": 295,
+        "h": 428
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_04",
+      "frame": {
+        "x": 617,
+        "y": 2,
+        "w": 314,
+        "h": 426
+      },
+      "spriteSourceSize": {
+        "x": 99,
+        "y": 86,
+        "w": 314,
+        "h": 426
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_06",
+      "frame": {
+        "x": 617,
+        "y": 432,
+        "w": 275,
+        "h": 425
+      },
+      "spriteSourceSize": {
+        "x": 119,
+        "y": 87,
+        "w": 275,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_07",
+      "frame": {
+        "x": 2,
+        "y": 436,
+        "w": 299,
+        "h": 425
+      },
+      "spriteSourceSize": {
+        "x": 107,
+        "y": 87,
+        "w": 299,
+        "h": 425
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_03",
+      "frame": {
+        "x": 305,
+        "y": 861,
+        "w": 309,
+        "h": 423
+      },
+      "spriteSourceSize": {
+        "x": 102,
+        "y": 89,
+        "w": 309,
+        "h": 423
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_01",
+      "frame": {
+        "x": 618,
+        "y": 861,
+        "w": 288,
+        "h": 421
+      },
+      "spriteSourceSize": {
+        "x": 112,
+        "y": 91,
+        "w": 288,
+        "h": 421
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    },
+    {
+      "name": "frame_05",
+      "frame": {
+        "x": 2,
+        "y": 865,
+        "w": 283,
+        "h": 421
+      },
+      "spriteSourceSize": {
+        "x": 115,
+        "y": 91,
+        "w": 283,
+        "h": 421
+      },
+      "sourceSize": {
+        "w": 512,
+        "h": 512
+      },
+      "pivot": {
+        "x": 0.5,
+        "y": 0
+      },
+      "durationMs": 125
+    }
+  ]
+}

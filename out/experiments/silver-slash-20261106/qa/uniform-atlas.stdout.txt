@@ -1,0 +1,4 @@
+
+아틀라스 1024x2850 · 스프라이트 25장 · 점유율 73.5%
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\silver-slash-20261106\export\uniform.png
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\silver-slash-20261106\export\uniform.json

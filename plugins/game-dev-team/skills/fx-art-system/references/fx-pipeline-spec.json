@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "palette": "../../art-direction/references/starter-kit/palette.json",
+  "visualReference": "../../art-direction/references/starter-kit/VISUAL_DESIGN.md",
+  "license": "UNSPECIFIED; concept only",
+  "seed": 42,
+  "previewBg": "@fx.previewBg",
+  "budgets": { "textureBytes": 2097152, "particles": 64, "triangles": 256 },
+  "effects": [
+    { "id": "fx.impact.2d", "dimension": "2d", "type": "impact", "color": "@fx.hit", "size": 96, "frames": 12, "fps": 24, "loop": false, "blend": "additive", "worldSize": 1 },
+    { "id": "fx.pulse.2d", "dimension": "2d", "type": "pulse", "color": "@fx.combo", "size": 96, "frames": 24, "fps": 24, "loop": true, "blend": "additive", "worldSize": 1.5 },
+    { "id": "fx.burst.3d", "dimension": "3d", "type": "burst", "color": "@fx.hit", "frames": 24, "fps": 24, "loop": false, "blend": "additive", "worldSize": 2, "particles": 24, "speed": 2, "gravity": 1.8, "segments": 48 },
+    { "id": "fx.orbit.3d", "dimension": "3d", "type": "orbit", "color": "@fx.combo", "frames": 32, "fps": 24, "loop": true, "blend": "additive", "worldSize": 2, "particles": 16, "speed": 1, "gravity": 0, "segments": 48 }
+  ]
+}

@@ -1,0 +1,679 @@
+{
+  "id": "silver-walk-probe",
+  "workspaceId": "gpt-walk-20261106",
+  "worktreeId": null,
+  "assetId": null,
+  "name": "Silver walk native mesh probe",
+  "morphology": "biped",
+  "fps": 8,
+  "looping": true,
+  "points": [
+    {
+      "id": "hip",
+      "name": "hip",
+      "kind": "joint",
+      "x": 275,
+      "y": 304,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "neck",
+      "name": "neck",
+      "kind": "joint",
+      "x": 279,
+      "y": 141,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "head",
+      "name": "head",
+      "kind": "joint",
+      "x": 288,
+      "y": 88,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "hair_tie",
+      "name": "hair_tie",
+      "kind": "joint",
+      "x": 255,
+      "y": 73,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "hair_tip",
+      "name": "hair_tip",
+      "kind": "joint",
+      "x": 180,
+      "y": 172,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "cape_top",
+      "name": "cape_top",
+      "kind": "joint",
+      "x": 263,
+      "y": 158,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "cape_tip",
+      "name": "cape_tip",
+      "kind": "joint",
+      "x": 132,
+      "y": 298,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_shoulder",
+      "name": "near_shoulder",
+      "kind": "joint",
+      "x": 264,
+      "y": 177,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_elbow",
+      "name": "near_elbow",
+      "kind": "joint",
+      "x": 246,
+      "y": 222,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_hand",
+      "name": "near_hand",
+      "kind": "joint",
+      "x": 228,
+      "y": 275,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "sword_tip",
+      "name": "sword_tip",
+      "kind": "joint",
+      "x": 388,
+      "y": 376,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_shoulder",
+      "name": "far_shoulder",
+      "kind": "joint",
+      "x": 298,
+      "y": 188,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_elbow",
+      "name": "far_elbow",
+      "kind": "joint",
+      "x": 321,
+      "y": 238,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_hand",
+      "name": "far_hand",
+      "kind": "joint",
+      "x": 351,
+      "y": 272,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_hip",
+      "name": "near_hip",
+      "kind": "joint",
+      "x": 267,
+      "y": 310,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_knee",
+      "name": "near_knee",
+      "kind": "joint",
+      "x": 207,
+      "y": 379,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_ankle",
+      "name": "near_ankle",
+      "kind": "joint",
+      "x": 154,
+      "y": 448,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "near_toe",
+      "name": "near_toe",
+      "kind": "joint",
+      "x": 170,
+      "y": 474,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_hip",
+      "name": "far_hip",
+      "kind": "joint",
+      "x": 290,
+      "y": 310,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_knee",
+      "name": "far_knee",
+      "kind": "joint",
+      "x": 322,
+      "y": 376,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_ankle",
+      "name": "far_ankle",
+      "kind": "joint",
+      "x": 349,
+      "y": 452,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    },
+    {
+      "id": "far_toe",
+      "name": "far_toe",
+      "kind": "joint",
+      "x": 392,
+      "y": 467,
+      "confidence": 0.7,
+      "source": "manual-visible-landmark"
+    }
+  ],
+  "bones": [
+    {
+      "id": "torso",
+      "name": "torso",
+      "startPoint": "hip",
+      "endPoint": "neck",
+      "radius": 33,
+      "parent": null,
+      "z": 5
+    },
+    {
+      "id": "head",
+      "name": "head",
+      "startPoint": "neck",
+      "endPoint": "head",
+      "radius": 30,
+      "parent": "torso",
+      "z": 6
+    },
+    {
+      "id": "ponytail",
+      "name": "ponytail",
+      "startPoint": "hair_tie",
+      "endPoint": "hair_tip",
+      "radius": 27,
+      "parent": "head",
+      "z": 2
+    },
+    {
+      "id": "cape",
+      "name": "cape",
+      "startPoint": "cape_top",
+      "endPoint": "cape_tip",
+      "radius": 24,
+      "parent": "torso",
+      "z": 1
+    },
+    {
+      "id": "far_upper_arm",
+      "name": "far_upper_arm",
+      "startPoint": "far_shoulder",
+      "endPoint": "far_elbow",
+      "radius": 13,
+      "parent": "torso",
+      "z": 3
+    },
+    {
+      "id": "far_forearm",
+      "name": "far_forearm",
+      "startPoint": "far_elbow",
+      "endPoint": "far_hand",
+      "radius": 11,
+      "parent": "far_upper_arm",
+      "z": 3
+    },
+    {
+      "id": "near_upper_arm",
+      "name": "near_upper_arm",
+      "startPoint": "near_shoulder",
+      "endPoint": "near_elbow",
+      "radius": 16,
+      "parent": "torso",
+      "z": 9
+    },
+    {
+      "id": "near_forearm",
+      "name": "near_forearm",
+      "startPoint": "near_elbow",
+      "endPoint": "near_hand",
+      "radius": 13,
+      "parent": "near_upper_arm",
+      "z": 10
+    },
+    {
+      "id": "sword",
+      "name": "sword",
+      "startPoint": "near_hand",
+      "endPoint": "sword_tip",
+      "radius": 6,
+      "parent": "near_forearm",
+      "z": 11
+    },
+    {
+      "id": "far_thigh",
+      "name": "far_thigh",
+      "startPoint": "far_hip",
+      "endPoint": "far_knee",
+      "radius": 21,
+      "parent": "torso",
+      "z": 2
+    },
+    {
+      "id": "far_shin",
+      "name": "far_shin",
+      "startPoint": "far_knee",
+      "endPoint": "far_ankle",
+      "radius": 17,
+      "parent": "far_thigh",
+      "z": 2
+    },
+    {
+      "id": "far_foot",
+      "name": "far_foot",
+      "startPoint": "far_ankle",
+      "endPoint": "far_toe",
+      "radius": 13,
+      "parent": "far_shin",
+      "z": 2
+    },
+    {
+      "id": "near_thigh",
+      "name": "near_thigh",
+      "startPoint": "near_hip",
+      "endPoint": "near_knee",
+      "radius": 22,
+      "parent": "torso",
+      "z": 7
+    },
+    {
+      "id": "near_shin",
+      "name": "near_shin",
+      "startPoint": "near_knee",
+      "endPoint": "near_ankle",
+      "radius": 17,
+      "parent": "near_thigh",
+      "z": 7
+    },
+    {
+      "id": "near_foot",
+      "name": "near_foot",
+      "startPoint": "near_ankle",
+      "endPoint": "near_toe",
+      "radius": 13,
+      "parent": "near_shin",
+      "z": 7
+    }
+  ],
+  "frames": [
+    {
+      "phase": "walk-0",
+      "rootDx": 0,
+      "rootDy": -0.0,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": 0.0
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": 0.0
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": -0.0
+        },
+        {
+          "bone": "ponytail",
+          "rotate": -1.6939274201851062
+        },
+        {
+          "bone": "cape",
+          "rotate": -1.9583172740687085
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 235.0,
+          "y": 445.0,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 315.0,
+          "y": 445,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-1",
+      "rootDx": 0,
+      "rootDy": -2.9999999999999996,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": 7.0710678118654755
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": 2.121320343559643
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": -8.485281374238571
+        },
+        {
+          "bone": "ponytail",
+          "rotate": 0.5530136645214849
+        },
+        {
+          "bone": "cape",
+          "rotate": -0.2858778646653849
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 255.0,
+          "y": 425.2010101267767,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 295.0,
+          "y": 445,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-2",
+      "rootDx": 0,
+      "rootDy": -6.0,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": 10.0
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": 3.0
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": -12.0
+        },
+        {
+          "bone": "ponytail",
+          "rotate": 2.476006844729035
+        },
+        {
+          "bone": "cape",
+          "rotate": 1.554024920676661
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 275.0,
+          "y": 417.0,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 275.0,
+          "y": 445,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-3",
+      "rootDx": 0,
+      "rootDy": -3.000000000000001,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": 7.0710678118654755
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": 2.121320343559643
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": -8.485281374238571
+        },
+        {
+          "bone": "ponytail",
+          "rotate": 2.9485887958229307
+        },
+        {
+          "bone": "cape",
+          "rotate": 2.4836009837520923
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 295.0,
+          "y": 425.2010101267767,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 255.0,
+          "y": 445,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-4",
+      "rootDx": 0,
+      "rootDy": -0.0,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": 1.2246467991473533e-15
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": 3.6739403974420594e-16
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": -1.4695761589768238e-15
+        },
+        {
+          "bone": "ponytail",
+          "rotate": 1.6939274201851064
+        },
+        {
+          "bone": "cape",
+          "rotate": 1.9583172740687085
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 315.0,
+          "y": 445,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 235.0,
+          "y": 445.0,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-5",
+      "rootDx": 0,
+      "rootDy": -2.999999999999999,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": -7.071067811865475
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": -2.1213203435596424
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": 8.48528137423857
+        },
+        {
+          "bone": "ponytail",
+          "rotate": -0.5530136645214843
+        },
+        {
+          "bone": "cape",
+          "rotate": 0.2858778646653849
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 295.0,
+          "y": 445,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 255.0,
+          "y": 425.2010101267767,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-6",
+      "rootDx": 0,
+      "rootDy": -6.0,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": -10.0
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": -3.0
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": 12.0
+        },
+        {
+          "bone": "ponytail",
+          "rotate": -2.476006844729035
+        },
+        {
+          "bone": "cape",
+          "rotate": -1.554024920676661
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 275.0,
+          "y": 445,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 275.0,
+          "y": 417.0,
+          "bend": -1
+        }
+      ]
+    },
+    {
+      "phase": "walk-7",
+      "rootDx": 0,
+      "rootDy": -3.0000000000000013,
+      "transforms": [
+        {
+          "bone": "near_upper_arm",
+          "rotate": -7.071067811865477
+        },
+        {
+          "bone": "near_forearm",
+          "rotate": -2.121320343559643
+        },
+        {
+          "bone": "far_upper_arm",
+          "rotate": 8.485281374238571
+        },
+        {
+          "bone": "ponytail",
+          "rotate": -2.94858879582293
+        },
+        {
+          "bone": "cape",
+          "rotate": -2.483600983752092
+        }
+      ],
+      "contacts": [
+        {
+          "bone": "near_shin",
+          "x": 255.0,
+          "y": 445,
+          "bend": -1
+        },
+        {
+          "bone": "far_shin",
+          "x": 295.0,
+          "y": 425.2010101267767,
+          "bend": -1
+        }
+      ]
+    }
+  ],
+  "createdAt": "2026-11-06",
+  "updatedAt": "2026-11-06"
+}

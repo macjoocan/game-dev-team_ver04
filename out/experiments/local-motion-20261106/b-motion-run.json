@@ -1,0 +1,1158 @@
+{
+  "status": "success",
+  "graph": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\local-motion-20261106\\b-motion.api.json",
+  "graphSha256": "78ea1c01bb8074c8fa44a1b7dc9158fee45ea3a361e51bfe85784951d631a095",
+  "startedAt": "2026-11-06T07:34:53.670Z",
+  "host": "http://127.0.0.1:8196",
+  "paidCalls": 0,
+  "submission": {
+    "prompt_id": "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+    "number": 1,
+    "node_errors": {}
+  },
+  "promptId": "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+  "finishedAt": "2026-11-06T07:42:19.720Z",
+  "history": {
+    "prompt": [
+      1,
+      "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+      {
+        "1": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "gpt-reference.png"
+          }
+        },
+        "2": {
+          "class_type": "CLIPLoader",
+          "inputs": {
+            "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+            "type": "wan",
+            "device": "default"
+          }
+        },
+        "3": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "clip": [
+              "2",
+              0
+            ],
+            "text": "Character appearance: A full-body right-facing silver-haired female knight in a detailed hand-painted 2D fantasy game illustration. Long voluminous silver high ponytail tied with a gold band, long teal cape and scarf, charcoal armor with gold trim, brown leather belt, brown gloves and tall brown boots. Her near hand firmly holds a straight silver sword with a golden hilt, angled down and forward. Preserve her face, long ponytail, cape, clothing, boots and sword exactly as the reference. Background: flat pure white, isolated single character, fixed orthographic side-view camera, full body and sword entirely inside the frame."
+          }
+        },
+        "4": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "clip": [
+              "2",
+              0
+            ],
+            "text": "camera motion, zoom, cropped feet, missing sword, missing ponytail, short hair, deformed limbs, extra limbs, extra sword, blurry face, changing clothes, scenery, shadows, text, watermark"
+          }
+        },
+        "5": {
+          "class_type": "CLIPTextEncode",
+          "inputs": {
+            "clip": [
+              "2",
+              0
+            ],
+            "text": "A full-body side-view female knight walks in place toward the right. A natural complete walking cycle with alternating legs, planted support foot, opposite leg swinging past, gentle weight shift, ponytail and cape swaying, and a sword held firmly in the hand. Fixed camera, no turn."
+          }
+        },
+        "6": {
+          "class_type": "VAELoader",
+          "inputs": {
+            "vae_name": "wan_2.1_vae.safetensors"
+          }
+        },
+        "7": {
+          "class_type": "CLIPVisionLoader",
+          "inputs": {
+            "clip_name": "CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors"
+          }
+        },
+        "8": {
+          "class_type": "CLIPVisionEncode",
+          "inputs": {
+            "clip_vision": [
+              "7",
+              0
+            ],
+            "image": [
+              "1",
+              0
+            ],
+            "crop": "none"
+          }
+        },
+        "9": {
+          "class_type": "CLIPVisionEncode",
+          "inputs": {
+            "clip_vision": [
+              "7",
+              0
+            ],
+            "image": [
+              "100",
+              0
+            ],
+            "crop": "none"
+          }
+        },
+        "10": {
+          "class_type": "WanAnimate2ToVideo",
+          "inputs": {
+            "positive": [
+              "3",
+              0
+            ],
+            "negative": [
+              "4",
+              0
+            ],
+            "vae": [
+              "6",
+              0
+            ],
+            "width": 384,
+            "height": 448,
+            "length": 29,
+            "batch_size": 1,
+            "reference_image": [
+              "1",
+              0
+            ],
+            "pose_video": [
+              "228",
+              0
+            ],
+            "clip_vision_output": [
+              "8",
+              0
+            ],
+            "positive_pose": [
+              "5",
+              0
+            ],
+            "clip_vision_output_pose": [
+              "9",
+              0
+            ],
+            "video_frame_offset": 0,
+            "pose_strength": 1,
+            "pose_start_percent": 0,
+            "pose_end_percent": 1,
+            "reference_image_strength": 1
+          }
+        },
+        "11": {
+          "class_type": "UNETLoader",
+          "inputs": {
+            "unet_name": "wan_animate_2_int8_convrot.safetensors",
+            "weight_dtype": "default"
+          }
+        },
+        "12": {
+          "class_type": "LoraLoaderModelOnly",
+          "inputs": {
+            "model": [
+              "11",
+              0
+            ],
+            "lora_name": "lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors",
+            "strength_model": 1
+          }
+        },
+        "13": {
+          "class_type": "ModelSamplingSD3",
+          "inputs": {
+            "model": [
+              "12",
+              0
+            ],
+            "shift": 5
+          }
+        },
+        "14": {
+          "class_type": "WanAnimate2Cache",
+          "inputs": {
+            "model": [
+              "13",
+              0
+            ],
+            "device": "cpu",
+            "dtype": "int8"
+          }
+        },
+        "15": {
+          "class_type": "KSampler",
+          "inputs": {
+            "model": [
+              "14",
+              0
+            ],
+            "seed": 7,
+            "steps": 6,
+            "cfg": 1,
+            "sampler_name": "lcm",
+            "scheduler": "simple",
+            "positive": [
+              "10",
+              0
+            ],
+            "negative": [
+              "10",
+              1
+            ],
+            "latent_image": [
+              "10",
+              2
+            ],
+            "denoise": 1
+          }
+        },
+        "16": {
+          "class_type": "TrimVideoLatent",
+          "inputs": {
+            "samples": [
+              "15",
+              0
+            ],
+            "trim_amount": [
+              "10",
+              3
+            ]
+          }
+        },
+        "17": {
+          "class_type": "VAEDecode",
+          "inputs": {
+            "samples": [
+              "16",
+              0
+            ],
+            "vae": [
+              "6",
+              0
+            ]
+          }
+        },
+        "18": {
+          "class_type": "SaveImage",
+          "inputs": {
+            "images": [
+              "17",
+              0
+            ],
+            "filename_prefix": "b-motion/frame"
+          }
+        },
+        "19": {
+          "class_type": "SaveLatent",
+          "inputs": {
+            "samples": [
+              "16",
+              0
+            ],
+            "filename_prefix": "b-motion/latent"
+          }
+        },
+        "100": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_000.png"
+          }
+        },
+        "101": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_001.png"
+          }
+        },
+        "102": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_002.png"
+          }
+        },
+        "103": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_003.png"
+          }
+        },
+        "104": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_004.png"
+          }
+        },
+        "105": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_005.png"
+          }
+        },
+        "106": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_006.png"
+          }
+        },
+        "107": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_007.png"
+          }
+        },
+        "108": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_008.png"
+          }
+        },
+        "109": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_009.png"
+          }
+        },
+        "110": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_010.png"
+          }
+        },
+        "111": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_011.png"
+          }
+        },
+        "112": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_012.png"
+          }
+        },
+        "113": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_013.png"
+          }
+        },
+        "114": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_014.png"
+          }
+        },
+        "115": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_015.png"
+          }
+        },
+        "116": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_016.png"
+          }
+        },
+        "117": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_017.png"
+          }
+        },
+        "118": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_018.png"
+          }
+        },
+        "119": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_019.png"
+          }
+        },
+        "120": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_020.png"
+          }
+        },
+        "121": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_021.png"
+          }
+        },
+        "122": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_022.png"
+          }
+        },
+        "123": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_023.png"
+          }
+        },
+        "124": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_024.png"
+          }
+        },
+        "125": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_025.png"
+          }
+        },
+        "126": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_026.png"
+          }
+        },
+        "127": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_027.png"
+          }
+        },
+        "128": {
+          "class_type": "LoadImage",
+          "inputs": {
+            "image": "driver_028.png"
+          }
+        },
+        "201": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "100",
+              0
+            ],
+            "image2": [
+              "101",
+              0
+            ]
+          }
+        },
+        "202": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "201",
+              0
+            ],
+            "image2": [
+              "102",
+              0
+            ]
+          }
+        },
+        "203": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "202",
+              0
+            ],
+            "image2": [
+              "103",
+              0
+            ]
+          }
+        },
+        "204": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "203",
+              0
+            ],
+            "image2": [
+              "104",
+              0
+            ]
+          }
+        },
+        "205": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "204",
+              0
+            ],
+            "image2": [
+              "105",
+              0
+            ]
+          }
+        },
+        "206": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "205",
+              0
+            ],
+            "image2": [
+              "106",
+              0
+            ]
+          }
+        },
+        "207": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "206",
+              0
+            ],
+            "image2": [
+              "107",
+              0
+            ]
+          }
+        },
+        "208": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "207",
+              0
+            ],
+            "image2": [
+              "108",
+              0
+            ]
+          }
+        },
+        "209": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "208",
+              0
+            ],
+            "image2": [
+              "109",
+              0
+            ]
+          }
+        },
+        "210": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "209",
+              0
+            ],
+            "image2": [
+              "110",
+              0
+            ]
+          }
+        },
+        "211": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "210",
+              0
+            ],
+            "image2": [
+              "111",
+              0
+            ]
+          }
+        },
+        "212": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "211",
+              0
+            ],
+            "image2": [
+              "112",
+              0
+            ]
+          }
+        },
+        "213": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "212",
+              0
+            ],
+            "image2": [
+              "113",
+              0
+            ]
+          }
+        },
+        "214": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "213",
+              0
+            ],
+            "image2": [
+              "114",
+              0
+            ]
+          }
+        },
+        "215": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "214",
+              0
+            ],
+            "image2": [
+              "115",
+              0
+            ]
+          }
+        },
+        "216": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "215",
+              0
+            ],
+            "image2": [
+              "116",
+              0
+            ]
+          }
+        },
+        "217": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "216",
+              0
+            ],
+            "image2": [
+              "117",
+              0
+            ]
+          }
+        },
+        "218": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "217",
+              0
+            ],
+            "image2": [
+              "118",
+              0
+            ]
+          }
+        },
+        "219": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "218",
+              0
+            ],
+            "image2": [
+              "119",
+              0
+            ]
+          }
+        },
+        "220": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "219",
+              0
+            ],
+            "image2": [
+              "120",
+              0
+            ]
+          }
+        },
+        "221": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "220",
+              0
+            ],
+            "image2": [
+              "121",
+              0
+            ]
+          }
+        },
+        "222": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "221",
+              0
+            ],
+            "image2": [
+              "122",
+              0
+            ]
+          }
+        },
+        "223": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "222",
+              0
+            ],
+            "image2": [
+              "123",
+              0
+            ]
+          }
+        },
+        "224": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "223",
+              0
+            ],
+            "image2": [
+              "124",
+              0
+            ]
+          }
+        },
+        "225": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "224",
+              0
+            ],
+            "image2": [
+              "125",
+              0
+            ]
+          }
+        },
+        "226": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "225",
+              0
+            ],
+            "image2": [
+              "126",
+              0
+            ]
+          }
+        },
+        "227": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "226",
+              0
+            ],
+            "image2": [
+              "127",
+              0
+            ]
+          }
+        },
+        "228": {
+          "class_type": "ImageBatch",
+          "inputs": {
+            "image1": [
+              "227",
+              0
+            ],
+            "image2": [
+              "128",
+              0
+            ]
+          }
+        }
+      },
+      {
+        "client_id": "local-silver-motion",
+        "create_time": 1793950493746
+      },
+      [
+        "18",
+        "19"
+      ]
+    ],
+    "outputs": {
+      "18": {
+        "images": [
+          {
+            "filename": "frame_00001_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00002_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00003_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00004_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00005_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00006_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00007_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00008_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00009_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00010_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00011_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00012_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00013_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00014_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00015_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00016_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00017_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00018_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00019_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00020_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00021_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00022_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00023_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00024_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00025_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00026_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00027_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00028_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          },
+          {
+            "filename": "frame_00029_.png",
+            "subfolder": "b-motion",
+            "type": "output",
+            "metadata": {
+              "kind": "image",
+              "width": 384,
+              "height": 448
+            }
+          }
+        ]
+      },
+      "19": {
+        "latents": [
+          {
+            "filename": "latent_00001_.latent",
+            "subfolder": "b-motion",
+            "type": "output"
+          }
+        ]
+      }
+    },
+    "status": {
+      "status_str": "success",
+      "completed": true,
+      "messages": [
+        [
+          "execution_start",
+          {
+            "prompt_id": "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+            "timestamp": 1793950493749
+          }
+        ],
+        [
+          "execution_cached",
+          {
+            "nodes": [],
+            "prompt_id": "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+            "timestamp": 1793950493750
+          }
+        ],
+        [
+          "execution_success",
+          {
+            "prompt_id": "8ee11218-bc23-4d68-aeea-fbcf07c90d4d",
+            "timestamp": 1793950937190
+          }
+        ]
+      ]
+    },
+    "meta": {
+      "18": {
+        "node_id": "18",
+        "display_node": "18",
+        "parent_node": null,
+        "real_node_id": "18"
+      },
+      "19": {
+        "node_id": "19",
+        "display_node": "19",
+        "parent_node": null,
+        "real_node_id": "19"
+      }
+    }
+  }
+}

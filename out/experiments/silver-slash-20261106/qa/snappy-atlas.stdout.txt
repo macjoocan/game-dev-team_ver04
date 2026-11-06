@@ -1,0 +1,4 @@
+
+아틀라스 512x3449 · 스프라이트 12장 · 점유율 64.3%
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\silver-slash-20261106\export\snappy.png
+-> C:\00.SVN\game-dev-team_ver04\out\experiments\silver-slash-20261106\export\snappy.json

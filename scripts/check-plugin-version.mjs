@@ -1,136 +1,122 @@
 #!/usr/bin/env node
-// check-plugin-version.mjs - 설치된 플러그인이 소스보다 뒤처졌는지 알린다.
-//   node scripts/check-plugin-version.mjs            # 사람이 직접
-//   (SessionStart 훅에서 자동 호출 — 뒤처졌을 때만 말한다)
-//
-// 왜 필요한가 — **설치본은 스냅샷이다.** 소스를 고치고 push 해도 이미 설치된 프로젝트는
-// 안 바뀐다. 그리고 아무도 알려주지 않는다. 실측(2026-09-09):
-//   user 스코프    0.27.2  (소스는 0.29.0)
-//   project(Hex)   0.17.0  ← **12 버전 뒤처짐.** 5일 동안 아무도 몰랐다
-// 그 상태의 hex-danmaku 는 art-gate·cast-distinct·sprite-qa·walk-composite·종료코드 계약이
-// 전부 없는 플러그인을 쓰고 있었다. 세션은 정상으로 보인다 — 도구가 "없다"고 말하지 않는다.
-//
-// 그래서 **묻지 않아도 말해주는 쪽**으로 만든다. 훅은 뒤처졌을 때만 한 줄 낸다(평소 소음 0).
-
+// 설치 버전과 배포 파일 SHA-256 검사. 0 일치 / 1 차이 / 3 측정 불가.
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-
-const PLUGIN = 'game-dev-team';
-
-function readJSON(p) {
-  try { return JSON.parse(fs.readFileSync(p, 'utf8')); } catch { return null; }
-}
-
-/** 설치 기록에서 이 프로젝트에 실제로 적용되는 항목들을 고른다. */
-export function installedVersions(projectDir) {
-  const reg = readJSON(path.join(os.homedir(), '.claude', 'plugins', 'installed_plugins.json'));
-  if (!reg?.plugins) return [];
-  const out = [];
-  for (const [id, entries] of Object.entries(reg.plugins)) {
-    if (!id.startsWith(PLUGIN + '@')) continue;
-    for (const e of entries || []) {
-      // project/local 스코프는 그 프로젝트에서만 유효하다 — 남의 프로젝트 기록으로 경고하면 안 된다
-      if (e.projectPath && projectDir && path.resolve(e.projectPath) !== path.resolve(projectDir)) continue;
-      out.push({ scope: e.scope, version: e.version, projectPath: e.projectPath });
+import { createHash } from 'node:crypto';
+import { spawnSync } from 'node:child_process';
+import { pathToFileURL } from 'node:url';
+const PLUGIN='game-dev-team';
+const DIRS=['agents','skills','hooks','commands','scripts','.claude-plugin','.codex-plugin'];
+const FILES=['README.md','USAGE.md','INSTALL.md','ORCHESTRATION.md','REVIEW.md','AGENTS.md','CLAUDE.md'];
+function readJSON(f){try{return JSON.parse(fs.readFileSync(f,'utf8'));}catch{return null;}}
+const versionAt=d=>readJSON(path.join(d,'.claude-plugin/plugin.json'))?.version||readJSON(path.join(d,'.codex-plugin/plugin.json'))?.version;
+const segment=v=>typeof v==='string'&&/^[a-zA-Z0-9._-]+$/.test(v)&&v!=='.'&&v!=='..';
+export function installedVersions(projectDir,home=os.homedir()){
+  const reg=readJSON(path.join(home,'.claude/plugins/installed_plugins.json')),rows=[];
+  for(const [pluginId,entries] of Object.entries(reg?.plugins||{})){
+    if(!pluginId.startsWith(PLUGIN+'@')||!Array.isArray(entries))continue;
+    for(const e of entries){
+      if(e.projectPath&&projectDir&&path.resolve(e.projectPath)!==path.resolve(projectDir))continue;
+      rows.push({...e,pluginId,harness:'claude'});
     }
   }
-  return out;
+  return rows;
 }
-
-/**
- * 마켓플레이스 소스의 버전과 **출처를 같이** 낸다.
- *
- * 출처를 안 내는 게 이 도구의 원래 결함이었다(REVIEW.md B-18). 등록된 마켓플레이스가
- * 죽은 옛 레포(game-dev-team-Ver3, 0.16.0)를 가리키는데 설치본도 0.16.0 이라
- * **"전부 최신이다"** 로 보고했다 — 정본은 그때 0.34.0 이었다. 18버전 벌어졌는데
- * 화면에는 최신이라고 떴다. 숫자만 비교하고 어디서 읽었는지 안 말하면 이렇게 된다.
- *
- * kind:
- *   'directory' — 확정. 그 경로의 plugin.json 이 소스다.
- *   'git'       — **로컬 클론 기준**이다. 원격이 앞서 있어도 여기서는 안 보인다
- *                 (claude plugin marketplace update 를 돌려야 클론이 따라온다).
- *                 그래서 같아 보여도 "최신"이라고 단정하지 않는다.
- */
-export function sourceInfo() {
-  const known = readJSON(path.join(os.homedir(), '.claude', 'plugins', 'known_marketplaces.json'));
-  const entry = known?.[PLUGIN] ?? known?.marketplaces?.[PLUGIN];
-  const src = entry?.source;
-  if (!src) return null;
-
-  if (src.source === 'directory') {
-    const m = readJSON(path.join(src.path, '.claude-plugin', 'plugin.json'));
-    return m?.version ? { version: m.version, kind: 'directory', origin: src.path } : null;
+export function sourceInfo(home=os.homedir()){
+  const known=readJSON(path.join(home,'.claude/plugins/known_marketplaces.json'));
+  const e=known?.[PLUGIN]??known?.marketplaces?.[PLUGIN],s=e?.source;
+  if(!s)return null;
+  if(s.source==='directory'&&s.path)return {version:versionAt(s.path),kind:'directory',origin:s.path,root:s.path};
+  if(!e.installLocation)return null;
+  return {version:versionAt(e.installLocation),kind:'git',origin:s.repo?s.source+':'+s.repo:s.url||s.source,clone:e.installLocation,root:e.installLocation};
+}
+export function sourceVersion(){return sourceInfo()?.version??null;}
+function tree(root){
+  const result=new Map();
+  if(!fs.statSync(root).isDirectory()||!versionAt(root)||!fs.statSync(path.join(root,'skills')).isDirectory())throw Error('플러그인 manifest 또는 skills를 확인하지 못했다');
+  const walk=rel=>{
+    const file=path.join(root,rel),stat=fs.lstatSync(file);
+    if(stat.isSymbolicLink())throw Error('연결 경로는 비교하지 않는다: '+rel);
+    if(stat.isDirectory())for(const name of fs.readdirSync(file).sort())walk(rel+'/'+name);
+    else if(stat.isFile())result.set(rel,createHash('sha256').update(fs.readFileSync(file)).digest('hex'));
+    else throw Error('일반 파일이 아니다: '+rel);
+  };
+  for(const rel of [...DIRS,...FILES])if(fs.existsSync(path.join(root,rel)))walk(rel);
+  return result;
+}
+export function compareInstallation(source,installed){
+  const a=tree(source),b=tree(installed);
+  const missing=[...a.keys()].filter(k=>!b.has(k));
+  const changed=[...a.keys()].filter(k=>b.has(k)&&a.get(k)!==b.get(k));
+  const extra=[...b.keys()].filter(k=>!a.has(k));
+  return {missing,changed,extra,comparedFiles:a.size,sameFiles:a.size-missing.length-changed.length};
+}
+function codexRegistry(codexHome){
+  // 활성 버전은 설치 목록에서 읽는다. 남은 옛 캐시는 활성 설치로 추정하지 않는다.
+  const fallback=path.join(codexHome,'plugins/.plugin-appserver/codex.exe');
+  const command=process.env.CODEX_BIN||(process.platform==='win32'&&fs.existsSync(fallback)?fallback:'codex');
+  const r=spawnSync(command,['plugin','list','--marketplace','game-dev-team-local','--json'],{encoding:'utf8',windowsHide:true,timeout:15000,maxBuffer:4*1024*1024,env:{...process.env,CODEX_HOME:codexHome}});
+  if(r.status!==0)throw Error('Codex 설치 목록을 읽지 못했다');
+  try{const data=JSON.parse(r.stdout);if(!Array.isArray(data.installed))throw Error();return data;}
+  catch{throw Error('Codex 설치 목록 형식을 확인하지 못했다');}
+}
+export function inspectInstallations(projectDir,options={}){
+  const home=options.home||os.homedir(),codexHome=options.codexHome||process.env.CODEX_HOME||path.join(home,'.codex');
+  const harness=options.harness||'both',installations=[],discoveryGaps=[];
+  const explicit=options.source?{root:path.resolve(options.source),origin:path.resolve(options.source),kind:'directory',version:versionAt(path.resolve(options.source))}:null;
+  if(harness!=='codex'){
+    const source=explicit||sourceInfo(home);
+    for(const r of installedVersions(projectDir,home))installations.push({...r,source});
   }
-
-  const dir = entry?.installLocation;
-  if (!dir) return null;
-  const m = readJSON(path.join(dir, '.claude-plugin', 'plugin.json'));
-  if (!m?.version) return null;
-  const origin = src.repo ? `${src.source}:${src.repo}` : (src.url ?? String(src.source));
-  return { version: m.version, kind: 'git', origin, clone: dir };
-}
-
-/** 하위 호환 — 버전만 필요한 호출부용. */
-export function sourceVersion() {
-  return sourceInfo()?.version ?? null;
-}
-
-const cmp = (a, b) => {
-  const pa = String(a).split('.').map(Number), pb = String(b).split('.').map(Number);
-  for (let i = 0; i < 3; i++) { const d = (pa[i] || 0) - (pb[i] || 0); if (d) return d; }
-  return 0;
-};
-
-/**
- * 훅용. **확실히 뒤처졌을 때만** 문자열을 내고 그 외에는 null 이다(평소 소음 0 규칙).
- * git 소스에서 버전이 같아 보이는 경우는 단정할 수 없지만, 여기서 매 세션 떠들면
- * 소음 0 이 깨진다 — 그 불확실성은 사람이 직접 부르는 CLI 쪽에서 말한다.
- */
-export function staleReport(projectDir) {
-  const info = sourceInfo();
-  if (!info) return null;                      // 소스를 모르면 조용히 넘어간다
-  const src = info.version;
-  const stale = installedVersions(projectDir).filter((i) => cmp(i.version, src) < 0);
-  if (!stale.length) return null;
-  const lines = [
-    `플러그인이 소스(${src})보다 뒤처졌다 — **설치본은 스냅샷이라 push 만으로는 안 바뀐다.**`,
-    `  소스 출처: ${info.origin}${info.kind === 'git' ? ' (로컬 클론 기준)' : ''}`,
-  ];
-  for (const s of stale) {
-    const where = s.projectPath ? ` (${s.projectPath})` : '';
-    lines.push(`  - ${s.scope}${where}: ${s.version}  ->  \`claude plugin update ${PLUGIN}@${PLUGIN} --scope ${s.scope}\``);
+  if(harness!=='claude'){
+    try{
+      const hasCodex=options.codexList!==undefined||harness==='codex'||fs.existsSync(path.join(codexHome,'plugins/cache/game-dev-team-local'));
+      const reg=hasCodex?options.codexList||codexRegistry(codexHome):{installed:[]};
+      for(const e of reg.installed){
+        if(e.name!==PLUGIN||!e.installed)continue;
+        if(![e.marketplaceName,e.version].every(segment))throw Error('Codex 캐시 경로 식별자를 확인하지 못했다');
+        const local=e.source?.source==='local'&&typeof e.source.path==='string';
+        const source=explicit||(local?{kind:e.marketplaceSource?.sourceType==='local'?'directory':'git',origin:e.marketplaceSource?.source||e.source.path,root:e.source.path,version:versionAt(e.source.path)}:null);
+        installations.push({harness:'codex',pluginId:e.pluginId,scope:'global',enabled:e.enabled,version:e.version,installPath:path.join(codexHome,'plugins/cache',e.marketplaceName,PLUGIN,e.version),source});
+      }
+    }catch(e){discoveryGaps.push(e.message);}
   }
-  lines.push('갱신 뒤 재시작해야 적용된다. 마켓플레이스 소스가 바뀌었으면 `claude plugin marketplace update` 를 먼저.');
+  for(const r of installations){
+    r.code=3;
+    try{
+      if(!r.source?.root||!r.source.version||!r.installPath)throw Error('소스 또는 설치 경로·버전을 확인하지 못했다');
+      Object.assign(r,compareInstallation(r.source.root,r.installPath));
+      r.code=r.missing.length||r.changed.length||r.extra.length||r.version!==r.source.version?1:r.source.kind==='git'?3:0;
+      r.reason=r.code===1?'배포 파일 또는 버전 불일치':r.code===3?'로컬 클론과 일치하나 원격은 미확인':'지정한 로컬 소스와 배포 파일 일치';
+    }catch(e){r.reason=e.message;}
+  }
+  if(!installations.length)discoveryGaps.push('대상 하네스의 설치 기록이 없다');
+  const code=installations.some(x=>x.code===1)?1:discoveryGaps.length||installations.some(x=>x.code===3)?3:0;
+  return {code,verdict:code===0?'일치':code===1?'불일치':'측정 불가',installations,discoveryGaps};
+}
+function format(result){
+  const lines=[];
+  for(const r of result.installations){
+    lines.push(r.harness+' / '+r.scope+(r.enabled===false?' (비활성)':''),'  소스 출처: '+(r.source?.origin||'미확인'),'  소스 버전: '+(r.source?.version||'미확인'),'  설치 경로: '+(r.installPath||'미확인'),'  설치 버전: '+r.version,'  결과: '+r.reason);
+    for(const [key,label] of [['missing','누락'],['changed','변경'],['extra','추가']])if(r[key]?.length)lines.push('  '+label+' '+r[key].length+'개: '+r[key].slice(0,8).join(', ')+(r[key].length>8?' …':''));
+    if(r.comparedFiles!==undefined)lines.push('  비교 파일: '+r.comparedFiles+'개 / 일치 '+r.sameFiles+'개');
+  }
+  lines.push(...result.discoveryGaps,'판정: '+result.verdict+'. 원격 최신성·실행 품질·현재 세션 재로드 여부는 검사하지 않는다.');
+  if(result.code===1)lines.push('소스와 미러 확인 뒤 공식 install.ps1 또는 install.sh로 갱신한다. 갱신 뒤 세션을 다시 불러온다.');
   return lines.join('\n');
 }
-
-// 직접 실행: 항상 결과를 낸다(훅과 달리 조용하지 않다)
-if (import.meta.url === `file://${process.argv[1]?.replace(/\\/g, '/')}` || process.argv[1]?.endsWith('check-plugin-version.mjs')) {
-  const dir = process.env.CLAUDE_PROJECT_DIR || process.cwd();
-  const info = sourceInfo();
-  const inst = installedVersions(dir);
-  if (!info) {
-    console.log('마켓플레이스 소스를 못 읽었다. 판정: 측정 불가');
-    console.log('  `claude plugin marketplace list` 로 등록 상태를 확인해라.');
-    process.exit(3);
+export function staleReport(projectDir){
+  const r=inspectInstallations(projectDir);return r.code===1?format(r):null;
+}
+if(process.argv[1]&&import.meta.url===pathToFileURL(path.resolve(process.argv[1])).href){
+  const args=process.argv.slice(2),options={};let json=false;
+  while(args.length){
+    const key=args.shift();if(key==='--json'){json=true;continue;}
+    if(!['--source','--harness'].includes(key)||!args.length){console.error('usage: check-plugin-version.mjs [--source dir] [--harness both|claude|codex] [--json]');process.exit(2);}
+    options[key.slice(2)]=args.shift();
   }
-
-  // **출처를 먼저 찍는다.** 이 한 줄이 없어서 죽은 레포를 18버전 동안 못 봤다.
-  console.log(`소스 출처: ${info.origin}${info.kind === 'git' ? '  (로컬 클론: ' + info.clone + ')' : ''}`);
-  console.log(`소스 버전: ${info.version}`);
-  if (!inst.length) { console.log('이 프로젝트에 설치된 기록이 없다. 판정: 측정 불가'); process.exit(3); }
-  for (const i of inst) console.log(`  ${i.scope}${i.projectPath ? ` (${i.projectPath})` : ''}: ${i.version}`);
-
-  const rep = staleReport(dir);
-  if (rep) { console.log('\n' + rep); process.exit(1); }
-
-  if (info.kind === 'git') {
-    // 클론과 같다고 최신인 게 아니다. 원격은 안 봤다 — 그걸 최신이라 부르면 거짓 안심이다.
-    console.log('\n판정: **측정 불가** — 설치본이 로컬 클론과 같지만 **원격은 확인하지 않았다.**');
-    console.log('  `claude plugin marketplace update game-dev-team` 으로 클론을 갱신한 뒤 다시 봐라.');
-    console.log(`  출처가 의도한 레포가 맞는지도 같이 확인해라: ${info.origin}`);
-    process.exit(3);
-  }
-  console.log('\n전부 최신이다.');
+  if(options.harness&&!['both','claude','codex'].includes(options.harness)){console.error('하네스는 both, claude, codex 중 하나다');process.exit(2);}
+  const r=inspectInstallations(process.env.CLAUDE_PROJECT_DIR||process.cwd(),options);
+  console.log(json?JSON.stringify(r,null,2):format(r));process.exit(r.code);
 }

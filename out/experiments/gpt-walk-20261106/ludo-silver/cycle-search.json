@@ -1,0 +1,207 @@
+{
+  "method": "Premultiplied RGBA mean absolute difference, fixed canvas, no registration; candidate ranking only, not gait validation",
+  "candidates": [
+    {
+      "start": 4,
+      "endExclusive": 30,
+      "frames": 26,
+      "closingMatch": 0.019568445160984993,
+      "seam": 0.04603218659758568,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 10,
+      "endExclusive": 34,
+      "frames": 24,
+      "closingMatch": 0.022437265142798424,
+      "seam": 0.03624515235424042,
+      "localStep": 0.047675229609012604
+    },
+    {
+      "start": 5,
+      "endExclusive": 31,
+      "frames": 26,
+      "closingMatch": 0.023981712758541107,
+      "seam": 0.039604924619197845,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 3,
+      "endExclusive": 29,
+      "frames": 26,
+      "closingMatch": 0.024004822596907616,
+      "seam": 0.05270625278353691,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 1,
+      "endExclusive": 27,
+      "frames": 26,
+      "closingMatch": 0.024596797302365303,
+      "seam": 0.05796778202056885,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 8,
+      "endExclusive": 32,
+      "frames": 24,
+      "closingMatch": 0.02678908407688141,
+      "seam": 0.08581241965293884,
+      "localStep": 0.047675229609012604
+    },
+    {
+      "start": 12,
+      "endExclusive": 35,
+      "frames": 23,
+      "closingMatch": 0.027008604258298874,
+      "seam": 0.0662253201007843,
+      "localStep": 0.048217007890343666
+    },
+    {
+      "start": 0,
+      "endExclusive": 26,
+      "frames": 26,
+      "closingMatch": 0.029226936399936676,
+      "seam": 0.057098668068647385,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 9,
+      "endExclusive": 33,
+      "frames": 24,
+      "closingMatch": 0.029327820986509323,
+      "seam": 0.04416065290570259,
+      "localStep": 0.047675229609012604
+    },
+    {
+      "start": 2,
+      "endExclusive": 28,
+      "frames": 26,
+      "closingMatch": 0.029961077496409416,
+      "seam": 0.055657077580690384,
+      "localStep": 0.04502366483211517
+    },
+    {
+      "start": 6,
+      "endExclusive": 31,
+      "frames": 25,
+      "closingMatch": 0.0314144566655159,
+      "seam": 0.06272824108600616,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 11,
+      "endExclusive": 34,
+      "frames": 23,
+      "closingMatch": 0.0331558920443058,
+      "seam": 0.05213404819369316,
+      "localStep": 0.048217007890343666
+    },
+    {
+      "start": 1,
+      "endExclusive": 28,
+      "frames": 27,
+      "closingMatch": 0.03520357981324196,
+      "seam": 0.024596797302365303,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 11,
+      "endExclusive": 35,
+      "frames": 24,
+      "closingMatch": 0.0358208604156971,
+      "seam": 0.0331558920443058,
+      "localStep": 0.047675229609012604
+    },
+    {
+      "start": 10,
+      "endExclusive": 33,
+      "frames": 23,
+      "closingMatch": 0.03624515235424042,
+      "seam": 0.08345993608236313,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 5,
+      "endExclusive": 30,
+      "frames": 25,
+      "closingMatch": 0.039604924619197845,
+      "seam": 0.06324157863855362,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 4,
+      "endExclusive": 31,
+      "frames": 27,
+      "closingMatch": 0.04155300185084343,
+      "seam": 0.019568445160984993,
+      "localStep": 0.04441744275391102
+    },
+    {
+      "start": 2,
+      "endExclusive": 29,
+      "frames": 27,
+      "closingMatch": 0.042144693434238434,
+      "seam": 0.029961077496409416,
+      "localStep": 0.04441744275391102
+    },
+    {
+      "start": 9,
+      "endExclusive": 32,
+      "frames": 23,
+      "closingMatch": 0.04416065290570259,
+      "seam": 0.10542760789394379,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 3,
+      "endExclusive": 30,
+      "frames": 27,
+      "closingMatch": 0.04523429647088051,
+      "seam": 0.024004822596907616,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 9,
+      "endExclusive": 34,
+      "frames": 25,
+      "closingMatch": 0.04581519216299057,
+      "seam": 0.029327820986509323,
+      "localStep": 0.048217007890343666
+    },
+    {
+      "start": 4,
+      "endExclusive": 29,
+      "frames": 25,
+      "closingMatch": 0.04603218659758568,
+      "seam": 0.08738668262958527,
+      "localStep": 0.04441744275391102
+    },
+    {
+      "start": 7,
+      "endExclusive": 32,
+      "frames": 25,
+      "closingMatch": 0.048948049545288086,
+      "seam": 0.07249793410301208,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 0,
+      "endExclusive": 27,
+      "frames": 27,
+      "closingMatch": 0.04903870448470116,
+      "seam": 0.029226936399936676,
+      "localStep": 0.04634944722056389
+    },
+    {
+      "start": 10,
+      "endExclusive": 35,
+      "frames": 25,
+      "closingMatch": 0.049751002341508865,
+      "seam": 0.022437265142798424,
+      "localStep": 0.04634944722056389
+    }
+  ],
+  "fullSeam": 0.10301745682954788,
+  "adjacentMedian": 0.04875878617167473
+}

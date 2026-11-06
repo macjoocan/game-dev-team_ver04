@@ -1,9 +1,9 @@
 ---
 name: fx-art-system
 description: >
-  이펙트 아트(타격 임팩트·소멸·글로우·획득 반짝임)를 스펙에서 자동 생성한다.
-  프레임 시퀀스 PNG + 스트립 시트 + manifest(프레임 수·fps·블렌드·피벗)까지 내고,
-  어두운 배경 프리뷰로 검수한다. 외부 생성 API 없이 돈다.
+  2D·3D 이펙트를 엔진 공통 스펙으로 제작하고 검수한다. 2D 프레임·시트, 3D 링 메시·
+  파티클 모션 데이터와 manifest, 재생 프리뷰를 만든다. 해시·규격·예산을 검사한다.
+  외부 생성 API 없이 돈다. 실제 엔진 연결과 화면 검수는 별도다.
   "이펙트 만들어줘", "타격 이펙트", "FX 텍스처", "파티클 텍스처", "반짝임", "글로우",
   "소멸 연출 이미지", "이펙트 시트" 같은 요청에 사용. 소유: artist + developer.
   주의: 연출을 **구현**하는 건 `polish` 소관이다. 여기서는 그 재료(텍스처·시퀀스)를 만든다.
@@ -17,6 +17,23 @@ description: >
 3. **프레임 간 밝기 곡선** — 시퀀스는 밝기가 매끄럽게 오르내려야 한다. 프레임마다 다른 그림이면 깜빡인다.
 
 톤·색은 사람이 정하고(`art-direction` → `VISUAL_DESIGN.md`), 그 값을 스펙에 넣어 여기서 양산한다.
+
+## 2D·3D 공통 파이프라인
+
+```bash
+node <플러그인>/skills/fx-art-system/scripts/fx-build.mjs fx-pipeline-spec.json --out fx-v1
+node <플러그인>/skills/fx-art-system/scripts/fx-check.mjs fx-v1/manifest.json --out fx-v1-qa
+```
+
+공통 제작에는 [시작 스펙](references/fx-pipeline-spec.json)과 [규격·검수 안내](references/fx-pipeline.md)를 쓴다. 스펙을 옮기면 `palette`와 `visualReference`의 상대 경로도 맞춘다. 기존 2D 텍스처만 필요하면 아래 `fx-gen.mjs`를 그대로 쓴다.
+
+- `fx-build`는 비어 있는 출력 폴더에만 쓴다. 기존 승인본은 새 버전으로 보존한다.
+- `lib-fx-pipeline.mjs`는 공통 계약·결정론적 모션·메시 생성을, `lib-fx-preview.mjs`는 로컬 재생 프리뷰를 담당한다.
+- `fx-check`는 규격 판정 0/1/3과 검사하지 않은 항목을 남긴다. 생성 성공·규격 충족을 사람 승인으로 바꾸지 않는다.
+- 생성물은 `concept`다. `preview.html`에서 정지·재생·속도·프레임·배경을 비교하고, 실제 게임의 가장 작은 화면과 효과가 겹친 화면은 따로 확인한다.
+- `review-loop`에는 stable ID·새 버전·프리뷰·산출물·QA를 등록한다. 사람 승인 전에는 프로덕션으로 승격하지 않는다.
+
+공통 파이프라인은 2D 4종과 3D 방사형 파티클·궤도형 파티클·링 메시를 제공한다. 엔진별 파티클 시스템, 충돌·조명·깊이 정렬, 실제 GPU 성능은 연결 후 검증한다.
 
 ## 생성
 

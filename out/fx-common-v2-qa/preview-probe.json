@@ -1,0 +1,58 @@
+{
+  "command": "node out/check-preview-final.mjs",
+  "exitCode": 0,
+  "scope": "생성 HTML을 DOM 스텁에서 실행. 실제 브라우저 렌더링은 미확인.",
+  "probes": [
+    {
+      "seconds": 1.3333333333333333,
+      "frames": [
+        7,
+        7,
+        23,
+        0
+      ]
+    },
+    {
+      "seconds": 1.5,
+      "frames": [
+        11,
+        12,
+        0,
+        4
+      ]
+    },
+    {
+      "seconds": 1.75,
+      "frames": [
+        11,
+        18,
+        6,
+        10
+      ]
+    },
+    {
+      "seconds": 2,
+      "frames": [
+        0,
+        0,
+        12,
+        16
+      ]
+    },
+    {
+      "seconds": 2.1,
+      "frames": [
+        2,
+        2,
+        14,
+        18
+      ]
+    }
+  ],
+  "checks": [
+    "loop wraps without pause",
+    "play/pause",
+    "scrub pauses",
+    "reset"
+  ]
+}

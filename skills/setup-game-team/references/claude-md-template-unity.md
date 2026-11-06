@@ -40,7 +40,7 @@
 1. **기획/밸런스 + 게임성 지표 정의** (`game-designer`) — 게이트: 근거 없는 수치 0 · 미결 명시 · 게임성 지표 숫자로 정의.
 2. **태스크 분해** (`pm`).
 3. **프로토타입(스파이크)** (`developer`) — 버려도 되는 최소 구현. 핵심 재미만.
-4. **게임성 검증** (`game-designer` + `balance-sim`) — 헤드리스 시뮬로 지표 대조. 미충족 시 1번으로 되돌림(반복 루프).
+4. **게임성 검증**: 사람 플레이 근거와 사람 승인. 자동 검사는 실제 데이터의 `clearability-check`뿐이다. `balance-sim`은 요청형이고 플레이 기록 뒤 2회 예산을 따른다.
 5. **본구현** (`developer`) — worktree 브랜치, 작은 커밋.
 6. **정확성 검증** (`qa`) — Unity Test(EditMode/PlayMode), 콘솔 에러 0.
 7. **아트/시각 QA** (`artist`) — `art-direction`으로 `VISUAL_DESIGN.md` 확정 → 에셋 제작(asset-pipeline manifest 기록) → `visual-qa` 검수.
@@ -98,7 +98,7 @@ P2. **2차 폴리싱 — 파이널 연출 패스** (`polish` · artist+developer
 
 ## 검증 방법
 - 정확성: Unity Test Framework(NUnit) EditMode/PlayMode + 콘솔 에러 0. Unity MCP로 테스트 실행.
-- 게임성: `balance-sim` — `Game.Core`를 dotnet 콘솔/EditMode로 N판 시뮬 → 지표 대조. (상세: balance-sim/references/unity-headless-sim.md)
+- 게임성: 사람 플레이와 `clearability-check`. 봇 시뮬은 요청받았을 때만 실행한다.
 
 ## 권장 MCP
 - **Unity MCP**(CoplayDev/unity-mcp 또는 IvanMurzak/Unity-MCP) — 에디터/런타임/테스트 제어.

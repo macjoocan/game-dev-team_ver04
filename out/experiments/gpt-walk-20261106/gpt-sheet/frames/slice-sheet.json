@@ -1,0 +1,249 @@
+{
+  "kind": "sprite-gen-slice-sheet",
+  "version": 1,
+  "sheet": "raw.png",
+  "grid": [
+    4,
+    2
+  ],
+  "canvas": {
+    "w": 512,
+    "h": 512
+  },
+  "baseline_y": 480.0,
+  "target_height": 432.0,
+  "scale": "sheet",
+  "fit": "contain",
+  "factor": 1.0434782608695652,
+  "factor_from": {
+    "rule": "target_height",
+    "cell": "frame_02"
+  },
+  "alpha_cleanup": "alpha-cleanup.json",
+  "cells": [
+    {
+      "name": "frame_00",
+      "file": "frame_00.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 286,
+          "h": 413
+        },
+        "canvas": {
+          "w": 298,
+          "h": 431
+        }
+      },
+      "box": {
+        "x": 107,
+        "y": 49,
+        "w": 298,
+        "h": 431
+      },
+      "anchor": [
+        256.0,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_01",
+      "file": "frame_01.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 280,
+          "h": 404
+        },
+        "canvas": {
+          "w": 292,
+          "h": 422
+        }
+      },
+      "box": {
+        "x": 110,
+        "y": 58,
+        "w": 292,
+        "h": 422
+      },
+      "anchor": [
+        256.0,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_02",
+      "file": "frame_02.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 301,
+          "h": 414
+        },
+        "canvas": {
+          "w": 314,
+          "h": 432
+        }
+      },
+      "box": {
+        "x": 99,
+        "y": 48,
+        "w": 314,
+        "h": 432
+      },
+      "anchor": [
+        256.0,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_03",
+      "file": "frame_03.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 300,
+          "h": 407
+        },
+        "canvas": {
+          "w": 313,
+          "h": 425
+        }
+      },
+      "box": {
+        "x": 100,
+        "y": 55,
+        "w": 313,
+        "h": 425
+      },
+      "anchor": [
+        256.5,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_04",
+      "file": "frame_04.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 304,
+          "h": 412
+        },
+        "canvas": {
+          "w": 317,
+          "h": 430
+        }
+      },
+      "box": {
+        "x": 98,
+        "y": 50,
+        "w": 317,
+        "h": 430
+      },
+      "anchor": [
+        256.5,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_05",
+      "file": "frame_05.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 275,
+          "h": 407
+        },
+        "canvas": {
+          "w": 287,
+          "h": 425
+        }
+      },
+      "box": {
+        "x": 113,
+        "y": 55,
+        "w": 287,
+        "h": 425
+      },
+      "anchor": [
+        256.5,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_06",
+      "file": "frame_06.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 265,
+          "h": 411
+        },
+        "canvas": {
+          "w": 277,
+          "h": 429
+        }
+      },
+      "box": {
+        "x": 118,
+        "y": 51,
+        "w": 277,
+        "h": 429
+      },
+      "anchor": [
+        256.5,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    },
+    {
+      "name": "frame_07",
+      "file": "frame_07.png",
+      "factor": 1.0434782608695652,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 290,
+          "h": 410
+        },
+        "canvas": {
+          "w": 303,
+          "h": 428
+        }
+      },
+      "box": {
+        "x": 105,
+        "y": 52,
+        "w": 303,
+        "h": 428
+      },
+      "anchor": [
+        256.5,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    }
+  ]
+}

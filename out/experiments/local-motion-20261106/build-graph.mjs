@@ -1,0 +1,30 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const g={}; const add=(id,type,inputs)=>(g[id]={class_type:type,inputs},[String(id),0]);
+const ref=add(1,'LoadImage',{image:'gpt-reference.png'});
+const clip=add(2,'CLIPLoader',{clip_name:'umt5_xxl_fp8_e4m3fn_scaled.safetensors',type:'wan',device:'cpu'});
+const pos=add(3,'CLIPTextEncode',{clip,text:'Character appearance: A full-body right-facing silver-haired female knight in a detailed hand-painted 2D fantasy game illustration. Long voluminous silver high ponytail tied with a gold band, long teal cape and scarf, charcoal armor with gold trim, brown leather belt, brown gloves and tall brown boots. Her near hand firmly holds a straight silver sword with a golden hilt, angled down and forward. Preserve her face, long ponytail, cape, clothing, boots and sword exactly as the reference. Background: flat pure white, isolated single character, fixed orthographic side-view camera, full body and sword entirely inside the frame.'});
+const neg=add(4,'CLIPTextEncode',{clip,text:'camera motion, zoom, cropped feet, missing sword, missing ponytail, short hair, deformed limbs, extra limbs, extra sword, blurry face, changing clothes, scenery, shadows, text, watermark'});
+const motion=add(5,'CLIPTextEncode',{clip,text:'A full-body side-view female knight walks in place toward the right. A natural complete walking cycle with alternating legs, planted support foot, opposite leg swinging past, gentle weight shift, ponytail and cape swaying, and a sword held firmly in the hand. Fixed camera, no turn.'});
+const vae=add(6,'VAELoader',{vae_name:'wan_2.1_vae.safetensors'});
+const vision=add(7,'CLIPVisionLoader',{clip_name:'CLIP-ViT-H-14-laion2B-s32B-b79K.safetensors'});
+const visref=add(8,'CLIPVisionEncode',{clip_vision:vision,image:ref,crop:'none'});
+let batch;
+for(let i=0;i<29;i++){
+ const im=add(100+i,'LoadImage',{image:`driver_${String(i).padStart(3,'0')}.png`});
+ batch=i===0?im:add(200+i,'ImageBatch',{image1:batch,image2:im});
+}
+const vispose=add(9,'CLIPVisionEncode',{clip_vision:vision,image:['100',0],crop:'none'});
+add(10,'WanAnimate2ToVideo',{positive:pos,negative:neg,vae,width:384,height:448,length:29,batch_size:1,reference_image:ref,pose_video:batch,clip_vision_output:visref,positive_pose:motion,clip_vision_output_pose:vispose,video_frame_offset:0,pose_strength:1,pose_start_percent:0,pose_end_percent:1,reference_image_strength:1});
+const unet=add(11,'UNETLoader',{unet_name:'wan_animate_2_int8_convrot.safetensors',weight_dtype:'default'});
+const lora=add(12,'LoraLoaderModelOnly',{model:unet,lora_name:'lightx2v_I2V_14B_480p_cfg_step_distill_rank64_bf16.safetensors',strength_model:1});
+const shifted=add(13,'ModelSamplingSD3',{model:lora,shift:5});
+const cached=add(14,'WanAnimate2Cache',{model:shifted,device:'cpu',dtype:'int8'});
+const sample=add(15,'KSampler',{model:cached,seed:7,steps:6,cfg:1,sampler_name:'lcm',scheduler:'simple',positive:['10',0],negative:['10',1],latent_image:['10',2],denoise:1});
+const trim=add(16,'TrimVideoLatent',{samples:sample,trim_amount:['10',3]});
+const decode=add(17,'VAEDecodeTiled',{samples:trim,vae,tile_size:256,overlap:64,temporal_size:16,temporal_overlap:4});
+add(18,'SaveImage',{images:decode,filename_prefix:'a-motion/frame'});
+fs.writeFileSync(path.join(root,'a-motion.api.json'),JSON.stringify(g,null,2));
+console.log('Saved a-motion.api.json');

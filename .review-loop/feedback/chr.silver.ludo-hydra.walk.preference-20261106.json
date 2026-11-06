@@ -1,0 +1,11 @@
+{
+  "itemKey": "chr.silver.ludo-hydra.walk@1",
+  "kind": "preference",
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-06",
+  "quote": "은발 Ludo · 한 주기 후보 26장 이게 젤 깔끔한데",
+  "preferredFrames": "original zero-based frames 04..29 inclusive",
+  "productionApproval": false,
+  "report": "out/experiments/ludo-research-20261106/REPORT.md"
+}

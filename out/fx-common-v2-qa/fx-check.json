@@ -1,0 +1,56 @@
+{
+  "verdict": "충족",
+  "scope": "asset-contract-only",
+  "productionApproved": false,
+  "manifestHash": "6d3f1fb560c030e94eda59b8f425bd70a17bf612af473cb9d791fb15d664fbfb",
+  "metrics": [
+    {
+      "id": "fx.impact.2d",
+      "textureBytes": 442368,
+      "peakParticles": 0,
+      "triangles": 0,
+      "frames": 12,
+      "duration": 0.5
+    },
+    {
+      "id": "fx.pulse.2d",
+      "textureBytes": 884736,
+      "peakParticles": 0,
+      "triangles": 0,
+      "frames": 24,
+      "duration": 1
+    },
+    {
+      "id": "fx.burst.3d",
+      "textureBytes": 4096,
+      "peakParticles": 24,
+      "triangles": 96,
+      "frames": 24,
+      "duration": 1
+    },
+    {
+      "id": "fx.orbit.3d",
+      "textureBytes": 4096,
+      "peakParticles": 16,
+      "triangles": 96,
+      "frames": 32,
+      "duration": 1.3333333333333333
+    }
+  ],
+  "totals": {
+    "textureBytes": 1335296,
+    "particles": 40,
+    "triangles": 192
+  },
+  "budgets": {
+    "textureBytes": 2097152,
+    "particles": 64,
+    "triangles": 256
+  },
+  "failures": [],
+  "gaps": [
+    "실제 엔진의 GPU 시간·드로우콜·오버드로·깊이 정렬은 미측정",
+    "실제 화면의 중첩·시야 면적·플래시 안전은 별도 검사 필요",
+    "가독성·색각이상 대체 신호·타이밍 체감·외형 승인·라이선스 허가는 사람 검수 필요"
+  ]
+}

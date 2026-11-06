@@ -1,0 +1,15 @@
+{
+  "status": "prototype-assumptions",
+  "fps": 60,
+  "pace": {"actionIntervalMs": 1800},
+  "reducedMotion": {"declared": true, "disables": ["flash", "shake", "trail"], "scales": {"shake": 0}},
+  "events": {
+    "hit_light": {"class": "hit", "weight": 1, "hitStopFrames": 3, "shake": {"amplitudePx": 2, "durationMs": 80, "decay": "expo"}, "flash": {"durationMs": 0}, "sound": "local_synth_hit"}
+  },
+  "preview": {"autoPeriodMs": 2200, "ground": 478, "targetX": 490, "targetY": 368, "targetHalfWidth": 20, "attackReachX": 515, "missOffsetX": 120, "targetRecoilPx": 12, "targetRecoilMs": 150, "trailDurationMs": 65, "trailAlpha": 0.22},
+  "clips": {
+    "uniform": {"label": "A · 균일 재생", "sourceFrames": [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24], "durations": [64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64,64], "impactSourceFrame": 7},
+    "snappy": {"label": "B · 빠른 베기", "sourceFrames": [0,2,4,5,6,7,13,14,16,18,21,24], "durations": [25,30,40,45,17,50,23,45,45,40,35,35], "impactSourceFrame": 7},
+    "impact": {"label": "C · 명중 반응 추가", "sourceFrames": [0,2,4,5,6,7,13,14,16,18,21,24], "durations": [25,30,40,45,17,50,23,45,45,40,35,35], "impactSourceFrame": 7}
+  }
+}

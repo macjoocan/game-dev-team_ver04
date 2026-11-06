@@ -1,0 +1,53 @@
+{
+  "kind": "sprite-gen-slice-sheet",
+  "version": 1,
+  "sheet": "silver-swordswoman-gpt-v1.png",
+  "grid": [
+    1,
+    1
+  ],
+  "canvas": {
+    "w": 512,
+    "h": 512
+  },
+  "baseline_y": 480.0,
+  "target_height": 432.0,
+  "scale": "sheet",
+  "fit": "contain",
+  "factor": 0.366412213740458,
+  "factor_from": {
+    "rule": "target_height",
+    "cell": "master"
+  },
+  "alpha_cleanup": "alpha-cleanup.json",
+  "cells": [
+    {
+      "name": "master",
+      "file": "master.png",
+      "factor": 0.366412213740458,
+      "factor_from": "target_height",
+      "subject": {
+        "sheet": {
+          "w": 814,
+          "h": 1179
+        },
+        "canvas": {
+          "w": 298,
+          "h": 432
+        }
+      },
+      "box": {
+        "x": 107,
+        "y": 48,
+        "w": 298,
+        "h": 432
+      },
+      "anchor": [
+        256.0,
+        480.0
+      ],
+      "clipped_px": 0,
+      "parts": 1
+    }
+  ]
+}

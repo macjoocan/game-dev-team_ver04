@@ -1,0 +1,30 @@
+{
+  "verdict": "충족",
+  "thresholds": {
+    "inputResponseMaxMs": 50,
+    "hitStopFrameRange": [
+      2,
+      12
+    ],
+    "shakeMaxDurationMs": 400,
+    "shakeMaxAmplitudePx": 12,
+    "feedbackBudgetRatio": 0.6
+  },
+  "fails": [],
+  "warns": [],
+  "events": [
+    {
+      "name": "hit_light",
+      "weight": 1,
+      "hitStop": 3,
+      "hitStopMs": "50",
+      "shakePx": 2,
+      "shakeMs": 80,
+      "flashMs": "",
+      "resp": "",
+      "easing": "",
+      "durMs": "",
+      "totalMs": "130"
+    }
+  ]
+}
