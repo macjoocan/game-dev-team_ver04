@@ -1,0 +1,829 @@
+{
+  "id": "chr.silver.pixeloe.walk",
+  "status": "review",
+  "productionApproved": false,
+  "tool": "PixelOE",
+  "revision": "7ce444b36d3876a151d845d4493240e904454d89",
+  "license": "Apache-2.0",
+  "api": "pixeloe.torch.pixelize.pixelize",
+  "backend": "torch",
+  "device": "cuda",
+  "settings": {
+    "pixel_size": 4,
+    "thickness": 2,
+    "mode": "contrast",
+    "do_color_match": false,
+    "do_quant": false,
+    "sharedPaletteColors": 32,
+    "dithering": false,
+    "alphaThreshold": 128
+  },
+  "adapter": "PixelOE RGB processing; separate fixed-size original alpha mask; shared palette quantization with Pillow. No per-frame crop or recenter.",
+  "frameDurationMs": 70,
+  "source": "out/experiments/local-motion-20261106/c-alpha",
+  "sourceHashes": {
+    "frame_0000.png": "3e0c2d3d866569b6a106a3bd0402255a63614cee1bb1f3ee2fe5c052c2375cd2",
+    "frame_0001.png": "82894d853b7d8dec85f9d49fd1b3eeb8ca0d30bd0da8ee38d2f6c33ba3bc9db6",
+    "frame_0002.png": "8ac0c2b14a55b0bb917dbd06379b67910813f01e99457886061a1023be85452a",
+    "frame_0003.png": "d895fa29d6ec98cf93c0896dc570dc612388abf7d758286a42d5d209ce894a35",
+    "frame_0004.png": "3daa8fd40234c0d18e7320fea2de85528e6f09adc0af94596d5317ec1a504b68",
+    "frame_0005.png": "c1c3f97fe7414d16309a3a3f9f740bd9db834d8ddb1a613290c468425e7ffc13",
+    "frame_0006.png": "84b048ed66912ac7626854079e714563f455c5f401015f3c1c633bc745a24a90",
+    "frame_0007.png": "95b3288af3bf6583ce2ad617df94c4ede61d23c17e23abae2e7683b08cc953a6",
+    "frame_0008.png": "df011524f38b747dc686c447e59747104a77ed55468ad47ab6adeebcdf343de7",
+    "frame_0009.png": "665aa786b3c0f5d758b91caf36885600e9a69aefd4a6bec8ab4e5bf3e3c366b3",
+    "frame_0010.png": "89241faae426c284f78cac541b289e6a847275791ee2f331ad60ff9eb26230fd",
+    "frame_0011.png": "41e489d29ffede85513915d0bfa8a9207c566ddb1bc72d302fbdf86c34e90a89",
+    "frame_0012.png": "68a179ff6d9f781e75255eb533835af6e4942f275122185c2979e185f8bfe60b",
+    "frame_0013.png": "586a800595bd1d3fcc68f389fa28808a9c329ecbc24376a0aa4cc195060d9a09",
+    "frame_0014.png": "e31dd65de94b51fc655cf6717aeba06f410bdb852e9a5d949e73acfd0b8f1c15",
+    "frame_0015.png": "d5a3968cdeb905de73023ebc8e6b34aa9d468e7f98cbad5e43b0b81467e9ff38",
+    "frame_0016.png": "09c9eec8a22f80dd7a8b3d09b6cbcc36682646a28fd47725d6b703a335639ee6",
+    "frame_0017.png": "e8861521a3d77739f55430c96c395726c8e4b859a862ec1ae6cc21f5deb2e974",
+    "frame_0018.png": "8f9e0eb0490b9f89448299125cef7d8945c83e24d173777f5035f025b9a0aa03",
+    "frame_0019.png": "459aa6acf281c2d32c5d124467d6514d6e6d58b8ff8453080ed4c98188d58dd3",
+    "frame_0020.png": "f359a0667d50a8c977bfec446ecf586f9b2661f70fc018b8faafad62fc4cdd2c",
+    "frame_0021.png": "76f0580a9c79e491a3d8a19a57793d67e03e01e28470e6821327e3d771c4ed1a",
+    "frame_0022.png": "5f931d79418a7989e037906afbadbf422a72bea72b0194edbaf4c619e2e1fc2c",
+    "frame_0023.png": "8d49eaf36e27611189da6d6230a106592c1222a93e7ce5b0480d08640bcc76f9",
+    "frame_0024.png": "09745319717ce2b0c873fcff55e2c0336bd78003180ea4e41e036f9e8b63fec7",
+    "frame_0025.png": "92279db9a88696974ec2b778dcbde3c35e590e33226d18e4477fc37e4d8dbf70"
+  },
+  "sourceUnchanged": true,
+  "paidCalls": 0,
+  "seconds": 11.59,
+  "variants": [
+    {
+      "id": "nearest96",
+      "pixelOE": false,
+      "canvas": [
+        90,
+        96
+      ],
+      "frames": 26,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1596
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1541
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1492
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1536
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1578
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1593
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1602
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1610
+        },
+        {
+          "frame": 8,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1620
+        },
+        {
+          "frame": 9,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1638
+        },
+        {
+          "frame": 10,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1652
+        },
+        {
+          "frame": 11,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1639
+        },
+        {
+          "frame": 12,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1630
+        },
+        {
+          "frame": 13,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1596
+        },
+        {
+          "frame": 14,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1532
+        },
+        {
+          "frame": 15,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1511
+        },
+        {
+          "frame": 16,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1515
+        },
+        {
+          "frame": 17,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1625
+        },
+        {
+          "frame": 18,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1659
+        },
+        {
+          "frame": 19,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1682
+        },
+        {
+          "frame": 20,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1693
+        },
+        {
+          "frame": 21,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1696
+        },
+        {
+          "frame": 22,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1717
+        },
+        {
+          "frame": 23,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1717
+        },
+        {
+          "frame": 24,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1703
+        },
+        {
+          "frame": 25,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1684
+        }
+      ]
+    },
+    {
+      "id": "pixeloe64",
+      "pixelOE": true,
+      "canvas": [
+        60,
+        64
+      ],
+      "frames": 26,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 719
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 685
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 669
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 682
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 705
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 705
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 714
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 711
+        },
+        {
+          "frame": 8,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 726
+        },
+        {
+          "frame": 9,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 732
+        },
+        {
+          "frame": 10,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 734
+        },
+        {
+          "frame": 11,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 731
+        },
+        {
+          "frame": 12,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 718
+        },
+        {
+          "frame": 13,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 703
+        },
+        {
+          "frame": 14,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 680
+        },
+        {
+          "frame": 15,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 675
+        },
+        {
+          "frame": 16,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 678
+        },
+        {
+          "frame": 17,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 727
+        },
+        {
+          "frame": 18,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 732
+        },
+        {
+          "frame": 19,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 746
+        },
+        {
+          "frame": 20,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 759
+        },
+        {
+          "frame": 21,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 757
+        },
+        {
+          "frame": 22,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 761
+        },
+        {
+          "frame": 23,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 757
+        },
+        {
+          "frame": 24,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 757
+        },
+        {
+          "frame": 25,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 743
+        }
+      ]
+    },
+    {
+      "id": "pixeloe96",
+      "pixelOE": true,
+      "canvas": [
+        90,
+        96
+      ],
+      "frames": 26,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1596
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1541
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1492
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1536
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1578
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1593
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1602
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1610
+        },
+        {
+          "frame": 8,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1620
+        },
+        {
+          "frame": 9,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1638
+        },
+        {
+          "frame": 10,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1652
+        },
+        {
+          "frame": 11,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1639
+        },
+        {
+          "frame": 12,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1630
+        },
+        {
+          "frame": 13,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1596
+        },
+        {
+          "frame": 14,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1532
+        },
+        {
+          "frame": 15,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1511
+        },
+        {
+          "frame": 16,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1515
+        },
+        {
+          "frame": 17,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1625
+        },
+        {
+          "frame": 18,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1659
+        },
+        {
+          "frame": 19,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1682
+        },
+        {
+          "frame": 20,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1693
+        },
+        {
+          "frame": 21,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1696
+        },
+        {
+          "frame": 22,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1717
+        },
+        {
+          "frame": 23,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1717
+        },
+        {
+          "frame": 24,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1703
+        },
+        {
+          "frame": 25,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 1684
+        }
+      ]
+    },
+    {
+      "id": "pixeloe128",
+      "pixelOE": true,
+      "canvas": [
+        120,
+        128
+      ],
+      "frames": 26,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2834
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2738
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2655
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2736
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2806
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2835
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2866
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2877
+        },
+        {
+          "frame": 8,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2886
+        },
+        {
+          "frame": 9,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2910
+        },
+        {
+          "frame": 10,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2934
+        },
+        {
+          "frame": 11,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2923
+        },
+        {
+          "frame": 12,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2891
+        },
+        {
+          "frame": 13,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2828
+        },
+        {
+          "frame": 14,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2716
+        },
+        {
+          "frame": 15,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2681
+        },
+        {
+          "frame": 16,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2688
+        },
+        {
+          "frame": 17,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2885
+        },
+        {
+          "frame": 18,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2954
+        },
+        {
+          "frame": 19,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2976
+        },
+        {
+          "frame": 20,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 3009
+        },
+        {
+          "frame": 21,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 3006
+        },
+        {
+          "frame": 22,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 3033
+        },
+        {
+          "frame": 23,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 3040
+        },
+        {
+          "frame": 24,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 3017
+        },
+        {
+          "frame": 25,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "opaquePixels": 2972
+        }
+      ]
+    }
+  ]
+}

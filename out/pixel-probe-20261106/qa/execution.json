@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "nearest96",
+      "command": [
+        "node",
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/pixel-probe-20261106/nearest96",
+        "--cast",
+        "--out",
+        "out/pixel-probe-20261106/qa/nearest96"
+      ],
+      "exitCode": 1
+    },
+    {
+      "id": "pixeloe64",
+      "command": [
+        "node",
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/pixel-probe-20261106/pixeloe64",
+        "--cast",
+        "--out",
+        "out/pixel-probe-20261106/qa/pixeloe64"
+      ],
+      "exitCode": 1
+    },
+    {
+      "id": "pixeloe96",
+      "command": [
+        "node",
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/pixel-probe-20261106/pixeloe96",
+        "--cast",
+        "--out",
+        "out/pixel-probe-20261106/qa/pixeloe96"
+      ],
+      "exitCode": 1
+    },
+    {
+      "id": "pixeloe128",
+      "command": [
+        "node",
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/pixel-probe-20261106/pixeloe128",
+        "--cast",
+        "--out",
+        "out/pixel-probe-20261106/qa/pixeloe128"
+      ],
+      "exitCode": 1
+    }
+  ],
+  "sourceUnchanged": true,
+  "totalOutputFrames": 104
+}

@@ -1,0 +1,28 @@
+{
+  "meta": {
+    "harness": "Codex",
+    "branch": "main",
+    "commit": "59b1ab7",
+    "dirty": false,
+    "config": "art-gate.json",
+    "at": "2026-11-06T10:06:13.905Z"
+  },
+  "verdict": "측정 불가",
+  "results": [
+    {
+      "label": "스프라이트 정합성",
+      "status": "측정 불가",
+      "code": 3,
+      "cmd": "node skills/sprite-pipeline/scripts/sprite-qa.mjs samples/hex-blender-sprite/walk --atlas samples/hex-blender-sprite/hex_hero_walk_sheet.json"
+    }
+  ],
+  "skipped": [
+    "색각이상 — `palette` 미설정. 색 신호가 색각이상에서 살아 있는지 판정하지 못했다",
+    "텍스트 오버플로 — `strings`+`uiSpec` 미설정. 한국어로 맞춘 폭이 영어·독일어에서 터지는지 모른다",
+    "에셋 회귀 — `assets`+`baseline` 미설정",
+    "스타일 규격 — `generated`+`styleProfile` 미설정 (프로필은 `ref-analyze` 가 만든다)",
+    "텍스처 예산 — `assets` 미설정. 용량·텍스처 메모리를 실측하지 못했다",
+    "연출 상수 — `feel` 미설정. hit-stop·흔들림 예산과 모션 감소 경로를 판정하지 못했다",
+    "플래시 안전 — `fxManifest` 미설정. **광과민성 발작 위험을 판정하지 못했다** (WCAG 2.3.1 / 콘솔 심의 대상)"
+  ]
+}

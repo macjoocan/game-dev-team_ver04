@@ -1273,6 +1273,22 @@
       "commit": "4c43b68",
       "createdAt": "2026-11-06T09:01:11.766Z",
       "contentHash": "39a717b79900b73ccba899c9fde4978af8dba36847338905d676d4b5a059e50f"
+    },
+    {
+      "key": "chr.silver.pixeloe.walk@1",
+      "id": "chr.silver.pixeloe.walk",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "은발 걷기 PixelOE 64·96·128 비교",
+      "status": "review",
+      "preview": "out/pixel-probe-20261106/comparison.png",
+      "comparePreview": null,
+      "artifact": "out/pixel-probe-20261106/export",
+      "qa": "out/pixel-probe-20261106/REPORT.md",
+      "harness": "codex",
+      "commit": "59b1ab7",
+      "createdAt": "2026-11-06T10:27:05.212Z",
+      "contentHash": "971e3451d4e8221b4d1ddd9d2d3281fc484e269c0569c08a865a8ca751d6c95d"
     }
   ]
 }

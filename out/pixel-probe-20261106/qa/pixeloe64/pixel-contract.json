@@ -1,0 +1,343 @@
+{
+  "rows": [
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0000.png",
+      "name": "frame_0000.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 719,
+      "lonely": 0.5702364394993046,
+      "flat": 0.0013908205841446453,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.0%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0001.png",
+      "name": "frame_0001.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 685,
+      "lonely": 0.5518248175182482,
+      "flat": 0.00291970802919708,
+      "semi": 0,
+      "bad": [
+        "외톨이 55.2%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0002.png",
+      "name": "frame_0002.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 669,
+      "lonely": 0.5067264573991032,
+      "flat": 0.0029895366218236174,
+      "semi": 0,
+      "bad": [
+        "외톨이 50.7%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0003.png",
+      "name": "frame_0003.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 682,
+      "lonely": 0.5791788856304986,
+      "flat": 0.002932551319648094,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.9%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0004.png",
+      "name": "frame_0004.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 705,
+      "lonely": 0.5361702127659574,
+      "flat": 0.0028368794326241137,
+      "semi": 0,
+      "bad": [
+        "외톨이 53.6%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0005.png",
+      "name": "frame_0005.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 705,
+      "lonely": 0.5460992907801419,
+      "flat": 0.00425531914893617,
+      "semi": 0,
+      "bad": [
+        "외톨이 54.6%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0006.png",
+      "name": "frame_0006.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 714,
+      "lonely": 0.5700280112044818,
+      "flat": 0.004201680672268907,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.0%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0007.png",
+      "name": "frame_0007.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 711,
+      "lonely": 0.5358649789029536,
+      "flat": 0.008438818565400843,
+      "semi": 0,
+      "bad": [
+        "외톨이 53.6%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0008.png",
+      "name": "frame_0008.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 726,
+      "lonely": 0.5426997245179064,
+      "flat": 0.004132231404958678,
+      "semi": 0,
+      "bad": [
+        "외톨이 54.3%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0009.png",
+      "name": "frame_0009.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 732,
+      "lonely": 0.5642076502732241,
+      "flat": 0.004098360655737705,
+      "semi": 0,
+      "bad": [
+        "외톨이 56.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0010.png",
+      "name": "frame_0010.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 734,
+      "lonely": 0.5735694822888283,
+      "flat": 0.0027247956403269754,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0011.png",
+      "name": "frame_0011.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 731,
+      "lonely": 0.600547195622435,
+      "flat": 0.004103967168262654,
+      "semi": 0,
+      "bad": [
+        "외톨이 60.1%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0012.png",
+      "name": "frame_0012.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 718,
+      "lonely": 0.5473537604456824,
+      "flat": 0.004178272980501393,
+      "semi": 0,
+      "bad": [
+        "외톨이 54.7%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0013.png",
+      "name": "frame_0013.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 703,
+      "lonely": 0.5803698435277382,
+      "flat": 0.002844950213371266,
+      "semi": 0,
+      "bad": [
+        "외톨이 58.0%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0014.png",
+      "name": "frame_0014.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 680,
+      "lonely": 0.5735294117647058,
+      "flat": 0.007352941176470588,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0015.png",
+      "name": "frame_0015.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 675,
+      "lonely": 0.6177777777777778,
+      "flat": 0.008888888888888889,
+      "semi": 0,
+      "bad": [
+        "외톨이 61.8%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0016.png",
+      "name": "frame_0016.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 678,
+      "lonely": 0.5398230088495575,
+      "flat": 0.008849557522123894,
+      "semi": 0,
+      "bad": [
+        "외톨이 54.0%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0017.png",
+      "name": "frame_0017.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 727,
+      "lonely": 0.5240715268225584,
+      "flat": 0.009628610729023384,
+      "semi": 0,
+      "bad": [
+        "외톨이 52.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0018.png",
+      "name": "frame_0018.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 732,
+      "lonely": 0.5724043715846995,
+      "flat": 0.001366120218579235,
+      "semi": 0,
+      "bad": [
+        "외톨이 57.2%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0019.png",
+      "name": "frame_0019.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 746,
+      "lonely": 0.5978552278820375,
+      "flat": 0.002680965147453083,
+      "semi": 0,
+      "bad": [
+        "외톨이 59.8%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0020.png",
+      "name": "frame_0020.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 759,
+      "lonely": 0.5638998682476943,
+      "flat": 0,
+      "semi": 0,
+      "bad": [
+        "외톨이 56.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0021.png",
+      "name": "frame_0021.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 757,
+      "lonely": 0.5389696169088507,
+      "flat": 0.003963011889035667,
+      "semi": 0,
+      "bad": [
+        "외톨이 53.9%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0022.png",
+      "name": "frame_0022.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 761,
+      "lonely": 0.5624178712220762,
+      "flat": 0.003942181340341655,
+      "semi": 0,
+      "bad": [
+        "외톨이 56.2%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0023.png",
+      "name": "frame_0023.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 757,
+      "lonely": 0.6089828269484808,
+      "flat": 0.002642007926023778,
+      "semi": 0,
+      "bad": [
+        "외톨이 60.9%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0024.png",
+      "name": "frame_0024.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 757,
+      "lonely": 0.5653896961690885,
+      "flat": 0,
+      "semi": 0,
+      "bad": [
+        "외톨이 56.5%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\pixel-probe-20261106\\pixeloe64\\frame_0025.png",
+      "name": "frame_0025.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 743,
+      "lonely": 0.585464333781965,
+      "flat": 0.0013458950201884253,
+      "semi": 0,
+      "bad": [
+        "외톨이 58.5%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    }
+  ],
+  "fails": 26
+}

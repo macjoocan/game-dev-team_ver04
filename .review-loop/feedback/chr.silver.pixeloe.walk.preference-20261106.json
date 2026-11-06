@@ -1,0 +1,14 @@
+{
+  "kind": "asset-feedback",
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-06",
+  "itemKey": "chr.silver.pixeloe.walk@1",
+  "artifact": "out/pixel-probe-20261106/export",
+  "quote": "와우 좋네 ㅋㅋㅋ",
+  "interpretation": "PixelOE 도트 변환 비교 결과에 긍정 평가. 사용자가 인수인계와 GitHub 전달을 요청했다.",
+  "scope": "은발 걷기 PixelOE 비교 결과의 시각 품질",
+  "selectedResolution": null,
+  "productionApproval": false,
+  "automatedQaUnchanged": true
+}

@@ -1,0 +1,19 @@
+{
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "packages": {
+    "numpy": "2.5.1",
+    "Pillow": "12.3.0",
+    "torch": "2.13.0+cu130",
+    "torchvision": "0.28.0+cu130",
+    "kornia": "0.8.3",
+    "scipy": "1.18.0",
+    "opencv-python-headless": "5.0.0.93"
+  },
+  "PixelOE": {
+    "version": "1.0.1",
+    "commit": "7ce444b36d3876a151d845d4493240e904454d89",
+    "url": "https://github.com/KohakuBlueleaf/PixelOE",
+    "license": "Apache-2.0"
+  },
+  "note": "Observed environment, not a claim of cross-platform reproduction. Preview only needs a static HTTP server."
+}

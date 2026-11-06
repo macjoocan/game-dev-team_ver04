@@ -4,6 +4,10 @@
 
 ## 다음 세션은 여기서 시작
 
+- 인수인계 후 사용자가 PixelOE 도트 변환을 추가 요청했다. 공식 저장소 `KohakuBlueleaf/PixelOE`, 버전 1.0.1·커밋 `7ce444b`로 걷기 26장을 시험했다. 비교: `out/pixel-probe-20261106/index.html` 또는 서버 실행 중 `http://127.0.0.1:8199/`.
+- 단순 축소 96과 PixelOE 64·96·128을 공통 32색으로 비교했다. 사용자는 “와우 좋네 ㅋㅋㅋ”라고 긍정 평가하고 인수인계·푸시를 요청했다. 특정 해상도는 아직 고르지 않았다. 피드백 정본은 `.review-loop/feedback/chr.silver.pixeloe.walk.preference-20261106.json`이다.
+- 원본은 그대로이며 추가 유료 호출은 0회다. 최대 32색·반투명 0을 확인했지만 외톨이 픽셀 비율로 자동 도트 검사는 모두 미달이다. 긍정 평가를 생산용 승인으로 확대하지 않는다. 재생·재실행 방법은 최신 인수인계, 세부 근거는 `out/pixel-probe-20261106/REPORT.md`를 따른다.
+
 - 오늘 제작은 종료했다. 다음은 은발 베기 B/C의 타격감 검수다. `out/experiments/silver-slash-20261106/index.html`을 로컬 서버로 연다. 아직 베기에 대한 사용자 평가는 없다.
 - 걷기는 C를 비교 기준으로 보존한다. 사용자 평가는 “이정도면 잘나오는듯”이다. `out/experiments/local-motion-20261106/compare.html`에서 본다.
 - GPT 원화는 유지한다. 모션에 추가 유료 API·클라우드 GPU를 쓰지 않는다. 걷기는 기존 Ludo 모션, 베기는 Quaternius CC0 동작을 참조했다.
