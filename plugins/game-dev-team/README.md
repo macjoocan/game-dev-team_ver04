@@ -6,6 +6,8 @@
 
 v0.51.0은 사람 플레이 중심의 게임성 검증, 설치 파일 해시 비교, 2D·3D 공통 이펙트 제작·검수를 추가한다. 사용법은 [클리어 검사](skills/balance-sim/references/clearability.md)와 [이펙트 파이프라인](skills/fx-art-system/references/fx-pipeline.md)에 있다.
 
+PixelFX·sprite-gen·2dimg2motion·PixelOE의 로컬 사용과 검수 경계는 [4종 아트 도구 가이드](scripts/art-tools-guide.md)를 참고한다.
+
 Hermes·Harness²에서 참고한 구조가 실제로 어떻게 이어지는지는 [데브팀 구조와 충돌 방지](scripts/team-architecture.md)에 정리되어 있다.
 
 현재 구조의 강점·수정한 결함·검증 공백은 [객관적 점검 기록](scripts/team-assessment.md)을 참고한다.

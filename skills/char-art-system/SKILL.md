@@ -16,6 +16,8 @@ description: >
 
 캐릭터는 UI(`ui-art-system`)·이펙트(`fx-art-system`)와 다르다. 저 둘은 결과물이 **규격**이라 코드로 그리는 게 정확하지만, 캐릭터는 **인상**이 결과물이라 생성 모델이 필요하다.
 
+PixelOE·2dimg2motion 사용 경계와 sprite-gen 연결은 [4종 아트 도구 가이드](../../scripts/art-tools-guide.md)를 참조한다.
+
 ## 전제 — 백엔드
 
 로컬 ComfyUI 가 `http://127.0.0.1:8188` 에 떠 있어야 한다. 세팅: **[references/comfyui-setup.md](references/comfyui-setup.md)**
