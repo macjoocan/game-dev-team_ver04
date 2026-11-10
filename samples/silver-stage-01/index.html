@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:,"><title>은빛 잔향 — 첫 번째 성문</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="topbar"><a class="wordmark" href="#">SILVER <span>ECHO</span></a><span class="edition">CHAPTER I <b>첫 번째 성문</b></span><nav><button id="sound" aria-pressed="true">소리 켜짐</button><button id="reduced" aria-pressed="false">흔들림 줄이기</button><button id="pause" disabled>일시 정지 <kbd>Esc</kbd></button><button id="fullscreen" aria-label="전체 화면">⛶</button></nav></header>
+<main id="game-shell">
+<canvas id="game" width="1280" height="720" tabindex="0" aria-label="은빛 잔향 횡스크롤 액션 게임. A D 이동, 방향키 두 번 누르고 유지하면 달리기, J 연타 베기, K 강공격, Shift 회피, Space 점프."></canvas>
+<div id="hud" hidden>
+  <div class="hero-status"><div class="sigil">✧</div><div><div class="hero-name">은빛 방랑자 <span id="hp-label">140 / 140</span></div><div class="health"><i id="hp-trail"></i><b id="hp-fill"></b></div><div class="dash-line"><i id="dash-fill"></i></div><small id="dash-label">회피 준비</small></div></div>
+  <div class="objective"><span id="chapter">01 / 03</span><b id="objective">순례자의 길</b><small id="objective-detail">남은 적을 쓰러뜨리세요</small></div>
+  <div class="chain" id="chain" hidden><strong id="chain-count">2</strong><span>연속 명중</span></div>
+  <div class="bossbar" id="bossbar" hidden><span>성문의 수문장</span><div><i id="boss-hp"></i></div></div>
+  <div id="toast" role="status"></div>
+</div>
+<section id="overlay" class="overlay">
+  <div class="intro">
+    <div class="eyebrow"><i></i> CHAPTER 01 · MOONLIT RUINS</div>
+    <h1>은빛 잔향</h1><h2>첫 번째 성문</h2>
+    <p>고요를 가르는 한 번의 검격.<br>무너진 회랑을 지나, 성문의 수문장을 쓰러뜨리세요.</p>
+    <button id="start" class="primary" disabled><span id="start-label">검과 갑옷을 준비하는 중…</span><b>→</b></button>
+    <div class="intro-controls"><span><kbd>A</kbd><kbd>D</kbd> 이동</span><span><kbd>J</kbd> 3연속 베기</span><span><kbd>K</kbd> 강공격</span><span><kbd>Shift</kbd> 회피</span><span><kbd>Space</kbd> 점프</span></div>
+    <small class="tip">A/D 또는 방향 버튼을 두 번 누르고 유지하면 달립니다. J를 연타하면 되베기로 이어집니다.</small>
+  </div>
+  <div class="chapter-seal"><span>I</span><small>THE FIRST GATE</small></div>
+</section>
+<section id="result" class="result" hidden><div class="result-card"><div class="eyebrow" id="result-eyebrow"></div><h1 id="result-title"></h1><p id="result-copy"></p><div id="result-stats"></div><button id="restart" class="primary">다시 도전 <b>↗</b></button></div></section>
+<section id="paused" class="pause-overlay" hidden><h2>잠시 숨 고르기</h2><p>Esc 또는 아래 버튼으로 계속할 수 있어요.</p><button id="resume" class="primary">계속하기 →</button></section>
+<div id="touch-controls"><div><button data-hold="left" aria-label="왼쪽 이동">◀</button><button data-hold="right" aria-label="오른쪽 이동">▶</button></div><div><button data-action="jump">점프</button><button data-action="dash">회피</button><button data-action="heavy">강공격</button><button data-action="attack" class="attack-button">베기</button></div></div>
+<div id="load-error" hidden role="alert"></div>
+</main>
+<footer><span><i></i> 1 STAGE · ACTION PROTOTYPE</span><span>짧게 베고, 깊게 맞힌다.</span><span>J 연타로 연속 베기 · K로 경직 돌파</span></footer>
+<script type="module" src="main.mjs"></script>
+</body></html>

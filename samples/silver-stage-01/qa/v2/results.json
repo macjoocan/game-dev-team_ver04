@@ -1,0 +1,58 @@
+{
+  "scope": "FX proxy: maximum scale 3.5, dark 640x360 screen, full alpha, 16 frames at 60fps. Full gameplay compositing not measured.",
+  "runs": [
+    {
+      "name": "combat",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--test",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\game.test.mjs"
+      ]
+    },
+    {
+      "name": "syntax",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "--check",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\main.mjs"
+      ]
+    },
+    {
+      "name": "feel",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\polish\\scripts\\feel-audit.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\feel.json",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\v2\\feel"
+      ]
+    },
+    {
+      "name": "flash",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\polish\\scripts\\flash-check.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\v2\\flash-proxy",
+        "--fps",
+        "60",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\v2\\flash"
+      ]
+    },
+    {
+      "name": "plugin",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "C:\\00.SVN\\game-dev-team_ver04\\scripts\\validate-plugin.mjs"
+      ]
+    }
+  ]
+}

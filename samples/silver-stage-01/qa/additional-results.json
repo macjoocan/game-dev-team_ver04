@@ -1,0 +1,35 @@
+{
+  "scope": "Cast at 960px viewport. Flash proxy: strongest generated FX at 640x360 screen scale, repeated every 300ms, normal compositing, dark background. Not a full gameplay recording or release certification.",
+  "runs": [
+    {
+      "name": "cast",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "skills/visual-qa/scripts/cast-distinct.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\cast",
+        "--sizes",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\cast-sizes.json",
+        "--cvd",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\cast-report"
+      ]
+    },
+    {
+      "name": "flash",
+      "exitCode": 0,
+      "command": [
+        "node",
+        "skills/polish/scripts/flash-check.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\flash-proxy",
+        "--fps",
+        "30",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\flash"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "status": "prototype-assumptions",
+  "fps": 60,
+  "pace": {
+    "actionIntervalMs": 260
+  },
+  "reducedMotion": {
+    "declared": true,
+    "disables": [
+      "flash",
+      "afterimage"
+    ],
+    "scales": {
+      "shake": 0,
+      "particles": 0.3,
+      "zoomPunch": 0
+    }
+  },
+  "events": {
+    "hit_light": {
+      "class": "hit",
+      "weight": 1,
+      "hitStopFrames": 3,
+      "shake": {
+        "amplitudePx": 3,
+        "durationMs": 75,
+        "decay": "expo"
+      },
+      "flash": {
+        "durationMs": 35,
+        "intensity": 0.25
+      },
+      "sound": "synth_steel_light"
+    },
+    "hit_medium": {
+      "class": "hit",
+      "weight": 2,
+      "hitStopFrames": 4,
+      "shake": {
+        "amplitudePx": 4,
+        "durationMs": 85,
+        "decay": "expo"
+      },
+      "flash": {
+        "durationMs": 40,
+        "intensity": 0.3
+      },
+      "sound": "synth_steel_medium"
+    },
+    "hit_heavy": {
+      "class": "hit",
+      "weight": 4,
+      "hitStopFrames": 5,
+      "shake": {
+        "amplitudePx": 7,
+        "durationMs": 70,
+        "decay": "expo"
+      },
+      "flash": {
+        "durationMs": 45,
+        "intensity": 0.35
+      },
+      "sound": "synth_steel_heavy"
+    },
+    "player_damaged": {
+      "class": "damage_taken",
+      "weight": 1,
+      "hitStopFrames": 4,
+      "shake": {
+        "amplitudePx": 6,
+        "durationMs": 85,
+        "decay": "expo"
+      },
+      "flash": {
+        "durationMs": 40,
+        "intensity": 0.3
+      },
+      "sound": "synth_hurt"
+    }
+  },
+  "visual": {
+    "walkFrameMs": 70,
+    "enemyWalkFrameMs": 180,
+    "slashDurationMs": 130,
+    "sparkDurationMs": 160,
+    "damageNumberMs": 720,
+    "deathFadeMs": 1300,
+    "afterimageMs": 150,
+    "shakeFrequency": 0.15,
+    "cameraEase": 8,
+    "impactY": 112,
+    "particleCount": 8,
+    "slashScales": [
+      2.65,
+      2.85,
+      3.3,
+      3.5
+    ],
+    "slashAngles": [
+      0.1,
+      -0.4,
+      0.25,
+      0.1
+    ],
+    "slashOffsetX": 105,
+    "runPlaybackRate": 1.85,
+    "runLean": 0.12,
+    "runBobPx": 3,
+    "attackPoses": [
+      {
+        "before": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "after": [
+          7,
+          13,
+          14,
+          16,
+          18,
+          21,
+          24
+        ]
+      },
+      {
+        "before": [
+          18,
+          16,
+          14,
+          13,
+          7
+        ],
+        "after": [
+          6,
+          5,
+          4,
+          2,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "before": [
+          2,
+          4,
+          5,
+          6
+        ],
+        "after": [
+          7,
+          13,
+          14,
+          16,
+          18,
+          21,
+          24
+        ]
+      },
+      {
+        "before": [
+          0,
+          2,
+          4,
+          5,
+          6
+        ],
+        "after": [
+          7,
+          13,
+          14,
+          16,
+          18,
+          21,
+          24
+        ]
+      }
+    ]
+  },
+  "_thresholds": {
+    "feedbackBudgetRatio": 0.6
+  }
+}

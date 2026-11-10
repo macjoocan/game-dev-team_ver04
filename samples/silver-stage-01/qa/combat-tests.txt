@@ -1,0 +1,18 @@
+✔ light contact occurs at configured impact; a miss does not freeze (1.9821ms)
+✔ one attack damages one target at most once and freezes on hit (0.5326ms)
+✔ late input buffer chains to second slash exactly once (0.2014ms)
+✔ dash blocks a real enemy strike (0.2ms)
+✔ hurt interrupts attack, applies recoil and immunity (0.2795ms)
+✔ jump avoids ground attack above its vertical range (0.1611ms)
+✔ death cannot transition into wave clear or victory (0.1541ms)
+✔ locked gate blocks player until living enemies are defeated (1.0218ms)
+✔ fresh game resets all combat state (0.8565ms)
+✔ scripted traversal reaches all encounters and the exit without state edits (3.2042ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 909.2142

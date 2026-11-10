@@ -1,0 +1,167 @@
+{
+  "status": "prototype-assumptions",
+  "view": {
+    "width": 1280,
+    "height": 720,
+    "ground": 590,
+    "heroScale": 1.9,
+    "enemyScale": 1.85,
+    "bossScale": 2.65
+  },
+  "world": {
+    "width": 4200,
+    "gravity": 1900,
+    "exit": 4010
+  },
+  "player": {
+    "hp": 140,
+    "speed": 280,
+    "jumpVelocity": -680,
+    "airControl": 0.85,
+    "invulnerableMs": 900,
+    "hurtMs": 340,
+    "hurtKnock": 310,
+    "dashMs": 180,
+    "dashSpeed": 820,
+    "dashCooldownMs": 650,
+    "bufferMs": 180,
+    "comboWindowMs": 600,
+    "runSpeed": 455,
+    "runDoubleTapMs": 260
+  },
+  "attacks": [
+    {
+      "name": "일섬",
+      "durationMs": 320,
+      "impactMs": 125,
+      "activeMs": 65,
+      "range": 155,
+      "damage": 24,
+      "staggerMs": 290,
+      "knock": 260,
+      "lunge": 170,
+      "feedback": "hit_light",
+      "weight": 1,
+      "chainAtMs": 260
+    },
+    {
+      "name": "연섬",
+      "durationMs": 300,
+      "impactMs": 105,
+      "activeMs": 65,
+      "range": 170,
+      "damage": 28,
+      "staggerMs": 330,
+      "knock": 310,
+      "lunge": 200,
+      "feedback": "hit_medium",
+      "weight": 2,
+      "chainAtMs": 260
+    },
+    {
+      "name": "낙월",
+      "durationMs": 420,
+      "impactMs": 155,
+      "activeMs": 75,
+      "range": 190,
+      "damage": 42,
+      "staggerMs": 520,
+      "knock": 470,
+      "lunge": 220,
+      "feedback": "hit_heavy",
+      "weight": 3,
+      "chainAtMs": 350
+    },
+    {
+      "name": "월광 가르기",
+      "durationMs": 580,
+      "impactMs": 255,
+      "activeMs": 90,
+      "range": 215,
+      "damage": 68,
+      "staggerMs": 680,
+      "knock": 610,
+      "lunge": 260,
+      "feedback": "hit_heavy",
+      "weight": 4
+    }
+  ],
+  "enemy": {
+    "hp": 76,
+    "speed": 92,
+    "range": 135,
+    "damage": 16,
+    "windupMs": 560,
+    "activeMs": 100,
+    "recoveryMs": 540,
+    "cooldownMs": 350,
+    "halfWidth": 29,
+    "poise": 0
+  },
+  "boss": {
+    "hp": 340,
+    "speed": 72,
+    "range": 200,
+    "damage": 28,
+    "windupMs": 820,
+    "activeMs": 150,
+    "recoveryMs": 650,
+    "cooldownMs": 470,
+    "halfWidth": 47,
+    "poise": 110
+  },
+  "waves": [
+    {
+      "name": "순례자의 길",
+      "trigger": 0,
+      "gate": 1230,
+      "heal": 20,
+      "enemies": [
+        {
+          "x": 680,
+          "type": "enemy"
+        },
+        {
+          "x": 920,
+          "type": "enemy"
+        }
+      ]
+    },
+    {
+      "name": "무너진 회랑",
+      "trigger": 1330,
+      "gate": 2630,
+      "heal": 25,
+      "enemies": [
+        {
+          "x": 1670,
+          "type": "enemy"
+        },
+        {
+          "x": 1910,
+          "type": "enemy"
+        },
+        {
+          "x": 2240,
+          "type": "enemy"
+        }
+      ]
+    },
+    {
+      "name": "성문의 수문장",
+      "trigger": 2750,
+      "gate": 3850,
+      "heal": 0,
+      "enemies": [
+        {
+          "x": 3180,
+          "type": "boss"
+        },
+        {
+          "x": 3490,
+          "type": "enemy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "verdict": "조건부",
+  "bg": "#101010",
+  "thresholds": {
+    "FLASH_LUM_DELTA": 0.1,
+    "DARK_CEILING": 0.8,
+    "MAX_FLASHES_PER_SEC": 3,
+    "AREA_EXEMPT": 0.25
+  },
+  "results": [
+    {
+      "name": "flash-proxy",
+      "frames": 16,
+      "fps": 60,
+      "loop": true,
+      "blend": "normal",
+      "duration": 0.26666666666666666,
+      "flashes": [
+        {
+          "from": 1,
+          "to": 3,
+          "delta": 0.009610915473265636,
+          "darker": 0.010337093144192282,
+          "area": 0.026805555555555555,
+          "red": 0.0008246527777777778,
+          "t": 0.05
+        },
+        {
+          "from": 3,
+          "to": 6,
+          "delta": 0.010883512008907454,
+          "darker": 0.009064496608550464,
+          "area": 0.024231770833333333,
+          "red": 0.0008246527777777778,
+          "t": 0.1
+        }
+      ],
+      "perSec": 8,
+      "worstWindow": 0.05,
+      "maxArea": 0.026805555555555555,
+      "maxRed": 0.0008246527777777778,
+      "status": "조건부",
+      "overRate": true,
+      "areaExempt": true
+    }
+  ]
+}

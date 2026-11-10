@@ -1,0 +1,280 @@
+{
+  "rows": [
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0000.png",
+      "name": "frame_0000.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3166,
+      "lonely": 0.13202779532533165,
+      "flat": 0.07959570435881239,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0001.png",
+      "name": "frame_0001.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3266,
+      "lonely": 0.11298224127372933,
+      "flat": 0.08940600122473974,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0002.png",
+      "name": "frame_0002.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3353,
+      "lonely": 0.10945422010140173,
+      "flat": 0.1022964509394572,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0003.png",
+      "name": "frame_0003.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3475,
+      "lonely": 0.11942446043165468,
+      "flat": 0.1018705035971223,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0004.png",
+      "name": "frame_0004.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3532,
+      "lonely": 0.08493771234428087,
+      "flat": 0.10022650056625142,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0005.png",
+      "name": "frame_0005.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3552,
+      "lonely": 0.09037162162162163,
+      "flat": 0.11176801801801801,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0006.png",
+      "name": "frame_0006.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3377,
+      "lonely": 0.08587503701510216,
+      "flat": 0.11963281018655611,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0007.png",
+      "name": "frame_0007.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3613,
+      "lonely": 0.08884583448657625,
+      "flat": 0.10655964572377526,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0008.png",
+      "name": "frame_0008.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3348,
+      "lonely": 0.08124253285543608,
+      "flat": 0.10663082437275985,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0009.png",
+      "name": "frame_0009.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3267,
+      "lonely": 0.08723599632690542,
+      "flat": 0.12059993878175697,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0010.png",
+      "name": "frame_0010.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3316,
+      "lonely": 0.08232810615199035,
+      "flat": 0.12545235223160434,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0011.png",
+      "name": "frame_0011.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3338,
+      "lonely": 0.07669263031755542,
+      "flat": 0.12582384661473936,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0012.png",
+      "name": "frame_0012.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3360,
+      "lonely": 0.07857142857142857,
+      "flat": 0.14345238095238094,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0013.png",
+      "name": "frame_0013.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3473,
+      "lonely": 0.08378923121220846,
+      "flat": 0.13216239562338036,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0014.png",
+      "name": "frame_0014.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3452,
+      "lonely": 0.08893395133256084,
+      "flat": 0.14484356894553882,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0015.png",
+      "name": "frame_0015.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3322,
+      "lonely": 0.09391932570740517,
+      "flat": 0.13245033112582782,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0016.png",
+      "name": "frame_0016.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3210,
+      "lonely": 0.08909657320872275,
+      "flat": 0.12554517133956386,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0017.png",
+      "name": "frame_0017.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3104,
+      "lonely": 0.08634020618556701,
+      "flat": 0.12048969072164949,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0018.png",
+      "name": "frame_0018.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3355,
+      "lonely": 0.10402384500745157,
+      "flat": 0.11147540983606558,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0019.png",
+      "name": "frame_0019.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3415,
+      "lonely": 0.12503660322108345,
+      "flat": 0.07994143484626647,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0020.png",
+      "name": "frame_0020.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3410,
+      "lonely": 0.12023460410557185,
+      "flat": 0.07653958944281525,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0021.png",
+      "name": "frame_0021.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3478,
+      "lonely": 0.11127084531339851,
+      "flat": 0.08596894767107532,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0022.png",
+      "name": "frame_0022.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3519,
+      "lonely": 0.113384484228474,
+      "flat": 0.0792838874680307,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0023.png",
+      "name": "frame_0023.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3483,
+      "lonely": 0.1125466551823141,
+      "flat": 0.08440999138673558,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames\\frame_0024.png",
+      "name": "frame_0024.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3457,
+      "lonely": 0.11831067399479317,
+      "flat": 0.0885160543824125,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 0
+}

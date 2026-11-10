@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0000.png",
+      "name": "frame_0000.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2613,
+      "lonely": 0.18561040949100652,
+      "flat": 0.02525832376578645,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0001.png",
+      "name": "frame_0001.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2749,
+      "lonely": 0.1906147690069116,
+      "flat": 0.03128410331029465,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0002.png",
+      "name": "frame_0002.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2496,
+      "lonely": 0.1798878205128205,
+      "flat": 0.03245192307692308,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0003.png",
+      "name": "frame_0003.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2763,
+      "lonely": 0.18711545421643141,
+      "flat": 0.029677886355410785,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0004.png",
+      "name": "frame_0004.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2758,
+      "lonely": 0.1899927483683829,
+      "flat": 0.026468455402465556,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0005.png",
+      "name": "frame_0005.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2535,
+      "lonely": 0.1652859960552268,
+      "flat": 0.04181459566074951,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0006.png",
+      "name": "frame_0006.png",
+      "colors": 31,
+      "colorSet": {},
+      "opaque": 2513,
+      "lonely": 0.1961798647035416,
+      "flat": 0.03780342220453641,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames\\frame_0007.png",
+      "name": "frame_0007.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1869,
+      "lonely": 0.21241305510968433,
+      "flat": 0.03103263777421081,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 0
+}

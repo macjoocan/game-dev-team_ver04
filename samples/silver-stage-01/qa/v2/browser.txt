@@ -1,0 +1,76 @@
+{
+  "sprint": {
+    "running": false,
+    "x": 396.58333333333337
+  },
+  "releaseRunning": false,
+  "comboIndices": [
+    {
+      "index": 0,
+      "frameTime": 83.33333333333334
+    },
+    {
+      "index": 0,
+      "frameTime": 183.33333333333331
+    },
+    {
+      "index": 1,
+      "frameTime": 0
+    },
+    {
+      "index": 1,
+      "frameTime": 83.33333333333334
+    },
+    {
+      "index": 1,
+      "frameTime": 183.33333333333331
+    },
+    {
+      "index": 2,
+      "frameTime": 0
+    },
+    {
+      "index": 2,
+      "frameTime": 100.00000000000001
+    },
+    {
+      "index": 2,
+      "frameTime": 199.99999999999997
+    },
+    {
+      "index": 2,
+      "frameTime": 283.3333333333333
+    },
+    {
+      "index": 0,
+      "frameTime": 33.333333333333336
+    },
+    {
+      "index": 0,
+      "frameTime": 116.66666666666669
+    },
+    {
+      "index": 0,
+      "frameTime": 216.66666666666663
+    }
+  ],
+  "settled": {
+    "attacks": 5,
+    "attack": null,
+    "hits": 0
+  },
+  "heldAttacks": 1,
+  "capture": {
+    "hits": 1,
+    "attack": {
+      "index": 0,
+      "elapsed": 133.33333333333334,
+      "hitIds": [
+        1
+      ],
+      "connected": true,
+      "swingFired": true
+    }
+  },
+  "overflow": false
+}

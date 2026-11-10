@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0000.png",
+      "name": "frame_0000.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3606,
+      "lonely": 0.17387687188019968,
+      "flat": 0.029950083194675542,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0001.png",
+      "name": "frame_0001.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3796,
+      "lonely": 0.18493150684931506,
+      "flat": 0.03477344573234984,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0002.png",
+      "name": "frame_0002.png",
+      "colors": 31,
+      "colorSet": {},
+      "opaque": 3564,
+      "lonely": 0.17312008978675644,
+      "flat": 0.03226711560044893,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0003.png",
+      "name": "frame_0003.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 4063,
+      "lonely": 0.1759783411272459,
+      "flat": 0.02387398474033965,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0004.png",
+      "name": "frame_0004.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3604,
+      "lonely": 0.1936736958934517,
+      "flat": 0.029689234184239733,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0005.png",
+      "name": "frame_0005.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3436,
+      "lonely": 0.17898719441210711,
+      "flat": 0.03143189755529686,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0006.png",
+      "name": "frame_0006.png",
+      "colors": 31,
+      "colorSet": {},
+      "opaque": 3657,
+      "lonely": 0.19223407164342357,
+      "flat": 0.022969647251845776,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames\\frame_0007.png",
+      "name": "frame_0007.png",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 3542,
+      "lonely": 0.16177300959909655,
+      "flat": 0.032185206098249576,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 0
+}

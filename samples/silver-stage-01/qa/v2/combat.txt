@@ -1,0 +1,23 @@
+✔ light contact occurs at configured impact; a miss does not freeze (1.3743ms)
+✔ one attack damages one target at most once and freezes on hit (0.383ms)
+✔ late input buffer chains to second slash exactly once (0.2142ms)
+✔ early mash reserves only one follow-up beyond the old buffer expiry (0.2975ms)
+✔ three slashes chain without an idle pose and loop only with a new tap (1.4386ms)
+✔ tap during hit-stop queues a follow-up and hurt cancels the queue (0.3148ms)
+✔ double-tap sprint ignores held repeats and clears on release, reversal and reset (0.2227ms)
+✔ running uses faster movement and animation; attacking and release stop running (0.2808ms)
+✔ dash blocks a real enemy strike (0.1475ms)
+✔ hurt interrupts attack, applies recoil and immunity (0.2047ms)
+✔ jump avoids ground attack above its vertical range (0.1319ms)
+✔ death cannot transition into wave clear or victory (0.1446ms)
+✔ locked gate blocks player until living enemies are defeated (0.2359ms)
+✔ fresh game resets all combat state (0.1131ms)
+✔ scripted traversal reaches all encounters and the exit without state edits (3.2624ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1126.2996

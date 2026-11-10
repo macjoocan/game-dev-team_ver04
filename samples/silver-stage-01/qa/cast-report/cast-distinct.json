@@ -1,0 +1,66 @@
+{
+  "root": "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\cast",
+  "size": {
+    "hero": 148,
+    "enemy": 144,
+    "boss": 203
+  },
+  "minDe": 12,
+  "maxIou": 0.72,
+  "cvd": true,
+  "characters": [
+    {
+      "name": "boss",
+      "meanHex": "#412d27",
+      "dominantHex": "#4e322c",
+      "px": 203,
+      "aspect": 0.75
+    },
+    {
+      "name": "enemy",
+      "meanHex": "#47332c",
+      "dominantHex": "#4e332f",
+      "px": 144,
+      "aspect": 0.625
+    },
+    {
+      "name": "hero",
+      "meanHex": "#786d6a",
+      "dominantHex": "#6d534c",
+      "px": 148,
+      "aspect": 0.683
+    }
+  ],
+  "pairs": [
+    {
+      "a": "boss",
+      "b": "enemy",
+      "de": 2.4,
+      "deMean": 2.4,
+      "deDominant": 0.3,
+      "worstType": "protanopia",
+      "iou": 0.586,
+      "ok": true
+    },
+    {
+      "a": "enemy",
+      "b": "hero",
+      "de": 23.9,
+      "deMean": 23.9,
+      "deDominant": 13.3,
+      "worstType": "achromatopsia",
+      "iou": 0.325,
+      "ok": true
+    },
+    {
+      "a": "boss",
+      "b": "hero",
+      "de": 26.3,
+      "deMean": 26.3,
+      "deDominant": 13.6,
+      "worstType": "deuteranopia",
+      "iou": 0.353,
+      "ok": true
+    }
+  ]
+}

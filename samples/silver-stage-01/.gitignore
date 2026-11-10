@@ -1,0 +1,4 @@
+build/
+qa/*.webm
+qa/*base64*
+__pycache__/

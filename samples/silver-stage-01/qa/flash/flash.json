@@ -1,0 +1,38 @@
+{
+  "verdict": "충족",
+  "bg": "#101010",
+  "thresholds": {
+    "FLASH_LUM_DELTA": 0.1,
+    "DARK_CEILING": 0.8,
+    "MAX_FLASHES_PER_SEC": 3,
+    "AREA_EXEMPT": 0.25
+  },
+  "results": [
+    {
+      "name": "flash-proxy",
+      "frames": 9,
+      "fps": 30,
+      "loop": true,
+      "blend": "normal",
+      "duration": 0.3,
+      "flashes": [
+        {
+          "from": 1,
+          "to": 4,
+          "delta": 0.0047901314458546895,
+          "darker": 0.008789201615684738,
+          "area": 0.010212673611111112,
+          "red": 0.0008246527777777778,
+          "t": 0.13333333333333333
+        }
+      ],
+      "perSec": 3,
+      "worstWindow": 0.13333333333333333,
+      "maxArea": 0.010212673611111112,
+      "maxRed": 0.0008246527777777778,
+      "status": "충족",
+      "overRate": false,
+      "areaExempt": true
+    }
+  ]
+}

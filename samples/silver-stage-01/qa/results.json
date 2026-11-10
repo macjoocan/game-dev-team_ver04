@@ -1,0 +1,92 @@
+{
+  "commit": "4686d81b9b8b4790582931b0df639a8e8f9cf2e4",
+  "runs": [
+    {
+      "name": "combat-tests",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\game.test.mjs"
+      ]
+    },
+    {
+      "name": "feel",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\polish\\scripts\\feel-audit.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\feel.json",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\feel"
+      ]
+    },
+    {
+      "name": "hero-pixel",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\char-art-system\\scripts\\pixel-contract.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames",
+        "--cast",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\hero-pixel"
+      ]
+    },
+    {
+      "name": "enemy-pixel",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\char-art-system\\scripts\\pixel-contract.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\enemy-finished\\frames",
+        "--cast",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\enemy-pixel"
+      ]
+    },
+    {
+      "name": "boss-pixel",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\char-art-system\\scripts\\pixel-contract.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\boss-finished\\frames",
+        "--cast",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\boss-pixel"
+      ]
+    },
+    {
+      "name": "hero-sprite",
+      "exitCode": 1,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\skills\\sprite-pipeline\\scripts\\sprite-qa.mjs",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\build\\hero-attack-finished-v2\\frames",
+        "--out",
+        "C:\\00.SVN\\game-dev-team_ver04\\samples\\silver-stage-01\\qa\\hero-sprite"
+      ]
+    },
+    {
+      "name": "plugin",
+      "exitCode": 0,
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "C:\\00.SVN\\game-dev-team_ver04\\scripts\\validate-plugin.mjs"
+      ]
+    },
+    {
+      "name": "atlas-edge-contacts",
+      "edgeTouches": {
+        "hero-walk": [],
+        "hero-attack": [],
+        "hero-poses": [],
+        "enemy": [],
+        "boss": [],
+        "fx": []
+      },
+      "exitCode": 0
+    }
+  ]
+}

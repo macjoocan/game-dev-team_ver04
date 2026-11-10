@@ -1,0 +1,15 @@
+{
+  "ready": true,
+  "status": "ready",
+  "assets": [
+    "hero-poses",
+    "enemy",
+    "hero-walk",
+    "hero-attack",
+    "boss",
+    "background",
+    "fx"
+  ],
+  "startEnabled": true,
+  "overflow": false
+}

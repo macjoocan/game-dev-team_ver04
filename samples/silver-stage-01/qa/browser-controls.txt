@@ -1,0 +1,8 @@
+{
+  "previous": "won",
+  "restarted": "playing",
+  "hp": 140,
+  "pauseStable": true,
+  "reduced": true,
+  "overflow": false
+}
