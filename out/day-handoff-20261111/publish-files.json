@@ -1,0 +1,777 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-11-11T03:20:29.369Z",
+  "scope": "Sprite QA 0.54.0 and silver GPT v1-v3 review evidence",
+  "excludes": [
+    "AI models",
+    "installed dependencies",
+    "personal task ledger",
+    "review backup before pull",
+    "duplicate C frame copies",
+    "adapted absolute-path baseline script"
+  ],
+  "previewDependenciesVerified": 23,
+  "totalBytes": 25689354,
+  "files": [
+    {
+      "path": "out/day-handoff-20261111/plugin.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/day-handoff-20261111/plugin.stdout.log",
+      "bytes": 77,
+      "sha256": "eccfea2af5c8db741370e474010775b21e02ea2596642aa0edde21b5e8d5023f"
+    },
+    {
+      "path": "out/day-handoff-20261111/publish.mjs",
+      "bytes": 2410,
+      "sha256": "d288d1d80be345087e9b9a2ac2c7944f79ddf3495bf50c63eee2a918c0023fe2"
+    },
+    {
+      "path": "out/day-handoff-20261111/verification.json",
+      "bytes": 1457,
+      "sha256": "d0e15fdb82cb09016ac0e6237d748e03f83720e424251631a2a8db0f7c4df8ec"
+    },
+    {
+      "path": "out/day-handoff-20261111/verify.mjs",
+      "bytes": 1498,
+      "sha256": "a98c0b995a6ede80a7ae027563d6c2603da692d904503222d41c037fbe68eae4"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/REPORT.md",
+      "bytes": 4345,
+      "sha256": "bb25ccecac7d91d06d7fbadc1b838840d5840abbbed1448c94c4973075a6a05c"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/baseline/art-gate-report.md",
+      "bytes": 2961,
+      "sha256": "3b9a2e3d182d761c72fb8646cef844e8ebbd5edef7a15f5f8efc0e4b88b39a9a"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/baseline/art-gate.json",
+      "bytes": 1295,
+      "sha256": "9f90110a8b8b1c1c849100b3b285809bf0d5cad77abc508ff843c758c3c52809"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/build-review.mjs",
+      "bytes": 8386,
+      "sha256": "c5974b654ae1910592e27ea5f3322327befcb2af1b1f48719a8372c44189fdd1"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/evidence.json",
+      "bytes": 22969,
+      "sha256": "925ae7abc25e6c1c509cfe8535326b47b9d2d7f48d64d0325db000fbdeec8c7a"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/finish-report.mjs",
+      "bytes": 6243,
+      "sha256": "344429455c81f17bfb885f442f14900beb8a8a6c52198143a537f79c68ed10a9"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference.png",
+      "bytes": 696402,
+      "sha256": "3a1e828438394f0d28598fd40c452b5c3272373bef5f7f793a70e03bb064c0ce"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row1/pose_00.png",
+      "bytes": 139137,
+      "sha256": "3e0c2d3d866569b6a106a3bd0402255a63614cee1bb1f3ee2fe5c052c2375cd2"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row1/pose_01.png",
+      "bytes": 135823,
+      "sha256": "d895fa29d6ec98cf93c0896dc570dc612388abf7d758286a42d5d209ce894a35"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row1/pose_02.png",
+      "bytes": 142307,
+      "sha256": "84b048ed66912ac7626854079e714563f455c5f401015f3c1c633bc745a24a90"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row1/pose_03.png",
+      "bytes": 144133,
+      "sha256": "665aa786b3c0f5d758b91caf36885600e9a69aefd4a6bec8ab4e5bf3e3c366b3"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row2/pose_04.png",
+      "bytes": 138381,
+      "sha256": "586a800595bd1d3fcc68f389fa28808a9c329ecbc24376a0aa4cc195060d9a09"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row2/pose_05.png",
+      "bytes": 134264,
+      "sha256": "09c9eec8a22f80dd7a8b3d09b6cbcc36682646a28fd47725d6b703a335639ee6"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row2/pose_06.png",
+      "bytes": 148277,
+      "sha256": "459aa6acf281c2d32c5d124467d6514d6e6d58b8ff8453080ed4c98188d58dd3"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/gait-reference/row2/pose_07.png",
+      "bytes": 151858,
+      "sha256": "5f931d79418a7989e037906afbadbf422a72bea72b0194edbaf4c619e2e1fc2c"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/prepare.mjs",
+      "bytes": 2425,
+      "sha256": "f14f1ea45d48b0205b95d09206eaf807575598db4e77b08c5ddc495a4fcd55ca"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/prompt-v1.txt",
+      "bytes": 2375,
+      "sha256": "424dec41623b0ff7e9252ec843b846aa399d1ef99c7384e5c3a007e845cecfdd"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/prompt-v2.txt",
+      "bytes": 3172,
+      "sha256": "74c718fd50522ca16ce25729514fe66bb6d7cf013de1b011eb1b46b26412a695"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/prompt-v3.txt",
+      "bytes": 2585,
+      "sha256": "a5f84e340a65f31c78db40d2e895597e1f810394065f8f0c1e449d2f5dd940fe"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v1.png",
+      "bytes": 2208790,
+      "sha256": "aafd289854a6f71dfb32f81e043925620a2f828ab4ee64637b3e3a69ee73e24d"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v2.png",
+      "bytes": 2203020,
+      "sha256": "2f50d4c9ec35b1732f92c48fbaf3336e24d751f5cf7b2a8cfd5b095c2d95ffc5"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v3.png",
+      "bytes": 2341460,
+      "sha256": "6b1dc09b90dda87e54dc314dc41e0fa198e86a4c21c75a5d2b36e004296ec6a5"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/review-light.png",
+      "bytes": 194300,
+      "sha256": "6ffcfecea43ae2264b9bb35e85fb0c4da74df636046bbc97e4c714fad0db7710"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/review-mobile-dark.png",
+      "bytes": 88823,
+      "sha256": "307e92e90aa75f1467dc9951a7f77e5d647fcaec31c68e9c5fbf8121cff13b66"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/review.html",
+      "bytes": 7181,
+      "sha256": "c4679d68f4eaa23257f7610e13521eaea414173ec6d1595e77fe3ba497610a00"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/serve.mjs",
+      "bytes": 902,
+      "sha256": "e772a3adbda4f4a280147844cf62434339c29aa03a96e1d20a909a7a6a4bd379"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0000.png",
+      "bytes": 386865,
+      "sha256": "fd52be57e5fe402c47e73d83589166c744058074176192df070fbf5ac17276b6"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0001.png",
+      "bytes": 378879,
+      "sha256": "8db61a583e79233f7c97d14917d5b2b3a6a1516e964f6bba303a639b736bacef"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0002.png",
+      "bytes": 371933,
+      "sha256": "cedf63905e97ae05ddea3fb26306e0a3fd44725c83d390d28f1b728b4e7cf007"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0003.png",
+      "bytes": 373903,
+      "sha256": "63dfe48f00ee51ca3b01e606e32cf26c1dd2d34d26fae6dea593895588768f28"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0004.png",
+      "bytes": 383266,
+      "sha256": "d4adadf1d30333e276897dbac8fa127ae33c14ee58e89d17a91ff503001f68ab"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0005.png",
+      "bytes": 381709,
+      "sha256": "f851dcd0cb574b60d340387d200c3f7fb9bf767db0a98009b85c7a65c0c2db98"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0006.png",
+      "bytes": 369475,
+      "sha256": "0505271d38bb8019a59cb269d77fcd32de03d7e4b522973d2c345c02f0bd87ff"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/frames/frame_0007.png",
+      "bytes": 372140,
+      "sha256": "ca24481646e92cd5886a7be0a7162231e7ef9df864c57bc711ab246b178412fe"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/manifest.json",
+      "bytes": 5091,
+      "sha256": "ae6fcb8e4b90242f6782dbdc828252f7fb26c56272b766532970703f748e55e8"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/motion-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/motion-qa.stdout.log",
+      "bytes": 1128,
+      "sha256": "86887fb289673119d0412bd7711155f3884ffc3dc698f6f88817333743d7632d"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/qa/motion-qa.json",
+      "bytes": 21977,
+      "sha256": "0180228a6ffd7ddeee7f95624cedc1582dc6f238dfbdcfbbe1179012bff53e96"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/qa/motion-qa.md",
+      "bytes": 1127,
+      "sha256": "71cebbac864698d62732a7e8098096760a35b1374863cf5cacfe822fe1263131"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/qa/sprite-qa.json",
+      "bytes": 628461,
+      "sha256": "83b02898095f6576b7001d42e88b5b5adbe017a91f60e6cf859407b406da49c9"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/qa/sprite-qa.md",
+      "bytes": 4298,
+      "sha256": "31398e23935ca7c5cb0163277638b87fa15d93e4bceeace7acc453afc50fcfdc"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/sprite-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v1/sprite-qa.stdout.log",
+      "bytes": 4378,
+      "sha256": "d653c4cf59d0db3a24799c537b420f82411b8f0f40e29eff1452c09071792e98"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0000.png",
+      "bytes": 380394,
+      "sha256": "e27ae44a5560b0bccf50df2ddc6c0d603be804f3affa1f251704bd8f52b1d3c9"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0001.png",
+      "bytes": 369172,
+      "sha256": "793740c8ba0bdd3e277862d86ec8afb6c31eb238627b16130478460d2c268d9d"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0002.png",
+      "bytes": 362183,
+      "sha256": "45f071d08a4e577ba4518112242207aabc0d539a0d12df59f61ff24dd1088572"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0003.png",
+      "bytes": 372795,
+      "sha256": "3629870159825b224acf8a643e2d36e99c1f0f5b9edc4fd0c51163eccdd6253c"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0004.png",
+      "bytes": 376669,
+      "sha256": "5b9a04e0d88696f86dfa05d40c6ab850b528fd9a6216fae892118bc821d41054"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0005.png",
+      "bytes": 373381,
+      "sha256": "1901d26dfdd0050f9bca6b77cf113a15b1163a77c5b1dc892a05a2d1f34c01ce"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0006.png",
+      "bytes": 365343,
+      "sha256": "106d6284fdfc3ec0495f5501b4467919930d0361df93b6833df12c98b0996e13"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/frames/frame_0007.png",
+      "bytes": 362277,
+      "sha256": "15283ad5a666897d890d3ed17469ca94a9f17ae09fa84b12a0b59d9f7232283b"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/manifest.json",
+      "bytes": 5092,
+      "sha256": "410c83eed556640547eda2d92fdf6fa5415900447b52cb3d28929860df31a888"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/motion-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/motion-qa.stdout.log",
+      "bytes": 1129,
+      "sha256": "800e04610318add77b562b01e4f1100d6c0efe79e7fe5cfd2c9e76c9b7048bed"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/qa/motion-qa.json",
+      "bytes": 22004,
+      "sha256": "6a4285a88762fbf824aef1922a24caba831b1b1a22c27035cdf391acf9cec041"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/qa/motion-qa.md",
+      "bytes": 1128,
+      "sha256": "26ed81261f104557a6d432e71705fd9d93e671e59a9d664e1614761d809ff7c2"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/qa/sprite-qa.json",
+      "bytes": 629501,
+      "sha256": "93f3e851ca0d7c26b7cb2c8bfacd7682b74298374d86601d5625a0af060029e6"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/qa/sprite-qa.md",
+      "bytes": 5296,
+      "sha256": "2b2551fb649cee9b08d5f0af87acfd986f5d97abd24cfc6165e054012a525fb0"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/sprite-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v2/sprite-qa.stdout.log",
+      "bytes": 5376,
+      "sha256": "69c2a917d2f0317dcb793ea21eaeb194404b8f9ec5426286b56d100953249b25"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0000.png",
+      "bytes": 407954,
+      "sha256": "97165437928453bac54c5a4f4aef92c36f8882aa3cd069ad6923c1703e192be4"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0001.png",
+      "bytes": 401183,
+      "sha256": "1c33a88ddff7c31d3d40f84b1d938a191c8b01ec56da826cc68fd91cc34ce022"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0002.png",
+      "bytes": 404279,
+      "sha256": "20e1466e38275791dda22b2c63c32656eb1b22dcac63f03c5f0597e230f1a3f2"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0003.png",
+      "bytes": 401934,
+      "sha256": "6fe7309cee8b6c0a56cf436404142adb05d6da117b27abb438b16e1eae60e740"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0004.png",
+      "bytes": 409149,
+      "sha256": "b619c74e9f5ffd69c25e1ed22417ccca33bc5f3d3a9d9ce1650dac2b44d058ae"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0005.png",
+      "bytes": 397755,
+      "sha256": "a44f072417a8b698c24fa8746633a2b7b612f626fef2f8ab6d11658bfba16245"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0006.png",
+      "bytes": 407292,
+      "sha256": "fd7c43bc7c6c47df860947bad4b5d1a11b00667f810de5881c4ae11a67f2b7fa"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/frames/frame_0007.png",
+      "bytes": 407430,
+      "sha256": "230c7e89bebceb93e6fda8aa590ebac6c3e68b21d747fc25f602294486d6dca0"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/manifest.json",
+      "bytes": 5106,
+      "sha256": "f6819119d0f92204a3372f1e86beb34e0192d05d361064acdeb06b6238d17f84"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/motion-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/motion-qa.stdout.log",
+      "bytes": 1129,
+      "sha256": "6ca1bed2a419b0b4e79b646595485dd8fdde6156e0850782c7eef7c947e936d3"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/qa/motion-qa.json",
+      "bytes": 21792,
+      "sha256": "6e69b6a1a97d4c05874df45bcecf2014e71cdb3895262b29168eed7b8a03e416"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/qa/motion-qa.md",
+      "bytes": 1128,
+      "sha256": "af791ff62041c26bcd0e22be09b85158dd92d5626d1d60de2467859bb90b6a64"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/qa/sprite-qa.json",
+      "bytes": 628795,
+      "sha256": "8a5161a09865848af8fe70adaaea4289852d740508395f7177a4c2d40fbae9a7"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/qa/sprite-qa.md",
+      "bytes": 4589,
+      "sha256": "11e2192f7e1b2a735b1979abc883b2e2f5d308794c6e4e936cdabc6384be846d"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/sprite-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-gpt-qa-20261111/v3/sprite-qa.stdout.log",
+      "bytes": 4669,
+      "sha256": "e3e6480748fb6404103300f87fcc80632ded70b56a8f68ecf1fb1b2fac4c39b9"
+    },
+    {
+      "path": "out/resume-20261111/REVIEW.md",
+      "bytes": 7507,
+      "sha256": "3846c81a74ca5f0a6f5ab2ce5ef24ff432706e57a7e822a4f4292344b6aa1e32"
+    },
+    {
+      "path": "out/resume-20261111/crop-local.mjs",
+      "bytes": 3067,
+      "sha256": "00995ad31fd37e74e8a288f48f2570980fbad51c9d99fb613a0ebca173d6bcd4"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/alpha128/frame_0000.png",
+      "bytes": 115,
+      "sha256": "1c452f5eef1960fd33f8d68a846bd1c75da47968a4c63889221b6b004770f216"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/alpha128/frame_0001.png",
+      "bytes": 115,
+      "sha256": "1c452f5eef1960fd33f8d68a846bd1c75da47968a4c63889221b6b004770f216"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/alpha128/frame_0002.png",
+      "bytes": 115,
+      "sha256": "1c452f5eef1960fd33f8d68a846bd1c75da47968a4c63889221b6b004770f216"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/alpha128/frame_0003.png",
+      "bytes": 115,
+      "sha256": "1c452f5eef1960fd33f8d68a846bd1c75da47968a4c63889221b6b004770f216"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/background-alpha10/frame_0000.png",
+      "bytes": 116,
+      "sha256": "dc0d199dd3a6576c6073beea7f5c436473aa949e198012f5e83df954cd4234cc"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/background-alpha10/frame_0001.png",
+      "bytes": 116,
+      "sha256": "dc0d199dd3a6576c6073beea7f5c436473aa949e198012f5e83df954cd4234cc"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/background-alpha10/frame_0002.png",
+      "bytes": 116,
+      "sha256": "dc0d199dd3a6576c6073beea7f5c436473aa949e198012f5e83df954cd4234cc"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/background-alpha10/frame_0003.png",
+      "bytes": 116,
+      "sha256": "dc0d199dd3a6576c6073beea7f5c436473aa949e198012f5e83df954cd4234cc"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/empty/frame_0000.png",
+      "bytes": 105,
+      "sha256": "6ff8e33fb4465022bd194b07e7262d82cf66c5c1ca5363a9ad15eeb5492c83ca"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/empty/frame_0001.png",
+      "bytes": 105,
+      "sha256": "6ff8e33fb4465022bd194b07e7262d82cf66c5c1ca5363a9ad15eeb5492c83ca"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/empty/frame_0002.png",
+      "bytes": 105,
+      "sha256": "6ff8e33fb4465022bd194b07e7262d82cf66c5c1ca5363a9ad15eeb5492c83ca"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/empty/frame_0003.png",
+      "bytes": 105,
+      "sha256": "6ff8e33fb4465022bd194b07e7262d82cf66c5c1ca5363a9ad15eeb5492c83ca"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-moving-cape/frame_0000.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-moving-cape/frame_0001.png",
+      "bytes": 180,
+      "sha256": "37be08439ec8582e9e541325d0e2846d2cbf03c4bfcd59cb81d28715e2c50fb6"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-moving-cape/frame_0002.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-moving-cape/frame_0003.png",
+      "bytes": 180,
+      "sha256": "37be08439ec8582e9e541325d0e2846d2cbf03c4bfcd59cb81d28715e2c50fb6"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-static-cape/frame_0000.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-static-cape/frame_0001.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-static-cape/frame_0002.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/fixed-feet-static-cape/frame_0003.png",
+      "bytes": 177,
+      "sha256": "ade635e68a2c87740c097feaa0125c4953c7d1022a5cf1001fff3f2bdc0e56de"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/mixed-size/frame_0000.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/mixed-size/frame_0001.png",
+      "bytes": 123,
+      "sha256": "86a20ff70cb94badd1c4a855c3ccc4270dadde4c565799a37d46b2db8268b938"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/mixed-size/frame_0002.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/mixed-size/frame_0003.png",
+      "bytes": 123,
+      "sha256": "86a20ff70cb94badd1c4a855c3ccc4270dadde4c565799a37d46b2db8268b938"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/valid/frame_0000.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/valid/frame_0001.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/valid/frame_0002.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/fixtures/valid/frame_0003.png",
+      "bytes": 115,
+      "sha256": "298b1c69a329880e49097b7fe7a6c25ab39fd6578ebded1f6717963049e32e27"
+    },
+    {
+      "path": "out/resume-20261111/gait-local.mjs",
+      "bytes": 12407,
+      "sha256": "ec76453100e8f69c229031f3541bfaac80a0ec541c43b4936698a24d6893ae64"
+    },
+    {
+      "path": "out/resume-20261111/input-hashes.json",
+      "bytes": 4789,
+      "sha256": "9945ad65d3c0e16e3bd87dacbc2109de2f29f397345a493969cd0432b21729d9"
+    },
+    {
+      "path": "out/resume-20261111/measurements.json",
+      "bytes": 11035,
+      "sha256": "2aaf0e6121ea62f064c225545c533b8b2b06ce7bf214552c9a75d9aa3e50b330"
+    },
+    {
+      "path": "out/resume-20261111/review-probes.mjs",
+      "bytes": 4108,
+      "sha256": "243116678da003dd9a5857508a4a39c58ee497b289698a33f6df4e0ccd80a81b"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/art-gate.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/art-gate.stdout.log",
+      "bytes": 3058,
+      "sha256": "d8ab839dffdb91aaa879fa7d55a34c87e977f151d9a5ca096063a60919a8f77f"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/baseline/art-gate-report.md",
+      "bytes": 2762,
+      "sha256": "621a6ea5553e73ccc3fe5c449783fb8eb25e4b2e958f4887751dde30225eb45d"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/baseline/art-gate.json",
+      "bytes": 1295,
+      "sha256": "e2cea769222456f7cb100408054b055a812718b7b7f0dc53535113d873ee005c"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/final-art-gate/art-gate-report.md",
+      "bytes": 2961,
+      "sha256": "3b9a2e3d182d761c72fb8646cef844e8ebbd5edef7a15f5f8efc0e4b88b39a9a"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/final-art-gate/art-gate.json",
+      "bytes": 1295,
+      "sha256": "3e2b71148e479fadcc1d3a448822bf37d2c28ceb7995e39553e77f3c019b9ab0"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/plugin.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/plugin.stdout.log",
+      "bytes": 77,
+      "sha256": "eccfea2af5c8db741370e474010775b21e02ea2596642aa0edde21b5e8d5023f"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-before.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-before.stdout.log",
+      "bytes": 4783,
+      "sha256": "c31bed5850c9cd424ce82268aa2a6f58eeab652f4fa4c86ed181ba6905d67f1e"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-before/sprite-qa.json",
+      "bytes": 621822,
+      "sha256": "5bbfa1977ad100a289bd1ae8e8276c9599ce91ee553687b27843147417738f71"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-before/sprite-qa.md",
+      "bytes": 4693,
+      "sha256": "1d1668ab0cc9b6d4bf0e5e1fcbeecdc1990bbf83aaa15d32fd44cead686dcca5"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-motion.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-motion.stdout.log",
+      "bytes": 1128,
+      "sha256": "5e7ad512d8409bcec38fd81d40b95dacb4c43c1bd04aa96b15a0cc7a5cccf0b3"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid-sprite.stdout.log",
+      "bytes": 5297,
+      "sha256": "bfec2f2a05597219dd86d22cc60b1fca63d7c26eb09e2ccfb2caaf0401bacd39"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid/motion-qa.json",
+      "bytes": 22193,
+      "sha256": "8df6c27bcebfd56fcbca40b3edd3f48b7a355546586b0cc7f7bfec777c9de64f"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid/motion-qa.md",
+      "bytes": 1127,
+      "sha256": "4ba74c061b49a50f37ffebde0a69cf21a96b471ac5aa56b89cefc092410f6929"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid/sprite-qa.json",
+      "bytes": 629439,
+      "sha256": "0b3cc384e52a010c0ce45c70c72c7a29a44114d8ccf49b9631674ac7e29ae0b7"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/rigid/sprite-qa.md",
+      "bytes": 5214,
+      "sha256": "fd9122c905d95f34c9a5f660892ddd0667f4ab10883fc271c896810a14fff101"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-before.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-before.stdout.log",
+      "bytes": 8262,
+      "sha256": "efbb0d6c9e4eae1a009ad60b5fec6779640f87387960bea9558a352f387dca09"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-before/sprite-qa.json",
+      "bytes": 2017378,
+      "sha256": "78f8fcf4ff9c5be31906f643c426d3d208b8528ecb09855e10eeaf388ef3db10"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-before/sprite-qa.md",
+      "bytes": 8169,
+      "sha256": "4df2d28d54b86f46deed8fa3a1bde4be47f53ce5906c22b1a14735ae276e57b6"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-motion.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-motion.stdout.log",
+      "bytes": 1129,
+      "sha256": "f0ab8a6581c40b4ca38796d9b42deba516947f5d2f0930f9fd2566be1e2a848b"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c-sprite.stdout.log",
+      "bytes": 8779,
+      "sha256": "e2d7e946d57e5d2f643fe2e209c16a470a22a6fbb2400d11a050d76f390e72f4"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c/motion-qa.json",
+      "bytes": 70256,
+      "sha256": "af26e98365397e53c5aefdf01b422e8a3b73fb5494dd06259776ef64e2bbc44e"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c/motion-qa.md",
+      "bytes": 1128,
+      "sha256": "817c6529cad193b364474f5b2ddc598d1f0c47dc65c2a93143c9f777e357f8a3"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c/sprite-qa.json",
+      "bytes": 2039395,
+      "sha256": "6ed1b02945d3f10ff2fef229d03ad0f250c16cf7114bbf92b0f0b400bd3554ff"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/silver-c/sprite-qa.md",
+      "bytes": 8693,
+      "sha256": "ac8fb5a53175da7ef100c3b10ffec6af7267cbc5a142180f13d14e81f6b4ab0a"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/tests.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/tests.stdout.log",
+      "bytes": 6742,
+      "sha256": "cbe141e2f65c6f722edd984df674f3959387825a79a0d0e5bfae8201a76469c0"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/validate.mjs",
+      "bytes": 2658,
+      "sha256": "ec62d0f76edfecf06ababdc61a0b585ae0f5952aec71a5972e9047a4c3dc18c1"
+    },
+    {
+      "path": "out/sprite-motion-implementation-20261111/validation.json",
+      "bytes": 5196,
+      "sha256": "4ec73ce828279f4a66a5f9b51e1d0e8dc6375fe1cb2f7a08eeae780be15ab100"
+    }
+  ]
+}

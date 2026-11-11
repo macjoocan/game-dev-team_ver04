@@ -1,0 +1,16 @@
+Edit the supplied 4-column x 2-row sprite sheet. It is an eight-frame right-facing walk-cycle of an adult silver-haired swordswoman. This is a TARGETED MOTION CORRECTION, not a character redesign.
+Preserve exactly the same silver ponytail, face, teal cape/scarf, charcoal-and-gold costume, brown boots and gloves, painterly style, color separation, light, camera, character scale, eight equal 384x512 cells in a 1536x1024 sheet, row-major frame order and genuinely transparent alpha background. Keep the head, torso, cape and hair design as close to the source as possible. Change the ARMS and LEGS and the rigid sword's position with the gripping hand.
+The original has the same leading leg repeated and a frozen sword arm. Correct these specific errors:
+Define NEAR LEG = the leg on the viewer's side, FAR LEG = the other leg. Make a full alternating gait, not two repeated half-cycles:
+Frame 1 (top left): NEAR foot forward heel contact, FAR foot well behind toe contact.
+Frame 2: weight over NEAR foot planted ahead, FAR heel lifted trailing, far knee flexes.
+Frame 3: NEAR leg supports under hip, FAR knee and foot pass forward alongside it; far foot above ground.
+Frame 4: NEAR foot pushes behind on toe, FAR leg reaches forward airborne.
+Frame 5 (bottom left): FAR foot forward heel contact, NEAR foot well behind toe contact. This must be the OPPOSITE leading leg to frame 1, with visibly different thigh/knee overlap.
+Frame 6: weight on FAR planted foot, NEAR trailing knee flexes and heel lifts.
+Frame 7: FAR leg supports under hip, NEAR knee and foot pass forward beside it, foot above ground.
+Frame 8: FAR pushes behind on toe, NEAR leg reaches forward before returning naturally to frame 1.
+Walk with low natural knees, distinct calf/knee silhouettes, two anatomically connected legs, realistic heel-to-toe contact, no sliding planted foot, no hopping, no duplicated leg, no foot crossing through its partner. Maintain body center x and foot-ground height across the cells.
+ARM SWING: The NEAR hand holds the one sword. When NEAR LEG is forward (frame 1), the sword-bearing NEAR ARM swings BACK relative to the hip, with the elbow slightly bent and the hand behind hip. Through frames 2-3 it passes alongside the hip; by frames 4-5 it swings FORWARD in front of hip as NEAR LEG trails. Through frames 6-7 it passes back and in frame 8 swings backward toward frame 1. Make the shoulder-to-elbow and elbow-to-hand angles visibly differ between frames; do not freeze the hand at one screen location. The far empty arm counter-swings naturally in the opposite phase. No detached hands.
+The sword is ONE rigid straight complete blade held securely by its hilt. The entire sword translates and modestly rotates WITH the wrist; it must never stretch, bend, shorten, disappear, or stay behind while the arm moves. Natural restrained armed walking, not a sword attack. Keep the blade away from the legs where possible and fully inside each cell with at least 20 pixels of transparent safety margin.
+No scenery, labels, grids, shadows, effects, extra accessories, color changes or style changes. Output one corrected transparent eight-frame sheet, not separate images.

@@ -1,0 +1,21 @@
+{
+  "kind": "asset-feedback",
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-11",
+  "itemKey": "chr.silver.gpt-qa-20261111@3",
+  "artifact": "out/experiments/silver-gpt-qa-20261111/v3/frames",
+  "quote": "오우 좋아졌네",
+  "interpretation": "팔·다리 수정본 v3에 긍정 평가. v3를 다음 작업의 비교 기준으로 보존한다.",
+  "scope": "새 은발 캐릭터의 색·디자인 방향과 팔·다리 수정 결과",
+  "earlierFeedback": {
+    "itemKey": "chr.silver.gpt-qa-20261111@1",
+    "quotes": [
+      "색 분리는 잘되었는데 팔이랑 다리만 개선 할 수 있을깡?",
+      "다리가 교차로 걷는 모션이 제대로 안되고 칼든 팔은 그냥 그대로 같은 위치에 유지되어 있음"
+    ]
+  },
+  "productionApproval": false,
+  "automatedQaUnchanged": true,
+  "commonRulePromotion": false
+}

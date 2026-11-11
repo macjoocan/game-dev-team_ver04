@@ -22,7 +22,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import { readPNG, rgb2hsv } from '../../../scripts/lib-png-read.mjs';
+import { CONTRACT, loadSequence, inspectSequence, inputRecord, parseTightCrop, measureCrop } from './lib-sprite-sequence.mjs';
 import { toLab } from '../../../scripts/lib-color.mjs';
 import { textTable, pct, mean, quantile } from '../../../scripts/lib-stats.mjs';
 
@@ -35,9 +35,11 @@ if (!src || src.startsWith('--')) {
   console.error('  --atlas a.json atlas-pack 이 낸 json — 점유율을 함께 판정한다');
   console.error('  --aerial       점프·공중 동작. baseline 이동을 정상으로 본다');
   console.error('  --out dir      리포트 저장');
+  console.error('  --tight-crop top,bottom,left,right  의도적으로 여백 없이 자른 방향');
   process.exit(2);
 }
-const OUT = opt('--out', null);
+const requestedOut = opt('--out', null);
+const OUT = requestedOut && !requestedOut.startsWith('--') ? requestedOut : null;
 const AERIAL = args.includes('--aerial');
 
 // ── 기준값 ───────────────────────────────────────────────────────────────────
@@ -65,37 +67,31 @@ const T = {
 };
 
 // ── 프레임 로드 ──────────────────────────────────────────────────────────────
-function loadFrames() {
-  if (/\.png$/i.test(src) && fs.existsSync(src) && fs.statSync(src).isFile()) {
-    const n = Number(opt('--frames', 0));
-    if (!n) { console.error('시트에는 --frames 가 필요하다.'); process.exit(3); }
-    const img = readPNG(src);
-    const fw = Math.floor(img.width / n);
-    const out = [];
-    for (let k = 0; k < n; k++) {
-      const buf = Buffer.alloc(fw * img.height * 4);
-      for (let y = 0; y < img.height; y++) for (let x = 0; x < fw; x++) {
-        const s = (y * img.width + (k * fw + x)) * 4, d = (y * fw + x) * 4;
-        buf[d] = img.data[s]; buf[d + 1] = img.data[s + 1];
-        buf[d + 2] = img.data[s + 2]; buf[d + 3] = img.data[s + 3];
-      }
-      out.push({ name: `f${k}`, width: fw, height: img.height, data: buf });
-    }
-    return out;
+let frames, inspected, tightCrop;
+try {
+  for (const key of ['--tight-crop', '--frames', '--out']) {
+    if (args.includes(key) && (!opt(key) || opt(key).startsWith('--'))) throw new Error(`${key}에 값이 필요하다.`);
   }
-  if (!fs.existsSync(src) || !fs.statSync(src).isDirectory()) {
-    console.error(`읽을 수 없다: ${src}`); process.exit(3);
-  }
-  const files = fs.readdirSync(src).filter((f) => /\.png$/i.test(f)).sort();
-  if (!files.length) { console.error(`PNG 프레임이 없다: ${src}`); process.exit(3); }
-  return files.map((f) => {
-    const im = readPNG(path.join(src, f));
-    return { name: f, width: im.width, height: im.height, data: im.data };
-  });
+  tightCrop = parseTightCrop(opt('--tight-crop'));
+  frames = loadSequence(src, opt('--frames'));
+  inspected = inspectSequence(frames);
+} catch (error) {
+  inspected = { valid: false, issues: [{ code: 'input', message: error.message }], measurements: [] };
 }
-
-const frames = loadFrames();
-if (frames.length < 2) { console.error('프레임이 2장 미만이라 정합성을 판정할 수 없다.'); process.exit(3); }
+if (!inspected.valid) {
+  const input = inputRecord(inspected);
+  const report = ['# 스프라이트 정합성 판정', '', '판정: **측정 불가**', '',
+    ...input.issues.map(i => `- ${i.frame ? `${i.frame}: ` : ''}${i.message}`), '',
+    '입력 오류가 있어 전체 시퀀스를 계산하지 않았다. 문제 프레임을 제외한 부분 판정도 하지 않는다.', ''].join('\n');
+  console.log(report);
+  if (OUT) {
+    fs.mkdirSync(OUT, { recursive: true });
+    fs.writeFileSync(path.join(OUT, 'sprite-qa.md'), report);
+    fs.writeFileSync(path.join(OUT, 'sprite-qa.json'), JSON.stringify({ verdict: '측정 불가', input, crop: null }, null, 2));
+  }
+  process.exit(3);
+}
+const crop = measureCrop(inspected.measurements, tightCrop);
 
 // ── 프레임별 측정 ────────────────────────────────────────────────────────────
 const HIST_BINS = 6;   // Lab 각 축 6분할 = 216빈. 의상·색 변화를 잡기엔 충분하다
@@ -118,7 +114,7 @@ function measure(fr) {
     if (x < minX) minX = x; if (x > maxX) maxX = x;
     if (y < minY) minY = y; if (y > maxY) maxY = y;
     sx += x * a; sy += y * a; sa += a;
-    if (a >= 200) {
+    if (a >= CONTRACT.foregroundAlphaMin) {
       // 색 분포는 **불투명 픽셀만** 센다. 반투명 경계는 배경색이 섞여 드리프트를 왜곡한다.
       const lab = toLab({ r: data[i] / 255, g: data[i + 1] / 255, b: data[i + 2] / 255 });
       const bl = Math.min(HIST_BINS - 1, Math.floor((lab.L / 100) * HIST_BINS));
@@ -217,24 +213,21 @@ function measure(fr) {
 }
 
 const M = frames.map(measure);
-const empty = M.filter((m) => !m.bbox).map((m) => m.name);
-
 const fails = [];
 const warns = [];
 
-// ── 1) 캔버스 정합 ──────────────────────────────────────────────────────────
-const sizes = new Set(M.map((m) => `${m.w}x${m.h}`));
-if (sizes.size > 1) {
-  fails.push({ kind: '캔버스', where: '전체', msg: `프레임 캔버스가 ${sizes.size}종 섞여 있다 (${[...sizes].join(', ')}) — 엔진에서 정렬이 깨진다. \`sprite-normalize\` 로 통일해라` });
-}
-if (empty.length) {
-  fails.push({ kind: '빈 프레임', where: empty.join(', '), msg: '알파가 전부 0이다 — 컷아웃이 피사체를 먹었거나 빈 프레임이 섞였다' });
+// ── 1) 경계 접촉 — 경고 전용. 전 프레임 접촉만 명시적 tight-crop로 면제한다.
+for (const [side, result] of Object.entries(crop.sides)) {
+  if (result.warning) warns.push({ kind: '잘림 의심', where: `${side}: ${result.frames.join(', ')}`,
+    msg: result.state === 'mixed'
+      ? `${result.count}/${frames.length}장이 캔버스 경계에 닿는다. 잘림인지 원본과 비교한다. tight-crop 선언으로 면제하지 않는다.`
+      : `모든 프레임이 캔버스 경계에 닿는다. 잘림과 의도적인 여백 제거를 자동으로 구별할 수 없다.` });
 }
 
 // ── 2) 떨림 — 2차 차분으로 의도된 이동과 구분 ───────────────────────────────
 // 1차 차분(속도)이 크다고 떨림이 아니다. 걷기·돌진은 원래 움직인다.
 // **2차 차분(가속)이 프레임마다 부호를 바꾸며 크게 튀는 게 떨림**이다.
-const valid = M.filter((m) => m.bbox);
+const valid = M;
 const jitterRows = [];
 if (valid.length >= 3) {
   for (let i = 1; i < valid.length - 1; i++) {
@@ -416,6 +409,13 @@ L.push(textTable(
   }),
 ));
 L.push('```');
+L.push('', '### 캔버스 경계 접촉 (경고 전용)', '',
+  '| 방향 | 접촉 프레임 | 상태 | 최소 여백(px) | tight-crop 선언 / 면제 |', '|---|---:|---|---:|---|');
+for (const [side, result] of Object.entries(crop.sides)) {
+  L.push(`| ${side} | ${result.count}/${frames.length} | ${result.state} | ${result.minimumMarginPx} | ${result.declaredTightCrop} / ${result.exempted} |`);
+}
+L.push('', '알파 128 이상인 픽셀이 바깥쪽 행·열에서 2px 이상 연속이면 접촉으로 센다.',
+  '접촉이 없어도 이미 잘린 원본이나 내부 손상을 배제할 수 없다.');
 if (jitterRows.length) {
   L.push('');
   L.push('### 떨림 (무게중심 2차 차분)', '```');
@@ -454,7 +454,7 @@ if (OUT) {
   fs.mkdirSync(OUT, { recursive: true });
   fs.writeFileSync(path.join(OUT, 'sprite-qa.md'), report);
   fs.writeFileSync(path.join(OUT, 'sprite-qa.json'), JSON.stringify({
-    verdict, thresholds: T, aerial: AERIAL, atlas, fails, warns,
+    verdict, thresholds: T, aerial: AERIAL, atlas, fails, warns, input: inputRecord(inspected), crop,
     frames: M.map(({ hist, ...m }) => m), jitter: jitterRows, drift: driftRows,
   }, null, 2));
   console.log(`-> ${OUT}/sprite-qa.md · sprite-qa.json`);

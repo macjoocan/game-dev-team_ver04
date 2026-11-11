@@ -13,3 +13,11 @@
 /out/integration-20261106/** -text
 /out/day-handoff-20261106/** -text
 /out/pixel-probe-20261106/** -text
+/out/sprite-motion-implementation-20261111/** -text
+/out/resume-20261111/** -text
+/out/day-handoff-20261111/** -text
+
+# Keep the measured sprite source bytes identical across checkouts.
+/skills/sprite-pipeline/scripts/*.mjs -text
+/plugins/game-dev-team/skills/sprite-pipeline/scripts/*.mjs -text
+/test/sprite-motion-qa.test.mjs -text

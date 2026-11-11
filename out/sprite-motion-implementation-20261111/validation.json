@@ -1,0 +1,136 @@
+{
+  "baseCommit": "4ceb9441a67f84339d5a8809670cb903bc0cb4d9",
+  "uncommittedImplementation": true,
+  "generatedAt": "2026-11-11T02:11:28.169Z",
+  "sourceHashes": {
+    "skills/sprite-pipeline/scripts/lib-sprite-sequence.mjs": "2897fd56852c611542db73ad19b09de5b1ac848c41b0b933829639f50d4b21c6",
+    "skills/sprite-pipeline/scripts/motion-qa.mjs": "baf18ae21a45c62c31a6c5db90af8215a0565f84e470265bb06f7d24b59a7076",
+    "skills/sprite-pipeline/scripts/sprite-qa.mjs": "a40a9be21e047c6b2d8e2c9641683e0d1f71683081c76159d564445601f5f645",
+    "test/sprite-motion-qa.test.mjs": "0a69fefda28e1530854c505a11fe2eff90e0af02f8dd60bc37a4f2cfda8b276b"
+  },
+  "baselineSource": {
+    "commit": "4ceb944",
+    "sha256": "3006cbca7a952980de7aaf8dae41b807a58f2d345989f80b2e75f2841e969a32",
+    "adaptation": "Only import paths changed to absolute file URLs"
+  },
+  "results": [
+    {
+      "id": "tests",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "--test",
+        "test/sprite-motion-qa.test.mjs",
+        "test/motion-clip-tools.test.mjs",
+        "test/motion-court.test.mjs",
+        "samples/silver-stage-01/game.test.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "out/sprite-motion-implementation-20261111/tests.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/tests.stderr.log"
+    },
+    {
+      "id": "plugin",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/validate-plugin.mjs"
+      ],
+      "exitCode": 0,
+      "stdout": "out/sprite-motion-implementation-20261111/plugin.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/plugin.stderr.log"
+    },
+    {
+      "id": "silver-c-sprite",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/local-motion-20261106/c-alpha",
+        "--out",
+        "out/sprite-motion-implementation-20261111/silver-c"
+      ],
+      "exitCode": 1,
+      "stdout": "out/sprite-motion-implementation-20261111/silver-c-sprite.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/silver-c-sprite.stderr.log"
+    },
+    {
+      "id": "silver-c-motion",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "skills/sprite-pipeline/scripts/motion-qa.mjs",
+        "out/experiments/local-motion-20261106/c-alpha",
+        "--gait",
+        "walk",
+        "--out",
+        "out/sprite-motion-implementation-20261111/silver-c"
+      ],
+      "exitCode": 0,
+      "stdout": "out/sprite-motion-implementation-20261111/silver-c-motion.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/silver-c-motion.stderr.log"
+    },
+    {
+      "id": "silver-c-before",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "out/sprite-motion-implementation-20261111/before-sprite-qa.mjs",
+        "out/experiments/local-motion-20261106/c-alpha",
+        "--out",
+        "out/sprite-motion-implementation-20261111/silver-c-before"
+      ],
+      "exitCode": 1,
+      "stdout": "out/sprite-motion-implementation-20261111/silver-c-before.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/silver-c-before.stderr.log"
+    },
+    {
+      "id": "rigid-sprite",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/gpt-walk-20261106/rigid/frames",
+        "--out",
+        "out/sprite-motion-implementation-20261111/rigid"
+      ],
+      "exitCode": 1,
+      "stdout": "out/sprite-motion-implementation-20261111/rigid-sprite.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/rigid-sprite.stderr.log"
+    },
+    {
+      "id": "rigid-motion",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "skills/sprite-pipeline/scripts/motion-qa.mjs",
+        "out/experiments/gpt-walk-20261106/rigid/frames",
+        "--gait",
+        "walk",
+        "--out",
+        "out/sprite-motion-implementation-20261111/rigid"
+      ],
+      "exitCode": 0,
+      "stdout": "out/sprite-motion-implementation-20261111/rigid-motion.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/rigid-motion.stderr.log"
+    },
+    {
+      "id": "rigid-before",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "out/sprite-motion-implementation-20261111/before-sprite-qa.mjs",
+        "out/experiments/gpt-walk-20261106/rigid/frames",
+        "--out",
+        "out/sprite-motion-implementation-20261111/rigid-before"
+      ],
+      "exitCode": 1,
+      "stdout": "out/sprite-motion-implementation-20261111/rigid-before.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/rigid-before.stderr.log"
+    },
+    {
+      "id": "art-gate",
+      "command": [
+        "C:\\Program Files\\nodejs\\node.exe",
+        "scripts/art-gate.mjs",
+        "--out",
+        "out/sprite-motion-implementation-20261111/final-art-gate"
+      ],
+      "exitCode": 3,
+      "stdout": "out/sprite-motion-implementation-20261111/art-gate.stdout.log",
+      "stderr": "out/sprite-motion-implementation-20261111/art-gate.stderr.log"
+    }
+  ]
+}

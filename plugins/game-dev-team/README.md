@@ -1,5 +1,7 @@
 # game-dev-team
 
+v0.54.0은 스프라이트 공통 입력 검사, 잘림 경고와 모션 관찰을 추가한다. [2026-11-11 인수인계](docs/handoffs/2026-11-11.md)에 검사 결과와 새 은발 v3의 팔·다리 수정 기록이 있다. [전후 비교 화면](out/experiments/silver-gpt-qa-20261111/review.html)은 새 생성 없이 재생할 수 있다.
+
 은발 검사 액션 샘플 **은빛 잔향**은 [실행 안내](samples/silver-stage-01/README.md)에서 시작한다. GPT 아트, 연속 베기, 큰 검 궤적, 피격 반응, 달리기와 세 전투 구간을 연결했다. [2026-11-10 성과·기술 인수인계](docs/handoffs/2026-11-10.md)에 검사 결과와 남은 과제를 정리했다. [Unity Particle System 활용 검토](docs/art/unity-particle-vfx-research-2026-11-10.md)는 다음 엔진 연동을 위한 설계안이다.
 
 0.52.0은 원격의 테스트 자동 탐지와 로컬의 게임성·설치 검사·공통 FX 제작을 통합한 버전이다. `node scripts/run-tests.mjs`가 `test/`의 Node·Python 테스트를 모두 찾는다.

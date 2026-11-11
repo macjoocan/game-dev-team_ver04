@@ -71,7 +71,8 @@ node skills/sprite-pipeline/scripts/sprite-qa.mjs <시트.png> --frames 8
 
 | 판정 | 무엇 | 등급 |
 |---|---|---|
-| **캔버스 정합** | 프레임 크기가 섞여 있으면 엔진에서 정렬이 깨진다 | 미달 |
+| **공통 입력** | 빈 피사체·배경 부족·크기 혼합·프레임 부족·읽기 실패 | 측정 불가(exit 3) |
+| 잘림 의심 | 바깥쪽 행·열의 연속 접촉. 일부 프레임과 모든 프레임의 접촉을 구분 | 경고만 |
 | **정체성 드리프트** | 프레임 간 색 분포(Lab 히스토그램) 유사도. **이 스킬의 1번 위험** | 미달 |
 | 떨림 | 무게중심 **2차 차분** — 격렬함(최소변 대비) 또는 이상치 배수 | 경고 |
 | baseline 정렬 | 발 위치 산포. 공중 동작은 `--aerial` | 경고 |
@@ -88,6 +89,45 @@ node skills/sprite-pipeline/scripts/sprite-qa.mjs <시트.png> --frames 8
   잔상 이펙트는 반투명 비율이 원래 높고, 던진 무기는 떨어진 덩어리가 의도적이다.
 - **공격/피격/대기 프레임의 타이밍은 여기서 판정하지 않는다** → `polish`의 `feel-audit` 소관.
 - 색은 같고 **형태만** 바뀌는 드리프트는 못 잡는다(색 분포로만 재기 때문에). 그건 사람이 본다.
+
+## 잘림 경고와 모션 관찰
+
+```bash
+node skills/sprite-pipeline/scripts/sprite-qa.mjs frames --out sprite-out
+node skills/sprite-pipeline/scripts/sprite-qa.mjs frames --tight-crop bottom --out sprite-out
+node skills/sprite-pipeline/scripts/motion-qa.mjs frames --gait walk --out motion-out
+node skills/sprite-pipeline/scripts/motion-qa.mjs sheet.png --frames 24 --gait run --out motion-out
+```
+
+두 명령은 `lib-sprite-sequence.mjs`의 입력 검사를 공유한다.
+피사체는 알파 **128 이상**, 배경은 알파 **20 미만**이다.
+그 사이 값은 피사체·배경 어느 쪽에도 세지 않는다.
+각 프레임에 피사체와 배경 **2% 이상**이 있어야 한다.
+하나라도 조건을 어기면 전체 측정을 멈춘다. 문제 프레임을 빼고 통과시키지 않는다.
+`sprite-qa`는 최소 2장, `motion-qa`는 최소 4장이 필요하다.
+PNG 이름은 숫자 순서로 정렬한다. 시트는 폭이 프레임 수로 나누어떨어져야 한다.
+
+잘림 검사는 네 방향을 따로 기록한다. 캔버스 바깥쪽 행·열에서 피사체가
+**2px 이상 연속**이면 접촉으로 센다. 접촉한 파일명과 프레임별 여백도 JSON에 남긴다.
+일부 프레임만 닿으면 잘림 의심이다. 모든 프레임이 닿으면 잘림과 여백 제거를 구별할 수 없다.
+둘 다 **경고**이며 종료 코드를 바꾸지 않는다.
+`--tight-crop top,bottom,left,right`에서 사람이 지정한 방향은 모든 프레임이 닿을 때만 면제한다.
+일부 프레임 접촉에는 적용하지 않는다. 접촉이 없어도 내부 손상이나 이미 잘린 원본은 잡지 못한다.
+
+`motion-qa`의 `--gait`는 `walk`, `slow-walk`, `run`, `other` 중 직접 지정한다.
+동작을 자동 추정하지 않는다. `liftRange`는 **하단 윤곽 변화량**이며 발 들기나 품질 점수가 아니다.
+프레임마다 피사체 너비를 64구간으로 나눠 바닥 윤곽을 높이로 정규화한다.
+절반 이상의 프레임에 값이 있는 구간별 최대·최소 차이를 평균한다.
+망토·치마·무기도 이 수치를 키울 수 있다.
+인접 윤곽 변화와 피사체 상단 위치 범위도 관찰용으로 남긴다.
+마지막과 첫 프레임의 연결, 재생 시간, 발 접지는 측정하지 않는다.
+
+`motion-qa`의 exit 0은 **관찰 완료**, exit 3은 **측정 불가**다.
+합격선·자동 반려·자동 등급 승격·학습용 라벨 수집은 구현하지 않았다.
+`sprite-qa`의 기존 색·형태·아틀라스 실패는 계속 exit 1이다.
+다만 빈 피사체와 크기 혼합은 이제 계산 전 입력 오류(exit 3)로 분리한다.
+색 분포도 알파 128 이상을 사용한다. 반투명 프레임의 과거 수치와 비교할 때 이 변경을 고려한다.
+입력 해시와 측정 설정은 결과 JSON의 `input`에 남긴다.
 
 ## 흔한 실수
 OpenPose와 고정 캐릭터 레퍼런스로 포즈를 개별 생성하는 시안은 [선택적 2D 포즈 파일럿](../char-art-system/references/pose-reference-pilot.md)을 따른다. 공통 캔버스·baseline과 실제 크기 검수까지 해도 2프레임만으로 동작 연속성·타이밍을 판정하지 않는다.

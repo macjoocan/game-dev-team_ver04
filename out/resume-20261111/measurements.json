@@ -1,0 +1,458 @@
+{
+  "commit": "4ceb944",
+  "scope": "Review probes; original measurement equations preserved. Only paths, exports, and synthetic/available inputs changed.",
+  "sourceHashes": {
+    "crop": "8a5fcde8f3ac6c615c593e4aca6953115c763fcae70d8c6b6937090ca2000bb7",
+    "gait": "f75506c7b014bcca33a18eae67986e7e16734bb57efbe60eedb6338b12b13ff4"
+  },
+  "synthetic": [
+    {
+      "name": "valid",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "valid",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\valid",
+        "match": {},
+        "frames": 4,
+        "bodyH": 16,
+        "liftRange": 0,
+        "contourDelta": 0,
+        "compMax": 1,
+        "fragileMax": 0,
+        "hardRatio": 0,
+        "seamMax": 0,
+        "bobRng": 0,
+        "touchPct": 0
+      }
+    },
+    {
+      "name": "empty",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": null
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": null
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": null
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": null
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "empty",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\empty",
+        "match": {},
+        "error": "유효 프레임 부족"
+      }
+    },
+    {
+      "name": "alpha128",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "alpha128",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\alpha128",
+        "match": {},
+        "error": "유효 프레임 부족"
+      }
+    },
+    {
+      "name": "background-alpha10",
+      "crop": {
+        "n": 4,
+        "unmeasurable": "알파 없음 4/4"
+      },
+      "gait": {
+        "name": "background-alpha10",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\background-alpha10",
+        "match": {},
+        "frames": 4,
+        "bodyH": 16,
+        "liftRange": 0,
+        "contourDelta": 0,
+        "compMax": 1,
+        "fragileMax": 0,
+        "hardRatio": 0,
+        "seamMax": 0,
+        "bobRng": 0,
+        "touchPct": 0
+      }
+    },
+    {
+      "name": "mixed-size",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 8
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "mixed-size",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\mixed-size",
+        "match": {},
+        "frames": 4,
+        "bodyH": 16,
+        "liftRange": 0,
+        "contourDelta": 0,
+        "compMax": 1,
+        "fragileMax": 0,
+        "hardRatio": 0,
+        "seamMax": 0,
+        "bobRng": 0,
+        "touchPct": 0
+      }
+    },
+    {
+      "name": "fixed-feet-static-cape",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 12
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 5
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 20
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 20
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "fixed-feet-static-cape",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\fixed-feet-static-cape",
+        "match": {},
+        "frames": 4,
+        "bodyH": 47,
+        "liftRange": 0,
+        "contourDelta": 0,
+        "compMax": 1,
+        "fragileMax": 0,
+        "hardRatio": 0,
+        "seamMax": 0,
+        "bobRng": 0,
+        "touchPct": 0
+      }
+    },
+    {
+      "name": "fixed-feet-moving-cape",
+      "crop": {
+        "n": 4,
+        "sides": {
+          "top": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 12
+          },
+          "bottom": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 5
+          },
+          "left": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 20
+          },
+          "right": {
+            "touch": 0,
+            "state": "전무",
+            "minMargin": 20
+          }
+        },
+        "verdict": "충족"
+      },
+      "gait": {
+        "name": "fixed-feet-moving-cape",
+        "dir": "C:\\00.SVN\\game-dev-team_ver04\\out\\resume-20261111\\fixtures\\fixed-feet-moving-cape",
+        "match": {},
+        "frames": 4,
+        "bodyH": 47,
+        "liftRange": 0.11170212765957441,
+        "contourDelta": 0.1117021276595744,
+        "compMax": 1,
+        "fragileMax": 0,
+        "hardRatio": 0,
+        "seamMax": 0,
+        "bobRng": 0,
+        "touchPct": 0
+      }
+    }
+  ],
+  "availability": [
+    {
+      "dir": "out/sprite-lab/action-thrust-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/sprite-lab/scail2-sword-v2-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/sprite-lab/action-roll-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/experiments/local-motion-20261106/c-alpha",
+      "exists": true
+    },
+    {
+      "dir": "out/sprite-lab/action-slash-v4-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/sprite-lab/action-hit-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/sprite-lab/action-run-v2-alpha",
+      "exists": false
+    },
+    {
+      "dir": "out/sprite-lab/action-idle-alpha",
+      "exists": false
+    }
+  ],
+  "realCrop": [
+    {
+      "dir": "out/experiments/local-motion-20261106/c-alpha",
+      "measurements": [
+        {
+          "minRun": 1,
+          "result": {
+            "n": 26,
+            "sides": {
+              "top": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 46
+              },
+              "bottom": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 48
+              },
+              "left": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 89
+              },
+              "right": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 24
+              }
+            },
+            "verdict": "충족"
+          }
+        },
+        {
+          "minRun": 2,
+          "result": {
+            "n": 26,
+            "sides": {
+              "top": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 46
+              },
+              "bottom": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 48
+              },
+              "left": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 89
+              },
+              "right": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 24
+              }
+            },
+            "verdict": "충족"
+          }
+        },
+        {
+          "minRun": 3,
+          "result": {
+            "n": 26,
+            "sides": {
+              "top": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 46
+              },
+              "bottom": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 48
+              },
+              "left": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 89
+              },
+              "right": {
+                "touch": 0,
+                "state": "전무",
+                "minMargin": 24
+              }
+            },
+            "verdict": "충족"
+          }
+        }
+      ]
+    }
+  ],
+  "realGait": [
+    {
+      "name": "pos-c-alpha",
+      "subject": "silver",
+      "label": "pos",
+      "dir": "C:/00.SVN/game-dev-team_ver04/out/experiments/local-motion-20261106/c-alpha",
+      "match": {},
+      "note": "\"이정도면 잘나오는듯\"",
+      "frames": 26,
+      "bodyH": 412,
+      "liftRange": 0.3186457697561613,
+      "contourDelta": 0.051996342807283116,
+      "compMax": 1,
+      "fragileMax": 1,
+      "hardRatio": 0.0697015489233094,
+      "seamMax": 0.06235011990407674,
+      "bobRng": 0.021844660194174758,
+      "touchPct": 0
+    },
+    {
+      "name": "neg-rigid",
+      "subject": "silver",
+      "label": "neg",
+      "dir": "C:/00.SVN/game-dev-team_ver04/out/experiments/gpt-walk-20261106/rigid/frames",
+      "match": {},
+      "note": "강체분리 — \"파츠 틈과 겹침\"",
+      "frames": 8,
+      "bodyH": 451,
+      "liftRange": 0.2022827333927611,
+      "contourDelta": 0.06696555925297505,
+      "compMax": 1,
+      "fragileMax": 5,
+      "hardRatio": 0.05918581943818537,
+      "seamMax": 0.04054054054054054,
+      "bobRng": 0.013303769401330377,
+      "touchPct": 0
+    }
+  ],
+  "journalQuoteMatches": [
+    {
+      "quote": "뒤에 망토만 짤렸네",
+      "ids": []
+    },
+    {
+      "quote": "중간중간 스프라이트가 미결 수준임",
+      "ids": []
+    },
+    {
+      "quote": "니가 말한 zoom 부분도 미결 사항임",
+      "ids": []
+    }
+  ]
+}

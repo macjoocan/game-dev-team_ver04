@@ -1,0 +1,172 @@
+✔ light contact occurs at configured impact; a miss does not freeze (1.3817ms)
+✔ one attack damages one target at most once and freezes on hit (0.6766ms)
+✔ late input buffer chains to second slash exactly once (0.3055ms)
+✔ early mash reserves only one follow-up beyond the old buffer expiry (0.3994ms)
+✔ three slashes chain without an idle pose and loop only with a new tap (2.125ms)
+✔ tap during hit-stop queues a follow-up and hurt cancels the queue (0.3642ms)
+✔ double-tap sprint ignores held repeats and clears on release, reversal and reset (0.2339ms)
+✔ running uses faster movement and animation; attacking and release stop running (0.2848ms)
+✔ dash blocks a real enemy strike (0.383ms)
+✔ hurt interrupts attack, applies recoil and immunity (0.3876ms)
+✔ jump avoids ground attack above its vertical range (0.1659ms)
+✔ death cannot transition into wave clear or victory (0.151ms)
+✔ locked gate blocks player until living enemies are defeated (0.4796ms)
+✔ fresh game resets all combat state (0.4915ms)
+✔ scripted traversal reaches all encounters and the exit without state edits (4.0102ms)
+✔ color changes dark RGB, preserves alpha, source, and untouched file bytes (44.3017ms)
+✔ pingpong and explicit holds copy pixels with documented mapping (47.178ms)
+✔ reject overwrite, invalid frames and mixed canvas before output (14.6257ms)
+{
+  "status": "pass",
+  "checks": [
+    {
+      "name": "one hit per target per attack",
+      "result": "pass"
+    },
+    {
+      "name": "attack remains locked and ignores movement",
+      "result": "pass"
+    },
+    {
+      "name": "attack misses target behind player",
+      "result": "pass"
+    },
+    {
+      "name": "left facing attack hits target on left",
+      "result": "pass"
+    },
+    {
+      "name": "hurt interrupts attack and recovers to idle",
+      "result": "pass"
+    },
+    {
+      "name": "defeated target respawns",
+      "result": "pass"
+    },
+    {
+      "name": "movement stays inside world and updates facing",
+      "result": "pass"
+    },
+    {
+      "name": "run uses a distinct clip and configured faster movement",
+      "result": "pass"
+    },
+    {
+      "name": "releasing sprint returns to accepted walk and stopping to idle",
+      "result": "pass"
+    },
+    {
+      "name": "run loops without selecting the duplicate closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "run input cannot interrupt attack or roll",
+      "result": "pass"
+    },
+    {
+      "name": "dust lives in world space and trails both roll directions",
+      "result": "pass"
+    },
+    {
+      "name": "dust toggle and reduced effects disable particles without altering roll",
+      "result": "pass"
+    },
+    {
+      "name": "idle animates while keeping world position and facing fixed",
+      "result": "pass"
+    },
+    {
+      "name": "idle wraps its loop without holding the closing frame",
+      "result": "pass"
+    },
+    {
+      "name": "movement exits idle immediately and stopping restarts idle",
+      "result": "pass"
+    },
+    {
+      "name": "attack exits idle immediately and resets attack timing",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery returns to animated idle at its final world position",
+      "result": "pass"
+    },
+    {
+      "name": "idle emits no damage or dust events",
+      "result": "pass"
+    },
+    {
+      "name": "slash world position remains at terminal root after recovery",
+      "result": "pass"
+    },
+    {
+      "name": "slash end torso anchor joins idle with no horizontal snap",
+      "result": "pass"
+    },
+    {
+      "name": "roll travels forward and keeps final position",
+      "result": "pass"
+    },
+    {
+      "name": "roll invulnerability blocks damage during tuck",
+      "result": "pass"
+    },
+    {
+      "name": "roll recovery can take damage",
+      "result": "pass"
+    },
+    {
+      "name": "roll cancels slash without resetting existing root travel",
+      "result": "pass"
+    },
+    {
+      "name": "enemy telegraph strike damages player in range",
+      "result": "pass"
+    },
+    {
+      "name": "enemy strike is avoided during roll invulnerability",
+      "result": "pass"
+    },
+    {
+      "name": "enemy attack applies at most one hit per cycle",
+      "result": "pass"
+    }
+  ],
+  "browser_visual": "pending",
+  "scope": "headless combat invariants and served files; not human motion approval"
+}
+✔ test\motion-court.test.mjs (2341.1961ms)
+✔ alpha 128 belongs to foreground; alpha 19 belongs to background; alpha 20 does not (3.2798ms)
+✔ every frame is required; empty or opaque-background frame cannot be silently removed (0.5623ms)
+✔ empty folder and short sequences are unmeasurable (0.194ms)
+✔ the 2% background boundary is inclusive and checked per frame (0.9724ms)
+✔ crop top: none, mixed, all, and explicit exemption (1.5182ms)
+✔ crop bottom: none, mixed, all, and explicit exemption (0.6938ms)
+✔ crop left: none, mixed, all, and explicit exemption (0.5542ms)
+✔ crop right: none, mixed, all, and explicit exemption (0.5749ms)
+✔ an isolated boundary pixel does not reach the two-pixel contact threshold (0.4159ms)
+✔ tight crop accepts only known explicit side names (0.5711ms)
+✔ natural frame ordering, hashes, and exact sheet division (28.6022ms)
+✔ lower contour is an observation: static feet with moving cloth still raises liftRange (0.8774ms)
+✔ sprite-qa: single empty frame returns 3 and saves no partial measurement (3038.3047ms)
+✔ sprite-qa: single background frame returns 3 and saves no partial measurement (3315.4599ms)
+✔ sprite-qa: single size frame returns 3 and saves no partial measurement (3269.5364ms)
+✔ sprite-qa: alpha128 and low alpha background share one contract (3281.2946ms)
+✔ sprite-qa: unreadable PNG or missing source returns 3 (10838.898ms)
+✔ motion-qa: single empty frame returns 3 and saves no partial measurement (5324.52ms)
+✔ motion-qa: single background frame returns 3 and saves no partial measurement (5140.8927ms)
+✔ motion-qa: single size frame returns 3 and saves no partial measurement (5016.6204ms)
+✔ motion-qa: alpha128 and low alpha background share one contract (2965.8687ms)
+✔ motion-qa: unreadable PNG or missing source returns 3 (7703.3281ms)
+✔ sprite-qa warnings alone do not block; explicit tight crop never hides mixed contact (5150.8291ms)
+✔ all-frame contact remains warning-only unless declared; unrelated color failures still fail (13048.8769ms)
+✔ motion-qa needs explicit gait; other actions remain observations (3961.3696ms)
+✔ a missing output value never treats the next option as a directory (2782.9697ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 80316.3464

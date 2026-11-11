@@ -196,3 +196,38 @@ Add a troubleshooting note to the 3D asset pipeline: if `uvx` reports cache init
 **Principle:** 생성에서 보존된 장비도 후처리에서 사라질 수 있다.
 
 **Reference file:** out/experiments/silver-slash-20261106/alpha-repaired/repair.json
+
+
+### Observation 11: 하단 윤곽 지표는 발 움직임과 분리해 검증한다
+
+**Status:** OPEN
+**Date:** 2026-11-11
+**Session context:** 스프라이트 모션 판정 설계 검토
+**Skill:** sprite-pipeline
+**Type:** open-source
+**Phase/Area:** 계측 지표의 의미와 반례
+
+**Issue:** 발을 고정한 합성 입력에서 망토만 움직여도 liftRange가 0에서 0.111702로 증가했다. 잘림 탐침은 빈 이미지 묶음을 충족으로 판정했고, 두 탐침의 알파 경계 정의도 달랐다.
+
+**Suggested improvement:** 지표가 의도한 신체 부위를 직접 측정하는지 대조 입력으로 확인한다. 이름은 실제 계산 범위를 드러내고, 빈 내용물과 알파 경계값은 공통 입력 검사로 묶는다. 공용 도구 변경은 설계 승인 뒤 진행한다.
+
+**Principle:** 수치가 움직임에 반응한다는 사실만으로 그 움직임의 원인을 측정한다고 볼 수 없다.
+
+**Reference file:** out/resume-20261111/REVIEW.md
+
+### Observation 12: 알파 기준이 다른 경계 수치를 발 이동량으로 해석하지 않는다
+
+**Status:** OPEN
+**Date:** 2026-11-11
+**Session context:** 새 GPT 은발 시트 생성과 팔·다리 수정
+**Skill:** sprite-pipeline
+**Type:** open-source
+**Phase/Area:** 실제 생성물 검사와 측정값 설명
+
+**Issue:** v1은 정합성 검사에 통과했지만 사용자가 다리 교차 부족과 칼 든 팔 고정을 지적했다. 수정한 v2의 기존 baseline 경고는 34px였으나, 알파 128 이상인 피사체 하단 범위는 6px였다. 처음 보고에서 34px를 발 높이 변화로 설명했다가 정정했다.
+
+**Suggested improvement:** 경계값마다 사용하는 알파 기준을 결과에 드러낸다. 낮은 알파까지 포함한 외곽과 피사체 마스크를 구분한다. 일반 정합성 통과로 보행 교차·팔 동작을 승인하지 않는다.
+
+**Principle:** 이미지 외곽의 변화는 관절 이동량과 다르다. 사용자 모션 피드백은 자동 검사와 별도로 보존한다.
+
+**Reference file:** out/experiments/silver-gpt-qa-20261111/REPORT.md
