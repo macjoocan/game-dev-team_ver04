@@ -1,0 +1,381 @@
+{
+  "id": "chr.silver.reference-slash-20261111",
+  "status": "review",
+  "baseCommit": "bba068c",
+  "generator": "built-in image_gen",
+  "candidate": "v2",
+  "poseReference": {
+    "file": "D:/99.기타/out_soulbound/sprite_metadata.json",
+    "sprite": "sDCMobResurrectedPioneerSword_Attack_E",
+    "indices": [
+      8748,
+      8747,
+      8739,
+      8744,
+      8754
+    ],
+    "usage": "pose sequence only; not a runtime timing transfer"
+  },
+  "identityReference": "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v3.png",
+  "frames": [
+    {
+      "file": "v2/frames/frame_0000.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 68,
+        "minY": 117,
+        "maxX": 304,
+        "maxY": 436
+      },
+      "sha256": "e677e0a811cc8913a13e9d1df1bd23f270c06947ed3d25e75f1633befec56b47"
+    },
+    {
+      "file": "v2/frames/frame_0001.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 61,
+        "minY": 130,
+        "maxX": 299,
+        "maxY": 436
+      },
+      "sha256": "1bf35341569535c0d3e3cb5e45d914681071ef21e7f30410950fa2dc171b936f"
+    },
+    {
+      "file": "v2/frames/frame_0002.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 55,
+        "minY": 83,
+        "maxX": 308,
+        "maxY": 437
+      },
+      "sha256": "6a12ee7b89211a4734dab7336da9aa04df4359b4eb3903b777ebe973db5c33d7"
+    },
+    {
+      "file": "v2/frames/frame_0003.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 45,
+        "minY": 116,
+        "maxX": 323,
+        "maxY": 437
+      },
+      "sha256": "7346846b76b6e3eff40b914f728ce200794f614851ba4d4ce0ed4efb381ac03d"
+    },
+    {
+      "file": "v2/frames/frame_0004.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 63,
+        "minY": 121,
+        "maxX": 375,
+        "maxY": 437
+      },
+      "sha256": "a236d0644b5a6c0d84bd551fbf71cd5d96996fd0ad5b010601b80d3a63b7dcfb"
+    },
+    {
+      "file": "v2/frames/frame_0005.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 65,
+        "minY": 133,
+        "maxX": 343,
+        "maxY": 437
+      },
+      "sha256": "47409c1110c19af17f9d006782afb17d684afe723714bf0c3186a11862600dd5"
+    },
+    {
+      "file": "v2/frames/frame_0006.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 54,
+        "minY": 124,
+        "maxX": 335,
+        "maxY": 438
+      },
+      "sha256": "d533c403f587af2b5a67ddbd897f29894f86cfc2c2211f63e6577d1f53d24cba"
+    },
+    {
+      "file": "v2/frames/frame_0007.png",
+      "width": 384,
+      "height": 512,
+      "foregroundAlpha": 128,
+      "bounds": {
+        "minX": 62,
+        "minY": 122,
+        "maxX": 303,
+        "maxY": 438
+      },
+      "sha256": "d3d32fc14b95156d6a8d5c43cbea02da1aa54db44a1b4fb86d5f8b63d720b532"
+    }
+  ],
+  "foregroundBottomRange": 2,
+  "qaVerdict": "미달",
+  "qaFailures": [
+    {
+      "kind": "정체성(형태)",
+      "where": "frame_0000.png, frame_0002.png, frame_0003.png",
+      "msg": "실루엣이 대표 프레임(frame_0006.png)과 겹치는 비율(IoU)이 0.47, 0.47, 0.32 뿐이다 (하한 0.5) — 형태가 무너져 같은 캐릭터로 안 보인다. 색은 같아도 실루엣이 깨진 경우다(생성 시퀀스에서 흔하다)"
+    }
+  ],
+  "qaWarnings": [
+    {
+      "kind": "떨림",
+      "where": "frame_0003.png",
+      "msg": "무게중심 2차 차분 33.96px = 스프라이트 최소변(384px)의 8.8% > 허용 8.0% — 프레임 간 움직임이 격렬하다. 정규화를 다시 하거나 그 프레임을 다시 뽑아라"
+    },
+    {
+      "kind": "baseline",
+      "where": "전체",
+      "msg": "발 위치 산포 66px(12.9%) > 허용 4.0% — 지상 동작이면 캐릭터가 위아래로 뜬다. 점프·공중 동작이면 `--aerial` 을 줘라"
+    },
+    {
+      "kind": "고아 섬",
+      "where": "frame_0000.png(4), frame_0001.png(2), frame_0002.png(5), frame_0003.png(6), frame_0005.png(6), frame_0006.png(2), frame_0007.png(4)",
+      "msg": "피사체와 떨어진 작은 덩어리가 있다 — 컷아웃 잔여물이면 아틀라스 여백을 먹고 화면에 티가 난다(`cutout` 재실행). **의도한 분리 파츠**(던진 무기·떠 있는 장식)면 정상이다"
+    },
+    {
+      "kind": "구멍",
+      "where": "frame_0000.png(0.7%), frame_0005.png(1.5%)",
+      "msg": "피사체 내부가 뚫렸다 (허용 0.2%) — 컷아웃 tol 을 내려라"
+    },
+    {
+      "kind": "프린지",
+      "where": "frame_0000.png(582.9%), frame_0001.png(581.2%), frame_0002.png(597.5%), frame_0003.png(591.0%), frame_0004.png(626.1%), frame_0005.png(611.6%), frame_0006.png(609.7%), frame_0007.png(607.8%)",
+      "msg": "경계 대비 반투명 비율이 높다 (허용 22.0%) — 배경색이 번져 있을 수 있다. 크로마키 배경이면 `cutout --chroma` 를 써라"
+    }
+  ],
+  "crop": {
+    "mode": "warning-only",
+    "sides": {
+      "top": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 83,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "bottom": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 73,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "left": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 45,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "right": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 8,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      }
+    },
+    "perFrame": [
+      {
+        "name": "frame_0000.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 117,
+          "bottom": 75,
+          "left": 68,
+          "right": 79
+        }
+      },
+      {
+        "name": "frame_0001.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 130,
+          "bottom": 75,
+          "left": 61,
+          "right": 84
+        }
+      },
+      {
+        "name": "frame_0002.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 83,
+          "bottom": 74,
+          "left": 55,
+          "right": 75
+        }
+      },
+      {
+        "name": "frame_0003.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 116,
+          "bottom": 74,
+          "left": 45,
+          "right": 60
+        }
+      },
+      {
+        "name": "frame_0004.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 121,
+          "bottom": 74,
+          "left": 63,
+          "right": 8
+        }
+      },
+      {
+        "name": "frame_0005.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 133,
+          "bottom": 74,
+          "left": 65,
+          "right": 40
+        }
+      },
+      {
+        "name": "frame_0006.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 124,
+          "bottom": 73,
+          "left": 54,
+          "right": 48
+        }
+      },
+      {
+        "name": "frame_0007.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 122,
+          "bottom": 73,
+          "left": 62,
+          "right": 80
+        }
+      }
+    ]
+  },
+  "feel": {
+    "fps": 60,
+    "pace": {
+      "actionIntervalMs": 1200
+    },
+    "reducedMotion": {
+      "declared": true,
+      "disables": [
+        "flash"
+      ],
+      "scales": {
+        "shake": 0
+      }
+    },
+    "events": {},
+    "animation": {
+      "equalMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "accentMs": [
+        20,
+        30,
+        160,
+        16,
+        100,
+        24,
+        50,
+        60
+      ],
+      "cycleMs": 1200,
+      "phases": [
+        "준비",
+        "힘 모으기",
+        "검 들기",
+        "내려치기",
+        "타격 자세",
+        "끝까지 베기",
+        "회수",
+        "정리"
+      ],
+      "designNote": "사용자가 첫 비교의 차이가 약하다고 평가해 수정. 원작 타이밍이 아닌 실험값. 같은 그림으로 검 들기 160ms, 내려치기 16ms, 타격 자세 100ms를 대비한다."
+    }
+  },
+  "limitations": [
+    "Raw alpha retained; faint background pixels and holes need review",
+    "Shape IoU failure retained; action silhouette changes are not auto-approved",
+    "No gameplay integration, hit collision, or hit-stop test",
+    "Frame extraction only; no scaling or alignment correction"
+  ]
+}

@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+const root='out/experiments/silver-reference-slash-20261111';
+let code=fs.readFileSync(`${root}/build-motion-review.mjs`,'utf8');
+const oldLine=code.split('\n').find(l=>l.startsWith('const clips='));
+const clips=[{title:'이전 · 앞으로 뻗는 베기',version:'v3',count:6,durations:[20,190,16,100,74,60],phases:['준비','힘 모으기','전방으로 뻗기','타격 자세','회수','준비'],impactMs:226},{title:'수정 · 크게 돌아가는 베기',version:'v4',count:8,durations:[20,110,45,30,25,100,70,60],phases:['준비','검을 뒤로 빼기','머리 위로 돌기','전방 대각선 통과','수평 통과','아래까지 베기','회수','준비'],impactMs:230}];
+code=code.replace(oldLine,`const clips=${JSON.stringify(clips)};`);
+code=code.replaceAll('motion-feel.json','arc-feel.json').replaceAll('motion-evidence.json','arc-evidence.json').replaceAll('motion-review.html','arc-review.html');
+code=code.replace("`${root}/v3/qa/sprite-qa.json`","`${root}/v4/qa/sprite-qa.json`").replace("candidate:'v3'","candidate:'v4'").replace('frameCount:6','frameCount:8').replace('six key poses; recovery continuity and hand grip need human review','eight sweep poses; hand grip and angular continuity need human review');
+code=code.replace('리듬은 좋은데 문제가 모션 자체 같아 ㅋㅋ 휘두르는게 어색하고 멋있어 보이지 않아서 ㅋㅋ','칼을 좀 더 길게 휘둘렀으면 좋겠는데 지금은 뒤에서 그냥 찌르는 느낌임');
+code=code.replace('Per-clip constant display scale from ready-pose alpha>=128 bounds, fixed ready anchor; source PNGs unmodified. This is presentation matching, not pixel normalization.','Full-source RGBA row slicing and transparent padding; no scale, alpha or color edits. Preview uses fixed per-clip ready-pose display matching. See v4/manifest.json.');
+code=code.replace('은발 검객 · 모션 다시 만들기','은발 검객 · 큰 검 궤적').replace('MOTION REBUILD / 02','SWORD ARC / 03').replace('팔만 휘두르던 베기를 다시 만들었어요','검끝이 크게 돌아가는 베기');
+code=code.replace('뒷발로 밀고, 몸통을 돌리고, 앞발로 받아내기. 이번에는 서로 다른 그림을 같은 리듬으로 비교합니다.','뒤에서 머리 위를 돌아 전방 아래까지. 검 각도가 바뀌는 중간 자세를 추가했습니다.');
+code=code.replace('타격 자세 시작 226ms','타격 자세 시작 ${c.impactMs}ms');
+code=code.replace('몸의 움직임을 봐주세요','검끝이 지나가는 길을 봐주세요').replace('준비할 때의 몸통 방향, 뒷발이 밀리는 순간, 앞무릎에 체중이 실리는 자세를 비교합니다. 준비 자세의 표시 높이를 맞췄고, 같은 모션 안에서는 크기와 기준점을 고정했습니다.','0.5배속으로 검끝을 따라가 보세요. 뒤쪽 수평·머리 위 수직·전방 대각선·전방 수평·아래 방향으로 이어집니다. 수평 자세는 25ms만 지나가고, 아래까지 벤 자세에서 100ms 멈춥니다.');
+code=code.replace('6포즈 후보라 회수 동작과 손의 그립은 더 다듬을 수 있습니다.','새 8포즈 후보입니다. 손의 그립과 각도 사이의 연결은 더 다듬을 수 있습니다.').replace('새 6포즈 원본과 기록','새 8포즈 원본과 기록').replaceAll('raw/silver-slash-v3.png','raw/silver-slash-v4.png').replace('새 사선 베기 6포즈','큰 검 궤적 8포즈').replaceAll('v3/qa/sprite-qa.md','v4/qa/sprite-qa.md').replaceAll('prompt-body-study.txt','prompt-v4.txt').replaceAll('prompt-v3.txt','prompt-v4.txt').replace('6포즈 제작 프롬프트','검 궤적 프롬프트');
+code=code.replace('frameCount:6,qa:','frameCount:8,qa:').replace('impactMs:226,display:','impactMs:[226,230],display:');
+fs.writeFileSync(`${root}/build-arc-review.mjs`,code);

@@ -1,0 +1,1133 @@
+{
+  "createdAt": "2026-11-11T08:52:16.603Z",
+  "scope": "Silver sword animation reference study, v1-v6 and single-frame anatomy repair",
+  "hashNotes": "bytes records the publishing worktree size. hashMode utf8-lf normalizes CRLF to LF for cross-platform text verification; raw hashes preserve exact bytes.",
+  "excludes": [
+    "out/experiments/silver-reference-slash-20261111/references",
+    "out/experiments/silver-reference-slash-20261111/brief.json",
+    "out/experiments/silver-reference-slash-20261111/record-historical.mjs",
+    "out/resource-reference-20261111/inventory.json",
+    "out/resource-reference-20261111/reference-contact.png",
+    "personal task ledger",
+    "AI models"
+  ],
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 1018,
+      "hashMode": "utf8-lf",
+      "sha256": "c197f2e1619d6a07aea39cd730b31401a25446d44f430ee47422b5ddc1d66b49"
+    },
+    {
+      "path": ".review-loop/feedback/chr.silver.reference-slash-20261111.anatomy.json",
+      "bytes": 584,
+      "hashMode": "utf8-lf",
+      "sha256": "1174a28a61c1442da9144742b6222e444a498f7b41a1443d731aac0159527c27"
+    },
+    {
+      "path": ".review-loop/feedback/chr.silver.reference-slash-20261111.arc.json",
+      "bytes": 675,
+      "hashMode": "utf8-lf",
+      "sha256": "88e8ad85f2b7b368db5f2d9a291bb31c7ea17d18f96d6082b49933e5419452d5"
+    },
+    {
+      "path": ".review-loop/feedback/chr.silver.reference-slash-20261111.pose.json",
+      "bytes": 627,
+      "hashMode": "utf8-lf",
+      "sha256": "11457eb8490c884d9e56c687486d5a50326b27567ec1e074484ac45eeb635e9a"
+    },
+    {
+      "path": ".review-loop/feedback/chr.silver.reference-slash-20261111.timing.json",
+      "bytes": 511,
+      "hashMode": "utf8-lf",
+      "sha256": "44bbd5ac95c4610d26f29a267194ee4fd8e3ad19c22931733e19c25e87f77698"
+    },
+    {
+      "path": ".review-loop/items.json",
+      "bytes": 76678,
+      "hashMode": "utf8-lf",
+      "sha256": "02bd19d0255cf42314e95845c018165cea1c8c3094369eb26062af4e29bfbb95"
+    },
+    {
+      "path": "docs/art/2d-sprite-current-memory.md",
+      "bytes": 21306,
+      "hashMode": "utf8-lf",
+      "sha256": "957e6d98b44391504f7332c640c3e04df25a46dba13023b2465d05e2fd3d27fc"
+    },
+    {
+      "path": "docs/handoffs/2026-11-11-slash.md",
+      "bytes": 8617,
+      "hashMode": "utf8-lf",
+      "sha256": "a39152dbc45cfc837498dece6a102a7e3e10845f43d000d2e2fd09204402c270"
+    },
+    {
+      "path": "docs/handoffs/2026-11-11.md",
+      "bytes": 7253,
+      "hashMode": "utf8-lf",
+      "sha256": "d181ba1080424ec2e2d2aa376f7be4fd537b5e7098a2426e0b55b4e4389bd736"
+    },
+    {
+      "path": "out/day-handoff-20261111-slash/plugin.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/day-handoff-20261111-slash/plugin.stdout.log",
+      "bytes": 77,
+      "hashMode": "raw",
+      "sha256": "eccfea2af5c8db741370e474010775b21e02ea2596642aa0edde21b5e8d5023f"
+    },
+    {
+      "path": "out/day-handoff-20261111-slash/verification.json",
+      "bytes": 5029,
+      "hashMode": "raw",
+      "sha256": "a88364857ae86e7371d99fc2cf1eb71bd4c8f7e19f4e29ed541c180d8f5247cc"
+    },
+    {
+      "path": "out/day-handoff-20261111-slash/verify-publish.mjs",
+      "bytes": 5103,
+      "hashMode": "raw",
+      "sha256": "797d6b81fe2f33cf826fae0c74b75ebb81fc911cff029766c176879a228ada5a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/ARC-REVISION.md",
+      "bytes": 3104,
+      "hashMode": "raw",
+      "sha256": "3fc0cdcc27773f7bfe90116f189c23e3c619227ec3f3e44f36228758ce60937e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/ARM-REPAIR.md",
+      "bytes": 7176,
+      "hashMode": "raw",
+      "sha256": "dad041e61a36628302b63d713ba7e810bedfb055a5d21a08777bcf5d3cf8e58d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/HISTORICAL-STUDY.md",
+      "bytes": 9591,
+      "hashMode": "raw",
+      "sha256": "634f6e6401bea6b654ca0d0bf48dcc86dec6d453085e8076b92b8317232fae3a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/MOTION-REVISION.md",
+      "bytes": 3095,
+      "hashMode": "raw",
+      "sha256": "73e437b3a2df2c683d5505fb525715a0d80c4b0e1fe08e07f17479fc2a0237bb"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/REPORT.md",
+      "bytes": 3935,
+      "hashMode": "raw",
+      "sha256": "0537b65b60be26ed3de935c3cf9eeae8ae40a045477b833908ee35a62450e069"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/TIMING-REVISION.md",
+      "bytes": 1187,
+      "hashMode": "raw",
+      "sha256": "834941661eff635cc11bc64ba0352867c6fbb4cb1a6eca8181fcd4d7d88486d3"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/arc-browser-check.txt",
+      "bytes": 2490,
+      "hashMode": "raw",
+      "sha256": "6012af223f4801b9f859bb03d0ae5cd3f105882355c1ff0ee79bcc0b871c4c2b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/arc-desktop.png",
+      "bytes": 198098,
+      "hashMode": "raw",
+      "sha256": "9bb519c83df44d66187dd1a08886a882c2471172ef3d520c97b011895567a773"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/arc-evidence.json",
+      "bytes": 8709,
+      "hashMode": "raw",
+      "sha256": "0bed2f408178a96a40177ae23d1fb4e42ef1863b3b399740a28fa03146950d33"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/arc-feel.json",
+      "bytes": 3316,
+      "hashMode": "raw",
+      "sha256": "53f4cc2f368eb4a14d6dbff4f145d1e1fdb06354bc36cb67461ddfaa76e20725"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/arc-review.html",
+      "bytes": 8792,
+      "hashMode": "raw",
+      "sha256": "7d6d87f7379183b3b3370e489c7973add086a0d89bf2691eb8e78006d26f242f"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/armfix-317ms.png",
+      "bytes": 180443,
+      "hashMode": "raw",
+      "sha256": "bf5977a1e94ffc8f4191e8b5e1bcc9380862e8e0c2d7790923b589e758d1db78"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/armfix-browser-check.json",
+      "bytes": 1050,
+      "hashMode": "raw",
+      "sha256": "bc79a6061c89f8451b92fe731886e368d20b845307efda6a55f6e75ae14b05d7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/armfix-evidence.json",
+      "bytes": 9319,
+      "hashMode": "raw",
+      "sha256": "9bb595362ce2f18b2d79a6dbe349021a068ff5f36696276f41e361cde5191b8e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/armfix-feel.json",
+      "bytes": 3627,
+      "hashMode": "raw",
+      "sha256": "e8dc386c9e75d0be391b255a714e87e27fc186fcc48b00cdfdd8b9c17f5a8675"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/armfix-review.html",
+      "bytes": 9603,
+      "hashMode": "raw",
+      "sha256": "3397bedcdef7625927c626fefe348679946dc3d7e4a265a0401c119c605b3e2d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/baseline/art-gate-report.md",
+      "bytes": 2842,
+      "hashMode": "raw",
+      "sha256": "1c62bde676a30c5be63f18e76a1f3f4a323bd1b035e100a58c757660890f1a8c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/baseline/art-gate.json",
+      "bytes": 1296,
+      "hashMode": "raw",
+      "sha256": "e2164015652867564a1b7baa33c458dfbe1b23a01c6d3094ce179c296ed00b86"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-arc-review.mjs",
+      "bytes": 9185,
+      "hashMode": "raw",
+      "sha256": "273f1d517d863a3c25119e27f8698a65c7fe1e10cdafa2374d60474e460df0e7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-armfix-review.mjs",
+      "bytes": 9853,
+      "hashMode": "raw",
+      "sha256": "3b93962728457607a65fd16a6db9d257986269f38f8bfedbd002f988452fca16"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-historical-review.mjs",
+      "bytes": 9947,
+      "hashMode": "raw",
+      "sha256": "4e72db7abb390da306dee0619786320c15e7c261f0c349235db5c24d0af992ce"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-historical.mjs",
+      "bytes": 4424,
+      "hashMode": "raw",
+      "sha256": "abcaf6e724af1b755ac037da0b8f1d5dc5fecc5b524d28f7aa56e5bfa24612a6"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-motion-review.mjs",
+      "bytes": 9204,
+      "hashMode": "raw",
+      "sha256": "9c51b484c756efd1b6c654a2dc4a3c53e09288815d37420807fce2bee9291113"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/build-review.mjs",
+      "bytes": 10271,
+      "hashMode": "raw",
+      "sha256": "405c96afcda01ec5dfd5463a5fe17ac87df1a79e0971f6b6729a770faf33bf7a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/create-arc-builder.mjs",
+      "bytes": 3857,
+      "hashMode": "raw",
+      "sha256": "025bf9d25485d1539791fcda4170acc322be195a17c7a52b02e236f277fa154a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/evidence-before-feedback.json",
+      "bytes": 9557,
+      "hashMode": "raw",
+      "sha256": "43e1381c987d4648440c1476d86b48129aab5de8dddb7056f5df82bafba678d5"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/evidence.json",
+      "bytes": 9637,
+      "hashMode": "raw",
+      "sha256": "2fc51cc80f52f715171ae3878c4b6d7ec2965c0674cba3bb3e791b6f62e2651a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/feel-before-feedback.json",
+      "bytes": 779,
+      "hashMode": "raw",
+      "sha256": "0053bd866070a37c411643f596186e0cd1bf7b083c9bbf1d4d0f9c39475008a4"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/feel.json",
+      "bytes": 859,
+      "hashMode": "raw",
+      "sha256": "5327ebe79d375e1edba1b65d549b54c589261c68160f5fa4fca3f203abc1628e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/finalize-historical.mjs",
+      "bytes": 5365,
+      "hashMode": "raw",
+      "sha256": "a6dc896adaf6b36bb1388a9d22d4d17e17ed08381138a12cd5b64025b6f9fb63"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/historical-browser-check.json",
+      "bytes": 3535,
+      "hashMode": "raw",
+      "sha256": "86f6723e471cb51da617e82408fdb57ec7e9afb6e73935b5ccf8fee8e64e23e0"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/historical-desktop.png",
+      "bytes": 188345,
+      "hashMode": "raw",
+      "sha256": "3098f6ce37377af4285dcc31f32257ffe07b25a2e16deebfb178ae8e147713a1"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/historical-evidence.json",
+      "bytes": 9899,
+      "hashMode": "raw",
+      "sha256": "1043f716088a72e1430771387b2b1c34f16fbeaa9cf6e56dfe385f9962795a42"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/historical-feel.json",
+      "bytes": 3646,
+      "hashMode": "raw",
+      "sha256": "984400547ee3f32b15d13746317303b97a7d46fb99095c586903e6216be6ff68"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/historical-review.html",
+      "bytes": 9705,
+      "hashMode": "raw",
+      "sha256": "7ec812526759d73c19494b3532bd7c529f7a48dcddca56d3336eae6ce7247fb7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/inspect-arc-grid.mjs",
+      "bytes": 453,
+      "hashMode": "raw",
+      "sha256": "892e02cbf2b8e25b3168c474786a75df04bd03e76881032df18626d319c8cc04"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/motion-browser-check.txt",
+      "bytes": 1552,
+      "hashMode": "raw",
+      "sha256": "5f7ae98dee85da3b2d76f16fbdc441ecce0948211fff340e2dc74bb45c57ff5b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/motion-desktop.png",
+      "bytes": 191587,
+      "hashMode": "raw",
+      "sha256": "7893361b37afa35f5ee47e35c36926d464bc3ceb310dfb08f1d10a56a0602d71"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/motion-evidence.json",
+      "bytes": 7832,
+      "hashMode": "raw",
+      "sha256": "aae86b417fdab4a86f34faeb4c20cecd4afef280b01a90f1d95223b2f5403a3c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/motion-feel.json",
+      "bytes": 3253,
+      "hashMode": "raw",
+      "sha256": "54d409fe30ab221f5872ab9a599db5f4f2933417e0e0bbc5ee8c76645f5eefac"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/motion-review.html",
+      "bytes": 8790,
+      "hashMode": "raw",
+      "sha256": "39484bb42039f89568000396e361ffc47e738d1f96f5b04d162e3ca40675fd17"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prepare-arc.mjs",
+      "bytes": 2826,
+      "hashMode": "raw",
+      "sha256": "91620384d9e515a02325eff0bc245fe15cb060a75d69f900cf4712e3107ed956"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prepare-historical.mjs",
+      "bytes": 2784,
+      "hashMode": "raw",
+      "sha256": "bc940c0478446293787094012a352edf0573066412f8c9f4e92071a70b833851"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prepare.mjs",
+      "bytes": 2464,
+      "hashMode": "raw",
+      "sha256": "47cec4529f7d4cf20951a2e53af3ffd2fdde255ded313b8afdc39109565fc593"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/preview-desktop-light.png",
+      "bytes": 163216,
+      "hashMode": "raw",
+      "sha256": "6ccad6e3b3d70d3c8e0d557c3b0d8100bcdf475e73375e8e0be65721765b7e0c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/preview-mobile-dark.png",
+      "bytes": 71689,
+      "hashMode": "raw",
+      "sha256": "d5bfb7baa5901c2850bf2a9e74e948df6ac5a14c37269d763d59095fb8604a00"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-body-study.txt",
+      "bytes": 5048,
+      "hashMode": "raw",
+      "sha256": "ab900fdb74ba39465226963cce1bba538bd0c5a5dd2a50fbdbb853babff4db08"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v1.txt",
+      "bytes": 3376,
+      "hashMode": "raw",
+      "sha256": "9bf4f48ece1bbb733bf2bb6dd8b528e696f1e2931c96c687b83401bee60f8646"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v2.txt",
+      "bytes": 1319,
+      "hashMode": "raw",
+      "sha256": "bbb85c15271a07b0cedf6af6016872125798ff82b05c37d9e17c20d3a47b9293"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v3.txt",
+      "bytes": 3044,
+      "hashMode": "raw",
+      "sha256": "1a688d21fd424232153049be9300260dd5df1722b0f844b54f59a3ae110fbde1"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v4.txt",
+      "bytes": 3756,
+      "hashMode": "raw",
+      "sha256": "5c73fce7a0ad95352940f85700f70e9a5a2e30bc30f0f2e455dbcf4f6b9cbcae"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v5.txt",
+      "bytes": 3812,
+      "hashMode": "raw",
+      "sha256": "7370f9922fd32d0c74564e2982940746692a363d2a17dc0c0f508e68258861c7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/prompt-v6.txt",
+      "bytes": 1300,
+      "hashMode": "raw",
+      "sha256": "3c1b101a392aef9afc012e272a10dd318e37a32ac5fe3ba2fef65d6332edebad"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-body-study.png",
+      "bytes": 2183617,
+      "hashMode": "raw",
+      "sha256": "f28be022c0343c5bb5e6285ac8a14062bf2d6e6e92d6c43650cf708fdf3418bb"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v1.png",
+      "bytes": 2199229,
+      "hashMode": "raw",
+      "sha256": "ab1cea220747ccf1a0dc3c541861307b96ce0f9e189ccc4ef443d3761885fab8"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v2.png",
+      "bytes": 1901868,
+      "hashMode": "raw",
+      "sha256": "aea60f5debd0f7d60231ac2b36a8ec28ffd74e9b22484126590b05dd331eb0b0"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v3.png",
+      "bytes": 2138317,
+      "hashMode": "raw",
+      "sha256": "0da4a2f46169c5bbaa137bbe57141d96143c518920939d5c9a8730d0a1463550"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v4.png",
+      "bytes": 2210244,
+      "hashMode": "raw",
+      "sha256": "dfc976cf71c97389ef02183ae2a6ccdd82155759aa5d23c45501ea468667aa3b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v5.png",
+      "bytes": 1972209,
+      "hashMode": "raw",
+      "sha256": "95833732288cfb392c8e4b4d41fb98efb792f40f61a13a0de0398ac4ef7ffc9a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v6-repair-source.png",
+      "bytes": 1969014,
+      "hashMode": "raw",
+      "sha256": "0370faae5510ad996d9e38069c5e7a5b0ffdbaff3a98a915e8e6bd0969e6d7cd"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/repair-arm.mjs",
+      "bytes": 12209,
+      "hashMode": "raw",
+      "sha256": "3e1fd784e6a128c59fb703d264e3a4f17225babb2c2271584cd7d66625e0a018"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/review-before-feedback.html",
+      "bytes": 7260,
+      "hashMode": "raw",
+      "sha256": "3ccb3dea402a39cd695640878cde7dd836398aee0d6c57f2d1c40237b5b0eb0e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/review.html",
+      "bytes": 7830,
+      "hashMode": "raw",
+      "sha256": "97dff5d2758fe5f0ae519c35dd8d35bd814e479d5731b242dad9693500a6045b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/serve.mjs",
+      "bytes": 916,
+      "hashMode": "raw",
+      "sha256": "78cfb347655f0991a8e088d91538f9a958cc5e4441b73bd578ad2e3836b37032"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/timing-browser-check.txt",
+      "bytes": 994,
+      "hashMode": "raw",
+      "sha256": "ae0b0fd3e11e83a58afa319bdd68ed97e8b1ce63f3904a5bdcc8d7bdd765f877"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1-preparation.log",
+      "bytes": 10876,
+      "hashMode": "raw",
+      "sha256": "e53e801902a37af9976e7ff42ef4401222ff26973215c1363914afa55c841d5b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0000.png",
+      "bytes": 370305,
+      "hashMode": "raw",
+      "sha256": "9f0a78ffef723d9d17545a4cbcde816c456054d3b3265ac7b148402660497648"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0001.png",
+      "bytes": 369637,
+      "hashMode": "raw",
+      "sha256": "0ad5e324f5f8d716d1c09eb7833956c8d78c7a8f68871526124a4dbff59c8f41"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0002.png",
+      "bytes": 385925,
+      "hashMode": "raw",
+      "sha256": "3ac2e82bcf55ca2ceb265285004939329e472c641b4596f3282bc3f26237e1de"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0003.png",
+      "bytes": 369524,
+      "hashMode": "raw",
+      "sha256": "bfdd21db4fcfbace13c8f9efbbc35788c6d2aa2eb1be5a601a5d21ace3840835"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0004.png",
+      "bytes": 384758,
+      "hashMode": "raw",
+      "sha256": "f28ffba762b0ab9649438213a71294be9508e76dec8216b1010dc189fea23c54"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0005.png",
+      "bytes": 380417,
+      "hashMode": "raw",
+      "sha256": "94504dd9471973813e48bbf644aa2bc5bb03ab6ffbe0be56026d48bb0a9911c8"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0006.png",
+      "bytes": 376795,
+      "hashMode": "raw",
+      "sha256": "fb05ec3f2b916ac6995099addd2cb2ea7126f3172b511cb9a00750fca45ab7f6"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/frames/frame_0007.png",
+      "bytes": 370262,
+      "hashMode": "raw",
+      "sha256": "4b14e9cdffd55fbc1b6d75ba0268ffd814fdd74074d619f8979b8825a5a20f7c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/manifest.json",
+      "bytes": 5138,
+      "hashMode": "raw",
+      "sha256": "4f8d43d2a9066e4de13fc66e9cb045c672ad73331e2aa7f85cbf7dfeea8924f7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/motion-qa.stdout.log",
+      "bytes": 1127,
+      "hashMode": "raw",
+      "sha256": "320e05af299d5af45bc04d565d0a35acdd939583fbd62d4533d265604a8d39ca"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/qa/motion-qa.json",
+      "bytes": 21675,
+      "hashMode": "raw",
+      "sha256": "443735dae258cb173e33fc065fcc163d388882b2501aeffd8fc2af6ab290bede"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/qa/motion-qa.md",
+      "bytes": 1126,
+      "hashMode": "raw",
+      "sha256": "5f67888935b333baaf97e95c1c031cfd285c7c1e724a11f3e83b579f8552f1f6"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/qa/sprite-qa.json",
+      "bytes": 629646,
+      "hashMode": "raw",
+      "sha256": "633b867b71a309213244f981601c17deecf5f533c9bcb5d2e0d89f2b7064f174"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/qa/sprite-qa.md",
+      "bytes": 5192,
+      "hashMode": "raw",
+      "sha256": "377536db2374eeee7f91c44c0c452b4a9117aa46f28cbb926b8c35f9335ae427"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v1/sprite-qa.stdout.log",
+      "bytes": 5281,
+      "hashMode": "raw",
+      "sha256": "be529e3b69e60036128c7ab7dc35e445b4ca0ed68f19389bd2fa27bcadb1fedc"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2-preparation.log",
+      "bytes": 10862,
+      "hashMode": "raw",
+      "sha256": "1a7d5711b86e9d3259acbbbc405fbb18ac095be624f32c7c9c417f2b479299e5"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0000.png",
+      "bytes": 325812,
+      "hashMode": "raw",
+      "sha256": "e677e0a811cc8913a13e9d1df1bd23f270c06947ed3d25e75f1633befec56b47"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0001.png",
+      "bytes": 319540,
+      "hashMode": "raw",
+      "sha256": "1bf35341569535c0d3e3cb5e45d914681071ef21e7f30410950fa2dc171b936f"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0002.png",
+      "bytes": 341649,
+      "hashMode": "raw",
+      "sha256": "6a12ee7b89211a4734dab7336da9aa04df4359b4eb3903b777ebe973db5c33d7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0003.png",
+      "bytes": 323138,
+      "hashMode": "raw",
+      "sha256": "7346846b76b6e3eff40b914f728ce200794f614851ba4d4ce0ed4efb381ac03d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0004.png",
+      "bytes": 343614,
+      "hashMode": "raw",
+      "sha256": "a236d0644b5a6c0d84bd551fbf71cd5d96996fd0ad5b010601b80d3a63b7dcfb"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0005.png",
+      "bytes": 331377,
+      "hashMode": "raw",
+      "sha256": "47409c1110c19af17f9d006782afb17d684afe723714bf0c3186a11862600dd5"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0006.png",
+      "bytes": 329444,
+      "hashMode": "raw",
+      "sha256": "d533c403f587af2b5a67ddbd897f29894f86cfc2c2211f63e6577d1f53d24cba"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/frames/frame_0007.png",
+      "bytes": 326663,
+      "hashMode": "raw",
+      "sha256": "d3d32fc14b95156d6a8d5c43cbea02da1aa54db44a1b4fb86d5f8b63d720b532"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/manifest.json",
+      "bytes": 5131,
+      "hashMode": "raw",
+      "sha256": "a837ca5e78e1e3f73fb292dfef9313fb774b4a015cefd386e95b1f2d4b59302f"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/motion-qa.stdout.log",
+      "bytes": 1129,
+      "hashMode": "raw",
+      "sha256": "37972778f55ddf688d0eb29378c064fc7059d705581c44da20450c5470dd61c3"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/qa/motion-qa.json",
+      "bytes": 21438,
+      "hashMode": "raw",
+      "sha256": "bb97c832f6bbcf1b651c2c2fba50cea9b9e1d3eb41db0d3e36e5d40adba638c3"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/qa/motion-qa.md",
+      "bytes": 1128,
+      "hashMode": "raw",
+      "sha256": "9423a611f1a919d5b95b07aa6b7eef21d1862af44cf1c075cc1aaf1f3f1c67fc"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/qa/sprite-qa.json",
+      "bytes": 629674,
+      "hashMode": "raw",
+      "sha256": "3373ee39c23d0f43b3717a6afea10945e68aad32968f2f19b463aca56981bc58"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/qa/sprite-qa.md",
+      "bytes": 5402,
+      "hashMode": "raw",
+      "sha256": "615439f07017e84285704994e71dc552769e62d216c70fff7270f3ed74266796"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v2/sprite-qa.stdout.log",
+      "bytes": 5491,
+      "hashMode": "raw",
+      "sha256": "58c5e8a02645a168ad1d6ed125dd18c3102f810cd229a9d2dc91478a3eead1e4"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3-preparation.log",
+      "bytes": 10864,
+      "hashMode": "raw",
+      "sha256": "606af07845b21cc9f934ff9c45b6967c433b2c8acfaff6d4c0a7fc68bad7dac3"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0000.png",
+      "bytes": 472348,
+      "hashMode": "raw",
+      "sha256": "108fb1869b7ef1c37bc2ae2be05c15addce1744c8c0818b03454f013843135b9"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0001.png",
+      "bytes": 490592,
+      "hashMode": "raw",
+      "sha256": "d0c26c372cf9177434da6883a0942fa43609cfc467af49a66a19805bd17f5465"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0002.png",
+      "bytes": 493958,
+      "hashMode": "raw",
+      "sha256": "921366e166b1f208f6857910787f633dc88f559c32a6f1eb0fae09c7fdeaa29d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0003.png",
+      "bytes": 504327,
+      "hashMode": "raw",
+      "sha256": "aa69f2222ee5f31db3197f067046c6f1b094df8ac0be7da37f1a53b981265822"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0004.png",
+      "bytes": 504787,
+      "hashMode": "raw",
+      "sha256": "47e8e02cfadd73246aeab7eaf96a8e335f86d77e1ad7d84c7070176a9de2c81e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/frames/frame_0005.png",
+      "bytes": 474070,
+      "hashMode": "raw",
+      "sha256": "7009cc2c4421df1f10c4df9e999bf5283800e16b568a406ddc0e4132b2c6d23e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/manifest.json",
+      "bytes": 5132,
+      "hashMode": "raw",
+      "sha256": "f871b3a93b0958afba81a47093962843c3f81993686ea200c2d669e8f2648fa8"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/motion-qa.stdout.log",
+      "bytes": 1129,
+      "hashMode": "raw",
+      "sha256": "5f3b44757ebf1632a7e7d78a7d726201bb3fc670f00539b2ba5137edd520a2de"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/qa/motion-qa.json",
+      "bytes": 16847,
+      "hashMode": "raw",
+      "sha256": "36c173dc6fe8c97f1ca6b65b2bd10e23c029242913fb64705817b04df34cbfc7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/qa/motion-qa.md",
+      "bytes": 1128,
+      "hashMode": "raw",
+      "sha256": "0db4299610c5553dfa8a3dfed00a15b10de3a6c43ce02de873beb8a9058a024f"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/qa/sprite-qa.json",
+      "bytes": 472643,
+      "hashMode": "raw",
+      "sha256": "5163443f4558b754a5b683caefa49835795f643d6fe101721154e79151a90cae"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/qa/sprite-qa.md",
+      "bytes": 4758,
+      "hashMode": "raw",
+      "sha256": "968a2537b579e0fa19d8a83d5225a1afdb535831ecc17870a9d3c87d28a8c317"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v3/sprite-qa.stdout.log",
+      "bytes": 4847,
+      "hashMode": "raw",
+      "sha256": "8921c1d474cc14897efd8eda10586a1389ad95ac86685a249d7f17f3ba490940"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0000.png",
+      "bytes": 368621,
+      "hashMode": "raw",
+      "sha256": "6c3e4d5a4fc03b6214773b7790944f9ca888ccfb4a27d5d61cacdbdd44f36567"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0001.png",
+      "bytes": 386646,
+      "hashMode": "raw",
+      "sha256": "5e647492d2f2c8f627aec5720795c73c8301d4e0ecfede6c19f35ee597c97058"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0002.png",
+      "bytes": 397740,
+      "hashMode": "raw",
+      "sha256": "c695339302b4f44f644c3ba14127d1d946fda60366d99a2f0c145c3f522dd653"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0003.png",
+      "bytes": 410783,
+      "hashMode": "raw",
+      "sha256": "858fd1329717dcb240253d034bb109c13be21980558a2b313ac7c531d0fa1481"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0004.png",
+      "bytes": 404569,
+      "hashMode": "raw",
+      "sha256": "da667aa95c59b78493c9dcd38b00aabb2654ffa420b7deca87124fc3cc965605"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0005.png",
+      "bytes": 399648,
+      "hashMode": "raw",
+      "sha256": "786c0542740394d4c52806955cf8eaa08171af35e1e47150015cef671bcc9379"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0006.png",
+      "bytes": 405825,
+      "hashMode": "raw",
+      "sha256": "167af573c6361f71935ec68affa0c95916c641bf17e2dbc41a73426907b89353"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/frames/frame_0007.png",
+      "bytes": 386108,
+      "hashMode": "raw",
+      "sha256": "a176e224defdaad6e9c6670f1642b16fad32596fd96694e7890c47f47d6f499c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/manifest.json",
+      "bytes": 4351,
+      "hashMode": "raw",
+      "sha256": "689d30d7cf2920d3d961a238c953dac2e7cd7d7d56c0f5ca85a52f875dd52bab"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/motion-qa.stdout.log",
+      "bytes": 1127,
+      "hashMode": "raw",
+      "sha256": "ad2ee0e60add5540aa06c81b7241843de68d61d9c13b12480ab2d8d35e32b525"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/qa/motion-qa.json",
+      "bytes": 21867,
+      "hashMode": "raw",
+      "sha256": "514f94d88cef83071450e9209cbc04c4009013f1d9633c0d2ffb7bc37c3041d0"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/qa/motion-qa.md",
+      "bytes": 1126,
+      "hashMode": "raw",
+      "sha256": "b54eada94d13445e91a4f35e7c529b4f47861916580c4923002c3b866336bd4d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/qa/sprite-qa.json",
+      "bytes": 629454,
+      "hashMode": "raw",
+      "sha256": "f3a30aa9d8fd04aeb27b692474212a6a78c08431596f721f38547c2f5dac72a4"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/qa/sprite-qa.md",
+      "bytes": 5242,
+      "hashMode": "raw",
+      "sha256": "bbef66accbf8606680e3f516c7f65be208ba83ecde4d52bd045f456a966ba7b6"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v4/sprite-qa.stdout.log",
+      "bytes": 5331,
+      "hashMode": "raw",
+      "sha256": "42eb4506d47f844c419cfddcecb9c70c50fbc84f0253b0ea15e5193d817a2097"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0000.png",
+      "bytes": 355419,
+      "hashMode": "raw",
+      "sha256": "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0001.png",
+      "bytes": 360334,
+      "hashMode": "raw",
+      "sha256": "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0002.png",
+      "bytes": 369600,
+      "hashMode": "raw",
+      "sha256": "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0003.png",
+      "bytes": 362577,
+      "hashMode": "raw",
+      "sha256": "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0004.png",
+      "bytes": 368447,
+      "hashMode": "raw",
+      "sha256": "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0005.png",
+      "bytes": 363374,
+      "hashMode": "raw",
+      "sha256": "fb3aeffe599cc402f82cfbd52e3bf413d88793d4d6157dc6d67081b8734385e7"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0006.png",
+      "bytes": 365386,
+      "hashMode": "raw",
+      "sha256": "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0007.png",
+      "bytes": 363491,
+      "hashMode": "raw",
+      "sha256": "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/manifest.json",
+      "bytes": 4310,
+      "hashMode": "raw",
+      "sha256": "6dea18f07e904d73108cf2253bc6b33b00e023dd33fd9d911de0f0859f2edff4"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/motion-qa.stdout.log",
+      "bytes": 1128,
+      "hashMode": "raw",
+      "sha256": "2d838c1025e4c6fbc9e3fd8ec877741a120639bed986e63e93616b46bf5ca63a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/qa/motion-qa.json",
+      "bytes": 21708,
+      "hashMode": "raw",
+      "sha256": "cedae9f4b83e18420a62f3b26b93db7e20d7d7f732424f27a6e4c8be2aaeb259"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/qa/motion-qa.md",
+      "bytes": 1127,
+      "hashMode": "raw",
+      "sha256": "fdb971bb4eb93b1db6c620876fb449d1b921f27ba34a9ca65ee89f9cc1935858"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/qa/sprite-qa.json",
+      "bytes": 628802,
+      "hashMode": "raw",
+      "sha256": "25f795a89e303008faae88070bfb7927f35b960ba1fbe9579852a4bff2ba7e0d"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/qa/sprite-qa.md",
+      "bytes": 4562,
+      "hashMode": "raw",
+      "sha256": "b6929b4baa9c23a45a6fcc009bf3f381d3e720f8a2fbb7eb495836d9a6705c9e"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v5/sprite-qa.stdout.log",
+      "bytes": 4651,
+      "hashMode": "raw",
+      "sha256": "5d02c6d500b9fcdc301e226a72fddc9734f80b1efcd8448fe089107c092a5a78"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0000.png",
+      "bytes": 355419,
+      "hashMode": "raw",
+      "sha256": "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0001.png",
+      "bytes": 360334,
+      "hashMode": "raw",
+      "sha256": "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0002.png",
+      "bytes": 369600,
+      "hashMode": "raw",
+      "sha256": "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0003.png",
+      "bytes": 362577,
+      "hashMode": "raw",
+      "sha256": "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0004.png",
+      "bytes": 368447,
+      "hashMode": "raw",
+      "sha256": "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0005.png",
+      "bytes": 357138,
+      "hashMode": "raw",
+      "sha256": "5d9ddf4915b6a5c5580e7cd19551a3ae91a58e2d32aaf33df1e194ec2b8f98bb"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0006.png",
+      "bytes": 365386,
+      "hashMode": "raw",
+      "sha256": "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0007.png",
+      "bytes": 363491,
+      "hashMode": "raw",
+      "sha256": "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/manifest.json",
+      "bytes": 3018,
+      "hashMode": "raw",
+      "sha256": "245285f6e0572e47dd9d89b9b92d8866507587ab090039774665b06c4efabb0a"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/motion-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/motion-qa.stdout.log",
+      "bytes": 1128,
+      "hashMode": "raw",
+      "sha256": "85b5e59ddf15b93937fff9a5c3100930040fe7942ed6f6e5981e0cc90be0246b"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/qa/motion-qa.json",
+      "bytes": 21692,
+      "hashMode": "raw",
+      "sha256": "0f3df55dce4ab18a4265223ee1dc0ab44f65eecf398a363d675e759ccf0588dc"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/qa/motion-qa.md",
+      "bytes": 1127,
+      "hashMode": "raw",
+      "sha256": "edc402aec0ae5572ac3db8f65787b61ccb973cac8b70a44081a69c843a003239"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/qa/sprite-qa.json",
+      "bytes": 628802,
+      "hashMode": "raw",
+      "sha256": "3139d6c463af2b3d87875a9dbb5121ffd3191d6fcf8f295ed0e975846396ca96"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/qa/sprite-qa.md",
+      "bytes": 4562,
+      "hashMode": "raw",
+      "sha256": "52831b50e4ab7bba801f51b0bf71f85ece3e65bb4ac799622a495ebdb63b9e0c"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/sprite-qa.stderr.log",
+      "bytes": 0,
+      "hashMode": "raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "out/experiments/silver-reference-slash-20261111/v6/sprite-qa.stdout.log",
+      "bytes": 4651,
+      "hashMode": "raw",
+      "sha256": "619d425d5cfa72e899228026158f29e459abc7214320413ef9ff16fb6797543e"
+    },
+    {
+      "path": "out/resource-reference-20261111/REPORT.md",
+      "bytes": 4702,
+      "hashMode": "raw",
+      "sha256": "88c801a55e7548c547a839d2532a6125df7d7444326a19ea2097233f976037ce"
+    },
+    {
+      "path": "out/resource-reference-20261111/findings.json",
+      "bytes": 7227,
+      "hashMode": "raw",
+      "sha256": "d95ee22c8815701c7fb6e858ec3bfdd30e2c44e7a456157640ad7414aecb6a67"
+    },
+    {
+      "path": "out/resource-reference-20261111/focus.py",
+      "bytes": 1545,
+      "hashMode": "raw",
+      "sha256": "bd966fae63b2b215e623000135fdb12b6abe8169f6d2fe36f5c2f2011dbec9e7"
+    },
+    {
+      "path": "out/resource-reference-20261111/scan.py",
+      "bytes": 1916,
+      "hashMode": "raw",
+      "sha256": "f51c889274acb1116a21bd145f68e4ac8183e18ab8d7a84821a6c52fc50f9e48"
+    },
+    {
+      "path": "skill-observations/log.md",
+      "bytes": 15274,
+      "hashMode": "utf8-lf",
+      "sha256": "32d07bb367ec1304f5d4ebee3d8ae94bbbf80d9e5b70322406664e369b8b3602"
+    }
+  ],
+  "totalBytes": 37433023
+}

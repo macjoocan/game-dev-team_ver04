@@ -1,0 +1,331 @@
+{
+  "id": "chr.silver.reference-slash-20261111",
+  "candidate": "v3",
+  "status": "review",
+  "baseCommit": "bba068c",
+  "generator": "built-in image_gen",
+  "userFeedback": "리듬은 좋은데 문제가 모션 자체 같아 ㅋㅋ 휘두르는게 어색하고 멋있어 보이지 않아서 ㅋㅋ",
+  "references": [
+    "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v3.png",
+    "out/resource-reference-20261111/reference-contact.png"
+  ],
+  "frameCount": 6,
+  "frameSize": [
+    512,
+    512
+  ],
+  "crop": {
+    "mode": "warning-only",
+    "sides": {
+      "top": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 45,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "bottom": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 49,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "left": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 40,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "right": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 7,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      }
+    },
+    "perFrame": [
+      {
+        "name": "frame_0000.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 46,
+          "bottom": 49,
+          "left": 105,
+          "right": 102
+        }
+      },
+      {
+        "name": "frame_0001.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 60,
+          "bottom": 49,
+          "left": 59,
+          "right": 70
+        }
+      },
+      {
+        "name": "frame_0002.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 69,
+          "bottom": 49,
+          "left": 40,
+          "right": 54
+        }
+      },
+      {
+        "name": "frame_0003.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 53,
+          "bottom": 50,
+          "left": 47,
+          "right": 7
+        }
+      },
+      {
+        "name": "frame_0004.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 53,
+          "bottom": 49,
+          "left": 51,
+          "right": 53
+        }
+      },
+      {
+        "name": "frame_0005.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 45,
+          "bottom": 49,
+          "left": 77,
+          "right": 126
+        }
+      }
+    ]
+  },
+  "qaVerdict": "미달",
+  "foregroundBottomRange": 1,
+  "bounds": [
+    {
+      "x0": 105,
+      "y0": 46,
+      "x1": 409,
+      "y1": 462,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 59,
+      "y0": 60,
+      "x1": 441,
+      "y1": 462,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 40,
+      "y0": 69,
+      "x1": 457,
+      "y1": 462,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 47,
+      "y0": 53,
+      "x1": 504,
+      "y1": 461,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 51,
+      "y0": 53,
+      "x1": 458,
+      "y1": 462,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 77,
+      "y0": 45,
+      "x1": 385,
+      "y1": 462,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "feel": {
+    "cycleMs": 1200,
+    "clipMs": 460,
+    "impactMs": 226,
+    "display": {
+      "width": 512,
+      "height": 420,
+      "baselineY": 360,
+      "readyHeight": 270
+    },
+    "clips": [
+      {
+        "title": "이전 · 팔 중심의 베기",
+        "version": "v2",
+        "count": 8,
+        "durations": [
+          20,
+          30,
+          160,
+          16,
+          100,
+          24,
+          50,
+          60
+        ],
+        "phases": [
+          "준비",
+          "힘 모으기",
+          "검 들기",
+          "내려치기",
+          "타격 자세",
+          "끝까지 베기",
+          "회수",
+          "정리"
+        ],
+        "files": [
+          "v2/frames/frame_0000.png",
+          "v2/frames/frame_0001.png",
+          "v2/frames/frame_0002.png",
+          "v2/frames/frame_0003.png",
+          "v2/frames/frame_0004.png",
+          "v2/frames/frame_0005.png",
+          "v2/frames/frame_0006.png",
+          "v2/frames/frame_0007.png"
+        ],
+        "total": 460,
+        "readyBounds": {
+          "x0": 68,
+          "y0": 117,
+          "x1": 304,
+          "y1": 436,
+          "width": 384,
+          "height": 512
+        },
+        "render": {
+          "scale": 0.84375,
+          "anchorX": 186,
+          "anchorY": 436
+        },
+        "hashes": [
+          "e677e0a811cc8913a13e9d1df1bd23f270c06947ed3d25e75f1633befec56b47",
+          "1bf35341569535c0d3e3cb5e45d914681071ef21e7f30410950fa2dc171b936f",
+          "6a12ee7b89211a4734dab7336da9aa04df4359b4eb3903b777ebe973db5c33d7",
+          "7346846b76b6e3eff40b914f728ce200794f614851ba4d4ce0ed4efb381ac03d",
+          "a236d0644b5a6c0d84bd551fbf71cd5d96996fd0ad5b010601b80d3a63b7dcfb",
+          "47409c1110c19af17f9d006782afb17d684afe723714bf0c3186a11862600dd5",
+          "d533c403f587af2b5a67ddbd897f29894f86cfc2c2211f63e6577d1f53d24cba",
+          "d3d32fc14b95156d6a8d5c43cbea02da1aa54db44a1b4fb86d5f8b63d720b532"
+        ]
+      },
+      {
+        "title": "수정 · 몸을 싣는 사선 베기",
+        "version": "v3",
+        "count": 6,
+        "durations": [
+          20,
+          190,
+          16,
+          100,
+          74,
+          60
+        ],
+        "phases": [
+          "준비",
+          "몸을 틀어 힘 모으기",
+          "앞발로 디디며 베기",
+          "타격 자세",
+          "끝까지 베고 회수",
+          "준비로 복귀"
+        ],
+        "files": [
+          "v3/frames/frame_0000.png",
+          "v3/frames/frame_0001.png",
+          "v3/frames/frame_0002.png",
+          "v3/frames/frame_0003.png",
+          "v3/frames/frame_0004.png",
+          "v3/frames/frame_0005.png"
+        ],
+        "total": 460,
+        "readyBounds": {
+          "x0": 105,
+          "y0": 46,
+          "x1": 409,
+          "y1": 462,
+          "width": 512,
+          "height": 512
+        },
+        "render": {
+          "scale": 0.6474820143884892,
+          "anchorX": 257,
+          "anchorY": 462
+        },
+        "hashes": [
+          "108fb1869b7ef1c37bc2ae2be05c15addce1744c8c0818b03454f013843135b9",
+          "d0c26c372cf9177434da6883a0942fa43609cfc467af49a66a19805bd17f5465",
+          "921366e166b1f208f6857910787f633dc88f559c32a6f1eb0fae09c7fdeaa29d",
+          "aa69f2222ee5f31db3197f067046c6f1b094df8ac0be7da37f1a53b981265822",
+          "47e8e02cfadd73246aeab7eaf96a8e335f86d77e1ad7d84c7070176a9de2c81e",
+          "7009cc2c4421df1f10c4df9e999bf5283800e16b568a406ddc0e4132b2c6d23e"
+        ]
+      }
+    ]
+  },
+  "rendering": "Per-clip constant display scale from ready-pose alpha>=128 bounds, fixed ready anchor; source PNGs unmodified. This is presentation matching, not pixel normalization.",
+  "limits": [
+    "six key poses; recovery continuity and hand grip need human review",
+    "shape IoU failure and alpha warnings retained",
+    "no gameplay or hit collision integration"
+  ]
+}

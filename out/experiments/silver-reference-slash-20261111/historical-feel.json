@@ -1,0 +1,136 @@
+{
+  "cycleMs": 1200,
+  "clipMs": 460,
+  "impactMs": [
+    230,
+    240
+  ],
+  "display": {
+    "width": 512,
+    "height": 420,
+    "baselineY": 360,
+    "readyHeight": 270
+  },
+  "clips": [
+    {
+      "title": "이전 · 크게 돌아가는 베기",
+      "version": "v4",
+      "count": 8,
+      "durations": [
+        20,
+        110,
+        45,
+        30,
+        25,
+        100,
+        70,
+        60
+      ],
+      "phases": [
+        "준비",
+        "검을 뒤로 빼기",
+        "머리 위로 돌기",
+        "전방 대각선 통과",
+        "수평 통과",
+        "아래까지 베기",
+        "회수",
+        "준비"
+      ],
+      "impactMs": 230,
+      "files": [
+        "v4/frames/frame_0000.png",
+        "v4/frames/frame_0001.png",
+        "v4/frames/frame_0002.png",
+        "v4/frames/frame_0003.png",
+        "v4/frames/frame_0004.png",
+        "v4/frames/frame_0005.png",
+        "v4/frames/frame_0006.png",
+        "v4/frames/frame_0007.png"
+      ],
+      "total": 460,
+      "readyBounds": {
+        "x0": 88,
+        "y0": 120,
+        "x1": 341,
+        "y1": 460,
+        "width": 512,
+        "height": 512
+      },
+      "render": {
+        "scale": 0.7917888563049853,
+        "anchorX": 214.5,
+        "anchorY": 460
+      },
+      "hashes": [
+        "6c3e4d5a4fc03b6214773b7790944f9ca888ccfb4a27d5d61cacdbdd44f36567",
+        "5e647492d2f2c8f627aec5720795c73c8301d4e0ecfede6c19f35ee597c97058",
+        "c695339302b4f44f644c3ba14127d1d946fda60366d99a2f0c145c3f522dd653",
+        "858fd1329717dcb240253d034bb109c13be21980558a2b313ac7c531d0fa1481",
+        "da667aa95c59b78493c9dcd38b00aabb2654ffa420b7deca87124fc3cc965605",
+        "786c0542740394d4c52806955cf8eaa08171af35e1e47150015cef671bcc9379",
+        "167af573c6361f71935ec68affa0c95916c641bf17e2dbc41a73426907b89353",
+        "a176e224defdaad6e9c6670f1642b16fad32596fd96694e7890c47f47d6f499c"
+      ]
+    },
+    {
+      "title": "교본 참고 · 몸을 가로지르는 베기",
+      "version": "v5",
+      "count": 8,
+      "durations": [
+        20,
+        130,
+        35,
+        25,
+        30,
+        100,
+        60,
+        60
+      ],
+      "phases": [
+        "준비",
+        "높은 준비 자세",
+        "베기 시작",
+        "전방 통과",
+        "아래로 통과",
+        "반대편까지 마무리",
+        "회수",
+        "준비"
+      ],
+      "impactMs": 240,
+      "files": [
+        "v5/frames/frame_0000.png",
+        "v5/frames/frame_0001.png",
+        "v5/frames/frame_0002.png",
+        "v5/frames/frame_0003.png",
+        "v5/frames/frame_0004.png",
+        "v5/frames/frame_0005.png",
+        "v5/frames/frame_0006.png",
+        "v5/frames/frame_0007.png"
+      ],
+      "total": 460,
+      "readyBounds": {
+        "x0": 136,
+        "y0": 157,
+        "x1": 387,
+        "y1": 460,
+        "width": 512,
+        "height": 512
+      },
+      "render": {
+        "scale": 0.8881578947368421,
+        "anchorX": 261.5,
+        "anchorY": 460
+      },
+      "hashes": [
+        "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874",
+        "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333",
+        "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5",
+        "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b",
+        "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443",
+        "fb3aeffe599cc402f82cfbd52e3bf413d88793d4d6157dc6d67081b8734385e7",
+        "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018",
+        "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+      ]
+    }
+  ]
+}

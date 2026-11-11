@@ -1,0 +1,172 @@
+{
+  "source": "out/experiments/silver-reference-slash-20261111/raw/silver-slash-v5.png",
+  "sourceSha256": "95833732288cfb392c8e4b4d41fb98efb792f40f61a13a0de0398ac4ef7ffc9a",
+  "status": "review",
+  "frameCount": 8,
+  "frameSize": [
+    512,
+    512
+  ],
+  "sourceRowBoundaries": [
+    0,
+    384,
+    768,
+    1152,
+    1536
+  ],
+  "reason": "Regular 2-column / 4-row slicing. Foreground-free separator verified at alpha128. Full row RGBA copied without scaling, recoloring or alpha editing, then transparent padding aligns foreground bottom to460.",
+  "frames": [
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0000.png",
+      "sourceRect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        99
+      ],
+      "foregroundPixels": 31097,
+      "exactRgbaPreserved": true,
+      "sha256": "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0001.png",
+      "sourceRect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        98
+      ],
+      "foregroundPixels": 32425,
+      "exactRgbaPreserved": true,
+      "sha256": "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0002.png",
+      "sourceRect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        104
+      ],
+      "foregroundPixels": 34667,
+      "exactRgbaPreserved": true,
+      "sha256": "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0003.png",
+      "sourceRect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        104
+      ],
+      "foregroundPixels": 33268,
+      "exactRgbaPreserved": true,
+      "sha256": "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0004.png",
+      "sourceRect": [
+        0,
+        768,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        104
+      ],
+      "foregroundPixels": 34211,
+      "exactRgbaPreserved": true,
+      "sha256": "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0005.png",
+      "sourceRect": [
+        512,
+        768,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        104
+      ],
+      "foregroundPixels": 32665,
+      "exactRgbaPreserved": true,
+      "sha256": "fb3aeffe599cc402f82cfbd52e3bf413d88793d4d6157dc6d67081b8734385e7"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0006.png",
+      "sourceRect": [
+        0,
+        1152,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        101
+      ],
+      "foregroundPixels": 33763,
+      "exactRgbaPreserved": true,
+      "sha256": "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018"
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v5/frames/frame_0007.png",
+      "sourceRect": [
+        512,
+        1152,
+        512,
+        384
+      ],
+      "translation": [
+        0,
+        99
+      ],
+      "foregroundPixels": 32419,
+      "exactRgbaPreserved": true,
+      "sha256": "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+    }
+  ],
+  "runs": [
+    {
+      "tool": "sprite-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/silver-reference-slash-20261111/v5/frames",
+        "--out",
+        "out/experiments/silver-reference-slash-20261111/v5/qa"
+      ],
+      "exitCode": 0
+    },
+    {
+      "tool": "motion-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/motion-qa.mjs",
+        "out/experiments/silver-reference-slash-20261111/v5/frames",
+        "--out",
+        "out/experiments/silver-reference-slash-20261111/v5/qa",
+        "--gait",
+        "other"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

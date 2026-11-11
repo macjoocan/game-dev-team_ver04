@@ -231,3 +231,21 @@ Add a troubleshooting note to the 3D asset pipeline: if `uvx` reports cache init
 **Principle:** 이미지 외곽의 변화는 관절 이동량과 다르다. 사용자 모션 피드백은 자동 검사와 별도로 보존한다.
 
 **Reference file:** out/experiments/silver-gpt-qa-20261111/REPORT.md
+
+
+### Observation 13: 검사 통과 시트의 팔 중복은 정지 자세 검수로 발견됐다
+
+**Status:** OPEN
+**Date:** 2026-11-11
+**Session context:** 교본을 참고한 은발 베기와 317ms 팔 수정
+**Skill:** sprite-pipeline, visual-qa
+**Type:** open-source
+**Phase/Area:** 해부학적 오류와 부분 수정
+
+**Issue:** v5는 일반 정합성 검사를 통과했지만 사용자가 6번 자세의 팔 중복을 발견했다. 검사 값이 팔 개수나 관절 연결을 측정하지 않는다는 한계가 실제 생성물에서 드러났다.
+
+**Suggested improvement:** 최종 키포즈를 정지 화면으로 보고 팔·손·무기 연결을 따로 확인한다. 한 프레임만 고칠 때는 나머지 PNG의 해시 불변을 검사한다. 이번 v6에서는 7개 원본 파일을 유지하고 6번만 바꿨다. 아직 공용 스킬 규칙으로 승격하지 않는다.
+
+**Principle:** 정합성 통과는 신체 구조의 정확성을 보증하지 않는다.
+
+**Reference file:** out/experiments/silver-reference-slash-20261111/ARM-REPAIR.md

@@ -1,0 +1,313 @@
+{
+  "sourceRoots": "D:\\99.기타",
+  "rows": [
+    {
+      "label": "Wizard of Legend: KnightAttack 0-4 (filename order)",
+      "files": [
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightAttack0.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightAttack1.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightAttack2.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightAttack3.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightAttack4.png"
+      ]
+    },
+    {
+      "label": "Wizard of Legend: forehand / lunge / charge (different poses)",
+      "files": [
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightForehand0.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightForehand1.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightLunge0.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightCharge0.png",
+        "D:\\99.기타\\out_wizardoflegend\\WizardOfLegend_sprites\\Sprite\\KnightCharge1.png"
+      ]
+    },
+    {
+      "label": "Soulbound: Sword Attack E (metadata order)",
+      "files": [
+        "D:\\99.기타\\out_soulbound\\frames\\08748.png",
+        "D:\\99.기타\\out_soulbound\\frames\\08747.png",
+        "D:\\99.기타\\out_soulbound\\frames\\08739.png",
+        "D:\\99.기타\\out_soulbound\\frames\\08744.png",
+        "D:\\99.기타\\out_soulbound\\frames\\08754.png"
+      ]
+    },
+    {
+      "label": "Slayer Legend: AttackStyle source sheets",
+      "files": [
+        "D:\\99.기타\\out_slayerlegend\\SlayerLegend_sprites\\기타\\기타_Demon_AttackStyle_1_01.png",
+        "D:\\99.기타\\out_slayerlegend\\SlayerLegend_sprites\\기타\\기타_Demon_AttackStyle_1_02.png",
+        "D:\\99.기타\\out_slayerlegend\\SlayerLegend_sprites\\기타\\기타_Demon_AttackStyle_1_03.png"
+      ]
+    }
+  ],
+  "soulboundSwordAttack": {
+    "index": 1812,
+    "name": "sDCMobResurrectedPioneerSword_Attack_E",
+    "offset": 274648,
+    "size": [
+      96,
+      96
+    ],
+    "origin": [
+      48,
+      80
+    ],
+    "bbox": [
+      24,
+      86,
+      87,
+      24
+    ],
+    "frames": [
+      8748,
+      8747,
+      8739,
+      8744,
+      8754
+    ],
+    "version": 3,
+    "type": 0,
+    "speed": 30.0,
+    "speed_unit": 0,
+    "sequence_offset": 0,
+    "nine_slice_offset": 0
+  },
+  "soulboundSpeedCaveat": "Stored default; runtime speed and sequence body not verified",
+  "wizardTiming": "Not found in inspected sprite files and prefab samples",
+  "catgunner": [
+    {
+      "file": "spine/PillowGhost.txt",
+      "version": "4.1.24",
+      "bones": 14,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Ghost.txt",
+      "version": "4.1.24",
+      "bones": 14,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Frog.txt",
+      "version": "4.1.24",
+      "bones": 11,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.4,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Slime.txt",
+      "version": "4.1.24",
+      "bones": 7,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/PinkRabbit.txt",
+      "version": "4.1.24",
+      "bones": 11,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Slime2.txt",
+      "version": "4.1.24",
+      "bones": 10,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Pigeon.txt",
+      "version": "4.1.24",
+      "bones": 16,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.2,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Dove.txt",
+      "version": "4.1.24",
+      "bones": 15,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Chicken.txt",
+      "version": "4.1.24",
+      "bones": 14,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Acorn.txt",
+      "version": "4.1.24",
+      "bones": 13,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/BlackCat.txt",
+      "version": "4.1.24",
+      "bones": 12,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Bee.txt",
+      "version": "4.1.24",
+      "bones": 14,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    },
+    {
+      "file": "spine/Griffin.txt",
+      "version": "4.1.24",
+      "bones": 20,
+      "animations": [
+        "Attack",
+        "Busking",
+        "Idle",
+        "Walk"
+      ],
+      "attackLastKeyTime": 0.5,
+      "events": [
+        {
+          "time": 0.1667,
+          "name": "Attack"
+        }
+      ]
+    }
+  ]
+}

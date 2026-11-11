@@ -1,0 +1,406 @@
+{
+  "id": "chr.silver.reference-slash-20261111",
+  "candidate": "v6",
+  "status": "review",
+  "baseCommit": "bba068c",
+  "generator": "built-in image_gen",
+  "userFeedback": [
+    "오 이제 좀 괜찮네",
+    "지금 이미지 보니가 같은 시점으로 보기 317ms 이 부근에서 팔이 3개네 ㅋㅋㅋ"
+  ],
+  "references": [
+    "out/experiments/silver-gpt-qa-20261111/raw/silver-walk-v3.png",
+    "out/experiments/silver-reference-slash-20261111/references/meyer-1570-dusack-B.png"
+  ],
+  "frameCount": 8,
+  "frameSize": [
+    512,
+    512
+  ],
+  "crop": {
+    "mode": "warning-only",
+    "sides": {
+      "top": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 138,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "bottom": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 51,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "left": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 82,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      },
+      "right": {
+        "state": "none",
+        "count": 0,
+        "frames": [],
+        "minimumMarginPx": 55,
+        "declaredTightCrop": false,
+        "exempted": false,
+        "warning": false
+      }
+    },
+    "perFrame": [
+      {
+        "name": "frame_0000.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 157,
+          "bottom": 51,
+          "left": 136,
+          "right": 124
+        }
+      },
+      {
+        "name": "frame_0001.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 150,
+          "bottom": 51,
+          "left": 106,
+          "right": 150
+        }
+      },
+      {
+        "name": "frame_0002.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 138,
+          "bottom": 51,
+          "left": 107,
+          "right": 134
+        }
+      },
+      {
+        "name": "frame_0003.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 158,
+          "bottom": 51,
+          "left": 102,
+          "right": 55
+        }
+      },
+      {
+        "name": "frame_0004.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 153,
+          "bottom": 51,
+          "left": 116,
+          "right": 80
+        }
+      },
+      {
+        "name": "frame_0005.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 157,
+          "bottom": 51,
+          "left": 82,
+          "right": 143
+        }
+      },
+      {
+        "name": "frame_0006.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 157,
+          "bottom": 51,
+          "left": 120,
+          "right": 126
+        }
+      },
+      {
+        "name": "frame_0007.png",
+        "runs": {
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        },
+        "margins": {
+          "top": 155,
+          "bottom": 51,
+          "left": 122,
+          "right": 122
+        }
+      }
+    ]
+  },
+  "qaVerdict": "충족",
+  "foregroundBottomRange": 0,
+  "bounds": [
+    {
+      "x0": 136,
+      "y0": 157,
+      "x1": 387,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 106,
+      "y0": 150,
+      "x1": 361,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 107,
+      "y0": 138,
+      "x1": 377,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 102,
+      "y0": 158,
+      "x1": 456,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 116,
+      "y0": 153,
+      "x1": 431,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 82,
+      "y0": 157,
+      "x1": 368,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 120,
+      "y0": 157,
+      "x1": 385,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "x0": 122,
+      "y0": 155,
+      "x1": 389,
+      "y1": 460,
+      "width": 512,
+      "height": 512
+    }
+  ],
+  "feel": {
+    "cycleMs": 1200,
+    "clipMs": 460,
+    "impactMs": [
+      240,
+      240
+    ],
+    "display": {
+      "width": 512,
+      "height": 420,
+      "baselineY": 360,
+      "readyHeight": 270
+    },
+    "clips": [
+      {
+        "title": "수정 전 · 6번 자세 팔 중복",
+        "version": "v5",
+        "count": 8,
+        "durations": [
+          20,
+          130,
+          35,
+          25,
+          30,
+          100,
+          60,
+          60
+        ],
+        "phases": [
+          "준비",
+          "높은 준비 자세",
+          "베기 시작",
+          "전방 통과",
+          "아래로 통과",
+          "반대편까지 마무리",
+          "회수",
+          "준비"
+        ],
+        "impactMs": 240,
+        "files": [
+          "v5/frames/frame_0000.png",
+          "v5/frames/frame_0001.png",
+          "v5/frames/frame_0002.png",
+          "v5/frames/frame_0003.png",
+          "v5/frames/frame_0004.png",
+          "v5/frames/frame_0005.png",
+          "v5/frames/frame_0006.png",
+          "v5/frames/frame_0007.png"
+        ],
+        "total": 460,
+        "readyBounds": {
+          "x0": 136,
+          "y0": 157,
+          "x1": 387,
+          "y1": 460,
+          "width": 512,
+          "height": 512
+        },
+        "render": {
+          "scale": 0.8881578947368421,
+          "anchorX": 261.5,
+          "anchorY": 460
+        },
+        "hashes": [
+          "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874",
+          "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333",
+          "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5",
+          "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b",
+          "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443",
+          "fb3aeffe599cc402f82cfbd52e3bf413d88793d4d6157dc6d67081b8734385e7",
+          "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018",
+          "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+        ]
+      },
+      {
+        "title": "수정 후 · 여분의 팔 제거",
+        "version": "v6",
+        "count": 8,
+        "durations": [
+          20,
+          130,
+          35,
+          25,
+          30,
+          100,
+          60,
+          60
+        ],
+        "phases": [
+          "준비",
+          "높은 준비 자세",
+          "베기 시작",
+          "전방 통과",
+          "아래로 통과",
+          "반대편까지 마무리",
+          "회수",
+          "준비"
+        ],
+        "impactMs": 240,
+        "files": [
+          "v6/frames/frame_0000.png",
+          "v6/frames/frame_0001.png",
+          "v6/frames/frame_0002.png",
+          "v6/frames/frame_0003.png",
+          "v6/frames/frame_0004.png",
+          "v6/frames/frame_0005.png",
+          "v6/frames/frame_0006.png",
+          "v6/frames/frame_0007.png"
+        ],
+        "total": 460,
+        "readyBounds": {
+          "x0": 136,
+          "y0": 157,
+          "x1": 387,
+          "y1": 460,
+          "width": 512,
+          "height": 512
+        },
+        "render": {
+          "scale": 0.8881578947368421,
+          "anchorX": 261.5,
+          "anchorY": 460
+        },
+        "hashes": [
+          "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874",
+          "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333",
+          "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5",
+          "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b",
+          "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443",
+          "5d9ddf4915b6a5c5580e7cd19551a3ae91a58e2d32aaf33df1e194ec2b8f98bb",
+          "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018",
+          "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+        ]
+      }
+    ]
+  },
+  "rendering": "Full-source RGBA row slicing and transparent padding; no scale, alpha or color edits. Preview uses fixed per-clip ready-pose display matching. See v6/manifest.json.",
+  "limits": [
+    "Generated sixth pose corrected by imagegen; seven original PNGs unchanged",
+    "Alpha orphan/hole/fringe warnings remain",
+    "Anatomy visually inspected, not guaranteed by sprite QA",
+    "No game integration or historical accuracy approval"
+  ],
+  "changedFrames": [
+    5
+  ],
+  "unchangedFramesByteIdentical": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    7
+  ]
+}

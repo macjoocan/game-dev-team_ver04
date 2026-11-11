@@ -1,0 +1,14 @@
+{
+  "source": "user-conversation",
+  "recordedBy": "codex",
+  "date": "2026-11-11",
+  "itemKey": "chr.silver.reference-slash-20261111@5",
+  "quotes": [
+    "오 이제 좀 괜찮네",
+    "지금 이미지 보니가 같은 시점으로 보기 317ms 이 부근에서 팔이 3개네 ㅋㅋㅋ"
+  ],
+  "interpretation": "전체 동작에 긍정 반응이 있었지만 6번 자세의 팔 중복 결함을 발견했다.",
+  "response": "6번 자세만 새 생성 결과로 교체. 나머지 7장은 원본 바이트 유지.",
+  "productionApproval": false,
+  "commonRulePromotion": false
+}

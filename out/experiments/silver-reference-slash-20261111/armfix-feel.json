@@ -1,0 +1,136 @@
+{
+  "cycleMs": 1200,
+  "clipMs": 460,
+  "impactMs": [
+    240,
+    240
+  ],
+  "display": {
+    "width": 512,
+    "height": 420,
+    "baselineY": 360,
+    "readyHeight": 270
+  },
+  "clips": [
+    {
+      "title": "수정 전 · 6번 자세 팔 중복",
+      "version": "v5",
+      "count": 8,
+      "durations": [
+        20,
+        130,
+        35,
+        25,
+        30,
+        100,
+        60,
+        60
+      ],
+      "phases": [
+        "준비",
+        "높은 준비 자세",
+        "베기 시작",
+        "전방 통과",
+        "아래로 통과",
+        "반대편까지 마무리",
+        "회수",
+        "준비"
+      ],
+      "impactMs": 240,
+      "files": [
+        "v5/frames/frame_0000.png",
+        "v5/frames/frame_0001.png",
+        "v5/frames/frame_0002.png",
+        "v5/frames/frame_0003.png",
+        "v5/frames/frame_0004.png",
+        "v5/frames/frame_0005.png",
+        "v5/frames/frame_0006.png",
+        "v5/frames/frame_0007.png"
+      ],
+      "total": 460,
+      "readyBounds": {
+        "x0": 136,
+        "y0": 157,
+        "x1": 387,
+        "y1": 460,
+        "width": 512,
+        "height": 512
+      },
+      "render": {
+        "scale": 0.8881578947368421,
+        "anchorX": 261.5,
+        "anchorY": 460
+      },
+      "hashes": [
+        "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874",
+        "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333",
+        "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5",
+        "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b",
+        "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443",
+        "fb3aeffe599cc402f82cfbd52e3bf413d88793d4d6157dc6d67081b8734385e7",
+        "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018",
+        "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+      ]
+    },
+    {
+      "title": "수정 후 · 여분의 팔 제거",
+      "version": "v6",
+      "count": 8,
+      "durations": [
+        20,
+        130,
+        35,
+        25,
+        30,
+        100,
+        60,
+        60
+      ],
+      "phases": [
+        "준비",
+        "높은 준비 자세",
+        "베기 시작",
+        "전방 통과",
+        "아래로 통과",
+        "반대편까지 마무리",
+        "회수",
+        "준비"
+      ],
+      "impactMs": 240,
+      "files": [
+        "v6/frames/frame_0000.png",
+        "v6/frames/frame_0001.png",
+        "v6/frames/frame_0002.png",
+        "v6/frames/frame_0003.png",
+        "v6/frames/frame_0004.png",
+        "v6/frames/frame_0005.png",
+        "v6/frames/frame_0006.png",
+        "v6/frames/frame_0007.png"
+      ],
+      "total": 460,
+      "readyBounds": {
+        "x0": 136,
+        "y0": 157,
+        "x1": 387,
+        "y1": 460,
+        "width": 512,
+        "height": 512
+      },
+      "render": {
+        "scale": 0.8881578947368421,
+        "anchorX": 261.5,
+        "anchorY": 460
+      },
+      "hashes": [
+        "6b6173460bf2dc37a407f3a013b1c73eb0078f8f0a363fc57463d20aab513874",
+        "942081a15983b7214da27dd344a18996f6ccd0ad2c0b577e097bb7b09cb73333",
+        "2c1ab9f8f746f8b5ef1c509fd96bb0e2b139a45cd1c6f7bed078197decd38fb5",
+        "1de8580ee0a963d1c49d8adb2c04b114195147f9efaf51037f6c1deede14936b",
+        "aadd3034c71b5d82d9788a1bb461e43d1452ced99b69d7fe1e97cfe6ea925443",
+        "5d9ddf4915b6a5c5580e7cd19551a3ae91a58e2d32aaf33df1e194ec2b8f98bb",
+        "b0f1e82c57d969a6d2d26585368b1f6bfbf2f3b54905d102654db64a26769018",
+        "fc3c7349c0bc454ef852eb5e8efded06a35d6a5bf38980a66c4ebd3f7d2e61be"
+      ]
+    }
+  ]
+}

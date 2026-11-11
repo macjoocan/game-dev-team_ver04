@@ -1,0 +1,37 @@
+### Result
+{
+  contrast: {
+    playing: false,
+    once: false,
+    time: 250,
+    indices: [
+      3,
+      4
+    ],
+    speed: 1,
+    totals: [
+      640,
+      460
+    ]
+  },
+  end: {
+    playing: false,
+    once: true,
+    time: 640,
+    indices: [
+      7,
+      7
+    ],
+    speed: 1,
+    totals: [
+      640,
+      460
+    ]
+  },
+  loaded: true,
+  overflow: false
+}
+### Ran Playwright code
+```js
+await page.evaluate('async () => {window.preview.setTime(250);const contrast=window.preview.state;if(contrast.indices[0]!==3||contrast.indices[1]!==4)throw Error(\'Timing contrast mismatch\');document.getElementById(\'restart\').click();await new Promise(r=>setTimeout(r,850));const end=window.preview.state;if(end.playing||end.indices.some(i=>i!==7))throw Error(\'One-shot did not stop\');window.preview.setTime(0);return {contrast,end,loaded:[...document.querySelectorAll(\'.stage img\')].every(im=>im.naturalWidth===384),overflow:document.documentElement.scrollWidth>innerWidth};}');
+```

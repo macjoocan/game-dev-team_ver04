@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import {spawnSync} from 'node:child_process';
+const root='out/experiments/silver-reference-slash-20261111';
+let prep=fs.readFileSync(`${root}/prepare-arc.mjs`,'utf8').replaceAll('v4','v5').replace('[0,368,768,1152,1536]','[0,384,768,1152,1536]').replace('First row separator moved from384 to368 to preserve the overhead sword tip.','Regular 2-column / 4-row slicing.');
+fs.writeFileSync(`${root}/prepare-historical.mjs`,prep);
+let p=spawnSync(process.execPath,[`${root}/prepare-historical.mjs`],{encoding:'utf8'});console.log(p.stdout,p.stderr);if(p.status!==0)process.exit(p.status);
+let src=fs.readFileSync(`${root}/build-arc-review.mjs`,'utf8');
+const clips=[{title:'이전 · 크게 돌아가는 베기',version:'v4',count:8,durations:[20,110,45,30,25,100,70,60],phases:['준비','검을 뒤로 빼기','머리 위로 돌기','전방 대각선 통과','수평 통과','아래까지 베기','회수','준비'],impactMs:230},{title:'교본 참고 · 몸을 가로지르는 베기',version:'v5',count:8,durations:[20,130,35,25,30,100,60,60],phases:['준비','높은 준비 자세','베기 시작','전방 통과','아래로 통과','반대편까지 마무리','회수','준비'],impactMs:240}];
+src=src.replace(/const clips=.*?;\r?\n/,`const clips=${JSON.stringify(clips)};\n`);
+src=src.replaceAll('arc-feel','historical-feel').replaceAll('arc-evidence','historical-evidence').replaceAll('arc-review','historical-review').replaceAll('v4/qa','v5/qa').replaceAll("candidate:'v4'","candidate:'v5'").replaceAll('raw/silver-slash-v4.png','raw/silver-slash-v5.png').replaceAll('v4/manifest','v5/manifest').replaceAll('prompt-v4.txt','prompt-v5.txt').replaceAll('[226,230]','[230,240]');
+src=src.replace("'out/resource-reference-20261111/reference-contact.png'","'out/experiments/silver-reference-slash-20261111/references/meyer-1570-dusack-B.png'");
+src=src.replace('칼을 좀 더 길게 휘둘렀으면 좋겠는데 지금은 뒤에서 그냥 찌르는 느낌임','이거 인터넷 검색해서 실제 검술 도감 같은거 찾아서 그거 참고해서 함 해볼까');
+src=src.replaceAll('은발 검객 · 큰 검 궤적','은발 검객 · 검술 교본 참고').replace('SWORD ARC / 03','HISTORICAL STUDY / 04').replace('검끝이 크게 돌아가는 베기','검술 교본을 참고한 베기').replace('뒤에서 머리 위를 돌아 전방 아래까지. 검 각도가 바뀌는 중간 자세를 추가했습니다.','마이어의 1570년 두삭 교본을 참고했습니다. 높은 준비 자세와 몸 반대편까지 이어지는 마무리를 비교해 보세요.');
+src=src.replace('검끝이 지나가는 길을 봐주세요','검이 몸 반대편까지 이어지는지 봐주세요').replace('0.5배속으로 검끝을 따라가 보세요. 뒤쪽 수평·머리 위 수직·전방 대각선·전방 수평·아래 방향으로 이어집니다. 수평 자세는 25ms만 지나가고, 아래까지 벤 자세에서 100ms 멈춥니다.','0.5배속에서 5~6번 자세를 봐주세요. 앞쪽 아래로 벤 뒤, 검이 몸을 가로질러 반대편 아래까지 이어집니다. 두 시안 모두 460ms이며, 준비와 마무리 자세는 길게 보여줍니다.').replace('새 8포즈 후보입니다. 손의 그립과 각도 사이의 연결은 더 다듬을 수 있습니다. 일반 실루엣 검사 미달과 알파 경고도 남아 있습니다.','도판은 준비 자세 참고용이고 연속 동작은 새로 각색했습니다. 검술 고증이나 전문가 검수를 마친 결과가 아닙니다. 팔을 뻗는 중간 자세와 손목 연결은 추가 검토가 필요합니다. 일반 정합성 검사는 충족했지만, 반투명 테두리·작은 고아 픽셀·구멍 경고가 남았습니다.');
+src=src.replace('<details><summary>','<details><summary>참고한 원본 교본</summary><p>참고 도판은 아래 교본 링크에서 볼 수 있습니다. 스프라이트 재생에는 필요하지 않습니다.</p><p><a href="https://sprechfenster.org/meyer/1570/dusack-chapter-3-the-four-cuts/" target="_blank" rel="noopener">교본 3장 원문·번역</a> · <a href="HISTORICAL-STUDY.md">출처와 각색 범위</a></p></details><details><summary>');
+fs.writeFileSync(`${root}/build-historical-review.mjs`,src);
+p=spawnSync(process.execPath,[`${root}/build-historical-review.mjs`],{encoding:'utf8'});console.log(p.stdout,p.stderr);if(p.status!==0)process.exit(p.status);

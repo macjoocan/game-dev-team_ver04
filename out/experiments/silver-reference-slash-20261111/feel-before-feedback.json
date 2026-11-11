@@ -1,0 +1,50 @@
+{
+  "fps": 60,
+  "pace": {
+    "actionIntervalMs": 940
+  },
+  "reducedMotion": {
+    "declared": true,
+    "disables": [
+      "flash"
+    ],
+    "scales": {
+      "shake": 0
+    }
+  },
+  "events": {},
+  "animation": {
+    "equalMs": [
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80,
+      80
+    ],
+    "accentMs": [
+      100,
+      110,
+      75,
+      35,
+      55,
+      65,
+      100,
+      100
+    ],
+    "restMs": 300,
+    "phases": [
+      "준비",
+      "힘 모으기",
+      "검 들기",
+      "내려치기",
+      "타격 자세",
+      "끝까지 베기",
+      "회수",
+      "정리"
+    ],
+    "designNote": "이번 후보용 수동 타이밍. 원작의 실제 재생 시간이나 피해 판정 시간을 복원한 값이 아님."
+  }
+}

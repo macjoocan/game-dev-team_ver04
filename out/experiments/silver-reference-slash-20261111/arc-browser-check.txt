@@ -1,0 +1,142 @@
+### Result
+{
+  points: [
+    {
+      ready: true,
+      playing: false,
+      time: 100,
+      speed: 1,
+      indices: [
+        1,
+        1
+      ],
+      counts: [
+        6,
+        8
+      ],
+      totals: [
+        460,
+        460
+      ],
+      impactMs: [
+        226,
+        230
+      ]
+    },
+    {
+      ready: true,
+      playing: false,
+      time: 145,
+      speed: 1,
+      indices: [
+        1,
+        2
+      ],
+      counts: [
+        6,
+        8
+      ],
+      totals: [
+        460,
+        460
+      ],
+      impactMs: [
+        226,
+        230
+      ]
+    },
+    {
+      ready: true,
+      playing: false,
+      time: 185,
+      speed: 1,
+      indices: [
+        1,
+        3
+      ],
+      counts: [
+        6,
+        8
+      ],
+      totals: [
+        460,
+        460
+      ],
+      impactMs: [
+        226,
+        230
+      ]
+    },
+    {
+      ready: true,
+      playing: false,
+      time: 215,
+      speed: 1,
+      indices: [
+        2,
+        4
+      ],
+      counts: [
+        6,
+        8
+      ],
+      totals: [
+        460,
+        460
+      ],
+      impactMs: [
+        226,
+        230
+      ]
+    },
+    {
+      ready: true,
+      playing: false,
+      time: 250,
+      speed: 1,
+      indices: [
+        3,
+        5
+      ],
+      counts: [
+        6,
+        8
+      ],
+      totals: [
+        460,
+        460
+      ],
+      impactMs: [
+        226,
+        230
+      ]
+    }
+  ],
+  end: {
+    ready: true,
+    playing: false,
+    time: 460,
+    speed: 1,
+    indices: [
+      5,
+      7
+    ],
+    counts: [
+      6,
+      8
+    ],
+    totals: [
+      460,
+      460
+    ],
+    impactMs: [
+      226,
+      230
+    ]
+  },
+  overflow: false
+}
+### Ran Playwright code
+```js
+await page.evaluate('async () => {await new Promise(r=>setTimeout(r,250));if(!window.motionPreview.state.ready)throw Error(\'Not ready\');const points=[100,145,185,215,250].map(t=>{window.motionPreview.seek(t);return window.motionPreview.state});if(points.map(p=>p.indices[1]).join(\',\')!==\'1,2,3,4,5\')throw Error(\'Sweep order mismatch\');document.getElementById(\'once\').click();await new Promise(r=>setTimeout(r,650));const end=window.motionPreview.state;if(end.playing||end.indices[1]!==7)throw Error(\'One-shot failed\');document.getElementById(\'bg\').value=\'light\';document.getElementById(\'bg\').dispatchEvent(new Event(\'change\'));window.motionPreview.seek(145);return {points,end,overflow:document.documentElement.scrollWidth>innerWidth};}');
+```

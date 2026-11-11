@@ -21,3 +21,7 @@
 /skills/sprite-pipeline/scripts/*.mjs -text
 /plugins/game-dev-team/skills/sprite-pipeline/scripts/*.mjs -text
 /test/sprite-motion-qa.test.mjs -text
+
+/out/day-handoff-20261111-slash/** -text
+
+/out/resource-reference-20261111/** -text
