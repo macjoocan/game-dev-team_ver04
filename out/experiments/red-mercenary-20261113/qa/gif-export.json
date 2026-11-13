@@ -1,0 +1,32 @@
+[
+  {
+    "path": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\red-mercenary-20261113\\gifs\\2h-slash-fx.gif",
+    "frames": 17,
+    "durationMs": 1000,
+    "size": [
+      420,
+      360
+    ],
+    "sha256": "c7cf6884d88414bcc20cdfa9451f55484c8572e158fa1740af1dc3e35ec13bc2"
+  },
+  {
+    "path": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\red-mercenary-20261113\\gifs\\3h-slash-fx.gif",
+    "frames": 17,
+    "durationMs": 1000,
+    "size": [
+      420,
+      360
+    ],
+    "sha256": "97df6b47be52d81386a5bf0bddfb8507b04b050553770c49ed71dba19ef62a29"
+  },
+  {
+    "path": "C:\\00.SVN\\game-dev-team_ver04\\out\\experiments\\red-mercenary-20261113\\gifs\\5h-slash-fx.gif",
+    "frames": 17,
+    "durationMs": 1000,
+    "size": [
+      420,
+      360
+    ],
+    "sha256": "b95f1dc399122f0fbab41b8357909549c2724207de6e45a6d7c671dad1c204e4"
+  }
+]

@@ -1,0 +1,14 @@
+✔ one press performs only first attack (2.5861ms)
+✔ fast three presses queue exactly three consecutive attacks (0.3481ms)
+✔ root advances without snapping backward and retains landing position (1.4611ms)
+✔ out of reach means no hits and no hit stop (0.4803ms)
+✔ spin has two authored hit windows without duplicate hits (0.285ms)
+✔ reduced motion does not alter hit results (0.2339ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1193.6228

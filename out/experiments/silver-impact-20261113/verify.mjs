@@ -1,0 +1,7 @@
+import fs from 'node:fs';import crypto from 'node:crypto';import {spawnSync} from 'node:child_process';
+const root='out/experiments/silver-impact-20261113',runs=[];
+const commands=[['model-tests',['--test',`${root}/model.test.mjs`]],['feel-audit',['skills/polish/scripts/feel-audit.mjs',`${root}/feel.json`,'--out',`${root}/qa/feel`]],...['normal','reduced','light'].map(mode=>['flash-'+mode,['skills/polish/scripts/flash-check.mjs',`${root}/capture-v8/${mode}`,'--fps','50','--loop','--blend','normal','--out',`${root}/qa/flash-${mode}`]])];
+for(const [name,args]of commands){const r=spawnSync(process.execPath,args,{encoding:'utf8',maxBuffer:4*1024*1024});fs.writeFileSync(`${root}/qa/${name}.stdout.log`,r.stdout||'');fs.writeFileSync(`${root}/qa/${name}.stderr.log`,r.stderr||'');runs.push({name,args,exitCode:r.status});}
+const original=JSON.parse(fs.readFileSync('out/experiments/silver-reference-slash-20261111/v6/manifest.json','utf8'));
+const unchanged=original.frames.map(f=>({file:f.file,same:crypto.createHash('sha256').update(fs.readFileSync(f.file)).digest('hex')===f.sha256}));
+const result={commit:spawnSync('git',['rev-parse','HEAD'],{encoding:'utf8'}).stdout.trim(),runs,originalV6Unchanged:unchanged,browser:JSON.parse(fs.readFileSync(`${root}/qa/browser-v8.json`,'utf8'))};fs.writeFileSync(`${root}/qa/verification.json`,JSON.stringify(result,null,2));console.log(JSON.stringify({runs,originalV6Unchanged:unchanged.every(f=>f.same)}));

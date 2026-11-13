@@ -1,0 +1,103 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1566,
+      "lonely": 0.3550446998722861,
+      "flat": 0.02681992337164751,
+      "semi": 0,
+      "bad": [
+        "외톨이 35.5%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1536,
+      "lonely": 0.3756510416666667,
+      "flat": 0.025390625,
+      "semi": 0,
+      "bad": [
+        "외톨이 37.6%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1506,
+      "lonely": 0.3791500664010624,
+      "flat": 0.034528552456839307,
+      "semi": 0,
+      "bad": [
+        "외톨이 37.9%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1506,
+      "lonely": 0.36719787516600266,
+      "flat": 0.034528552456839307,
+      "semi": 0,
+      "bad": [
+        "외톨이 36.7%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0004.png",
+      "name": "frame_0004.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1433,
+      "lonely": 0.3377529658060014,
+      "flat": 0.03210048848569435,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0005.png",
+      "name": "frame_0005.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1498,
+      "lonely": 0.36114819759679573,
+      "flat": 0.02336448598130841,
+      "semi": 0,
+      "bad": [
+        "외톨이 36.1%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0006.png",
+      "name": "frame_0006.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1503,
+      "lonely": 0.32801064537591484,
+      "flat": 0.021290751829673986,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\slash\\frame_0007.png",
+      "name": "frame_0007.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1535,
+      "lonely": 0.3283387622149837,
+      "flat": 0.028013029315960912,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 5
+}

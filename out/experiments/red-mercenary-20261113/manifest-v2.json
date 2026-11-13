@@ -1,0 +1,1384 @@
+{
+  "id": "chr.red-mercenary.motion-20261113",
+  "status": "review",
+  "productionApproved": false,
+  "tool": "PixelOE 1.0.1",
+  "device": "cuda",
+  "settings": {
+    "pixel_size": 4,
+    "thickness": 1,
+    "mode": "contrast",
+    "colors": 32,
+    "dither": false,
+    "alphaThreshold": 128
+  },
+  "note": "PixelOE RGB plus source alpha mask and fixed cast palette; target head proportions are art direction, not anatomical measurement.",
+  "seconds": 4.14,
+  "sourceUnchanged": true,
+  "clips": [
+    {
+      "heads": 2,
+      "motion": "idle",
+      "canvas": [
+        64,
+        64
+      ],
+      "frames": 8,
+      "durationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "gifDurationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "displayZoom": 4,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 919
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 919
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 913
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 889
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 889
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 913
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 919
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 919
+        }
+      ],
+      "frameFolder": "pixel-idle-v2/2h",
+      "sourceFrameOrder": [
+        0,
+        0,
+        4,
+        5,
+        5,
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "canvas": [
+        64,
+        64
+      ],
+      "frames": 8,
+      "durationsMs": [
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85
+      ],
+      "gifDurationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "displayZoom": 4,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 918
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 876
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 836
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 820
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 885
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 868
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 836
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 846
+        }
+      ]
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "canvas": [
+        64,
+        64
+      ],
+      "frames": 8,
+      "durationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "gifDurationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "displayZoom": 4,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 866
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 793
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 780
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 786
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 811
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 766
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 763
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 772
+        }
+      ]
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "canvas": [
+        64,
+        64
+      ],
+      "frames": 8,
+      "durationsMs": [
+        20,
+        70,
+        25,
+        35,
+        30,
+        85,
+        60,
+        55
+      ],
+      "gifDurationsMs": [
+        20,
+        70,
+        20,
+        30,
+        30,
+        80,
+        60,
+        670
+      ],
+      "displayZoom": 4,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 904
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 857
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 861
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 892
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 825
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 847
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 887
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 901
+        }
+      ]
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "canvas": [
+        64,
+        64
+      ],
+      "frames": 8,
+      "durationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        80
+      ],
+      "gifDurationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        700
+      ],
+      "displayZoom": 4,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 903
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 879
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 908
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 938
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 890
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 840
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 884
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 893
+        }
+      ]
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "canvas": [
+        96,
+        96
+      ],
+      "frames": 8,
+      "durationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "gifDurationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "displayZoom": 3,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1560
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1560
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1526
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1521
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1521
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1526
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1560
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1560
+        }
+      ],
+      "frameFolder": "pixel-idle-v2/3h",
+      "sourceFrameOrder": [
+        0,
+        0,
+        4,
+        5,
+        5,
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "canvas": [
+        96,
+        96
+      ],
+      "frames": 8,
+      "durationsMs": [
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85
+      ],
+      "gifDurationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "displayZoom": 3,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1560
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1427
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1372
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1318
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1503
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1421
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1371
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1303
+        }
+      ]
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "canvas": [
+        96,
+        96
+      ],
+      "frames": 8,
+      "durationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "gifDurationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "displayZoom": 3,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1612
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1429
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1429
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1393
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1548
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1444
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1389
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1371
+        }
+      ]
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "canvas": [
+        96,
+        96
+      ],
+      "frames": 8,
+      "durationsMs": [
+        20,
+        70,
+        25,
+        35,
+        30,
+        85,
+        60,
+        55
+      ],
+      "gifDurationsMs": [
+        20,
+        70,
+        20,
+        30,
+        30,
+        80,
+        60,
+        670
+      ],
+      "displayZoom": 3,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1566
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1536
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1506
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1506
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1433
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1498
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1503
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1535
+        }
+      ]
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "canvas": [
+        96,
+        96
+      ],
+      "frames": 8,
+      "durationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        80
+      ],
+      "gifDurationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        700
+      ],
+      "displayZoom": 3,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1542
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1538
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1667
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1706
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1615
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1570
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1562
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 1528
+        }
+      ]
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "canvas": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "durationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "gifDurationsMs": [
+        200,
+        160,
+        240,
+        240,
+        240,
+        240,
+        160,
+        200
+      ],
+      "displayZoom": 2,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2656
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2656
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2673
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2671
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2671
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2673
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2656
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2656
+        }
+      ],
+      "frameFolder": "pixel-idle-v2/5h",
+      "sourceFrameOrder": [
+        0,
+        0,
+        4,
+        5,
+        5,
+        4,
+        0,
+        0
+      ]
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "canvas": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "durationsMs": [
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85
+      ],
+      "gifDurationsMs": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "displayZoom": 2,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2725
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2442
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2302
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2475
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2550
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2417
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2335
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2436
+        }
+      ]
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "canvas": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "durationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "gifDurationsMs": [
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60,
+        60
+      ],
+      "displayZoom": 2,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2603
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2235
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2128
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2307
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2435
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2265
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2199
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2121
+        }
+      ]
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "canvas": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "durationsMs": [
+        20,
+        70,
+        25,
+        35,
+        30,
+        85,
+        60,
+        55
+      ],
+      "gifDurationsMs": [
+        20,
+        70,
+        20,
+        30,
+        30,
+        80,
+        60,
+        670
+      ],
+      "displayZoom": 2,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2528
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2502
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2373
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2425
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2313
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2128
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2576
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2484
+        }
+      ]
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "canvas": [
+        128,
+        128
+      ],
+      "frames": 8,
+      "durationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        80
+      ],
+      "gifDurationsMs": [
+        30,
+        40,
+        70,
+        100,
+        60,
+        60,
+        60,
+        700
+      ],
+      "displayZoom": 2,
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2608
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2539
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2686
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2759
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2538
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2441
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2580
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0,
+          "foregroundPixels": 2593
+        }
+      ]
+    }
+  ],
+  "revision": 2,
+  "feedback": {
+    "quote": "대기쪽 마지막 모션에 너무 주저 앉듯이 앉아서",
+    "source": "user conversation",
+    "change": "Idle only: reuse standing poses 0, 4, 5; remove lower poses; identical first/last frame; 1680ms loop."
+  },
+  "userFeedback": {
+    "date": "2026-11-13",
+    "quote": "어 딱좋은디",
+    "scope": "Idle v2 appearance in the comparison preview; positive feedback, not an engine or production gate."
+  }
+}

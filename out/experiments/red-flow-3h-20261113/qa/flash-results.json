@@ -1,0 +1,79 @@
+[
+  {
+    "id": "chain",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/chain",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "chain-light",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/chain-light",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "chain-reduced",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/chain-reduced",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "dust",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/dust",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "dust-off",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/dust-off",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "escape",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/escape",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  },
+  {
+    "id": "guard",
+    "args": [
+      "skills/polish/scripts/flash-check.mjs",
+      "out/experiments/red-flow-3h-20261113/qa/captures/guard",
+      "--fps",
+      "25",
+      "--loop"
+    ],
+    "exitCode": 0
+  }
+]

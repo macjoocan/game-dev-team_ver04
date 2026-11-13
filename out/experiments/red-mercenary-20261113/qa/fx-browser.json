@@ -1,0 +1,14 @@
+{
+  "fxChangesPixels": true,
+  "reducedMatchesFxOff": true,
+  "frames": 150,
+  "modes": [
+    "normal",
+    "light",
+    "reduced"
+  ],
+  "dimensions": [
+    1260,
+    360
+  ]
+}

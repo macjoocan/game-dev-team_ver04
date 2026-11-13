@@ -1,0 +1,9 @@
+import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {sample,contactGeometry,frameAt,segmentRect} from './model.mjs';
+const cfg=JSON.parse(fs.readFileSync(new URL('./feel.json',import.meta.url))),c=cfg.demo.clips[1];
+test('near sword segment intersects target, far target does not',()=>{assert.equal(contactGeometry(cfg,c,true).hit,true);assert.equal(contactGeometry(cfg,c,false).hit,false);});
+test('contact pauses animation once for four frames',()=>{const a=sample(cfg,1,130),b=sample(cfg,1,180),z=sample(cfg,1,210);assert.equal(a.frame,3);assert.equal(a.time,b.time);assert.equal(b.hitCount,1);assert.equal(b.stopping,true);assert.ok(z.time>130);assert.equal(z.hitCount,1);});
+test('whiff has no stop, recoil, spark or hit',()=>{const s=sample(cfg,1,180,{target:false});assert.equal(s.time,180);assert.equal(s.hitStopMs,0);assert.equal(s.recoil,0);assert.equal(s.spark,false);assert.equal(s.hit,false);});
+test('feedback toggle preserves pose timing without stop',()=>{const s=sample(cfg,1,180,{feedback:false});assert.equal(s.time,180);assert.equal(s.recoil,0);assert.equal(s.trail,false);});
+test('reduced motion disables shake and transient effects without changing hit',()=>{const a=sample(cfg,1,150),b=sample(cfg,1,150,{reduced:true});assert.equal(a.hit,b.hit);assert.equal(a.time,b.time);assert.equal(b.shake,0);assert.equal(b.trail,false);assert.equal(b.spark,false);});
+test('animation preserves forward root after recovery',()=>{const s=sample(cfg,1,900);assert.equal(s.frame,7);assert.equal(s.root,20);assert.equal(s.complete,true);assert.equal(s.recoil,0);});
+test('boundary frame lookup and collision reject nonintersection',()=>{assert.equal(frameAt(115,c.durations),3);assert.equal(frameAt(380,c.durations),7);assert.equal(segmentRect([0,0],[10,0],{x0:2,x1:4,y0:1,y1:2}),false);});

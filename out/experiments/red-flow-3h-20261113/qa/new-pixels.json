@@ -1,0 +1,89 @@
+{
+  "device": "cuda",
+  "frames": [
+    {
+      "action": "evade",
+      "frame": 0,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 1,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 2,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 3,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 4,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 5,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 6,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "evade",
+      "frame": 7,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "guard",
+      "frame": 0,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "guard",
+      "frame": 1,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "guard",
+      "frame": 2,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    },
+    {
+      "action": "guard",
+      "frame": 3,
+      "colors": 32,
+      "borderPixels": 0,
+      "semiAlpha": 0
+    }
+  ]
+}

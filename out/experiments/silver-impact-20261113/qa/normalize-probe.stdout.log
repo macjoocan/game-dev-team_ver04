@@ -1,0 +1,12 @@
+
+규격 통일 — 8장 · 캔버스 512x512 · 높이 86% · 기준 bottom
+  frame_0000.png  297x 322 -> 297x322  비율 0.99
+  frame_0001.png  308x 313 -> 308x313  비율 0.96
+  frame_0002.png  315x 362 -> 315x362  비율 1.11
+  frame_0003.png  381x 296 -> 381x296  비율 0.91
+  frame_0004.png  289x 337 -> 289x337  비율 1.03
+  frame_0005.png  365x 305 -> 365x305  비율 0.94
+  frame_0006.png  288x 326 -> 288x326  비율 1.00
+  frame_0007.png  293x 328 -> 293x328  비율 1.01
+
+-> out/experiments/silver-impact-20261113/normalization-probe  (피벗 0.5,0)

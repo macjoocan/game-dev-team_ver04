@@ -1,0 +1,301 @@
+{
+  "id": "chr.red-mercenary.combat-3h",
+  "status": "review",
+  "productionApproved": false,
+  "frameCount": 40,
+  "canvas": [
+    320,
+    320
+  ],
+  "method": "8-connected alpha components assigned to 40 body components, copied to padded fixed grid coordinates without image warping",
+  "baseComponents": 45,
+  "repairComponents": 40,
+  "originalBodies": 40,
+  "repairedCells": [
+    3,
+    19
+  ],
+  "unchanged38": true,
+  "frames": [
+    {
+      "action": "combo1",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0000.png",
+      "repaired": false,
+      "sha256": "c5a06f5b1183cb190f45697335d6067a590d71bf30e73db4cda45a80e3862340"
+    },
+    {
+      "action": "combo1",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0001.png",
+      "repaired": false,
+      "sha256": "76e429f5c6cb6df9d84bdbcd2ff97b2f2aa186719f8cbee4779843bfdb3a442b"
+    },
+    {
+      "action": "combo1",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0002.png",
+      "repaired": false,
+      "sha256": "897f7b271f0e15eceaf965a4eae5c5bc527c9c97fc705a462d1a988dc92a3522"
+    },
+    {
+      "action": "combo1",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0003.png",
+      "repaired": true,
+      "sha256": "40c780cb01eec84f216bfd0bb2e3aadd69840ec6545ec5853074acc30399c633"
+    },
+    {
+      "action": "combo1",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0004.png",
+      "repaired": false,
+      "sha256": "af03d60c40dd892a4c0a3f75f36317b26d0f36e46c60174b3a84857886cbd84c"
+    },
+    {
+      "action": "combo1",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0005.png",
+      "repaired": false,
+      "sha256": "6d69eb38b1a4d7e426dbfdb229043208308166f0902d09bf477c91a0db51f94b"
+    },
+    {
+      "action": "combo1",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0006.png",
+      "repaired": false,
+      "sha256": "2debe0f28327e3599cc5b389eab9271b9fe9a9f4bebe610b152fc12dbe896e39"
+    },
+    {
+      "action": "combo1",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0007.png",
+      "repaired": false,
+      "sha256": "9fc065c5690d08c0bf226961160ff5fdcecb8aeedaef2a666bd92eaa499cfc72"
+    },
+    {
+      "action": "combo2",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0000.png",
+      "repaired": false,
+      "sha256": "2d6537894e7cf6a6b4cf796b8e39693d306899cbb294e784ae8e536d559087f5"
+    },
+    {
+      "action": "combo2",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0001.png",
+      "repaired": false,
+      "sha256": "0aeeb8f01bd2f540be3209b9d7c4b05be1c206b28a0b8ce200417c0035850c83"
+    },
+    {
+      "action": "combo2",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0002.png",
+      "repaired": false,
+      "sha256": "85765163b7294645d14e2306647c289935ce407a2f9d8c5e153cf0fdf085b20b"
+    },
+    {
+      "action": "combo2",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0003.png",
+      "repaired": false,
+      "sha256": "b98f086b4b701c98d3de783a1fa05f882745b8f2c547ed500d2fe934b0eb0f2c"
+    },
+    {
+      "action": "combo2",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0004.png",
+      "repaired": false,
+      "sha256": "07d9e698a2b25dd69d5125a279b27fdea234fe9c721fc786af0351ca29c76d0a"
+    },
+    {
+      "action": "combo2",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0005.png",
+      "repaired": false,
+      "sha256": "829426c7d5acfeaf9df9c08670f5015c79674227c32354628887a8ff5c270883"
+    },
+    {
+      "action": "combo2",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0006.png",
+      "repaired": false,
+      "sha256": "21bb926de227a783471b5497d93b3c18c2afa5cc2b1f41b6e2442bdb3c961996"
+    },
+    {
+      "action": "combo2",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0007.png",
+      "repaired": false,
+      "sha256": "515294a43f31c8fb53a0de0c3e4feca301e120799a296ac0a67a33954c5c2a4b"
+    },
+    {
+      "action": "combo3",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0000.png",
+      "repaired": false,
+      "sha256": "ade5dcf2151536240add490b79e9859988593e30ce8db7dfcd60436fa3f82ad5"
+    },
+    {
+      "action": "combo3",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0001.png",
+      "repaired": false,
+      "sha256": "bc40b4d8e98ba7f6101eca5384b668c7d7d3708cfe0629b87205111d9e7e6f42"
+    },
+    {
+      "action": "combo3",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0002.png",
+      "repaired": false,
+      "sha256": "05ffef9b90fb86498b86497038011c1b9e91d748a94f8879a61bb37ab5f17011"
+    },
+    {
+      "action": "combo3",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0003.png",
+      "repaired": true,
+      "sha256": "6c33ca9229859d87a1f2461b373f23cfafc417a6d358a7c1cbd4ba732b8da53b"
+    },
+    {
+      "action": "combo3",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0004.png",
+      "repaired": false,
+      "sha256": "83c843c1b9162062d04c1777c20b3b5d1608ea722011468d8da31d4a0fdccef8"
+    },
+    {
+      "action": "combo3",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0005.png",
+      "repaired": false,
+      "sha256": "8485add96127872cd7d5cdd7c989b8ba52c2af2479f1bd26ed6597f0e189aaa7"
+    },
+    {
+      "action": "combo3",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0006.png",
+      "repaired": false,
+      "sha256": "76a1eea46511691531daf6a4275503835d0440dff62f3791ce4176105318e54d"
+    },
+    {
+      "action": "combo3",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0007.png",
+      "repaired": false,
+      "sha256": "567517ec22950a6063ca3118f44f324bab49523558507d1ac1cb29cb2aeb9f24"
+    },
+    {
+      "action": "dash",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0000.png",
+      "repaired": false,
+      "sha256": "2967a07491ec3c1bf0dcebbdc2dec098ed3c967409ba0eb65ac9cc91a2aec3fd"
+    },
+    {
+      "action": "dash",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0001.png",
+      "repaired": false,
+      "sha256": "111a02a2910e7d3cd0ecfc8737838d274c50e386a1633eb1e6125166bd8b0d21"
+    },
+    {
+      "action": "dash",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0002.png",
+      "repaired": false,
+      "sha256": "fa3d44d0cdfa5e2a039ed8ee42acb2d48a065f8d57255631541c15da1568aa53"
+    },
+    {
+      "action": "dash",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0003.png",
+      "repaired": false,
+      "sha256": "4695abdefc4bbf2a0774304d9f39332b324626c07228e48ea439a6e460c633ed"
+    },
+    {
+      "action": "dash",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0004.png",
+      "repaired": false,
+      "sha256": "e47a06e1d4dd3639de20308720257e96e3e027d73d61c69179c875ba3a2168ad"
+    },
+    {
+      "action": "dash",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0005.png",
+      "repaired": false,
+      "sha256": "5a46317b904d8c9e54226a10bcf5622d8b2bd90bd3e47c41ee0d5792f2290f4a"
+    },
+    {
+      "action": "dash",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0006.png",
+      "repaired": false,
+      "sha256": "0bd44e4ca5b668c044057972ceb783af82119e7bf446869820e028570c67019d"
+    },
+    {
+      "action": "dash",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0007.png",
+      "repaired": false,
+      "sha256": "41ea48435ee5e59042e6f2e167a84feedae56fba28abba20af067fcc254b7e0d"
+    },
+    {
+      "action": "spin",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0000.png",
+      "repaired": false,
+      "sha256": "8bbc6f0798af26e242c3c831fe09b18c9e5964c93ef2a249dc941cb02d197667"
+    },
+    {
+      "action": "spin",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0001.png",
+      "repaired": false,
+      "sha256": "a6470477cb513ceaaf382a836d822897bfa22d3e737f1f0cae1be404f799d49f"
+    },
+    {
+      "action": "spin",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0002.png",
+      "repaired": false,
+      "sha256": "c67529b022ae5d25d3133b559dab1577a04dd0b6c95880c433e96e877b94e00f"
+    },
+    {
+      "action": "spin",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0003.png",
+      "repaired": false,
+      "sha256": "d3c8468d7d73bd9d795ad5056f82b5c9495b314dddb02ce07db1bbaf5c477ca2"
+    },
+    {
+      "action": "spin",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0004.png",
+      "repaired": false,
+      "sha256": "32ea81cf6ac58e8fa65e4d1866b443abde775e0729f0b1a0bf176653ad8c1f00"
+    },
+    {
+      "action": "spin",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0005.png",
+      "repaired": false,
+      "sha256": "75ddad335a0c755ddc01fc79ebc172e4555d2c47ff86d2379c0826669832ec66"
+    },
+    {
+      "action": "spin",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0006.png",
+      "repaired": false,
+      "sha256": "a2073308338ca7a490bf1333d0fc1af3b2be88216e0a37a6431f55e44b11f55b"
+    },
+    {
+      "action": "spin",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0007.png",
+      "repaired": false,
+      "sha256": "7bb5b126f148d62c4052dd8b5a55f84293c2e4bb186eaf8f23b1003d1f39ed82"
+    }
+  ]
+}

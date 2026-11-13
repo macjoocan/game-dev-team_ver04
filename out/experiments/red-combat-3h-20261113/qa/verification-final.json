@@ -1,0 +1,450 @@
+{
+  "commit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "runs": [
+    {
+      "name": "combo1-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo1",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo1-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo1-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo1",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo1-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo2-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo2",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo2-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo2-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo2",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo2-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo3-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo3",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo3-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo3-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo3",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo3-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "dash-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/dash",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/dash-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "dash-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/dash",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/dash-pixel"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "spin-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/spin",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/spin-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "spin-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/spin",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/spin-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "model-final",
+      "args": [
+        "--test",
+        "out/experiments/red-combat-3h-20261113/model.test.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "feel-final",
+      "args": [
+        "skills/polish/scripts/feel-audit.mjs",
+        "out/experiments/red-combat-3h-20261113/feel.json"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "frames": 48,
+  "paletteColors": 32,
+  "semiAlpha": 0,
+  "borderPixels": 0,
+  "runtimeFiles": [
+    {
+      "file": "model.mjs",
+      "sha256": "c8b21786322c5eea229886fb69c410a28e218e0da53d835c44b0f6758de46ede"
+    },
+    {
+      "file": "view.mjs",
+      "sha256": "fb1540fc9645d39456cdba249cbe16311a6c604418b2ffd9ea6884ff6ad9a8a0"
+    },
+    {
+      "file": "feel.json",
+      "sha256": "b1679d9e369709d94ac6f71836743542bb10b734d90827785e0e73c144c7dcdd"
+    },
+    {
+      "file": "index.html",
+      "sha256": "da5230fd50097e1b327d7f3f9c595cd9a6eae1bce9c3a9141ab9b1652f236927"
+    }
+  ],
+  "flash": {
+    "runs": [
+      {
+        "id": "combo",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "combo1",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo1",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo1"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "combo2",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo2",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo2"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "combo3",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo3",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo3"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "dash",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-dash",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-dash"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "spin",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-spin",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-spin"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "combo-light",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo-light",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo-light"
+        ],
+        "exitCode": 0
+      },
+      {
+        "id": "combo-reduced",
+        "args": [
+          "skills/polish/scripts/flash-check.mjs",
+          "out/experiments/red-combat-3h-20261113/qa/capture-combo-reduced",
+          "--fps",
+          "50",
+          "--loop",
+          "--blend",
+          "normal",
+          "--out",
+          "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced"
+        ],
+        "exitCode": 0
+      }
+    ]
+  },
+  "browser": {
+    "checks": {
+      "combo": {
+        "action": "idle",
+        "time": 372,
+        "wall": 1600,
+        "x": 405,
+        "frame": 2,
+        "queued": 0,
+        "hitCount": 3,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "combo1",
+            "x": 300,
+            "wall": 0
+          },
+          {
+            "action": "combo2",
+            "x": 330,
+            "wall": 320
+          },
+          {
+            "action": "combo3",
+            "x": 395,
+            "wall": 644
+          }
+        ]
+      },
+      "combo1": {
+        "action": "idle",
+        "time": 1176,
+        "wall": 1600,
+        "x": 330,
+        "frame": 5,
+        "queued": 0,
+        "hitCount": 1,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "combo1",
+            "x": 300,
+            "wall": 0
+          }
+        ]
+      },
+      "combo2": {
+        "action": "idle",
+        "time": 1176,
+        "wall": 1600,
+        "x": 365,
+        "frame": 5,
+        "queued": 0,
+        "hitCount": 1,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "combo2",
+            "x": 300,
+            "wall": 0
+          }
+        ]
+      },
+      "combo3": {
+        "action": "idle",
+        "time": 1016,
+        "wall": 1600,
+        "x": 356,
+        "frame": 4,
+        "queued": 0,
+        "hitCount": 1,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "combo3",
+            "x": 300,
+            "wall": 0
+          }
+        ]
+      },
+      "dash": {
+        "action": "idle",
+        "time": 1052,
+        "wall": 1600,
+        "x": 350,
+        "frame": 4,
+        "queued": 0,
+        "hitCount": 1,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "dash",
+            "x": 300,
+            "wall": 0
+          }
+        ]
+      },
+      "spin": {
+        "action": "idle",
+        "time": 1036,
+        "wall": 1600,
+        "x": 345,
+        "frame": 4,
+        "queued": 0,
+        "hitCount": 2,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "spin",
+            "x": 300,
+            "wall": 0
+          }
+        ]
+      },
+      "far": {
+        "action": "idle",
+        "time": 760,
+        "wall": 1800,
+        "x": 451,
+        "frame": 3,
+        "queued": 0,
+        "hitCount": 0,
+        "hitStop": false,
+        "reduced": false,
+        "effects": true,
+        "history": [
+          {
+            "action": "combo1",
+            "x": 300,
+            "wall": 0
+          },
+          {
+            "action": "combo2",
+            "x": 330,
+            "wall": 268
+          },
+          {
+            "action": "combo3",
+            "x": 395,
+            "wall": 540
+          }
+        ]
+      }
+    },
+    "fxChangesPixels": true,
+    "reducedChangesPixels": true,
+    "capture": {
+      "clips": [
+        "combo",
+        "combo1",
+        "combo2",
+        "combo3",
+        "dash",
+        "spin",
+        "combo-light",
+        "combo-reduced"
+      ],
+      "frames": 880
+    },
+    "errors": []
+  }
+}

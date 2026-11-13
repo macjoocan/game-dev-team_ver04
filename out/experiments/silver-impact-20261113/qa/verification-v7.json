@@ -1,0 +1,415 @@
+{
+  "commit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "runs": [
+    {
+      "name": "model-tests",
+      "args": [
+        "--test",
+        "out/experiments/silver-impact-20261113/model.test.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "feel-audit",
+      "args": [
+        "skills/polish/scripts/feel-audit.mjs",
+        "out/experiments/silver-impact-20261113/feel.json",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa/feel"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "flash-normal",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/silver-impact-20261113/capture/normal",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa/flash-normal"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "flash-reduced",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/silver-impact-20261113/capture/reduced",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa/flash-reduced"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "flash-light",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/silver-impact-20261113/capture/light",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa/flash-light"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "originalV6Unchanged": [
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0000.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0001.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0002.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0003.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0004.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0005.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0006.png",
+      "same": true
+    },
+    {
+      "file": "out/experiments/silver-reference-slash-20261111/v6/frames/frame_0007.png",
+      "same": true
+    }
+  ],
+  "browser": {
+    "cases": {
+      "normal": [
+        {
+          "time": 150,
+          "total": 460,
+          "frame": 2,
+          "root": 0,
+          "hit": false,
+          "hitCount": 0,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": -72,
+          "geometry": {
+            "sword": [
+              [
+                254.5,
+                233.25
+              ],
+              [
+                355,
+                259.5
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        },
+        {
+          "time": 130,
+          "total": 380,
+          "frame": 3,
+          "root": 10.29737609329446,
+          "hit": true,
+          "hitCount": 1,
+          "hitStopMs": 66.66666666666667,
+          "stopping": true,
+          "age": 20,
+          "geometry": {
+            "sword": [
+              [
+                280.61737609329447,
+                228.4
+              ],
+              [
+                365.81737609329446,
+                291.59000000000003
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0.2257624032771962,
+          "shake": -0.5393592699430525,
+          "trail": true,
+          "spark": true,
+          "complete": false
+        }
+      ],
+      "whiff": [
+        {
+          "time": 180,
+          "total": 460,
+          "frame": 2,
+          "root": 0,
+          "hit": false,
+          "hitCount": 0,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": -42,
+          "geometry": {
+            "sword": [
+              [
+                254.5,
+                233.25
+              ],
+              [
+                355,
+                259.5
+              ]
+            ],
+            "rect": {
+              "x0": 506,
+              "x1": 554,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": false
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        },
+        {
+          "time": 180,
+          "total": 380,
+          "frame": 5,
+          "root": 20,
+          "hit": false,
+          "hitCount": 0,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": 50,
+          "geometry": {
+            "sword": [
+              [
+                280.61737609329447,
+                228.4
+              ],
+              [
+                365.81737609329446,
+                291.59000000000003
+              ]
+            ],
+            "rect": {
+              "x0": 506,
+              "x1": 554,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": false
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": true,
+          "spark": false,
+          "complete": false
+        }
+      ],
+      "noFeedback": [
+        {
+          "time": 180,
+          "total": 460,
+          "frame": 2,
+          "root": 0,
+          "hit": false,
+          "hitCount": 0,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": -42,
+          "geometry": {
+            "sword": [
+              [
+                254.5,
+                233.25
+              ],
+              [
+                355,
+                259.5
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        },
+        {
+          "time": 180,
+          "total": 380,
+          "frame": 5,
+          "root": 20,
+          "hit": true,
+          "hitCount": 1,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": 50,
+          "geometry": {
+            "sword": [
+              [
+                280.61737609329447,
+                228.4
+              ],
+              [
+                365.81737609329446,
+                291.59000000000003
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        }
+      ],
+      "reduced": [
+        {
+          "time": 150,
+          "total": 460,
+          "frame": 2,
+          "root": 0,
+          "hit": false,
+          "hitCount": 0,
+          "hitStopMs": 0,
+          "stopping": false,
+          "age": -72,
+          "geometry": {
+            "sword": [
+              [
+                254.5,
+                233.25
+              ],
+              [
+                355,
+                259.5
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        },
+        {
+          "time": 130,
+          "total": 380,
+          "frame": 3,
+          "root": 10.29737609329446,
+          "hit": true,
+          "hitCount": 1,
+          "hitStopMs": 66.66666666666667,
+          "stopping": true,
+          "age": 20,
+          "geometry": {
+            "sword": [
+              [
+                280.61737609329447,
+                228.4
+              ],
+              [
+                365.81737609329446,
+                291.59000000000003
+              ]
+            ],
+            "rect": {
+              "x0": 351,
+              "x1": 399,
+              "y0": 220,
+              "y1": 325
+            },
+            "hit": true
+          },
+          "recoil": 0.2257624032771962,
+          "shake": 0,
+          "trail": false,
+          "spark": false,
+          "complete": false
+        }
+      ]
+    },
+    "mobileOverflow": false,
+    "export": {
+      "width": 600,
+      "height": 400,
+      "fps": 50,
+      "frameCount": 60,
+      "cycleMs": 1200,
+      "modes": [
+        "normal",
+        "reduced",
+        "light"
+      ]
+    },
+    "priorCapture": {
+      "once": {
+        "time": 1200,
+        "playing": false,
+        "frame": 7
+      },
+      "errors": []
+    }
+  }
+}

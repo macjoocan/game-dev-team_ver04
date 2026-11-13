@@ -1,0 +1,189 @@
+{
+  "loaded": 48,
+  "cases": {
+    "combo": {
+      "action": "idle",
+      "time": 372,
+      "wall": 1600,
+      "x": 406,
+      "frame": 2,
+      "queued": 0,
+      "hitCount": 3,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "combo1",
+          "x": 300,
+          "wall": 0
+        },
+        {
+          "action": "combo2",
+          "x": 330,
+          "wall": 320
+        },
+        {
+          "action": "combo3",
+          "x": 364,
+          "wall": 644
+        }
+      ]
+    },
+    "combo1": {
+      "action": "idle",
+      "time": 1176,
+      "wall": 1600,
+      "x": 330,
+      "frame": 5,
+      "queued": 0,
+      "hitCount": 1,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "combo1",
+          "x": 300,
+          "wall": 0
+        }
+      ]
+    },
+    "combo2": {
+      "action": "idle",
+      "time": 1176,
+      "wall": 1600,
+      "x": 334,
+      "frame": 5,
+      "queued": 0,
+      "hitCount": 1,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "combo2",
+          "x": 300,
+          "wall": 0
+        }
+      ]
+    },
+    "combo3": {
+      "action": "idle",
+      "time": 1016,
+      "wall": 1600,
+      "x": 342,
+      "frame": 4,
+      "queued": 0,
+      "hitCount": 1,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "combo3",
+          "x": 300,
+          "wall": 0
+        }
+      ]
+    },
+    "dash": {
+      "action": "idle",
+      "time": 1052,
+      "wall": 1600,
+      "x": 420,
+      "frame": 4,
+      "queued": 0,
+      "hitCount": 1,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "dash",
+          "x": 300,
+          "wall": 0
+        }
+      ]
+    },
+    "spin": {
+      "action": "idle",
+      "time": 1036,
+      "wall": 1600,
+      "x": 318,
+      "frame": 4,
+      "queued": 0,
+      "hitCount": 2,
+      "hitStop": false,
+      "reduced": false,
+      "effects": true,
+      "history": [
+        {
+          "action": "spin",
+          "x": 300,
+          "wall": 0
+        }
+      ]
+    }
+  },
+  "miss": {
+    "action": "idle",
+    "time": 760,
+    "wall": 1800,
+    "x": 406,
+    "frame": 3,
+    "queued": 0,
+    "hitCount": 0,
+    "hitStop": false,
+    "reduced": false,
+    "effects": true,
+    "history": [
+      {
+        "action": "combo1",
+        "x": 300,
+        "wall": 0
+      },
+      {
+        "action": "combo2",
+        "x": 330,
+        "wall": 268
+      },
+      {
+        "action": "combo3",
+        "x": 364,
+        "wall": 540
+      }
+    ]
+  },
+  "manual": {
+    "action": "idle",
+    "time": 546.4000000000001,
+    "wall": 1768.1000000000001,
+    "x": 406,
+    "frame": 2,
+    "queued": 0,
+    "hitCount": 3,
+    "hitStop": false,
+    "reduced": false,
+    "effects": true,
+    "history": [
+      {
+        "action": "combo1",
+        "x": 300,
+        "wall": 0
+      },
+      {
+        "action": "combo2",
+        "x": 330,
+        "wall": 316.20000000000005
+      },
+      {
+        "action": "combo3",
+        "x": 364,
+        "wall": 637.8999999999999
+      }
+    ]
+  },
+  "mobileOverflow": false,
+  "errors": []
+}

@@ -1,0 +1,131 @@
+{
+  "commit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "runs": [
+    {
+      "name": "model",
+      "args": [
+        "--test",
+        "out/experiments/red-combat-3h-20261113/model.test.mjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "feel",
+      "args": [
+        "skills/polish/scripts/feel-audit.mjs",
+        "out/experiments/red-combat-3h-20261113/feel.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "combo1-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo1",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo1-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo1-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo1",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo1-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo2-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo2",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo2-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo2-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo2",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo2-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo3-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo3",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo3-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "combo3-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/combo3",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/combo3-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "dash-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/dash",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/dash-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "dash-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/dash",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/dash-pixel"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "spin-sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/spin",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/spin-sprite"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "spin-pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-combat-3h-20261113/pixel/spin",
+        "--cell",
+        "120",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/spin-pixel"
+      ],
+      "exitCode": 1
+    }
+  ]
+}

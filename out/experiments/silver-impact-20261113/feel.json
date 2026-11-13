@@ -1,0 +1,158 @@
+{
+  "status": "review-candidate; timings are authored, not measured from reference games",
+  "fps": 60,
+  "pace": {
+    "actionIntervalMs": 380
+  },
+  "reducedMotion": {
+    "declared": true,
+    "disables": [
+      "flash",
+      "afterimage",
+      "trail"
+    ],
+    "scales": {
+      "shake": 0
+    }
+  },
+  "events": {
+    "sword_contact": {
+      "class": "hit",
+      "weight": 2,
+      "hitStopFrames": 4,
+      "shake": {
+        "amplitudePx": 2,
+        "durationMs": 80,
+        "decay": "expo"
+      },
+      "flash": {
+        "durationMs": 0
+      },
+      "sound": "synth_contact"
+    }
+  },
+  "demo": {
+    "canvas": [
+      600,
+      400
+    ],
+    "cycleMs": 1200,
+    "baselineY": 342,
+    "heroX": 205,
+    "heroAnchorX": 250,
+    "heroAnchorY": 460,
+    "targetX": 375,
+    "missTargetX": 530,
+    "targetHalfWidth": 24,
+    "targetTopY": 220,
+    "targetBottomY": 325,
+    "recoilPx": 25,
+    "recoilDegrees": 15,
+    "recoilRiseMs": 65,
+    "recoilReturnMs": 280,
+    "victimShakePx": 5,
+    "attackerShakePx": 1,
+    "shakeHz": 32,
+    "trailMs": 52,
+    "sparkMs": 85,
+    "sparkCount": 5,
+    "sparkRadius": 28,
+    "trailColor": "#80b0a8",
+    "sparkColor": "#a79b75",
+    "groundColor": "#37434b",
+    "clips": [
+      {
+        "id": "v6",
+        "title": "기존 v6",
+        "scale": 0.75,
+        "durations": [
+          20,
+          130,
+          35,
+          25,
+          30,
+          100,
+          60,
+          60
+        ],
+        "impactMs": 222,
+        "rootX": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "swordContact": [
+          [
+            316,
+            315
+          ],
+          [
+            450,
+            350
+          ]
+        ],
+        "phaseNames": [
+          "준비",
+          "검 들기",
+          "시작",
+          "위쪽 통과",
+          "앞쪽 통과",
+          "마무리",
+          "회수",
+          "준비"
+        ]
+      },
+      {
+        "id": "v8",
+        "title": "개선 v8 · 손목 수정",
+        "scale": 0.71,
+        "durations": [
+          20,
+          70,
+          25,
+          35,
+          30,
+          85,
+          60,
+          55
+        ],
+        "impactMs": 130,
+        "rootX": [
+          0,
+          -7,
+          4,
+          20,
+          20,
+          20,
+          20,
+          20
+        ],
+        "swordContact": [
+          [
+            355,
+            328
+          ],
+          [
+            470,
+            400
+          ]
+        ],
+        "phaseNames": [
+          "준비",
+          "몸을 낮춰 장전",
+          "발로 밀기",
+          "내려베기",
+          "끝까지 통과",
+          "몸 반대편 마무리",
+          "회수",
+          "준비"
+        ]
+      }
+    ]
+  }
+}

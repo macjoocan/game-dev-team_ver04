@@ -1,0 +1,6 @@
+import fs from 'node:fs';const root='out/experiments/red-mercenary-20261113',m=JSON.parse(fs.readFileSync(`${root}/manifest.json`,'utf8'));
+const labels={idle:'대기',walk:'걷기',run:'달리기',slash:'베기',hurt:'피격'};
+const cards=[2,3,5].map(h=>{const c=m.clips.find(c=>c.heads===h);return `<article class="card"><div class="caption"><h2>${h}등신형</h2><p>${c.canvas[0]}×${c.canvas[1]} 도트 캔버스 · ${c.displayZoom}배 확대</p></div><canvas id="c${h}" width="420" height="360" aria-label="${h}등신형 모션"></canvas><div class="strip"><i id="p${h}"></i></div><div id="s${h}" class="caption status"></div></article>`}).join('');
+const downloads=[2,3,5].map(h=>`<h3>${h}등신형</h3><div class="downloads">`+Object.entries(labels).map(([k,l])=>`<a href="gifs/${h}h-${k}.gif" download>${l} GIF</a>`).join('')+'</div>').join('');
+const data={clips:m.clips.map(c=>({...c,images:Array.from({length:8},(_,i)=>'data:image/png;base64,'+fs.readFileSync(`${root}/pixel/${c.heads}h/${c.motion}/frame_${String(i).padStart(4,'0')}.png`).toString('base64'))}))};
+let html=fs.readFileSync(`${root}/gallery.template.html`,'utf8').replace('{{CARDS}}',cards).replace('{{DOWNLOADS}}',downloads).replace('{{DATA}}',JSON.stringify(data));fs.writeFileSync(`${root}/index.html`,html);console.log({clips:data.clips.length,frames:data.clips.reduce((n,c)=>n+c.images.length,0),bytes:Buffer.byteLength(html)});

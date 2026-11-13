@@ -1,0 +1,11 @@
+import fs from 'node:fs';import {spawnSync} from 'node:child_process';
+const root='out/experiments/red-mercenary-20261113';
+for(const f of ['gallery.template.html','gallery-fx.template.html']){let s=fs.readFileSync(`${root}/${f}`,'utf8');s=s.replace("let motion='walk'","let motion='slash'").replace('data-motion="walk" class="active"','data-motion="walk"').replace('data-motion="slash">','data-motion="slash" class="active">');fs.writeFileSync(`${root}/${f}`,s);}
+const run=args=>{const r=spawnSync(process.execPath,args,{encoding:'utf8',maxBuffer:4e6});console.log(r.stdout);if(r.status!==0){console.error(r.stderr);process.exit(r.status||1)}};
+run([`${root}/build-gallery-fx.mjs`]);
+for(const [id,title,path,preview,qa] of [['chr.silver.impact-v8','은발 한손검 v8 손목 보정','out/experiments/silver-impact-20261113','preview.html','qa/verification.json'],['chr.red-mercenary.proportions','적발 용병 15종과 큰 베기 이펙트',root,'index.html','qa/verification.json']])run(['skills/review-loop/scripts/review-loop.mjs','add','--project','.','--id',id,'--type','sprite-animation','--title',title,'--preview',`${path}/${preview}`,'--artifact',path,'--qa',`${path}/${qa}`,'--harness','codex']);
+run(['scripts/team-work.mjs','evidence','--project','.','--id','art.impact-slash-20261113','--file','out/experiments/silver-impact-20261113/qa/verification.json','--actor','codex','--revision','100']);
+run(['scripts/team-work.mjs','checkpoint','--project','.','--id','art.impact-slash-20261113','--status','review','--next','v8 실루엣 미달 항목과 실제 엔진 연동 검수','--note','손목 보정·GIF·브라우저 검증 완료. 사람의 긍정 피드백을 프로덕션 승인으로 확대하지 않음.','--actor','codex','--revision','101']);
+run(['scripts/team-work.mjs','evidence','--project','.','--id','art.red-mercenary-20261113','--file',`${root}/qa/verification.json`,'--actor','codex','--revision','102']);
+run(['scripts/team-work.mjs','evidence','--project','.','--id','art.red-mercenary-20261113','--file',`${root}/qa/fx-verification.json`,'--actor','codex','--revision','103']);
+run(['scripts/team-work.mjs','checkpoint','--project','.','--id','art.red-mercenary-20261113','--status','review','--next','2·3·5등신 모션과 큰 이펙트 사람 검수. 도트 노이즈·실루엣 미달 보정 후보 선택.','--note','15종 120장과 이펙트 GIF 3종 제작. 자동 검사 미달 항목은 REPORT.md에 명시.','--actor','codex','--revision','104']);

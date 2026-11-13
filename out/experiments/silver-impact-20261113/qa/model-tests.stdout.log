@@ -1,0 +1,15 @@
+✔ near sword segment intersects target, far target does not (0.7365ms)
+✔ contact pauses animation once for four frames (0.3356ms)
+✔ whiff has no stop, recoil, spark or hit (0.1079ms)
+✔ feedback toggle preserves pose timing without stop (0.0771ms)
+✔ reduced motion disables shake and transient effects without changing hit (0.1026ms)
+✔ animation preserves forward root after recovery (0.078ms)
+✔ boundary frame lookup and collision reject nonintersection (0.0696ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 949.6218

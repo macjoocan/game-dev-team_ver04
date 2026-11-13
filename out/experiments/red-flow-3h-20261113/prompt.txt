@@ -1,0 +1,18 @@
+Create one transparent production sprite transition sheet for the SAME approved red-haired THREE-head-tall female mercenary in the reference. Use the reference only for identity, costume, proportions, sword and pixel-art style. Same ponytail, amber scarf, dark short jacket, steel shoulder pad, brown belt and boots, single straight silver one-handed sword, exactly two arms/two legs. Facing RIGHT in a fixed side view throughout. No trails, no dust, no shadow, no text or labels. Preserve transparency.
+Landscape canvas 1536x1024. Exactly FOUR columns by THREE rows, 12 poses total. Each cell is 384px wide, 341.33px high. All full-body poses centered at local x192. Ground line local y300. Standing body from hair top to boots about 230px high in every cell. Make character smaller to leave at least 24px empty margin around every sword tip, ponytail and foot. No part touches adjacent cells.
+Read the first TWO rows continuously as an 8-frame evasive BACKSTEP. Character always faces right while hopping backward toward the left. Root remains centered in each cell because code supplies horizontal movement. This is NOT a roll and NOT a hurt animation. Sword remains in right hand, protective angled front guard, no duplicate limbs.
+Pose 0 (row1 col1): upright ready stance, sword at low forward angle, same as approved reference idle.
+Pose 1: slight rearward weight shift, knees only slightly flexed, front boot prepares to push off. No deep squat.
+Pose 2: front foot pushes; shoulders move slightly backward; rear knee lifts while blade stays forward guarding.
+Pose 3: airborne backward hop, both boots 18px above the common ground, torso upright with a modest backward lean, sword guarding chest.
+Pose 4 (row2 col1): airborne backward hop near landing, rear foot extending backward-left, front knee bent; boots about 12px above ground, safe natural anatomy.
+Pose 5: rear boot lands on the common ground, front foot follows, knees absorb only a small amount.
+Pose 6: both boots planted, torso restores upright ready balance and sword lowers to original guard.
+Pose 7: same upright ready stance as pose0. Do not end in a crouch.
+
+THIRD ROW is FOUR distinct RETURN-TO-GUARD bridge poses, to smoothly lower a sword after an upward slash. Same character size, ground, direction.
+Pose8 (row3 col1): upright high guard, right sword hand above forehead, sword angled above head, matching the reference character's raised sword posture.
+Pose9: right elbow folds down toward shoulder, wrist stays aligned, sword diagonally up-forward, non-sword fist held near ribs.
+Pose10: right hand lowers past chest to waist, blade diagonally forward-right, shoulders settle and legs remain upright.
+Pose11: original upright low sword ready guard, same as pose0 and pose7.
+Do not draw an attack or a slash in this last row. These are relaxed return poses. Keep feet planted, no deep sitting, no body scaling between cells. Clean crisp clustered pixel-art shapes with a restrained palette and consistent straight sword.

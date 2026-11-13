@@ -1,0 +1,801 @@
+{
+  "id": "chr.red-mercenary.combat-3h",
+  "status": "review",
+  "productionApproved": false,
+  "generator": "GPT imagegen",
+  "processor": "PixelOE",
+  "device": "cuda",
+  "clips": [
+    {
+      "id": "combo1",
+      "frames": 8,
+      "canvas": [
+        120,
+        120
+      ],
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        }
+      ]
+    },
+    {
+      "id": "combo2",
+      "frames": 8,
+      "canvas": [
+        120,
+        120
+      ],
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        }
+      ]
+    },
+    {
+      "id": "combo3",
+      "frames": 8,
+      "canvas": [
+        120,
+        120
+      ],
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        }
+      ]
+    },
+    {
+      "id": "dash",
+      "frames": 8,
+      "canvas": [
+        120,
+        120
+      ],
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        }
+      ]
+    },
+    {
+      "id": "spin",
+      "frames": 8,
+      "canvas": [
+        120,
+        120
+      ],
+      "metrics": [
+        {
+          "frame": 0,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 1,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 2,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 3,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 4,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 5,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 6,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        },
+        {
+          "frame": 7,
+          "colors": 32,
+          "semiAlpha": 0,
+          "borderPixels": 0
+        }
+      ]
+    }
+  ],
+  "frameRecords": [
+    {
+      "id": "idle",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "id": "idle",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "id": "idle",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "id": "idle",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "id": "idle",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "id": "idle",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "id": "idle",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "id": "idle",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "id": "combo1",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "ed9000e2b95c0208ad11b797ed4e3597c46c2402fa0d967f56ec2c2d2cc5e251"
+    },
+    {
+      "id": "combo1",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "a9e39b9195266da38b286137ea9a0b00f86ab6e7947a2836374e35c0008b7b30"
+    },
+    {
+      "id": "combo1",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "2d33ceac55bb9fc3247c0943ce19b625c1b6fdd775879a2aa23b74958f273eb6"
+    },
+    {
+      "id": "combo1",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "28fd64fe73a8623f682cf2064dce6c21fd111e200926fc2052dc8568ec33068f"
+    },
+    {
+      "id": "combo1",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "93650c9a4ef16f232f75fa8902b5a49612a08a191aa95d9d4af2c661f148280e"
+    },
+    {
+      "id": "combo1",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "b552ade6a034b6efa85f3e07f4e88ad32a84cca8182964b4ba5620ee563b6f64"
+    },
+    {
+      "id": "combo1",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "7730a6aaab2763f644964f409064fe34044488bd53903531d6f7fe9ac5ee38e5"
+    },
+    {
+      "id": "combo1",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "265e4ae6ee109101f06384756d50cf79177e56657774dee2c9dabef2f36c5cd1"
+    },
+    {
+      "id": "combo2",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "7132c0a1a46220836bb4b3c1dad32021aad93a04a1b69b97c9b90d859bf1137f"
+    },
+    {
+      "id": "combo2",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "403b11d428dd69b4826aac1af902b63dc46f2ac4564ef389b6edf8e183e85552"
+    },
+    {
+      "id": "combo2",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "20c82ce6ad6abfebb92c02949c530de6e29b194674069738e7de5e3272063a76"
+    },
+    {
+      "id": "combo2",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "2e8e9a14688a516e8a9ef77485422fb7bc3975a2c81ac7d2763e43785dfdad68"
+    },
+    {
+      "id": "combo2",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "065a05167f304640a2e7d82b5535581ebfb4356ce59c6e49c51d217e8daf7024"
+    },
+    {
+      "id": "combo2",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "2edcfbafacaf5b29ef0f227d41155aece985e42627690c75df1b21d05f5f62e5"
+    },
+    {
+      "id": "combo2",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "634d40f2e1010e319cfbb9ca0425a23e9ce5221c52f19da87604c85ec7b6cf4d"
+    },
+    {
+      "id": "combo2",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "747fbd0328ab5a1d50c0ccef5959e1631dfca57a2c0e3956ea8c95fbf7f2463e"
+    },
+    {
+      "id": "combo3",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "7af94e0f9118b0070c4aafda54eb1c70562730fc46447cafda0380dc6eec4195"
+    },
+    {
+      "id": "combo3",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "a464e1ea33ad3c872acd5d452dd7ae2a35a6b181f69a166212cb6a88e5fe5aab"
+    },
+    {
+      "id": "combo3",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "ac4576ef92a8235af3949608a0db0f5973f0e2e3480f506c9208a244d3c702b5"
+    },
+    {
+      "id": "combo3",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "b211b9dcc8e376d7a1a0a873cd0739e4c5ca3c8493156be1787b8b1d34ef4d5e"
+    },
+    {
+      "id": "combo3",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "c1e7603354fd03a89a341b520ff829da38e042d37e99ae21ba462c399d9b3abb"
+    },
+    {
+      "id": "combo3",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "0a5bccbd5e010ba1a6d34f6f6dc289586675d72661bbc84fd40541c05773ffb3"
+    },
+    {
+      "id": "combo3",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "800bcdc623721df3eed57000c06847edefd545e44e248c369e0486b22ec10081"
+    },
+    {
+      "id": "combo3",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "b7c0cedbce12246ff20507df8f9c3b15c1337f6605a1b992294673dce5d7a6c6"
+    },
+    {
+      "id": "dash",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "62fc555b6f42a06ad4f3f4caaaeff2e9a6ab62570445767859294cb35e893a0c"
+    },
+    {
+      "id": "dash",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "0808893f69347eb5b499b6edf3385b1f98952e11f0a029291d491713513347d7"
+    },
+    {
+      "id": "dash",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "43f4b57f9ad5505989c65ccf186e243b9df23cb6dab5c60dca05fb775527de4e"
+    },
+    {
+      "id": "dash",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "d6dd580fc9127808587f324b0cdfd3e3ec9aaf3f9bafbb91dcd241b39c84a9ce"
+    },
+    {
+      "id": "dash",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "ceae0d46c3d1fc5f6b3009b9dda0394c13c22b289fad0fe9de3557ed3c31893f"
+    },
+    {
+      "id": "dash",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "315f1b610343c110a0920a599cb02c82cc9322055f005171759a904125010284"
+    },
+    {
+      "id": "dash",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "c52a4403b499cce794a1069f2603bc0f7e5a5bd69aea51e25a92c614debf4731"
+    },
+    {
+      "id": "dash",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "b700a5c3ab37d4d01665cf2804f5b2e994b63122a120581bbdbfbdfa11698f3b"
+    },
+    {
+      "id": "spin",
+      "frame": 0,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0000.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "997556454bb83db156b9f96cf916e6fc20243c383b2b825479593b3e034db308"
+    },
+    {
+      "id": "spin",
+      "frame": 1,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0001.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "f004098194d9611dddfc4f8bbbeb54fb2241b651ad93595e8e05c590843bf36b"
+    },
+    {
+      "id": "spin",
+      "frame": 2,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0002.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "a0a08b160bcfc9b8b48b11ca30e59b0d6e4db4fe8b03968497bb69cd6da2feff"
+    },
+    {
+      "id": "spin",
+      "frame": 3,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0003.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "549ac06c98a63c2653f0e9f4bbf29e491a369a399a1f49e1cb7f2ea5701e93ff"
+    },
+    {
+      "id": "spin",
+      "frame": 4,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0004.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "6149fc9ff41438bcca9265f65fd3d0268e745e6a6ce4b8793be3b775ab26167e"
+    },
+    {
+      "id": "spin",
+      "frame": 5,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0005.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "864072ce28861a92273cfa9b8be6388752ae4fce51e0faf5180de0bec08465e9"
+    },
+    {
+      "id": "spin",
+      "frame": 6,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0006.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "159b33b6679c34c6536c470580a25532bcc2716ef4a1ef39150ea05b316a2ed8"
+    },
+    {
+      "id": "spin",
+      "frame": 7,
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0007.png",
+      "width": 120,
+      "height": 120,
+      "semi": 0,
+      "border": 0,
+      "sha256": "70fb32e513d713ab1f63e6a20199d64e7d2b7aad97a1b717a0864a6c45dc76bb"
+    }
+  ],
+  "pivot": [
+    60,
+    95
+  ],
+  "baseline": 95,
+  "provenance": {
+    "source": "GPT imagegen",
+    "sourceManifest": "source-manifest.json",
+    "designReference": "../red-mercenary-20261113/raw/3h-sheet.png",
+    "paletteReference": "../red-mercenary-20261113/palette.json",
+    "termsReview": "not separately audited"
+  },
+  "timing": "feel.json",
+  "previews": [
+    "index.html",
+    "gifs/combo.gif",
+    "gifs/dash.gif",
+    "gifs/spin.gif"
+  ]
+}

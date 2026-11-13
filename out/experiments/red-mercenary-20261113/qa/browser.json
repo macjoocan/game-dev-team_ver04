@@ -1,0 +1,94 @@
+{
+  "loaded": 120,
+  "cases": {
+    "idle": [
+      {
+        "heads": 2,
+        "frame": 0,
+        "loaded": true
+      },
+      {
+        "heads": 3,
+        "frame": 0,
+        "loaded": true
+      },
+      {
+        "heads": 5,
+        "frame": 0,
+        "loaded": true
+      }
+    ],
+    "walk": [
+      {
+        "heads": 2,
+        "frame": 1,
+        "loaded": true
+      },
+      {
+        "heads": 3,
+        "frame": 1,
+        "loaded": true
+      },
+      {
+        "heads": 5,
+        "frame": 1,
+        "loaded": true
+      }
+    ],
+    "run": [
+      {
+        "heads": 2,
+        "frame": 2,
+        "loaded": true
+      },
+      {
+        "heads": 3,
+        "frame": 2,
+        "loaded": true
+      },
+      {
+        "heads": 5,
+        "frame": 2,
+        "loaded": true
+      }
+    ],
+    "slash": [
+      {
+        "heads": 2,
+        "frame": 3,
+        "loaded": true
+      },
+      {
+        "heads": 3,
+        "frame": 3,
+        "loaded": true
+      },
+      {
+        "heads": 5,
+        "frame": 3,
+        "loaded": true
+      }
+    ],
+    "hurt": [
+      {
+        "heads": 2,
+        "frame": 2,
+        "loaded": true
+      },
+      {
+        "heads": 3,
+        "frame": 2,
+        "loaded": true
+      },
+      {
+        "heads": 5,
+        "frame": 2,
+        "loaded": true
+      }
+    ]
+  },
+  "playingAdvances": true,
+  "pausedStable": true,
+  "mobileOverflow": false,
+  "errors": []
+}

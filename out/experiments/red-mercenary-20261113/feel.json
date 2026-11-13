@@ -1,0 +1,56 @@
+{
+  "fps": 60,
+  "pace": {
+    "actionIntervalMs": 1000
+  },
+  "reducedMotion": {
+    "declared": true,
+    "disables": [
+      "flash",
+      "trail",
+      "afterimage"
+    ],
+    "scales": {
+      "shake": 0
+    }
+  },
+  "events": {
+    "sword_contact": {
+      "class": "hit",
+      "weight": 2,
+      "hitStopFrames": 0,
+      "shake": {
+        "amplitudePx": 0,
+        "durationMs": 0
+      },
+      "flash": {
+        "durationMs": 0
+      }
+    }
+  },
+  "fx": {
+    "startMs": 90,
+    "durationMs": 135,
+    "impactMs": 130,
+    "sparkMs": 140,
+    "radiusPx": 140,
+    "innerRadiusPx": 102,
+    "center": [
+      236,
+      192
+    ],
+    "sparkCenter": [
+      339,
+      220
+    ],
+    "sparkCount": 8,
+    "sparkRadiusPx": 65,
+    "pixelStep": 4,
+    "scale": 1.15,
+    "palette": {
+      "edge": "#c76b32",
+      "body": "#dcac67",
+      "core": "#e5cfa1"
+    }
+  }
+}

@@ -1,0 +1,348 @@
+{
+  "dustLayer": {
+    "before": {
+      "changed": 39,
+      "overCharacter": 0,
+      "state": {
+        "action": "run",
+        "visual": {
+          "clip": "run",
+          "frame": 4
+        },
+        "time": 0,
+        "wall": 928,
+        "x": 381.68800000000033,
+        "velocity": 250,
+        "facing": 1,
+        "gait": 12.038162464986025,
+        "queued": 0,
+        "buffer": null,
+        "hitCount": 0,
+        "hitStop": false,
+        "bridge": null,
+        "dust": [
+          {
+            "id": 3,
+            "kind": "run",
+            "x": 426.18800000000033,
+            "y": 350,
+            "wall": 926,
+            "facing": 1
+          }
+        ],
+        "history": [
+          {
+            "action": "walk",
+            "reason": "",
+            "x": 230.0144,
+            "wall": 4
+          },
+          {
+            "action": "run",
+            "reason": "",
+            "x": 316.12640000000033,
+            "wall": 654
+          }
+        ]
+      }
+    },
+    "after": {
+      "changed": 99,
+      "overCharacter": 51,
+      "state": {
+        "action": "run",
+        "visual": {
+          "clip": "run",
+          "frame": 4
+        },
+        "time": 0,
+        "wall": 928,
+        "x": 381.68800000000033,
+        "velocity": 250,
+        "facing": 1,
+        "gait": 12.038162464986025,
+        "queued": 0,
+        "buffer": null,
+        "hitCount": 0,
+        "hitStop": false,
+        "bridge": null,
+        "dust": [
+          {
+            "id": 3,
+            "kind": "run",
+            "x": 426.18800000000033,
+            "y": 350,
+            "wall": 926,
+            "facing": 1
+          }
+        ],
+        "history": [
+          {
+            "action": "walk",
+            "reason": "",
+            "x": 230.0144,
+            "wall": 4
+          },
+          {
+            "action": "run",
+            "reason": "",
+            "x": 316.12640000000033,
+            "wall": 654
+          }
+        ]
+      }
+    }
+  },
+  "errors": [],
+  "scenarios": {
+    "dust": {
+      "action": "run",
+      "visual": {
+        "clip": "run",
+        "frame": 5
+      },
+      "time": 0,
+      "wall": 1000,
+      "x": 399.68800000000033,
+      "velocity": 250,
+      "facing": 1,
+      "gait": 13.096985994397786,
+      "queued": 0,
+      "buffer": null,
+      "hitCount": 0,
+      "hitStop": false,
+      "bridge": null,
+      "dust": [
+        {
+          "id": 3,
+          "kind": "run",
+          "x": 426.18800000000033,
+          "y": 350,
+          "wall": 926,
+          "facing": 1
+        }
+      ],
+      "history": [
+        {
+          "action": "walk",
+          "reason": "",
+          "x": 230.0144,
+          "wall": 4
+        },
+        {
+          "action": "run",
+          "reason": "",
+          "x": 316.12640000000033,
+          "wall": 654
+        }
+      ]
+    },
+    "chain": {
+      "action": "combo3",
+      "visual": {
+        "clip": "combo3",
+        "frame": 6
+      },
+      "time": 382,
+      "wall": 1600,
+      "x": 591.6659999999999,
+      "velocity": 0,
+      "facing": 1,
+      "gait": 5.5962352941176325,
+      "queued": 0,
+      "buffer": null,
+      "hitCount": 3,
+      "hitStop": false,
+      "bridge": null,
+      "dust": [],
+      "history": [
+        {
+          "action": "run",
+          "reason": "",
+          "x": 330.0144,
+          "wall": 4
+        },
+        {
+          "action": "bridge",
+          "reason": "발을 딛고 공격",
+          "x": 425.13599999999997,
+          "wall": 450
+        },
+        {
+          "action": "combo1",
+          "reason": "",
+          "x": 433.376,
+          "wall": 490
+        },
+        {
+          "action": "combo2",
+          "reason": "",
+          "x": 470.666,
+          "wall": 810
+        },
+        {
+          "action": "combo3",
+          "reason": "",
+          "x": 535.6659999999999,
+          "wall": 1134
+        }
+      ]
+    },
+    "guard": {
+      "action": "idle",
+      "visual": {
+        "clip": "idle",
+        "frame": 2
+      },
+      "time": 464,
+      "wall": 1000,
+      "x": 535,
+      "velocity": 0,
+      "facing": 1,
+      "gait": 0,
+      "queued": 0,
+      "buffer": null,
+      "hitCount": 1,
+      "hitStop": false,
+      "bridge": null,
+      "dust": [],
+      "history": [
+        {
+          "action": "combo2",
+          "reason": "",
+          "x": 470,
+          "wall": 0
+        },
+        {
+          "action": "bridge",
+          "reason": "공격 자세 정리",
+          "x": 535,
+          "wall": 424
+        },
+        {
+          "action": "idle",
+          "reason": "연결 완료",
+          "x": 535,
+          "wall": 536
+        }
+      ]
+    },
+    "escape": {
+      "action": "run",
+      "visual": {
+        "clip": "run",
+        "frame": 0
+      },
+      "time": 0,
+      "wall": 1000,
+      "x": 384,
+      "velocity": 179.99999999999994,
+      "facing": 1,
+      "gait": 0.5294117647058824,
+      "queued": 0,
+      "buffer": null,
+      "hitCount": 1,
+      "hitStop": false,
+      "bridge": null,
+      "dust": [],
+      "history": [
+        {
+          "action": "combo1",
+          "reason": "",
+          "x": 450,
+          "wall": 0
+        },
+        {
+          "action": "bridge",
+          "reason": "공격 자세 정리",
+          "x": 480,
+          "wall": 222
+        },
+        {
+          "action": "evade",
+          "reason": "",
+          "x": 480,
+          "wall": 286
+        },
+        {
+          "action": "idle",
+          "reason": "연결 완료",
+          "x": 375,
+          "wall": 666
+        },
+        {
+          "action": "run",
+          "reason": "",
+          "x": 375.0144,
+          "wall": 904
+        }
+      ]
+    }
+  },
+  "keyboard": {
+    "action": "idle",
+    "visual": {
+      "clip": "idle",
+      "frame": 0
+    },
+    "time": 38.09999999999991,
+    "wall": 600.5,
+    "x": 356.894233,
+    "velocity": 0,
+    "facing": 1,
+    "gait": 8,
+    "queued": 0,
+    "buffer": null,
+    "hitCount": 0,
+    "hitStop": false,
+    "bridge": null,
+    "dust": [
+      {
+        "id": 1,
+        "kind": "run",
+        "x": 373.0355240000001,
+        "y": 350,
+        "wall": 341.6,
+        "facing": 1
+      },
+      {
+        "id": 2,
+        "kind": "brake",
+        "x": 320.887473,
+        "y": 350,
+        "wall": 512.3000000000001,
+        "facing": 1
+      }
+    ],
+    "history": [
+      {
+        "action": "run",
+        "reason": "",
+        "x": 260.0144,
+        "wall": 4
+      },
+      {
+        "action": "walk",
+        "reason": "",
+        "x": 343.6679240000001,
+        "wall": 404.20000000000005
+      },
+      {
+        "action": "bridge",
+        "reason": "발을 딛고 멈추기",
+        "x": 356.887473,
+        "wall": 512.3000000000001
+      },
+      {
+        "action": "idle",
+        "reason": "연결 완료",
+        "x": 356.894233,
+        "wall": 562.4000000000001
+      }
+    ]
+  },
+  "mobile": {
+    "width": 390,
+    "documentWidth": 375
+  }
+}

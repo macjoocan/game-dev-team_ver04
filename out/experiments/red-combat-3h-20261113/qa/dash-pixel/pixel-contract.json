@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1527,
+      "lonely": 0.3287491814014407,
+      "flat": 0.026850032743942372,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1513,
+      "lonely": 0.34302709847984136,
+      "flat": 0.038995373430270985,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1441,
+      "lonely": 0.34489937543372656,
+      "flat": 0.0263705759888966,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1424,
+      "lonely": 0.3356741573033708,
+      "flat": 0.033707865168539325,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0004.png",
+      "name": "frame_0004.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1479,
+      "lonely": 0.32724814063556457,
+      "flat": 0.03515889114266396,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0005.png",
+      "name": "frame_0005.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1391,
+      "lonely": 0.32854061826024444,
+      "flat": 0.026599568655643422,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0006.png",
+      "name": "frame_0006.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1482,
+      "lonely": 0.34547908232118757,
+      "flat": 0.030364372469635626,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\dash\\frame_0007.png",
+      "name": "frame_0007.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1524,
+      "lonely": 0.34448818897637795,
+      "flat": 0.03543307086614173,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 0
+}

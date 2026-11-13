@@ -1,0 +1,92 @@
+{
+  "status": "review",
+  "source": "C:\\Users\\NHN\\.codex\\generated_images\\01a1abb8-999d-70a1-a4f9-cceb6da754a4\\exec-5e906ad9-09aa-4061-a70a-1bc12116b602.png",
+  "sourceSha256": "094277be84fc0fb10e8f1131800193291d704817f66de4eaf5d2d3cfc998e4dd",
+  "newFrames": [
+    {
+      "action": "evade",
+      "frame": 0,
+      "scale": 0.256,
+      "anchor": 295,
+      "sourceCell": 0
+    },
+    {
+      "action": "evade",
+      "frame": 1,
+      "scale": 0.256,
+      "anchor": 294,
+      "sourceCell": 1
+    },
+    {
+      "action": "evade",
+      "frame": 2,
+      "scale": 0.256,
+      "anchor": 295,
+      "sourceCell": 2
+    },
+    {
+      "action": "evade",
+      "frame": 3,
+      "scale": 0.256,
+      "anchor": 295,
+      "sourceCell": 3
+    },
+    {
+      "action": "evade",
+      "frame": 4,
+      "scale": 0.256,
+      "anchor": 289,
+      "sourceCell": 4
+    },
+    {
+      "action": "evade",
+      "frame": 5,
+      "scale": 0.256,
+      "anchor": 289,
+      "sourceCell": 5
+    },
+    {
+      "action": "evade",
+      "frame": 6,
+      "scale": 0.256,
+      "anchor": 289,
+      "sourceCell": 6
+    },
+    {
+      "action": "evade",
+      "frame": 7,
+      "scale": 0.256,
+      "anchor": 289,
+      "sourceCell": 7
+    },
+    {
+      "action": "guard",
+      "frame": 0,
+      "scale": 0.256,
+      "anchor": 300,
+      "sourceCell": 8
+    },
+    {
+      "action": "guard",
+      "frame": 1,
+      "scale": 0.256,
+      "anchor": 299,
+      "sourceCell": 9
+    },
+    {
+      "action": "guard",
+      "frame": 2,
+      "scale": 0.256,
+      "anchor": 300,
+      "sourceCell": 10
+    },
+    {
+      "action": "guard",
+      "frame": 3,
+      "scale": 0.256,
+      "anchor": 300,
+      "sourceCell": 11
+    }
+  ],
+  "existingFrames": "copied; old source files unchanged"
+}

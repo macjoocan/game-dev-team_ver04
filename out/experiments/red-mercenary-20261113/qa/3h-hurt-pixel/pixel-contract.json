@@ -1,0 +1,99 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1542,
+      "lonely": 0.3560311284046693,
+      "flat": 0.02204928664072633,
+      "semi": 0,
+      "bad": [
+        "외톨이 35.6%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1538,
+      "lonely": 0.37711313394018203,
+      "flat": 0.031209362808842653,
+      "semi": 0,
+      "bad": [
+        "외톨이 37.7%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1667,
+      "lonely": 0.32573485302939414,
+      "flat": 0.03059388122375525,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1706,
+      "lonely": 0.3182883939038687,
+      "flat": 0.03751465416178194,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0004.png",
+      "name": "frame_0004.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1615,
+      "lonely": 0.3065015479876161,
+      "flat": 0.027244582043343655,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0005.png",
+      "name": "frame_0005.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1570,
+      "lonely": 0.3503184713375796,
+      "flat": 0.0267515923566879,
+      "semi": 0,
+      "bad": [
+        "외톨이 35.0%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0006.png",
+      "name": "frame_0006.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1562,
+      "lonely": 0.3361075544174136,
+      "flat": 0.029449423815621,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel\\3h\\hurt\\frame_0007.png",
+      "name": "frame_0007.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1528,
+      "lonely": 0.32657068062827227,
+      "flat": 0.024214659685863876,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 3
+}

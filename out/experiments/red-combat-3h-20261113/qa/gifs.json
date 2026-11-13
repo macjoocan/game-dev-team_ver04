@@ -1,0 +1,62 @@
+[
+  {
+    "id": "combo",
+    "frames": 62,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "1d847f7121f62c71aa9d5477ea41b9917391d77c727d5f2279edeb66a144ec3e"
+  },
+  {
+    "id": "combo1",
+    "frames": 27,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "32528aa7af43442331d3a8df56f9d1a4a81f497a4cca72ebfdfcb99acb373c48"
+  },
+  {
+    "id": "combo2",
+    "frames": 28,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "276d7084286fd27c349ea13622f186f777c5a11c14b05b3a350e444240de3f0b"
+  },
+  {
+    "id": "combo3",
+    "frames": 32,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "6b2744708a07bddc26d1324fac6ee9f86b85856e9848e34c467afda3ec9f4aad"
+  },
+  {
+    "id": "dash",
+    "frames": 29,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "e311d6b0a0591bafa023a7199845cfa4a6f4d9c9be823c016b8b8a864a8732b1"
+  },
+  {
+    "id": "spin",
+    "frames": 36,
+    "durationMs": 2200,
+    "size": [
+      720,
+      360
+    ],
+    "sha256": "f392bbe546c86bb9a2170ff14a5f2d45fdd221d681145ab19eea1aa5e257d3da"
+  }
+]

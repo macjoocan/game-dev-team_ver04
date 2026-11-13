@@ -249,3 +249,20 @@ Add a troubleshooting note to the 3D asset pipeline: if `uvx` reports cache init
 **Principle:** 정합성 통과는 신체 구조의 정확성을 보증하지 않는다.
 
 **Reference file:** out/experiments/silver-reference-slash-20261111/ARM-REPAIR.md
+
+
+### Observation 14: 개별 모션 승인과 전환 검수를 구분한다
+
+**Status:** OPEN
+**Date:** 2026-11-13
+**Skill:** sprite-pipeline / polish / fx-art-system
+**Type:** open-source
+**Phase/Area:** 모션 전환과 접지 이펙트
+
+**Issue:** 각각의 공격이 쓸 만해도 대기 복귀 자세나 위치 초기화 때문에 연결이 끊겼다. 발 먼지는 캐릭터보다 먼저 그리면 발에 가려졌다.
+
+**Suggested improvement:** 입구·출구 자세, 월드 위치 연속성, 입력 예약을 따로 검사한다. 먼지는 발 접촉 지점에 남기고 레이어 순서를 실제 화면에서 확인한다. 먼지 효과와 자세 연결은 별도로 끄고 비교한다.
+
+**Principle:** 이펙트는 접지를 설명하지만 관절 모션의 정확성을 보증하지 않는다.
+
+**Reference file:** out/experiments/red-flow-3h-20261113/REPORT.md

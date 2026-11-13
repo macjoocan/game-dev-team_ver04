@@ -1,0 +1,4774 @@
+{
+  "id": "art.2d.resources-20261113",
+  "status": "review",
+  "date": "2026-11-13",
+  "sourceCommit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "summary": [
+    {
+      "root": "out/experiments/silver-impact-20261113",
+      "files": 83,
+      "bytes": 28057408,
+      "png": 20,
+      "gif": 1
+    },
+    {
+      "root": "out/experiments/red-mercenary-20261113",
+      "files": 481,
+      "bytes": 34954586,
+      "png": 272,
+      "gif": 21
+    },
+    {
+      "root": "out/experiments/red-combat-3h-20261113",
+      "files": 213,
+      "bytes": 17136922,
+      "png": 96,
+      "gif": 6
+    },
+    {
+      "root": "out/experiments/red-flow-3h-20261113",
+      "files": 169,
+      "bytes": 7469263,
+      "png": 94,
+      "gif": 5
+    }
+  ],
+  "excludedPolicy": "중복 재생 캡처와 대용량 캡처 JSON, 임시 정규화 비교본은 제외했다. 원본·최종 프레임·GIF·재생 코드·검증 로그를 포함한다.",
+  "files": [
+    {
+      "file": "out/experiments/red-combat-3h-20261113/build.mjs",
+      "bytes": 1059,
+      "sha256": "d6b60ef486967cb19603b6b634117e9500eba308d4618317e190ab7f8ff315b9"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/contact.png",
+      "bytes": 80163,
+      "sha256": "cc2e6484387e83e63859ed6b618eab04609f161810344aa468242fc7a16d96f3"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/create-feel.mjs",
+      "bytes": 1731,
+      "sha256": "b197efc7c9826d75de277ed7114798d50c3ab35e7995bd5425f288cdd22d7ef1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/export.py",
+      "bytes": 1897,
+      "sha256": "d4911483da07442a039ee82dfa6520a00d493598313b1f64f88cba1d023cf365"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/feel.json",
+      "bytes": 4346,
+      "sha256": "b1679d9e369709d94ac6f71836743542bb10b734d90827785e0e73c144c7dcdd"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/finish.mjs",
+      "bytes": 4008,
+      "sha256": "d1acd6a09fa48cdacf4aee6f751b945cb46449a5d9a49b4fd7455950f572b550"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/combo.gif",
+      "bytes": 741982,
+      "sha256": "1d847f7121f62c71aa9d5477ea41b9917391d77c727d5f2279edeb66a144ec3e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/combo1.gif",
+      "bytes": 311605,
+      "sha256": "32528aa7af43442331d3a8df56f9d1a4a81f497a4cca72ebfdfcb99acb373c48"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/combo2.gif",
+      "bytes": 323813,
+      "sha256": "276d7084286fd27c349ea13622f186f777c5a11c14b05b3a350e444240de3f0b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/combo3.gif",
+      "bytes": 374290,
+      "sha256": "6b2744708a07bddc26d1324fac6ee9f86b85856e9848e34c467afda3ec9f4aad"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/dash.gif",
+      "bytes": 343157,
+      "sha256": "e311d6b0a0591bafa023a7199845cfa4a6f4d9c9be823c016b8b8a864a8732b1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/gifs/spin.gif",
+      "bytes": 435909,
+      "sha256": "f392bbe546c86bb9a2170ff14a5f2d45fdd221d681145ab19eea1aa5e257d3da"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/index.html",
+      "bytes": 244544,
+      "sha256": "da5230fd50097e1b327d7f3f9c595cd9a6eae1bce9c3a9141ab9b1652f236927"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/index.template.html",
+      "bytes": 5502,
+      "sha256": "c4050dd8cfdcda98a2e33c02800ef5a430f437c32317a31e95551c7e8987b270"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/inspect-components.mjs",
+      "bytes": 506,
+      "sha256": "a8fc84d7579b1a2366614b48d2f480cbb6ba7d610dffcc1ab203b9dbfe66627a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/inspect-temp.mjs",
+      "bytes": 3559,
+      "sha256": "1871d9149b93022a8d16b3ef385f3e3e7c2b4cde5bfd5f8258eb2277aa5f5d9d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/manifest.json",
+      "bytes": 20324,
+      "sha256": "c465393babfc1ee34cbcf38160a772f8b96dbcd3e472ff18314393140627cba4"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/model.mjs",
+      "bytes": 2624,
+      "sha256": "c8b21786322c5eea229886fb69c410a28e218e0da53d835c44b0f6758de46ede"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/model.test.mjs",
+      "bytes": 1646,
+      "sha256": "ead5a3dfbee4f3411b4edb0396c773d3fbf7bbb940c376c4715d18afb30e0707"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/normalize.py",
+      "bytes": 1597,
+      "sha256": "0de2aa499cb994b5bd8213abb578dd67e2a1e4f1fff326ccac58909283ed1aa8"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/palette.json",
+      "bytes": 1615,
+      "sha256": "641cd9e627af0ad31e4422dbaffb22858258d4d97194489eb36bdfaa564b1876"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0000.png",
+      "bytes": 3681,
+      "sha256": "ed9000e2b95c0208ad11b797ed4e3597c46c2402fa0d967f56ec2c2d2cc5e251"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0001.png",
+      "bytes": 3592,
+      "sha256": "a9e39b9195266da38b286137ea9a0b00f86ab6e7947a2836374e35c0008b7b30"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0002.png",
+      "bytes": 3471,
+      "sha256": "2d33ceac55bb9fc3247c0943ce19b625c1b6fdd775879a2aa23b74958f273eb6"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0003.png",
+      "bytes": 3557,
+      "sha256": "28fd64fe73a8623f682cf2064dce6c21fd111e200926fc2052dc8568ec33068f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0004.png",
+      "bytes": 3496,
+      "sha256": "93650c9a4ef16f232f75fa8902b5a49612a08a191aa95d9d4af2c661f148280e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0005.png",
+      "bytes": 3391,
+      "sha256": "b552ade6a034b6efa85f3e07f4e88ad32a84cca8182964b4ba5620ee563b6f64"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0006.png",
+      "bytes": 3350,
+      "sha256": "7730a6aaab2763f644964f409064fe34044488bd53903531d6f7fe9ac5ee38e5"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo1/frame_0007.png",
+      "bytes": 3260,
+      "sha256": "265e4ae6ee109101f06384756d50cf79177e56657774dee2c9dabef2f36c5cd1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0000.png",
+      "bytes": 3339,
+      "sha256": "7132c0a1a46220836bb4b3c1dad32021aad93a04a1b69b97c9b90d859bf1137f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0001.png",
+      "bytes": 3269,
+      "sha256": "403b11d428dd69b4826aac1af902b63dc46f2ac4564ef389b6edf8e183e85552"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0002.png",
+      "bytes": 3330,
+      "sha256": "20c82ce6ad6abfebb92c02949c530de6e29b194674069738e7de5e3272063a76"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0003.png",
+      "bytes": 3460,
+      "sha256": "2e8e9a14688a516e8a9ef77485422fb7bc3975a2c81ac7d2763e43785dfdad68"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0004.png",
+      "bytes": 3359,
+      "sha256": "065a05167f304640a2e7d82b5535581ebfb4356ce59c6e49c51d217e8daf7024"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0005.png",
+      "bytes": 3309,
+      "sha256": "2edcfbafacaf5b29ef0f227d41155aece985e42627690c75df1b21d05f5f62e5"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0006.png",
+      "bytes": 3316,
+      "sha256": "634d40f2e1010e319cfbb9ca0425a23e9ce5221c52f19da87604c85ec7b6cf4d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo2/frame_0007.png",
+      "bytes": 3221,
+      "sha256": "747fbd0328ab5a1d50c0ccef5959e1631dfca57a2c0e3956ea8c95fbf7f2463e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0000.png",
+      "bytes": 3308,
+      "sha256": "7af94e0f9118b0070c4aafda54eb1c70562730fc46447cafda0380dc6eec4195"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0001.png",
+      "bytes": 3566,
+      "sha256": "a464e1ea33ad3c872acd5d452dd7ae2a35a6b181f69a166212cb6a88e5fe5aab"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0002.png",
+      "bytes": 3745,
+      "sha256": "ac4576ef92a8235af3949608a0db0f5973f0e2e3480f506c9208a244d3c702b5"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0003.png",
+      "bytes": 3592,
+      "sha256": "b211b9dcc8e376d7a1a0a873cd0739e4c5ca3c8493156be1787b8b1d34ef4d5e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0004.png",
+      "bytes": 3430,
+      "sha256": "c1e7603354fd03a89a341b520ff829da38e042d37e99ae21ba462c399d9b3abb"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0005.png",
+      "bytes": 3492,
+      "sha256": "0a5bccbd5e010ba1a6d34f6f6dc289586675d72661bbc84fd40541c05773ffb3"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0006.png",
+      "bytes": 3401,
+      "sha256": "800bcdc623721df3eed57000c06847edefd545e44e248c369e0486b22ec10081"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/combo3/frame_0007.png",
+      "bytes": 3648,
+      "sha256": "b7c0cedbce12246ff20507df8f9c3b15c1337f6605a1b992294673dce5d7a6c6"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0000.png",
+      "bytes": 3685,
+      "sha256": "62fc555b6f42a06ad4f3f4caaaeff2e9a6ab62570445767859294cb35e893a0c"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0001.png",
+      "bytes": 3520,
+      "sha256": "0808893f69347eb5b499b6edf3385b1f98952e11f0a029291d491713513347d7"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0002.png",
+      "bytes": 3385,
+      "sha256": "43f4b57f9ad5505989c65ccf186e243b9df23cb6dab5c60dca05fb775527de4e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0003.png",
+      "bytes": 3350,
+      "sha256": "d6dd580fc9127808587f324b0cdfd3e3ec9aaf3f9bafbb91dcd241b39c84a9ce"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0004.png",
+      "bytes": 3474,
+      "sha256": "ceae0d46c3d1fc5f6b3009b9dda0394c13c22b289fad0fe9de3557ed3c31893f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0005.png",
+      "bytes": 3358,
+      "sha256": "315f1b610343c110a0920a599cb02c82cc9322055f005171759a904125010284"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0006.png",
+      "bytes": 3582,
+      "sha256": "c52a4403b499cce794a1069f2603bc0f7e5a5bd69aea51e25a92c614debf4731"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/dash/frame_0007.png",
+      "bytes": 3704,
+      "sha256": "b700a5c3ab37d4d01665cf2804f5b2e994b63122a120581bbdbfbdfa11698f3b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0000.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0001.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0002.png",
+      "bytes": 3703,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0003.png",
+      "bytes": 3709,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0004.png",
+      "bytes": 3709,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0005.png",
+      "bytes": 3703,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0006.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/idle/frame_0007.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0000.png",
+      "bytes": 3570,
+      "sha256": "997556454bb83db156b9f96cf916e6fc20243c383b2b825479593b3e034db308"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0001.png",
+      "bytes": 3768,
+      "sha256": "f004098194d9611dddfc4f8bbbeb54fb2241b651ad93595e8e05c590843bf36b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0002.png",
+      "bytes": 3422,
+      "sha256": "a0a08b160bcfc9b8b48b11ca30e59b0d6e4db4fe8b03968497bb69cd6da2feff"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0003.png",
+      "bytes": 3423,
+      "sha256": "549ac06c98a63c2653f0e9f4bbf29e491a369a399a1f49e1cb7f2ea5701e93ff"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0004.png",
+      "bytes": 3593,
+      "sha256": "6149fc9ff41438bcca9265f65fd3d0268e745e6a6ce4b8793be3b775ab26167e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0005.png",
+      "bytes": 3453,
+      "sha256": "864072ce28861a92273cfa9b8be6388752ae4fce51e0faf5180de0bec08465e9"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0006.png",
+      "bytes": 3545,
+      "sha256": "159b33b6679c34c6536c470580a25532bcc2716ef4a1ef39150ea05b316a2ed8"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixel/spin/frame_0007.png",
+      "bytes": 3597,
+      "sha256": "70fb32e513d713ab1f63e6a20199d64e7d2b7aad97a1b717a0864a6c45dc76bb"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/pixelize.py",
+      "bytes": 2593,
+      "sha256": "7f9a53fa6658782926ad368962ff56682298a8d63d919da8289acf65c7e1be9b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/prepare-components.mjs",
+      "bytes": 3449,
+      "sha256": "421a1a953037a9b6d240419bef2ac09458a96bdd41f13a809f5e4c87f6f3518d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/prepare.mjs",
+      "bytes": 2216,
+      "sha256": "feba4beff04d131ec0fcb48b387157e2e016943934987268d671f2038254191e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/prompt-repair.txt",
+      "bytes": 1884,
+      "sha256": "2d80cfd6c17db0b4eed3702dd4cecc79e220afc73eb02c1fffadbba10b795dea"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/prompt.txt",
+      "bytes": 3913,
+      "sha256": "06118fb67edf58ab120759113cb094f35fc89dcf56dcb5ee1d11445aed04deca"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/browser-final.json",
+      "bytes": 3091,
+      "sha256": "9ff3246d5c1d2897494ace2a6f824ff575bbd4cc69e300afc350297ff69876ba"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/browser-initial.json",
+      "bytes": 3356,
+      "sha256": "fbe58efb3208f99e6ce2d3f70438dc55b63c9285fd08031deb06180585b081ba"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-pixel.stdout.log",
+      "bytes": 2300,
+      "sha256": "5488065aa4b53bda6b7c1c92f0db99ef73e51e18e9d7d964e8d439ee28eb2a45"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-pixel/pixel-contract.json",
+      "bytes": 2637,
+      "sha256": "fe3b15891eb75d32049e3e50e25c6de09af8ad68e32009c0b5e14605bc0562a6"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-pixel/pixel-contract.md",
+      "bytes": 2200,
+      "sha256": "bea1c59ddfd6a2fd0e55462800f54cb675f1d068b5e41638187712ababb3997a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-sprite.stdout.log",
+      "bytes": 4288,
+      "sha256": "34a0d19fc098c08f1f4f0ba468dbcdac39157628ba06731ec8a5c2b56f1594ae"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-sprite/sprite-qa.json",
+      "bytes": 627961,
+      "sha256": "50cf6a21940890309e0532a6e93a5bd5a7321c93a3701708b59e49f7072de570"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo1-sprite/sprite-qa.md",
+      "bytes": 4197,
+      "sha256": "017a7170deea0dd346919f1d84d816b53d241953805828fb0207249c553d34fb"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-pixel.stdout.log",
+      "bytes": 2582,
+      "sha256": "84495396a9dc790e6dc5484b2142c24f240895064b9c1500e7ad583b20a342f6"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-pixel/pixel-contract.json",
+      "bytes": 2885,
+      "sha256": "171dfbe0d81bc20062e6766a84364deff57a9ddcc849e71b994c9e132bfadcab"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-pixel/pixel-contract.md",
+      "bytes": 2482,
+      "sha256": "d1f5fe6d3111440d9bf7b139e5c9047d65b1463001a96268d343ac48afb75816"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-sprite.stdout.log",
+      "bytes": 3817,
+      "sha256": "567284dcb0c5bc8c891f3ed54b9ce9a1054a0555349c47195d8146ce3cf4c82e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-sprite/sprite-qa.json",
+      "bytes": 627697,
+      "sha256": "842a3e357b2517e2711f604146ce12b6648f6177d1b8f656048fe10e150b19cf"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo2-sprite/sprite-qa.md",
+      "bytes": 3726,
+      "sha256": "682cf9451681cee6da889a35f11b9d38732cb00035dc9faa8910fdd4bd8f1465"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-pixel.stdout.log",
+      "bytes": 2300,
+      "sha256": "6bf31d0d2cc5416259fb27a5543c4a790e952c370071faa34651c5fc1cf7193b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-pixel/pixel-contract.json",
+      "bytes": 2635,
+      "sha256": "c85c5ba9a71b56d9bbc34109a40fa2ada026d98cc20cc9c8c89a382f81143f0f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-pixel/pixel-contract.md",
+      "bytes": 2200,
+      "sha256": "02a4ea255e90d99dbd59fce8b052166763fc5de911a97fa0bc5fa6fafd700ad3"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-sprite.stdout.log",
+      "bytes": 4288,
+      "sha256": "234b414b800a5ef7b9a4cce410893b4d997df0f0e8131c5902a6504f40d446fb"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-sprite/sprite-qa.json",
+      "bytes": 627977,
+      "sha256": "3ca57c45f0184f8f46cf4d6beffa8d59f2abbddecbe8fdbf1f27ea0dba8cbc67"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/combo3-sprite/sprite-qa.md",
+      "bytes": 4197,
+      "sha256": "4a2c7f516ec1839eadc2a9fcad712340a131d9d94e920255431242b0838f4962"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-pixel.stdout.log",
+      "bytes": 2163,
+      "sha256": "d77ff046b2bab73e7b016a80df3ce74aae5cdd1212df3cfbc1cd0b7a78d7e604"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-pixel/pixel-contract.json",
+      "bytes": 2458,
+      "sha256": "a1dc3c4e93dc942e1ba0504939a356f1d0ecf233ae8c006f25fdc935eff14093"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-pixel/pixel-contract.md",
+      "bytes": 2065,
+      "sha256": "4bb13ec2916c24cf30d0ddac6e47466bb0901b9f608fd07ebc60ec368d6a4a36"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-sprite.stdout.log",
+      "bytes": 4690,
+      "sha256": "9f20c9e8a054f6db0f32974a48c478cd34572559c96e1ea7e164a825becf2960"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-sprite/sprite-qa.json",
+      "bytes": 628419,
+      "sha256": "320768f101398d1b6378ca088dcd614b910e6af0cb50ef5228243004550715da"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/dash-sprite/sprite-qa.md",
+      "bytes": 4601,
+      "sha256": "b5c222a7b51688f58987c8a42b939c99a1406c29d27a541732d20c5be91b1aea"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/desktop-final.png",
+      "bytes": 72637,
+      "sha256": "1f6ad79791210b5215ffa40133c1644434df763333697fcf146a6669b3f9711b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/desktop.png",
+      "bytes": 71717,
+      "sha256": "23ec5eb6cac0f0a28c0dbb6a5726cb354f00b94f43f0eba3a88afc909e415d27"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/feel-final.stdout.log",
+      "bytes": 3482,
+      "sha256": "7aa425afe20e71e02f25426236892477450b1f21d0e0049f264111800012cde1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/feel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/feel.stdout.log",
+      "bytes": 3482,
+      "sha256": "7aa425afe20e71e02f25426236892477450b1f21d0e0049f264111800012cde1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-light.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-light.stdout.log",
+      "bytes": 3132,
+      "sha256": "fb2461dfe85a475c6b9584f0a1822f063cca09a69273244b7e90915bbb6274d7"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-light/flash-report.md",
+      "bytes": 3038,
+      "sha256": "d1c941fc2939fa2b7348e3394d000340f16efae92beee7bf99f18c9e05e6e1b1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-light/flash.json",
+      "bytes": 5873,
+      "sha256": "1af614403ff996a7b1f23116d92e82e968e7ed343b91480d32c1a196e711b021"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced.stdout.log",
+      "bytes": 3142,
+      "sha256": "613cdd6b8f08c91fdf6364fe4c16d4809ddaf94e52876758a2d051ce66debe3e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced/flash-report.md",
+      "bytes": 3046,
+      "sha256": "62969e530dc63ac1c601eddf2b35fb0a46d339ddb8158b0b8c69d9a836b0b72a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced/flash.json",
+      "bytes": 5737,
+      "sha256": "f5afe295ac324f8b4379b183387c013a019caed708a7947a5c68a2284a91aa3f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo.stdout.log",
+      "bytes": 3102,
+      "sha256": "e1fb24b8327a4a9c22f6362f1a729ec160f52b703ba5d9be79e6ca58132673af"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo/flash-report.md",
+      "bytes": 3014,
+      "sha256": "3f5588be15f8d24a66eda2df62112ab1eaf180f99a79f66d0ff86842f77cc62b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo/flash.json",
+      "bytes": 6201,
+      "sha256": "f5bc235d99695225f33a0dd103238da002b8242072a4c8e30b3132efd78ae5c1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo1.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo1.stdout.log",
+      "bytes": 2855,
+      "sha256": "01ca56eabc7b67b8cfe94c4f4c5380ebd24f66ca58b562880f1b48e5a278bdc9"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo1/flash-report.md",
+      "bytes": 2766,
+      "sha256": "b58b1e0a8f8616e99a727b5568c543f2372930810dbe15ba2e6809b7820beeb7"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo1/flash.json",
+      "bytes": 2526,
+      "sha256": "ccddbe8f8743dea7ddccd0a448056ff863690bcdc1ef5ee865940691fa7f9fdd"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo2.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo2.stdout.log",
+      "bytes": 2792,
+      "sha256": "b83003377b4f8628014d6ae4ab9668f5449754c22760f2514d0457d008bd92c0"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo2/flash-report.md",
+      "bytes": 2703,
+      "sha256": "abe1d627a0c786f2b6fd8e5a0240a46fb05dc2fe51a86ffeaf990b671e6cce5b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo2/flash.json",
+      "bytes": 2281,
+      "sha256": "c3626c98c7287f58623142d59396fcd36adcb4d6a3717ef241b72c9df976324f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo3.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo3.stdout.log",
+      "bytes": 2729,
+      "sha256": "d0d4bf142e96c18ad87c12371ea5e2a4cc0712af4dda536b38ad6510812da9b3"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo3/flash-report.md",
+      "bytes": 2640,
+      "sha256": "e7dd98dbf90fd13228d42fce0d9254c756f09aa9c6c04120dd566d77b9e89d8b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-combo3/flash.json",
+      "bytes": 2033,
+      "sha256": "8b52a281b651cda9ecc76ff0c064b6ecc1705a2b5d9b3da77d472a6be3de42f8"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-dash.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-dash.stdout.log",
+      "bytes": 2845,
+      "sha256": "858657e4ec9b243ff12bc4810cb30aa1a0287fd7b8424ed44f897ec9bca17f98"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-dash/flash-report.md",
+      "bytes": 2758,
+      "sha256": "d8cfcce070fbe120ac50b062539d5c287afa5530d23e78a51539620b2eaca111"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-dash/flash.json",
+      "bytes": 2527,
+      "sha256": "9a4c9cdc1f11b3661831fdb814ae19d693d3b8f2eebea73148a6bf8b810a7bc7"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-spin.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-spin.stdout.log",
+      "bytes": 3097,
+      "sha256": "c62d90bf35e497bbd8471a572a2687a6cec240ef777959009a9de37d48761eb0"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-spin/flash-report.md",
+      "bytes": 3010,
+      "sha256": "0905fac8653cd65af5851fca886d5aab957f67690864e229d6d9af3aaf306e99"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-spin/flash.json",
+      "bytes": 3497,
+      "sha256": "23c4aba4ac5f67ea2ebde731e5bb0aed0836d928f87eb7b4efc55f0ac490238e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/flash-verification.json",
+      "bytes": 2959,
+      "sha256": "419f1229a277dd1a1977d3a87e01d42d2825f0bb34a7a314f2cddad418f23c36"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/gifs.json",
+      "bytes": 1222,
+      "sha256": "ea06f8b751a462e7ca969c1d578c848cd9b59d10bb71d259527b08fceb4110ad"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/mobile.png",
+      "bytes": 57614,
+      "sha256": "eeef4071436c5d12903844f77ee078a7fb34b10fb4914be74f891de8c731620e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/model-final.stdout.log",
+      "bytes": 510,
+      "sha256": "3bb96957c262953f8fcadd14807aec066d0d661833dd6de74cb9beb43c4c7663"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/model.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/model.stdout.log",
+      "bytes": 511,
+      "sha256": "2f4dd50b10a9e94b4dd630986e7953f8579bec2ce1f2afc88800545184a78640"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/normalization.json",
+      "bytes": 7284,
+      "sha256": "c67c41c7feb7af4e764a24fb95b665f524da10677fe379256a86dc01f3950e68"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-pixel.stdout.log",
+      "bytes": 2202,
+      "sha256": "9186661ab8ebb042e072091371829633c207bfee07e84c5880104fc26b7a7b58"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-pixel/pixel-contract.json",
+      "bytes": 2537,
+      "sha256": "3741dc602b0dd29785f9ebd744dae01dc1fa86f2b734a2c472d90fd41d52f7a1"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-pixel/pixel-contract.md",
+      "bytes": 2104,
+      "sha256": "073560f07741584342a56629632da904eda77b1d23e00dc82a1836448c952a19"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-sprite.stdout.log",
+      "bytes": 4284,
+      "sha256": "5a06221b4f27c6f5569ee41bc39cc299a17693cb59ca0c2935f0434183785379"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-sprite/sprite-qa.json",
+      "bytes": 627921,
+      "sha256": "7124aa3fb66a42bfa4e7b08dc1dcda6b087cdbeefb96b9cf765c83f9114af8fb"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/spin-sprite/sprite-qa.md",
+      "bytes": 4195,
+      "sha256": "8b9bd9fa584a8eced03db4d24aa326bbf495eb80b07457665793e8ac6b30790c"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/verification-final.json",
+      "bytes": 10763,
+      "sha256": "8a40c08b576d25359ac2528b48befc1ff331610e7be7b204b9b33aaf70c87d8e"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/qa/verification.json",
+      "bytes": 3490,
+      "sha256": "1105c77b317e13bad7479301bd180ba7d57175cd964e5b73889e47e6b6f99f4a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/raw/3h-sheet.png",
+      "bytes": 2433598,
+      "sha256": "7426b993ab49f7e1cc89560f3701b55503cc95785606c94f077920e8700f6c38"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/raw/approved-design.png",
+      "bytes": 1606339,
+      "sha256": "0d70f31e2fb6e3c83d8d340a0434e2f50b8a1baa702453a726e2e2a6eb1b244a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/raw/combat-base.png",
+      "bytes": 2433598,
+      "sha256": "7426b993ab49f7e1cc89560f3701b55503cc95785606c94f077920e8700f6c38"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/raw/combat-repair.png",
+      "bytes": 2418587,
+      "sha256": "bcd58a84ff133e7f26985db9381eca1e1f499b2e5bbe0868b3ecc1913f98c8d2"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/REPORT.md",
+      "bytes": 5084,
+      "sha256": "da08b2390529e50f8fb8f12c3ad0b1bb8d1fafb4cc112221442911e4d5ec7fa0"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source-manifest.json",
+      "bytes": 10497,
+      "sha256": "17eee08911c7c16a5b93a34951a9ac4a1b56d881486df69a3b5253e02716b4fc"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0000.png",
+      "bytes": 42383,
+      "sha256": "c5a06f5b1183cb190f45697335d6067a590d71bf30e73db4cda45a80e3862340"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0001.png",
+      "bytes": 40682,
+      "sha256": "76e429f5c6cb6df9d84bdbcd2ff97b2f2aa186719f8cbee4779843bfdb3a442b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0002.png",
+      "bytes": 39312,
+      "sha256": "897f7b271f0e15eceaf965a4eae5c5bc527c9c97fc705a462d1a988dc92a3522"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0003.png",
+      "bytes": 41707,
+      "sha256": "40c780cb01eec84f216bfd0bb2e3aadd69840ec6545ec5853074acc30399c633"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0004.png",
+      "bytes": 40208,
+      "sha256": "af03d60c40dd892a4c0a3f75f36317b26d0f36e46c60174b3a84857886cbd84c"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0005.png",
+      "bytes": 37824,
+      "sha256": "6d69eb38b1a4d7e426dbfdb229043208308166f0902d09bf477c91a0db51f94b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0006.png",
+      "bytes": 37696,
+      "sha256": "2debe0f28327e3599cc5b389eab9271b9fe9a9f4bebe610b152fc12dbe896e39"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo1/frame_0007.png",
+      "bytes": 37645,
+      "sha256": "9fc065c5690d08c0bf226961160ff5fdcecb8aeedaef2a666bd92eaa499cfc72"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0000.png",
+      "bytes": 37868,
+      "sha256": "2d6537894e7cf6a6b4cf796b8e39693d306899cbb294e784ae8e536d559087f5"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0001.png",
+      "bytes": 37628,
+      "sha256": "0aeeb8f01bd2f540be3209b9d7c4b05be1c206b28a0b8ce200417c0035850c83"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0002.png",
+      "bytes": 36804,
+      "sha256": "85765163b7294645d14e2306647c289935ce407a2f9d8c5e153cf0fdf085b20b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0003.png",
+      "bytes": 37591,
+      "sha256": "b98f086b4b701c98d3de783a1fa05f882745b8f2c547ed500d2fe934b0eb0f2c"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0004.png",
+      "bytes": 37232,
+      "sha256": "07d9e698a2b25dd69d5125a279b27fdea234fe9c721fc786af0351ca29c76d0a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0005.png",
+      "bytes": 37868,
+      "sha256": "829426c7d5acfeaf9df9c08670f5015c79674227c32354628887a8ff5c270883"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0006.png",
+      "bytes": 36446,
+      "sha256": "21bb926de227a783471b5497d93b3c18c2afa5cc2b1f41b6e2442bdb3c961996"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo2/frame_0007.png",
+      "bytes": 36562,
+      "sha256": "515294a43f31c8fb53a0de0c3e4feca301e120799a296ac0a67a33954c5c2a4b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0000.png",
+      "bytes": 37375,
+      "sha256": "ade5dcf2151536240add490b79e9859988593e30ce8db7dfcd60436fa3f82ad5"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0001.png",
+      "bytes": 39113,
+      "sha256": "bc40b4d8e98ba7f6101eca5384b668c7d7d3708cfe0629b87205111d9e7e6f42"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0002.png",
+      "bytes": 40164,
+      "sha256": "05ffef9b90fb86498b86497038011c1b9e91d748a94f8879a61bb37ab5f17011"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0003.png",
+      "bytes": 41999,
+      "sha256": "6c33ca9229859d87a1f2461b373f23cfafc417a6d358a7c1cbd4ba732b8da53b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0004.png",
+      "bytes": 38709,
+      "sha256": "83c843c1b9162062d04c1777c20b3b5d1608ea722011468d8da31d4a0fdccef8"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0005.png",
+      "bytes": 39930,
+      "sha256": "8485add96127872cd7d5cdd7c989b8ba52c2af2479f1bd26ed6597f0e189aaa7"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0006.png",
+      "bytes": 38529,
+      "sha256": "76a1eea46511691531daf6a4275503835d0440dff62f3791ce4176105318e54d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/combo3/frame_0007.png",
+      "bytes": 42257,
+      "sha256": "567517ec22950a6063ca3118f44f324bab49523558507d1ac1cb29cb2aeb9f24"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0000.png",
+      "bytes": 42518,
+      "sha256": "2967a07491ec3c1bf0dcebbdc2dec098ed3c967409ba0eb65ac9cc91a2aec3fd"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0001.png",
+      "bytes": 41871,
+      "sha256": "111a02a2910e7d3cd0ecfc8737838d274c50e386a1633eb1e6125166bd8b0d21"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0002.png",
+      "bytes": 39783,
+      "sha256": "fa3d44d0cdfa5e2a039ed8ee42acb2d48a065f8d57255631541c15da1568aa53"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0003.png",
+      "bytes": 39212,
+      "sha256": "4695abdefc4bbf2a0774304d9f39332b324626c07228e48ea439a6e460c633ed"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0004.png",
+      "bytes": 40871,
+      "sha256": "e47a06e1d4dd3639de20308720257e96e3e027d73d61c69179c875ba3a2168ad"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0005.png",
+      "bytes": 38346,
+      "sha256": "5a46317b904d8c9e54226a10bcf5622d8b2bd90bd3e47c41ee0d5792f2290f4a"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0006.png",
+      "bytes": 40788,
+      "sha256": "0bd44e4ca5b668c044057972ceb783af82119e7bf446869820e028570c67019d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/dash/frame_0007.png",
+      "bytes": 42477,
+      "sha256": "41ea48435ee5e59042e6f2e167a84feedae56fba28abba20af067fcc254b7e0d"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0000.png",
+      "bytes": 42398,
+      "sha256": "8bbc6f0798af26e242c3c831fe09b18c9e5964c93ef2a249dc941cb02d197667"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0001.png",
+      "bytes": 42364,
+      "sha256": "a6470477cb513ceaaf382a836d822897bfa22d3e737f1f0cae1be404f799d49f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0002.png",
+      "bytes": 39670,
+      "sha256": "c67529b022ae5d25d3133b559dab1577a04dd0b6c95880c433e96e877b94e00f"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0003.png",
+      "bytes": 39951,
+      "sha256": "d3c8468d7d73bd9d795ad5056f82b5c9495b314dddb02ce07db1bbaf5c477ca2"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0004.png",
+      "bytes": 41022,
+      "sha256": "32ea81cf6ac58e8fa65e4d1866b443abde775e0729f0b1a0bf176653ad8c1f00"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0005.png",
+      "bytes": 40498,
+      "sha256": "75ddad335a0c755ddc01fc79ebc172e4555d2c47ff86d2379c0826669832ec66"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0006.png",
+      "bytes": 40710,
+      "sha256": "a2073308338ca7a490bf1333d0fc1af3b2be88216e0a37a6431f55e44b11f55b"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/source/3h/spin/frame_0007.png",
+      "bytes": 42189,
+      "sha256": "7bb5b126f148d62c4052dd8b5a55f84293c2e4bb186eaf8f23b1003d1f39ed82"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/split-base.mjs",
+      "bytes": 4135,
+      "sha256": "c8e3acfa5d3a45bc5421be94e9d4c9cba3c3a06021e102e65b1134f110c3b240"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/tune-contact.mjs",
+      "bytes": 1387,
+      "sha256": "a0d56ebb874a1ef77b148db8fa9e2558d11a2c5dfd193a02f1ebe772e9d40c84"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/verify-flash.mjs",
+      "bytes": 765,
+      "sha256": "d45a7bc2dabbc5155c0e1e5fc2c551f9801b0e614b9545f70c7c04b288e55a99"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/verify.mjs",
+      "bytes": 1096,
+      "sha256": "374996e76164f72569d909a616704eb8a0056eff3be0c161190546b7105cff53"
+    },
+    {
+      "file": "out/experiments/red-combat-3h-20261113/view.mjs",
+      "bytes": 7250,
+      "sha256": "fb1540fc9645d39456cdba249cbe16311a6c604418b2ffd9ea6884ff6ad9a8a0"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/assets.py",
+      "bytes": 1062,
+      "sha256": "9c3283849bba49ffb28aedd2a7430a0161f8867682ec580153944d2b71eb72f6"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/build-check.mjs",
+      "bytes": 283,
+      "sha256": "afc46ac845484eb83000eec421c4e7a1d1e72b3ecf4be8f791f0436acfa2a298"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/build.mjs",
+      "bytes": 1250,
+      "sha256": "d319c89fe88bed9ad952602384be6e2f8fe695aef311b61fc52d2ef0a93ab252"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/configure.mjs",
+      "bytes": 906,
+      "sha256": "790a5d095275f13383d81373f1e47359e2f37cfec374674d445da03771b8279a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/contact.png",
+      "bytes": 73966,
+      "sha256": "759ecb84cc17ed10718b71008727fa2361c0f4ffaabff9747de2956a501af445"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/export-check.py",
+      "bytes": 393,
+      "sha256": "4d40465c1f9192b7bb8529b61a0f1eb822d5f4f4551d77e80eddf4532db1f7d4"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/export.py",
+      "bytes": 1995,
+      "sha256": "9b3f105ab7b0d3bf0a726dfc40ad261344b2178977c6e244bc0fd453dd767fb1"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/feel.json",
+      "bytes": 5771,
+      "sha256": "3b291267fd1bd72dc0436381b9d2f611a26fc5338931576fad9ca4691928c064"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/feet.json",
+      "bytes": 127,
+      "sha256": "ddda4df830d0de9ffb7885fea8ee2132d9efa7f98d7b0773382b72f84adbc881"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/finish.mjs",
+      "bytes": 7850,
+      "sha256": "515829b715624ae23bfadb72deb6f41ab54c65bd876f1990d44cb76da9595554"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/fix-dust-layer.mjs",
+      "bytes": 970,
+      "sha256": "318fe869c18f9fafa4efdc90ce703a7b74c92957b672f4969f55d8af68882d9b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/gifs/chain.gif",
+      "bytes": 630919,
+      "sha256": "3211f1c0591a8f64a08dd580d1a04ef6ec4b659fc1070ab6448391fc6efc5cc9"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/gifs/dust-off.gif",
+      "bytes": 268493,
+      "sha256": "112e7318b251254b8de18c5f4557d111852bf93befabe9b22b5eddbfb6fb0521"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/gifs/dust.gif",
+      "bytes": 511444,
+      "sha256": "6f5339a99e931bf3f10d78a762c32ba544d1afc1ba7492eb51fc23ed9874a7f7"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/gifs/escape.gif",
+      "bytes": 521075,
+      "sha256": "ad116957efb84579afc9889fca3b8103770fc8ce928a791add1e26389e48ba78"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/gifs/guard.gif",
+      "bytes": 183268,
+      "sha256": "be16a1c5800f9fcae1f75a905d3c6a7e17ba9b58098e55ae54e3ecd1450c19fc"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/index-before-dust.html",
+      "bytes": 380477,
+      "sha256": "6127c401b2a42ef11e778f56d967754b4cda8304f3bb9ca2c8a9d6ea5565eb8c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/index.html",
+      "bytes": 380500,
+      "sha256": "377c581f57d3faec5f4509342237ab985a1838eda09bb332defe433500d29345"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/index.template.html",
+      "bytes": 4121,
+      "sha256": "4f17cee953241429f2a6d7a981469c4d30232467c893f3b199de4b52e51b8b41"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/manifest.json",
+      "bytes": 9608,
+      "sha256": "94efc3aaaa0d30396f8c683fb5305a7c98411eef3bd6db410083758101799274"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/model.mjs",
+      "bytes": 7375,
+      "sha256": "374ad30459a0c47c02dc6cf77eae60f7762d1f99492f9bad12d25ad4dd38de98"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0000.png",
+      "bytes": 3681,
+      "sha256": "ed9000e2b95c0208ad11b797ed4e3597c46c2402fa0d967f56ec2c2d2cc5e251"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0001.png",
+      "bytes": 3592,
+      "sha256": "a9e39b9195266da38b286137ea9a0b00f86ab6e7947a2836374e35c0008b7b30"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0002.png",
+      "bytes": 3471,
+      "sha256": "2d33ceac55bb9fc3247c0943ce19b625c1b6fdd775879a2aa23b74958f273eb6"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0003.png",
+      "bytes": 3557,
+      "sha256": "28fd64fe73a8623f682cf2064dce6c21fd111e200926fc2052dc8568ec33068f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0004.png",
+      "bytes": 3496,
+      "sha256": "93650c9a4ef16f232f75fa8902b5a49612a08a191aa95d9d4af2c661f148280e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0005.png",
+      "bytes": 3391,
+      "sha256": "b552ade6a034b6efa85f3e07f4e88ad32a84cca8182964b4ba5620ee563b6f64"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0006.png",
+      "bytes": 3350,
+      "sha256": "7730a6aaab2763f644964f409064fe34044488bd53903531d6f7fe9ac5ee38e5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo1/frame_0007.png",
+      "bytes": 3260,
+      "sha256": "265e4ae6ee109101f06384756d50cf79177e56657774dee2c9dabef2f36c5cd1"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0000.png",
+      "bytes": 3339,
+      "sha256": "7132c0a1a46220836bb4b3c1dad32021aad93a04a1b69b97c9b90d859bf1137f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0001.png",
+      "bytes": 3269,
+      "sha256": "403b11d428dd69b4826aac1af902b63dc46f2ac4564ef389b6edf8e183e85552"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0002.png",
+      "bytes": 3330,
+      "sha256": "20c82ce6ad6abfebb92c02949c530de6e29b194674069738e7de5e3272063a76"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0003.png",
+      "bytes": 3460,
+      "sha256": "2e8e9a14688a516e8a9ef77485422fb7bc3975a2c81ac7d2763e43785dfdad68"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0004.png",
+      "bytes": 3359,
+      "sha256": "065a05167f304640a2e7d82b5535581ebfb4356ce59c6e49c51d217e8daf7024"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0005.png",
+      "bytes": 3309,
+      "sha256": "2edcfbafacaf5b29ef0f227d41155aece985e42627690c75df1b21d05f5f62e5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0006.png",
+      "bytes": 3316,
+      "sha256": "634d40f2e1010e319cfbb9ca0425a23e9ce5221c52f19da87604c85ec7b6cf4d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo2/frame_0007.png",
+      "bytes": 3221,
+      "sha256": "747fbd0328ab5a1d50c0ccef5959e1631dfca57a2c0e3956ea8c95fbf7f2463e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0000.png",
+      "bytes": 3308,
+      "sha256": "7af94e0f9118b0070c4aafda54eb1c70562730fc46447cafda0380dc6eec4195"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0001.png",
+      "bytes": 3566,
+      "sha256": "a464e1ea33ad3c872acd5d452dd7ae2a35a6b181f69a166212cb6a88e5fe5aab"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0002.png",
+      "bytes": 3745,
+      "sha256": "ac4576ef92a8235af3949608a0db0f5973f0e2e3480f506c9208a244d3c702b5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0003.png",
+      "bytes": 3592,
+      "sha256": "b211b9dcc8e376d7a1a0a873cd0739e4c5ca3c8493156be1787b8b1d34ef4d5e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0004.png",
+      "bytes": 3430,
+      "sha256": "c1e7603354fd03a89a341b520ff829da38e042d37e99ae21ba462c399d9b3abb"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0005.png",
+      "bytes": 3492,
+      "sha256": "0a5bccbd5e010ba1a6d34f6f6dc289586675d72661bbc84fd40541c05773ffb3"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0006.png",
+      "bytes": 3401,
+      "sha256": "800bcdc623721df3eed57000c06847edefd545e44e248c369e0486b22ec10081"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/combo3/frame_0007.png",
+      "bytes": 3648,
+      "sha256": "b7c0cedbce12246ff20507df8f9c3b15c1337f6605a1b992294673dce5d7a6c6"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0000.png",
+      "bytes": 3685,
+      "sha256": "62fc555b6f42a06ad4f3f4caaaeff2e9a6ab62570445767859294cb35e893a0c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0001.png",
+      "bytes": 3520,
+      "sha256": "0808893f69347eb5b499b6edf3385b1f98952e11f0a029291d491713513347d7"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0002.png",
+      "bytes": 3385,
+      "sha256": "43f4b57f9ad5505989c65ccf186e243b9df23cb6dab5c60dca05fb775527de4e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0003.png",
+      "bytes": 3350,
+      "sha256": "d6dd580fc9127808587f324b0cdfd3e3ec9aaf3f9bafbb91dcd241b39c84a9ce"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0004.png",
+      "bytes": 3474,
+      "sha256": "ceae0d46c3d1fc5f6b3009b9dda0394c13c22b289fad0fe9de3557ed3c31893f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0005.png",
+      "bytes": 3358,
+      "sha256": "315f1b610343c110a0920a599cb02c82cc9322055f005171759a904125010284"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0006.png",
+      "bytes": 3582,
+      "sha256": "c52a4403b499cce794a1069f2603bc0f7e5a5bd69aea51e25a92c614debf4731"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/dash/frame_0007.png",
+      "bytes": 3704,
+      "sha256": "b700a5c3ab37d4d01665cf2804f5b2e994b63122a120581bbdbfbdfa11698f3b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0000.png",
+      "bytes": 3488,
+      "sha256": "73f6355dfda50c95ddae98c4aef6dd17cd91d2a47216e02c247a0d76693ef340"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0001.png",
+      "bytes": 3447,
+      "sha256": "9c267604917d6d093dd2c383176a4436c739c5781a58cf5f64b1cdd15c88208e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0002.png",
+      "bytes": 3327,
+      "sha256": "99b87cf2258ec83492e4d50320d4f098708f00f9f918070a3249c7531856f07c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0003.png",
+      "bytes": 3274,
+      "sha256": "fb9d46fe2f573fe27cc1ec83b014f63aa1957fab7b687b82626cf8c54a32f05a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0004.png",
+      "bytes": 3272,
+      "sha256": "869f231ed4d28b6ef3ab19d9754e272b4791f09beb4c8fe473e1c3bdf02dc864"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0005.png",
+      "bytes": 3430,
+      "sha256": "82fb6c0c57bcb61a851e2ece5dcedee1ed603c9cdd12541099b81052682044cf"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0006.png",
+      "bytes": 3365,
+      "sha256": "40b51426589fe2e496ff2e223793a423ca4866821e49a0646a76a620e025829c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/evade/frame_0007.png",
+      "bytes": 3387,
+      "sha256": "1c159c489698a790e85aaea36970af87e423537f7c01f1c8695832d32788d26b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/guard/frame_0000.png",
+      "bytes": 3479,
+      "sha256": "46cdbe83aadd99c3dc013b3a1e5eee821cf7b908a4aecf543ac9bcd68866105b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/guard/frame_0001.png",
+      "bytes": 3380,
+      "sha256": "9d0cf26a2aa82f7af6e502c4b8d7cd9aba4b2b51f72a90ec05f491698a0ad2f8"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/guard/frame_0002.png",
+      "bytes": 3376,
+      "sha256": "10c6b6916e7813409cddf42c121b430123bfe3b89ccf8244d211675f3e7069a5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/guard/frame_0003.png",
+      "bytes": 3565,
+      "sha256": "34f6b74a3b1ce7bfaed6c50e4643a0fcff3b160cb3af13a9e634da283f29232c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0000.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0001.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0002.png",
+      "bytes": 3703,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0003.png",
+      "bytes": 3709,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0004.png",
+      "bytes": 3709,
+      "sha256": "dbdf2a57c9ea45b780a7b5694cf93a33230768172c9062e649d5591256730e76"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0005.png",
+      "bytes": 3703,
+      "sha256": "0f7ab745fa71be8dd5984384b9565d79bba6f4a1eb7e43aad2917b8e82e035fd"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0006.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/idle/frame_0007.png",
+      "bytes": 3787,
+      "sha256": "89eb500671a2414ac3a4035a806a68f984d7b08147f29b4f65962fb1da12227a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0000.png",
+      "bytes": 3763,
+      "sha256": "e99eaad43d01555e8d1b57da00db7f6f43db4366098c7bd3e8890644cc26d4be"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0001.png",
+      "bytes": 3503,
+      "sha256": "c3b594181f477422d847a520768677fd753257285370f34acb4804b7d015244c"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0002.png",
+      "bytes": 3503,
+      "sha256": "1991afd95646059431087285c611ffdf83dae37a72cc123549ede44eee412429"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0003.png",
+      "bytes": 3381,
+      "sha256": "2187b276c440163d4c2e58341477cc89e4faaf77ac506d1290aa12340c767e6e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0004.png",
+      "bytes": 3610,
+      "sha256": "a5a1747990b8c4fcfe64ca05aa03e59db0b12fe053cf0cca3cf52a94839a3ecb"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0005.png",
+      "bytes": 3487,
+      "sha256": "46612de36c5086f8cd26a2184512823028ffc11b06d35ae3207b43c3293cd21e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0006.png",
+      "bytes": 3355,
+      "sha256": "d4229c2f8ef7a0288c9df978e28bc6fbb807462a500c3735564f02197d21966f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/run/frame_0007.png",
+      "bytes": 3337,
+      "sha256": "6970386cb60544df879ff0768f61b38a51e9cb39added6fa5250a5a11e8be143"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0000.png",
+      "bytes": 3570,
+      "sha256": "997556454bb83db156b9f96cf916e6fc20243c383b2b825479593b3e034db308"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0001.png",
+      "bytes": 3768,
+      "sha256": "f004098194d9611dddfc4f8bbbeb54fb2241b651ad93595e8e05c590843bf36b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0002.png",
+      "bytes": 3422,
+      "sha256": "a0a08b160bcfc9b8b48b11ca30e59b0d6e4db4fe8b03968497bb69cd6da2feff"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0003.png",
+      "bytes": 3423,
+      "sha256": "549ac06c98a63c2653f0e9f4bbf29e491a369a399a1f49e1cb7f2ea5701e93ff"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0004.png",
+      "bytes": 3593,
+      "sha256": "6149fc9ff41438bcca9265f65fd3d0268e745e6a6ce4b8793be3b775ab26167e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0005.png",
+      "bytes": 3453,
+      "sha256": "864072ce28861a92273cfa9b8be6388752ae4fce51e0faf5180de0bec08465e9"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0006.png",
+      "bytes": 3545,
+      "sha256": "159b33b6679c34c6536c470580a25532bcc2716ef4a1ef39150ea05b316a2ed8"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/spin/frame_0007.png",
+      "bytes": 3597,
+      "sha256": "70fb32e513d713ab1f63e6a20199d64e7d2b7aad97a1b717a0864a6c45dc76bb"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0000.png",
+      "bytes": 3726,
+      "sha256": "37636a17bae8fca2c0bd8e7a6d0afd8136424966b17ea5b97baf2136c69f5412"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0001.png",
+      "bytes": 3569,
+      "sha256": "6676ce4906004c586f8c1273ef76ced862aab2685544c0e48412335c7b89398a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0002.png",
+      "bytes": 3444,
+      "sha256": "a315194b36e0bda7398dc76fb1acaa8c00873964e3e892f4e5259900ab5e50a3"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0003.png",
+      "bytes": 3362,
+      "sha256": "62ab2ed7c510d90193b2007ea8bef717672d5d9f977ed68de76d1b46b5f3ab8b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0004.png",
+      "bytes": 3661,
+      "sha256": "876417470455354da7255695ad1056dbc1ec9efe66514ec41042f3e6c5ce62dd"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0005.png",
+      "bytes": 3449,
+      "sha256": "ef0de29375faeea965c99c1200db96bd9332e79ed70ed6e3cb2e4513a0f8f9b3"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0006.png",
+      "bytes": 3361,
+      "sha256": "5093d29bed6325ce3ab2331080dc710a4a1d77ff048e62bb37eb2cff7f891197"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixel/walk/frame_0007.png",
+      "bytes": 3244,
+      "sha256": "e237f621200d8e42885d33a76c34dc86e25f31d29e60f7b27f1fb65657d6ac8e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/pixelize.py",
+      "bytes": 2095,
+      "sha256": "7fd58ca058d311db894802a09380caa8f3541263370c7795280dce093c04492f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/prepare.py",
+      "bytes": 2580,
+      "sha256": "218cdfb5e5f2a65478ef62d64ef24774188b3b9431b97f83c24fe5159bf9572e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/previous-feel.json",
+      "bytes": 4346,
+      "sha256": "b1679d9e369709d94ac6f71836743542bb10b734d90827785e0e73c144c7dcdd"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/previous-model.mjs",
+      "bytes": 2624,
+      "sha256": "c8b21786322c5eea229886fb69c410a28e218e0da53d835c44b0f6758de46ede"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/previous-view.mjs",
+      "bytes": 7250,
+      "sha256": "fb1540fc9645d39456cdba249cbe16311a6c604418b2ffd9ea6884ff6ad9a8a0"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/prompt.txt",
+      "bytes": 3002,
+      "sha256": "5c93074beb4a3f24709793db1486c8f6728d66738663173d038fe32f22cb1915"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/browser-results.json",
+      "bytes": 7297,
+      "sha256": "f6db50571f42b8d91a004b7118371dbc8c23a7b6a2e2431c32a799561309da79"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/desktop-final.png",
+      "bytes": 46798,
+      "sha256": "80e2c626405deca488243a5b8b9155bf2f578694d9aab97b5f550eff9b98769a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/desktop.png",
+      "bytes": 46799,
+      "sha256": "2dd3c243e4d21ba5dd4c4c8d56a8086e736a8d143060458735ff73ec7535c75b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-pixel.stdout.log",
+      "bytes": 2858,
+      "sha256": "f85142361907746315fda66936559abd89d955a34e920cdbdb9230506f48b1a4"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-pixel/pixel-contract.json",
+      "bytes": 3115,
+      "sha256": "6ffe6717dc236a2969218231a74e68540421114216388a52887f9f31850e398a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-pixel/pixel-contract.md",
+      "bytes": 2761,
+      "sha256": "dfff12e220702311a9bf37fcd577cb9ed25eb929b440acde89a0251406b8efda"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-sprite.stdout.log",
+      "bytes": 4238,
+      "sha256": "37418d3f0e104e8194279f246b8e9e5dc6149db5765babb00c4a7c03671e0ef0"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-sprite/sprite-qa.json",
+      "bytes": 628158,
+      "sha256": "081c71b56c1363bed1f58354178892af74fb0e4013056010cd4594813ad2d58d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/evade-sprite/sprite-qa.md",
+      "bytes": 4150,
+      "sha256": "47e737c4ccff5084470bfa0a2dbd8d934e6f130c3ee42643f311f675a7d32e20"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/feel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/feel.stdout.log",
+      "bytes": 3478,
+      "sha256": "3dad3f146b522781d48376092998dbb59ecd5be49a5e0fd6cc928d82a10634c0"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain-light.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain-light.stdout.log",
+      "bytes": 3007,
+      "sha256": "ca41ca00acdc4e6e3819128a16f4e492f0ba16186eafdf3b3f5b79eb31ad3fa1"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain-reduced.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain-reduced.stdout.log",
+      "bytes": 3015,
+      "sha256": "fd9c957fd65c284a800681ec07ce2550854ef18eba3340f8f0bfa7e432e7ed15"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-chain.stdout.log",
+      "bytes": 2986,
+      "sha256": "0bd05fc98a7374f6e9fc179ba76efb8f58af24931047d4262dd2e0b7cbfb0247"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-dust-off.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-dust-off.stdout.log",
+      "bytes": 2995,
+      "sha256": "99056a499657b9691c285f758a30bfdd797d3d0866021d780757950a9fd862ff"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-dust.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-dust.stdout.log",
+      "bytes": 2985,
+      "sha256": "3b512397b1ebaddbfdae0350db6b75475cb9ddf44d777513aec08363d6d89205"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-escape.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-escape.stdout.log",
+      "bytes": 2987,
+      "sha256": "ec7ffc42fa9f5c9812db49c0348ea5d1e673c136330f085961c935e2c40f0833"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-guard.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-guard.stdout.log",
+      "bytes": 2600,
+      "sha256": "f7ed5028595cc90514e5bddf31016b339f65bb13258baa4b20c4a939c5d6f26d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/flash-results.json",
+      "bytes": 1576,
+      "sha256": "9173b57c643f6d14a01774cf61733767f6103f3daeb456d0f1e885257625f1c8"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/gif-export.json",
+      "bytes": 866,
+      "sha256": "7b1ac16e3db3e3396f62f1bd48a3cd2700122cc6539bcc06b68c5d0513428dd4"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-pixel.stdout.log",
+      "bytes": 2124,
+      "sha256": "f944047d81d99f0609e15158ff9a356aa6b68c55d397588613ef3a0411dac637"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-pixel/pixel-contract.json",
+      "bytes": 1493,
+      "sha256": "1827ddf5e1370252767f54a76d64ac8d2cb954c0ec2001ba2e78c86ecc8d9877"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-pixel/pixel-contract.md",
+      "bytes": 2027,
+      "sha256": "93c8be54d5a715ef87896f86a3c0adaab1f9c52e47fc85265e720aab94a464cb"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-sprite.stdout.log",
+      "bytes": 2864,
+      "sha256": "57a5d9af3fae3e0ebc184ab8324ecbb8a54808947f8f456ff984a9208b5f182a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-sprite/sprite-qa.json",
+      "bytes": 314417,
+      "sha256": "bc0c9a0e6b3422884f11d426024778edca1c20f2e5b152cbf456e56520a32a9d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/guard-sprite/sprite-qa.md",
+      "bytes": 2776,
+      "sha256": "cd5cb69e926549825725357d65e848de416ff469f550bc9699e35cf72d6d2a24"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/mobile.png",
+      "bytes": 37803,
+      "sha256": "4e5ebc95f99872b4b7aa1781f57de4178f488b3e64c170620f7d58a8f0a0ce4f"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/model-tests.json",
+      "bytes": 1374,
+      "sha256": "6304d9320365263b026ee67048dcaf3a00889bd151c2b3d74fe03ded38e35f1e"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/model.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/model.stdout.log",
+      "bytes": 1221,
+      "sha256": "44b54721043a9290c84ddc1e9256dbd75cd3ac885adf6f187b086463743de56d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/new-pixels.json",
+      "bytes": 1592,
+      "sha256": "83efedb1397c44e980e59cc13a3882b4e13a190e0c6dea231f8680d9ba550996"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/verification-final.json",
+      "bytes": 25514,
+      "sha256": "0acc2b9ca1c4b4a1eaad7cdf4f0d6b8117b569802ecbff347ea598c95fdeb70a"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/verification.json",
+      "bytes": 12287,
+      "sha256": "5d5262e7521e305cd2a7e169038b805079da040bcc3ad1af1342e87eb4883ebb"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/qa/visual-strip.png",
+      "bytes": 32739,
+      "sha256": "a380d5e9d98ba333a5dd29acdce8003dd9214d0749ac9633764747635c879ee5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/raw/transitions.png",
+      "bytes": 1886167,
+      "sha256": "094277be84fc0fb10e8f1131800193291d704817f66de4eaf5d2d3cfc998e4dd"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/REPORT.md",
+      "bytes": 3066,
+      "sha256": "38137c783985aaf0674e23b573a53bf25dd3e0693eda58c66be12b6f9bbcd025"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/scenarios.mjs",
+      "bytes": 1047,
+      "sha256": "80e14d8db7d0e5e498bc8e760db3156ec14f7f8ef3103660aeff94fe231c0a34"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source-manifest.json",
+      "bytes": 1875,
+      "sha256": "93847a7a2247a1ee82ea523633e0ecc787ab9a99a84f5f225eccbdc01ecc7f50"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0000.png",
+      "bytes": 93605,
+      "sha256": "7da6e40def0b98b9e4e7f77888d16c1461316cf951952fac21ab450038cf1761"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0001.png",
+      "bytes": 89656,
+      "sha256": "755e44127dc931d50f4e5f009da748f05388d06ba124f85e62e8fb4d1a3ebd75"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0002.png",
+      "bytes": 88580,
+      "sha256": "4ecae04c3b06d7133521ba03837ec3dc9eb7335ee85ece6ba2b189f4f76e1446"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0003.png",
+      "bytes": 82638,
+      "sha256": "35da0f8a37ea4964c22321bf02e96c0a4b710651050740b5f9966f10371f45f5"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0004.png",
+      "bytes": 87794,
+      "sha256": "447ce8c23329f5d5c4729e981eb4b95ad3b3504a5032968dd2fbf160a1afca28"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0005.png",
+      "bytes": 90766,
+      "sha256": "850251e04f902fc6e6362262a00cd4b9b55e9c513993fbe4b802ae07386feb81"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0006.png",
+      "bytes": 91659,
+      "sha256": "5c18d5951b7bd3716bf9ab7d78f15185d870b992247c5ebb34f246881eba9b15"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/evade/frame_0007.png",
+      "bytes": 88219,
+      "sha256": "99911b694f0e51b4155a5086413a4b0fc6ca317072323af7fcc8c4db713a14b4"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/guard/frame_0000.png",
+      "bytes": 86560,
+      "sha256": "ed5c0e7f2e2be9da52f703f901afbb9d0fea063289ea3c18445e619e682d81ec"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/guard/frame_0001.png",
+      "bytes": 84561,
+      "sha256": "6ce44e517ec48557146b6fd609805e1c2e24e45a3eb1aefaec47cf1fc40b16f3"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/guard/frame_0002.png",
+      "bytes": 89762,
+      "sha256": "6a06a876dfeff0ba564862beced7296049965014efe6a5145ce798c73c2694ac"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/source/guard/frame_0003.png",
+      "bytes": 89477,
+      "sha256": "2c407e936c2ad83324df10bcedab7e670cc47669f2e7d6b9a0fd9b570a1d101b"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/test.mjs",
+      "bytes": 4017,
+      "sha256": "27e087a97b60219c88d7c23feff5ce872870aa618b14a04ab0616de8f93e37f9"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/verify-flash.mjs",
+      "bytes": 670,
+      "sha256": "3283b935b823aba9cbfd522e9f79d67178c2f9978748dedee2dd40267a4ead44"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/verify.mjs",
+      "bytes": 1808,
+      "sha256": "d7b1a12e0d784bfcd0cfdf1fc8b5d89d4281a7beec37632128bcb1ddc02ad370"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/view-before-dust.mjs",
+      "bytes": 8567,
+      "sha256": "36a71c31a4a95f38e378b63a864d94c5eef525ef481ac30f25c02f238e4ad20d"
+    },
+    {
+      "file": "out/experiments/red-flow-3h-20261113/view.mjs",
+      "bytes": 8590,
+      "sha256": "d541e9deed261c4adc2b3131b5de23c5797f90807f864824e5931711f2ad7320"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/add-fx.mjs",
+      "bytes": 4164,
+      "sha256": "9eda060963262b7a00e97f874e7b79981bae37ca4c7ee64d1522139f5a078d59"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/build-gallery-fx.mjs",
+      "bytes": 1415,
+      "sha256": "2b4264d1415e87473cab68faadfd09b64c401a48335ca563c4b9e9b0828b8c5c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/build-gallery-v2.mjs",
+      "bytes": 1460,
+      "sha256": "1f063ce7a286dc294a18d2671f55aee536bff270f8d6d46137a323fbda99afac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/build-gallery.mjs",
+      "bytes": 1412,
+      "sha256": "5b5014e13f8936ec2703c5689892e8234f5734e9d6b44b48858a83dd61250192"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/comparison.png",
+      "bytes": 87555,
+      "sha256": "ae2505fd77071e6b954625b51148e7951a7c100f2ba13c9f796a19a4e179e59e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/export-fx.py",
+      "bytes": 1119,
+      "sha256": "6f0a1228032aa84345abadbba84bbeb61acc5c692a4bd2f00c87c34a625a764f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/export-idle-v2.py",
+      "bytes": 695,
+      "sha256": "e53faaeda076a5d4e189ee81ebc86944bcebc3f6ef03d3a414ea99e2fa0ed2bd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/feel.json",
+      "bytes": 882,
+      "sha256": "481a21f50f95a5f5fe69bebe54e487c6be93a1257cca260d9b2a8f4d36f81882"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/finalize.mjs",
+      "bytes": 2500,
+      "sha256": "a5cab2c9cf41fd8ee0784be899d0e079bf4e1a32f86c1d5dd34d53feb1905df3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gallery-fx.template.html",
+      "bytes": 10906,
+      "sha256": "c0b0fa154f98e8f2871a0c21e7c4e3874dfcee643ae3ec1127e75b78b4b11790"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gallery-v2.template.html",
+      "bytes": 11021,
+      "sha256": "766313dc06dd2c8e6115480f03bddf95bfbc076c5c14252e200c430e60de8cee"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gallery.template.html",
+      "bytes": 8219,
+      "sha256": "bc782761d5bf608e21ce4985cca1141ea7b58af85799e984435de887fbbc8e7a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-hurt.gif",
+      "bytes": 36716,
+      "sha256": "44f394d26c0ec9c430da7474b0029cb181d0e56931a913825847fcdd666c2c6d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-idle-v2.gif",
+      "bytes": 23577,
+      "sha256": "34e177374b5921ffca535b461189a03d326db2b1e73d3886faed3e4d335a8841"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-idle.gif",
+      "bytes": 37148,
+      "sha256": "53134d4e43ee22956ae2bc674f2d3f84eb2c62366fad8c833b5ef75e5715c9b2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-run.gif",
+      "bytes": 33638,
+      "sha256": "d761aba4844bfa346a2821e68cc7cd22a9017240a36c0d3b29ff48400399eda7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-slash-fx.gif",
+      "bytes": 133310,
+      "sha256": "c7cf6884d88414bcc20cdfa9451f55484c8572e158fa1740af1dc3e35ec13bc2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-slash.gif",
+      "bytes": 36816,
+      "sha256": "1c03ffe7833e6696dcfc1c62cb22fccc0b22071e0dce114591de128efe7542a2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/2h-walk.gif",
+      "bytes": 36469,
+      "sha256": "fae05fa2f62d1c8ebd32c4285c5039b4c8998a6e6741cb95341ca0ba6ac69ef0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-hurt.gif",
+      "bytes": 43973,
+      "sha256": "6b61c80218ebc3d868ec359a940dfc7822768df8f336af2ddfde1a88da6b420a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-idle-v2.gif",
+      "bytes": 27287,
+      "sha256": "1013d432af056deebe036b07dd5a8f94973f15c5bf2a6fbcabd83aa581ecf570"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-idle.gif",
+      "bytes": 43035,
+      "sha256": "d6d5edb1c0be82e41f5932f093a29fc8b421ff9b3eab0b2f2c023e1f8ef1d7a6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-run.gif",
+      "bytes": 40981,
+      "sha256": "081a5a41a54637eb2c6d35fa819d1e69464ba2f70dab23f8bb41f7ce7bdd16dd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-slash-fx.gif",
+      "bytes": 146402,
+      "sha256": "97df6b47be52d81386a5bf0bddfb8507b04b050553770c49ed71dba19ef62a29"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-slash.gif",
+      "bytes": 42704,
+      "sha256": "8937fe66d82176a19771ac646fb4de1eb25135a954390c6ad3e11117d7bfb657"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/3h-walk.gif",
+      "bytes": 40390,
+      "sha256": "174093af69fd67bef91ea355865b2c546e10d65f451cf9071cfcddb815ae3926"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-hurt.gif",
+      "bytes": 40951,
+      "sha256": "240b1cd1a73df042fa6a5fdec288947cc028154532ee265d5da0e616123c140e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-idle-v2.gif",
+      "bytes": 26403,
+      "sha256": "56bc4f1ec9fea3324422242722d0971d24a4d19a93a0060e40f06068a7253fe5"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-idle.gif",
+      "bytes": 41883,
+      "sha256": "4048314a56ece43f1a3011684b3de43410d43f5f0d839889acb29ee83a08f082"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-run.gif",
+      "bytes": 36938,
+      "sha256": "50965a86e80c727e7da6440cb9e8a8a35b84a85d9781724e5faeba1a49157dff"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-slash-fx.gif",
+      "bytes": 137853,
+      "sha256": "b95f1dc399122f0fbab41b8357909549c2724207de6e45a6d7c671dad1c204e4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-slash.gif",
+      "bytes": 38728,
+      "sha256": "ec92fc3da2ed24aff0f007d26c6e26764d4daff08e870df615749d911290e959"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/gifs/5h-walk.gif",
+      "bytes": 39221,
+      "sha256": "881b776442dc92e55db3cf37ef41b17e3a80c12d83e2a1de317e69ffbefcace9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/idle-v2.mjs",
+      "bytes": 3660,
+      "sha256": "fdaad5895a3af219b2144499d8afd9fdc3f3bfc4599ba93ba19c287f00e18fb0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/index-v1.html",
+      "bytes": 611238,
+      "sha256": "4f28e225d321f347bddc40cae7965b024ed2574d4d00717185305feaf5f94050"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/index.html",
+      "bytes": 612468,
+      "sha256": "dcd4ab4382edb6d641e8f22f12dcc743650f066f010fc6a5399210ee56d41202"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/manifest-v2.json",
+      "bytes": 26803,
+      "sha256": "a8c84b7dac02c2733b4d003356d55ec511daaff6f70c5a222e28259c42ba6767"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/manifest.json",
+      "bytes": 27178,
+      "sha256": "e1be70d27bddec44db7ce8fdaa7eee40373ae7e72a8ccf450caa6012ea7bac1b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/palette.json",
+      "bytes": 1608,
+      "sha256": "2b3cc67a7cfdea10ce5d31698e53cffe1eaa06f943b6721a6650acfe897a3cef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0000.png",
+      "bytes": 2288,
+      "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0001.png",
+      "bytes": 2288,
+      "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0002.png",
+      "bytes": 2310,
+      "sha256": "a58e8359d9fe6989121bcd90e98f332cf4720763e49b7ff41fc6ed876a715dae"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0003.png",
+      "bytes": 2256,
+      "sha256": "c9fb8dc51d1bb9c7668b62ac33194715d4d07bd687dbd91d07a03299031abc5f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0004.png",
+      "bytes": 2256,
+      "sha256": "c9fb8dc51d1bb9c7668b62ac33194715d4d07bd687dbd91d07a03299031abc5f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0005.png",
+      "bytes": 2310,
+      "sha256": "a58e8359d9fe6989121bcd90e98f332cf4720763e49b7ff41fc6ed876a715dae"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0006.png",
+      "bytes": 2288,
+      "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h/frame_0007.png",
+      "bytes": 2288,
+      "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0000.png",
+      "bytes": 3692,
+      "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0001.png",
+      "bytes": 3692,
+      "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0002.png",
+      "bytes": 3608,
+      "sha256": "5ed74c781d72bc2b58f0ae71f5bc3fe11a8ecd3e1915efa9d60aa16573de034e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0003.png",
+      "bytes": 3625,
+      "sha256": "effcd95512f24cc9ea2795026aa924017016c46df0263f48fb1c87519571541d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0004.png",
+      "bytes": 3625,
+      "sha256": "effcd95512f24cc9ea2795026aa924017016c46df0263f48fb1c87519571541d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0005.png",
+      "bytes": 3608,
+      "sha256": "5ed74c781d72bc2b58f0ae71f5bc3fe11a8ecd3e1915efa9d60aa16573de034e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0006.png",
+      "bytes": 3692,
+      "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h/frame_0007.png",
+      "bytes": 3692,
+      "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0000.png",
+      "bytes": 5524,
+      "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0001.png",
+      "bytes": 5524,
+      "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0002.png",
+      "bytes": 5584,
+      "sha256": "0a7a0b14ed7c1f82cd044560a2344624b6e301386fe90204c7a7558d7ac14ae3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0003.png",
+      "bytes": 5601,
+      "sha256": "705f0727329da2000ed51514d9050bcf635085b949c030cb88ccc1cdb417beac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0004.png",
+      "bytes": 5601,
+      "sha256": "705f0727329da2000ed51514d9050bcf635085b949c030cb88ccc1cdb417beac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0005.png",
+      "bytes": 5584,
+      "sha256": "0a7a0b14ed7c1f82cd044560a2344624b6e301386fe90204c7a7558d7ac14ae3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0006.png",
+      "bytes": 5524,
+      "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h/frame_0007.png",
+      "bytes": 5524,
+      "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0000.png",
+      "bytes": 2274,
+      "sha256": "7dae169d29214a9efc1995db2b5b49fece277423bf3bb5305fafa79adcc2fdeb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0001.png",
+      "bytes": 2214,
+      "sha256": "ac6c6e7b00dcddfed431d03fad8bcdd07a4a39ecfce1ab7eeb275e0a95d9e3cf"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0002.png",
+      "bytes": 2298,
+      "sha256": "6bd494b296526797bfcd91cc2e222e7d2e52ba74d279d6e294468c1089276a95"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0003.png",
+      "bytes": 2376,
+      "sha256": "b932de19bdd3e4623d06fe49d5dc34167bf50b6c16346dac5ef0418751540a2e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0004.png",
+      "bytes": 2219,
+      "sha256": "35d52734ddc1f6fe1fb2f45a8f6f38657b558a07daa5bc12759f800ff29c6c4c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0005.png",
+      "bytes": 2104,
+      "sha256": "81794422bf4b0206e315b498ebb48052608ca5f377fa848e5c9717f6140ba8b9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0006.png",
+      "bytes": 2301,
+      "sha256": "cff269563cbb59e3c2832244062d2d45a615ad824685e806518f0f68a7e554a9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/hurt/frame_0007.png",
+      "bytes": 2271,
+      "sha256": "b6d9f4b34376bd216d7b42fcb8d3585e593c589423a2656e9cc65bc5c3135593"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0000.png",
+      "bytes": 2288,
+      "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0001.png",
+      "bytes": 2269,
+      "sha256": "fb4811263ce010b4898cda2a774e22d66c0b2734c966fb40ba3675d4427d816b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0002.png",
+      "bytes": 2237,
+      "sha256": "5caf4f74d3dbf42e9b9659100ddb4c7219df19cff9a4eee234d4cd86d71e8842"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0003.png",
+      "bytes": 2249,
+      "sha256": "29affca97fde12dae52f0c59a71850a4d1ad35db25638f4eaf251310508256f4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0004.png",
+      "bytes": 2310,
+      "sha256": "a58e8359d9fe6989121bcd90e98f332cf4720763e49b7ff41fc6ed876a715dae"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0005.png",
+      "bytes": 2256,
+      "sha256": "c9fb8dc51d1bb9c7668b62ac33194715d4d07bd687dbd91d07a03299031abc5f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0006.png",
+      "bytes": 2236,
+      "sha256": "1b8e9bc13e86525cf34cfe8554d583f062b91fb11329bbc3c0c1011433e7c74d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/idle/frame_0007.png",
+      "bytes": 2310,
+      "sha256": "44afd6513e3f6026f3ae606bfcf797fe3febda00b96b862a94bd7eca173e447d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0000.png",
+      "bytes": 2249,
+      "sha256": "57ea34bdd88b3b302efa6056d7bd30a122942dd2ea36b95b580d0c12ea8249ab"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0001.png",
+      "bytes": 2171,
+      "sha256": "07aea97a952c64e08fa96c16099346df8d86104fd68af7883f8eedd3716eaa6c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0002.png",
+      "bytes": 2080,
+      "sha256": "a442b788e48783c670fce87a35de74c9f5c5c00860671d85f21cea3fe08e6b30"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0003.png",
+      "bytes": 2063,
+      "sha256": "e50a72d0d55a05ed660498bf4f59eee86c438dd5bda14493844dcae6e2dda085"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0004.png",
+      "bytes": 2127,
+      "sha256": "05d196898381187fc1516af0c25d050e7c770a07459732e44d0edb04a58d7702"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0005.png",
+      "bytes": 2054,
+      "sha256": "53805a870e2ea3c294297161546fb58ab500a7ee9e41618841b3e414b8e10ae2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0006.png",
+      "bytes": 2043,
+      "sha256": "3210731603c41e09831e78b9fdf8de035abe5b4d1c4b50676f80577734be4126"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/run/frame_0007.png",
+      "bytes": 1983,
+      "sha256": "4ae93db994bdaa9a7b533a852d5783f80cff9eb821f855ed1037f6d24cb3234d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0000.png",
+      "bytes": 2299,
+      "sha256": "ece3871ccad193f53a2f373c0b7a241fdfc074b5654d0d875b08732e2aae014e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0001.png",
+      "bytes": 2329,
+      "sha256": "c6deb41f8b880ce6dfbce71ba55c0162d719593254b013c77ac10db7ebab5e17"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0002.png",
+      "bytes": 2313,
+      "sha256": "a16b6c9f07d63fda946b4fdcd94a62cb7f2ec66581bc3909f896e4ed436adf68"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0003.png",
+      "bytes": 2296,
+      "sha256": "c7d4edf87ae0912704f036ed51d314884feb42a337a0a0ea6f828ab98f690955"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0004.png",
+      "bytes": 2205,
+      "sha256": "610bdf20c330ff39e5cead211cba9bcf79fc26f2b2855bf744ee0772d5fd2d28"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0005.png",
+      "bytes": 2130,
+      "sha256": "318c9bdc75de8583cc0927fd434667704f17801ead72204dd448449423ced42c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0006.png",
+      "bytes": 2275,
+      "sha256": "3e00cc7662fe409d61400e0fc92769410c31a0e6ee59dc7228a06f4419420d9d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/slash/frame_0007.png",
+      "bytes": 2297,
+      "sha256": "3cf35a889842ea94aa2eea3a0f1bd357ab246a4b92762fc660e73b35eb3d55ef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0000.png",
+      "bytes": 2345,
+      "sha256": "7275974659402162710cdb41fd7c6e73693ce15cd4dbcf11ff288d72ea8c9246"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0001.png",
+      "bytes": 2221,
+      "sha256": "7131f58d19157dc029fb4787501db3029a7a725eb70faf1a0d6124b2f2c6976b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0002.png",
+      "bytes": 2183,
+      "sha256": "6b558cd3fc9b40e1216e79d1c95f926d0166ea0a7fd2538e9bd08fed41f84eb9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0003.png",
+      "bytes": 2155,
+      "sha256": "b58448ddb115ed044ab29fe091a99b60fce36adafdd80d2e3fd9a187b423a495"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0004.png",
+      "bytes": 2297,
+      "sha256": "9245b57cc9a828b3b80aa5cafb23662c8c064fbbd6f469dbbbaf81c25ea385ed"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0005.png",
+      "bytes": 2236,
+      "sha256": "34f594ea0e30deb27e74bac74dc11f2108c100fc8fedbae1769d09abec5043fe"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0006.png",
+      "bytes": 2188,
+      "sha256": "c8714ccea680cf356154ff73f5c0c3bba145bb4fe84c48aeac5822846baa25e6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/2h/walk/frame_0007.png",
+      "bytes": 2210,
+      "sha256": "4228a26d842923bc7326703abfd51b30b7fbb3e18fb809cc6c4b2388f6f8a52a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0000.png",
+      "bytes": 3670,
+      "sha256": "443f25705792baea8e410b0fec97ffb6012b35d564ac04b79a13cf0b9d899e5f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0001.png",
+      "bytes": 3636,
+      "sha256": "638e07da27fe2180b15c1225dc2f31a766a61a12adc2239d5aa11d2ea55bc22a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0002.png",
+      "bytes": 3762,
+      "sha256": "b750215f8143bd7c52ccf7c698d50f0366d997528ed1adc147e8e8238ebb1959"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0003.png",
+      "bytes": 3856,
+      "sha256": "2d4310878c118e7142d60b9e4cae081b9911ffc1aa4a6f09c25acce8911e3850"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0004.png",
+      "bytes": 3561,
+      "sha256": "9ec2291253bf41399cad06696b98598dac3b52ad27587fce26724575cacbb1ac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0005.png",
+      "bytes": 3625,
+      "sha256": "b10295952b569e234685200a3dad5bf9747a0b8f0501e7a07b0fd06d0191c82d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0006.png",
+      "bytes": 3612,
+      "sha256": "0fa61ec3b0aa9596b768edaeeb819fd939371742365bea9ca3ded12ac76db9c0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/hurt/frame_0007.png",
+      "bytes": 3575,
+      "sha256": "73f0104c399b40c51785c72a1efd7efc479178bcd34435d4a80402a5b8c5909c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0000.png",
+      "bytes": 3692,
+      "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0001.png",
+      "bytes": 3610,
+      "sha256": "fb515b8ef3a57ec377d8bac2886ce6b103813af958f60ee3051b238665a5cd35"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0002.png",
+      "bytes": 3483,
+      "sha256": "5a8cfe38a1677fa65fb2ba024f0e1783c1517d3596124845708ff34621650357"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0003.png",
+      "bytes": 3522,
+      "sha256": "a147ee046a0d550b23872ffefc6031e6eb3eb46625dba55105719a9a60214a4c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0004.png",
+      "bytes": 3608,
+      "sha256": "5ed74c781d72bc2b58f0ae71f5bc3fe11a8ecd3e1915efa9d60aa16573de034e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0005.png",
+      "bytes": 3625,
+      "sha256": "effcd95512f24cc9ea2795026aa924017016c46df0263f48fb1c87519571541d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0006.png",
+      "bytes": 3619,
+      "sha256": "7dccf8edb70ec4d22d926ebc48fc76cfedac2144f8372824929ce2cc3676736b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/idle/frame_0007.png",
+      "bytes": 3656,
+      "sha256": "b8b61ea7b15e8e7807e0e6c1f839a8b9b3db00631a6b4c1f8e4e43d594504925"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0000.png",
+      "bytes": 3632,
+      "sha256": "6e264cc5fbbe74dbcaa20f1ba36c7250a66595f14e4b0508e4e92380481cb0af"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0001.png",
+      "bytes": 3404,
+      "sha256": "6f49cb0fe528697999f16d0d38fd837df16ae8bf030574b3091b58ddda8b64e9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0002.png",
+      "bytes": 3409,
+      "sha256": "21fd171d20488fff156928b864b7af7d9d4fc851eab817031d331870433be570"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0003.png",
+      "bytes": 3287,
+      "sha256": "f95171729ced7aeec4421607f8f61e7b2908a6b9306258787f7e4edc7826d0dc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0004.png",
+      "bytes": 3500,
+      "sha256": "0bda1ba909486b2e709d036ad187d8695e755d37d5caef1b9609c2379723df16"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0005.png",
+      "bytes": 3392,
+      "sha256": "c8a2c17d12062ed78b081deb6f8d03e6be88f203462fc7d4e3ca79341b92541f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0006.png",
+      "bytes": 3259,
+      "sha256": "c5d4f2b525cc31ae34dacb868219a18f7cba40461c216d4104bfefd1a973a886"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/run/frame_0007.png",
+      "bytes": 3237,
+      "sha256": "5a74ac3c6e555fa9c6a0a9d2d5c073a2ccc51e92133b8d057d343aeb1c22ef9b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0000.png",
+      "bytes": 3708,
+      "sha256": "d053e576acb3951e1d99f8c5c21c2cd1dd0d6c87a69e3f38d55395b981b7e47c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0001.png",
+      "bytes": 3586,
+      "sha256": "65c162fc4115fdd1ef82613b0b8a9f8eb9a53a242b71c386bb77486439813e14"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0002.png",
+      "bytes": 3653,
+      "sha256": "c3431e45be5d4b59508829954ea9bb87542265695b8630291825fc7dab7c0070"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0003.png",
+      "bytes": 3526,
+      "sha256": "6def75ffefcfb6cc399f6d0130184a292d1e99797f47bebb91891668d10cd9ef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0004.png",
+      "bytes": 3307,
+      "sha256": "d0d84661bbf156dc6a387bfe771b291e60232e0bbe5e1d8cca1438eacb0a127f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0005.png",
+      "bytes": 3499,
+      "sha256": "b950f8c21d48ad1d07a5679fb7c217f70da50cc817e74065b2fb104d0ae10883"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0006.png",
+      "bytes": 3516,
+      "sha256": "544ffa828014fc316823b88ac940d877809c830d6c7cecc2d26562fef479f06b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/slash/frame_0007.png",
+      "bytes": 3575,
+      "sha256": "4921b2620e26c4b84951941b4d054cb5221bda86036f7012630284d071fcf828"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0000.png",
+      "bytes": 3610,
+      "sha256": "bcd5195e79f70cc3bbed9f0936fedda6127143386e4cf268883d1020c0e2f6a8"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0001.png",
+      "bytes": 3486,
+      "sha256": "e34ef9faf259e267d7e2dbffcd0a4da2aec8ba5ad1a8f27a4a9f2f8d61207132"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0002.png",
+      "bytes": 3366,
+      "sha256": "630d22c13314f881a63e4dd69e6b87403723f7bd527f84ec1198e66b62acf0dc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0003.png",
+      "bytes": 3272,
+      "sha256": "1b65e25df421dc108b15d47a072e6dd52c05fa05bcd26a886abbbee43ac03807"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0004.png",
+      "bytes": 3576,
+      "sha256": "077640eb4e35f8dabc9fd79df3584a7045a9a93401058b9ded6a1471e72c41d9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0005.png",
+      "bytes": 3377,
+      "sha256": "60f326b2debd4777b7b431b754da7a05c68a680404e478e53f73c6268846eb78"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0006.png",
+      "bytes": 3262,
+      "sha256": "eb832fd5a5f19733c1962298adb90a3a5de71c913c8ab685e6fee450fa8c38a1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/3h/walk/frame_0007.png",
+      "bytes": 3156,
+      "sha256": "24d7aa685f7f4a97e940a0f9f055bd72cb8dba28c2de42f441e559c08186dd7f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0000.png",
+      "bytes": 5449,
+      "sha256": "23a353f95158e942a7590b3411971fa8dcbc49bdeef644424cfebba0af0587a7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0001.png",
+      "bytes": 5202,
+      "sha256": "c5951765dbaa81d38e2f8d60ed8a152bc49490af96a2f460e1ac77ecc52f3a1a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0002.png",
+      "bytes": 5498,
+      "sha256": "be4f7fc8bd69105823d7e4eea1e199ba20621affa776061fcb44b61016b97808"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0003.png",
+      "bytes": 5666,
+      "sha256": "b37e3599625dfa2be5a3d510a54eecddf1e9acc7dcc0b64c8848642db76efff5"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0004.png",
+      "bytes": 5284,
+      "sha256": "0b839e59f7fe2e3d1bf15acb3a44bfb765023c1906b356c1cfb13ecc59c1487e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0005.png",
+      "bytes": 5142,
+      "sha256": "85e11c7200a455f8e827c1fd789b8fc9764646178a2fa85a6e13d9ff0a418199"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0006.png",
+      "bytes": 5395,
+      "sha256": "a3f76cd0b8ddd5295bf046b2568eff23549fa3903b0c6e13d7336edc759e9c71"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/hurt/frame_0007.png",
+      "bytes": 5459,
+      "sha256": "d586242376a44b4a29e33f4f6a96745b454757b19eabe99b3718ae37edec8d2a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0000.png",
+      "bytes": 5524,
+      "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0001.png",
+      "bytes": 5461,
+      "sha256": "6a076ab0ca27854c769349b5c04df578f1d6abc3f12c2bf35960348ce2f76234"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0002.png",
+      "bytes": 5432,
+      "sha256": "86db50d5c2ca5b4244d3567bbfc1a599d6e3e3793d072e2b3a6cbd3ea3a981d5"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0003.png",
+      "bytes": 5587,
+      "sha256": "5611aaabf36e73e1206af0548ba851b4511fa7a4b066fdfe5a994cf32f5cc3c0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0004.png",
+      "bytes": 5584,
+      "sha256": "0a7a0b14ed7c1f82cd044560a2344624b6e301386fe90204c7a7558d7ac14ae3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0005.png",
+      "bytes": 5601,
+      "sha256": "705f0727329da2000ed51514d9050bcf635085b949c030cb88ccc1cdb417beac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0006.png",
+      "bytes": 5549,
+      "sha256": "79a41bcab77d88fcee905de489fc0980e43ac6b459c290796ffbe65d2ad585ce"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/idle/frame_0007.png",
+      "bytes": 5604,
+      "sha256": "50e8f706f251ec95c5987e84e0dc1e990fd997ed65277d07280a5d6e5d808d20"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0000.png",
+      "bytes": 5266,
+      "sha256": "beb9808a783fff26ae57236343ffef40ba1a6527439a31c45d8367d6f66a58c7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0001.png",
+      "bytes": 4824,
+      "sha256": "756a17f11886769c0669a4df8f7b49cf4bab662eb3ebb8bae86642cfc70e86a8"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0002.png",
+      "bytes": 4571,
+      "sha256": "1a94ed2f97cb8860455689838f2dd192c837202aeeb785f2feab0dcc0b0872e9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0003.png",
+      "bytes": 4750,
+      "sha256": "79731ba7636c21cc1865f4a158511ace9553a861052bc325ff987d1504c9dde3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0004.png",
+      "bytes": 5106,
+      "sha256": "7fa27d03fb38d676ac34e05aab1691b3cbb8e489bf1759e4bd5af900c2e6bc48"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0005.png",
+      "bytes": 4763,
+      "sha256": "2038cf5a2536e8cdc13fd6c7b2562c9e5e3f20803f1286df0d07c1ace3f7b932"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0006.png",
+      "bytes": 4685,
+      "sha256": "d3f3c47fcd10ab25e4505bfc3e8b56f0937322fef8f1582f3ee01830bb256d25"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/run/frame_0007.png",
+      "bytes": 4589,
+      "sha256": "c3c0c4b869045428a1e47d781849e3462e7c7777b5f05d959abd794ab4df0f53"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0000.png",
+      "bytes": 5283,
+      "sha256": "06f605d48d9317f7e04a53c12a0799a44fc829f08928e060ed447f0a09839af7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0001.png",
+      "bytes": 5137,
+      "sha256": "b9594a94d9f6d6869c6cfd297272c3dd4f118923e6f8fef83f5395b8881e304b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0002.png",
+      "bytes": 5142,
+      "sha256": "0b972cdbca67aec5ce824657e771f381be103a123553e6833f7cb1bf1a0b8009"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0003.png",
+      "bytes": 4931,
+      "sha256": "a297a7b1804b0ac84197c64d0069246a9e3d256172928258d6d5dda898b92830"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0004.png",
+      "bytes": 4731,
+      "sha256": "0cfc0512c8ada6d07d56dd96f8293d0d0063542524eb2d4e12d1e335f75254eb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0005.png",
+      "bytes": 4532,
+      "sha256": "5286ae97e785e5afa28f77c70813dd7ca6861ab1d190f38b9d4c7595b704b515"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0006.png",
+      "bytes": 5245,
+      "sha256": "c29debb68d6ffc204191169cd1ffd2c71ddc18c9d3a93b88f8196e0eef0ad043"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/slash/frame_0007.png",
+      "bytes": 5384,
+      "sha256": "7c05bb4311c99711badf98c8a5731e6335300bd3195e71a25b81942c80dd06c9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0000.png",
+      "bytes": 5654,
+      "sha256": "d1c38f5c00f3b39edbff5e5bfd9b58c19467db7d68d1e38d759664580ca8086f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0001.png",
+      "bytes": 5173,
+      "sha256": "663aa384d7dee9137af8cf9c92f0305e15797465678cbd55bbdb276e3a24308c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0002.png",
+      "bytes": 4972,
+      "sha256": "84fb3f08066c2b5e5a86f2366a093e3e88ca11aa8f8d883248dca00402d39839"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0003.png",
+      "bytes": 5143,
+      "sha256": "beb98747c8d5ccd68c72d11a336e1897b8daa3ecda0fdb33b42b1fd7a0ba561c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0004.png",
+      "bytes": 5368,
+      "sha256": "98ce81606e6fe1d379965811bb6e491f0a2fdc1b1a475d78b3683dd017096e8c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0005.png",
+      "bytes": 5070,
+      "sha256": "934759928ad2c87d07c796088fd64e0d9ded75098f9c966d8e706edacec133d8"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0006.png",
+      "bytes": 4849,
+      "sha256": "cbddbcba3ea45d12cec91d6aef48b160603af8501423fa971f3f791494fbf094"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixel/5h/walk/frame_0007.png",
+      "bytes": 5159,
+      "sha256": "51122f0bef9e5111e06e0c70912915ee21ebcce53790da3609945adc37563acc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/pixelize.py",
+      "bytes": 4898,
+      "sha256": "33bddd5b37731dbc56ac8f3aa773ffe6b8385a483c6e19fbfd5e888f610b894c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/prepare.mjs",
+      "bytes": 4230,
+      "sha256": "824c3c97a974a5ebcb4733b335f15bac54013040c64bbec28faf5b8749840959"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/prompt-2h.txt",
+      "bytes": 3718,
+      "sha256": "6f74c501fe485f8e4ecefda21c2fb1cf257591a01b2c22d19e2eebca9ae375f3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/prompt-3h.txt",
+      "bytes": 3700,
+      "sha256": "26133607e2c45130d9209c702abf3ac0c596cc7d3e61eaff65bceffc4fa5e5a0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/prompt-5h.txt",
+      "bytes": 3732,
+      "sha256": "31186b11fc498227221a39e860f3f1ed0b08ede8fd347c774f8239fe263c4210"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/prompt-seed.txt",
+      "bytes": 2513,
+      "sha256": "e6bfc94b5cde5e65894d5de79c5520660495b1d18a1c8d74a0b33e83efcf34e0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-pixel.stdout.log",
+      "bytes": 2772,
+      "sha256": "7fb8a5568c717baa0124ed7bd25a60689cabd958e75c42ce4d0b79b45a579a11"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-pixel/pixel-contract.json",
+      "bytes": 3064,
+      "sha256": "843710354d99f486edfa0288311cd56f826f23bdca6fe43658520f17d255f34e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-pixel/pixel-contract.md",
+      "bytes": 2671,
+      "sha256": "6e5d934ff3e16e07268684226e3bddb1f8580f1869ae5105697da0ceccdf5ff2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-sprite.stdout.log",
+      "bytes": 3872,
+      "sha256": "20ca406912201cbe6b1cc25868ab9ba6120cb8c10ddd3330d52a747130cd9c8a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-sprite/sprite-qa.json",
+      "bytes": 627528,
+      "sha256": "6b112ca78a2b9fb5f24cf4e279c3c657418cb94008578e2034f90191ead3dd76"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-hurt-sprite/sprite-qa.md",
+      "bytes": 3780,
+      "sha256": "a5f3378314802deb919940703dfbab9e0778a4b20f6239b2d3c4cba2712b67d1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-pixel.stdout.log",
+      "bytes": 2772,
+      "sha256": "960c2c381dbaee4ed2196e997b5e16d1b01b76ddf4e08024c1bd42fa7846b6fa"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-pixel/pixel-contract.json",
+      "bytes": 3063,
+      "sha256": "82d7b09345b5213cae0b1c045f6da1ddd97a1ec27a771e92cbccec01f300e99c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-pixel/pixel-contract.md",
+      "bytes": 2671,
+      "sha256": "1245e12827a90aec593bb2ec10846ae40602f3917b0604b24864c5fa2ea4649e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-sprite.stdout.log",
+      "bytes": 4125,
+      "sha256": "438bd63b320642a1924cae1c6859094765f31dbc5adcff1eb866fa1c7f5a8e0a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-sprite/sprite-qa.json",
+      "bytes": 627908,
+      "sha256": "92663c560b5bfd67b5105eb3c0b67fbd152a5728dd722bab911e6ac2510b524c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-idle-sprite/sprite-qa.md",
+      "bytes": 4033,
+      "sha256": "d961c6d42caa0d2d528097cd77f47e80243ba012468a1447084cfda0513d6651"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-pixel.stdout.log",
+      "bytes": 2770,
+      "sha256": "cae338f801751bc96d820137295a9c3707f5b144c3cab88d04de1bcd5b4a7c63"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-pixel/pixel-contract.json",
+      "bytes": 3055,
+      "sha256": "f8cb7b093a1753781be69d62d9d8f8322f5bbfec00ffee374cfdcc42164aa448"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-pixel/pixel-contract.md",
+      "bytes": 2670,
+      "sha256": "8d00da159625996e05e52107160fe0098bd00c129a791ed07c52686b2b9c65fa"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-sprite.stdout.log",
+      "bytes": 4032,
+      "sha256": "2fbcc7fa7032e3d8c08c80bed0b1f0c6b1853f52b7cf008efdd3bb617680cdbb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-sprite/sprite-qa.json",
+      "bytes": 627713,
+      "sha256": "48c139f7f6c1f98500ee3c9b08b1b0421959d5b4ea8679baa9b6a58dc53915a4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-run-sprite/sprite-qa.md",
+      "bytes": 3941,
+      "sha256": "a72a1654db36ebe950f1cb31b990bdc6ceb4b1b76150f887473112cf4e1bb424"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-pixel.stdout.log",
+      "bytes": 2868,
+      "sha256": "2cc6e0b2ded79f9b7415cd2949a7b8555489c56d536cab6c781955e1efcc8102"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-pixel/pixel-contract.json",
+      "bytes": 3153,
+      "sha256": "76076a9dffd3e6886fca043aec7218abf1b43f524ac2e96794d5680539bc6358"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-pixel/pixel-contract.md",
+      "bytes": 2766,
+      "sha256": "f49ec28128c89344494ac505783c615d4f82cb3921f65f77fb2c0ca98ef1d3f3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-sprite.stdout.log",
+      "bytes": 4124,
+      "sha256": "66674238435df33019ff6d7c4840f858997eefe4c67d83694688da62af963508"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-sprite/sprite-qa.json",
+      "bytes": 627864,
+      "sha256": "fa2c76dc6be556e1c46cc0ee036e323fc974bb2a9c6c86ab9cb009781e37a995"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-slash-sprite/sprite-qa.md",
+      "bytes": 4031,
+      "sha256": "3e4982b4616125ee9af9099e2c8e2b3e246dfc2b05c045e48745b8f4202aa6e6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-pixel.stdout.log",
+      "bytes": 2772,
+      "sha256": "a8ba064cae89392fc417e4bbe5949f8eedb5eb82b486abd38261cbb27023b1b6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-pixel/pixel-contract.json",
+      "bytes": 3056,
+      "sha256": "728587caecf0202f11c08ef9a0942d056d7c471538149f493834ea5acd11dd49"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-pixel/pixel-contract.md",
+      "bytes": 2671,
+      "sha256": "378ea5c06b9cd459e04af7290b484b91846935678156f7107c5747c9b7c666f2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-sprite.stdout.log",
+      "bytes": 3938,
+      "sha256": "45fdf36451bda80c0bda38e23b9112e4b6a024b87954823a826b6ac5cc8bf436"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-sprite/sprite-qa.json",
+      "bytes": 627648,
+      "sha256": "edbd6ed1eed73c85631510e245335ce46e50e264c859d7c7f9cb1688de5c8a6b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/2h-walk-sprite/sprite-qa.md",
+      "bytes": 3846,
+      "sha256": "0c7acc77aed83b7095db078bc2623b42bf028d8454aa220bc1ef28a2615b35d4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-pixel.stdout.log",
+      "bytes": 2396,
+      "sha256": "407a8ed3aa120c1e2846602a1832c1e02bab771f101cc7edf2a9717a07354570"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-pixel/pixel-contract.json",
+      "bytes": 2732,
+      "sha256": "bfeac6d97d0a255425714b80daa5405fc7adf45b73127bf1d42c84157a70cec4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-pixel/pixel-contract.md",
+      "bytes": 2295,
+      "sha256": "134ae3d89a6afdaa050a38cc76af29c175e7f5a034fd86b98832b15e4b6f982b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-sprite.stdout.log",
+      "bytes": 4280,
+      "sha256": "df6910a9d9c675f88c2a1ff8f86354006753f07a1bc26c316ce0affa34da8ba9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-sprite/sprite-qa.json",
+      "bytes": 627921,
+      "sha256": "688ba88ce7ce5ab4c32e4d8ed4e0cf93ab740837c7debbfdeee56699f013c97d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-hurt-sprite/sprite-qa.md",
+      "bytes": 4188,
+      "sha256": "3db90038a7beb0d880d12b203b557a26373ae60f0b788d7cc5d954de93581c88"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-pixel.stdout.log",
+      "bytes": 2584,
+      "sha256": "13088c0b31dbe426dac8c4146f123edeff4b2992166dfb8706c0d7a2ba843d81"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-pixel/pixel-contract.json",
+      "bytes": 2898,
+      "sha256": "e1498027d8d08b5e1d33c32830d17bed370394ffeaa0d7094e673481128aaf85"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-pixel/pixel-contract.md",
+      "bytes": 2483,
+      "sha256": "a47171d4f1e5cfaebcc8d28fd01e08701013265dde6a47dfa4dcfdcfd2a7f5c9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-sprite.stdout.log",
+      "bytes": 4060,
+      "sha256": "288435c3a4f42fb151f7f7bd2030b50230df468e72d66d93fa12b09ed9d8de48"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-sprite/sprite-qa.json",
+      "bytes": 627850,
+      "sha256": "60d86738df7582033b0886809be882bda9d354d84f6ba38a7fcd29be355b245b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-idle-sprite/sprite-qa.md",
+      "bytes": 3968,
+      "sha256": "c79d5ed9a9a1519d928fd10c35281c656b8a34c99ee5ecd67f1402b505ac2a0d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-pixel.stdout.log",
+      "bytes": 2394,
+      "sha256": "65ccb3260a761b9f8b71d62261937f5f1c51e0672926d5ea86949e0ee685b5dc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-pixel/pixel-contract.json",
+      "bytes": 2725,
+      "sha256": "b5fc81312d26a93aaa369089cd9e92a9ad66e314fcf44d83b272005151f9d113"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-pixel/pixel-contract.md",
+      "bytes": 2294,
+      "sha256": "51171d6522c88e1e321a0aba89d947c6d01024c8763e5bc58fbac92dc6565d74"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-sprite.stdout.log",
+      "bytes": 4146,
+      "sha256": "ee07ed23177198650194fcd694f26236713e5f4d7ae795d8c92d4ea29610d1d8"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-sprite/sprite-qa.json",
+      "bytes": 627908,
+      "sha256": "e1be977f1e68d7ff53a1ac0290d353838218cca29616395e419b587f669bb278"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-run-sprite/sprite-qa.md",
+      "bytes": 4055,
+      "sha256": "4c95feaf47ce946ce5394bf16ba315d0fc960d3fe16a5f6a0e127dc28ad9aa79"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-pixel.stdout.log",
+      "bytes": 2586,
+      "sha256": "50eab139cefa6956b8d67b6b40985ea66ec159b7e9ddb47dcdb150ad47787c16"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-pixel/pixel-contract.json",
+      "bytes": 2902,
+      "sha256": "43f011d1cda4a54478944f5533a27bf5b9627d5415eae8ce0a6900ad92b523e2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-pixel/pixel-contract.md",
+      "bytes": 2484,
+      "sha256": "3922f9138573275288b70377ffe5590c132280503568e5cf6a158d848e03a8da"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-sprite.stdout.log",
+      "bytes": 4303,
+      "sha256": "b698e1126efff2527be3fb5a3088bbdacb1b22b29bc62da3652e9a2d0881c76e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-sprite/sprite-qa.json",
+      "bytes": 627895,
+      "sha256": "3f3a598a74541f50505629f47859806a666c718dc79b2943ffee3a96e14013b3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-slash-sprite/sprite-qa.md",
+      "bytes": 4210,
+      "sha256": "e700391eff335ba2248579cdafee241035f4186ca6f46c835de4360e23023d65"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-pixel.stdout.log",
+      "bytes": 2396,
+      "sha256": "ebeb1ca729f06014cd09efdd00f27d0cfb4828eee9ea49ce1bbc3ac5f1f15b15"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-pixel/pixel-contract.json",
+      "bytes": 2739,
+      "sha256": "cdb138aa37b5f43a42e7157410661299e98e51e457794d19ca932f252a90603d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-pixel/pixel-contract.md",
+      "bytes": 2295,
+      "sha256": "c6366f13d8cb0f120dad396d9c77479ca1c7d8ebd40bfb9ffc195ea246bdeeef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-sprite.stdout.log",
+      "bytes": 4016,
+      "sha256": "cadce803fc8cf5ccd0a008a7b29ba8823aed40c9fe7f0ec629f67dff23395b85"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-sprite/sprite-qa.json",
+      "bytes": 627773,
+      "sha256": "c48ed3095e301eae8ebadb0b7864d2b673f29005cc00576c27689a2bfd178ef0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/3h-walk-sprite/sprite-qa.md",
+      "bytes": 3924,
+      "sha256": "798165e3095015970399105f1f67a00a5e515b553d913e2aa0e267ec82dc72ac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-pixel.stdout.log",
+      "bytes": 2169,
+      "sha256": "346e2259d999dcf62043807d652bbcfbac69a76945042b22f6b0871f52fffb41"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-pixel/pixel-contract.json",
+      "bytes": 2484,
+      "sha256": "d2ab281befba9a38d721b332e8b8ef0f1ae86e99330acbbdcd57e87aa1e56aa9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-pixel/pixel-contract.md",
+      "bytes": 2068,
+      "sha256": "cc45a4289a168f3234ce95332bb24320ffffd3385b44303c18a10522f5e01623"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-sprite.stdout.log",
+      "bytes": 4312,
+      "sha256": "f1245cbab4bab5ae4299d2efda1f4bf350a8d6f443160266fd0dce5f4c20ef11"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-sprite/sprite-qa.json",
+      "bytes": 628002,
+      "sha256": "b323616675ccc514cd66ded565941507ff07b77211d80ac5a66018dc6ce9061e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-hurt-sprite/sprite-qa.md",
+      "bytes": 4220,
+      "sha256": "55c2516bafa0f60bfa95501ca97be95e45f9a4848c95c775d6e95bee87db917a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-pixel.stdout.log",
+      "bytes": 2169,
+      "sha256": "788056689ac23b260650a00830b108ad5d5dffc2ed4929b45ef9318719834ddc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-pixel/pixel-contract.json",
+      "bytes": 2486,
+      "sha256": "d400594ad837b839c855a5f04c2c11da7a18aef49963ac63c468b6f676784851"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-pixel/pixel-contract.md",
+      "bytes": 2068,
+      "sha256": "eed1a896b8c694caea8e875384f710e9f63e19a16cd5be5f2e9a98bf09d3f512"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-sprite.stdout.log",
+      "bytes": 4136,
+      "sha256": "19236adbf64eb2c4e4b5ea1ace683138a1718dc402355cc38c04e6a155527862"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-sprite/sprite-qa.json",
+      "bytes": 628000,
+      "sha256": "cd09d19f5cc73b1e0686641f41cb5c700213a55c2dcc092e2ff7c9851e67c851"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-idle-sprite/sprite-qa.md",
+      "bytes": 4044,
+      "sha256": "e8084e6774461716d3855b97f74a0f35b2490f130f5ca7454bfa5d682520f14e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-pixel.stdout.log",
+      "bytes": 2167,
+      "sha256": "ba77d2969d6d7f1e033dcba6b15a2d3dcb522ab82dcae11fd3b0cfa69a18b723"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-pixel/pixel-contract.json",
+      "bytes": 2480,
+      "sha256": "1d15f5a0c365a21ffba237bd0cf9f56f9ab29df6e39b9cd4eef136071738c273"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-pixel/pixel-contract.md",
+      "bytes": 2067,
+      "sha256": "4fb82c08ec488f4883bd351fa9ea34569b2254e8d0c50ef4e8c13171189449dd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-sprite.stdout.log",
+      "bytes": 4179,
+      "sha256": "19b4c479bcb9b5ef00128ee9b7fa54b23807741accd54d67e3c16a94603216ab"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-sprite/sprite-qa.json",
+      "bytes": 628012,
+      "sha256": "38a10d2921dd5771e7258f65145aa2c81fc95ac2218aca656ad2e615585abc0b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-run-sprite/sprite-qa.md",
+      "bytes": 4088,
+      "sha256": "66a1aeab66c5a02bfd380344a120216b2f24d851c5579fb11c2e936a19b85bd3"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-pixel.stdout.log",
+      "bytes": 2171,
+      "sha256": "7ecd65da30bf9c17be558f6acc82f4f4cc8a2ddc9b14c8d504ffa1baf911ab9b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-pixel/pixel-contract.json",
+      "bytes": 2491,
+      "sha256": "396c53a14b8aaa6ca817d3490e98947617be09bc4ee4b79feced700c98f1046b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-pixel/pixel-contract.md",
+      "bytes": 2069,
+      "sha256": "d41aa160c7de8a5e6690652e49e972013d93e925c804ddc0dddd7b48324b5ada"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-sprite.stdout.log",
+      "bytes": 4544,
+      "sha256": "fca45e6579128e0a42c00381f085ef6c48689ab0436eb99811e61037cd0d2b94"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-sprite/sprite-qa.json",
+      "bytes": 628289,
+      "sha256": "edcab9a629ada3a5901939546ccae9c7234fcfe12dd4e05c0385a68e6e0e3adc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-slash-sprite/sprite-qa.md",
+      "bytes": 4451,
+      "sha256": "ce526f06ef640dc03f3ff5915b49a50fc88be47ce50991b243e6fe50843a5d0d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-pixel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-pixel.stdout.log",
+      "bytes": 2169,
+      "sha256": "addc802470375e65e9525f91fcb48184069d8301cc627f0d87b54c4c866e0ec9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-pixel/pixel-contract.json",
+      "bytes": 2472,
+      "sha256": "e669c5ae1e41c5e1c61baf97422cac78f0e1015100cbc3166ab10b61eddfe49b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-pixel/pixel-contract.md",
+      "bytes": 2068,
+      "sha256": "063148f52b8add59bbc32fae0acc40df78b86c91aa4fc8ebccf6279fc2ce3545"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-sprite.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-sprite.stdout.log",
+      "bytes": 3817,
+      "sha256": "96cffe5cbc3e9ce5df261b0c0185c2a9edaea92a522a9bf6b550c7f267a52264"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-sprite/sprite-qa.json",
+      "bytes": 627586,
+      "sha256": "48c5aa237e378a539acd0a9594e950394924e8efceebcf22fafdf8ff1c36c346"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/5h-walk-sprite/sprite-qa.md",
+      "bytes": 3725,
+      "sha256": "9baca25fd5c08f9cc992ff9a15a4f0fb35e0a3f8e4485e0dffd57e61929cfde9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/browser.json",
+      "bytes": 1431,
+      "sha256": "be92be48e2110ebbacd855a03416d146a1abc504f1cc4c46ad47e23ddb91aca1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/desktop.png",
+      "bytes": 76675,
+      "sha256": "df5c6a9d2b3d52dfb8f04ba416fb808137d578e221bf9a57ae58c3bb9f401f94"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/feel.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/feel.stdout.log",
+      "bytes": 2749,
+      "sha256": "297c950f54fb3285210b9b5c6bd31b5e2a0583cc47f94b551e4f400fdad4e1c4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-light.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-light.stdout.log",
+      "bytes": 2688,
+      "sha256": "b4e1cb1f90f2f9f01d83341bced083544cdf4b761b84573d1342c913d5f43803"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-light/flash-report.md",
+      "bytes": 2600,
+      "sha256": "cc64bd59ece112f5494f3bdfca4f1b41e1321c3c96d79b1d110ecebf60b90d4e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-light/flash.json",
+      "bytes": 1779,
+      "sha256": "df45255db01dc870252960f8ae3b77c92cb4a426a21ea91b50160a8c221cd1ba"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-normal.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-normal.stdout.log",
+      "bytes": 2693,
+      "sha256": "4a047d44a203290fd8b9ba0c2b43047df62b9c645b011bcef5970f8154a192d0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-normal/flash-report.md",
+      "bytes": 2604,
+      "sha256": "b4d18b061f5705ad6f3ac663db42cf88d7ea5972cda9fc9f710fca07abf064e7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-normal/flash.json",
+      "bytes": 1790,
+      "sha256": "07fc26affd28951b0e7489eeaf28d4a7e6f5b414a608e15e9eb07e839cdad894"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-reduced.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-reduced.stdout.log",
+      "bytes": 2817,
+      "sha256": "6f76673592fcfb313fc58b3721329ff26aa40f41879c292c1051fd0ac1e59abc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-reduced/flash-report.md",
+      "bytes": 2727,
+      "sha256": "d13b167bf3a7030d29715088af8a8f84ec432de998bf4abf4457c174f84eed0a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/flash-reduced/flash.json",
+      "bytes": 2277,
+      "sha256": "bb0a4be702ae6426596dc3785b21157bb1a977e1e78c77ee2d3bfba268a79527"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/fx-browser.json",
+      "bytes": 178,
+      "sha256": "ef06d0983c0416e092fbdcb147ec2548b2789fb4095fed7a0d4430e86c8c0961"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/fx-desktop.png",
+      "bytes": 76452,
+      "sha256": "5d68b63fcc2d629be99cb6c2ecffa50fc5ef88a39132906a076feed349a9e343"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/fx-verification.json",
+      "bytes": 1339,
+      "sha256": "f75bef65523403235767de74f55830136a474f350dff2a2ef0fe6c4a11ec4c80"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/gif-export.json",
+      "bytes": 891,
+      "sha256": "89e150015621550777f8e1f42d88fc44648c4e064520e1d20af4ad625eb3e686"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-pixel.stdout.log",
+      "bytes": 2872,
+      "sha256": "ff2fe2eb471a475d3de4984ac9e73565f8de8c1ae972b3ce6214eeaf3c70c9a7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-pixel/pixel-contract.json",
+      "bytes": 3164,
+      "sha256": "c3fb119473b0dc93734d14adb7203302e4be20c14acf1f7a0735d7302a4a405e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-pixel/pixel-contract.md",
+      "bytes": 2768,
+      "sha256": "00aabd9d727191a94c7e857e5a69ad86233eb7729ca85dfb94e8035b1d17be5f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-sprite.stdout.log",
+      "bytes": 3966,
+      "sha256": "79279b91ccd21bfc5ab77647fd68c260f2b8d8ab5e8b159a0045c17c2ec09d27"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-sprite/sprite-qa.json",
+      "bytes": 627599,
+      "sha256": "67f7db10950811238c6ec7d802985aef38f4c332a32eab9740c9b4df5a9e1a9f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-sprite/sprite-qa.md",
+      "bytes": 3871,
+      "sha256": "ca487a6258aeba048c09fdb03bc0b16fd17a9aaf413d998c09bab235c2c37780"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-pixel.stdout.log",
+      "bytes": 2496,
+      "sha256": "dd96d0e8aded484329e22980ad81673d423fabf9f302e2c7064b729cfc0ba27a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-pixel/pixel-contract.json",
+      "bytes": 2834,
+      "sha256": "48b1e60437a68e9b1b0d0107bb6b98b57af90e6b4a1b44c2b46a67eb7c3eb6ef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-pixel/pixel-contract.md",
+      "bytes": 2392,
+      "sha256": "485851d1ed1fab7c0961bd41204d2f82c5fbdc1649022229dc56ab5c2f24becb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-sprite.stdout.log",
+      "bytes": 3835,
+      "sha256": "b549a713cdc33760d9be9fb0d6571446978b452e6dfbabf7ba0701d7da9b4012"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-sprite/sprite-qa.json",
+      "bytes": 627320,
+      "sha256": "8bf5f33f143413b103ce4447609507d7273b963e81406842c307c90e48bf7d3f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-sprite/sprite-qa.md",
+      "bytes": 3740,
+      "sha256": "0a7047fd0a8fa91bbed5700cb6b611ff3444c12440b5240cef456368a4d99fe2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-pixel.stdout.log",
+      "bytes": 2175,
+      "sha256": "1de0b69a612f2a7074f1221ca75536dc16c35c66931e0ea0f532bfdea5a6b077"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-pixel/pixel-contract.json",
+      "bytes": 2506,
+      "sha256": "8d2cb2d62731422a6696d7a75d5342e85338f032a5acae55acf6de69d56f0387"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-pixel/pixel-contract.md",
+      "bytes": 2071,
+      "sha256": "d94dfde29ec12186f54a3a3af29fffdcb3d3b17e96e176290afaf126e62c5cee"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-sprite.stdout.log",
+      "bytes": 3977,
+      "sha256": "4a9378e226b1fddc0d3c4fceeebc97248cfab8fbb78b1c95c7e80f960b9c1a6f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-sprite/sprite-qa.json",
+      "bytes": 627672,
+      "sha256": "441942fdbe598b6c4e315d2f450681bcea6e0582e2702270d9db4613967da435"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-sprite/sprite-qa.md",
+      "bytes": 3882,
+      "sha256": "504aa8ef3dd3b755d78371e6a4c33ff6ff61191a14e31c1d4474a4e8ba6b94ee"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2-browser.json",
+      "bytes": 92,
+      "sha256": "447c8a8a042386a82d0ce90b0e7740fcb986754bfedf01fc277a83255d803531"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/idle-v2.json",
+      "bytes": 8367,
+      "sha256": "daa910689ed90f072032cf66bf93d5d68f1566dda90ebf508e3171682debc4a4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/mobile.png",
+      "bytes": 72838,
+      "sha256": "65800b2b1b8588eec8287eb6d505181843c7620b5bf63f090a3a4d9eb31c59ad"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/verification.json",
+      "bytes": 9996,
+      "sha256": "8d4fb0fb55fb57d8955602baf68ffd876ab4ac889afaf3d01b4f578d201b5b35"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/qa/work-brief.json",
+      "bytes": 65949,
+      "sha256": "367b2501c9ed709319db38bd3e2aab5d9e8ffb962d92e8299a2e241a2e0360d0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/raw/2h-sheet.png",
+      "bytes": 2443630,
+      "sha256": "e4807cee1a575240fe96bcc69580efd3163fc08b898445325eca359e9aeceb64"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/raw/3h-sheet.png",
+      "bytes": 2433457,
+      "sha256": "fa37d9fd13643f843746ce7565db3298db49d3713fef897a62a4303eceb69952"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/raw/5h-sheet.png",
+      "bytes": 2420765,
+      "sha256": "3253bf0bb06401ce40eb5434092b2d6aca440a8475c64166d986114f097dfeb7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/raw/approved-design.png",
+      "bytes": 1606339,
+      "sha256": "0d70f31e2fb6e3c83d8d340a0434e2f50b8a1baa702453a726e2e2a6eb1b244a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/record-idle-feedback.mjs",
+      "bytes": 2547,
+      "sha256": "a5c49e224317b9967a47d743cc8e1fc2c5ec78635d6ff2b201586288fd678040"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/REPORT.md",
+      "bytes": 4632,
+      "sha256": "b163f3c6af08eda7e7be0c1bc26f31d77ac2a934fc153c621ef973eb1461c728"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source-manifest.json",
+      "bytes": 53191,
+      "sha256": "e46d4a9cd837d31bd4ab8a26479f884af73041085cb1f36cd671d8893f09dd9b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0000.png",
+      "bytes": 95921,
+      "sha256": "5f85bb0f484af0aa18d3fcec06225e200801032aa63721069963547be900cfb7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0001.png",
+      "bytes": 95219,
+      "sha256": "361abaf14992476d3b724f0ef976798127d0f9f504d3228864f278614da987ed"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0002.png",
+      "bytes": 97017,
+      "sha256": "aa0ffc53ca98928b5f9be16d834db16b0ad39629b10f2227efe5e1ab158769ac"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0003.png",
+      "bytes": 98555,
+      "sha256": "b70b276a24645c372a68cf6d9f1ba3c95fdb42cc41da0bd067c26224f2540c1f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0004.png",
+      "bytes": 96667,
+      "sha256": "e4096d0aa23543a561f2e422cc28de403d33167dba33726c08ab64fbb50e0d93"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0005.png",
+      "bytes": 95069,
+      "sha256": "f273b6f1acfab96cbc00332009a08dfa9639cf3656fe7aa6a1eb7912db01c703"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0006.png",
+      "bytes": 95360,
+      "sha256": "23c45e6439fad536fddb4c5e8ff489d0c2eb6d4cac7c5363f5e3ad9d41a60f23"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0007.png",
+      "bytes": 94994,
+      "sha256": "3e87036f8e4b13bcfcf3fe1fd68aa947d43655c19ad5615ef5e941e2e0bd85a1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0000.png",
+      "bytes": 97377,
+      "sha256": "1bd37912226936dd30b8c73631baf2dc3ed9f8f97e4f2320167eeda6a7baf205"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0001.png",
+      "bytes": 97077,
+      "sha256": "13b38ff7fb22c472fe9c783eebf27d0b3c379d42ad9e1f2c91f98ac2077022cf"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0002.png",
+      "bytes": 95929,
+      "sha256": "3d5af8a8e2d594ecb4e6f707ddedd85ec3f5b09ab04d9058d8fa99c0aaef528a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0003.png",
+      "bytes": 97978,
+      "sha256": "7c420b42a994d7cafbe91502c2ca56a9d43d2aa97aa7555e88187322b6cb7525"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0004.png",
+      "bytes": 97901,
+      "sha256": "aeb8673bda522cde721d7aae2fd31e6fc4efa98e08bc5313ed98091947dbbb1c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0005.png",
+      "bytes": 96382,
+      "sha256": "3e84eae2f3fea32f1d5cb02b2063bc859e5d3e9e41c2925dbb3621b6b8bcb921"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0006.png",
+      "bytes": 97014,
+      "sha256": "a4ba40e2f5c8512ae3e7668f19e81ad817aec9cfd2a73ce750778f34444c328f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0007.png",
+      "bytes": 97376,
+      "sha256": "96d715e0789cc1f2418282d35a9575b5f26117d8c1eaeadc90c6ca9f557362e2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0000.png",
+      "bytes": 99354,
+      "sha256": "3029b362a6ea525170e4e86339737d76bdf62bba5c3a628dcf7a865f39100135"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0001.png",
+      "bytes": 95663,
+      "sha256": "05ecdc0031d5327602f2fb2e5681c9f099fd06da07a07ad1c0a37a0f09865b86"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0002.png",
+      "bytes": 95229,
+      "sha256": "d6f82d41ec2af89fa8ed7f24eca9fe7b3e72950fd28dad2f53321a2908e9e386"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0003.png",
+      "bytes": 96056,
+      "sha256": "6590658478ba6c2b48205f60d3bb973f60e2c9b9e45e7640dfedd4b8e5254f82"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0004.png",
+      "bytes": 96073,
+      "sha256": "939ee6e56dfde3f180c593f96028580ef9294c9079815e3dab5abacd1a8a2132"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0005.png",
+      "bytes": 95636,
+      "sha256": "7b4d1632a4ad82d464fcd888e6ad0e5ea3609fe61de58b118fcedc210d6563a6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0006.png",
+      "bytes": 94347,
+      "sha256": "a362e7d8c11f50016f758f9344355a6a31d96f61497f3f4ba24c3abc27e33d2b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0007.png",
+      "bytes": 94863,
+      "sha256": "3110f240fcca7815bc8253eeab641b35324404d3c0046e3445e7bb41b826353e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0000.png",
+      "bytes": 97176,
+      "sha256": "05c49401901c79c97dc1eaf17fea72c1b6966be0c5d8e396935d2a9498865bad"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0001.png",
+      "bytes": 94151,
+      "sha256": "5e68f26de0f494c5b572cf863933d90c58f12194e522d9016e3a533f98f1d81c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0002.png",
+      "bytes": 94271,
+      "sha256": "40b6311cf91639c6b5231c8799bd717b08529721c1b91bf7e530d6468a10daf9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0003.png",
+      "bytes": 101127,
+      "sha256": "6e49f5835cf29a77755860e4842f899eb9d265a779d7b6da0bae374b7bab50f6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0004.png",
+      "bytes": 96172,
+      "sha256": "a793b0940d29d6bd1ab51e9ab040f7325ec85ce9e99a516bdb106fefc0b17f5b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0005.png",
+      "bytes": 95279,
+      "sha256": "3bfaa65dfec9694f987f3e1ec068ad7822a1ac54e9455b376ae1f72741b242ce"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0006.png",
+      "bytes": 96704,
+      "sha256": "ccb916799cd18535bc2fb9eb5f1caad1a9bd11125c330a9e1e84bc2a847bdb56"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0007.png",
+      "bytes": 97075,
+      "sha256": "bbcf6d284010a133b0855bb8462f0c7f68b921b733435b43da99aba8a9ef15ff"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0000.png",
+      "bytes": 98431,
+      "sha256": "3b6909f135e46c143570cc9f8a0fb7a239947ac6329196e8de983d3775cc6190"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0001.png",
+      "bytes": 98282,
+      "sha256": "4952bb6d8bad99f949a2f5deda02cef9ed3a46acb3fcd85ab1d14968885b27e9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0002.png",
+      "bytes": 96468,
+      "sha256": "be27645e3e9e31f990bc3b181e5f75b2e1b91214e2c4553d53e136deab341b29"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0003.png",
+      "bytes": 95414,
+      "sha256": "b1acea844149728d655167cdbc8a7df08f5d89c440ae845e07c2837252d172b0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0004.png",
+      "bytes": 99195,
+      "sha256": "f8f918442b738ae5151729f1949d2ed575c6158ec0f2e6f404caa8ecaf39e326"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0005.png",
+      "bytes": 97099,
+      "sha256": "49aec3dcd4075697dd7d6bce7b8152bfd9faffd697fd17ab3126059bc6e783a8"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0006.png",
+      "bytes": 96399,
+      "sha256": "519b0ce9d3acb07d1507e6d79d81b623a53a88fdd659a163a269a1b06e8baa86"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0007.png",
+      "bytes": 97129,
+      "sha256": "2b480badac17b4754604105bbcd59f18ca5237384a0c4784d37646f2006bc264"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0000.png",
+      "bytes": 90224,
+      "sha256": "aca6eb35cef2ec164c10ee7b73f236d88a0281a419b9432052d80a4321fc3005"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0001.png",
+      "bytes": 89155,
+      "sha256": "b297d9e5588585d545a0292b7b91bb7ff0604657b3fd53d4c2421eb3c0f9ffb6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0002.png",
+      "bytes": 91209,
+      "sha256": "860f57a6faf1270a56b8b7e7085cb541dce1b9f6da795a72af9bdfb990fffae6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0003.png",
+      "bytes": 91867,
+      "sha256": "cce4c6d3cddfc11f928c686eb0d9de4d8ebdda5a0e269547387ea995c654d873"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0004.png",
+      "bytes": 91601,
+      "sha256": "c9cbb3e7361f040dfbfacaeda547ff4f8e512c2603ec7d128527be32241cd933"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0005.png",
+      "bytes": 91328,
+      "sha256": "fb8a03faf0d689bfa5874f03b0c2b6e6f9203a4f6d7ac3ba3025e6ee535326f5"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0006.png",
+      "bytes": 90135,
+      "sha256": "58b63428c3681d3a3d9673f440c57ffcc32a10a338b3af773bf6bd47cbefee2c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0007.png",
+      "bytes": 90233,
+      "sha256": "085b75efa966d7a44fe5b50079f44bef2a38f49c6e8e98b5e6a23012ff94a9de"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0000.png",
+      "bytes": 91066,
+      "sha256": "69bf0dd6b5c8902ea87864de29c9e5950a889ed140617e22b99de690f45fdd94"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0001.png",
+      "bytes": 90462,
+      "sha256": "089b3e8d998fc7e76d4369649ca1dd0d12053d95c35f9654de979affc77272de"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0002.png",
+      "bytes": 89056,
+      "sha256": "fee152702ad043e72088df2c9e4897a795d62b11e6cc015b79486897d2e44acd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0003.png",
+      "bytes": 89565,
+      "sha256": "d8039e9605bfc9bbfe9761509333c97087cb29442b7613210eb0dddb325b195d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0004.png",
+      "bytes": 90849,
+      "sha256": "ad74a5fa6757d921ad576a60ebef55f7be2062e9bbfdb99142ece5ca23d3dadb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0005.png",
+      "bytes": 90926,
+      "sha256": "0b7a760a59bd3bb2d0b6781b54288249d65cf9f70fb6ba5563287844e418edb6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0006.png",
+      "bytes": 90857,
+      "sha256": "b0284081b7be38638ce38716db51efb683b97571949bf708afc36b4535b12a94"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0007.png",
+      "bytes": 91036,
+      "sha256": "9aa9bc3013effc53f63e73607841b0dd9ab9cf590e89e9d90e6b64b0f5dfb17e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0000.png",
+      "bytes": 94541,
+      "sha256": "808c2f401e00d8f3221325f254ab2414ee346ac3fc3d787b1aec13489f23d2dd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0001.png",
+      "bytes": 92486,
+      "sha256": "0224bfc24e469aeef4889675211ca9283f635fa1d39e533a3cf630c190d2b338"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0002.png",
+      "bytes": 89613,
+      "sha256": "51b24f41a8a94cc8642efe7c3ae19017cece4e5c0a5dd5a0030ea9c3525e2321"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0003.png",
+      "bytes": 90180,
+      "sha256": "331c4e5321d86ae06446a0b81b7af3d73a32cbe0e0513d7c09965fe869b4773f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0004.png",
+      "bytes": 94267,
+      "sha256": "e9a05a689bc3753457eeb8a9b08428328b1da9d86177a92858b0b9e00439c6f6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0005.png",
+      "bytes": 92469,
+      "sha256": "18c2af6270d965b34e5e36c6a6fa3500d4e2d0f6a50f7c1387c95ace3ba33278"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0006.png",
+      "bytes": 91148,
+      "sha256": "c51675d6aea10ef933c647592f00e4bb013de76501fb2d472dc5fb6e45ded785"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0007.png",
+      "bytes": 88899,
+      "sha256": "72cb53340b305ee5686d6a6661f3dcfe82550bab7d2a62055c55c84ecfafa3bc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0000.png",
+      "bytes": 93052,
+      "sha256": "89727a2c1f1c1cc311be40fb67b92972a75a1ab7b663ad628326d42eda55d6d2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0001.png",
+      "bytes": 88835,
+      "sha256": "50fe48a93b9c5149ab47771e362782687fdf5fe3313610a779bce4a5c8a70a8c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0002.png",
+      "bytes": 91643,
+      "sha256": "3c289999d1aa8f4012b6fb506d17a90118a1f54d292c63894546a4b69c853347"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0003.png",
+      "bytes": 95395,
+      "sha256": "b014b5d3457e2fd012cad55c893c13f929c527acdfd8ce7b5f67741c27dc821c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0004.png",
+      "bytes": 91504,
+      "sha256": "8671d72cbb91249561cba3a2f8ac5ba0271e47bf99f8c259183e02a55bcf3c62"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0005.png",
+      "bytes": 92222,
+      "sha256": "6473ce3f82900e7a7aa6918a3cc9f09689ae6a550c7a2eca06537ad7009fdfa7"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0006.png",
+      "bytes": 90304,
+      "sha256": "83bf7159011f63e32bfb3baddf49e935e3165a08253e3fceae24270293a1f12d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0007.png",
+      "bytes": 91862,
+      "sha256": "31bf100fa35dae57f639638ac0aaed99367232ea722a0ccdcb113998fd035572"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0000.png",
+      "bytes": 92388,
+      "sha256": "f0cd0fe59e44a0cf768310bbd35b9d1a521a736c17d2fb22e139701826c66f0d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0001.png",
+      "bytes": 90154,
+      "sha256": "a7a6c4c95b1d84454a59924e931038c61531999a62edbaa52a2efbfc362626e1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0002.png",
+      "bytes": 89033,
+      "sha256": "eb1f9e329111e6c839cd493ea493a77e6a6631d940e2a6ec5a28df591cb969cd"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0003.png",
+      "bytes": 87224,
+      "sha256": "66550696762e964933a098370177bcbc0b706f637f4133446fcaee962631b408"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0004.png",
+      "bytes": 92110,
+      "sha256": "4d29edc8968bdda7a3a455b2e706eb208002745bdb549fd9f9d38b1459a207ef"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0005.png",
+      "bytes": 90373,
+      "sha256": "35cc6b61bbd34c75d9b6670fe57fe6662768a9637913be13bd791e42ab886282"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0006.png",
+      "bytes": 89726,
+      "sha256": "d7050fcd1a6dc86f438196802059e8bcc183f920de1c230708d09b34b78bc7a2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0007.png",
+      "bytes": 86439,
+      "sha256": "86fc4269c8527d93e314d881b935c78504faf7ee66be59d31239311b2e5ae5ee"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0000.png",
+      "bytes": 88269,
+      "sha256": "d65a8300a8b6c7b0a8aa41fae62d567a68ec81c1087fd8f4801254fd9f3b550d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0001.png",
+      "bytes": 86315,
+      "sha256": "2381d4906a38ec74a8a6cf86d45834ea1fbcccd6f297567ab0ed870c9905979d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0002.png",
+      "bytes": 87143,
+      "sha256": "389a1214b9f738c52606154f2ed3a73ae44b223d3349fb54f6951b4c7649bdd1"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0003.png",
+      "bytes": 88625,
+      "sha256": "0d3e83ad980d26036946e9af17cc6a963afca92c55732765ff819592a97b6eca"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0004.png",
+      "bytes": 86821,
+      "sha256": "1e164ccac17c4818ddd59dc422ac2aa78749cfe0ee2b802d97a41dd4f5bccc06"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0005.png",
+      "bytes": 86500,
+      "sha256": "d9aef70387d85899cf02bfe29a11dd2d3087039a5e9f44dda99f255d10b16a4a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0006.png",
+      "bytes": 87265,
+      "sha256": "0d70131d558d89b4e9f66897ad112271093b9afeb24f5a74b5c169cdde0ccef9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0007.png",
+      "bytes": 87762,
+      "sha256": "59c0d619698922d3d17adaec472723053e788d5ef3e80e0c3ea395a6dcda6a14"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0000.png",
+      "bytes": 90633,
+      "sha256": "c2d145588b3f4838f1d656b38e6871587411846d667f4988613aac3951e12d65"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0001.png",
+      "bytes": 89992,
+      "sha256": "981d8470f909b0bc4393d1b43a053c1177b1cd991fb11a8d9e701bf4995ebbd4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0002.png",
+      "bytes": 89891,
+      "sha256": "58465534504276a34b01e3b21b1775db9759eb6d038863c40b59cbd940d15acb"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0003.png",
+      "bytes": 90081,
+      "sha256": "94db3ffbb64613ed1d3146a305fe18350c0c20359d09df7bc7de8bfd37c42c72"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0004.png",
+      "bytes": 91279,
+      "sha256": "0d1b459b2e5a0136cd181ba11ac1038f8e75476969fbb09ea86aaa41b30d60e0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0005.png",
+      "bytes": 91857,
+      "sha256": "3aab5eafdfc50f201d78fda63756bf5060f79e838d89db0cc44399b82fe79675"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0006.png",
+      "bytes": 90988,
+      "sha256": "ca16b2c63c08c2b153710e8704401171a7a97eb92c860daebb727b7503024e06"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0007.png",
+      "bytes": 90241,
+      "sha256": "2c20ed09c5efbd28c06a779be516660dac3487843ddae7ae98dfcdb34a485c1f"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0000.png",
+      "bytes": 90588,
+      "sha256": "90d856194680a339c64d4746e5719c8afc2998074dd0db5380818fd3097d35c6"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0001.png",
+      "bytes": 86342,
+      "sha256": "5aab51a466977dc562d528671c1ebcf073d2087313a8387e7cac6e55553286c9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0002.png",
+      "bytes": 79747,
+      "sha256": "b971aaad1c2004422803a5d8ef2a0c4e49ff176d497e7930020ee5d9839df5c2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0003.png",
+      "bytes": 85702,
+      "sha256": "141e4aae800b6aee47b21495c618df42ceca737ea3b3b7909a29c899f1bf052b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0004.png",
+      "bytes": 88266,
+      "sha256": "71c537eabb6e3a69c1546d6282db9b21d8fa826990c97ea3f2353c5b512cce02"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0005.png",
+      "bytes": 85535,
+      "sha256": "099e7c2e8a826f6931e8ecfd7557df0474397fd42f43cdc4da3fc029797ff7bc"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0006.png",
+      "bytes": 84840,
+      "sha256": "93473d0bd27924da7f8c6b995fc7263eff4cffaef73a31eee2658df6a6bb5f5b"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0007.png",
+      "bytes": 83252,
+      "sha256": "4c8a999f6bd1d0af2682c4d7474ea2e82b6c1a1acabba5713fd8a008ad4d1d52"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0000.png",
+      "bytes": 88743,
+      "sha256": "9b14d2d5e4cb2b93553d87cb64c2b22e7fca2c05fa4e32887398a9855c1f929d"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0001.png",
+      "bytes": 85646,
+      "sha256": "7b564f6ce0a2819e21fc079cb6bc0c497f7732351eadfb9fdfe04a1c50b9d440"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0002.png",
+      "bytes": 89151,
+      "sha256": "b18af12ee5e7ea1378e2d21dc605c380459ad0e900f749342469c11211be383e"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0003.png",
+      "bytes": 90339,
+      "sha256": "d0b0f16b67cb215c1581aa47b166a81a4b486759e0f942ae54dd36339b7eb461"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0004.png",
+      "bytes": 84886,
+      "sha256": "f9175b187bafe40dcb6b51251b9c45950832bd91c777cbb1b4f6a72d0ab176d5"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0005.png",
+      "bytes": 83131,
+      "sha256": "1d271d75faa8fae5565f47c937956aca0696ac6d847e2a4bccf18ab722694af4"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0006.png",
+      "bytes": 89389,
+      "sha256": "cbb2cdfa6be7e324bafe356a2c331d62268917a22bb10b62c7937149dd484041"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0007.png",
+      "bytes": 87002,
+      "sha256": "5c3cfcb7c4d888ef35d832a2d91c1eb2ddd9ede925ff486b498395ef47bfd85c"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0000.png",
+      "bytes": 91373,
+      "sha256": "9c69bb6269943ba34cc0b76f24e28a07a7417ba89ff68fc8f54bcc13f6a7021a"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0001.png",
+      "bytes": 88621,
+      "sha256": "702a807f31f657a7d899d521c70c6df4cb9002acfc0d92a6ce192c74a5fcd3f9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0002.png",
+      "bytes": 87404,
+      "sha256": "f7ba4e321b27965a3954b0a79a5e7bf5509ab518abdf5119c507c6904d2fc837"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0003.png",
+      "bytes": 89249,
+      "sha256": "c6bde3093668dea1c9ae4fcb2b2568e90586bcd678e50a66f6290157644a21d0"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0004.png",
+      "bytes": 90828,
+      "sha256": "4f075690b3aaaea11a878a52801af8f4681fc226a7b77ff4a8fac737356ba0b2"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0005.png",
+      "bytes": 88106,
+      "sha256": "260d98ac47e65e852cd1d5afce417462cc058fb5f1b9a36bafe3d5aa8d2bb357"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0006.png",
+      "bytes": 85831,
+      "sha256": "f30fd4bd5734fc789578a5a69e655cdd798cb85d013ac05ea90c0054d7514e79"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0007.png",
+      "bytes": 87545,
+      "sha256": "deb7b3998e4c801dc2fdfcd599187143b06ecc0ebafa1a46a47f0e7068e2e915"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/verify-fx.mjs",
+      "bytes": 787,
+      "sha256": "7a27baa1802631da2f875f3a9f10ca7cdb6f05d840281b84dab6c2c006a227a9"
+    },
+    {
+      "file": "out/experiments/red-mercenary-20261113/verify.mjs",
+      "bytes": 1310,
+      "sha256": "a47c19e030a3859df17e2a5a6e05149899faf9f037b53eb250f5be63b736039d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/build-preview.mjs",
+      "bytes": 1069,
+      "sha256": "cdb9aca0a9348134918a4160b90fc30950fabb1d3769358d6ce26bafb3353ed2"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/capture.cjs",
+      "bytes": 2402,
+      "sha256": "c46a9daf5e7cf8e8859013bb5c8ad68ba0dd9d0d31ef0158b4143da018da750e"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/demo.mjs",
+      "bytes": 5528,
+      "sha256": "2579e53d063b2facfd43c459255cd707e2479a7cd7d06914cf29fee01a0f22bf"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/export-gif.lua",
+      "bytes": 743,
+      "sha256": "e1e12082abdb675178c62c126817b4c720327b79f24aa03dbe9e47185e0de906"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/feel.json",
+      "bytes": 2829,
+      "sha256": "d8d6ea66a5cecf3844737b18850f5f7e71eeaa11a5f6d0625f2a6020cc996793"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/finalize-code.mjs",
+      "bytes": 602,
+      "sha256": "365596855c10054c77c509d8bf1bbb1da89d7fa3f32f6a0236e1dd9082597857"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/finish-playback.mjs",
+      "bytes": 226,
+      "sha256": "9fec9e90fff0282683ce2f0c512bdc2ed49103401aa1c622d497acf14e69f0f8"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0000.png",
+      "bytes": 375829,
+      "sha256": "624e4e2e9dd7adebaccd1a9dbb98c04c467d9c0679763b95eaeec53d5222fff3"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0001.png",
+      "bytes": 374661,
+      "sha256": "9b710dc3f35ca257527a839e161d76460f041f0bdfe4bd64fa279f59eacc03dd"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0002.png",
+      "bytes": 369373,
+      "sha256": "3f564704a568c6cb2c1fb9b8cd976e29a28e9420b98cc45c50a4286b3437ad9d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0003.png",
+      "bytes": 370651,
+      "sha256": "3102e0c8f909f11b8a7217336e9bc5e79a175a311a913ee4a9050bb848a41ad6"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0004.png",
+      "bytes": 378415,
+      "sha256": "b9a0172b46ff5bf61503bddb48aa43527b5a9401509df6acf988acd806ad4947"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0005.png",
+      "bytes": 385970,
+      "sha256": "91f6235064ed07c34971cf71ad644deb7d3c28ca512af55d6a31d3a27f472b15"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0006.png",
+      "bytes": 375131,
+      "sha256": "ba9b17de68896c58be10a3279d819ea9b6eb445b5f1b3ab7c33256e087a5046c"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0007.png",
+      "bytes": 381714,
+      "sha256": "ca951159e33a98e704d07d5b38028e2064bc159e1c71abd92d439bea0ab2c95d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0000.png",
+      "bytes": 375829,
+      "sha256": "624e4e2e9dd7adebaccd1a9dbb98c04c467d9c0679763b95eaeec53d5222fff3"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0001.png",
+      "bytes": 374661,
+      "sha256": "9b710dc3f35ca257527a839e161d76460f041f0bdfe4bd64fa279f59eacc03dd"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0002.png",
+      "bytes": 369373,
+      "sha256": "3f564704a568c6cb2c1fb9b8cd976e29a28e9420b98cc45c50a4286b3437ad9d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0003.png",
+      "bytes": 383547,
+      "sha256": "884ce4baf1ed6e89ff65e350388eb86b31dbff5994293a5093f9cdc286962730"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0004.png",
+      "bytes": 378415,
+      "sha256": "b9a0172b46ff5bf61503bddb48aa43527b5a9401509df6acf988acd806ad4947"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0005.png",
+      "bytes": 385970,
+      "sha256": "91f6235064ed07c34971cf71ad644deb7d3c28ca512af55d6a31d3a27f472b15"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0006.png",
+      "bytes": 375131,
+      "sha256": "ba9b17de68896c58be10a3279d819ea9b6eb445b5f1b3ab7c33256e087a5046c"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0007.png",
+      "bytes": 381714,
+      "sha256": "ca951159e33a98e704d07d5b38028e2064bc159e1c71abd92d439bea0ab2c95d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/impact-v8.gif",
+      "bytes": 381287,
+      "sha256": "5e2084d2bf3f09f22bfc3d34a4bf30fec6f9d21e885bf75ee190dc8479c02aab"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/index.html",
+      "bytes": 5790,
+      "sha256": "a18cb4d9acbb48fde9f9068785a8c26aa562545e2d90185173610ac2578930dd"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/inspect.mjs",
+      "bytes": 546,
+      "sha256": "32589eb2eb3fad0e8b5c2655d98973cdc65c99308434dc956996318617102bd5"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/manifest-v8.json",
+      "bytes": 2185,
+      "sha256": "e75b2f1abdffca92ef6dc499d792a406c15ffd32785a9ceaefef9a20897de7d2"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/manifest.json",
+      "bytes": 4710,
+      "sha256": "5ba6409a04a06a558ab8c2ba8b3673d7bebeeb9a2f7e3ec48943f909d6864708"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/model.mjs",
+      "bytes": 2228,
+      "sha256": "fb688a9078139fd8a4497f4625b2b3d1bab9e5e34ee432edc50bcb17d17b3a54"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/model.test.mjs",
+      "bytes": 1848,
+      "sha256": "20584c927caa5c2b959a93dd3dadb95c33ac0c8071aff73e8260ac8db058e296"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/prepare.mjs",
+      "bytes": 2758,
+      "sha256": "f00a160d888b454b854b568210ea69d8f44e07b3141bf459c46f100f7a137a08"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/preview-v7.html",
+      "bytes": 7917868,
+      "sha256": "02d3f714866112dedbec1251abe354abc0592de4e6190b180f5f845d62776f8c"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/preview.html",
+      "bytes": 7900692,
+      "sha256": "25c0a23660d01244b3dcf77eb65e8dc60592d8a62c434157aac97905a9bd6aac"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/prompt-v7.txt",
+      "bytes": 3937,
+      "sha256": "80e9285ff52241c9bfa0458a84ac96780e778f4e7c7afec3dd729288a842194b"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/prompt-v8.txt",
+      "bytes": 1274,
+      "sha256": "b48243fb0302715ecb747d87b852078189cc6cd366b12ae94fd85357dddf8414"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/browser-v8.json",
+      "bytes": 5941,
+      "sha256": "934c1fb61151dc5510733307f36a13f20d0f168e031fd9e9b161fc4f4b7d9db0"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/browser.json",
+      "bytes": 6161,
+      "sha256": "ef407a0734af7c2a52c9f985196cf2225ef6b7b9720e0aa3bb070ec09d5c3752"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/feel-audit.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/feel-audit.stdout.log",
+      "bytes": 2098,
+      "sha256": "5bcd91295935b68206bb60511b427d5928d6bf7141ad2d31bb8b57d8adbbaf76"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/feel/feel-audit.json",
+      "bytes": 521,
+      "sha256": "f8b17851568a4c34f5fdc6de8ef6986d7b22239f50d505ef017d49671cdee8bc"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/feel/feel-audit.md",
+      "bytes": 2014,
+      "sha256": "1c7f9a538615d24becc9ff3e45e5e37ff85f4532fa96b70aead6faf1c3ab7282"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-light.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-light.stdout.log",
+      "bytes": 2959,
+      "sha256": "a35c380a48a1769228eefc1f28fa173a9dc459e1e0cf99318bcd19278f17968c"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-light/flash-report.md",
+      "bytes": 2871,
+      "sha256": "1a63d0ed1032eadbe661497082736ee694a55fc8a67b78169da21ea01a95d492"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-light/flash.json",
+      "bytes": 2992,
+      "sha256": "5770a05841d3927544a19afb124cd5b8c8605380a4978cf0ed4e339766546b72"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-normal.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-normal.stdout.log",
+      "bytes": 2961,
+      "sha256": "6e03f6ce91f50a768d25c96f383fed555f245e73a7b5674d955dfb0a525b95fd"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-normal/flash-report.md",
+      "bytes": 2872,
+      "sha256": "ba5caef8f6fd9012e227fa523bf544168c296ce5ace340c6597180ff18ed62f6"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-normal/flash.json",
+      "bytes": 3010,
+      "sha256": "d78e485cf9deed1b07d12083d9a4cd1a1f19bb198d36886b41c6e15b70ee0ecb"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-reduced.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-reduced.stdout.log",
+      "bytes": 3080,
+      "sha256": "d97276323692cfbfd49952fb588eadcaaa83d507ae1c960e5332aa096a9fcd29"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-reduced/flash-report.md",
+      "bytes": 2990,
+      "sha256": "07fd9d7cdfaee5d2e4a6d1000c54f2272e50c256eac18c14f99970186acf46bc"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/flash-reduced/flash.json",
+      "bytes": 3505,
+      "sha256": "63201680df2900e823e52418d3d484b8fc4c6b4a538e51586b404a0175450f89"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/model-tests.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/model-tests.stdout.log",
+      "bytes": 592,
+      "sha256": "0085df637d9e1016bac217a3d78b1d7c4107df9795fd5bad1236c9229a4246ac"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/motion-qa.json",
+      "bytes": 21263,
+      "sha256": "4e90eb5dc1c80a2f8eb3751e23d21364fc7b9f7e4ab55ceb05737e9ebcb73f4d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/motion-qa.md",
+      "bytes": 1127,
+      "sha256": "98daee82eb2a337e7aada6da7f0f14b11f6120f7ec8af4d14c1ce60ec62e2b2f"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/motion-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/motion-qa.stdout.log",
+      "bytes": 1128,
+      "sha256": "0eb11af3d5918bcca9ccfb4cda2489abd2f9e0717ca02788872492d61b005a37"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/normalize-probe.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/normalize-probe.stdout.log",
+      "bytes": 563,
+      "sha256": "43b1d002daa455611eb44e11590ff7db981ad406485e14d6df5ed0566862f1cb"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/sprite-qa.json",
+      "bytes": 629352,
+      "sha256": "b86322bcc35170ae18df80a51c912d9beb65c55872b22c1b838561656c0a9e48"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/sprite-qa.md",
+      "bytes": 5097,
+      "sha256": "a3f7d5cee704f5042dd52a92fa4a9e327e243a44c0ca3b68a169aa1396b70a5b"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/sprite-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/sprite-qa.stdout.log",
+      "bytes": 5174,
+      "sha256": "ffd4c89f3db20712abf6c4ec039b171072d9f58581870b56ba30aae496dcf865"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/motion-qa.json",
+      "bytes": 21240,
+      "sha256": "7bf0481a15c4a3cbd9476c1dbdbfd6a0e42f1a363274a61595ee35969bb8d002"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/motion-qa.md",
+      "bytes": 1126,
+      "sha256": "9c353a3a4ba53f8f00ca5e268f6cdd3850244c70ca5a370d3927c8b0491ef9ad"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/motion-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/motion-qa.stdout.log",
+      "bytes": 1127,
+      "sha256": "7c0d3e0ff683aac3f4db990d1afd35a3d8dfa684d151297f24561809a639af85"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/sprite-qa.json",
+      "bytes": 629368,
+      "sha256": "1e0b03594aae138c1a5225d7480219aaa34be2c0cb3721527ca73d6ab27348ed"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/sprite-qa.md",
+      "bytes": 5118,
+      "sha256": "b4cc6ade238afcfbf070f405e4524733733cb6993d429e89c3f264d02cd20b9d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/sprite-qa.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/v8/sprite-qa.stdout.log",
+      "bytes": 5198,
+      "sha256": "3aef5c392a78c77468a167a4f98f3d218b5302ec9181308874084e8b523b1be3"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/verification-v7.json",
+      "bytes": 9427,
+      "sha256": "189fb8036b824739ce97c89b7a069c387628f10d0e657ee737e150202a4115e3"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/qa/verification.json",
+      "bytes": 9196,
+      "sha256": "be49c4dd7250b005705ebfb8e3713f5231f4a66d73df829a4da09dab95e732cc"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/raw/slash-v7.png",
+      "bytes": 2057711,
+      "sha256": "a70b729220c1758feca6b1f101033d5c47e7741ae34e8b3114785a68fd25fd1a"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/raw/slash-v8-wrist.png",
+      "bytes": 2016785,
+      "sha256": "8307537c0aff29ee79373a7ef61bd211d4c32a41c171ebc6007c65c55dd74764"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/repair-wrist.mjs",
+      "bytes": 3392,
+      "sha256": "6f79be87131824d8e803926d6da2c3454c6aa2eba7506ca1a08bc0c826e331b1"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/REPORT.md",
+      "bytes": 2188,
+      "sha256": "c3c52e13c299d8373ab3da74bbee024196d8ff2dc3d3597825b6e332f8a4a937"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/review-150ms.png",
+      "bytes": 188684,
+      "sha256": "fafcb43c8b8d82393dd732a8a059e666e2071481b654cde538a02a27ebe9c75b"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/review-mobile.png",
+      "bytes": 121349,
+      "sha256": "05e57070d150418b7de6a19b17caba1db3532ed53f5b87ac89ab67cc0443683d"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/serve.mjs",
+      "bytes": 866,
+      "sha256": "c32244d96cdf70ae030b1d9376235682906e8de0e32dc0573bc18bbf166e9d68"
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/verify.mjs",
+      "bytes": 1456,
+      "sha256": "a93348afc167a43dba4b2ef15352836099cecb37851c8ba298c49c308201a600"
+    },
+    {
+      "file": "out/flow-20261113-baseline/art-gate-report.md",
+      "bytes": 2961,
+      "sha256": "1000f9f8381fa33710043c2cd650f93ce66aa4838e2172c974a2e659464dc4a9"
+    }
+  ]
+}

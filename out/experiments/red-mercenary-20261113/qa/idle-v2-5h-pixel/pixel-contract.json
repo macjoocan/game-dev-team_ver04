@@ -1,0 +1,93 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2656,
+      "lonely": 0.2940512048192771,
+      "flat": 0.040286144578313254,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2656,
+      "lonely": 0.2940512048192771,
+      "flat": 0.040286144578313254,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2673,
+      "lonely": 0.31462775907220353,
+      "flat": 0.040029928918817806,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2671,
+      "lonely": 0.2953949831523774,
+      "flat": 0.036690378135529764,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0004.png",
+      "name": "frame_0004.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2671,
+      "lonely": 0.2953949831523774,
+      "flat": 0.036690378135529764,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0005.png",
+      "name": "frame_0005.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2673,
+      "lonely": 0.31462775907220353,
+      "flat": 0.040029928918817806,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0006.png",
+      "name": "frame_0006.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2656,
+      "lonely": 0.2940512048192771,
+      "flat": 0.040286144578313254,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-mercenary-20261113\\pixel-idle-v2\\5h\\frame_0007.png",
+      "name": "frame_0007.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 2656,
+      "lonely": 0.2940512048192771,
+      "flat": 0.040286144578313254,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 0
+}

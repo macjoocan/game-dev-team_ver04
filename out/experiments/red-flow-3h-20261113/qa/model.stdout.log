@@ -1,0 +1,54 @@
+[
+  {
+    "name": "skill input preserves current world position and elapsed time",
+    "pass": true
+  },
+  {
+    "name": "running attack entry has a plant bridge and no teleport",
+    "pass": true
+  },
+  {
+    "name": "three rapid attacks survive entry bridge and hit three times",
+    "pass": true
+  },
+  {
+    "name": "upward slash returns through four guard poses",
+    "pass": true
+  },
+  {
+    "name": "evade buffer waits for the attack active window",
+    "pass": true
+  },
+  {
+    "name": "expired buffered commands do not fire later",
+    "pass": true
+  },
+  {
+    "name": "held run exits recovery without idle reset",
+    "pass": true
+  },
+  {
+    "name": "walk to run preserves gait phase",
+    "pass": true
+  },
+  {
+    "name": "idle emits no dust and footsteps are anchored on contact frames",
+    "pass": true
+  },
+  {
+    "name": "dust remains at its world spawn position after movement",
+    "pass": true
+  },
+  {
+    "name": "backstep emits exactly one landing puff and no airborne steps",
+    "pass": true
+  },
+  {
+    "name": "facing away cannot hit target behind character",
+    "pass": true
+  },
+  {
+    "name": "all scripted transitions remain within continuous world bounds",
+    "pass": true
+  }
+]

@@ -1,0 +1,303 @@
+{
+  "version": "v8",
+  "cases": {
+    "normal": [
+      {
+        "time": 150,
+        "total": 460,
+        "frame": 2,
+        "root": 0,
+        "hit": false,
+        "hitCount": 0,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": -72,
+        "geometry": {
+          "sword": [
+            [
+              254.5,
+              233.25
+            ],
+            [
+              355,
+              259.5
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      },
+      {
+        "time": 130,
+        "total": 380,
+        "frame": 3,
+        "root": 10.29737609329446,
+        "hit": true,
+        "hitCount": 1,
+        "hitStopMs": 66.66666666666667,
+        "stopping": true,
+        "age": 20,
+        "geometry": {
+          "sword": [
+            [
+              289.8473760932945,
+              248.28
+            ],
+            [
+              371.49737609329446,
+              299.4
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0.2257624032771962,
+        "shake": -0.5393592699430525,
+        "trail": true,
+        "spark": true,
+        "complete": false
+      }
+    ],
+    "whiff": [
+      {
+        "time": 180,
+        "total": 460,
+        "frame": 2,
+        "root": 0,
+        "hit": false,
+        "hitCount": 0,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": -42,
+        "geometry": {
+          "sword": [
+            [
+              254.5,
+              233.25
+            ],
+            [
+              355,
+              259.5
+            ]
+          ],
+          "rect": {
+            "x0": 506,
+            "x1": 554,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": false
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      },
+      {
+        "time": 180,
+        "total": 380,
+        "frame": 5,
+        "root": 20,
+        "hit": false,
+        "hitCount": 0,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": 50,
+        "geometry": {
+          "sword": [
+            [
+              289.8473760932945,
+              248.28
+            ],
+            [
+              371.49737609329446,
+              299.4
+            ]
+          ],
+          "rect": {
+            "x0": 506,
+            "x1": 554,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": false
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": true,
+        "spark": false,
+        "complete": false
+      }
+    ],
+    "noFeedback": [
+      {
+        "time": 180,
+        "total": 460,
+        "frame": 2,
+        "root": 0,
+        "hit": false,
+        "hitCount": 0,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": -42,
+        "geometry": {
+          "sword": [
+            [
+              254.5,
+              233.25
+            ],
+            [
+              355,
+              259.5
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      },
+      {
+        "time": 180,
+        "total": 380,
+        "frame": 5,
+        "root": 20,
+        "hit": true,
+        "hitCount": 1,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": 50,
+        "geometry": {
+          "sword": [
+            [
+              289.8473760932945,
+              248.28
+            ],
+            [
+              371.49737609329446,
+              299.4
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      }
+    ],
+    "reduced": [
+      {
+        "time": 150,
+        "total": 460,
+        "frame": 2,
+        "root": 0,
+        "hit": false,
+        "hitCount": 0,
+        "hitStopMs": 0,
+        "stopping": false,
+        "age": -72,
+        "geometry": {
+          "sword": [
+            [
+              254.5,
+              233.25
+            ],
+            [
+              355,
+              259.5
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      },
+      {
+        "time": 130,
+        "total": 380,
+        "frame": 3,
+        "root": 10.29737609329446,
+        "hit": true,
+        "hitCount": 1,
+        "hitStopMs": 66.66666666666667,
+        "stopping": true,
+        "age": 20,
+        "geometry": {
+          "sword": [
+            [
+              289.8473760932945,
+              248.28
+            ],
+            [
+              371.49737609329446,
+              299.4
+            ]
+          ],
+          "rect": {
+            "x0": 351,
+            "x1": 399,
+            "y0": 220,
+            "y1": 325
+          },
+          "hit": true
+        },
+        "recoil": 0.2257624032771962,
+        "shake": 0,
+        "trail": false,
+        "spark": false,
+        "complete": false
+      }
+    ]
+  },
+  "mobileOverflow": false,
+  "once": {
+    "time": 1200,
+    "playing": false
+  },
+  "errors": [],
+  "captureDimensions": [
+    601,
+    401
+  ]
+}

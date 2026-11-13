@@ -1,0 +1,47 @@
+[
+  {
+    "file": "out\\experiments\\red-flow-3h-20261113\\gifs\\dust.gif",
+    "frames": 50,
+    "durationMs": 2200,
+    "size": [
+      720,
+      345
+    ]
+  },
+  {
+    "file": "out\\experiments\\red-flow-3h-20261113\\gifs\\chain.gif",
+    "frames": 59,
+    "durationMs": 2600,
+    "size": [
+      720,
+      345
+    ]
+  },
+  {
+    "file": "out\\experiments\\red-flow-3h-20261113\\gifs\\guard.gif",
+    "frames": 17,
+    "durationMs": 1400,
+    "size": [
+      720,
+      345
+    ]
+  },
+  {
+    "file": "out\\experiments\\red-flow-3h-20261113\\gifs\\escape.gif",
+    "frames": 50,
+    "durationMs": 2000,
+    "size": [
+      720,
+      345
+    ]
+  },
+  {
+    "file": "out\\experiments\\red-flow-3h-20261113\\gifs\\dust-off.gif",
+    "frames": 42,
+    "durationMs": 2200,
+    "size": [
+      720,
+      345
+    ]
+  }
+]

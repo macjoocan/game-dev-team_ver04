@@ -1,0 +1,124 @@
+{
+  "runs": [
+    {
+      "id": "combo",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "combo1",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo1",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo1"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "combo2",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo2",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo2"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "combo3",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo3",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo3"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "dash",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-dash",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-dash"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "spin",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-spin",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-spin"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "combo-light",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo-light",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo-light"
+      ],
+      "exitCode": 0
+    },
+    {
+      "id": "combo-reduced",
+      "args": [
+        "skills/polish/scripts/flash-check.mjs",
+        "out/experiments/red-combat-3h-20261113/qa/capture-combo-reduced",
+        "--fps",
+        "50",
+        "--loop",
+        "--blend",
+        "normal",
+        "--out",
+        "out/experiments/red-combat-3h-20261113/qa/flash-combo-reduced"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

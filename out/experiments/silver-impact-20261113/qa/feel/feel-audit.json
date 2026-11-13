@@ -1,0 +1,30 @@
+{
+  "verdict": "충족",
+  "thresholds": {
+    "inputResponseMaxMs": 50,
+    "hitStopFrameRange": [
+      2,
+      12
+    ],
+    "shakeMaxDurationMs": 400,
+    "shakeMaxAmplitudePx": 12,
+    "feedbackBudgetRatio": 0.6
+  },
+  "fails": [],
+  "warns": [],
+  "events": [
+    {
+      "name": "sword_contact",
+      "weight": 2,
+      "hitStop": 4,
+      "hitStopMs": "67",
+      "shakePx": 2,
+      "shakeMs": 80,
+      "flashMs": "",
+      "resp": "",
+      "easing": "",
+      "durMs": "",
+      "totalMs": "147"
+    }
+  ]
+}

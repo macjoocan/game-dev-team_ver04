@@ -354,3 +354,11 @@ Claude Code 세션은 하네스가 시드·판수·커밋을 출력에 박아준
   CI(`.github/workflows/`)를 고쳤으면 `node scripts/ci-local.mjs`를 돌려라.
   후자는 워크플로를 **`bash -e`로** 실행한다 — 맨 `bash`로 재현하면 통과하는데
   CI에서는 죽는 부류가 있다(`; code=$?`, REVIEW.md B-13).
+
+## Dooray 위키 문서 연결
+
+로컬 문서를 정본으로 관리한다. 위키를 갱신하기 전에 기존 본문을 읽는다.
+
+| 로컬 파일 | 부모 페이지 | 공유 페이지 |
+|---|---|---|
+| `docs/art/2d-pipeline-dooray-2026-11-12.md` | [0. AI 아트 연구](https://nhncorp.dooray.com/wiki/2668173571253827735/4417785114667292244) | [GPT 기반 2D 제작과 은발 액션](https://nhncorp.dooray.com/wiki/2668173571253827735/4464164626167386440) |

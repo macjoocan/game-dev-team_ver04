@@ -1,0 +1,364 @@
+{
+  "map": [
+    0,
+    0,
+    4,
+    5,
+    5,
+    4,
+    0,
+    0
+  ],
+  "durations": [
+    200,
+    160,
+    240,
+    240,
+    240,
+    240,
+    160,
+    200
+  ],
+  "totalMs": 1680,
+  "comparison": [
+    {
+      "heads": 2,
+      "before": [
+        {
+          "top": 12,
+          "bottom": 55
+        },
+        {
+          "top": 13,
+          "bottom": 55
+        },
+        {
+          "top": 15,
+          "bottom": 55
+        },
+        {
+          "top": 13,
+          "bottom": 55
+        },
+        {
+          "top": 12,
+          "bottom": 55
+        },
+        {
+          "top": 13,
+          "bottom": 55
+        },
+        {
+          "top": 12,
+          "bottom": 55
+        },
+        {
+          "top": 12,
+          "bottom": 55
+        }
+      ],
+      "after": [
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 0,
+          "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+        },
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 0,
+          "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+        },
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 4,
+          "sha256": "a58e8359d9fe6989121bcd90e98f332cf4720763e49b7ff41fc6ed876a715dae"
+        },
+        {
+          "top": 13,
+          "bottom": 55,
+          "source": 5,
+          "sha256": "c9fb8dc51d1bb9c7668b62ac33194715d4d07bd687dbd91d07a03299031abc5f"
+        },
+        {
+          "top": 13,
+          "bottom": 55,
+          "source": 5,
+          "sha256": "c9fb8dc51d1bb9c7668b62ac33194715d4d07bd687dbd91d07a03299031abc5f"
+        },
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 4,
+          "sha256": "a58e8359d9fe6989121bcd90e98f332cf4720763e49b7ff41fc6ed876a715dae"
+        },
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 0,
+          "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+        },
+        {
+          "top": 12,
+          "bottom": 55,
+          "source": 0,
+          "sha256": "6d97681113056099309f5f09f1cc3522ed38b7b7481c8138dbccd53d31e5c831"
+        }
+      ],
+      "firstLastIdentical": true
+    },
+    {
+      "heads": 3,
+      "before": [
+        {
+          "top": 19,
+          "bottom": 83
+        },
+        {
+          "top": 21,
+          "bottom": 83
+        },
+        {
+          "top": 22,
+          "bottom": 83
+        },
+        {
+          "top": 22,
+          "bottom": 83
+        },
+        {
+          "top": 19,
+          "bottom": 83
+        },
+        {
+          "top": 19,
+          "bottom": 83
+        },
+        {
+          "top": 18,
+          "bottom": 83
+        },
+        {
+          "top": 19,
+          "bottom": 83
+        }
+      ],
+      "after": [
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 0,
+          "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 0,
+          "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 4,
+          "sha256": "5ed74c781d72bc2b58f0ae71f5bc3fe11a8ecd3e1915efa9d60aa16573de034e"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 5,
+          "sha256": "effcd95512f24cc9ea2795026aa924017016c46df0263f48fb1c87519571541d"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 5,
+          "sha256": "effcd95512f24cc9ea2795026aa924017016c46df0263f48fb1c87519571541d"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 4,
+          "sha256": "5ed74c781d72bc2b58f0ae71f5bc3fe11a8ecd3e1915efa9d60aa16573de034e"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 0,
+          "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+        },
+        {
+          "top": 19,
+          "bottom": 83,
+          "source": 0,
+          "sha256": "e7bfd50a134c3b0b09b61927f5f13db336f8c572761e869276f9951f9a40ac71"
+        }
+      ],
+      "firstLastIdentical": true
+    },
+    {
+      "heads": 5,
+      "before": [
+        {
+          "top": 21,
+          "bottom": 114
+        },
+        {
+          "top": 25,
+          "bottom": 114
+        },
+        {
+          "top": 28,
+          "bottom": 114
+        },
+        {
+          "top": 24,
+          "bottom": 114
+        },
+        {
+          "top": 21,
+          "bottom": 114
+        },
+        {
+          "top": 21,
+          "bottom": 114
+        },
+        {
+          "top": 22,
+          "bottom": 114
+        },
+        {
+          "top": 22,
+          "bottom": 114
+        }
+      ],
+      "after": [
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 0,
+          "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 0,
+          "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 4,
+          "sha256": "0a7a0b14ed7c1f82cd044560a2344624b6e301386fe90204c7a7558d7ac14ae3"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 5,
+          "sha256": "705f0727329da2000ed51514d9050bcf635085b949c030cb88ccc1cdb417beac"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 5,
+          "sha256": "705f0727329da2000ed51514d9050bcf635085b949c030cb88ccc1cdb417beac"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 4,
+          "sha256": "0a7a0b14ed7c1f82cd044560a2344624b6e301386fe90204c7a7558d7ac14ae3"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 0,
+          "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+        },
+        {
+          "top": 21,
+          "bottom": 114,
+          "source": 0,
+          "sha256": "1a43bc39b6632850b3933b1443e5f9e4aa52a63862818376244bf7f212048e03"
+        }
+      ],
+      "firstLastIdentical": true
+    }
+  ],
+  "runs": [
+    {
+      "heads": 2,
+      "kind": "pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "heads": 2,
+      "kind": "sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/2h",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-2h-sprite"
+      ],
+      "exitCode": 0
+    },
+    {
+      "heads": 3,
+      "kind": "pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-pixel"
+      ],
+      "exitCode": 1
+    },
+    {
+      "heads": 3,
+      "kind": "sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/3h",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-3h-sprite"
+      ],
+      "exitCode": 0
+    },
+    {
+      "heads": 5,
+      "kind": "pixel",
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-pixel"
+      ],
+      "exitCode": 0
+    },
+    {
+      "heads": 5,
+      "kind": "sprite",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel-idle-v2/5h",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/idle-v2-5h-sprite"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "otherMotionsUnchanged": true
+}

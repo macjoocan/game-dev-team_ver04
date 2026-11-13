@@ -15,8 +15,8 @@
       "harness": "claude-code",
       "commit": "407aca3",
       "createdAt": "2026-09-17T11:52:27.238Z",
-      "contentHash": "bfc67b91737f8fd1926426a0cc8bdf37d141c63ca1730bcee840cf5ac1e65bdf",
-      "invalidatedAt": "2026-11-06T16:17:43.705Z"
+      "contentHash": "5e2ec3fd68332670e3627afff61241e0a426d977d0861f027f18569ef2ee5fea",
+      "invalidatedAt": "2026-11-13T09:05:51.312Z"
     },
     {
       "key": "fx.hex-set@1",
@@ -32,8 +32,8 @@
       "harness": "claude-code",
       "commit": "407aca3",
       "createdAt": "2026-09-17T11:52:28.183Z",
-      "contentHash": "519f5839eb4c4413b328d63b92b05f45b586efa0bdabc1bcb5371c3edd1582b8",
-      "invalidatedAt": "2026-11-06T16:17:43.754Z"
+      "contentHash": "fbc6acee1c090be8526a091b635810ea50d51a3269c89665fb0e8984d92b25f2",
+      "invalidatedAt": "2026-11-13T09:05:51.350Z"
     },
     {
       "key": "art.hex-palette-unified@1",
@@ -49,8 +49,8 @@
       "harness": "claude-code",
       "commit": "9e1aedd",
       "createdAt": "2026-09-18T09:47:04.150Z",
-      "contentHash": "0e13474846bab61c1606fd3a174b71c538ab5684db87bddec8c8b9bbea4fb0e1",
-      "invalidatedAt": "2026-11-06T16:17:43.767Z"
+      "contentHash": "5ce0d54b34b157ac971fc6d3d150389123fc7c3493db888c9c83866a666ba800",
+      "invalidatedAt": "2026-11-13T09:05:51.359Z"
     },
     {
       "key": "art.palette-candidates@1",
@@ -66,8 +66,8 @@
       "harness": "claude-code",
       "commit": "ddad053",
       "createdAt": "2026-10-02T02:01:15.828Z",
-      "contentHash": "82f7c26c4727dc96cc4b730e6e5ec3771f592a05013ecc8df3ca4b7648e4921b",
-      "invalidatedAt": "2026-11-06T16:17:43.777Z"
+      "contentHash": "a082618d4cf4e1b39f887a8c49e561e409322582f57d23555f64f85ac11a8c6b",
+      "invalidatedAt": "2026-11-13T09:05:51.365Z"
     },
     {
       "key": "art.cast-v2@1",
@@ -83,8 +83,8 @@
       "harness": "claude-code",
       "commit": "5c10c3b",
       "createdAt": "2026-10-02T02:41:36.148Z",
-      "contentHash": "98197b2ba2078f8c9473712cc4f8a1ebe1a5b23bb0c1bc78b7227c27188bbc63",
-      "invalidatedAt": "2026-11-06T16:17:43.891Z"
+      "contentHash": "4070e29fb669890b2a9920cf815a88e84595d3ebe21ed428b899286b95263c1e",
+      "invalidatedAt": "2026-11-13T09:05:51.432Z"
     },
     {
       "key": "art.cast-v2-walk@1",
@@ -100,8 +100,8 @@
       "harness": "claude-code",
       "commit": "868f2b5",
       "createdAt": "2026-10-02T10:59:43.512Z",
-      "contentHash": "5c248b095b0959a2e8adac118b2193173e28b9d333e3e177c1798bcdce73fbdb",
-      "invalidatedAt": "2026-11-06T16:17:43.896Z"
+      "contentHash": "84434a78691c62c2dfb54bcd7e9b727b4b96302bcbd357f43e1239c949a4e365",
+      "invalidatedAt": "2026-11-13T09:05:51.441Z"
     },
     {
       "key": "chr.hex-hero.walk@1",
@@ -149,8 +149,8 @@
       "harness": "codex",
       "commit": "167ad56",
       "createdAt": "2026-09-27T14:43:19.824Z",
-      "contentHash": "4bc6b2ed9421e5c50849187a469de16a956e0f56e10242b200345df8c4411730",
-      "invalidatedAt": "2026-11-06T16:17:43.910Z"
+      "contentHash": "592fce0b1b3d4a3887e906b226264861df9e7eb0a2f7e6b6530fb46a47ea3b5f",
+      "invalidatedAt": "2026-11-13T09:05:51.444Z"
     },
     {
       "key": "art.model-pilot-8gb@1",
@@ -166,8 +166,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-09-27T15:28:24.163Z",
-      "contentHash": "ec9d42538d06884ee52ff0ced2b8ed53486d59db975e63983bb0ff0efa5a2fc4",
-      "invalidatedAt": "2026-11-06T16:17:43.913Z"
+      "contentHash": "72e91f43c3c68f8dfdbfc3389e7dbe449d66e325d8b32099f1ed420298df339b",
+      "invalidatedAt": "2026-11-13T09:05:51.447Z"
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@1",
@@ -183,7 +183,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T12:36:01.577Z",
-      "contentHash": "910dfd155ea16cb466448601eee162f91fc665f158f01f8614e478eb30e69879"
+      "contentHash": "910dfd155ea16cb466448601eee162f91fc665f158f01f8614e478eb30e69879",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@2",
@@ -199,7 +200,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T12:47:24.769Z",
-      "contentHash": "6c217dcf2714730a6e41655be8da41d768fce03c872afbe3c2a2f490f622852a"
+      "contentHash": "6c217dcf2714730a6e41655be8da41d768fce03c872afbe3c2a2f490f622852a",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@3",
@@ -215,7 +217,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T13:01:04.589Z",
-      "contentHash": "e032f3fec13fc4a57729789089ef2de73c1dc5da0f92976d4ce4366efddb093a"
+      "contentHash": "e032f3fec13fc4a57729789089ef2de73c1dc5da0f92976d4ce4366efddb093a",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@4",
@@ -231,7 +234,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T13:13:07.573Z",
-      "contentHash": "51c0a3a07050532de539e768338647ae041d1b3b15ec9b8ec81a7f0aea1def74"
+      "contentHash": "51c0a3a07050532de539e768338647ae041d1b3b15ec9b8ec81a7f0aea1def74",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@5",
@@ -247,7 +251,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T13:56:41.080Z",
-      "contentHash": "9a628ab818f6dc2b09333f9ab836e8d885f16f6189045a52497865ed4a5085ed"
+      "contentHash": "9a628ab818f6dc2b09333f9ab836e8d885f16f6189045a52497865ed4a5085ed",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@6",
@@ -263,7 +268,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T14:13:22.284Z",
-      "contentHash": "ff076bc4a7099fcc09c9abefd1f485cf218a2107be1223b5cc5e1c122f7d2ee9"
+      "contentHash": "ff076bc4a7099fcc09c9abefd1f485cf218a2107be1223b5cc5e1c122f7d2ee9",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@7",
@@ -279,7 +285,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T14:21:09.959Z",
-      "contentHash": "a27de3e144bb059b208ccd96eadd50f9e7ff5151d01c9ad7117572c7df2b5d96"
+      "contentHash": "a27de3e144bb059b208ccd96eadd50f9e7ff5151d01c9ad7117572c7df2b5d96",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@8",
@@ -295,7 +302,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T14:42:12.555Z",
-      "contentHash": "1a8d39b00952f26b3eff2de1e724817cf0fa37fba0e0f95feef9ee069e991db9"
+      "contentHash": "1a8d39b00952f26b3eff2de1e724817cf0fa37fba0e0f95feef9ee069e991db9",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@9",
@@ -311,7 +319,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T14:50:03.996Z",
-      "contentHash": "7afaf5eebfcdb5b41b11547bbc8b4ed35d158ab4ba131a8fad7457431d609d72"
+      "contentHash": "7afaf5eebfcdb5b41b11547bbc8b4ed35d158ab4ba131a8fad7457431d609d72",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@10",
@@ -327,7 +336,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T14:57:00.647Z",
-      "contentHash": "964fc11b4131dda0dc146cab3731c6081651576bef47fcd5685356f5fe00515c"
+      "contentHash": "964fc11b4131dda0dc146cab3731c6081651576bef47fcd5685356f5fe00515c",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@11",
@@ -343,7 +353,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T15:18:12.157Z",
-      "contentHash": "7aa67ca7d2c6bfd212aadac65d1cad21f27c6b87d997ab691a5c6318461acdf3"
+      "contentHash": "7aa67ca7d2c6bfd212aadac65d1cad21f27c6b87d997ab691a5c6318461acdf3",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@13",
@@ -359,7 +370,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T15:27:35.227Z",
-      "contentHash": "34291f772c57fca04ce509c7f8cba7f25c458ac3e842b545272fa44216932d45"
+      "contentHash": "34291f772c57fca04ce509c7f8cba7f25c458ac3e842b545272fa44216932d45",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@14",
@@ -375,7 +387,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-09T16:14:46.639Z",
-      "contentHash": "053d4e0de8ccf512b6c9c78efc62e6d89639aa588a0be890dba72f25e1726dd7"
+      "contentHash": "053d4e0de8ccf512b6c9c78efc62e6d89639aa588a0be890dba72f25e1726dd7",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy-swordfighter.pilot@15",
@@ -391,7 +404,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-10T11:24:13.449Z",
-      "contentHash": "3863d54b6173fbeb34185c5959e08ff3492b207f5643489c148feef53ce3529e"
+      "contentHash": "3863d54b6173fbeb34185c5959e08ff3492b207f5643489c148feef53ce3529e",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.pixellab-walk@1",
@@ -407,7 +421,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T06:53:01.633Z",
-      "contentHash": "e2ffd94a718a3b3174ba159758f4edc79851c3990d7f9041de260012b0a05160"
+      "contentHash": "e2ffd94a718a3b3174ba159758f4edc79851c3990d7f9041de260012b0a05160",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.pixellab-walk.pixel48@1",
@@ -423,7 +438,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:27:53.951Z",
-      "contentHash": "51163c1df29df9688bbe3b61ebd25d1893a40b64407acadae3cb32f7a98f0afc"
+      "contentHash": "51163c1df29df9688bbe3b61ebd25d1893a40b64407acadae3cb32f7a98f0afc",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.wan-animate2.walk@1",
@@ -439,7 +455,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:27:54.046Z",
-      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.walk@1",
@@ -455,7 +472,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:33:38.227Z",
-      "contentHash": "9f52ed0207c06ae91d5c82bd97be11667d82528381205aba5f706c7db58b146b"
+      "contentHash": "9f52ed0207c06ae91d5c82bd97be11667d82528381205aba5f706c7db58b146b",
+      "contentMissing": true
     },
     {
       "key": "fx.magic-burst.wan-alpha@1",
@@ -471,7 +489,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:39:20.403Z",
-      "contentHash": "c79854b43deb64ead2ed9b7417dbd6744c109fccf1ab65ce708f805902ba1d6f"
+      "contentHash": "c79854b43deb64ead2ed9b7417dbd6744c109fccf1ab65ce708f805902ba1d6f",
+      "contentMissing": true
     },
     {
       "key": "ctrl.blender.walk.sword@1",
@@ -487,7 +506,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:54:29.002Z",
-      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.walk.sword-v2@1",
@@ -503,7 +523,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T07:55:13.978Z",
-      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71"
+      "contentHash": "6a52f62a15c05a0554d49d4a5551595b51e03956459217acd0d5b32ae9a41a71",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.walk.sword-v2@2",
@@ -519,7 +540,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:02:34.596Z",
-      "contentHash": "c2949de57370158f89d398c553c47897d6771dcd25e5bb16d5feb029f42c5277"
+      "contentHash": "c2949de57370158f89d398c553c47897d6771dcd25e5bb16d5feb029f42c5277",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.hit@1",
@@ -535,7 +557,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:14:35.206Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.slash@1",
@@ -551,7 +574,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:19:04.509Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.slash@2",
@@ -567,7 +591,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:19:04.628Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.thrust@1",
@@ -583,7 +608,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:19:04.736Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.thrust@2",
@@ -599,7 +625,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:19:04.849Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.hit@2",
@@ -615,7 +642,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:19:04.964Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.slash@3",
@@ -631,7 +659,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:33:15.194Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.thrust@3",
@@ -647,7 +676,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:33:15.330Z",
-      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa"
+      "contentHash": "3ccd0580c59b16811e300fd0a437eb472a543354ee6b95eef44abffd27ca6dfa",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.slash@4",
@@ -663,7 +693,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:45:41.346Z",
-      "contentHash": "efb88fcfb64fcacf5d48775ffb467ab0d55ca47ce877b2e0130abeb8370ad49a"
+      "contentHash": "efb88fcfb64fcacf5d48775ffb467ab0d55ca47ce877b2e0130abeb8370ad49a",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.slash@5",
@@ -679,7 +710,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T08:55:54.750Z",
-      "contentHash": "27874f84c545a355a5be9205e8e60e269bf229c38800095eaa227dcc20103b92"
+      "contentHash": "27874f84c545a355a5be9205e8e60e269bf229c38800095eaa227dcc20103b92",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@1",
@@ -695,7 +727,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:03:57.610Z",
-      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.thrust@4",
@@ -711,7 +744,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:19:53.428Z",
-      "contentHash": "0f4472199b05149d960987cda7bc1df724e743fa6e3268cd1493e3b1fd5190ff"
+      "contentHash": "0f4472199b05149d960987cda7bc1df724e743fa6e3268cd1493e3b1fd5190ff",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.roll@1",
@@ -727,7 +761,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:19:53.527Z",
-      "contentHash": "8d2cc366945a0ee3b62c941ba8090948da042a81dcf2478e92b3ddda00ccea27"
+      "contentHash": "8d2cc366945a0ee3b62c941ba8090948da042a81dcf2478e92b3ddda00ccea27",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@2",
@@ -743,7 +778,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:19:53.614Z",
-      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.run@1",
@@ -759,7 +795,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:39:13.838Z",
-      "contentHash": "2d721aca196c34906a8c8d91a804c84aefca40ea6b4f972e079718009c191a9c"
+      "contentHash": "2d721aca196c34906a8c8d91a804c84aefca40ea6b4f972e079718009c191a9c",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.roll@2",
@@ -775,7 +812,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:39:13.950Z",
-      "contentHash": "ec01833b3c8146ac72080d3c4cc1f15c4434eb578b38111ea4f63c4e17336f19"
+      "contentHash": "ec01833b3c8146ac72080d3c4cc1f15c4434eb578b38111ea4f63c4e17336f19",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@3",
@@ -791,7 +829,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T09:39:14.064Z",
-      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.roll@3",
@@ -807,7 +846,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T10:18:32.709Z",
-      "contentHash": "8f4104cb42de424e7894a993fb5aaa24015dbee8cdb57f09ebdc274b7544be7e"
+      "contentHash": "8f4104cb42de424e7894a993fb5aaa24015dbee8cdb57f09ebdc274b7544be7e",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@4",
@@ -823,7 +863,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T10:18:32.829Z",
-      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3",
+      "contentMissing": true
     },
     {
       "key": "chr.fantasy.scail2.idle@1",
@@ -839,7 +880,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T10:26:47.419Z",
-      "contentHash": "fe947b5dd4fb0efd6f82836fc7ce517d4d9480079193c51a604b45c1f55f8833"
+      "contentHash": "fe947b5dd4fb0efd6f82836fc7ce517d4d9480079193c51a604b45c1f55f8833",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@5",
@@ -855,7 +897,8 @@
       "harness": "codex",
       "commit": "48413a5",
       "createdAt": "2026-10-11T10:26:47.541Z",
-      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3"
+      "contentHash": "1fea1e015d0bcd2b3be1e49ddc9a5bcbd2fee297be3403625ba4cd58dac153b3",
+      "contentMissing": true
     },
     {
       "key": "demo.fantasy.motion-court@6",
@@ -871,8 +914,8 @@
       "harness": "codex",
       "commit": "3861cdd",
       "createdAt": "2026-10-11T10:56:20.896Z",
-      "contentHash": "638141ac789d3f3f2d8713bd067f797fb2c342750ce2174e2c6c25861e9de073",
-      "invalidatedAt": "2026-11-06T16:17:44.824Z"
+      "contentHash": "fb214c9278d02bf5ad21877291f8eca2e232dd2e0aeb841372a91fff57232004",
+      "invalidatedAt": "2026-11-13T09:05:51.763Z"
     },
     {
       "key": "art.vendor-comparison.2026-10-16@1",
@@ -888,8 +931,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T05:57:59.406Z",
-      "contentHash": "55c52778d67623499393750f9fc61998c5adbc17f09f3c410c05e47dc0963f78",
-      "invalidatedAt": "2026-10-24T13:06:30.430Z"
+      "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76",
+      "invalidatedAt": "2026-11-13T09:05:51.767Z"
     },
     {
       "key": "art.vendor-comparison.2026-10-16@2",
@@ -905,8 +948,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T05:59:32.602Z",
-      "contentHash": "55c52778d67623499393750f9fc61998c5adbc17f09f3c410c05e47dc0963f78",
-      "invalidatedAt": "2026-10-24T13:06:30.432Z"
+      "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76",
+      "invalidatedAt": "2026-11-13T09:05:51.768Z"
     },
     {
       "key": "art.vendor-comparison.2026-10-16@3",
@@ -922,8 +965,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:12:50.277Z",
-      "contentHash": "55c52778d67623499393750f9fc61998c5adbc17f09f3c410c05e47dc0963f78",
-      "invalidatedAt": "2026-10-24T13:06:30.432Z"
+      "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76",
+      "invalidatedAt": "2026-11-13T09:05:51.769Z"
     },
     {
       "key": "chr.fantasy.ludo.fix-loop.walk@1",
@@ -955,8 +998,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:21:07.629Z",
-      "contentHash": "dcb00a4de55c976bf83fe09aba31b74a5d48cb542d0c5328657aaa468fc2aef6",
-      "invalidatedAt": "2026-10-24T13:06:30.467Z"
+      "contentHash": "820f50f2a8a695578565b67f4045a355ffa96203b03d18d4b2ec8ef50cfa143b",
+      "invalidatedAt": "2026-11-13T09:05:51.801Z"
     },
     {
       "key": "art.vendor-comparison.2026-10-16@4",
@@ -972,8 +1015,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:21:08.379Z",
-      "contentHash": "55c52778d67623499393750f9fc61998c5adbc17f09f3c410c05e47dc0963f78",
-      "invalidatedAt": "2026-10-24T13:06:30.468Z"
+      "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76",
+      "invalidatedAt": "2026-11-13T09:05:51.802Z"
     },
     {
       "key": "chr.fantasy.ludo.cycle24.walk@2",
@@ -989,8 +1032,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:26:20.767Z",
-      "contentHash": "dcb00a4de55c976bf83fe09aba31b74a5d48cb542d0c5328657aaa468fc2aef6",
-      "invalidatedAt": "2026-10-24T13:06:30.469Z"
+      "contentHash": "820f50f2a8a695578565b67f4045a355ffa96203b03d18d4b2ec8ef50cfa143b",
+      "invalidatedAt": "2026-11-13T09:05:51.803Z"
     },
     {
       "key": "art.vendor-comparison.2026-10-16@5",
@@ -1006,8 +1049,8 @@
       "harness": "codex",
       "commit": "40f23f0",
       "createdAt": "2026-10-16T06:26:21.611Z",
-      "contentHash": "55c52778d67623499393750f9fc61998c5adbc17f09f3c410c05e47dc0963f78",
-      "invalidatedAt": "2026-10-24T13:06:30.469Z"
+      "contentHash": "4073f1b5b3471de862c5eda9370a3920bdc8c790f36bac1df0dd9f0d630cca76",
+      "invalidatedAt": "2026-11-13T09:05:51.804Z"
     },
     {
       "key": "chr.fantasy.gpt.walk-reproduction@1",
@@ -1023,8 +1066,8 @@
       "harness": "codex",
       "commit": "a6b81bd",
       "createdAt": "2026-10-16T07:52:42.629Z",
-      "contentHash": "9554a2a4d87f1b643c291a8bcd0701a52d18ac181c58dcb65ecf3656c69ab732",
-      "invalidatedAt": "2026-10-24T13:06:30.471Z"
+      "contentHash": "fda86da7faaa62f9b7a48cff954f25fbc6358201421d8a56eb07837400d585c4",
+      "invalidatedAt": "2026-11-13T09:05:51.807Z"
     },
     {
       "key": "devteam.upgrade.20261105@1",
@@ -1056,8 +1099,8 @@
       "harness": "codex",
       "commit": "d763e1c",
       "createdAt": "2026-11-05T14:14:32.452Z",
-      "contentHash": "22a83deda294b8e083ece37f201dbebbb513dd922b2f0a147ff9cf8d6b7d5c8a",
-      "invalidatedAt": "2026-11-06T16:17:44.913Z"
+      "contentHash": "51648de347362949df657a29e83d6a10643fbf10d26e36b1c280c3d6db280a4a",
+      "invalidatedAt": "2026-11-13T09:05:51.903Z"
     },
     {
       "key": "devteam.integration.20261106@1",
@@ -1089,8 +1132,7 @@
       "harness": "codex",
       "commit": "4c43b68",
       "createdAt": "2026-11-06T03:19:07.752Z",
-      "contentHash": "8878d113a59c418b0e9132e14ab368db428299b5bbe30677cb5d1f2eb7c3152d",
-      "contentMissing": true
+      "contentHash": "8878d113a59c418b0e9132e14ab368db428299b5bbe30677cb5d1f2eb7c3152d"
     },
     {
       "key": "chr.silver.gpt-keypose@1",
@@ -1186,8 +1228,8 @@
       "harness": "codex",
       "commit": "4c43b68",
       "createdAt": "2026-11-06T06:38:20.894Z",
-      "contentHash": "36dc842cd8fe30db84d93ed05f3dd7c51d7bacff50b2948d13de1d6d8f3bbb98",
-      "invalidatedAt": "2026-11-06T16:17:44.995Z"
+      "contentHash": "ee9df4a7aa139567c56519006f032914bc351bd3aac7289efc818b63014428ca",
+      "invalidatedAt": "2026-11-13T09:05:52.278Z"
     },
     {
       "key": "research.ludo.offline@1",
@@ -1267,7 +1309,8 @@
       "harness": "codex",
       "commit": "20d3e01",
       "createdAt": "2026-10-24T13:28:11.372Z",
-      "contentHash": "07dacfc4ca7c0a3d40f2cffbf5ad3d16de8a4aca2d03cb99fd51bde21e1f61d8"
+      "contentHash": "07dacfc4ca7c0a3d40f2cffbf5ad3d16de8a4aca2d03cb99fd51bde21e1f61d8",
+      "contentMissing": true
     },
     {
       "key": "chr.ember-warden.walk.right@1",
@@ -1283,7 +1326,8 @@
       "harness": "codex",
       "commit": "20d3e01",
       "createdAt": "2026-10-24T13:45:35.449Z",
-      "contentHash": "1a40d789a24a7ac68d3ef40e189bac3ca0bed39c9053e7fae95572af9d0aa004"
+      "contentHash": "1a40d789a24a7ac68d3ef40e189bac3ca0bed39c9053e7fae95572af9d0aa004",
+      "contentMissing": true
     },
     {
       "key": "chr.ember-warden.walk.right@2",
@@ -1299,7 +1343,8 @@
       "harness": "codex",
       "commit": "20d3e01",
       "createdAt": "2026-10-24T13:57:19.940Z",
-      "contentHash": "34be6120b783257cbb0cd41737d02e8ebd1f46e5088926b7c9668374d998070d"
+      "contentHash": "34be6120b783257cbb0cd41737d02e8ebd1f46e5088926b7c9668374d998070d",
+      "contentMissing": true
     },
     {
       "key": "chr.ember-warden.walk.right@3",
@@ -1315,7 +1360,8 @@
       "harness": "codex",
       "commit": "20d3e01",
       "createdAt": "2026-10-24T14:16:57.115Z",
-      "contentHash": "7e0e9058047da84ea0375230bc7a62b54acb65b131cb48273a1e490a99612ded"
+      "contentHash": "7e0e9058047da84ea0375230bc7a62b54acb65b131cb48273a1e490a99612ded",
+      "contentMissing": true
     },
     {
       "key": "chr.ember-warden.walk.right.pixel@1",
@@ -1331,7 +1377,8 @@
       "harness": "codex",
       "commit": "20d3e01",
       "createdAt": "2026-10-24T14:16:57.221Z",
-      "contentHash": "fc93abaf709e8f9d611428b175c45c261cd2a4a3680737bdfaf49024ebfcfe27"
+      "contentHash": "fc93abaf709e8f9d611428b175c45c261cd2a4a3680737bdfaf49024ebfcfe27",
+      "contentMissing": true
     },
     {
       "key": "fx.pixelfx.sword-slash@1",
@@ -1347,7 +1394,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:35:14.225Z",
-      "contentHash": "0c2034eb838297d6c71689f630c0532a103b678d8e17bb951ecf05adaa864576"
+      "contentHash": "0c2034eb838297d6c71689f630c0532a103b678d8e17bb951ecf05adaa864576",
+      "contentMissing": true
     },
     {
       "key": "chr.pixeloe.comparison@1",
@@ -1363,7 +1411,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:35:14.346Z",
-      "contentHash": "7eb338971c0e7531cdab2bc8902ef19605786db4dcfb90a0c2b0505117277190"
+      "contentHash": "7eb338971c0e7531cdab2bc8902ef19605786db4dcfb90a0c2b0505117277190",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.fantasy-sample@1",
@@ -1380,7 +1429,8 @@
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:37:57.780Z",
       "contentHash": "95d76e5384316a1e1bf4dbe58815e528902972fea80d77917b79c18c2a063283",
-      "invalidatedAt": "2026-11-05T14:42:22.762Z"
+      "invalidatedAt": "2026-11-05T14:42:22.762Z",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.fantasy-sample@2",
@@ -1396,7 +1446,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:39:50.466Z",
-      "contentHash": "95d76e5384316a1e1bf4dbe58815e528902972fea80d77917b79c18c2a063283"
+      "contentHash": "95d76e5384316a1e1bf4dbe58815e528902972fea80d77917b79c18c2a063283",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.fantasy-walk-4@1",
@@ -1412,7 +1463,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:43:11.100Z",
-      "contentHash": "1e6b99e4c7d86277bec5096e5f073fb3fdfe445e8a8713096890baee9d08efa9"
+      "contentHash": "1e6b99e4c7d86277bec5096e5f073fb3fdfe445e8a8713096890baee9d08efa9",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.fantasy-combat@1",
@@ -1428,7 +1480,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T14:47:44.497Z",
-      "contentHash": "f945b28d991ace9060f7117f4c94dd91765e522be568e82545a78e6843d2bb19"
+      "contentHash": "f945b28d991ace9060f7117f4c94dd91765e522be568e82545a78e6843d2bb19",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.fantasy-combat-v2@1",
@@ -1444,7 +1497,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T15:09:33.233Z",
-      "contentHash": "e90b40e7daaf27ab9e2bb2a7f73cab5af26d24d52adf496c2c9bb9491d03f2f3"
+      "contentHash": "e90b40e7daaf27ab9e2bb2a7f73cab5af26d24d52adf496c2c9bb9491d03f2f3",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.silver-knight-separate-frames@1",
@@ -1460,7 +1514,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T15:17:18.269Z",
-      "contentHash": "0a4ff451fd2a62203c6b4fdf8c51da26a90cc438803035e07a78a17fc4a46a8e"
+      "contentHash": "0a4ff451fd2a62203c6b4fdf8c51da26a90cc438803035e07a78a17fc4a46a8e",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.silver-knight-hair-edit@1",
@@ -1477,7 +1532,8 @@
       "commit": "23b086d",
       "createdAt": "2026-11-05T15:22:17.623Z",
       "contentHash": "f7233a0a5d42e91a9c52860dca2174af8dee5ffd3611c86272b74a94b7d6edd7",
-      "invalidatedAt": "2026-11-05T15:25:18.321Z"
+      "invalidatedAt": "2026-11-05T15:25:18.321Z",
+      "contentMissing": true
     },
     {
       "key": "art.pixelbolt.upstream-example@1",
@@ -1493,7 +1549,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T15:33:21.682Z",
-      "contentHash": "5905e4fb4aef0f0e62f656019604cd3f9316abda65800d9bfc7046a0a56702c4"
+      "contentHash": "5905e4fb4aef0f0e62f656019604cd3f9316abda65800d9bfc7046a0a56702c4",
+      "contentMissing": true
     },
     {
       "key": "chr.gpt.silver-birefnet-comparison@1",
@@ -1509,7 +1566,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T15:44:39.233Z",
-      "contentHash": "4025e9e6d5dbc171c0714a6f04cf947d4de6ba5de226037e861bb59dfc7eebb3"
+      "contentHash": "4025e9e6d5dbc171c0714a6f04cf947d4de6ba5de226037e861bb59dfc7eebb3",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.rife-walk@1",
@@ -1525,7 +1583,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T16:00:19.997Z",
-      "contentHash": "9787628cf4973eeb0a7a429963b4877a7b21aab5e557a12a073c436648da2c46"
+      "contentHash": "9787628cf4973eeb0a7a429963b4877a7b21aab5e557a12a073c436648da2c46",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.walk-alternating-keyposes@1",
@@ -1541,7 +1600,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T16:05:56.049Z",
-      "contentHash": "50a69bd27dcb73e3d0ebe0eeee6c25b66d0e0f5062ee558ce6f98797363d772d"
+      "contentHash": "50a69bd27dcb73e3d0ebe0eeee6c25b66d0e0f5062ee558ce6f98797363d772d",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.walk-keys-rife@1",
@@ -1557,7 +1617,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T16:09:38.014Z",
-      "contentHash": "e4cc64e91cd8ade6cbe9f38d25e266608aa0b425336a4046c8742f765aea9976"
+      "contentHash": "e4cc64e91cd8ade6cbe9f38d25e266608aa0b425336a4046c8742f765aea9976",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.film-vs-rife@1",
@@ -1573,7 +1634,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T16:18:26.795Z",
-      "contentHash": "fbc8c56b1e91911a3a5ac3631fc2c7b7bb4013846411fefcdf29990a097572b9"
+      "contentHash": "fbc8c56b1e91911a3a5ac3631fc2c7b7bb4013846411fefcdf29990a097572b9",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.boot-hold-test@1",
@@ -1589,7 +1651,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T16:23:01.225Z",
-      "contentHash": "327177b44a9875564e8bf26dd68f7cb83909c2dae6ed41a527c957eb947151ca"
+      "contentHash": "327177b44a9875564e8bf26dd68f7cb83909c2dae6ed41a527c957eb947151ca",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.moim.video-probe@1",
@@ -1605,7 +1668,8 @@
       "harness": "codex",
       "commit": "23b086d",
       "createdAt": "2026-11-05T17:11:20.510Z",
-      "contentHash": "51f63eb534ae0d2cc882eb5069ca4d88b05875877eef342e2a9a56c6fcc0154c"
+      "contentHash": "51f63eb534ae0d2cc882eb5069ca4d88b05875877eef342e2a9a56c6fcc0154c",
+      "contentMissing": true
     },
     {
       "key": "chr.silver.shorts-hibit.walk@1",
@@ -1669,7 +1733,8 @@
       "harness": "codex",
       "commit": "4686d81",
       "createdAt": "2026-11-10T11:32:35.598Z",
-      "contentHash": "6583d41a59ab21f742514000c5cf72af2f57a7f1c54a8cf45e994a662507dba3"
+      "contentHash": "304d465fc96cfb40e0f2179df8e9a2deceb9314dfb994a873bf97252db972428",
+      "invalidatedAt": "2026-11-13T09:05:52.777Z"
     },
     {
       "key": "demo.silver-stage01@2",
@@ -1846,6 +1911,86 @@
       "commit": "bba068c",
       "createdAt": "2026-11-11T08:26:37.129Z",
       "contentHash": "7f5156ffde5925652fb354112afab2f9d33e252a01cfacedd6e11a66279e91e1"
+    },
+    {
+      "key": "chr.silver.impact-v8@1",
+      "id": "chr.silver.impact-v8",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "은발 한손검 v8 손목 보정",
+      "status": "review",
+      "preview": "out/experiments/silver-impact-20261113/preview.html",
+      "comparePreview": null,
+      "artifact": "out/experiments/silver-impact-20261113",
+      "qa": "out/experiments/silver-impact-20261113/qa/verification.json",
+      "harness": "codex",
+      "commit": "cdd14a6",
+      "createdAt": "2026-11-13T09:24:26.087Z",
+      "contentHash": "3baf5e0f27253c940c465ff0a3d548c38d126ec7fb02332087ffa0ae78d10a8e"
+    },
+    {
+      "key": "chr.red-mercenary.proportions@1",
+      "id": "chr.red-mercenary.proportions",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "적발 용병 15종과 큰 베기 이펙트",
+      "status": "review",
+      "preview": "out/experiments/red-mercenary-20261113/index.html",
+      "comparePreview": null,
+      "artifact": "out/experiments/red-mercenary-20261113",
+      "qa": "out/experiments/red-mercenary-20261113/qa/verification.json",
+      "harness": "codex",
+      "commit": "cdd14a6",
+      "createdAt": "2026-11-13T09:24:32.355Z",
+      "contentHash": "18d4b467a8f36793ab44492beebeb73092fe4818f35720499c03b6d66e5ec6ae"
+    },
+    {
+      "key": "chr.red-mercenary.proportions@2",
+      "id": "chr.red-mercenary.proportions",
+      "version": 2,
+      "type": "sprite-animation",
+      "title": "적발 용병 15종 · 대기 하강 수정 v2",
+      "status": "review",
+      "preview": "out/experiments/red-mercenary-20261113/index.html",
+      "comparePreview": null,
+      "artifact": "out/experiments/red-mercenary-20261113",
+      "qa": "out/experiments/red-mercenary-20261113/qa/idle-v2.json",
+      "harness": "codex",
+      "commit": "cdd14a6",
+      "createdAt": "2026-11-13T09:33:01.000Z",
+      "contentHash": "d9c3d9716c959b05e4341814ad00a91533b05f9b2d560d46cb2a29e916a44701"
+    },
+    {
+      "key": "chr.red-mercenary.combat-3h@1",
+      "id": "chr.red-mercenary.combat-3h",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "3등신 용병 3연타·돌진 찌르기·회전 베기",
+      "status": "review",
+      "preview": "out/experiments/red-combat-3h-20261113/index.html",
+      "comparePreview": null,
+      "artifact": "out/experiments/red-combat-3h-20261113",
+      "qa": "out/experiments/red-combat-3h-20261113/qa/verification-final.json",
+      "harness": "codex",
+      "commit": "cdd14a6",
+      "createdAt": "2026-11-13T10:09:47.115Z",
+      "contentHash": "d682408257475e399d506075e3abb039c0b20c77795ce9f2f1b3cf491b925702"
+    },
+    {
+      "key": "chr.red-mercenary.flow-3h@1",
+      "id": "chr.red-mercenary.flow-3h",
+      "version": 1,
+      "type": "sprite-animation",
+      "title": "적발 용병 · 동작 연결과 발 먼지",
+      "status": "review",
+      "preview": "out/experiments/red-flow-3h-20261113/gifs/dust.gif",
+      "comparePreview": "out/experiments/red-flow-3h-20261113/gifs/dust-off.gif",
+      "artifact": "out/experiments/red-flow-3h-20261113/manifest.json",
+      "qa": "out/experiments/red-flow-3h-20261113/qa/verification-final.json",
+      "harness": "codex",
+      "commit": "cdd14a6",
+      "createdAt": "2026-11-13T12:17:54.181Z",
+      "contentHash": "94efc3aaaa0d30396f8c683fb5305a7c98411eef3bd6db410083758101799274"
     }
   ]
 }

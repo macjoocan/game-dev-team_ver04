@@ -1,0 +1,55 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-flow-3h-20261113\\pixel\\guard\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1345,
+      "lonely": 0.38438661710037175,
+      "flat": 0.041635687732342004,
+      "semi": 0,
+      "bad": [
+        "외톨이 38.4%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-flow-3h-20261113\\pixel\\guard\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1315,
+      "lonely": 0.37338403041825097,
+      "flat": 0.029657794676806085,
+      "semi": 0,
+      "bad": [
+        "외톨이 37.3%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-flow-3h-20261113\\pixel\\guard\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1396,
+      "lonely": 0.32879656160458454,
+      "flat": 0.027936962750716332,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-flow-3h-20261113\\pixel\\guard\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1431,
+      "lonely": 0.35150244584206847,
+      "flat": 0.020964360587002098,
+      "semi": 0,
+      "bad": [
+        "외톨이 35.2%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    }
+  ],
+  "fails": 3
+}

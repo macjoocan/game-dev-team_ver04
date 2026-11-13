@@ -1,0 +1,190 @@
+{
+  "id": "chr.silver.impact-slash-20261113",
+  "version": 1,
+  "status": "review",
+  "source": "out/experiments/silver-impact-20261113/raw/slash-v7.png",
+  "sourceSha256": "a70b729220c1758feca6b1f101033d5c47e7741ae34e8b3114785a68fd25fd1a",
+  "generation": "built-in imagegen; existing character reference",
+  "license": "Generated candidate; not a third-party game frame",
+  "frameSize": [
+    512,
+    512
+  ],
+  "frameCount": 8,
+  "baselineY": 460,
+  "pivot": [
+    0.5,
+    0.8984375
+  ],
+  "footAnchorMethod": "Manual visual foot-sole measurements in each cell. QA does not validate planted feet.",
+  "normalizationChoice": "Ran bbox normalizer as a probe; retained fixed grid X and explicit foot anchors because the sword extends below the foot and bbox centering shifts the torso with the blade. No individual frame scaling/recoloring.",
+  "frames": [
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0000.png",
+      "sha256": "624e4e2e9dd7adebaccd1a9dbb98c04c467d9c0679763b95eaeec53d5222fff3",
+      "sourceRect": [
+        0,
+        0,
+        512,
+        384
+      ],
+      "footY": 365,
+      "translation": [
+        0,
+        95
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0001.png",
+      "sha256": "9b710dc3f35ca257527a839e161d76460f041f0bdfe4bd64fa279f59eacc03dd",
+      "sourceRect": [
+        512,
+        0,
+        512,
+        384
+      ],
+      "footY": 365,
+      "translation": [
+        0,
+        95
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0002.png",
+      "sha256": "3f564704a568c6cb2c1fb9b8cd976e29a28e9420b98cc45c50a4286b3437ad9d",
+      "sourceRect": [
+        0,
+        384,
+        512,
+        384
+      ],
+      "footY": 361,
+      "translation": [
+        0,
+        99
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0003.png",
+      "sha256": "884ce4baf1ed6e89ff65e350388eb86b31dbff5994293a5093f9cdc286962730",
+      "sourceRect": [
+        512,
+        384,
+        512,
+        384
+      ],
+      "footY": 361,
+      "translation": [
+        0,
+        99
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0004.png",
+      "sha256": "b9a0172b46ff5bf61503bddb48aa43527b5a9401509df6acf988acd806ad4947",
+      "sourceRect": [
+        0,
+        768,
+        512,
+        384
+      ],
+      "footY": 345,
+      "translation": [
+        0,
+        115
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0005.png",
+      "sha256": "91f6235064ed07c34971cf71ad644deb7d3c28ca512af55d6a31d3a27f472b15",
+      "sourceRect": [
+        512,
+        768,
+        512,
+        384
+      ],
+      "footY": 345,
+      "translation": [
+        0,
+        115
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0006.png",
+      "sha256": "ba9b17de68896c58be10a3279d819ea9b6eb445b5f1b3ab7c33256e087a5046c",
+      "sourceRect": [
+        0,
+        1152,
+        512,
+        384
+      ],
+      "footY": 357,
+      "translation": [
+        0,
+        103
+      ],
+      "rgbaPreserved": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames/frame_0007.png",
+      "sha256": "ca951159e33a98e704d07d5b38028e2064bc159e1c71abd92d439bea0ab2c95d",
+      "sourceRect": [
+        512,
+        1152,
+        512,
+        384
+      ],
+      "footY": 357,
+      "translation": [
+        0,
+        103
+      ],
+      "rgbaPreserved": true
+    }
+  ],
+  "runs": [
+    {
+      "name": "normalize-probe",
+      "args": [
+        "skills/char-art-system/scripts/sprite-normalize.mjs",
+        "out/experiments/silver-impact-20261113/frames",
+        "--out",
+        "out/experiments/silver-impact-20261113/normalization-probe",
+        "--canvas",
+        "512x512",
+        "--no-scale",
+        "--anchor",
+        "bottom"
+      ],
+      "exitCode": 0
+    },
+    {
+      "name": "sprite-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/silver-impact-20261113/frames",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa"
+      ],
+      "exitCode": 1
+    },
+    {
+      "name": "motion-qa",
+      "args": [
+        "skills/sprite-pipeline/scripts/motion-qa.mjs",
+        "out/experiments/silver-impact-20261113/frames",
+        "--gait",
+        "other",
+        "--out",
+        "out/experiments/silver-impact-20261113/qa"
+      ],
+      "exitCode": 0
+    }
+  ]
+}

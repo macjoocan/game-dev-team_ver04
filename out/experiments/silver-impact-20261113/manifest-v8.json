@@ -1,0 +1,66 @@
+{
+  "id": "chr.silver.impact-slash-20261113",
+  "version": 2,
+  "motionVersion": "v8",
+  "status": "review",
+  "source": "out/experiments/silver-impact-20261113/raw/slash-v8-wrist.png",
+  "changedFrame": 3,
+  "reason": "User reported forearm/wrist/blade kink in fourth pose. Imagegen repair; extracted only that cell. Remaining seven PNGs byte-identical to v7.",
+  "frameSize": [
+    512,
+    512
+  ],
+  "baselineY": 460,
+  "frames": [
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0000.png",
+      "sha256": "624e4e2e9dd7adebaccd1a9dbb98c04c467d9c0679763b95eaeec53d5222fff3",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0001.png",
+      "sha256": "9b710dc3f35ca257527a839e161d76460f041f0bdfe4bd64fa279f59eacc03dd",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0002.png",
+      "sha256": "3f564704a568c6cb2c1fb9b8cd976e29a28e9420b98cc45c50a4286b3437ad9d",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0003.png",
+      "sha256": "3102e0c8f909f11b8a7217336e9bc5e79a175a311a913ee4a9050bb848a41ad6",
+      "sameAsV7": false
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0004.png",
+      "sha256": "b9a0172b46ff5bf61503bddb48aa43527b5a9401509df6acf988acd806ad4947",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0005.png",
+      "sha256": "91f6235064ed07c34971cf71ad644deb7d3c28ca512af55d6a31d3a27f472b15",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0006.png",
+      "sha256": "ba9b17de68896c58be10a3279d819ea9b6eb445b5f1b3ab7c33256e087a5046c",
+      "sameAsV7": true
+    },
+    {
+      "file": "out/experiments/silver-impact-20261113/frames-v8/frame_0007.png",
+      "sha256": "ca951159e33a98e704d07d5b38028e2064bc159e1c71abd92d439bea0ab2c95d",
+      "sameAsV7": true
+    }
+  ],
+  "runs": [
+    {
+      "tool": "sprite-qa",
+      "exitCode": 1
+    },
+    {
+      "tool": "motion-qa",
+      "exitCode": 0
+    }
+  ]
+}

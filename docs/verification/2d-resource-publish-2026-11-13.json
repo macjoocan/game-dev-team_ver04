@@ -1,0 +1,12 @@
+{
+  "sourceCommit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "fileCount": 947,
+  "bytes": 87621140,
+  "workingTreeHashesMatched": true,
+  "localLinks": 67,
+  "stagedHashes": {
+    "passed": 947,
+    "total": 947
+  },
+  "errors": []
+}

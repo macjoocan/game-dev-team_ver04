@@ -1,0 +1,1628 @@
+﻿{
+  "schemaVersion": 1,
+  "project": "C:\\00.SVN\\game-dev-team_ver04",
+  "work": {
+    "status": "unknown",
+    "revision": 100,
+    "tasks": [
+      {
+        "id": "devteam.upgrade-20261105",
+        "title": "게임성 검증·설치 검사·열린 과제 보강",
+        "role": "developer",
+        "status": "done",
+        "next": "새 세션에서 0.51.0 사용",
+        "reason": "",
+        "note": "CI 21/21 통과. Claude·Codex 각각 213/213 파일 일치. 검수 보드 등록 완료.",
+        "evidence": [
+          {
+            "path": "out/devteam-upgrade/REPORT.md",
+            "sha256": "4111e3f24c00f0d9a9f4c799ebb5f2379827a22ae18b8c831e795d1c87aadf92",
+            "validationExecuted": false,
+            "actualSha256": "4111e3f24c00f0d9a9f4c799ebb5f2379827a22ae18b8c831e795d1c87aadf92",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "fx.pipeline-20261105",
+        "title": "2D·3D 이펙트 공통 규격·제작·검수",
+        "role": "developer",
+        "status": "done",
+        "next": "샘플 외형 검수 후 엔진 어댑터 설계",
+        "reason": "",
+        "note": "공통 제작·규격 검사와 4종 샘플 완료. 반복 프리뷰 수정. 실제 엔진·사람 승인은 별도.",
+        "evidence": [
+          {
+            "path": "out/fx-common-v2-qa/fx-check.json",
+            "sha256": "e0ae211222044dd077f4eda62fcb33276b8dfd6a162675356259df775546c191",
+            "validationExecuted": false,
+            "actualSha256": "e0ae211222044dd077f4eda62fcb33276b8dfd6a162675356259df775546c191",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "integrate.remote-20261106",
+        "title": "원격 변경 통합과 회귀 검증",
+        "role": "developer",
+        "status": "done",
+        "next": "새 세션에서 통합본 사용; 미승인 스프라이트 실험은 별도 검수",
+        "reason": "",
+        "note": "원격 통합·충돌 해결 완료. CI 나머지 15단계 통과, 보완한 테스트 단계 exit 0. Node 69통과·권한생략1, Python6통과. 양쪽 설치본 0.52.0 각214파일 일치. 보고서: out/integration-20261106/REPORT.md",
+        "evidence": [
+          {
+            "path": "out/integration-20261106/tests-final.txt",
+            "sha256": "b1298bd068f96273dd888e51a92bf82dcc83ff4d9048e1d9665ab5b69215f80e",
+            "validationExecuted": false,
+            "actualSha256": "b1298bd068f96273dd888e51a92bf82dcc83ff4d9048e1d9665ab5b69215f80e",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "prefetch.2d-20261106",
+        "title": "2D 검증용 모델·도구 사전 다운로드",
+        "role": "developer",
+        "status": "done",
+        "next": "ComfyUI 실행·실제 워크플로 사전 검사 후 2D 검증",
+        "reason": "",
+        "note": "모델 8개 43.59GB 해시 검증. 기존 D 모델 3개 재사용. 고정 도구 소스·Python 3.12 휠16개 확보. 실제 생성은 미실행.",
+        "evidence": [
+          {
+            "path": "out/2d-prefetch/readiness.json",
+            "sha256": "8eff88af53cc1e9a1b05b5974c4e176d81c888202bbc62a621ef3a8b8ac1a7e1",
+            "validationExecuted": false,
+            "actualSha256": "8eff88af53cc1e9a1b05b5974c4e176d81c888202bbc62a621ef3a8b8ac1a7e1",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "move.models-d-20261106",
+        "title": "공용 AI 모델·캐시 D 이전",
+        "role": "developer",
+        "status": "done",
+        "next": "D 모델 경로를 사용해 후속 검증",
+        "reason": "",
+        "note": "공용47파일과 프로젝트 모델85개 포함971파일, 합계29.36GB D 이전. 해시·경로·Ollama4개 조회 검증. C 백업 정리 후 여유66.01GB. Unity 빌드·추론은 미실행.",
+        "evidence": [
+          {
+            "path": "out/2d-prefetch/REPORT.md",
+            "sha256": "3905e7c92148c4b6e64cc1332319cdaabb8a5c7f975234e61c9b16e0946849f2",
+            "validationExecuted": false,
+            "actualSha256": "3905e7c92148c4b6e64cc1332319cdaabb8a5c7f975234e61c9b16e0946849f2",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "validate.2d-20261106",
+        "title": "D 모델 환경에서 은발 검사 2D 검증",
+        "role": "artist",
+        "status": "done",
+        "next": "손·손잡이·칼날 동작 연결과 포니테일 보존 방식 검증",
+        "reason": "",
+        "note": "사용자가 칼의 정지 현상을 지적함. 검 존재와 손에 연결된 동작을 구분해 보고서 보완. 원인 분석·수정·재생성은 미실행.",
+        "evidence": [
+          {
+            "path": "out/2d-validation-20261106/REPORT.md",
+            "sha256": "e5c1cc11123544fd9bfcdab162638395eb57cce08aa4f19b1c3030a4523e1551",
+            "validationExecuted": false,
+            "actualSha256": "e5c1cc11123544fd9bfcdab162638395eb57cce08aa4f19b1c3030a4523e1551",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "compare.gpt-walk-20261106",
+        "title": "GPT 원화로 뼈대·프레임 생성 걷기 비교",
+        "role": "artist",
+        "status": "done",
+        "next": "사용자 선호 B의 다리 통과 자세·발 접지·루프 경계 개선",
+        "reason": "",
+        "note": "후보 메모리 저장 및 비교 완료. B를 후속 기준으로 선택. A 칼 휨·강체 분리 틈으로 미달. B 자동QA 실루엣1건 미달·접지 미확인. IK2통과, sprite-gen56통과1생략. 세 후보 review 등록, 최종 아트 승인 아님.",
+        "evidence": [
+          {
+            "path": "out/experiments/gpt-walk-20261106/REPORT.md",
+            "sha256": "a273aa2dd0b15acfefcd7852438df73560b2896d05a6b0b021733f4ff3332f06",
+            "validationExecuted": false,
+            "actualSha256": "a273aa2dd0b15acfefcd7852438df73560b2896d05a6b0b021733f4ff3332f06",
+            "freshness": "same"
+          },
+          {
+            "path": "docs/art/2d-sprite-current-memory.md",
+            "sha256": "03fd289344e6b2bf555e063572e08a53253ff76dec7899635222895980cd2ee6",
+            "validationExecuted": false,
+            "actualSha256": "76690bca6a3f882ea06315351791bd041c57896d81397f2f7b52f9e4e0fdc339",
+            "freshness": "changed"
+          }
+        ]
+      },
+      {
+        "id": "polish.silver-walk-20261106",
+        "title": "은발 검사 걷기 자연스러움 개선",
+        "role": "artist",
+        "status": "review",
+        "next": "Ludo 은발 26장 후보 반복 경계·접지·알파 검수 후 승인 또는 보정",
+        "reason": "",
+        "note": "Hydra 생성 1회 9크레딧. 원본 36장·후처리 26장·아틀라스·비교 페이지 확보. 자동 QA 미달을 보존했고 무료 제작 범위를 설명함.",
+        "evidence": [
+          {
+            "path": "out/experiments/gpt-walk-20261106/home-compare/REPORT.md",
+            "sha256": "9038ebc4178fe8d851517b6760068fdccacfaa4f742565f8d184a007bcbe5bdd",
+            "validationExecuted": false,
+            "actualSha256": "9038ebc4178fe8d851517b6760068fdccacfaa4f742565f8d184a007bcbe5bdd",
+            "freshness": "same"
+          },
+          {
+            "path": "out/experiments/gpt-walk-20261106/ludo-silver/REPORT.md",
+            "sha256": "7a40545710b6afab169a6b9eb8ae03481f2d9c5ff95eaab7f0bbe4007ed5eee9",
+            "validationExecuted": false,
+            "actualSha256": "b9a8b282fe766c91e90bd22075832a429744cdf921a336452b9a0842d7a6fdc8",
+            "freshness": "changed"
+          },
+          {
+            "path": "out/experiments/gpt-walk-20261106/ludo-silver/RESULT.md",
+            "sha256": "a1fa9cbef3ca9b8821f338ae86ac5a82341e2e38a2e762bf871699820a908242",
+            "validationExecuted": false,
+            "actualSha256": "a1fa9cbef3ca9b8821f338ae86ac5a82341e2e38a2e762bf871699820a908242",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "research.ludo-20261106",
+        "title": "Ludo 공개 로직 조사와 은발 후보 검증",
+        "role": "developer",
+        "status": "done",
+        "next": "고정 버전 CLI의 루프·피벗 검사 연결과 엔진 임포트 검증",
+        "reason": "",
+        "note": "공개 MIT 소스 조사·빌드·6개 로컬 명령 실행 완료. 26장 루프 1.00, 36장 0.34. 원본 해시 보존. Hydra 생성 구현은 확보하지 못함. 연구 보고서와 검수 자료 등록.",
+        "evidence": [
+          {
+            "path": "out/experiments/ludo-research-20261106/REPORT.md",
+            "sha256": "0e506f6435c3af937dc7063749512f92fa77813930ef1468d2449d5c883be8fd",
+            "validationExecuted": false,
+            "actualSha256": "0e506f6435c3af937dc7063749512f92fa77813930ef1468d2449d5c883be8fd",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "local.silver-motion-20261106",
+        "title": "GPT 은발 원화의 무과금 로컬 모션 제작",
+        "role": "artist",
+        "status": "review",
+        "next": "C안 모션과 칼·색 일관성 사람 검수",
+        "reason": "",
+        "note": "칼 경계 접촉 0/26, 오른쪽 최소24px. 전체 디코딩으로 색 변화 개선. 자동 QA 형태 미달1·경고4 보존. 추가 유료 생성0회.",
+        "evidence": [
+          {
+            "path": "out/experiments/local-motion-20261106/REPORT.md",
+            "sha256": "85cf4a0f7385f77809e7b93304e67956276fc284e5006b31942ab10e539bd1c6",
+            "validationExecuted": false,
+            "actualSha256": "85cf4a0f7385f77809e7b93304e67956276fc284e5006b31942ab10e539bd1c6",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "local.silver-slash-20261106",
+        "title": "은발 베기 제작과 타격 타이밍 비교",
+        "role": "artist",
+        "status": "review",
+        "next": "베기 A/B/C 타격감 사람 검수",
+        "reason": "",
+        "note": "CC0 동작과 로컬 생성. A1600ms B430ms C명중480ms. 칼날 알파 복구, 타이밍 테스트5·브라우저 명중/빗나감 확인. 아트 미달과 화면검사 조건부 보존. 추가 유료0.",
+        "evidence": [
+          {
+            "path": "out/experiments/silver-slash-20261106/REPORT.md",
+            "sha256": "6c4a26b9f4204aab4d7a4a277b35665335079db6a6c958a536c89aa2af896e01",
+            "validationExecuted": false,
+            "actualSha256": "6c4a26b9f4204aab4d7a4a277b35665335079db6a6c958a536c89aa2af896e01",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "session.handoff-20261106",
+        "title": "오늘 작업 정리와 Git 전달",
+        "role": "pm",
+        "status": "done",
+        "next": "베기 B/C 사람 검수와 GitHub CI 결과 확인",
+        "reason": "",
+        "note": "59b1ab7 커밋을 origin/main에 푸시하고 원격 HEAD 일치를 확인했다. 메모리·인수인계와 선택 결과물 1041개 해시 일치, 로컬 CI 16/16 통과. GitHub CI 42196128270 실행 중. 아트 승인은 변경하지 않았다.",
+        "evidence": [
+          {
+            "path": "docs/handoffs/2026-11-06.md",
+            "sha256": "d3fbf52e5928f2081678cfd4fee4fa02c15cee232dde3dee30e5c1e14ff9c170",
+            "validationExecuted": false,
+            "actualSha256": "ff261253aa096c09d101982fe6b775912573b21840cfb498d6f37b139c134785",
+            "freshness": "changed"
+          }
+        ]
+      },
+      {
+        "id": "pixel.silver-20261106",
+        "title": "설치된 오픈소스로 은발 도트 변환 비교",
+        "role": "artist",
+        "status": "review",
+        "next": "긍정 평가한 PixelOE 결과에서 사용할 해상도 결정 후 베기 B/C 검수",
+        "reason": "",
+        "note": "사용자 긍정 평가를 피드백 JSON·메모리·인수인계에 반영했다. 결과와 재현 자료를 4686d81로 origin/main에 푸시했고 원격 HEAD 일치를 확인했다. 전달269파일 해시 일치, 출력사본208건 해시 일치, 플러그인 검사 통과. GitHub CI 실행 중. 자동 도트 미달·해상도 미선택은 유지한다.",
+        "evidence": [
+          {
+            "path": "out/pixel-probe-20261106/REPORT.md",
+            "sha256": "b83af87b5c2e0fc002a91da7780ec0801fed5fc94fecb4c9b20d3a44670ea059",
+            "validationExecuted": false,
+            "actualSha256": "b83af87b5c2e0fc002a91da7780ec0801fed5fc94fecb4c9b20d3a44670ea059",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "research.shorts-20261110",
+        "title": "쇼츠 소개 도구의 2D 파이프라인 적용성 확인",
+        "role": "artist",
+        "status": "review",
+        "next": "비교 화면에서 PixelOE와 hi-bit 선호 확인 후 베기 이펙트 합성 검토",
+        "reason": "",
+        "note": "무료 로컬 후처리 26장과 pixelfx 2종 시험 완료. 공용 파이프라인 미변경. REPORT.md에 원시 검사 경로와 한계 기록.",
+        "evidence": [
+          {
+            "path": "out/shorts-research-20261110/REPORT.md",
+            "sha256": "735033e85da88d2067885c06bc8b065414e6ac0be0ea4b7ce62cded9f0b36123",
+            "validationExecuted": false,
+            "actualSha256": "735033e85da88d2067885c06bc8b065414e6ac0be0ea4b7ce62cded9f0b36123",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "game.silver-stage-20261110",
+        "title": "은발 검사 1스테이지 · 공격과 피격 강화",
+        "role": "developer",
+        "status": "review",
+        "next": "http://127.0.0.1:8201/?revision=2 에서 큰 베기·연타·달리기 사람 검수",
+        "reason": "",
+        "note": "베기 크기 1.50~1.73배, 연타 한 동작 예약·되베기 연결, 더블탭 달리기 구현. 전투 15/15, 브라우저 좌우 달리기·연타 확인. 달리기는 기존 걷기 활용, 플래시 대조 조건부와 기존 형태 미달 보존.",
+        "evidence": [
+          {
+            "path": "samples/silver-stage-01/REPORT.md",
+            "sha256": "95f7236ae6656a16f18b1ca543e700ff20137fad599b057c8be5e7f6172022ec",
+            "validationExecuted": false,
+            "actualSha256": "95f7236ae6656a16f18b1ca543e700ff20137fad599b057c8be5e7f6172022ec",
+            "freshness": "same"
+          },
+          {
+            "path": "samples/silver-stage-01/REVISION-2.md",
+            "sha256": "ba3f1bd295ebea1f2aff70e9c8596781d80650018e85daf615e0ec0725856a45",
+            "validationExecuted": false,
+            "actualSha256": "ba3f1bd295ebea1f2aff70e9c8596781d80650018e85daf615e0ec0725856a45",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "review.sprite-motion-design-20261111",
+        "title": "집 작업 수신과 스프라이트 판정 설계 검토",
+        "role": "qa",
+        "status": "review",
+        "next": "설계 입력 계약·등급별 종료 코드·코퍼스 출처를 사용자와 검토",
+        "reason": "",
+        "note": "4ceb944 수신. 제품 구현 없이 원본 탐침으로 반례7개·은발C26장·rigid8장 재측정. 빈 이미지 통과, 알파 정의 차이, 고정발/망토 반례 확인. 집 잘림자료8묶음중7개는 이 PC에 없음. 설치본0.52/소스0.53.",
+        "evidence": [
+          {
+            "path": "out/resume-20261111/measurements.json",
+            "sha256": "2aaf0e6121ea62f064c225545c533b8b2b06ce7bf214552c9a75d9aa3e50b330",
+            "validationExecuted": false,
+            "actualSha256": "2aaf0e6121ea62f064c225545c533b8b2b06ce7bf214552c9a75d9aa3e50b330",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "implement.sprite-motion-observer-20261111",
+        "title": "스프라이트 입력 검사와 잘림 경고·모션 관찰 구현",
+        "role": "qa",
+        "status": "done",
+        "next": "추가 자료가 확보되면 실제 잘림 시퀀스로 경고를 검토",
+        "reason": "",
+        "note": "추천 범위 구현 완료. 45개 테스트 통과·플러그인 검사 통과. 실제 2묶음의 형태 실패는 변경 전과 동일. 잘림 경고만 적용, 모션은 관찰 전용. 사람 승인과 자동 승격 없음.",
+        "evidence": [
+          {
+            "path": "out/sprite-motion-implementation-20261111/tests.stdout.log",
+            "sha256": "cbe141e2f65c6f722edd984df674f3959387825a79a0d0e5bfae8201a76469c0",
+            "validationExecuted": false,
+            "actualSha256": "cbe141e2f65c6f722edd984df674f3959387825a79a0d0e5bfae8201a76469c0",
+            "freshness": "same"
+          },
+          {
+            "path": "out/sprite-motion-implementation-20261111/validation.json",
+            "sha256": "4ec73ce828279f4a66a5f9b51e1d0e8dc6375fe1cb2f7a08eeae780be15ab100",
+            "validationExecuted": false,
+            "actualSha256": "4ec73ce828279f4a66a5f9b51e1d0e8dc6375fe1cb2f7a08eeae780be15ab100",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "experiment.sprite-newimage-20261111",
+        "title": "새 GPT 은발 시트 생성과 개선 검사 실증",
+        "role": "qa",
+        "status": "review",
+        "next": "수정 전후 프리뷰에서 팔·다리 교차와 루프를 사람이 검토",
+        "reason": "",
+        "note": "v3 자동 검사 완료·경계 접촉0. 알파 관련 경고 남음. 1180px 밝은 배경과 390px 화면 128px 표시 확인. 사용자 최종 승인은 아직 없음.",
+        "evidence": [
+          {
+            "path": "out/experiments/silver-gpt-qa-20261111/evidence.json",
+            "sha256": "925ae7abc25e6c1c509cfe8535326b47b9d2d7f48d64d0325db000fbdeec8c7a",
+            "validationExecuted": false,
+            "actualSha256": "925ae7abc25e6c1c509cfe8535326b47b9d2d7f48d64d0325db000fbdeec8c7a",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "publish.sprite-motion-20261111",
+        "title": "스프라이트 개선·v3 메모리와 인수인계 정리 및 푸시",
+        "role": "pm",
+        "status": "done",
+        "next": "v3와 C를 비교한 뒤 게임 크기에서 검수",
+        "reason": "",
+        "note": "0.54.0 메모리·인수인계·소스·검수 자료를 bba068c로 푸시했다. 원격 main과 로컬 커밋 일치 확인. 관련 테스트 45개 통과 기록과 소스 해시를 보존했다.",
+        "evidence": [
+          {
+            "path": "out/day-handoff-20261111/push-result.json",
+            "sha256": "beb314dcaf136d36840170d5f89e6725a3217cfc814d3b0c4a033cb03ef9e366",
+            "validationExecuted": false,
+            "actualSha256": "beb314dcaf136d36840170d5f89e6725a3217cfc814d3b0c4a033cb03ef9e366",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "research.action-resources-20261111",
+        "title": "로컬 out 리소스에서 액션 참고 자료 조사",
+        "role": "artist",
+        "status": "done",
+        "next": "Soulbound 검 공격과 WizardOfLegend 기사 포즈로 새 베기 실험",
+        "reason": "",
+        "note": "32개 폴더 목록 조사. DKBI 하위 번들 제외. 이미지 표본과 Spine 시간·이벤트, 방향별 곡선 존재 확인. 실제 재생·새 생성은 미실행.",
+        "evidence": [
+          {
+            "path": "out/resource-reference-20261111/REPORT.md",
+            "sha256": "88c801a55e7548c547a839d2532a6125df7d7444326a19ea2097233f976037ce",
+            "validationExecuted": false,
+            "actualSha256": "88c801a55e7548c547a839d2532a6125df7d7444326a19ea2097233f976037ce",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "experiment.reference-slash-20261111",
+        "title": "Soulbound 참고 은발 내려베기 1종 제작",
+        "role": "artist",
+        "status": "review",
+        "next": "v6 팔 수정본 재검수, 스팀 액션 레퍼런스 선택",
+        "reason": "",
+        "note": "Meyer 교본 참고 v5 제작 후 사용자 317ms 팔 중복 지적. v6에서 6번만 수정, 7개 PNG 해시 동일. sprite-qa exit0, 알파 경고 잔존. 사용자 승인 아님.",
+        "evidence": [
+          {
+            "path": "out/experiments/silver-reference-slash-20261111/REPORT.md",
+            "sha256": "0537b65b60be26ed3de935c3cf9eeae8ae40a045477b833908ee35a62450e069",
+            "validationExecuted": false,
+            "actualSha256": "0537b65b60be26ed3de935c3cf9eeae8ae40a045477b833908ee35a62450e069",
+            "freshness": "same"
+          },
+          {
+            "path": "out/experiments/silver-reference-slash-20261111/TIMING-REVISION.md",
+            "sha256": "d0f190c563a0f554ede4a25ef32c327656f5c08ef60d056cbc3e2d15bdd46a97",
+            "validationExecuted": false,
+            "actualSha256": "834941661eff635cc11bc64ba0352867c6fbb4cb1a6eca8181fcd4d7d88486d3",
+            "freshness": "changed"
+          },
+          {
+            "path": "out/experiments/silver-reference-slash-20261111/MOTION-REVISION.md",
+            "sha256": "73e437b3a2df2c683d5505fb525715a0d80c4b0e1fe08e07f17479fc2a0237bb",
+            "validationExecuted": false,
+            "actualSha256": "73e437b3a2df2c683d5505fb525715a0d80c4b0e1fe08e07f17479fc2a0237bb",
+            "freshness": "same"
+          },
+          {
+            "path": "out/experiments/silver-reference-slash-20261111/ARC-REVISION.md",
+            "sha256": "3fc0cdcc27773f7bfe90116f189c23e3c619227ec3f3e44f36228758ce60937e",
+            "validationExecuted": false,
+            "actualSha256": "3fc0cdcc27773f7bfe90116f189c23e3c619227ec3f3e44f36228758ce60937e",
+            "freshness": "same"
+          },
+          {
+            "path": "out/experiments/silver-reference-slash-20261111/ARM-REPAIR.md",
+            "sha256": "dad041e61a36628302b63d713ba7e810bedfb055a5d21a08777bcf5d3cf8e58d",
+            "validationExecuted": false,
+            "actualSha256": "dad041e61a36628302b63d713ba7e810bedfb055a5d21a08777bcf5d3cf8e58d",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "docs.dooray-art-results-20261112",
+        "title": "두레이 AI 아트 연구에 누적 성과 게시",
+        "role": "pm",
+        "status": "done",
+        "next": "새 결과나 사람 검수 후 공유 문서 갱신",
+        "reason": "",
+        "note": "두레이 하위 문서 게시. GIF 3종과 비교 HTML 포함. 재조회로 부모·첨부 8개·본문 연결 확인.",
+        "evidence": [
+          {
+            "path": "out/dooray-art-results-20261112/publication-receipt.json",
+            "sha256": "bb7864c8ccdff08df3103194183fed0f5c6e012cb408fa76371ce150660dd39f",
+            "validationExecuted": false,
+            "actualSha256": "bb7864c8ccdff08df3103194183fed0f5c6e012cb408fa76371ce150660dd39f",
+            "freshness": "same"
+          }
+        ]
+      },
+      {
+        "id": "art.impact-slash-20261113",
+        "title": "공개 개발 강연을 참고한 은발 베기 개선",
+        "role": "artist",
+        "status": "todo",
+        "next": "공격 자세·명중 시점 설계와 비교 시안 제작",
+        "reason": "",
+        "note": "",
+        "evidence": []
+      },
+      {
+        "id": "art.red-mercenary-20261113",
+        "title": "적발 용병 2·3·5등신 모션 15종 비교",
+        "role": "artist",
+        "status": "todo",
+        "next": "승인한 디자인의 시트 3개 분리와 도트 규격 검수",
+        "reason": "",
+        "note": "",
+        "evidence": []
+      }
+    ],
+    "lessonProposals": [],
+    "events": [
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "publish.sprite-motion-20261111",
+        "basedOnRevision": 80,
+        "createdAt": "2026-11-11T03:29:58.499Z",
+        "fromStatus": "todo",
+        "toStatus": "done",
+        "next": "v3와 C를 비교한 뒤 게임 크기에서 검수",
+        "note": "0.54.0 메모리·인수인계·소스·검수 자료를 bba068c로 푸시했다. 원격 main과 로컬 커밋 일치 확인. 관련 테스트 45개 통과 기록과 소스 해시를 보존했다.",
+        "reason": ""
+      },
+      {
+        "action": "add",
+        "actor": "codex",
+        "taskId": "research.action-resources-20261111",
+        "basedOnRevision": 81,
+        "createdAt": "2026-11-11T04:52:55.657Z",
+        "toRole": "artist"
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "research.action-resources-20261111",
+        "basedOnRevision": 82,
+        "createdAt": "2026-11-11T04:52:56.472Z",
+        "receipt": {
+          "path": "out/resource-reference-20261111/REPORT.md",
+          "sha256": "88c801a55e7548c547a839d2532a6125df7d7444326a19ea2097233f976037ce",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "research.action-resources-20261111",
+        "basedOnRevision": 83,
+        "createdAt": "2026-11-11T04:52:57.285Z",
+        "fromStatus": "todo",
+        "toStatus": "done",
+        "next": "Soulbound 검 공격과 WizardOfLegend 기사 포즈로 새 베기 실험",
+        "note": "32개 폴더 목록 조사. DKBI 하위 번들 제외. 이미지 표본과 Spine 시간·이벤트, 방향별 곡선 존재 확인. 실제 재생·새 생성은 미실행.",
+        "reason": ""
+      },
+      {
+        "action": "add",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 84,
+        "createdAt": "2026-11-11T05:37:17.046Z",
+        "toRole": "artist"
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 85,
+        "createdAt": "2026-11-11T05:50:26.555Z",
+        "receipt": {
+          "path": "out/experiments/silver-reference-slash-20261111/REPORT.md",
+          "sha256": "0537b65b60be26ed3de935c3cf9eeae8ae40a045477b833908ee35a62450e069",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 86,
+        "createdAt": "2026-11-11T05:50:27.837Z",
+        "fromStatus": "todo",
+        "toStatus": "review",
+        "next": "사용자가 균등·타격 타이밍을 비교하고 모션 평가",
+        "note": "8포즈 생성과 여백 보정, 640ms 동시간 A/B 화면 완료. 경계 접촉 0/8, 피사체 하단 범위 2px. 형태 미달·알파 경고 보존. 게임 미반영.",
+        "reason": ""
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 87,
+        "createdAt": "2026-11-11T06:10:42.369Z",
+        "receipt": {
+          "path": "out/experiments/silver-reference-slash-20261111/TIMING-REVISION.md",
+          "sha256": "d0f190c563a0f554ede4a25ef32c327656f5c08ef60d056cbc3e2d15bdd46a97",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 88,
+        "createdAt": "2026-11-11T06:10:43.198Z",
+        "fromStatus": "review",
+        "toStatus": "review",
+        "next": "수정한 한 번 비교 화면으로 사용자 체감 확인",
+        "note": "차이가 약하다는 피드백 반영. 왼쪽 640ms·오른쪽 460ms, 오른쪽 검 들기160ms·내려치기16ms. 단발 비교 종료와250ms에서3/4프레임 분기 확인. 이미지 불변.",
+        "reason": ""
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 89,
+        "createdAt": "2026-11-11T07:21:15.475Z",
+        "receipt": {
+          "path": "out/experiments/silver-reference-slash-20261111/MOTION-REVISION.md",
+          "sha256": "73e437b3a2df2c683d5505fb525715a0d80c4b0e1fe08e07f17479fc2a0237bb",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 90,
+        "createdAt": "2026-11-11T07:21:16.307Z",
+        "fromStatus": "review",
+        "toStatus": "review",
+        "next": "같은 리듬의 이전·새 모션을 사용자에게 평가받기",
+        "note": "리듬 긍정·모션 수정 피드백 반영. GPT 6포즈 재제작, 뒷발 밀기·몸통 회전·보폭 변경. 460ms·타격226ms 동일 비교. 접촉0/6, 실루엣 미달·알파 경고 보존.",
+        "reason": ""
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 91,
+        "createdAt": "2026-11-11T07:44:09.743Z",
+        "receipt": {
+          "path": "out/experiments/silver-reference-slash-20261111/ARC-REVISION.md",
+          "sha256": "3fc0cdcc27773f7bfe90116f189c23e3c619227ec3f3e44f36228758ce60937e",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 92,
+        "createdAt": "2026-11-11T07:44:10.851Z",
+        "fromStatus": "review",
+        "toStatus": "review",
+        "next": "v4의 큰 검 궤적과 베기 체감을 사용자 검수",
+        "note": "찌르기처럼 보인다는 피드백 반영. 뒤·위·전방·아래 8포즈, 실제 베기 중간 구간100ms. 칼끝 보존 분할·RGBA 동일성 확인. 경계접촉0/8, 형태 미달·알파 경고 유지.",
+        "reason": ""
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 93,
+        "createdAt": "2026-11-11T08:26:42.010Z",
+        "receipt": {
+          "path": "out/experiments/silver-reference-slash-20261111/ARM-REPAIR.md",
+          "sha256": "dad041e61a36628302b63d713ba7e810bedfb055a5d21a08777bcf5d3cf8e58d",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "experiment.reference-slash-20261111",
+        "basedOnRevision": 94,
+        "createdAt": "2026-11-11T08:26:47.272Z",
+        "fromStatus": "review",
+        "toStatus": "review",
+        "next": "v6 팔 수정본 재검수, 스팀 액션 레퍼런스 선택",
+        "note": "Meyer 교본 참고 v5 제작 후 사용자 317ms 팔 중복 지적. v6에서 6번만 수정, 7개 PNG 해시 동일. sprite-qa exit0, 알파 경고 잔존. 사용자 승인 아님.",
+        "reason": ""
+      },
+      {
+        "action": "add",
+        "actor": "codex",
+        "taskId": "docs.dooray-art-results-20261112",
+        "basedOnRevision": 95,
+        "createdAt": "2026-11-12T08:56:59.432Z",
+        "toRole": "pm"
+      },
+      {
+        "action": "evidence",
+        "actor": "codex",
+        "taskId": "docs.dooray-art-results-20261112",
+        "basedOnRevision": 96,
+        "createdAt": "2026-11-12T09:15:34.214Z",
+        "receipt": {
+          "path": "out/dooray-art-results-20261112/publication-receipt.json",
+          "sha256": "bb7864c8ccdff08df3103194183fed0f5c6e012cb408fa76371ce150660dd39f",
+          "validationExecuted": false
+        }
+      },
+      {
+        "action": "checkpoint",
+        "actor": "codex",
+        "taskId": "docs.dooray-art-results-20261112",
+        "basedOnRevision": 97,
+        "createdAt": "2026-11-12T09:15:58.130Z",
+        "fromStatus": "todo",
+        "toStatus": "done",
+        "next": "새 결과나 사람 검수 후 공유 문서 갱신",
+        "note": "두레이 하위 문서 게시. GIF 3종과 비교 HTML 포함. 재조회로 부모·첨부 8개·본문 연결 확인.",
+        "reason": ""
+      },
+      {
+        "action": "add",
+        "actor": "codex",
+        "taskId": "art.impact-slash-20261113",
+        "basedOnRevision": 98,
+        "createdAt": "2026-11-13T07:53:18.587Z",
+        "toRole": "artist"
+      },
+      {
+        "action": "add",
+        "actor": "codex",
+        "taskId": "art.red-mercenary-20261113",
+        "basedOnRevision": 99,
+        "createdAt": "2026-11-13T08:43:36.764Z",
+        "toRole": "artist"
+      }
+    ]
+  },
+  "handoff": {
+    "schemaVersion": 1,
+    "purpose": "local-handoff",
+    "project": "C:\\00.SVN\\game-dev-team_ver04",
+    "collectedAt": "2026-11-13T09:14:47.532Z",
+    "collectionStatus": "unknown",
+    "git": {
+      "commit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+      "status": "recorded",
+      "workingTreeVerified": false
+    },
+    "pipeline": {
+      "status": "unknown",
+      "openGates": null
+    },
+    "review": {
+      "status": "recorded",
+      "approvalRevalidated": false,
+      "itemCount": 114,
+      "items": [
+        {
+          "key": "ui.hex-kit@1",
+          "title": "Hex UI 키트 7종 (버튼 4상태·패널·바)",
+          "type": "ui-kit",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.hex-set@1",
+          "title": "Hex 이펙트 4종 (hit·pop·pulse·sparkle)",
+          "type": "vfx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.hex-palette-unified@1",
+          "title": "주인공 걷기 8프레임 · 공용 24색 강제",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.palette-candidates@1",
+          "title": "팔레트 후보 비교 — 캐스트24 vs Lospec vinik24",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.cast-v2@1",
+          "title": "새 캐스트 4종 — 기사·고블린·스켈레톤·오거 (공용 24색)",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.cast-v2-walk@1",
+          "title": "걷기 8프레임 4종 (도트) — 의상 고정·다리만",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.hex-hero.walk@1",
+          "title": "Hex Hero Walk",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.hex-hero.attack@1",
+          "title": "Hex Hero Attack",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "ui.sanabi-concept-kit@1",
+          "title": "산나비 참고 게임 UI 콘셉트",
+          "type": "ui-kit",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.model-pilot-8gb@1",
+          "title": "8GB art model pilot: character and icon A/B",
+          "type": "art-model-pilot",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@1",
+          "title": "판타지 검객 5포즈 concept",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@2",
+          "title": "Fantasy swordfighter locked torso walk v2",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@3",
+          "title": "Fantasy swordfighter hand-keyed 8-frame walk v3",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@4",
+          "title": "Fantasy swordfighter original-pixel legs v4",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@5",
+          "title": "Fantasy swordfighter straighter legs v5",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@6",
+          "title": "Fantasy swordfighter rigid legs v6",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@7",
+          "title": "Fantasy swordfighter continuous foot path v7",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@8",
+          "title": "Fantasy swordfighter forward-facing gait v8",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@9",
+          "title": "판타지 검사 걷기 v9 허리 연결 수정",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@10",
+          "title": "판타지 검사 걷기 v10 상체 고정 다리 이동",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@11",
+          "title": "전신 생성 신화풍 걷기 ComfyUI v11",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@13",
+          "title": "ComfyUI gait keyframe correction trial",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@14",
+          "title": "Forward-foot walk key poses",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy-swordfighter.pilot@15",
+          "title": "Layered fantasy swordsman walk rig concept",
+          "type": "sprite-animation",
+          "recordedStatus": "rejected"
+        },
+        {
+          "key": "chr.fantasy.pixellab-walk@1",
+          "title": "PixelLab 판타지 걷기 1건 · 모션 검수 대기",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.pixellab-walk.pixel48@1",
+          "title": "PixelLab 판타지 걷기 48px 보정 비교",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.wan-animate2.walk@1",
+          "title": "Wan-Animate-2 전신 걷기 RGBA 25프레임",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.walk@1",
+          "title": "SCAIL-2 전신 걷기 RGBA 25프레임",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.magic-burst.wan-alpha@1",
+          "title": "Wan-Alpha RGBA 불꽃 FX 8 FPS 검수",
+          "type": "fx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "ctrl.blender.walk.sword@1",
+          "title": "보행 접지·발 구름·칼 고정 제어 v2",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.walk.sword-v2@1",
+          "title": "칼 포함 보행 제어 입력 SCAIL RGBA 비교 v2",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.walk.sword-v2@2",
+          "title": "SCAIL sword walk color correction v3",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.hit@1",
+          "title": "Fantasy hit reaction concept",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.slash@1",
+          "title": "Fantasy slash first concept",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.slash@2",
+          "title": "Fantasy slash improved concept",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.thrust@1",
+          "title": "Fantasy thrust first concept",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.thrust@2",
+          "title": "Fantasy thrust improved concept",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.hit@2",
+          "title": "Fantasy hit color corrected concept",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.slash@3",
+          "title": "Forward slash concept v3 - clipping remains",
+          "type": "sprite-animation",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.thrust@3",
+          "title": "Wide frame thrust concept v3 - clipping remains",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.slash@4",
+          "title": "베기 v4 · CC0 검술 모션 전이 / 다리 변형 미해결",
+          "type": "sprite",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.slash@5",
+          "title": "베기 v5 · 횡스크롤 옆모습",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.fantasy.motion-court@1",
+          "title": "달빛 훈련장 · 기존 모션 조작 샘플",
+          "type": "prototype",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.thrust@4",
+          "title": "찌르기 v4 · 앞발 내딛기",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.roll@1",
+          "title": "전신 구르기 · 회피 샘플",
+          "type": "sprite",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "demo.fantasy.motion-court@2",
+          "title": "훈련장 v2 · 루트 이동·찌르기·구르기 회피",
+          "type": "prototype",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.run@1",
+          "title": "달리기 · 먼지 없는 캐릭터 · 색 보정",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.roll@2",
+          "title": "구르기 · 캐릭터만 · 독립 FX",
+          "type": "sprite",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "demo.fantasy.motion-court@3",
+          "title": "훈련장 v3 · 달리기 · 먼지 분리",
+          "type": "prototype",
+          "recordedStatus": "revise"
+        },
+        {
+          "key": "chr.fantasy.scail2.roll@3",
+          "title": "구르기 v4 · 깃털 모자 유지",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.fantasy.motion-court@4",
+          "title": "훈련장 v4 · 구르기 모자 수정",
+          "type": "prototype",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.scail2.idle@1",
+          "title": "검객 아이들 · 모자·칼 유지 · 2초 루프",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.fantasy.motion-court@5",
+          "title": "훈련장 v5 · 서 있는 아이들 추가",
+          "type": "prototype",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.fantasy.motion-court@6",
+          "title": "회사 PC 재현용 전신 모션 샘플",
+          "type": "prototype",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.vendor-comparison.2026-10-16@1",
+          "title": "검객 걷기 비교 · 기존 / Voidless / Ludo Hydra",
+          "type": "art-model-pilot",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.vendor-comparison.2026-10-16@2",
+          "title": "검객 걷기 비교 · Hydra 루프 보정 필요",
+          "type": "art-model-pilot",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.vendor-comparison.2026-10-16@3",
+          "title": "검객 비교 · Ludo 루프 보정 전후",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.ludo.fix-loop.walk@1",
+          "title": "Ludo 걷기 · Fix Loop 1회 보정",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.ludo.cycle24.walk@1",
+          "title": "Ludo 걷기 · 원본 24프레임 한 주기 추출 후보",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.vendor-comparison.2026-10-16@4",
+          "title": "Ludo Fix Loop 연결 실패 피드백 · 한 주기 추출 후보 추가",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.ludo.cycle24.walk@2",
+          "title": "사용자 선택 · Ludo 한 주기 24프레임 걷기",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.vendor-comparison.2026-10-16@5",
+          "title": "사용자 선택: Ludo 한 주기 추출 24장",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.fantasy.gpt.walk-reproduction@1",
+          "title": "GPT 걷기 재현 시험 · 사용자 Ludo24 선호",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "devteam.upgrade.20261105@1",
+          "title": "데브팀 0.51.0 기능 보강",
+          "type": "tooling",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.common-pipeline@1",
+          "title": "2D·3D 공통 이펙트 제작 샘플",
+          "type": "vfx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "devteam.integration.20261106@1",
+          "title": "원격 변경 통합·검증 0.52.0",
+          "type": "tooling",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.validation-20261106@1",
+          "title": "은발 검사 걷기 · 정체성 조건 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-keypose@1",
+          "title": "은발 검사 · GPT 시작 이미지",
+          "type": "sprite-image",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-walk.rig@1",
+          "title": "은발 검사 A · 자동 뼈대 변형 미달",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-walk.sheet@1",
+          "title": "은발 검사 B · GPT 시트 사용자 선호",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-walk.rigid@1",
+          "title": "은발 검사 · 강체 분리 원인 확인",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.home-comparison@1",
+          "title": "집 Ludo·ComfyUI와 현재 GPT B 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.ludo-hydra.walk@1",
+          "title": "은발 Ludo 걷기 · 26프레임 주기 후보",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "research.ludo.offline@1",
+          "title": "Ludo 공개 후처리와 은발 26장 검증",
+          "type": "research",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.local-wan-animate2.walk@1",
+          "title": "은발 로컬 걷기 C · 칼 여백과 색 변화 수정",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.local.slash@1",
+          "title": "은발 베기 · 빠른 타이밍과 명중 반응 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.pixeloe.walk@1",
+          "title": "은발 걷기 PixelOE 64·96·128 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.higgsfield.ember-warden@1",
+          "title": "Higgsfield 2D character, HUD and slash FX",
+          "type": "art-pilot",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.ember-warden.walk.right@1",
+          "title": "Higgsfield Ember Warden walk pilot",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.ember-warden.walk.right@2",
+          "title": "Low-knee motion transfer walk comparison",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.ember-warden.walk.right@3",
+          "title": "Walk position stabilization, no new generation",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.ember-warden.walk.right.pixel@1",
+          "title": "Character-only pixel walk conversion",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.pixelfx.sword-slash@1",
+          "title": "PixelFX 검격 straight-alpha 파일럿",
+          "type": "fx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.pixeloe.comparison@1",
+          "title": "PixelOE on/off 두 프레임 비교",
+          "type": "sprite",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.fantasy-sample@1",
+          "title": "GPT 판타지 검사 2D 샘플",
+          "type": "character",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.fantasy-sample@2",
+          "title": "GPT 판타지 검사 2D 샘플",
+          "type": "character",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.fantasy-walk-4@1",
+          "title": "GPT 판타지 검사 4프레임 걷기 시험",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.fantasy-combat@1",
+          "title": "GPT 판타지 8포즈 걷기 및 4포즈 공격",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.fantasy-combat-v2@1",
+          "title": "GPT 검사 걷기 8포즈 공격 6포즈 후보",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.silver-knight-separate-frames@1",
+          "title": "은발 검사 낱장 걷기 및 공격 프레임",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.silver-knight-hair-edit@1",
+          "title": "은발 검사 머리 틈 배경 수정 후보",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "art.pixelbolt.upstream-example@1",
+          "title": "Pixelbolt 제공 예제 실행 검증",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.gpt.silver-birefnet-comparison@1",
+          "title": "은발 검사 기존 마스크와 BiRefNet 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.rife-walk@1",
+          "title": "은발 검사 걷기 RIFE 16프레임 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.walk-alternating-keyposes@1",
+          "title": "은발 검사 양발 교차 걷기 키포즈",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.walk-keys-rife@1",
+          "title": "새 걷기 키포즈 RIFE 보간 시험",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.film-vs-rife@1",
+          "title": "은발 검사 FILM과 RIFE 중간 프레임 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.boot-hold-test@1",
+          "title": "은발 검사 검은 부츠 보간 프레임 대체 시험",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.moim.video-probe@1",
+          "title": "은발 검사 Wan 영상 시험 미승인",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.shorts-hibit.walk@1",
+          "title": "은발 걷기 · Sprite Forge hi-bit 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.pixelfx.sword-slash@2",
+          "title": "pixelfx 베기 · 로컬 시험",
+          "type": "fx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "fx.pixelfx.hit-spark@1",
+          "title": "pixelfx 타격 · 로컬 시험",
+          "type": "fx",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.silver-stage01@1",
+          "title": "은빛 잔향 · 첫 번째 성문",
+          "type": "playable-prototype",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "demo.silver-stage01@2",
+          "title": "은빛 잔향 · 큰 베기·연타·달리기",
+          "type": "playable-prototype",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "tool.sprite-motion-observer@1",
+          "title": "스프라이트 입력 검사·잘림 경고·모션 관찰",
+          "type": "report",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-qa-20261111@1",
+          "title": "새 은발 v1 · 사용자 팔 고정·다리 교차 수정 요청",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-qa-20261111@2",
+          "title": "새 은발 v2 · 팔 이동 추가·발 높이 경고",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.gpt-qa-20261111@3",
+          "title": "새 은발 v3 · C 보행 포즈로 팔·다리 수정",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@1",
+          "title": "은발 내려베기 · Soulbound 참고 · 타이밍 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@2",
+          "title": "은발 내려베기 · 시간 대비 확대·한 번 비교",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@3",
+          "title": "은발 사선 베기 · 전신 6포즈 재제작",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@4",
+          "title": "은발 검 궤적 v4 · 큰 호를 그리는 8포즈",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@5",
+          "title": "교본 참고 베기 · 팔 중복 발견",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        },
+        {
+          "key": "chr.silver.reference-slash-20261111@6",
+          "title": "교본 참고 베기 · 6번 자세 팔 수정",
+          "type": "sprite-animation",
+          "recordedStatus": "review"
+        }
+      ],
+      "rules": [],
+      "feedbackCount": 92,
+      "feedback": [
+        {
+          "itemKey": "ui.hex-kit@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.314Z"
+        },
+        {
+          "itemKey": "fx.hex-set@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.350Z"
+        },
+        {
+          "itemKey": "art.hex-palette-unified@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.359Z"
+        },
+        {
+          "itemKey": "art.palette-candidates@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.365Z"
+        },
+        {
+          "itemKey": "art.cast-v2@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.432Z"
+        },
+        {
+          "itemKey": "art.cast-v2-walk@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.441Z"
+        },
+        {
+          "itemKey": "ui.sanabi-concept-kit@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.444Z"
+        },
+        {
+          "itemKey": "art.model-pilot-8gb@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.447Z"
+        },
+        {
+          "itemKey": "demo.fantasy.motion-court@6",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.763Z"
+        },
+        {
+          "itemKey": "art.vendor-comparison.2026-10-16@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.767Z"
+        },
+        {
+          "itemKey": "art.vendor-comparison.2026-10-16@2",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.768Z"
+        },
+        {
+          "itemKey": "art.vendor-comparison.2026-10-16@3",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.769Z"
+        },
+        {
+          "itemKey": "chr.fantasy.ludo.cycle24.walk@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.801Z"
+        },
+        {
+          "itemKey": "art.vendor-comparison.2026-10-16@4",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.802Z"
+        },
+        {
+          "itemKey": "chr.fantasy.ludo.cycle24.walk@2",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.803Z"
+        },
+        {
+          "itemKey": "art.vendor-comparison.2026-10-16@5",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.804Z"
+        },
+        {
+          "itemKey": "chr.fantasy.gpt.walk-reproduction@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.807Z"
+        },
+        {
+          "itemKey": "fx.common-pipeline@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:51.903Z"
+        },
+        {
+          "itemKey": "chr.silver.ludo-hydra.walk@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:52.278Z"
+        },
+        {
+          "itemKey": "demo.silver-stage01@1",
+          "decision": "invalidated",
+          "comment": "산출물 내용이 바뀌어 승인을 무효화했다",
+          "createdAt": "2026-11-13T09:05:52.777Z"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "path": "docs/pipeline/state.json",
+        "required": true,
+        "status": "missing",
+        "sha256": null
+      },
+      {
+        "path": ".review-loop/items.json",
+        "required": true,
+        "status": "read",
+        "sha256": "6d4ebac6efaf62f37ec5d0441c581262e22edc91327b54621e920a021d1b946f"
+      },
+      {
+        "path": ".review-loop/rules.json",
+        "required": true,
+        "status": "read",
+        "sha256": "227d95e88bd112d0c30ecd4dd95adea8a49fcd4009ca5ec472a689daea8e5936"
+      },
+      {
+        "path": ".review-loop/reviews.jsonl",
+        "required": true,
+        "status": "read",
+        "sha256": "01b05be4d1d825e7d5e9368bd276d12b335ecafeb9014b1316d17580c0e9d982"
+      },
+      {
+        "path": "AGENTS.md",
+        "required": false,
+        "status": "read",
+        "sha256": "a69efb6318c50ec8730b7d03b8f412d6eb9a896e88e50fa67163aef01b563729"
+      },
+      {
+        "path": "ORCHESTRATION.md",
+        "required": false,
+        "status": "read",
+        "sha256": "69aa139f2f454bd529411dddbb1570bf9dd602aa1762700af9c217f052eed414"
+      },
+      {
+        "path": "PIPELINE_STATE.md",
+        "required": false,
+        "status": "missing",
+        "sha256": null
+      },
+      {
+        "path": "VISUAL_DESIGN.md",
+        "required": false,
+        "status": "missing",
+        "sha256": null
+      }
+    ],
+    "boundaries": {
+      "paidSubmissionEnabled": false,
+      "networkRequests": 0,
+      "approvalWrites": false,
+      "atomicSnapshot": false,
+      "commandsExecuted": [
+        "git rev-parse (metadata only)"
+      ]
+    },
+    "next": [
+      "Read project AGENTS.md and ORCHESTRATION.md before acting.",
+      "Resolve unknown state and open gates with the responsible person; collection is not gate approval.",
+      "Read the shared review-loop summary before work; it can reconcile stale artifact hashes.",
+      "Do not resubmit paid jobs on restart. Reconcile their existing provider job IDs separately."
+    ]
+  },
+  "collectionStatus": "unknown",
+  "boundaries": {
+    "modelCalls": 0,
+    "paidSubmissionEnabled": false,
+    "taskDoneIsGateApproval": false,
+    "evidenceReceiptIsTestPass": false,
+    "lessonPromotionEnabled": false,
+    "authorities": {
+      "tasks": ".team-work/state.json",
+      "experiments": "out/experiments/",
+      "approvals": [
+        "docs/pipeline/state.json",
+        "PIPELINE_STATE.md",
+        ".review-loop/"
+      ],
+      "sharedRules": ".review-loop/rules.json",
+      "autoPaidRetry": false,
+      "autoSkillPromotion": false
+    }
+  }
+}

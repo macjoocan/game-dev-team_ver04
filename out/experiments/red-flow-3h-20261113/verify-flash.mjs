@@ -1,0 +1,3 @@
+import fs from 'node:fs';import {spawnSync} from 'node:child_process';const root='out/experiments/red-flow-3h-20261113',runs=[];
+for(const id of fs.readdirSync(`${root}/qa/captures`)){const args=['skills/polish/scripts/flash-check.mjs',`${root}/qa/captures/${id}`,'--fps','25','--loop'];const r=spawnSync(process.execPath,args,{encoding:'utf8',maxBuffer:4e6});fs.writeFileSync(`${root}/qa/flash-${id}.stdout.log`,r.stdout||'');fs.writeFileSync(`${root}/qa/flash-${id}.stderr.log`,r.stderr||'');runs.push({id,args,exitCode:r.status});}
+fs.writeFileSync(`${root}/qa/flash-results.json`,JSON.stringify(runs,null,2));console.log(runs.map(({id,exitCode})=>({id,exitCode})));

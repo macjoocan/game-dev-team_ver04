@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0000.png",
+      "name": "frame_0000.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1521,
+      "lonely": 0.32873109796186717,
+      "flat": 0.0210387902695595,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0001.png",
+      "name": "frame_0001.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1555,
+      "lonely": 0.3729903536977492,
+      "flat": 0.036655948553054665,
+      "semi": 0,
+      "bad": [
+        "외톨이 37.3%(상한 35%) — 이 정도면 축소 노이즈다"
+      ]
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0002.png",
+      "name": "frame_0002.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1455,
+      "lonely": 0.33127147766323023,
+      "flat": 0.03436426116838488,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0003.png",
+      "name": "frame_0003.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1482,
+      "lonely": 0.32793522267206476,
+      "flat": 0.0310391363022942,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0004.png",
+      "name": "frame_0004.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1502,
+      "lonely": 0.34820239680426096,
+      "flat": 0.031291611185086554,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0005.png",
+      "name": "frame_0005.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1489,
+      "lonely": 0.3243787777031565,
+      "flat": 0.03626595030221625,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0006.png",
+      "name": "frame_0006.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1472,
+      "lonely": 0.33695652173913043,
+      "flat": 0.026494565217391304,
+      "semi": 0,
+      "bad": []
+    },
+    {
+      "file": "out\\experiments\\red-combat-3h-20261113\\pixel\\spin\\frame_0007.png",
+      "name": "frame_0007.png#0",
+      "colors": 32,
+      "colorSet": {},
+      "opaque": 1512,
+      "lonely": 0.3412698412698413,
+      "flat": 0.03373015873015873,
+      "semi": 0,
+      "bad": []
+    }
+  ],
+  "fails": 1
+}

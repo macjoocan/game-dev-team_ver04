@@ -1,0 +1,371 @@
+{
+  "commit": "cdd14a658c801bfa3d07a2492c3a2ecb4adbb6b0",
+  "clips": 15,
+  "frames": 120,
+  "sourceUnchanged": true,
+  "semiAlpha": 0,
+  "borderPixels": 0,
+  "maxFrameColors": 32,
+  "runs": [
+    {
+      "id": "2h-idle",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/idle",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-idle-pixel"
+      ]
+    },
+    {
+      "id": "2h-idle",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/idle",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-idle-sprite"
+      ]
+    },
+    {
+      "id": "2h-walk",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/walk",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-walk-pixel"
+      ]
+    },
+    {
+      "id": "2h-walk",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/walk",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-walk-sprite"
+      ]
+    },
+    {
+      "id": "2h-run",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/run",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-run-pixel"
+      ]
+    },
+    {
+      "id": "2h-run",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/run",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-run-sprite"
+      ]
+    },
+    {
+      "id": "2h-slash",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/slash",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-slash-pixel"
+      ]
+    },
+    {
+      "id": "2h-slash",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/slash",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-slash-sprite"
+      ]
+    },
+    {
+      "id": "2h-hurt",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/hurt",
+        "--cell",
+        "64",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-hurt-pixel"
+      ]
+    },
+    {
+      "id": "2h-hurt",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/2h/hurt",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/2h-hurt-sprite"
+      ]
+    },
+    {
+      "id": "3h-idle",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/idle",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-idle-pixel"
+      ]
+    },
+    {
+      "id": "3h-idle",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/idle",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-idle-sprite"
+      ]
+    },
+    {
+      "id": "3h-walk",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/walk",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-walk-pixel"
+      ]
+    },
+    {
+      "id": "3h-walk",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/walk",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-walk-sprite"
+      ]
+    },
+    {
+      "id": "3h-run",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/run",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-run-pixel"
+      ]
+    },
+    {
+      "id": "3h-run",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/run",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-run-sprite"
+      ]
+    },
+    {
+      "id": "3h-slash",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/slash",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-slash-pixel"
+      ]
+    },
+    {
+      "id": "3h-slash",
+      "kind": "sprite",
+      "exitCode": 1,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/slash",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-slash-sprite"
+      ]
+    },
+    {
+      "id": "3h-hurt",
+      "kind": "pixel",
+      "exitCode": 1,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/hurt",
+        "--cell",
+        "96",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-hurt-pixel"
+      ]
+    },
+    {
+      "id": "3h-hurt",
+      "kind": "sprite",
+      "exitCode": 1,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/3h/hurt",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/3h-hurt-sprite"
+      ]
+    },
+    {
+      "id": "5h-idle",
+      "kind": "pixel",
+      "exitCode": 0,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/idle",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-idle-pixel"
+      ]
+    },
+    {
+      "id": "5h-idle",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/idle",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-idle-sprite"
+      ]
+    },
+    {
+      "id": "5h-walk",
+      "kind": "pixel",
+      "exitCode": 0,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/walk",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-walk-pixel"
+      ]
+    },
+    {
+      "id": "5h-walk",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/walk",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-walk-sprite"
+      ]
+    },
+    {
+      "id": "5h-run",
+      "kind": "pixel",
+      "exitCode": 0,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/run",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-run-pixel"
+      ]
+    },
+    {
+      "id": "5h-run",
+      "kind": "sprite",
+      "exitCode": 0,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/run",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-run-sprite"
+      ]
+    },
+    {
+      "id": "5h-slash",
+      "kind": "pixel",
+      "exitCode": 0,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/slash",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-slash-pixel"
+      ]
+    },
+    {
+      "id": "5h-slash",
+      "kind": "sprite",
+      "exitCode": 1,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/slash",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-slash-sprite"
+      ]
+    },
+    {
+      "id": "5h-hurt",
+      "kind": "pixel",
+      "exitCode": 0,
+      "args": [
+        "skills/char-art-system/scripts/pixel-contract.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/hurt",
+        "--cell",
+        "128",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-hurt-pixel"
+      ]
+    },
+    {
+      "id": "5h-hurt",
+      "kind": "sprite",
+      "exitCode": 1,
+      "args": [
+        "skills/sprite-pipeline/scripts/sprite-qa.mjs",
+        "out/experiments/red-mercenary-20261113/pixel/5h/hurt",
+        "--out",
+        "out/experiments/red-mercenary-20261113/qa/5h-hurt-sprite"
+      ]
+    }
+  ]
+}

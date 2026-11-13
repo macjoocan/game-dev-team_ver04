@@ -1,0 +1,2314 @@
+{
+  "id": "chr.red-mercenary.motion-20261113",
+  "status": "review",
+  "productionApproved": false,
+  "designApproval": {
+    "date": "2026-11-13",
+    "source": "user conversation",
+    "quote": "이 디자인으로 3가지 비율 모두 진행 (추천)",
+    "scope": "Character design and requested production scope only; not finished motion approval"
+  },
+  "proportionTargets": [
+    2,
+    3,
+    5
+  ],
+  "motions": [
+    "idle",
+    "walk",
+    "run",
+    "slash",
+    "hurt"
+  ],
+  "frameCount": 120,
+  "frameSize": [
+    256,
+    256
+  ],
+  "generator": "built-in imagegen",
+  "motionReference": "silver-impact-20261113 v8 slash",
+  "sourcePixelPreservation": "Copied source RGBA into a common canvas. Per-column foreground-free row separators. No per-frame scaling/recentering.",
+  "frames": [
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0000.png",
+      "sourceRect": [
+        0,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14755,
+      "borderPixels": 0,
+      "sha256": "1bd37912226936dd30b8c73631baf2dc3ed9f8f97e4f2320167eeda6a7baf205"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0000.png",
+      "sourceRect": [
+        0,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14659,
+      "borderPixels": 0,
+      "sha256": "3b6909f135e46c143570cc9f8a0fb7a239947ac6329196e8de983d3775cc6190"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0000.png",
+      "sourceRect": [
+        0,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13944,
+      "borderPixels": 0,
+      "sha256": "3029b362a6ea525170e4e86339737d76bdf62bba5c3a628dcf7a865f39100135"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0000.png",
+      "sourceRect": [
+        0,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14530,
+      "borderPixels": 0,
+      "sha256": "05c49401901c79c97dc1eaf17fea72c1b6966be0c5d8e396935d2a9498865bad"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0000.png",
+      "sourceRect": [
+        0,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14527,
+      "borderPixels": 0,
+      "sha256": "5f85bb0f484af0aa18d3fcec06225e200801032aa63721069963547be900cfb7"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0001.png",
+      "sourceRect": [
+        192,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14526,
+      "borderPixels": 0,
+      "sha256": "13b38ff7fb22c472fe9c783eebf27d0b3c379d42ad9e1f2c91f98ac2077022cf"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0001.png",
+      "sourceRect": [
+        192,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14053,
+      "borderPixels": 0,
+      "sha256": "4952bb6d8bad99f949a2f5deda02cef9ed3a46acb3fcd85ab1d14968885b27e9"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0001.png",
+      "sourceRect": [
+        192,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12794,
+      "borderPixels": 0,
+      "sha256": "05ecdc0031d5327602f2fb2e5681c9f099fd06da07a07ad1c0a37a0f09865b86"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0001.png",
+      "sourceRect": [
+        192,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13910,
+      "borderPixels": 0,
+      "sha256": "5e68f26de0f494c5b572cf863933d90c58f12194e522d9016e3a533f98f1d81c"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0001.png",
+      "sourceRect": [
+        192,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14085,
+      "borderPixels": 0,
+      "sha256": "361abaf14992476d3b724f0ef976798127d0f9f504d3228864f278614da987ed"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0002.png",
+      "sourceRect": [
+        384,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14133,
+      "borderPixels": 0,
+      "sha256": "3d5af8a8e2d594ecb4e6f707ddedd85ec3f5b09ab04d9058d8fa99c0aaef528a"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0002.png",
+      "sourceRect": [
+        384,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13291,
+      "borderPixels": 0,
+      "sha256": "be27645e3e9e31f990bc3b181e5f75b2e1b91214e2c4553d53e136deab341b29"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0002.png",
+      "sourceRect": [
+        384,
+        410,
+        192,
+        200
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12577,
+      "borderPixels": 0,
+      "sha256": "d6f82d41ec2af89fa8ed7f24eca9fe7b3e72950fd28dad2f53321a2908e9e386"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0002.png",
+      "sourceRect": [
+        384,
+        610,
+        192,
+        209
+      ],
+      "translation": [
+        32,
+        28
+      ],
+      "foregroundPixels": 13919,
+      "borderPixels": 0,
+      "sha256": "40b6311cf91639c6b5231c8799bd717b08529721c1b91bf7e530d6468a10daf9"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0002.png",
+      "sourceRect": [
+        384,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14623,
+      "borderPixels": 0,
+      "sha256": "aa0ffc53ca98928b5f9be16d834db16b0ad39629b10f2227efe5e1ab158769ac"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0003.png",
+      "sourceRect": [
+        576,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14311,
+      "borderPixels": 0,
+      "sha256": "7c420b42a994d7cafbe91502c2ca56a9d43d2aa97aa7555e88187322b6cb7525"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0003.png",
+      "sourceRect": [
+        576,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13229,
+      "borderPixels": 0,
+      "sha256": "b1acea844149728d655167cdbc8a7df08f5d89c440ae845e07c2837252d172b0"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0003.png",
+      "sourceRect": [
+        576,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12635,
+      "borderPixels": 0,
+      "sha256": "6590658478ba6c2b48205f60d3bb973f60e2c9b9e45e7640dfedd4b8e5254f82"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0003.png",
+      "sourceRect": [
+        576,
+        614,
+        198,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14493,
+      "borderPixels": 0,
+      "sha256": "6e49f5835cf29a77755860e4842f899eb9d265a779d7b6da0bae374b7bab50f6"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0003.png",
+      "sourceRect": [
+        576,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 15032,
+      "borderPixels": 0,
+      "sha256": "b70b276a24645c372a68cf6d9f1ba3c95fdb42cc41da0bd067c26224f2540c1f"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0004.png",
+      "sourceRect": [
+        768,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14563,
+      "borderPixels": 0,
+      "sha256": "aeb8673bda522cde721d7aae2fd31e6fc4efa98e08bc5313ed98091947dbbb1c"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0004.png",
+      "sourceRect": [
+        768,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14268,
+      "borderPixels": 0,
+      "sha256": "f8f918442b738ae5151729f1949d2ed575c6158ec0f2e6f404caa8ecaf39e326"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0004.png",
+      "sourceRect": [
+        768,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13085,
+      "borderPixels": 0,
+      "sha256": "939ee6e56dfde3f180c593f96028580ef9294c9079815e3dab5abacd1a8a2132"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0004.png",
+      "sourceRect": [
+        774,
+        614,
+        186,
+        205
+      ],
+      "translation": [
+        38,
+        32
+      ],
+      "foregroundPixels": 13316,
+      "borderPixels": 0,
+      "sha256": "a793b0940d29d6bd1ab51e9ab040f7325ec85ce9e99a516bdb106fefc0b17f5b"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0004.png",
+      "sourceRect": [
+        768,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14239,
+      "borderPixels": 0,
+      "sha256": "e4096d0aa23543a561f2e422cc28de403d33167dba33726c08ab64fbb50e0d93"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0005.png",
+      "sourceRect": [
+        960,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14287,
+      "borderPixels": 0,
+      "sha256": "3e84eae2f3fea32f1d5cb02b2063bc859e5d3e9e41c2925dbb3621b6b8bcb921"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0005.png",
+      "sourceRect": [
+        960,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13807,
+      "borderPixels": 0,
+      "sha256": "49aec3dcd4075697dd7d6bce7b8152bfd9faffd697fd17ab3126059bc6e783a8"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0005.png",
+      "sourceRect": [
+        960,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12331,
+      "borderPixels": 0,
+      "sha256": "7b4d1632a4ad82d464fcd888e6ad0e5ea3609fe61de58b118fcedc210d6563a6"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0005.png",
+      "sourceRect": [
+        960,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13753,
+      "borderPixels": 0,
+      "sha256": "3bfaa65dfec9694f987f3e1ec068ad7822a1ac54e9455b376ae1f72741b242ce"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0005.png",
+      "sourceRect": [
+        960,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13629,
+      "borderPixels": 0,
+      "sha256": "f273b6f1acfab96cbc00332009a08dfa9639cf3656fe7aa6a1eb7912db01c703"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0006.png",
+      "sourceRect": [
+        1152,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14536,
+      "borderPixels": 0,
+      "sha256": "a4ba40e2f5c8512ae3e7668f19e81ad817aec9cfd2a73ce750778f34444c328f"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0006.png",
+      "sourceRect": [
+        1152,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13427,
+      "borderPixels": 0,
+      "sha256": "519b0ce9d3acb07d1507e6d79d81b623a53a88fdd659a163a269a1b06e8baa86"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0006.png",
+      "sourceRect": [
+        1152,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12249,
+      "borderPixels": 0,
+      "sha256": "a362e7d8c11f50016f758f9344355a6a31d96f61497f3f4ba24c3abc27e33d2b"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0006.png",
+      "sourceRect": [
+        1152,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14326,
+      "borderPixels": 0,
+      "sha256": "ccb916799cd18535bc2fb9eb5f1caad1a9bd11125c330a9e1e84bc2a847bdb56"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0006.png",
+      "sourceRect": [
+        1152,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14174,
+      "borderPixels": 0,
+      "sha256": "23c45e6439fad536fddb4c5e8ff489d0c2eb6d4cac7c5363f5e3ad9d41a60f23"
+    },
+    {
+      "heads": 2,
+      "motion": "idle",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/idle/frame_0007.png",
+      "sourceRect": [
+        1344,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14578,
+      "borderPixels": 0,
+      "sha256": "96d715e0789cc1f2418282d35a9575b5f26117d8c1eaeadc90c6ca9f557362e2"
+    },
+    {
+      "heads": 2,
+      "motion": "walk",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/walk/frame_0007.png",
+      "sourceRect": [
+        1344,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 13543,
+      "borderPixels": 0,
+      "sha256": "2b480badac17b4754604105bbcd59f18ca5237384a0c4784d37646f2006bc264"
+    },
+    {
+      "heads": 2,
+      "motion": "run",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/run/frame_0007.png",
+      "sourceRect": [
+        1344,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12471,
+      "borderPixels": 0,
+      "sha256": "3110f240fcca7815bc8253eeab641b35324404d3c0046e3445e7bb41b826353e"
+    },
+    {
+      "heads": 2,
+      "motion": "slash",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/slash/frame_0007.png",
+      "sourceRect": [
+        1344,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14538,
+      "borderPixels": 0,
+      "sha256": "bbcf6d284010a133b0855bb8462f0c7f68b921b733435b43da99aba8a9ef15ff"
+    },
+    {
+      "heads": 2,
+      "motion": "hurt",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/2h/hurt/frame_0007.png",
+      "sourceRect": [
+        1344,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 14369,
+      "borderPixels": 0,
+      "sha256": "3e87036f8e4b13bcfcf3fe1fd68aa947d43655c19ad5615ef5e941e2e0bd85a1"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0000.png",
+      "sourceRect": [
+        0,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11070,
+      "borderPixels": 0,
+      "sha256": "69bf0dd6b5c8902ea87864de29c9e5950a889ed140617e22b99de690f45fdd94"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0000.png",
+      "sourceRect": [
+        0,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11115,
+      "borderPixels": 0,
+      "sha256": "f0cd0fe59e44a0cf768310bbd35b9d1a521a736c17d2fb22e139701826c66f0d"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0000.png",
+      "sourceRect": [
+        0,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11607,
+      "borderPixels": 0,
+      "sha256": "808c2f401e00d8f3221325f254ab2414ee346ac3fc3d787b1aec13489f23d2dd"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0000.png",
+      "sourceRect": [
+        0,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11142,
+      "borderPixels": 0,
+      "sha256": "89727a2c1f1c1cc311be40fb67b92972a75a1ab7b663ad628326d42eda55d6d2"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0000.png",
+      "sourceRect": [
+        0,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10878,
+      "borderPixels": 0,
+      "sha256": "aca6eb35cef2ec164c10ee7b73f236d88a0281a419b9432052d80a4321fc3005"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0001.png",
+      "sourceRect": [
+        192,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10597,
+      "borderPixels": 0,
+      "sha256": "089b3e8d998fc7e76d4369649ca1dd0d12053d95c35f9654de979affc77272de"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0001.png",
+      "sourceRect": [
+        192,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10223,
+      "borderPixels": 0,
+      "sha256": "a7a6c4c95b1d84454a59924e931038c61531999a62edbaa52a2efbfc362626e1"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0001.png",
+      "sourceRect": [
+        192,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10246,
+      "borderPixels": 0,
+      "sha256": "0224bfc24e469aeef4889675211ca9283f635fa1d39e533a3cf630c190d2b338"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0001.png",
+      "sourceRect": [
+        192,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10922,
+      "borderPixels": 0,
+      "sha256": "50fe48a93b9c5149ab47771e362782687fdf5fe3313610a779bce4a5c8a70a8c"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0001.png",
+      "sourceRect": [
+        192,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10879,
+      "borderPixels": 0,
+      "sha256": "b297d9e5588585d545a0292b7b91bb7ff0604657b3fd53d4c2421eb3c0f9ffb6"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0002.png",
+      "sourceRect": [
+        384,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10414,
+      "borderPixels": 0,
+      "sha256": "fee152702ad043e72088df2c9e4897a795d62b11e6cc015b79486897d2e44acd"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0002.png",
+      "sourceRect": [
+        384,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9766,
+      "borderPixels": 0,
+      "sha256": "eb1f9e329111e6c839cd493ea493a77e6a6631d940e2a6ec5a28df591cb969cd"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0002.png",
+      "sourceRect": [
+        384,
+        410,
+        192,
+        200
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10180,
+      "borderPixels": 0,
+      "sha256": "51b24f41a8a94cc8642efe7c3ae19017cece4e5c0a5dd5a0030ea9c3525e2321"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0002.png",
+      "sourceRect": [
+        384,
+        610,
+        192,
+        209
+      ],
+      "translation": [
+        32,
+        28
+      ],
+      "foregroundPixels": 10685,
+      "borderPixels": 0,
+      "sha256": "3c289999d1aa8f4012b6fb506d17a90118a1f54d292c63894546a4b69c853347"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0002.png",
+      "sourceRect": [
+        384,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11775,
+      "borderPixels": 0,
+      "sha256": "860f57a6faf1270a56b8b7e7085cb541dce1b9f6da795a72af9bdfb990fffae6"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0003.png",
+      "sourceRect": [
+        576,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10420,
+      "borderPixels": 0,
+      "sha256": "d8039e9605bfc9bbfe9761509333c97087cb29442b7613210eb0dddb325b195d"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0003.png",
+      "sourceRect": [
+        576,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9379,
+      "borderPixels": 0,
+      "sha256": "66550696762e964933a098370177bcbc0b706f637f4133446fcaee962631b408"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0003.png",
+      "sourceRect": [
+        576,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9893,
+      "borderPixels": 0,
+      "sha256": "331c4e5321d86ae06446a0b81b7af3d73a32cbe0e0513d7c09965fe869b4773f"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0003.png",
+      "sourceRect": [
+        576,
+        614,
+        203,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10799,
+      "borderPixels": 0,
+      "sha256": "b014b5d3457e2fd012cad55c893c13f929c527acdfd8ce7b5f67741c27dc821c"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0003.png",
+      "sourceRect": [
+        576,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 12128,
+      "borderPixels": 0,
+      "sha256": "cce4c6d3cddfc11f928c686eb0d9de4d8ebdda5a0e269547387ea995c654d873"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0004.png",
+      "sourceRect": [
+        768,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10864,
+      "borderPixels": 0,
+      "sha256": "ad74a5fa6757d921ad576a60ebef55f7be2062e9bbfdb99142ece5ca23d3dadb"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0004.png",
+      "sourceRect": [
+        768,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10733,
+      "borderPixels": 0,
+      "sha256": "4d29edc8968bdda7a3a455b2e706eb208002745bdb549fd9f9d38b1459a207ef"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0004.png",
+      "sourceRect": [
+        768,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11020,
+      "borderPixels": 0,
+      "sha256": "e9a05a689bc3753457eeb8a9b08428328b1da9d86177a92858b0b9e00439c6f6"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0004.png",
+      "sourceRect": [
+        779,
+        614,
+        181,
+        205
+      ],
+      "translation": [
+        43,
+        32
+      ],
+      "foregroundPixels": 10263,
+      "borderPixels": 0,
+      "sha256": "8671d72cbb91249561cba3a2f8ac5ba0271e47bf99f8c259183e02a55bcf3c62"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0004.png",
+      "sourceRect": [
+        768,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11475,
+      "borderPixels": 0,
+      "sha256": "c9cbb3e7361f040dfbfacaeda547ff4f8e512c2603ec7d128527be32241cd933"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0005.png",
+      "sourceRect": [
+        960,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10824,
+      "borderPixels": 0,
+      "sha256": "0b7a760a59bd3bb2d0b6781b54288249d65cf9f70fb6ba5563287844e418edb6"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0005.png",
+      "sourceRect": [
+        960,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10083,
+      "borderPixels": 0,
+      "sha256": "35cc6b61bbd34c75d9b6670fe57fe6662768a9637913be13bd791e42ab886282"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0005.png",
+      "sourceRect": [
+        960,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10244,
+      "borderPixels": 0,
+      "sha256": "18c2af6270d965b34e5e36c6a6fa3500d4e2d0f6a50f7c1387c95ace3ba33278"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0005.png",
+      "sourceRect": [
+        960,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10696,
+      "borderPixels": 0,
+      "sha256": "6473ce3f82900e7a7aa6918a3cc9f09689ae6a550c7a2eca06537ad7009fdfa7"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0005.png",
+      "sourceRect": [
+        960,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11124,
+      "borderPixels": 0,
+      "sha256": "fb8a03faf0d689bfa5874f03b0c2b6e6f9203a4f6d7ac3ba3025e6ee535326f5"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0006.png",
+      "sourceRect": [
+        1152,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10855,
+      "borderPixels": 0,
+      "sha256": "b0284081b7be38638ce38716db51efb683b97571949bf708afc36b4535b12a94"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0006.png",
+      "sourceRect": [
+        1152,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9802,
+      "borderPixels": 0,
+      "sha256": "d7050fcd1a6dc86f438196802059e8bcc183f920de1c230708d09b34b78bc7a2"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0006.png",
+      "sourceRect": [
+        1152,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9935,
+      "borderPixels": 0,
+      "sha256": "c51675d6aea10ef933c647592f00e4bb013de76501fb2d472dc5fb6e45ded785"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0006.png",
+      "sourceRect": [
+        1152,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10711,
+      "borderPixels": 0,
+      "sha256": "83bf7159011f63e32bfb3baddf49e935e3165a08253e3fceae24270293a1f12d"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0006.png",
+      "sourceRect": [
+        1152,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11055,
+      "borderPixels": 0,
+      "sha256": "58b63428c3681d3a3d9673f440c57ffcc32a10a338b3af773bf6bd47cbefee2c"
+    },
+    {
+      "heads": 3,
+      "motion": "idle",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/idle/frame_0007.png",
+      "sourceRect": [
+        1344,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10799,
+      "borderPixels": 0,
+      "sha256": "9aa9bc3013effc53f63e73607841b0dd9ab9cf590e89e9d90e6b64b0f5dfb17e"
+    },
+    {
+      "heads": 3,
+      "motion": "walk",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/walk/frame_0007.png",
+      "sourceRect": [
+        1344,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9312,
+      "borderPixels": 0,
+      "sha256": "86fc4269c8527d93e314d881b935c78504faf7ee66be59d31239311b2e5ae5ee"
+    },
+    {
+      "heads": 3,
+      "motion": "run",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/run/frame_0007.png",
+      "sourceRect": [
+        1344,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9782,
+      "borderPixels": 0,
+      "sha256": "72cb53340b305ee5686d6a6661f3dcfe82550bab7d2a62055c55c84ecfafa3bc"
+    },
+    {
+      "heads": 3,
+      "motion": "slash",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/slash/frame_0007.png",
+      "sourceRect": [
+        1344,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10965,
+      "borderPixels": 0,
+      "sha256": "31bf100fa35dae57f639638ac0aaed99367232ea722a0ccdcb113998fd035572"
+    },
+    {
+      "heads": 3,
+      "motion": "hurt",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/3h/hurt/frame_0007.png",
+      "sourceRect": [
+        1344,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10846,
+      "borderPixels": 0,
+      "sha256": "085b75efa966d7a44fe5b50079f44bef2a38f49c6e8e98b5e6a23012ff94a9de"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0000.png",
+      "sourceRect": [
+        0,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10577,
+      "borderPixels": 0,
+      "sha256": "c2d145588b3f4838f1d656b38e6871587411846d667f4988613aac3951e12d65"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0000.png",
+      "sourceRect": [
+        0,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10928,
+      "borderPixels": 0,
+      "sha256": "9c69bb6269943ba34cc0b76f24e28a07a7417ba89ff68fc8f54bcc13f6a7021a"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0000.png",
+      "sourceRect": [
+        0,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10403,
+      "borderPixels": 0,
+      "sha256": "90d856194680a339c64d4746e5719c8afc2998074dd0db5380818fd3097d35c6"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0000.png",
+      "sourceRect": [
+        0,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10060,
+      "borderPixels": 0,
+      "sha256": "9b14d2d5e4cb2b93553d87cb64c2b22e7fca2c05fa4e32887398a9855c1f929d"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 0,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0000.png",
+      "sourceRect": [
+        0,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10509,
+      "borderPixels": 0,
+      "sha256": "d65a8300a8b6c7b0a8aa41fae62d567a68ec81c1087fd8f4801254fd9f3b550d"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0001.png",
+      "sourceRect": [
+        192,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10556,
+      "borderPixels": 0,
+      "sha256": "981d8470f909b0bc4393d1b43a053c1177b1cd991fb11a8d9e701bf4995ebbd4"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0001.png",
+      "sourceRect": [
+        192,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9781,
+      "borderPixels": 0,
+      "sha256": "702a807f31f657a7d899d521c70c6df4cb9002acfc0d92a6ce192c74a5fcd3f9"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0001.png",
+      "sourceRect": [
+        192,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 8953,
+      "borderPixels": 0,
+      "sha256": "5aab51a466977dc562d528671c1ebcf073d2087313a8387e7cac6e55553286c9"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0001.png",
+      "sourceRect": [
+        192,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10050,
+      "borderPixels": 0,
+      "sha256": "7b564f6ce0a2819e21fc079cb6bc0c497f7732351eadfb9fdfe04a1c50b9d440"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 1,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0001.png",
+      "sourceRect": [
+        192,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10208,
+      "borderPixels": 0,
+      "sha256": "2381d4906a38ec74a8a6cf86d45834ea1fbcccd6f297567ab0ed870c9905979d"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0002.png",
+      "sourceRect": [
+        384,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10311,
+      "borderPixels": 0,
+      "sha256": "58465534504276a34b01e3b21b1775db9759eb6d038863c40b59cbd940d15acb"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0002.png",
+      "sourceRect": [
+        384,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9224,
+      "borderPixels": 0,
+      "sha256": "f7ba4e321b27965a3954b0a79a5e7bf5509ab518abdf5119c507c6904d2fc837"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0002.png",
+      "sourceRect": [
+        384,
+        410,
+        192,
+        188
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 8514,
+      "borderPixels": 0,
+      "sha256": "b971aaad1c2004422803a5d8ef2a0c4e49ff176d497e7930020ee5d9839df5c2"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0002.png",
+      "sourceRect": [
+        384,
+        598,
+        192,
+        221
+      ],
+      "translation": [
+        32,
+        16
+      ],
+      "foregroundPixels": 9477,
+      "borderPixels": 0,
+      "sha256": "b18af12ee5e7ea1378e2d21dc605c380459ad0e900f749342469c11211be383e"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 2,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0002.png",
+      "sourceRect": [
+        384,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10756,
+      "borderPixels": 0,
+      "sha256": "389a1214b9f738c52606154f2ed3a73ae44b223d3349fb54f6951b4c7649bdd1"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0003.png",
+      "sourceRect": [
+        576,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10527,
+      "borderPixels": 0,
+      "sha256": "94db3ffbb64613ed1d3146a305fe18350c0c20359d09df7bc7de8bfd37c42c72"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0003.png",
+      "sourceRect": [
+        576,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9875,
+      "borderPixels": 0,
+      "sha256": "c6bde3093668dea1c9ae4fcb2b2568e90586bcd678e50a66f6290157644a21d0"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0003.png",
+      "sourceRect": [
+        576,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9234,
+      "borderPixels": 0,
+      "sha256": "141e4aae800b6aee47b21495c618df42ceca737ea3b3b7909a29c899f1bf052b"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0003.png",
+      "sourceRect": [
+        576,
+        614,
+        202,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9681,
+      "borderPixels": 0,
+      "sha256": "d0b0f16b67cb215c1581aa47b166a81a4b486759e0f942ae54dd36339b7eb461"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 3,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0003.png",
+      "sourceRect": [
+        576,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 11032,
+      "borderPixels": 0,
+      "sha256": "0d3e83ad980d26036946e9af17cc6a963afca92c55732765ff819592a97b6eca"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0004.png",
+      "sourceRect": [
+        768,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10744,
+      "borderPixels": 0,
+      "sha256": "0d1b459b2e5a0136cd181ba11ac1038f8e75476969fbb09ea86aaa41b30d60e0"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0004.png",
+      "sourceRect": [
+        768,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10224,
+      "borderPixels": 0,
+      "sha256": "4f075690b3aaaea11a878a52801af8f4681fc226a7b77ff4a8fac737356ba0b2"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0004.png",
+      "sourceRect": [
+        768,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9747,
+      "borderPixels": 0,
+      "sha256": "71c537eabb6e3a69c1546d6282db9b21d8fa826990c97ea3f2353c5b512cce02"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0004.png",
+      "sourceRect": [
+        778,
+        614,
+        185,
+        205
+      ],
+      "translation": [
+        42,
+        32
+      ],
+      "foregroundPixels": 9244,
+      "borderPixels": 0,
+      "sha256": "f9175b187bafe40dcb6b51251b9c45950832bd91c777cbb1b4f6a72d0ab176d5"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 4,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0004.png",
+      "sourceRect": [
+        768,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10157,
+      "borderPixels": 0,
+      "sha256": "1e164ccac17c4818ddd59dc422ac2aa78749cfe0ee2b802d97a41dd4f5bccc06"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0005.png",
+      "sourceRect": [
+        960,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10721,
+      "borderPixels": 0,
+      "sha256": "3aab5eafdfc50f201d78fda63756bf5060f79e838d89db0cc44399b82fe79675"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0005.png",
+      "sourceRect": [
+        960,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9648,
+      "borderPixels": 0,
+      "sha256": "260d98ac47e65e852cd1d5afce417462cc058fb5f1b9a36bafe3d5aa8d2bb357"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0005.png",
+      "sourceRect": [
+        960,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9057,
+      "borderPixels": 0,
+      "sha256": "099e7c2e8a826f6931e8ecfd7557df0474397fd42f43cdc4da3fc029797ff7bc"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0005.png",
+      "sourceRect": [
+        963,
+        614,
+        189,
+        205
+      ],
+      "translation": [
+        35,
+        32
+      ],
+      "foregroundPixels": 8494,
+      "borderPixels": 0,
+      "sha256": "1d271d75faa8fae5565f47c937956aca0696ac6d847e2a4bccf18ab722694af4"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 5,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0005.png",
+      "sourceRect": [
+        960,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9808,
+      "borderPixels": 0,
+      "sha256": "d9aef70387d85899cf02bfe29a11dd2d3087039a5e9f44dda99f255d10b16a4a"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0006.png",
+      "sourceRect": [
+        1152,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10720,
+      "borderPixels": 0,
+      "sha256": "ca16b2c63c08c2b153710e8704401171a7a97eb92c860daebb727b7503024e06"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0006.png",
+      "sourceRect": [
+        1152,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9379,
+      "borderPixels": 0,
+      "sha256": "f30fd4bd5734fc789578a5a69e655cdd798cb85d013ac05ea90c0054d7514e79"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0006.png",
+      "sourceRect": [
+        1152,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 8766,
+      "borderPixels": 0,
+      "sha256": "93473d0bd27924da7f8c6b995fc7263eff4cffaef73a31eee2658df6a6bb5f5b"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0006.png",
+      "sourceRect": [
+        1152,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10289,
+      "borderPixels": 0,
+      "sha256": "cbb2cdfa6be7e324bafe356a2c331d62268917a22bb10b62c7937149dd484041"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 6,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0006.png",
+      "sourceRect": [
+        1152,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10332,
+      "borderPixels": 0,
+      "sha256": "0d70131d558d89b4e9f66897ad112271093b9afeb24f5a74b5c169cdde0ccef9"
+    },
+    {
+      "heads": 5,
+      "motion": "idle",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/idle/frame_0007.png",
+      "sourceRect": [
+        1344,
+        0,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10450,
+      "borderPixels": 0,
+      "sha256": "2c20ed09c5efbd28c06a779be516660dac3487843ddae7ae98dfcdb34a485c1f"
+    },
+    {
+      "heads": 5,
+      "motion": "walk",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/walk/frame_0007.png",
+      "sourceRect": [
+        1344,
+        205,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9738,
+      "borderPixels": 0,
+      "sha256": "deb7b3998e4c801dc2fdfcd599187143b06ecc0ebafa1a46a47f0e7068e2e915"
+    },
+    {
+      "heads": 5,
+      "motion": "run",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/run/frame_0007.png",
+      "sourceRect": [
+        1344,
+        410,
+        192,
+        204
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 8480,
+      "borderPixels": 0,
+      "sha256": "4c8a999f6bd1d0af2682c4d7474ea2e82b6c1a1acabba5713fd8a008ad4d1d52"
+    },
+    {
+      "heads": 5,
+      "motion": "slash",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/slash/frame_0007.png",
+      "sourceRect": [
+        1344,
+        614,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 9879,
+      "borderPixels": 0,
+      "sha256": "5c3cfcb7c4d888ef35d832a2d91c1eb2ddd9ede925ff486b498395ef47bfd85c"
+    },
+    {
+      "heads": 5,
+      "motion": "hurt",
+      "frame": 7,
+      "file": "out/experiments/red-mercenary-20261113/source/5h/hurt/frame_0007.png",
+      "sourceRect": [
+        1344,
+        819,
+        192,
+        205
+      ],
+      "translation": [
+        32,
+        32
+      ],
+      "foregroundPixels": 10396,
+      "borderPixels": 0,
+      "sha256": "59c0d619698922d3d17adaec472723053e788d5ef3e80e0c3ea395a6dcda6a14"
+    }
+  ],
+  "issues": []
+}
